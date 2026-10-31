@@ -1,0 +1,14 @@
+{
+  "id": "microcap",
+  "term": "Microcap",
+  "aliases": ["microcaps", "micro-cap", "microcap stock"],
+  "definition": {
+    "simple": "A company whose total market value is very small compared with most listed companies.",
+    "balanced": "Size here means market value: share price × shares outstanding. A low share price does not by itself make a company small, and a higher share price does not make it big. Where the 'microcap' line sits depends on who is drawing it. Microcaps often have little trading, few analysts following them, and less information available."
+  },
+  "example": "Fictional: 0.25 USD × 40 million shares = 10 million USD market value.",
+  "related": ["penny-stock", "liquidity", "float"],
+  "markets": ["penny_stocks", "stocks"],
+  "level": "beginner",
+  "sourceIds": []
+}

@@ -1,0 +1,13 @@
+{
+  "id": "mc-access-constraints",
+  "order": 13,
+  "dimension": "Access constraints",
+  "cells": {
+    "forex": "Needs a broker; leverage limits and product rules differ by country, and some brokers are unregulated.",
+    "stocks": "Needs a broker with access to the exchange; account minimums and fees vary.",
+    "penny_stocks": "Some brokers limit or block trading in them; some venues have extra rules and warnings.",
+    "commodities": "Product choice depends on the broker and country; some routes need larger accounts.",
+    "futures": "Often needs an approved account; one contract can be large compared with a small account."
+  },
+  "caveat": "Access depends on your country, the regulator, the broker and the account type. Check that any broker is properly regulated where you live before opening an account."
+}

@@ -1,0 +1,18 @@
+{
+  "id": "survivorship-bias",
+  "term": "Survivorship bias",
+  "aliases": [
+    "survivor bias"
+  ],
+  "definition": {
+    "simple": "Judging only from the things that \"survived\" or got noticed, while ignoring the ones that failed or vanished.",
+    "balanced": "In trading, it happens when you copy a method because you heard it worked, without seeing the similar methods that failed and were forgotten. The failures are missing from what you look at, so the method looks better than it is. Testing only the periods you remember as good is a related error called selection bias, or cherry-picking."
+  },
+  "example": "You copy a method because a fictional forum post says it worked. Nobody posts about the similar methods that stopped working, so you only ever see the survivor.",
+  "related": [
+    "backtest"
+  ],
+  "markets": [],
+  "level": "intermediate",
+  "sourceIds": []
+}

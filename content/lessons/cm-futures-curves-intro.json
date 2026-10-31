@@ -1,0 +1,142 @@
+{
+  "id": "cm-futures-curves-intro",
+  "moduleId": "commodities",
+  "title": "Futures curves, storage and spreads: a first look",
+  "level": "beginner",
+  "estimatedMinutes": 20,
+  "inOneLine": {
+    "simple": "A commodity has different prices for delivery at different dates. Lining them up gives a [[futures-curve|curve]]. Later dates priced higher is called [[contango]]; later dates priced lower is called [[backwardation]].",
+    "balanced": "The shape of the curve reflects [[storage-cost|storage costs]], financing and how tight supply is right now. When near-term supply is plentiful, contango is common; when it is tight, buyers may pay more for near delivery, giving backwardation. The gap between two dates is a calendar spread. The futures module covers contracts in depth."
+  },
+  "explain": {
+    "simple": "Many commodities trade through [[futures-contract|futures contracts]]: agreements to buy or sell a set amount at a set price on a future date. There is usually a separate price for each delivery month. Plot those prices from nearest to furthest and you get a futures curve. If the later months cost more, the curve slopes up. This is called contango, and one common reason is the cost of storing, insuring and financing the commodity until then. If the later months cost less, the curve slopes down. This is called backwardation, and it often shows that people want the commodity now, for example when supply is short. All prices here are fictional.",
+    "balanced": "The curve shape matters to anyone who holds a position over time. A contract converges towards the price for immediate delivery as it nears expiry. In contango, someone who keeps buying later, more expensive contracts and letting them run down towards a lower near price loses that gap each time if nothing else changes. In backwardation the effect works the other way. The difference between two delivery months is a calendar spread, and spreads can move even when the overall price level does not. This is an introduction: contract details, rolling and margin are covered in the futures module."
+  },
+  "realNumbers": {
+    "assumptions": [
+      "Fictional commodity. Price for immediate delivery: 50.00 USD per unit",
+      "1-month contract: 50.40. 2-month: 50.80. 3-month: 51.20",
+      "Fictional storage, insurance and financing cost: 0.40 USD per unit per month"
+    ],
+    "steps": [
+      "Each month further out is 0.40 higher: 50.40 − 50.00 = 0.40, 50.80 − 50.40 = 0.40, 51.20 − 50.80 = 0.40.",
+      "The curve slopes up, so it is in contango. Here the step matches the 0.40 monthly carrying cost.",
+      "Calendar spread between 3-month and 1-month = 51.20 − 50.40 = 0.80 USD.",
+      "If you buy the 1-month contract at 50.40 and the immediate price is still 50.00 at expiry, the contract ends near 50.00: a loss of about 0.40 per unit, or 400 USD on 1,000 units, even though 'the price did not move'."
+    ]
+  },
+  "anotherExample": {
+    "assumptions": [
+      "Same fictional commodity, but after a supply disruption",
+      "Immediate: 50.00. 1-month: 49.20. 2-month: 48.50"
+    ],
+    "steps": [
+      "Each later month is cheaper: 49.20 < 50.00 and 48.50 < 49.20. The curve slopes down: backwardation.",
+      "Buyers are paying 50.00 − 49.20 = 0.80 more to get the commodity now rather than in a month.",
+      "This often signals that supply is tight today. It is a reading of the present, not a forecast that prices will fall."
+    ]
+  },
+  "explainSimpler": "There is a price for now and a price for later. If later costs more, that's contango, often because storing things costs money. If now costs more, that's backwardation, often because people need it now.",
+  "commonMistake": "Reading the curve as a forecast. A 3-month price above today's price does not mean the market predicts a rise. It mostly reflects storage, financing and current supply.",
+  "quickCheck": [
+    {
+      "id": "cm-futures-curves-intro-q1",
+      "prompt": "Fictional curve: immediate 80.00, 1-month 80.60, 2-month 81.20. What shape is this?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Backwardation, because later dates are cheaper",
+          "explanation": "No: the later dates here are more expensive, not cheaper."
+        },
+        {
+          "id": "b",
+          "text": "Flat, because the gaps are equal",
+          "explanation": "No: equal steps up still make an upward slope."
+        },
+        {
+          "id": "c",
+          "text": "Contango, because later dates cost more",
+          "explanation": "Right: later months are priced higher, 80.00 → 80.60 → 81.20."
+        }
+      ],
+      "correctOptionIds": [
+        "c"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "storage-cost"
+      ]
+    },
+    {
+      "id": "cm-futures-curves-intro-q2",
+      "prompt": "Same fictional curve: what is the 2-month minus 1-month calendar spread?",
+      "options": [
+        {
+          "id": "a",
+          "text": "0.60",
+          "explanation": "Right: 81.20 − 80.60 = 0.60."
+        },
+        {
+          "id": "b",
+          "text": "1.20",
+          "explanation": "No: that is 2-month minus immediate, 81.20 − 80.00."
+        },
+        {
+          "id": "c",
+          "text": "161.80",
+          "explanation": "No: a spread subtracts the two prices; it does not add them."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "storage-cost"
+      ]
+    },
+    {
+      "id": "cm-futures-curves-intro-q3",
+      "prompt": "A fictional curve is in steep backwardation. What does it most likely tell you?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Near delivery is valued more, often because supply is tight now",
+          "explanation": "Right: buyers pay extra to get it now. It is a reading of today, not a forecast."
+        },
+        {
+          "id": "b",
+          "text": "The market predicts the price will fall to the later levels",
+          "explanation": "No: the curve shape is not a forecast of the future price."
+        },
+        {
+          "id": "c",
+          "text": "Buyers may want later delivery more than delivery now",
+          "explanation": "No: in backwardation the later months are cheaper, so buyers value near delivery more, not later."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "supply-shock"
+      ]
+    }
+  ],
+  "doItNow": {
+    "kind": "reflection",
+    "instructions": "Draw two fictional futures curves with four points each: one in contango and one in backwardation. Label each point with a price. For each, work out the spread between the last and first contract, and write one sentence on what might cause that shape."
+  },
+  "glossaryIds": [
+    "storage-cost",
+    "commodity",
+    "supply-shock",
+    "inventory-report",
+    "futures-contract",
+    "futures-curve",
+    "contango",
+    "backwardation"
+  ],
+  "sourceIds": []
+}

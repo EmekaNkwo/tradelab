@@ -1,0 +1,141 @@
+{
+  "id": "ta-relative-strength",
+  "moduleId": "ta-patterns",
+  "title": "Relative strength: comparing two markets",
+  "level": "intermediate",
+  "estimatedMinutes": 15,
+  "inOneLine": {
+    "simple": "Relative strength compares one market with another, or with an index. It shows which did better over a window, not which will do better next.",
+    "balanced": "[[relative-strength|Relative strength]] is a ratio: price of A ÷ price of B. A rising ratio means A outperformed B over that window, even if both fell. It is not the same as [[rsi|RSI]], which looks at one market on its own."
+  },
+  "explain": {
+    "simple": "Divide one price by another, every candle, and plot the result as a line. If the line rises, the first market did better than the second. If it falls, it did worse. Traders use it to compare a stock with its index, one commodity with another, or two related markets. It answers \"which was stronger?\", not \"is it going up?\". Both markets can fall while the ratio rises, because the first one fell less.",
+    "balanced": "The answer depends on the window you choose. Start the comparison a month earlier and the leader may change. Markets with different [[volatility]] are hard to compare: a jumpy market can lead in one window and lag badly in the next. In forex, the ratio of two pairs that share a currency is itself a third pair: EUR/USD ÷ GBP/USD = EUR/GBP. So you are really reading the cross rate, not the strength of either pair. Leadership can change at any time, so a strong ratio describes the past. And [[correlation|correlated]] markets often move together, so a small ratio change may be noise."
+  },
+  "realNumbers": {
+    "assumptions": [
+      "Fictional stock A and a fictional index, illustrative prices",
+      "Start: A = 50, index = 4,000",
+      "End of the window: A = 55, index = 4,200"
+    ],
+    "steps": [
+      "A rose 55 ÷ 50 − 1 = 10%. The index rose 4,200 ÷ 4,000 − 1 = 5%.",
+      "Ratio at start = 50 ÷ 4,000 = 0.0125. At end = 55 ÷ 4,200 ≈ 0.01310.",
+      "Ratio change = 0.01310 ÷ 0.0125 − 1 ≈ +4.8%.",
+      "A outperformed the index over this window. That is a description of these dates only."
+    ]
+  },
+  "anotherExample": {
+    "assumptions": [
+      "Same start: A = 50, index = 4,000",
+      "End of a different window: A = 47, index = 3,600"
+    ],
+    "steps": [
+      "A fell 47 ÷ 50 − 1 = −6%. The index fell 3,600 ÷ 4,000 − 1 = −10%.",
+      "Ratio at end = 47 ÷ 3,600 ≈ 0.01306, up from 0.0125.",
+      "Ratio change ≈ +4.4%, so A shows relative strength.",
+      "Yet someone holding A still lost 6%. Relative strength is not the same as going up."
+    ]
+  },
+  "explainSimpler": "Relative strength is a race between two runners. It tells you who is ahead, not whether either is running uphill.",
+  "commonMistake": "Confusing relative strength with RSI, or thinking a rising ratio means the market itself is rising.",
+  "quickCheck": [
+    {
+      "id": "ta-relative-strength-q1",
+      "prompt": "Commodity X goes from 20 to 22. Commodity Y goes from 40 to 42. Which outperformed?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Y, because it rose 2 like X but from a higher price",
+          "explanation": "No: compare percentages. X rose 10%, Y rose 5%."
+        },
+        {
+          "id": "b",
+          "text": "X, because it rose 10% against Y's 5%",
+          "explanation": "Right: 22 ÷ 20 − 1 = 10%; 42 ÷ 40 − 1 = 5%."
+        },
+        {
+          "id": "c",
+          "text": "Neither: both rose by 2",
+          "explanation": "No: the same move in price is a different move in percent."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "intermediate",
+      "glossaryIds": [
+        "relative-strength"
+      ]
+    },
+    {
+      "id": "ta-relative-strength-q2",
+      "prompt": "The ratio of stock A to its index rises while both fall. What does that mean?",
+      "options": [
+        {
+          "id": "a",
+          "text": "A fell less than the index",
+          "explanation": "Right: the ratio rises when A does better, including by falling less."
+        },
+        {
+          "id": "b",
+          "text": "A is rising",
+          "explanation": "No: A can fall while its ratio to the index rises."
+        },
+        {
+          "id": "c",
+          "text": "The ratio is miscalculated",
+          "explanation": "No: this happens whenever A falls less than the index."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "intermediate",
+      "glossaryIds": [
+        "relative-strength"
+      ]
+    },
+    {
+      "id": "ta-relative-strength-q3",
+      "prompt": "How is relative strength different from RSI?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Two names for the same indicator",
+          "explanation": "No: RSI scores one market's ups against its own downs. Relative strength compares two markets."
+        },
+        {
+          "id": "b",
+          "text": "RS compares two markets; RSI measures one market's moves",
+          "explanation": "Right: RSI is about a single market's recent moves."
+        },
+        {
+          "id": "c",
+          "text": "RS is RSI set to a longer period",
+          "explanation": "No: changing RSI's period still scores one market against itself. Relative strength needs a second market."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "intermediate",
+      "glossaryIds": [
+        "relative-strength",
+        "rsi"
+      ]
+    }
+  ],
+  "doItNow": {
+    "kind": "reflection",
+    "instructions": "Pick two markets you could compare, for example a stock and its index, or two commodities. Using the closing prices shown in your demo platform, write down both prices today and in 5 trading days. Work out each percentage change and the change in the ratio. Then write one sentence on what the ratio does and does not tell you."
+  },
+  "glossaryIds": [
+    "relative-strength",
+    "rsi",
+    "correlation",
+    "volatility",
+    "indicator"
+  ],
+  "sourceIds": []
+}

@@ -1,0 +1,129 @@
+{
+  "id": "fx-macd",
+  "moduleId": "forex-indicators",
+  "title": "MACD: the gap between two averages",
+  "level": "intermediate",
+  "estimatedMinutes": 20,
+  "inOneLine": {
+    "simple": "MACD shows how far a fast average is from a slow one. Because it is built from averages, it lags too.",
+    "balanced": "With the usual settings, the [[macd|MACD]] line = EMA 12 − EMA 26, the signal line = EMA 9 of the MACD line, and the histogram = MACD line − signal line."
+  },
+  "explain": {
+    "simple": "Take two moving averages: a fast one (12 periods) and a slow one (26 periods). When price has been rising, the fast one sits above the slow one, and the MACD line is positive. When price has been falling, it is negative. The signal line is an average of the MACD line, and the histogram is the gap between them. A growing gap means the recent move has been speeding up. A shrinking gap means it has been slowing.",
+    "balanced": "MACD is in price units, so a MACD of 0.0015 on EUR/USD and 0.30 on USD/JPY cannot be compared directly. Crosses of the MACD and signal lines come after the averages turn, so they are late by design. In a range, the lines cross back and forth near zero and most crosses lead nowhere. MetaTrader's built-in MACD usually draws the MACD line as bars and the signal as a line, with no separate histogram, while Chart Lab draws the histogram as bars. Apps also differ in small details, such as which kind of average the signal line uses, so values can differ slightly between apps. Check what each part means in each app."
+  },
+  "realNumbers": {
+    "assumptions": [
+      "Illustrative EUR/USD H4 values",
+      "EMA 12 = 1.10350, EMA 26 = 1.10200, signal line = 0.00120"
+    ],
+    "steps": [
+      "MACD line = 1.10350 − 1.10200 = 0.00150.",
+      "Histogram = 0.00150 − 0.00120 = 0.00030.",
+      "The MACD line is positive, so the fast average is above the slow one: price has been rising recently.",
+      "The histogram is positive, so the MACD line is above its own average. It describes the recent past, not the next candle."
+    ]
+  },
+  "anotherExample": {
+    "assumptions": [
+      "Illustrative USD/JPY H4 values; 1 pip = 0.01",
+      "EMA 12 = 150.40, EMA 26 = 150.10"
+    ],
+    "steps": [
+      "MACD line = 150.40 − 150.10 = 0.30, which is 30 pips.",
+      "On EUR/USD, a gap of 30 pips would show as 0.00300. The numbers look very different for the same size of gap.",
+      "So compare MACD with its own history on the same pair, not across pairs.",
+      "If the pair then moves sideways, the two EMAs drift together and the MACD line moves toward zero, with frequent crosses."
+    ]
+  },
+  "explainSimpler": "MACD measures the distance between a quick average and a slow one. Wide gap: a strong recent move. Small gap: not much happening.",
+  "commonMistake": "Treating each MACD and signal line cross as a buy or sell signal. The crosses come late, and in sideways markets most of them reverse.",
+  "quickCheck": [
+    {
+      "id": "fx-macd-q1",
+      "prompt": "EMA 12 = 1.25300 and EMA 26 = 1.25500. What is the MACD line?",
+      "options": [
+        {
+          "id": "a",
+          "text": "−0.00200",
+          "explanation": "Right: 1.25300 − 1.25500 = −0.00200, so the fast average is below the slow one."
+        },
+        {
+          "id": "b",
+          "text": "+0.00200 (fast above slow)",
+          "explanation": "No: the fast EMA (1.25300) is below the slow one (1.25500), so fast − slow is negative."
+        },
+        {
+          "id": "c",
+          "text": "1.25400",
+          "explanation": "No: that is the midpoint, not the difference."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "intermediate",
+      "glossaryIds": [
+        "macd"
+      ]
+    },
+    {
+      "id": "fx-macd-q2",
+      "prompt": "Why does MACD lag price?",
+      "options": [
+        {
+          "id": "a",
+          "text": "It is calculated from moving averages of past prices",
+          "explanation": "Right: averages always run behind price."
+        },
+        {
+          "id": "b",
+          "text": "It waits for each candle to close",
+          "explanation": "No: the lag comes from averaging past prices, not from waiting for a close."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "intermediate",
+      "glossaryIds": [
+        "macd",
+        "lagging-indicator"
+      ]
+    },
+    {
+      "id": "fx-macd-q3",
+      "prompt": "Can you say a MACD of 0.30 on USD/JPY is stronger than 0.00150 on EUR/USD?",
+      "options": [
+        {
+          "id": "a",
+          "text": "No: MACD is in each pair's own price units",
+          "explanation": "Right: compare it only with its own history on the same pair."
+        },
+        {
+          "id": "b",
+          "text": "Yes: 0.30 is a bigger reading, so the move behind it is stronger",
+          "explanation": "No: yen pairs are quoted with far fewer decimal places, so the numbers are on different scales."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "intermediate",
+      "glossaryIds": [
+        "macd"
+      ]
+    }
+  ],
+  "doItNow": {
+    "kind": "chart_lab",
+    "instructions": "In Chart Lab, show MACD below the chart. Choose the Range scenario and count the MACD and signal line crosses. Then choose the Breakout scenario and see how far price had already moved before the lines crossed."
+  },
+  "glossaryIds": [
+    "macd",
+    "moving-average",
+    "lagging-indicator",
+    "indicator"
+  ],
+  "sourceIds": []
+}

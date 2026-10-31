@@ -1,0 +1,111 @@
+{
+  "id": "st-market-cap",
+  "moduleId": "stocks-basics",
+  "title": "Market capitalisation: size, not quality",
+  "level": "beginner",
+  "estimatedMinutes": 15,
+  "inOneLine": {
+    "simple": "Market cap is share price × number of shares. It tells you how big the market thinks a company is, not how good it is.",
+    "balanced": "[[market-capitalisation|Market cap]] = share price × shares outstanding. Two companies with the same market cap can have very different [[earnings]], so compare size with profit before drawing conclusions."
+  },
+  "explain": {
+    "simple": "You cannot compare two companies by their share prices alone, because one may have far more shares than the other. Multiply the price by the number of shares and you get the market capitalisation, or market cap: what it would cost, at today's price, to own every share. It moves whenever the share price moves. Market cap measures size in the market's eyes. It does not tell you whether the business is profitable, growing, or worth that price.",
+    "balanced": "Market cap reflects what buyers expect the company to earn in future, as well as what it earns now. A company with a large market cap and small profits is priced for growth; if that growth does not arrive, the price can fall a long way. Market cap also ignores debt: two companies with the same market cap can owe very different amounts. Compare it with profit using [[pe-ratio|P/E]], which you will meet in the company-analysis module."
+  },
+  "realNumbers": {
+    "assumptions": [
+      "Fictional companies from the Fundamental Analysis Lab, Year 3 figures, millions of USD",
+      "Example Quickling Apps Co (fictional): price 14.40 USD, 100 million shares, net income 18",
+      "Example Steadybrook Pantry Foods (fictional): price 6.80 USD, 200 million shares, net income 114"
+    ],
+    "steps": [
+      "Quickling market cap = 14.40 × 100 million = 1,440 million USD.",
+      "Steadybrook market cap = 6.80 × 200 million = 1,360 million USD.",
+      "They are almost the same size by market cap.",
+      "But Steadybrook's net income is 114 ÷ 18 = about 6.3 times Quickling's. The market is paying for Quickling's expected growth, not its current profit."
+    ]
+  },
+  "anotherExample": {
+    "assumptions": [
+      "Example Quickling Apps Co (fictional), 100 million shares",
+      "Illustrative: the share price falls from 14.40 USD to 10.80 USD in one day; nothing in the business changes that day"
+    ],
+    "steps": [
+      "Fall in price = (14.40 − 10.80) ÷ 14.40 = 25%.",
+      "New market cap = 10.80 × 100 million = 1,080 million USD.",
+      "The market cap fell by 360 million USD, exactly 25%.",
+      "The company's revenue, profit and debt were the same at the end of the day. Only the market's price changed."
+    ]
+  },
+  "explainSimpler": "Price × shares = market cap. It is the price tag for the whole company, not a quality score.",
+  "commonMistake": "Calling a company \"bigger\" or \"better\" because its share price is higher. A 100 USD share can belong to a smaller company than a 5 USD share if it has far fewer shares.",
+  "quickCheck": [
+    {
+      "id": "st-market-cap-q1",
+      "prompt": "Price 4.00 USD, 300 million shares. What is the market cap?",
+      "options": [
+        {
+          "id": "a",
+          "text": "75 million USD",
+          "explanation": "No: that divides the shares by the price."
+        },
+        {
+          "id": "b",
+          "text": "304 million USD",
+          "explanation": "No: the price and shares are multiplied, not added."
+        },
+        {
+          "id": "c",
+          "text": "1,200 million USD",
+          "explanation": "Right: 4.00 × 300 million = 1,200 million USD."
+        }
+      ],
+      "correctOptionIds": [
+        "c"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "market-capitalisation"
+      ]
+    },
+    {
+      "id": "st-market-cap-q2",
+      "prompt": "Company X shares cost 100 USD and Company Y shares cost 5 USD. What can you say about their size?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Nothing yet; you need the share counts",
+          "explanation": "Right: size is price × shares, so the price alone tells you nothing."
+        },
+        {
+          "id": "b",
+          "text": "X is bigger, since its price is higher",
+          "explanation": "No: X might have far fewer shares than Y."
+        },
+        {
+          "id": "c",
+          "text": "Y is cheaper, so better value",
+          "explanation": "No: a low price per share is not the same as good value."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "market-capitalisation"
+      ]
+    }
+  ],
+  "doItNow": {
+    "kind": "fundamental",
+    "instructions": "Open the Fundamental Analysis Lab → Company analysis. For each of the four fictional companies, write down the market cap and the Year 3 net income. Which company has the largest market cap compared with its profit?"
+  },
+  "glossaryIds": [
+    "market-capitalisation",
+    "share",
+    "earnings",
+    "pe-ratio"
+  ],
+  "sourceIds": []
+}

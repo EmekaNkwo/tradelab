@@ -1,0 +1,116 @@
+{
+  "id": "fx-ma-trend-following",
+  "moduleId": "forex-rules-based-strategies",
+  "title": "Moving-average trend following",
+  "level": "intermediate",
+  "estimatedMinutes": 20,
+  "inOneLine": {
+    "simple": "Hold a position while price stays on the right side of a moving average that points in the same direction, and step aside when it crosses back.",
+    "balanced": "The rule reacts only to moves that have already happened, so it is always late. It accepts many small losses in sideways markets in exchange for staying in during long trends."
+  },
+  "explain": {
+    "simple": "The simplified version here uses a daily chart and a 50-period exponential [[moving-average]] (EMA 50). A long is allowed when a candle closes above the average and the average is higher than it was 10 candles ago. The position is closed when a candle closes back below. The stop sits 2 × [[atr]] from the entry, and the size risks no more than 1% of the account. This is a simplified educational version, not any trader's system.",
+    "balanced": "Because the average is built from past closes, the entry comes after part of the move and the exit after part of the reversal. In a range, price crosses a flat average again and again, producing a run of small losses ([[whipsaw]]). The rule set works only if occasional long trends pay for those losses and the costs. The 50-period setting is an example; testing many settings on the same data and keeping the best invites [[overfitting]]."
+  },
+  "realNumbers": {
+    "assumptions": [
+      "Illustrative EUR/USD daily chart (simulated)",
+      "50-period average: 1.0950 ten candles ago, 1.1010 now; latest close 1.1030",
+      "ATR 0.0035; account 10,000 USD (simulated); 1 pip = 1 USD per 10,000 units"
+    ],
+    "steps": [
+      "The close (1.1030) is above the average (1.1010), and the average has risen from 1.0950: a long is allowed.",
+      "If the order fills at 1.1030, the stop is 2 × 0.0035 = 0.0070 below, at 1.0960: 70 pips.",
+      "1% risk = 100 USD. 100 ÷ 70 ≈ 1.43 USD per pip, which is about 14,286 units. Round down to 14,000 units.",
+      "Check: 14,000 units = 1.40 USD per pip; 1.40 × 70 = 98 USD at the stop, within the 100 USD limit."
+    ]
+  },
+  "anotherExample": {
+    "assumptions": [
+      "An illustrative 60-candle stretch (simulated)",
+      "40 sideways candles, then a 20-candle trend",
+      "Spread cost 1.5 pips per trade"
+    ],
+    "steps": [
+      "In the sideways part the rule enters and exits 6 times, losing about 25 pips each: 6 × 25 = 150 pips lost.",
+      "The trend then gives one trade of about 300 pips.",
+      "Before costs: 300 − 150 = +150 pips. Spread: 7 trades × 1.5 = 10.5 pips. After costs: about +139.5 pips.",
+      "If the trend had not come, or had been shorter, the same rules would have ended with a loss."
+    ]
+  },
+  "explainSimpler": "Follow the arrow on the average: stay in while price is above a rising line, get out when it falls back below.",
+  "commonMistake": "Dropping the rules after a run of whipsaw losses. Those losses are the normal cost of the method, and skipping trades by feel means the next trend may be missed.",
+  "quickCheck": [
+    {
+      "id": "fx-ma-trend-following-q1",
+      "prompt": "Average 1.2500 now (1.2460 ten candles ago), close 1.2530, ATR 0.0020. Where is a 2 × ATR stop for a long filled at 1.2530?",
+      "options": [
+        {
+          "id": "a",
+          "text": "1.2510, one ATR below",
+          "explanation": "No: that uses 1 × ATR. The rule uses 2 × 0.0020 = 0.0040."
+        },
+        {
+          "id": "b",
+          "text": "1.2490",
+          "explanation": "Right: 1.2530 − 2 × 0.0020 = 1.2530 − 0.0040 = 1.2490."
+        },
+        {
+          "id": "c",
+          "text": "1.2460, the old average",
+          "explanation": "No: the old average is part of the trend test, not the stop."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "intermediate",
+      "glossaryIds": [
+        "atr",
+        "stop-loss"
+      ]
+    },
+    {
+      "id": "fx-ma-trend-following-q2",
+      "prompt": "Why do trend-following rules often have more losing trades than winning ones?",
+      "options": [
+        {
+          "id": "a",
+          "text": "They are built to lose most trades",
+          "explanation": "No: losing often is a side effect, not the aim."
+        },
+        {
+          "id": "b",
+          "text": "Moving averages never change direction",
+          "explanation": "No: they do change direction, but late."
+        },
+        {
+          "id": "c",
+          "text": "Most crosses happen in sideways markets and soon reverse",
+          "explanation": "Right: most crosses come in sideways markets and reverse soon after, so most trades are small losses; occasional long trends pay for them."
+        }
+      ],
+      "correctOptionIds": [
+        "c"
+      ],
+      "level": "intermediate",
+      "glossaryIds": [
+        "whipsaw",
+        "win-rate"
+      ]
+    }
+  ],
+  "doItNow": {
+    "kind": "chart_lab",
+    "instructions": "In Chart Lab, choose Strong uptrend and turn on EMA 50. Find the first close above the rising average and the first close back below it. Then choose Range and count the false starts."
+  },
+  "glossaryIds": [
+    "moving-average",
+    "atr",
+    "whipsaw",
+    "overfitting",
+    "position-sizing",
+    "trend"
+  ],
+  "sourceIds": []
+}

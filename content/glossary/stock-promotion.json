@@ -1,0 +1,14 @@
+{
+  "id": "stock-promotion",
+  "term": "Stock promotion",
+  "aliases": ["promotion", "paid promotion", "promoted stock", "stock promoter"],
+  "definition": {
+    "simple": "Marketing that pushes people to buy a particular share, often through newsletters, social media, emails or chat groups.",
+    "balanced": "Some promotions are paid for by the company or by shareholders who may want to sell. The excited tone, the price targets and the urgency are designed to make you act before checking. A heavy promotion of a tiny, thinly traded share is one of the classic setups for a [[pump-and-dump]]."
+  },
+  "example": "Fictional: 'This tiny miner could go up 10 times by Friday!' with a small-print note that the writer was paid by a shareholder.",
+  "related": ["pump-and-dump", "investment-scam", "penny-stock"],
+  "markets": ["penny_stocks", "stocks"],
+  "level": "beginner",
+  "sourceIds": []
+}

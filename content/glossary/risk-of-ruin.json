@@ -1,0 +1,21 @@
+{
+  "id": "risk-of-ruin",
+  "term": "Risk of ruin",
+  "aliases": [
+    "ruin risk",
+    "probability of ruin"
+  ],
+  "definition": {
+    "simple": "The chance that losses push your account down to a level where you must stop.",
+    "balanced": "Risk of ruin depends on win rate, reward to risk, risk per trade and where you set the ruin level. It can only be estimated, for example by simulation. Risking a smaller share of the account each trade usually lowers it a lot."
+  },
+  "example": "Example: a learner sets ruin as a 50% [[drawdown]] and runs simulations at 1% and at 5% risk per trade to compare.",
+  "related": [
+    "drawdown",
+    "risk-per-trade",
+    "losing-streak"
+  ],
+  "markets": [],
+  "level": "intermediate",
+  "sourceIds": []
+}

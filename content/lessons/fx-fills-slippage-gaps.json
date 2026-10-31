@@ -1,0 +1,76 @@
+{
+  "id": "fx-fills-slippage-gaps",
+  "moduleId": "forex-orders",
+  "title": "Fills, slippage and gaps",
+  "level": "beginner",
+  "estimatedMinutes": 15,
+  "inOneLine": {
+    "simple": "The price you ask for is not always the price you get. A stop loss is not a guaranteed price.",
+    "balanced": "[[slippage|Slippage]] and [[gap|gaps]] mean orders, including stops, can fill at worse prices than planned, unless your broker offers a guaranteed stop."
+  },
+  "explain": {
+    "simple": "A fill is the price your order actually gets. In a calm market it is usually close to what you saw. When prices move fast, for example around big news, your order can fill at a different price. This is slippage. It can be worse or better. A gap is a jump in price, for example from Friday's close to Monday's open. If your stop loss sits inside the gap, it fills at the first price after the gap, which can be far worse. Your loss can then be bigger than you planned.",
+    "balanced": "A [[stop-loss]] and a [[stop-order]] become market orders when triggered, so they take the next available price. [[liquidity|Thin liquidity]], news releases and market opens raise the risk of slippage and gaps. Some brokers offer a guaranteed stop, usually for an extra cost; only that kind of stop promises the exact price. Plan your size so that a worse-than-planned fill would still be survivable."
+  },
+  "realNumbers": {
+    "assumptions": [
+      "Illustrative prices",
+      "Account currency USD",
+      "Buy 0.10 lot EUR/USD at 1.10000; pip value 1 USD",
+      "Stop loss at 1.09500 (50 pips below)",
+      "Market closes with the bid at 1.09800 and reopens with the bid at 1.09200"
+    ],
+    "steps": [
+      "Planned loss = 50 × 1 USD = 50 USD.",
+      "The reopen price 1.09200 is already below the stop, so the stop triggers.",
+      "It fills near 1.09200: 1.10000 − 1.09200 = 0.00800 = 80 pips.",
+      "Actual loss = 80 × 1 USD = 80 USD, 30 USD more than planned."
+    ]
+  },
+  "anotherExample": {
+    "assumptions": [
+      "Illustrative prices",
+      "Buy 0.10 lot EUR/USD at market; pip value 1 USD",
+      "The ask on screen is 1.10012"
+    ],
+    "steps": [
+      "Case A: the fill is 1.10020. Slippage = 0.8 pips against you = 0.80 USD.",
+      "Case B: the fill is 1.10008. Slippage = 0.4 pips in your favour = 0.40 USD.",
+      "Check the fill price in your trade history, not just the price you saw before tapping."
+    ]
+  },
+  "explainSimpler": "Your stop loss is an instruction to get out, not a promise of the exact price. If price jumps past it, you get out at the next price available.",
+  "commonMistake": "Believing a stop loss caps the loss exactly at its level. It caps it only in normal conditions. In a gap or a fast market, the loss can be larger. Only a guaranteed stop, if your broker offers one, promises the level.",
+  "quickCheck": [
+    {
+      "id": "fx-fills-slippage-gaps-q1",
+      "prompt": "Your buy trade's stop is at 1.09500. The market reopens at 1.09300. Roughly where does the stop fill?",
+      "options": [
+        { "id": "a", "text": "Near 1.09300", "explanation": "Right: the stop becomes a market order and takes the first available price after the gap." },
+        { "id": "b", "text": "Exactly 1.09500", "explanation": "No: a normal stop is not a guaranteed price. Price never traded at 1.09500." }
+      ],
+      "correctOptionIds": ["a"],
+      "level": "beginner",
+      "glossaryIds": ["gap", "stop-loss"]
+    },
+    {
+      "id": "fx-fills-slippage-gaps-q2",
+      "prompt": "Which statements about slippage are true? Choose all that apply.",
+      "options": [
+        { "id": "a", "text": "It can be in your favour or against you", "explanation": "True: the fill can be better or worse than the price you saw." },
+        { "id": "b", "text": "It is more likely around big news", "explanation": "True: prices move fast and liquidity can thin out." },
+        { "id": "c", "text": "A normal stop loss prevents it", "explanation": "False: a normal stop becomes a market order and can slip too." }
+      ],
+      "correctOptionIds": ["a", "b"],
+      "level": "beginner",
+      "glossaryIds": ["slippage"]
+    }
+  ],
+  "doItNow": {
+    "kind": "metatrader",
+    "instructions": "In MetaTrader, open the History tab on your demo account. For your last few closed trades, compare the price you expected with the open and close prices shown. Note any slippage in pips."
+  },
+  "homework": "Before the next weekend, write down what would happen to a demo trade's stop loss if the market reopened past it, and how much you would lose at 0.10 lot.",
+  "glossaryIds": ["slippage", "gap", "stop-loss", "stop-order", "liquidity", "market-order"],
+  "sourceIds": []
+}

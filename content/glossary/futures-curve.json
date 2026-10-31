@@ -1,0 +1,23 @@
+{
+  "id": "futures-curve",
+  "term": "Futures curve",
+  "aliases": [
+    "forward curve",
+    "term structure"
+  ],
+  "definition": {
+    "simple": "The line you get by plotting the prices of one futures market across its contract months.",
+    "balanced": "A curve sloping up into later months is in [[contango]]; sloping down is [[backwardation]]. The shape can change, and it is not a forecast of the future spot price."
+  },
+  "related": [
+    "contango",
+    "backwardation",
+    "contract-month"
+  ],
+  "markets": [
+    "commodities",
+    "futures"
+  ],
+  "level": "intermediate",
+  "sourceIds": []
+}

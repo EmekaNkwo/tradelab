@@ -1,0 +1,15 @@
+appId: com.tradelab.app
+---
+# Android 13+ POST_NOTIFICATIONS prompt.
+# TradeLab asks for it when onboarding finishes with "Remind me at class time"
+# selected (integrations/notifications/expoReminders.ts -> ensurePermission,
+# called with USER_ACTION = { prompt: true } from features/learning/useCases.ts).
+# launchApp normally pre-grants permissions, so this dialog usually never shows;
+# these taps are a fallback. Stock Android uses the permission controller id;
+# MIUI may use its own dialog, hence the text fallback.
+- tapOn:
+    id: "com.android.permissioncontroller:id/permission_allow_button"
+    optional: true
+- tapOn:
+    text: "(?i)allow"
+    optional: true

@@ -1,0 +1,54 @@
+{
+  "id": "macro-westmark-inflation-crowded",
+  "category": "macro",
+  "title": "Westmark inflation (fictional) beats forecasts: a crowded market",
+  "setup": "The same fictional Westmark [[inflation]] release, with exactly the same numbers as the calm scenario. The difference is the run-up: WMK has risen steadily for three weeks while commentary focused on a high inflation number. All figures are made up; this is a practice scenario, not a forecast.",
+  "release": {
+    "name": "Westmark inflation (fictional)",
+    "unit": "% year on year",
+    "consensus": 3.0,
+    "actual": 3.4,
+    "previous": 3.1
+  },
+  "pricedIn": "A lot. Many traders had already bought WMK in the hope of a high number, and their bets already implied a good chance of a rate rise at the next meeting. Some expected an even higher figure than the 3.0% consensus.",
+  "question": "Inflation comes in at 3.4% against a 3.0% consensus, the same +0.4-point surprise. Which reactions are plausible?",
+  "reactions": [
+    {
+      "id": "a",
+      "text": "WMK spikes, then falls back as early buyers take profit.",
+      "plausible": true,
+      "explanation": "Plausible: when a move is crowded, good news can be the moment people who bought early choose to sell."
+    },
+    {
+      "id": "b",
+      "text": "WMK rises further, because 3.4% was above even what most buyers had hoped for.",
+      "plausible": true,
+      "explanation": "Plausible: if positioning was for a smaller beat, the number can still add to the move."
+    },
+    {
+      "id": "c",
+      "text": "WMK falls straight away, because some traders had bet on an even higher figure.",
+      "plausible": true,
+      "explanation": "Plausible: against what some traders expected, 3.4% may feel like a disappointment."
+    },
+    {
+      "id": "d",
+      "text": "WMK must rise and hold, because that is one plausible outcome in the calm scenario.",
+      "plausible": false,
+      "explanation": "Not plausible as a rule: the number is the same, but what was priced in is not, so the reaction can differ."
+    },
+    {
+      "id": "e",
+      "text": "Nobody will sell WMK today, because the number beat the consensus.",
+      "plausible": false,
+      "explanation": "Not plausible: there are always sellers, and profit-taking after a crowded run-up is common."
+    }
+  ],
+  "takeaway": "Same release, same surprise, different setup. When much is priced in, the reaction can be small, short-lived, or even the 'wrong' way. Always ask what the market was set up for, not only what the number was.",
+  "glossaryIds": [
+    "inflation",
+    "surprise",
+    "consensus-forecast",
+    "priced-in"
+  ]
+}

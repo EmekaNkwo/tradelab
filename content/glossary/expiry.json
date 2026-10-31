@@ -1,0 +1,24 @@
+{
+  "id": "expiry",
+  "term": "Expiry",
+  "aliases": [
+    "expiration",
+    "expiry date",
+    "last trading day"
+  ],
+  "definition": {
+    "simple": "The date a futures contract stops trading and is settled.",
+    "balanced": "After expiry the contract no longer exists. Before it, a holder can close the position, [[rollover|roll]] it to a later month, or let it go to [[physical-settlement|physical]] or [[cash-settlement|cash]] settlement. The dates are set in each contract's specification and differ between contracts."
+  },
+  "related": [
+    "contract-month",
+    "rollover",
+    "physical-settlement",
+    "cash-settlement"
+  ],
+  "markets": [
+    "futures"
+  ],
+  "level": "beginner",
+  "sourceIds": []
+}

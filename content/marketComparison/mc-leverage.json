@@ -1,0 +1,13 @@
+{
+  "id": "mc-leverage",
+  "order": 6,
+  "dimension": "Leverage",
+  "cells": {
+    "forex": "Commonly offered through margin; maximum [[leverage]] is set by the broker and often capped by the regulator.",
+    "stocks": "Not needed when you pay in full; some accounts allow borrowing, which adds leverage and risk.",
+    "penny_stocks": "Borrowing to buy is often restricted or unavailable; even without it, price swings can be large.",
+    "commodities": "Often leveraged through futures or broker contracts; funds may have little or none.",
+    "futures": "Built in: the margin is a small part of the [[notional-value]], so leverage is usually high."
+  },
+  "caveat": "Limits depend on the jurisdiction, the regulator, the broker, the account type and the product, and can change. Higher allowed leverage is not a reason to use it."
+}

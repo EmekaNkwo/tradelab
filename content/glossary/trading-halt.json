@@ -1,0 +1,13 @@
+{
+  "id": "trading-halt",
+  "term": "Trading halt",
+  "aliases": ["halt", "halted", "trading suspension", "suspension"],
+  "definition": {
+    "simple": "A pause in trading a share. While it lasts, you cannot buy or sell it at all.",
+    "balanced": "An exchange or regulator may halt a share pending news, after a very sharp price move, or when there are questions about the company's information. A halt can last minutes or much longer. When trading restarts, the price can open far from where it stopped, so a [[stop-loss]] gives no protection during the pause."
+  },
+  "related": ["gap", "stop-loss", "penny-stock"],
+  "markets": ["stocks", "penny_stocks", "futures", "commodities"],
+  "level": "beginner",
+  "sourceIds": []
+}

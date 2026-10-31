@@ -1,0 +1,24 @@
+{
+  "id": "consolidation",
+  "term": "Consolidation",
+  "aliases": [
+    "consolidating",
+    "sideways pause",
+    "trading range",
+    "base"
+  ],
+  "definition": {
+    "simple": "A period when price moves sideways in a fairly narrow box, often after a bigger move.",
+    "balanced": "Highs stop rising and lows stop falling. You can measure the box against [[atr|ATR]] to see how narrow it is. A consolidation can end with a [[breakout]] in either direction, or last much longer than expected."
+  },
+  "example": "Highs near 82.40 and lows near 80.10 for 30 candles, with ATR 1.10: a box about 2.1 ATR tall.",
+  "related": [
+    "support",
+    "resistance",
+    "breakout",
+    "channel"
+  ],
+  "markets": [],
+  "level": "beginner",
+  "sourceIds": []
+}

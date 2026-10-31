@@ -1,0 +1,19 @@
+{
+  "id": "forex-indicators",
+  "skills": ["technical_analysis"],
+  "title": "Indicators and their limits",
+  "summary": "How MA, RSI, MACD, ATR and Bollinger Bands are calculated, how to read them, and the market conditions where each one misleads.",
+  "markets": [
+    "forex"
+  ],
+  "level": "intermediate",
+  "lessonIds": [
+    "fx-moving-averages",
+    "fx-rsi",
+    "fx-macd",
+    "fx-atr-bollinger"
+  ],
+  "checkpointQuizId": "forex-indicators-checkpoint",
+  "practicalResult": "Add a moving average, RSI, MACD, ATR and Bollinger Bands to a demo chart in MetaTrader, then find a place in Chart Lab where each one gives a misleading reading.",
+  "minPracticeDays": 0
+}

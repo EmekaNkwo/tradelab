@@ -1,0 +1,22 @@
+{
+  "id": "value-investing",
+  "term": "Value investing",
+  "aliases": [
+    "value stocks",
+    "value stock"
+  ],
+  "definition": {
+    "simple": "An approach that looks for companies whose price seems low compared with their profits, cash or assets.",
+    "balanced": "Value investors look for a low price relative to earnings, cash flow or book value. The risk: some companies are cheap for a reason, such as a shrinking business, and stay cheap or get cheaper."
+  },
+  "related": [
+    "growth-investing",
+    "pe-ratio",
+    "valuation"
+  ],
+  "markets": [
+    "stocks"
+  ],
+  "level": "beginner",
+  "sourceIds": []
+}

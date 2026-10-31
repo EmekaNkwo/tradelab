@@ -1,0 +1,86 @@
+{
+  "id": "fx-pending-orders",
+  "moduleId": "forex-orders",
+  "title": "Pending orders: limits and stops",
+  "level": "beginner",
+  "estimatedMinutes": 15,
+  "inOneLine": {
+    "simple": "A pending order waits for price to reach your level. Limits buy lower or sell higher. Stops buy higher or sell lower.",
+    "balanced": "[[pending-order|Pending orders]]: buy limit below price, sell limit above, buy stop above, sell stop below. Nothing happens unless price reaches the level."
+  },
+  "explain": {
+    "simple": "You do not have to trade now. A pending order waits. A buy limit sits below the current price: you want to buy cheaper. A sell limit sits above: you want to sell higher. A buy stop sits above the current price: you want to buy only if price rises to that level. A sell stop sits below: you want to sell only if price falls to that level. If price never gets there, no trade opens.",
+    "balanced": "In MetaTrader, buy pending orders are triggered by the [[ask]] and sell pending orders by the [[bid]]. A [[limit-order]] aims for your price or better. A [[stop-order]] becomes a market order once triggered, so it can fill worse than its level, especially in fast markets or [[gap|gaps]]. Many brokers set a minimum distance between the current price and a pending order, and you can usually add a stop loss and take profit when you place it."
+  },
+  "realNumbers": {
+    "assumptions": [
+      "Illustrative prices",
+      "EUR/USD bid 1.09990, ask 1.10000"
+    ],
+    "steps": [
+      "Buy limit at 1.09500: below the ask. Triggers if the ask falls to 1.09500.",
+      "Sell limit at 1.10500: above the bid. Triggers if the bid rises to 1.10500.",
+      "Buy stop at 1.10500: above the ask. Triggers if the ask rises to 1.10500.",
+      "Sell stop at 1.09500: below the bid. Triggers if the bid falls to 1.09500."
+    ]
+  },
+  "anotherExample": {
+    "assumptions": [
+      "Illustrative prices",
+      "A buy stop on EUR/USD at 1.10500, for a possible breakout",
+      "Size 0.10 lot; pip value 1 USD"
+    ],
+    "steps": [
+      "Price rises quickly and the ask jumps from 1.10490 to 1.10520.",
+      "The order triggers and becomes a market order.",
+      "It fills at 1.10520, 2 pips above the level.",
+      "That slippage costs 2 × 1 USD = 2 USD compared with the planned price."
+    ]
+  },
+  "explainSimpler": "Limit: 'get me a better price than now.' Stop: 'only get me in if price moves past this point.'",
+  "commonMistake": "Mixing up limit and stop orders. Putting a buy limit above the current price, or a buy stop below it, is the wrong way round. The platform will usually reject it, or you may end up placing an order you did not intend.",
+  "quickCheck": [
+    {
+      "id": "fx-pending-orders-q1",
+      "prompt": "EUR/USD ask is 1.10000. You want to buy only if price drops to 1.09700. Which order?",
+      "options": [
+        { "id": "a", "text": "Buy limit at 1.09700", "explanation": "Right: a buy limit sits below the current price." },
+        { "id": "b", "text": "Buy stop at 1.09700", "explanation": "No: a buy stop sits above the current price." },
+        { "id": "c", "text": "Sell limit at 1.09700", "explanation": "No: that would open a sell, and a sell limit sits above the price." }
+      ],
+      "correctOptionIds": ["a"],
+      "level": "beginner",
+      "glossaryIds": ["limit-order", "pending-order"]
+    },
+    {
+      "id": "fx-pending-orders-q2",
+      "prompt": "Where does a sell stop go?",
+      "options": [
+        { "id": "a", "text": "Below the current bid", "explanation": "Right: a sell stop triggers if price falls to the level." },
+        { "id": "b", "text": "Above the current bid", "explanation": "No: a sell order above the price is a sell limit." }
+      ],
+      "correctOptionIds": ["a"],
+      "level": "beginner",
+      "glossaryIds": ["stop-order"]
+    },
+    {
+      "id": "fx-pending-orders-q3",
+      "prompt": "A pending order's price is never reached. What happens?",
+      "options": [
+        { "id": "a", "text": "No trade opens", "explanation": "Right: a pending order only opens a trade if price reaches its level." },
+        { "id": "b", "text": "It fills at the end of the day anyway", "explanation": "No: it waits until it triggers, expires, or you delete it." }
+      ],
+      "correctOptionIds": ["a"],
+      "level": "beginner",
+      "glossaryIds": ["pending-order"]
+    }
+  ],
+  "doItNow": {
+    "kind": "metatrader",
+    "instructions": "On your demo account, place a buy limit on EUR/USD below the current price, with a stop loss and take profit. Check it in the Trade tab, then delete it. Follow the task card.",
+    "mtTaskId": "mt-pending-order"
+  },
+  "homework": "For EUR/USD at today's price, write down one example level for each of the four pending order types and say why each one is on that side of the price.",
+  "glossaryIds": ["pending-order", "limit-order", "stop-order", "bid", "ask"],
+  "sourceIds": []
+}

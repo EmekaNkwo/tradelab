@@ -1,0 +1,20 @@
+{
+  "id": "priced-in",
+  "term": "Priced in",
+  "aliases": [
+    "already priced in",
+    "discounted"
+  ],
+  "definition": {
+    "simple": "When the market's price already reflects news that people expected, so the news itself may move the price very little.",
+    "balanced": "Prices move ahead of events as traders act on what they expect. When the event matches expectations, the reaction may be small, or opposite to the 'obvious' direction as traders take profits. It is hard to know exactly how much is priced in, so treat it as a working guess."
+  },
+  "example": "Hypothetical: a rate rise is widely expected and the currency rose for weeks before. The rise happens, and the currency slips as early buyers sell.",
+  "related": [
+    "surprise",
+    "consensus-forecast"
+  ],
+  "markets": [],
+  "level": "beginner",
+  "sourceIds": []
+}

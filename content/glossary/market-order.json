@@ -1,0 +1,13 @@
+{
+  "id": "market-order",
+  "term": "Market order",
+  "aliases": ["market execution", "buy at market", "sell at market"],
+  "definition": {
+    "simple": "An order to buy or sell straight away at the best price available now.",
+    "balanced": "A buy at market fills at or near the [[ask]]; a sell at market fills at or near the [[bid]]. You get speed, but the exact price is not fixed, so [[slippage]] can happen."
+  },
+  "related": ["pending-order", "slippage", "ask", "bid"],
+  "markets": [],
+  "level": "beginner",
+  "sourceIds": []
+}

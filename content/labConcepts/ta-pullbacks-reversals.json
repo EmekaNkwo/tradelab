@@ -1,0 +1,28 @@
+{
+  "id": "ta-pullbacks-reversals",
+  "skills": ["chart_reading", "technical_analysis"],
+  "lab": "technical",
+  "level": "beginner",
+  "order": 6,
+  "title": "Pullbacks and reversals",
+  "summary": "A pullback moves against the trend but keeps its structure. A reversal breaks the structure and builds a new one in the opposite direction.",
+  "unreliableWhen": "At the time, the two look the same. A broken structure can repair itself. On a higher timeframe, a reversal may be just a pullback.",
+  "goodExample": "Uptrend with a last higher low at 4,580. Price dips to 4,620 and stays above it: \"pullback so far\".",
+  "badExample": "Calling every dip \"the top\", or calling a clear break below the last higher low \"just a pullback\" because you hold a trade.",
+  "lessonIds": [
+    "ta-pullbacks-reversals",
+    "fx-market-structure"
+  ],
+  "chart": {
+    "scenario": "pullback",
+    "overlays": [
+      "sma20"
+    ],
+    "pane": "none",
+    "lookFor": "Mark the last higher low before the dip. Watch whether the dip stays above it. Then open the Reversal scenario and find the candle that broke the structure."
+  },
+  "drillKind": "find_the_trend",
+  "scenarioIds": [],
+  "companyIds": [],
+  "redFlagCaseIds": []
+}

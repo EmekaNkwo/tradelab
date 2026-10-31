@@ -1,0 +1,13 @@
+{
+  "id": "pending-order",
+  "term": "Pending order",
+  "aliases": ["pending orders"],
+  "definition": {
+    "simple": "An order that waits until price reaches a level you chose, then opens a trade.",
+    "balanced": "An instruction to open a trade later, at a set price. The main types are [[limit-order|limit orders]] (buy below or sell above the current price) and [[stop-order|stop orders]] (buy above or sell below it). If price never reaches the level, nothing happens."
+  },
+  "related": ["limit-order", "stop-order", "market-order"],
+  "markets": [],
+  "level": "beginner",
+  "sourceIds": []
+}

@@ -1,0 +1,26 @@
+{
+  "id": "ta-gaps",
+  "skills": ["chart_reading", "technical_analysis"],
+  "lab": "technical",
+  "level": "intermediate",
+  "order": 9,
+  "title": "Gaps",
+  "summary": "A gap is a jump in price with no trading in between, such as from one session's close to the next open, or after sudden news.",
+  "unreliableWhen": "Gaps do not have to \"fill\", and there is no rule for when. A stop inside a gap fills at the first available price, which can be far worse than planned.",
+  "goodExample": "Planning size so that a gap through the stop would still be survivable.",
+  "badExample": "Holding a trade into a weekend expecting the stop to cap the loss exactly.",
+  "lessonIds": [
+    "ta-volume-gaps",
+    "fx-fills-slippage-gaps"
+  ],
+  "chart": {
+    "scenario": "news_shock",
+    "overlays": [],
+    "pane": "atr",
+    "lookFor": "Find the candle where price jumped. Compare its range with ATR 14 before the jump, and see how long ATR took to catch up."
+  },
+  "drillKind": null,
+  "scenarioIds": [],
+  "companyIds": [],
+  "redFlagCaseIds": []
+}

@@ -1,0 +1,25 @@
+{
+  "id": "fa-income-statement",
+  "skills": ["fundamental_analysis"],
+  "lab": "fundamental",
+  "level": "beginner",
+  "order": 1,
+  "title": "Income statement: from revenue to EPS",
+  "summary": "Revenue minus cost of sales gives gross profit; minus operating expenses gives operating profit; minus interest and tax gives net income. Divide by the number of shares for EPS.",
+  "unreliableWhen": "When one-off gains or costs distort a single year, when accounting choices record sales before cash is collected, or when you read one year without the trend.",
+  "goodExample": "A fictional food maker grows revenue 2% a year and net income grows at about the same pace, so its margins hold steady.",
+  "badExample": "A fictional app maker grows revenue 50% in a year, but net income grows only 20% because costs and interest grow almost as fast.",
+  "lessonIds": [
+    "st-income-statement"
+  ],
+  "chart": null,
+  "drillKind": null,
+  "scenarioIds": [],
+  "companyIds": [
+    "example-quickling-apps",
+    "example-steadybrook-foods",
+    "example-gadgetmoor-wholesale",
+    "example-faxworth-machines"
+  ],
+  "redFlagCaseIds": []
+}

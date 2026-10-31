@@ -1,0 +1,150 @@
+{
+  "id": "forex-scams-brokers-checkpoint",
+  "title": "Checkpoint: scams, brokers and your progress review",
+  "passMark": 0.8,
+  "questions": [
+    {
+      "id": "forex-scams-brokers-checkpoint-q1",
+      "prompt": "A fictional \"account manager\" asks for your MetaTrader login to \"help\". What do you do?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Share it if it is only a demo account",
+          "explanation": "No: never share MetaTrader logins with anyone."
+        },
+        {
+          "id": "b",
+          "text": "Refuse and stop contact",
+          "explanation": "Right: no genuine helper needs your login."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "account-manager-scam"
+      ]
+    },
+    {
+      "id": "forex-scams-brokers-checkpoint-q2",
+      "prompt": "Which is a red flag?",
+      "options": [
+        {
+          "id": "a",
+          "text": "\"Returns guaranteed, 8% every week\"",
+          "explanation": "Right: no one can guarantee trading returns."
+        },
+        {
+          "id": "b",
+          "text": "\"Trading carries a risk of loss\"",
+          "explanation": "No: that is an honest warning."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "investment-scam"
+      ]
+    },
+    {
+      "id": "forex-scams-brokers-checkpoint-q3",
+      "prompt": "You lost money to a fake platform. Someone offers to recover it for an upfront fee. What do you do?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Pay the fee, since getting most of the money back is worth a small cost",
+          "explanation": "No: never pay to recover money. This is a recovery scam."
+        },
+        {
+          "id": "b",
+          "text": "Refuse and report the loss through official channels",
+          "explanation": "Right: an upfront recovery fee is a second scam."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "recovery-scam"
+      ]
+    },
+    {
+      "id": "forex-scams-brokers-checkpoint-q4",
+      "prompt": "How should you check a broker's regulation?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Trust the licence number and regulator logo shown on the broker's own website",
+          "explanation": "No: numbers and logos can be copied."
+        },
+        {
+          "id": "b",
+          "text": "Search the regulator's official register yourself and match every detail",
+          "explanation": "Right: the official register, reached by you and not through a link you were sent, is the check that counts."
+        },
+        {
+          "id": "c",
+          "text": "Ask a signal group if it is safe",
+          "explanation": "No: chat groups are not a reliable source."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "regulator"
+      ]
+    },
+    {
+      "id": "forex-scams-brokers-checkpoint-q5",
+      "prompt": "A chat suddenly fills with hype about a tiny coin \"about to explode\". What might this be?",
+      "options": [
+        {
+          "id": "a",
+          "text": "A pump-and-dump",
+          "explanation": "Right: hype to push the price up so the promoters can sell."
+        },
+        {
+          "id": "b",
+          "text": "A safe bet",
+          "explanation": "No: sudden hype about a small asset is a warning sign."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "pump-and-dump"
+      ]
+    },
+    {
+      "id": "forex-scams-brokers-checkpoint-q6",
+      "prompt": "What does the Practice Progress Review give you?",
+      "options": [
+        {
+          "id": "a",
+          "text": "A \"ready to trade\" badge once you pass every checkpoint and your demo trades make a profit",
+          "explanation": "No: it shows no \"ready\" badge, never uses profit, and is never a readiness verdict."
+        },
+        {
+          "id": "b",
+          "text": "What you have studied and practised, and which gaps remain, with links to practise them",
+          "explanation": "Right: it is a learning assessment, with no pass or fail."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "process-score"
+      ]
+    }
+  ]
+}

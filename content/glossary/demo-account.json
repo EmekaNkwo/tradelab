@@ -1,0 +1,13 @@
+{
+  "id": "demo-account",
+  "term": "Demo account",
+  "aliases": ["demo"],
+  "definition": {
+    "simple": "A practice trading account that uses pretend money. Nothing you do on it can win or lose real money.",
+    "balanced": "A broker account funded with virtual money. Prices are usually real or close to real, but fills, costs, and emotions can differ from a live account."
+  },
+  "related": [],
+  "markets": [],
+  "level": "beginner",
+  "sourceIds": []
+}

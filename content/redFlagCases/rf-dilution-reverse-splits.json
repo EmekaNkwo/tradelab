@@ -1,0 +1,35 @@
+{
+  "id": "rf-dilution-reverse-splits",
+  "title": "Shrinking slices: dilution on repeat",
+  "company": "Bramblewick Biotech Holdings (fictional)",
+  "facts": [
+    { "label": "Price", "value": "0.09 USD (simulated), after a 1-for-15 reverse split last quarter" },
+    { "label": "Shares outstanding", "value": "Adjusted for the 1-for-20 split: 50 million three years ago → 180 million → 600 million before the latest 1-for-15 split (40 million after it)" },
+    { "label": "Recent reverse splits", "value": "1-for-20 two years ago; 1-for-15 last quarter" },
+    { "label": "Revenue trend", "value": "Small and flat: about 0.4 million USD a year for three years" },
+    { "label": "Cash", "value": "Enough for about 4 months at the current rate of spending, according to its latest report" },
+    { "label": "Financing", "value": "Loans that convert into new shares at a discount to the market price" },
+    { "label": "Average daily volume", "value": "About 300,000 shares" },
+    { "label": "Filings and disclosures", "value": "Filed on time; reports describe one product in early testing" },
+    { "label": "Promotion activity", "value": "None found" }
+  ],
+  "question": "Which of these are warning signs?",
+  "signs": [
+    { "id": "a", "text": "The split-adjusted share count went from 50 million to 600 million in three years.", "isRedFlag": true, "explanation": "That is 12 times as many shares. Someone who owned 1% of the split-adjusted shares (500,000) at the start would own about 0.083% before the latest split, unless they kept buying." },
+    { "id": "b", "text": "Two reverse splits in two years.", "isRedFlag": true, "explanation": "One reverse split proves little. Repeated ones, each after heavy dilution, suggest a cycle of issuing shares, the price sinking, and the split resetting it." },
+    { "id": "c", "text": "Cash covers only about 4 months of spending.", "isRedFlag": true, "explanation": "With little revenue, the company will likely need to raise more money soon, and recent history suggests that means more new shares." },
+    { "id": "d", "text": "Loans convert into shares at a discount to the market price.", "isRedFlag": true, "explanation": "Lenders can receive shares cheaply and sell them, which can push the price down and add more dilution. Worth reading the terms closely." },
+    { "id": "e", "text": "Reports are filed on time.", "isRedFlag": false, "explanation": "A good sign for transparency. The problem here is not hidden information but what the information shows." },
+    { "id": "f", "text": "There is no sign of paid promotion.", "isRedFlag": false, "explanation": "Also a good sign. Not every struggling small company is a pump and dump; some are real businesses running out of money." },
+    { "id": "g", "text": "The company is working on a product in early testing.", "isRedFlag": false, "explanation": "Not a warning sign. Many small companies are early-stage. But an early product does not pay today's bills." }
+  ],
+  "investigate": [
+    "Read the terms of the convertible loans: the discount, any limits, and how many shares could be created.",
+    "Check how many new shares the company is allowed to issue without asking shareholders.",
+    "Work out the cash runway yourself from the latest report: cash divided by monthly spending.",
+    "List every share issue and reverse split over the last few years, with dates.",
+    "Ask what has to go right for existing shareholders to benefit, given the likely future dilution."
+  ],
+  "verdict": "This company looks open about its situation, with no promotion and on-time filings, but the situation itself is the risk: repeated dilution, repeated reverse splits, a short cash runway and discounted convertible loans. Even if the product succeeds, existing holders may own a much smaller slice by then. For a learner, staying out is the sensible decision until the financing problem is clearly solved.",
+  "glossaryIds": ["dilution", "reverse-split", "penny-stock", "microcap"]
+}

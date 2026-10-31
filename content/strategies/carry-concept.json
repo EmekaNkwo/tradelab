@@ -1,0 +1,178 @@
+{
+  "id": "carry-concept",
+  "skills": ["strategy_understanding", "fundamental_analysis"],
+  "title": "Carry (concept)",
+  "category": "trading",
+  "family": "carry",
+  "markets": [
+    "forex"
+  ],
+  "level": "intermediate",
+  "horizon": "position",
+  "style": "discretionary",
+  "analysis": "fundamental",
+  "attribution": "generic",
+  "traderIds": [],
+  "overview": {
+    "objective": "Earn the interest-rate difference between two currencies by holding the higher-rate one.",
+    "holdingPeriod": "Months, because the interest builds up night by night.",
+    "context": "A concept page. Carry depends on central-bank rates and broker swap terms, which change."
+  },
+  "evidence": null,
+  "simple": {
+    "simple": "Hold a currency that pays a higher interest rate against one that pays less. Each night you hold it, your broker pays or charges a [[swap]]. That is the [[carry-trade|carry]].",
+    "balanced": "The interest is small and arrives slowly; price moves are large and arrive quickly. If the higher-yielding currency falls, months of swaps can be lost in days. Swaps include the broker's markup and can turn negative when [[interest-rate|rates]] change."
+  },
+  "reasoning": "If the higher-yielding currency does not fall by more than the interest gained, holding it earns the difference. That is the reasoning. Nothing guarantees the currency holds its value, and the swap you actually receive is set by your broker.",
+  "rules": null,
+  "demo": null,
+  "replay": null,
+  "exercise": {
+    "prompt": "Which statements are true for this fictional position? Pick all that apply.",
+    "situation": "A fictional pair (simulated). You are long 20,000 units of a higher-rate currency. The swap is +1.10 USD per night after the broker's markup. You hold for 60 nights, and price falls 45 pips. At this size, 1 pip is worth 2 USD.",
+    "options": [
+      {
+        "id": "a",
+        "text": "The interest earned is 66 USD",
+        "correct": true,
+        "explanation": "Right: 60 × 1.10 = 66 USD."
+      },
+      {
+        "id": "b",
+        "text": "The price loss is 90 USD",
+        "correct": true,
+        "explanation": "Right: 45 pips × 2 USD = 90 USD."
+      },
+      {
+        "id": "c",
+        "text": "The net result is −24 USD",
+        "correct": true,
+        "explanation": "Right: 66 − 90 = −24 USD."
+      },
+      {
+        "id": "d",
+        "text": "Holding 20 more nights at the same price would turn the result positive",
+        "correct": false,
+        "explanation": "No: 80 × 1.10 = 88 USD, still below the 90 USD price loss, so the result would be −2 USD."
+      },
+      {
+        "id": "e",
+        "text": "Swaps are the same at every broker",
+        "correct": false,
+        "explanation": "No: each broker sets its own swap, including its markup."
+      }
+    ]
+  },
+  "failureAnalysis": [
+    "The higher-yielding currency falls by more than the interest earned.",
+    "Central banks change rates, and the swap shrinks or turns negative.",
+    "Many holders may sell at once when markets are stressed, giving sharp losses.",
+    "Leverage turns a small price fall into a large loss of the account."
+  ],
+  "limitations": [
+    "This page explains the idea; it gives no rules to trade it.",
+    "Swap rates in examples are invented. Real ones change and differ by broker.",
+    "No claim is made that carry has made or will make money."
+  ],
+  "knowledgeCheck": [
+    {
+      "id": "carry-concept-q1",
+      "prompt": "Long 10,000 units with a swap of +0.80 USD per night. After 30 nights, price has fallen 60 pips, with 1 pip worth 1 USD. What is the net result?",
+      "options": [
+        {
+          "id": "a",
+          "text": "−36 USD",
+          "explanation": "Right: swaps 30 × 0.80 = 24 USD; price −60 USD; 24 − 60 = −36 USD."
+        },
+        {
+          "id": "b",
+          "text": "+24 USD, the swaps earned",
+          "explanation": "No: that ignores the price loss."
+        },
+        {
+          "id": "c",
+          "text": "−60 USD, since swaps are not paid while the position is losing",
+          "explanation": "No: swaps are paid regardless of the price move."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "intermediate",
+      "glossaryIds": [
+        "swap"
+      ]
+    },
+    {
+      "id": "carry-concept-q2",
+      "prompt": "What mainly sets the swap you receive?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The chart pattern",
+          "explanation": "No: chart patterns do not set swaps."
+        },
+        {
+          "id": "b",
+          "text": "The two interest rates and the broker's markup",
+          "explanation": "Right: the rate difference, less what the broker keeps."
+        },
+        {
+          "id": "c",
+          "text": "The direction the price has trended over the past month of trading",
+          "explanation": "No: the swap does not depend on recent price direction."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "intermediate",
+      "glossaryIds": [
+        "swap",
+        "interest-rate"
+      ]
+    },
+    {
+      "id": "carry-concept-q3",
+      "prompt": "Why do carry positions tend to suffer when markets are stressed?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Brokers stop paying swaps until markets calm",
+          "explanation": "No: swaps carry on being paid or charged during stress."
+        },
+        {
+          "id": "b",
+          "text": "Central banks freeze rates during the stress",
+          "explanation": "No: central banks can change rates in a crisis, but a freeze is not why carry suffers."
+        },
+        {
+          "id": "c",
+          "text": "Many holders sell the higher-yielding currency at once",
+          "explanation": "Right: when many sell together, price losses can outweigh months of interest in days."
+        }
+      ],
+      "correctOptionIds": [
+        "c"
+      ],
+      "level": "intermediate",
+      "glossaryIds": [
+        "carry-trade"
+      ]
+    }
+  ],
+  "lessonIds": [
+    "fx-swaps",
+    "fx-rates-central-banks",
+    "fx-leverage-margin"
+  ],
+  "glossaryIds": [
+    "carry-trade",
+    "swap",
+    "interest-rate",
+    "central-bank",
+    "rollover"
+  ],
+  "sourceIds": [],
+  "review": null
+}

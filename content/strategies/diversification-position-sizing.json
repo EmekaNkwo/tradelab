@@ -1,0 +1,194 @@
+{
+  "id": "diversification-position-sizing",
+  "skills": ["strategy_understanding", "risk_management"],
+  "title": "Diversification and position sizing",
+  "category": "risk_principle",
+  "family": "risk_management",
+  "markets": [
+    "forex",
+    "stocks",
+    "commodities",
+    "futures"
+  ],
+  "level": "beginner",
+  "horizon": "position",
+  "style": "rules_based",
+  "analysis": "quantitative",
+  "attribution": "generic",
+  "traderIds": [],
+  "overview": {
+    "objective": "Keep any single trade, or any group of linked trades, from doing serious damage.",
+    "holdingPeriod": "Applies to every trade, whatever its length.",
+    "context": "A risk principle for all markets and strategies. It does not make any strategy profitable; it limits damage."
+  },
+  "evidence": null,
+  "simple": {
+    "simple": "Decide how much you can lose on one trade before you enter, and size the trade from your [[stop-loss]] so you cannot lose more. Treat trades that depend on the same thing as one bigger bet.",
+    "balanced": "[[position-sizing|Position sizing]] turns a fixed [[risk-per-trade]] into a trade size: risk in money ÷ (stop distance × value per point). [[diversification|Diversification]] only helps when positions do not move together, and [[correlation|correlations]] tend to rise in stressed markets. Gaps can still push a loss past the stop."
+  },
+  "reasoning": "Every strategy has losing streaks. Keeping each loss small, and not stacking linked losses, could keep an account usable through a streak long enough to see whether the strategy works. That is the reasoning; it limits damage but cannot turn losing rules into winning ones.",
+  "rules": {
+    "label": "A simplified educational version, not anyone's documented method",
+    "rules": [
+      "Risk no more than 1% of the account on any single trade.",
+      "Size each trade from the stop: risk in money ÷ stop distance = value per pip or point.",
+      "Keep total open risk at no more than 5% of the account.",
+      "Treat trades that depend on the same currency, sector or commodity as one position, and keep their combined risk at no more than 2%.",
+      "Set the size before entering, and never widen a stop to keep a losing trade open."
+    ]
+  },
+  "demo": null,
+  "replay": null,
+  "exercise": {
+    "prompt": "Which statements are true under these rules? Pick all that apply.",
+    "situation": "A simulated 10,000 USD account with four open trades, each risking 1%: long EUR/USD, long GBP/USD, short USD/CHF and short USD/JPY.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Total open risk is 4%",
+        "correct": true,
+        "explanation": "Right: 4 × 1% = 4%. That is within the 5% total, but as one dollar bet it breaks the 2% limit for linked trades."
+      },
+      {
+        "id": "b",
+        "text": "Each of the four tends to gain if the US dollar weakens broadly",
+        "correct": true,
+        "explanation": "Right: each trade is a bet against the dollar, so they are closely linked."
+      },
+      {
+        "id": "c",
+        "text": "A fifth 1% trade, short USD/CAD, would spread the risk",
+        "correct": false,
+        "explanation": "No: it is another bet against the dollar, adding to the same exposure."
+      },
+      {
+        "id": "d",
+        "text": "A 1% trade must not lose more than 100 USD at the stop",
+        "correct": true,
+        "explanation": "Right: 1% of 10,000 USD = 100 USD, so the size is set from the stop to keep the loss within that."
+      },
+      {
+        "id": "e",
+        "text": "A sharp dollar rally would hit only the EUR/USD and GBP/USD trades",
+        "correct": false,
+        "explanation": "No: all four lose when the dollar rises, about 4% together, and more if prices gap past the stops."
+      }
+    ]
+  },
+  "failureAnalysis": [
+    "Linked positions all lose together and the total loss is several times the per-trade limit.",
+    "Gaps jump past stops, so losses exceed the plan.",
+    "Moving stops further away to avoid a loss breaks the sizing.",
+    "Raising risk after a few wins makes the next streak more damaging."
+  ],
+  "limitations": [
+    "The 1%, 2% and 5% figures are examples for learning, not recommendations for your situation.",
+    "Sizing limits losses; it does not make a strategy profitable.",
+    "Correlations change, and in stressed markets they often rise."
+  ],
+  "knowledgeCheck": [
+    {
+      "id": "diversification-position-sizing-q1",
+      "prompt": "Account 8,000 USD, 1% risk, stop 40 pips. 1 pip is worth 1 USD per 10,000 units. What size?",
+      "options": [
+        {
+          "id": "a",
+          "text": "8,000 units",
+          "explanation": "No: that is the account size, not the trade size."
+        },
+        {
+          "id": "b",
+          "text": "40,000 units",
+          "explanation": "No: at 4 USD per pip, a 40-pip stop risks 160 USD, which is 2%."
+        },
+        {
+          "id": "c",
+          "text": "20,000 units: 80 USD ÷ 40 pips = 2 USD per pip",
+          "explanation": "Right: 2 USD per pip is 20,000 units."
+        }
+      ],
+      "correctOptionIds": [
+        "c"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "position-sizing",
+        "pip-value"
+      ]
+    },
+    {
+      "id": "diversification-position-sizing-q2",
+      "prompt": "Three open trades are all long other currencies against the US dollar, at 1% risk each. What is the combined exposure most like?",
+      "options": [
+        {
+          "id": "a",
+          "text": "One bet of about 3%",
+          "explanation": "Right: they all depend on the dollar falling."
+        },
+        {
+          "id": "b",
+          "text": "Three separate 1% risks that cancel each other out",
+          "explanation": "No: they move together; they do not cancel."
+        },
+        {
+          "id": "c",
+          "text": "Less than 1% in total, because the currencies are spread across different regions",
+          "explanation": "No: they share the same dollar exposure."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "correlation",
+        "diversification"
+      ]
+    },
+    {
+      "id": "diversification-position-sizing-q3",
+      "prompt": "Why risk a small fixed share of the account on each trade?",
+      "options": [
+        {
+          "id": "a",
+          "text": "To win more often",
+          "explanation": "No: size does not change how often a trade wins."
+        },
+        {
+          "id": "b",
+          "text": "A losing streak then leaves the account usable",
+          "explanation": "Right: ten 1% losses leave about 90% of the account."
+        },
+        {
+          "id": "c",
+          "text": "Because brokers require each trade to stay below a set share of the account",
+          "explanation": "No: brokers set margin rules, but that is not why you size small."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "risk-per-trade",
+        "losing-streak"
+      ]
+    }
+  ],
+  "lessonIds": [
+    "fx-position-sizing",
+    "fx-risk-per-trade",
+    "fx-drawdown-ruin",
+    "ta-stats-correlation"
+  ],
+  "glossaryIds": [
+    "position-sizing",
+    "risk-per-trade",
+    "diversification",
+    "correlation",
+    "stop-loss",
+    "gap"
+  ],
+  "sourceIds": [],
+  "review": null
+}

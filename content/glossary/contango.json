@@ -1,0 +1,21 @@
+{
+  "id": "contango",
+  "term": "Contango",
+  "aliases": [],
+  "definition": {
+    "simple": "When later futures months are priced higher than nearer ones.",
+    "balanced": "The [[futures-curve]] slopes up. A long position that keeps [[rollover|rolling]] in contango buys each new month at a higher price, which can cost money even if spot does not move. It is a shape, not a signal."
+  },
+  "example": "Fictional: near month 50.60, next month 51.30.",
+  "related": [
+    "backwardation",
+    "futures-curve",
+    "rollover"
+  ],
+  "markets": [
+    "commodities",
+    "futures"
+  ],
+  "level": "intermediate",
+  "sourceIds": []
+}

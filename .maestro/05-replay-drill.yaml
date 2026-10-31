@@ -1,0 +1,158 @@
+appId: com.tradelab.app
+name: 05 Replay and drill
+tags:
+  - e2e
+  - journey
+---
+# Spec §36 step 5: a replay session with one simulated trade, then one drill.
+# Needs: 01. Screens: app/(tabs)/practice/index.tsx, replay.tsx, drill.tsx.
+- launchApp:
+    appId: com.tradelab.app
+- extendedWaitUntil:
+    visible:
+      id: "home-screen"
+    timeout: 30000
+- runFlow:
+    file: subflows/open-tab.yaml
+    env:
+      TAB: Practice
+- extendedWaitUntil:
+    visible:
+      id: "practice-screen"
+    timeout: 10000
+- tapOn:
+    id: "practice-replay"           # QuickAction "Replay"
+
+# ---- Setup (ReplaySetupForm) ----
+- extendedWaitUntil:
+    visible: "Set up a replay"
+    timeout: 10000
+- tapOn: "Breakout"                  # SCENARIO_LABELS, features/practice/replaySession.ts
+- tapOn: "1h"                        # TIMEFRAMES in replay.tsx (value H1)
+- scrollUntilVisible:
+    element:
+      text: "Start replay"
+    direction: DOWN
+- tapOn: "Start replay"
+
+# ---- Runner (ReplayRunner) ----
+- extendedWaitUntil:
+    visible:
+      id: "replay-screen"
+    timeout: 15000
+- assertVisible: "Breakout · H1"     # `${SCENARIO_LABELS[kind]} · ${timeframe}`
+- assertVisible:
+    id: "replay-time"                # "Now: ... · N candles left"
+- takeScreenshot: 05-replay-start
+# Restyle stage 5a: the replay controls are a pill under the chart; make sure it is on screen first.
+- scrollUntilVisible:
+    element:
+      text: "Next candle"
+    direction: DOWN
+- tapOn: "Next candle"
+- tapOn: "Next candle"
+- tapOn: "Next candle"
+
+# OrderTicket (components/practice/OrderTicket.tsx): buy, market, 0.1 lots by
+# default (emptyOrderForm). The stop is computed from the "Last close X." text
+# so it is always 0.3% under the price, whatever the seed.
+- scrollUntilVisible:
+    element:
+      text: "Plan a trade"
+    direction: DOWN
+- copyTextFrom:
+    text: "Last close .*"
+- evalScript: ${output.replayStop = (parseFloat(maestro.copiedText.replace('Last close ', '')) * 0.997).toFixed(5)}
+- scrollUntilVisible:
+    element:
+      id: "order-stop"
+    direction: DOWN
+- tapOn:
+    id: "order-stop"
+- inputText: ${output.replayStop}
+- hideKeyboard
+- scrollUntilVisible:
+    element:
+      text: "Place buy market order"
+    direction: DOWN
+- tapOn: "Place buy market order"
+# The pending market order fills at the next candle's open ("Pending order" card).
+- scrollUntilVisible:
+    element:
+      text: "Next candle"
+    direction: UP
+- tapOn: "Next candle"
+- scrollUntilVisible:
+    element:
+      text: "Open trade"
+    direction: DOWN
+    timeout: 10000
+- assertVisible:
+    id: "replay-position"
+- takeScreenshot: 05-replay-open-trade
+- scrollUntilVisible:
+    element:
+      text: "Close trade"
+    direction: DOWN
+- tapOn: "Close trade"
+
+# ---- Finish and review ----
+- scrollUntilVisible:
+    element:
+      id: "replay-note"
+    direction: DOWN
+- tapOn:
+    id: "replay-note"
+- inputText: "E2E replay: bought after three candles, closed manually."
+- hideKeyboard
+- scrollUntilVisible:
+    element:
+      text: "Finish and review"
+    direction: DOWN
+- tapOn:
+    text: "Finish and review"
+    enabled: true
+- scrollUntilVisible:
+    element:
+      id: "replay-review-title"      # "Process score N%" or "Review"
+    direction: DOWN
+    timeout: 15000
+- scrollUntilVisible:
+    element:
+      text: "Saved\\. Each replay is kept as its own record\\."
+    direction: DOWN
+- takeScreenshot: 05-replay-review
+- back
+
+# ---- Drill (DRILL_INFO in features/practice/useDrill.ts) ----
+- extendedWaitUntil:
+    visible:
+      id: "practice-screen"
+    timeout: 10000
+- scrollUntilVisible:
+    element:
+      id: "drill-find_the_trend"     # ListRow "Find the trend"
+    direction: DOWN
+- tapOn:
+    id: "drill-find_the_trend"
+- extendedWaitUntil:
+    visible: "What is the overall trend on this chart\\?"   # domain/market/drills.ts
+    timeout: 10000
+- scrollUntilVisible:
+    element:
+      text: "Uptrend"
+    direction: DOWN
+- tapOn: "Uptrend"
+# Result notice title: correct / neutral / wrong
+- scrollUntilVisible:
+    element:
+      text: "(Good call|A reasonable choice|Worth another look)"
+    direction: DOWN
+- takeScreenshot: 05-drill-result
+# The button sits under the result notice, below the fold on a 1080x2408 phone.
+- scrollUntilVisible:
+    element:
+      text: "Another one"
+    direction: DOWN
+- assertVisible: "Another one"
+- back

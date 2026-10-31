@@ -1,0 +1,30 @@
+{
+  "id": "forex-metatrader",
+  "type": "forex_metatrader",
+  "title": "Forex and MetaTrader Challenge",
+  "summary": "Carry out the core MetaTrader tasks on a demo account and pass the forex orders checkpoint. TradeLab cannot see inside MetaTrader, so tasks count as confirmed by you.",
+  "skills": [
+    "market_fundamentals",
+    "execution_discipline"
+  ],
+  "criteria": [
+    {
+      "kind": "checkpoint_passed",
+      "moduleId": "forex-orders",
+      "label": "Pass the Orders, stops and fills checkpoint",
+      "dimension": "understanding"
+    },
+    {
+      "kind": "mt_tasks",
+      "taskIds": [
+        "mt-open-demo-account",
+        "mt-read-spread",
+        "mt-demo-trade-sl-tp",
+        "mt-pending-order",
+        "mt-check-margin"
+      ],
+      "label": "Confirm the five core MetaTrader tasks on a demo account",
+      "dimension": "rule_use"
+    }
+  ]
+}

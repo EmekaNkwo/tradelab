@@ -1,0 +1,18 @@
+{
+  "id": "forex-backtest-plan",
+  "skills": ["backtesting_literacy", "statistical_reasoning"],
+  "title": "Backtesting my plan",
+  "summary": "Test your plan on past charts with Replay. Learn why small samples say little, and how look-ahead bias, survivorship bias and overfitting make tests look better than they are.",
+  "markets": [
+    "forex"
+  ],
+  "level": "intermediate",
+  "lessonIds": [
+    "fx-backtest-basics",
+    "fx-backtest-biases",
+    "fx-backtest-overfitting"
+  ],
+  "checkpointQuizId": "forex-backtest-plan-checkpoint",
+  "practicalResult": "50 replay trades, reviewed",
+  "minPracticeDays": 0
+}

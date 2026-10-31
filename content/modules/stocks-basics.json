@@ -1,0 +1,20 @@
+{
+  "id": "stocks-basics",
+  "skills": ["market_fundamentals"],
+  "title": "Stocks: the basics",
+  "summary": "Shares and ownership, exchanges and tickers, market capitalisation, volume and liquidity, dividends, earnings reports, growth vs value, and swing trading vs long-term investing.",
+  "markets": [
+    "stocks"
+  ],
+  "level": "beginner",
+  "lessonIds": [
+    "st-shares-ownership",
+    "st-market-cap",
+    "st-volume-liquidity",
+    "st-dividends-earnings",
+    "st-styles-horizons"
+  ],
+  "checkpointQuizId": "stocks-basics-checkpoint",
+  "practicalResult": "Place a simulated trade on the Practice ordinary share with a written plan (style, holding period, exit), and compare the market caps and profits of the fictional companies in the Fundamental Analysis Lab.",
+  "minPracticeDays": 0
+}

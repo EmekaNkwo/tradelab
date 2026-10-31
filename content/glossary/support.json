@@ -1,0 +1,22 @@
+{
+  "id": "support",
+  "term": "Support",
+  "aliases": [
+    "support level",
+    "support zone",
+    "floor"
+  ],
+  "definition": {
+    "simple": "A price area where falling price has stopped and turned up before.",
+    "balanced": "Support is an area, not an exact line, because wicks and the [[spread]] blur the edges. It describes where buyers outweighed sellers in the past. It can break at any time, and a broken support area sometimes acts as resistance later."
+  },
+  "example": "Price turned up from 1.08020, 1.07980 and 1.08050. You might mark a support zone from 1.07980 to 1.08050.",
+  "related": [
+    "resistance",
+    "breakout",
+    "swing-low"
+  ],
+  "markets": [],
+  "level": "beginner",
+  "sourceIds": []
+}

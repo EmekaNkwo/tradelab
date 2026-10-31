@@ -1,0 +1,14 @@
+{
+  "id": "order-book",
+  "term": "Order book",
+  "aliases": ["depth of market", "market depth", "thin order book", "Level 2"],
+  "definition": {
+    "simple": "The list of buy orders and sell orders waiting at each price, with how many shares are wanted at each.",
+    "balanced": "A deep order book has lots of shares waiting near the current price. A thin one has only a few. In a thin book, a large [[market-order|market order]] uses up the best price and then fills at worse and worse prices. The visible book can also change or vanish in an instant."
+  },
+  "example": "Fictional bids: 3,000 shares at 0.40, 2,000 at 0.38, 5,000 at 0.35. Selling 10,000 at market fills at all three levels, an average of 0.371.",
+  "related": ["liquidity", "spread", "slippage", "market-order"],
+  "markets": [],
+  "level": "beginner",
+  "sourceIds": []
+}

@@ -1,0 +1,22 @@
+{
+  "id": "mark-to-market",
+  "term": "Mark-to-market",
+  "aliases": [
+    "daily settlement",
+    "marked to market"
+  ],
+  "definition": {
+    "simple": "Valuing an open futures position at each day's settlement price, and moving that day's gain or loss into or out of the account.",
+    "balanced": "Gains and losses are settled in cash every day, not only when you close. A run of losing days can bring a [[margin-call]] even if you planned to hold longer."
+  },
+  "example": "Fictional: 1 contract at 10 USD per point. Today's settlement is 15 points lower than yesterday's, so 150 USD leaves the account today.",
+  "related": [
+    "maintenance-margin",
+    "margin-call"
+  ],
+  "markets": [
+    "futures"
+  ],
+  "level": "beginner",
+  "sourceIds": []
+}

@@ -1,0 +1,20 @@
+{
+  "id": "correlation",
+  "term": "Correlation",
+  "aliases": [
+    "correlated",
+    "correlated pairs"
+  ],
+  "definition": {
+    "simple": "How much two markets tend to move together.",
+    "balanced": "Correlation runs from −1 (opposite moves) to +1 (moving together). It changes over time. Two trades on pairs that move together can act like one bigger trade, so your total risk is higher than each trade alone suggests."
+  },
+  "example": "A learner buys two pairs that both have USD as the quote currency. If USD strengthens, both trades may lose at once.",
+  "related": [
+    "risk-per-trade",
+    "currency-pair"
+  ],
+  "markets": [],
+  "level": "intermediate",
+  "sourceIds": []
+}

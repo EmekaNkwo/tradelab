@@ -1,0 +1,38 @@
+{
+  "id": "psych-overtrading",
+  "topic": "overtrading",
+  "title": "Five trades by lunchtime",
+  "situation": "Your trading plan allows up to 3 [[demo-account|demo]] trades a day. It is midday and you have already taken 5. The last three did not meet all your entry rules. You took them because the market was moving and you felt you should be doing something.",
+  "question": "What do you do next?",
+  "responses": [
+    {
+      "id": "a",
+      "text": "Stop trading for the day and check all 5 trades against your rules in your journal.",
+      "quality": "helpful",
+      "explanation": "You have reached your own daily limit. Reviewing now shows which trades fit your plan and which came from restlessness."
+    },
+    {
+      "id": "b",
+      "text": "Keep going. More trades mean more chances to win.",
+      "quality": "harmful",
+      "explanation": "Every trade has costs, like the [[spread]]. Trades that do not meet your rules add risk and cost, not chances."
+    },
+    {
+      "id": "c",
+      "text": "Keep trading, but only take setups that meet every rule.",
+      "quality": "mixed",
+      "explanation": "Better than before, but you are already over your limit. The limit exists for days exactly like this one."
+    },
+    {
+      "id": "d",
+      "text": "Raise your daily limit to 8 so you are no longer breaking the rule.",
+      "quality": "harmful",
+      "explanation": "Changing a rule mid-session to fit what you already did removes its purpose. Rule changes belong in a calm review."
+    }
+  ],
+  "takeaway": "Trade count is not progress. A few trades that follow your rules beat many that do not.",
+  "glossaryIds": [
+    "spread",
+    "demo-account"
+  ]
+}

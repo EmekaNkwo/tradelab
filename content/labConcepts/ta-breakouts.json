@@ -1,0 +1,25 @@
+{
+  "id": "ta-breakouts",
+  "skills": ["chart_reading", "technical_analysis"],
+  "lab": "technical",
+  "level": "beginner",
+  "order": 5,
+  "title": "Breakouts",
+  "summary": "A breakout is price moving out through a support or resistance zone. Decide in advance what counts, for example a close a set distance beyond the zone.",
+  "unreliableWhen": "Many breakouts fail and come back inside. Around news, fills can be worse than planned. Without a written rule, any wick looks like a breakout afterwards.",
+  "goodExample": "Rule: a close at least 5 pips above the zone. A candle closes 8 pips above, so it counts. You still place a stop.",
+  "badExample": "Calling a wick through the line a breakout, then changing the rule so the chart fits.",
+  "lessonIds": [
+    "fx-breakouts"
+  ],
+  "chart": {
+    "scenario": "breakout",
+    "overlays": [],
+    "pane": "none",
+    "lookFor": "Mark the range with the Zone tool. Find the first candle that closed beyond it by your written distance. Note how far price went before its first pullback."
+  },
+  "drillKind": "breakout_or_fake",
+  "scenarioIds": [],
+  "companyIds": [],
+  "redFlagCaseIds": []
+}

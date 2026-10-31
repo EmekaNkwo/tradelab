@@ -1,0 +1,23 @@
+{
+  "id": "eps",
+  "term": "Earnings per share (EPS)",
+  "aliases": [
+    "EPS",
+    "earnings per share"
+  ],
+  "definition": {
+    "simple": "The company's profit divided by its number of shares: how much profit belongs to each share.",
+    "balanced": "EPS = net income ÷ shares outstanding. It lets you compare profit with the price of one share. If a company issues many new shares, EPS can fall even when total profit rises."
+  },
+  "example": "Net income 114 million USD ÷ 200 million shares = 0.57 USD per share.",
+  "related": [
+    "earnings",
+    "pe-ratio",
+    "share"
+  ],
+  "markets": [
+    "stocks"
+  ],
+  "level": "beginner",
+  "sourceIds": []
+}

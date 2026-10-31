@@ -1,0 +1,21 @@
+{
+  "id": "ta-walk-forward",
+  "skills": ["backtesting_literacy", "statistical_reasoning"],
+  "lab": "technical",
+  "level": "advanced",
+  "order": 4,
+  "title": "Walk-forward and out-of-sample testing",
+  "summary": "Tune rules on one block of data, then test them unchanged on data they have not seen. Walk-forward testing repeats this step by step through time.",
+  "unreliableWhen": "Once a rule is changed because of out-of-sample results, that data is in-sample. The test blocks are still the past and still a small sample.",
+  "goodExample": "Tuning on periods 1–3, saving the plan version, and testing it unchanged on periods 4–6.",
+  "badExample": "Looking at the out-of-sample results, tweaking the rules, and testing again on the same data.",
+  "lessonIds": [
+    "ta-walk-forward",
+    "fx-backtest-overfitting"
+  ],
+  "chart": null,
+  "drillKind": null,
+  "scenarioIds": [],
+  "companyIds": [],
+  "redFlagCaseIds": []
+}

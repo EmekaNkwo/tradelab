@@ -1,0 +1,130 @@
+{
+  "title": "TradeLab marketScenarios",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "macro",
+        "commodity"
+      ]
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "setup": {
+      "type": "string",
+      "minLength": 1
+    },
+    "release": {
+      "anyOf": [
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "minLength": 1
+            },
+            "unit": {
+              "type": "string",
+              "minLength": 1
+            },
+            "consensus": {
+              "type": "number"
+            },
+            "actual": {
+              "type": "number"
+            },
+            "previous": {
+              "type": [
+                "number",
+                "null"
+              ]
+            }
+          },
+          "required": [
+            "name",
+            "unit",
+            "consensus",
+            "actual",
+            "previous"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "pricedIn": {
+      "type": "string",
+      "minLength": 1
+    },
+    "question": {
+      "type": "string",
+      "minLength": 1
+    },
+    "reactions": {
+      "minItems": 3,
+      "maxItems": 6,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z]$"
+          },
+          "text": {
+            "type": "string",
+            "minLength": 1
+          },
+          "plausible": {
+            "type": "boolean"
+          },
+          "explanation": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "id",
+          "text",
+          "plausible",
+          "explanation"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "takeaway": {
+      "type": "string",
+      "minLength": 1
+    },
+    "glossaryIds": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+      }
+    }
+  },
+  "required": [
+    "id",
+    "category",
+    "title",
+    "setup",
+    "release",
+    "pricedIn",
+    "question",
+    "reactions",
+    "takeaway",
+    "glossaryIds"
+  ],
+  "additionalProperties": false
+}

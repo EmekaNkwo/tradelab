@@ -1,0 +1,35 @@
+{
+  "id": "psych-sizing-up-after-losses",
+  "topic": "sizing-up-after-losses",
+  "title": "One big trade to get even",
+  "situation": "Your paper account started at 10,000 USD and is down 300 USD after four losses this week. Your own limit is to risk 50 USD per trade. You are tempted to risk 300 USD on the next trade to get back to even in one go.",
+  "question": "What do you do next?",
+  "responses": [
+    {
+      "id": "a",
+      "text": "Risk 300 USD. One win and you are back to even.",
+      "quality": "harmful",
+      "explanation": "One loss at this size would double your drawdown. Raising size to recover losses risks the most when you are under the most pressure."
+    },
+    {
+      "id": "b",
+      "text": "Keep to your 50 USD limit, or less, and check whether the four losses followed your rules.",
+      "quality": "helpful",
+      "explanation": "Your limit was set when you were calm. Checking the losses tells you whether this is a process problem or a normal run of losses."
+    },
+    {
+      "id": "c",
+      "text": "Risk 100 USD as a middle ground.",
+      "quality": "harmful",
+      "explanation": "It is still raising size to win back losses, just more slowly. The limit you set does not change because of recent results."
+    },
+    {
+      "id": "d",
+      "text": "Stop trading for the rest of the week and review your journal.",
+      "quality": "helpful",
+      "explanation": "Pausing to review is a sound process step. Coming back with a clear head makes rule-following easier."
+    }
+  ],
+  "takeaway": "Raising size to win back losses makes the next loss bigger. Keep risk to the limit you set when calm.",
+  "glossaryIds": []
+}

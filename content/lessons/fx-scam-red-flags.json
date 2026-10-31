@@ -1,0 +1,129 @@
+{
+  "id": "fx-scam-red-flags",
+  "moduleId": "forex-scams-brokers",
+  "title": "Scam red flags: guaranteed returns, \"account managers\" and signal groups",
+  "level": "beginner",
+  "estimatedMinutes": 15,
+  "inOneLine": {
+    "simple": "Anyone who promises guaranteed returns, asks for your login, or pushes you to act fast is a red flag for an [[investment-scam]].",
+    "balanced": "Real trading has no guaranteed returns. Scams often use promised profits, a friendly \"account manager\", and paid [[signal-group|signal groups]] with results you cannot check. Never share your MetaTrader login with anyone."
+  },
+  "explain": {
+    "simple": "Trading scams often look friendly and professional. Watch for three warning signs. First, guaranteed or \"safe\" returns. No honest person can promise that trading will make money. Second, an \"account manager\" who contacts you, offers to trade for you, or asks for your MetaTrader login or remote access to your phone. Never share your login, not even for a demo account. Third, paid signal groups. They post screenshots of winning trades, but you cannot check them, and they ask you to pay or to sign up with a broker they choose. All the examples in this lesson are fictional.",
+    "balanced": "Scams play on feelings: excitement (big returns), trust (a friendly contact), urgency (\"only today\"), and social proof (a busy chat full of \"members\" saying thanks). An [[account-manager-scam]] often starts with a small deposit that seems to grow, then pressure to deposit more, then problems when you try to withdraw. A [[signal-group]] may earn from fees or referrals whatever happens to members' trades. A quick test: if you cannot check who they are on a regulator's official register, cannot verify the results, and they want money or your login, walk away."
+  },
+  "realNumbers": {
+    "assumptions": [
+      "Fictional message from a made-up group, \"Example Pip Club (fictional)\"",
+      "Message: \"Join for 99 USD a month. Our signals return 10% every week, guaranteed.\"",
+      "Arithmetic only, to show why the claim cannot be true"
+    ],
+    "steps": [
+      "Start with a fictional 1,000 USD.",
+      "After 1 week at +10%: 1,000 × 1.10 = 1,100 USD.",
+      "After 10 weeks: 1,000 × 1.10^10 ≈ 2,594 USD.",
+      "After 52 weeks: 1,000 × 1.10^52 ≈ 142,000 USD. A promise like that, \"guaranteed\", is a red flag on its own."
+    ]
+  },
+  "anotherExample": {
+    "assumptions": [
+      "Fictional story; all names made up",
+      "A person calling themselves \"support\" (fictional) contacts a learner after they fill in an online form"
+    ],
+    "steps": [
+      "The caller is friendly and says they are the learner's personal account manager.",
+      "They ask for the MetaTrader login \"to set up the account properly\".",
+      "They then push for a bigger deposit \"before the opportunity closes\".",
+      "Red flags: unsolicited contact, a request for the login, and urgency. The right move is to refuse, stop contact, and check the firm on a regulator's official register."
+    ]
+  },
+  "explainSimpler": "If someone promises easy money, asks for your password, or rushes you, stop. That is the scam talking.",
+  "commonMistake": "Thinking \"it is only a demo, so sharing my login is harmless\". It builds the habit scammers rely on, and the same people may later ask for a real account.",
+  "quickCheck": [
+    {
+      "id": "fx-scam-red-flags-q1",
+      "prompt": "A stranger offers to manage your MetaTrader account for you and asks for your login. What do you do?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Share it, since they seem professional",
+          "explanation": "No: never share your MetaTrader login with anyone."
+        },
+        {
+          "id": "b",
+          "text": "Refuse and stop contact",
+          "explanation": "Right: no genuine helper needs your login."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "account-manager-scam"
+      ]
+    },
+    {
+      "id": "fx-scam-red-flags-q2",
+      "prompt": "A signal group promises \"guaranteed 5% a week\". What is the best reading?",
+      "options": [
+        {
+          "id": "a",
+          "text": "A confident group, worth paying for",
+          "explanation": "No: confidence is not evidence, and no one can guarantee trading returns."
+        },
+        {
+          "id": "b",
+          "text": "A red flag: guaranteed returns are a classic sign of a scam",
+          "explanation": "Right: real trading has no guarantees."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "signal-group",
+        "investment-scam"
+      ]
+    },
+    {
+      "id": "fx-scam-red-flags-q3",
+      "prompt": "Which of these is a red flag?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Urgency: \"only today\", \"spots are limited\"",
+          "explanation": "Right: pressure to act fast stops you from checking."
+        },
+        {
+          "id": "b",
+          "text": "A lesson that says losses are a normal part of trading",
+          "explanation": "No: honest material talks about losses."
+        },
+        {
+          "id": "c",
+          "text": "A demo account with no real money",
+          "explanation": "No: practising on a demo account is not a red flag."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "investment-scam"
+      ]
+    }
+  ],
+  "doItNow": {
+    "kind": "reflection",
+    "instructions": "Think of any trading ad, message or group you have seen. Without naming anyone, write down which red flags it showed: guaranteed returns, requests for a login, urgency, unverifiable results, or pressure to pay. If you have never seen one, write the three questions you would ask before trusting a trading offer."
+  },
+  "glossaryIds": [
+    "investment-scam",
+    "account-manager-scam",
+    "signal-group"
+  ],
+  "sourceIds": []
+}

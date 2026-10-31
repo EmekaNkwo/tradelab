@@ -1,0 +1,22 @@
+{
+  "id": "carry-trade",
+  "term": "Carry trade",
+  "aliases": [
+    "carry",
+    "carry trades"
+  ],
+  "definition": {
+    "simple": "Holding a currency with a higher interest rate against one with a lower rate, to earn the difference over time.",
+    "balanced": "The interest arrives as a [[swap]] for each night the position is held, after the broker's markup. If the higher-yielding currency falls, the price loss can be much larger than the interest earned."
+  },
+  "related": [
+    "swap",
+    "interest-rate",
+    "central-bank"
+  ],
+  "markets": [
+    "forex"
+  ],
+  "level": "intermediate",
+  "sourceIds": []
+}

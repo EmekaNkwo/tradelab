@@ -1,0 +1,314 @@
+appId: com.tradelab.app
+name: 04 MetaTrader task out and back
+tags:
+  - e2e
+  - journey
+  - leaves-app
+# Optional: also check the MetaTrader step notification (off by default in
+# the app, Android only). Run with -e MT_STEP_NOTIFICATION=true.
+# No `env:` default here on purpose: with Maestro 2.12.0 a flow's own `env:`
+# value is applied AFTER the CLI `-e` value and overrides it (device run
+# 2026-10-30: the block was silently skipped). The default is set in JS below.
+---
+# Spec §36 step 4: a guided MetaTrader task, leaving for MetaTrader (or the
+# Play Store when it is not installed) and coming back.
+# Needs: 01 (onboarding chose MT5, so the task opens on MT5).
+#
+# How TradeLab launches MetaTrader (integrations/apps/expoAppLauncher.ts):
+#   expo-intent-launcher openApplication('net.metaquotes.metatrader5' | '...metatrader4')
+#   -> on ERR_PACKAGE_NOT_FOUND the screen shows "MT5 is not installed" with
+#      "Open Google Play", which opens market://details?id=net.metaquotes.metatrader5
+#      (https fallback). plugins/withMetaTraderQueries.js declares both packages in
+#      <queries> for Android 11+ package visibility.
+# The main path returns with launchApp (the learner coming back on their own).
+# The task draft is saved as they go (features/metatrader/useMtTask.ts,
+# mtTasks.saveDraft), so the screen survives even if Android kills TradeLab
+# meanwhile. The optional step notification is checked further down
+# (MT_STEP_NOTIFICATION=true). Launch-outcome notices have testIDs:
+# mt-launch-not-installed, mt-launch-unsupported, mt-launch-failed.
+#
+# Task used: "Read the bid, ask and spread" (content/mtTasks/mt-read-spread.json),
+# chosen because requiresDemo is false (no demo-account confirmation needed).
+- evalScript: ${output.mtStepNotification = (typeof MT_STEP_NOTIFICATION !== 'undefined' && MT_STEP_NOTIFICATION === 'true')}
+- launchApp:
+    appId: com.tradelab.app
+- extendedWaitUntil:
+    visible:
+      id: "home-screen"
+    timeout: 30000
+- runFlow:
+    file: subflows/open-tab.yaml
+    env:
+      TAB: Learn
+# Learn tab Tools card, last on the page (app/(tabs)/learn/index.tsx, testID learn-metatrader)
+- scrollUntilVisible:
+    element:
+      id: "learn-metatrader"
+    direction: DOWN
+    # The Learn tab lists every module before the Tools card; on the Xiaomi the
+    # scroll down to it took 58-65 s (Maestro re-reads the long hierarchy after
+    # each swipe), so 60 s was flaky.
+    timeout: 120000
+- tapOn:
+    id: "learn-metatrader"
+# app/(tabs)/learn/metatrader.tsx
+- extendedWaitUntil:
+    visible: "Demo accounts only"
+    timeout: 10000
+# Row title gets a "✓ " prefix once done (timesDone > 0).
+- scrollUntilVisible:
+    element:
+      text: "(✓ )?Read the bid, ask and spread"
+    direction: DOWN
+- tapOn: "(✓ )?Read the bid, ask and spread"
+# app/mt-task/[id].tsx
+- extendedWaitUntil:
+    visible:
+      id: "mt-task-screen"
+    timeout: 10000
+- assertVisible: "MetaTrader task"   # Stack title
+- assertVisible: "Read the bid, ask and spread"
+# SegmentedControl "Your MetaTrader" (PLATFORMS). Tapped by id: the label is
+# both visible text and the group's description, so a `below:` anchor on it is
+# ambiguous.
+- assertVisible: "Your MetaTrader"
+- tapOn:
+    id: "mt-platform-mt5"
+- takeScreenshot: 04-mt-task-before
+
+# ---- Out ----
+- evalScript: ${output.mtMissing = false}
+# Below the "Before you start" and steps cards since the restyle (app/mt-task/[id].tsx).
+- scrollUntilVisible:
+    element:
+      text: "Do it in MetaTrader"
+    direction: DOWN
+- tapOn: "Do it in MetaTrader"
+# Give the launch result time to come back. This wait only decides the branch
+# (optional, because in branch B MetaTrader is in front instead); each branch
+# then asserts its own outcome hard.
+- extendedWaitUntil:
+    visible:
+      id: "mt-launch-not-installed"
+    timeout: 10000
+    optional: true
+
+# Branch A: MetaTrader 5 is NOT installed -> Play Store fallback.
+- runFlow:
+    when:
+      visible:
+        id: "mt-launch-not-installed"
+    commands:
+      - evalScript: ${output.mtMissing = true}
+      - assertVisible: "Install it from Google Play, then come back here\\."
+      - takeScreenshot: 04-mt-not-installed
+      - tapOn: "Open Google Play"
+      # TradeLab must leave the foreground for the Play Store (com.android.vending).
+      - extendedWaitUntil:
+          notVisible: "Open Google Play"
+          timeout: 20000
+      - assertNotVisible:
+          id: "mt-task-screen"
+      # No screenshot here: the Play listing shows the owner's Google account.
+      # Maestro cannot read the foreground package. The listing's text depends
+      # on locale and Play sign-in, so it is not asserted here. To confirm the
+      # Play Store (and not a browser) is in front, run during the screenshot:
+      #   adb -s tckflfrc8599wwts shell dumpsys window | grep mCurrentFocus
+      # which must show com.android.vending (docs/e2e.md, "MetaTrader task").
+      # Close the listing with Back so the Play Store page (and its Install
+      # button) is not left in the back stack. On 2026-10-30 a listing left
+      # open came to the front when the journey script uninstalled TradeLab,
+      # and a stray touch on the phone installed MetaTrader 5. Added after
+      # that run; not yet re-run on the device.
+      - back
+
+# Branch B: MetaTrader 5 IS installed -> MetaTrader opens.
+# Uses a flag, not a visibility check: in branch A the Play Store is in front,
+# where "MT5 is not installed" is also not visible.
+- runFlow:
+    when:
+      true: ${!output.mtMissing}
+    commands:
+      - extendedWaitUntil:
+          notVisible: "Do it in MetaTrader"
+          timeout: 20000
+      - assertNotVisible:
+          id: "mt-task-screen"
+      # No screenshot here: MetaTrader shows the owner's accounts and brokers.
+      # A failure notice means the launch failed inside TradeLab.
+      - assertNotVisible:
+          id: "mt-launch-failed"
+      - assertNotVisible:
+          id: "mt-launch-unsupported"
+
+# ---- Back ----
+- runFlow: subflows/return-to-app.yaml
+- extendedWaitUntil:
+    visible:
+      id: "mt-task-screen"
+    timeout: 30000
+# TradeLab is back in front, on the same task (not restarted on Home).
+- assertVisible:
+    id: "mt-task-screen"
+- assertNotVisible:
+    id: "home-screen"
+- assertVisible: "Read the bid, ask and spread"
+- takeScreenshot: 04-mt-task-after-return
+
+# ---- Optional: out again, back through the step notification ----
+# The toggle "Show the current step in a notification while you are in
+# MetaTrader" (Off / On, app/mt-task/[id].tsx) posts an ongoing notification
+# titled "MetaTrader task in progress" with "Step N of M. Tap to go back to the
+# task in TradeLab." (features/metatrader/taskStepNotification.ts). Tapping it
+# opens /mt-task/<id>. If notifications are blocked the screen shows
+# mt-step-notice-denied and this part fails, which is the point.
+- runFlow:
+    when:
+      true: ${output.mtStepNotification}
+    commands:
+      - scrollUntilVisible:
+          element:
+            text: "Show the current step in a notification while you are in MetaTrader"
+          direction: DOWN
+      - tapOn:
+          id: "mt-step-notice-on"
+      - assertNotVisible:
+          id: "mt-step-notice-denied"
+      - scrollUntilVisible:
+          element:
+            text: "Do it in MetaTrader"
+          direction: UP
+      - tapOn: "Do it in MetaTrader"
+      # Same two branches as above: MetaTrader opens, or (not installed) the
+      # task screen offers the Play Store, which is how the learner leaves.
+      - extendedWaitUntil:
+          visible:
+            id: "mt-launch-not-installed"
+          timeout: 10000
+          optional: true
+      - runFlow:
+          when:
+            true: ${output.mtMissing}
+          commands:
+            - tapOn: "Open Google Play"
+            - extendedWaitUntil:
+                notVisible: "Open Google Play"
+                timeout: 20000
+            # Close the listing (same reason as branch A), then leave TradeLab
+            # with Home so the notification is tapped from outside the app and
+            # no Play Store page is left in the back stack. Added after the
+            # 2026-10-30 run; not yet re-run on the device.
+            - back
+            - pressKey: Home
+      - extendedWaitUntil:
+          notVisible:
+            id: "mt-task-screen"
+          timeout: 20000
+      # Open the notification shade by swiping down from the top edge, on the
+      # LEFT side: on HyperOS / MIUI the right half of the status bar opens the
+      # Control Center instead, and a start below the very top (1%) did not
+      # open anything (device run 2026-10-30).
+      - swipe:
+          start: 25%, 0%
+          end: 25%, 70%
+          duration: 400
+      - extendedWaitUntil:
+          visible: "MetaTrader task in progress"
+          timeout: 10000
+      - assertVisible: "(Step [0-9]+ of [0-9]+\\. Tap to go back to the task in TradeLab|All steps ticked\\. Tap to answer the questions in TradeLab)\\."
+      # Body text from features/metatrader/taskStepNotification.ts (a resumed
+      # draft with every step ticked shows the second wording).
+      # Cropped to the TradeLab notification: the rest of the shade shows the
+      # phone owner's other notifications.
+      - takeScreenshot:
+          path: 04-step-notification
+          cropOn: "(Step [0-9]+ of [0-9]+\\. Tap to go back to the task in TradeLab|All steps ticked\\. Tap to answer the questions in TradeLab)\\."
+      - tapOn: "MetaTrader task in progress"
+      - extendedWaitUntil:
+          visible:
+            id: "mt-task-screen"
+          timeout: 30000
+      - assertVisible: "Read the bid, ask and spread"
+      # Turn it off again so later runs start from the default.
+      - scrollUntilVisible:
+          element:
+            text: "Show the current step in a notification while you are in MetaTrader"
+          direction: DOWN
+      - tapOn:
+          id: "mt-step-notice-off"
+
+# Tick the six steps (content/mtTasks/mt-read-spread.json steps[], shown as
+# "<n>. <text>" chips; MT5/MT4 variants come from stepText in features/metatrader).
+- runFlow:
+    file: subflows/tick-if-unticked.yaml
+    env:
+      LABEL: '1\. Open MetaTrader and go to the Quotes tab.*'
+- runFlow:
+    file: subflows/tick-if-unticked.yaml
+    env:
+      LABEL: '2\. Find EUR/USD in the list\..*'
+- runFlow:
+    file: subflows/tick-if-unticked.yaml
+    env:
+      LABEL: '3\. The lower price is the bid.*'
+- runFlow:
+    file: subflows/tick-if-unticked.yaml
+    env:
+      LABEL: '4\. Write both prices down.*'
+- runFlow:
+    file: subflows/tick-if-unticked.yaml
+    env:
+      LABEL: '5\. Subtract the bid from the ask.*'
+- runFlow:
+    file: subflows/tick-if-unticked.yaml
+    env:
+      LABEL: '6\. Do the same for USD/JPY.*'
+
+# "What did you see?" questions (afterQuestions); correct texts from the task JSON.
+- scrollUntilVisible:
+    element:
+      text: "(Check answer|All answered\\.)"
+    direction: DOWN
+- runFlow:
+    when:
+      visible: '1\.5 pips'
+    commands:
+      - tapOn: '1\.5 pips'
+      - tapOn: "Check answer"
+      - tapOn: "Next question"
+- scrollUntilVisible:
+    element:
+      text: "(Check answer|All answered\\.)"
+    direction: DOWN
+- runFlow:
+    when:
+      visible: "The higher one, the ask"
+    commands:
+      - tapOn: "The higher one, the ask"
+      - tapOn: "Check answer"
+      - tapOn: "Finish questions"
+- scrollUntilVisible:
+    element:
+      text: "All answered\\."
+    direction: DOWN
+
+- scrollUntilVisible:
+    element:
+      text: "Mark task as done"
+    direction: DOWN
+- tapOn:
+    text: "Mark task as done"
+    enabled: true
+- extendedWaitUntil:
+    visible:
+      id: "mt-task-done"
+    timeout: 10000
+- assertVisible: "Task recorded"
+- assertVisible: '"Read the bid, ask and spread" is saved as done, confirmed by you on MT5\.'
+- takeScreenshot: 04-mt-task-done
+- tapOn:
+    text: "Done"
+    below: "Task recorded"
+- extendedWaitUntil:
+    visible: "(✓ )?Read the bid, ask and spread"
+    timeout: 10000

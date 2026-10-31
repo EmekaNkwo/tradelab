@@ -1,0 +1,22 @@
+{
+  "id": "candlestick",
+  "term": "Candlestick",
+  "aliases": [
+    "candle",
+    "candles",
+    "candlesticks",
+    "candlestick chart"
+  ],
+  "definition": {
+    "simple": "A chart shape that shows how price moved in one time period: where it opened, its highest and lowest points, and where it closed.",
+    "balanced": "The thick part is the body, between the open and the close. The thin lines are wicks (or shadows), reaching to the high and low. A candle is usually coloured one way when the close is above the open and another way when it is below. Colours depend on your app settings."
+  },
+  "example": "Open 1.10000, high 1.10250, low 1.09900, close 1.10180: the close is above the open, so it is an up candle with an 18-pip body.",
+  "related": [
+    "ohlc",
+    "timeframe"
+  ],
+  "markets": [],
+  "level": "beginner",
+  "sourceIds": []
+}

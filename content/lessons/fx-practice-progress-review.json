@@ -1,0 +1,132 @@
+{
+  "id": "fx-practice-progress-review",
+  "moduleId": "forex-scams-brokers",
+  "title": "Your Practice Progress Review",
+  "level": "beginner",
+  "estimatedMinutes": 12,
+  "inOneLine": {
+    "simple": "The Practice Progress Review shows what you have studied and practised, and what to practise next. It is not a verdict on whether you are ready to trade real money.",
+    "balanced": "Find it in More → Tools → Practice Progress Review. It shows each module's checkpoint and MetaTrader task, your calculation accuracy, how many of your paper and hand-entered demo trades broke no rule, which market conditions you have practised, and what to practise next. Profit and loss are not part of it. There is no pass or fail, and no \"ready\" badge."
+  },
+  "explain": {
+    "simple": "Open More → Tools → Practice Progress Review. It has five parts. Learning objectives: for each module, whether the checkpoint is passed, not passed yet or not taken, your best score, and whether the module's MetaTrader task is done. Calculation accuracy: how many answers you got right, shown as \"N of M correct\" with a percentage, for pips, lots, pip value and margin; for risk, position size and reward to risk; and for the Size It drill. Following your rules: how many of your paper and hand-entered demo trades broke no rule, how many had a stop, and how many you reviewed in the journal. Market conditions practised: trending markets, ranges, breakouts, reversals, high and low volatility, and news, counted from finished replays and paper accounts. What to practise next: the gaps, with links to a lesson or a drill. It does not judge you by profit. It does not give a \"ready\" badge. It ends with a reminder: completing practice does not show that you are ready to trade real money.",
+    "balanced": "Profit and expectancy are left out on purpose. Your practice sample is small, and a small sample of results says little. Judging by profit would also push you to chase outcomes instead of improving your process. There is no pass or fail. Read the review as a study plan. A gap is listed when a checkpoint is not passed yet, when a calculation area is under 80% correct, when a market condition has no practice yet, or when you broke the same rule 2 or more times. Rule-following counts only paper trades and demo trades you entered by hand, because those are the trades checked against your rules. Practice results, simulated or demo, can differ from real trading, where costs, fills and emotions differ."
+  },
+  "realNumbers": {
+    "assumptions": [
+      "Fictional review for a fictional learner, illustrative numbers",
+      "Risk, position size and reward to risk: 20 answers marked",
+      "Size It drill: 10 attempts",
+      "12 paper and hand-entered demo trades checked against the rules"
+    ],
+    "steps": [
+      "Risk, position size and reward to risk: 18 of 20 correct. 18 ÷ 20 = 90%. That is 80% or more, so it is not listed as a gap.",
+      "Size It drill: 7 of 10 correct. 7 ÷ 10 = 70%. That is under 80%, so it appears under \"What to practise next\" with a link to the drill.",
+      "Following your rules: \"9 of 12 checked trades broke no rule. 11 had a stop. 8 were reviewed in the journal.\" The review shows these counts, not a percentage.",
+      "Market conditions: trending markets and ranges practised; news events not yet. \"No practice yet in: news events\" is listed as a gap.",
+      "There is no pass or fail and no \"ready\" badge. The gaps become the next study steps."
+    ]
+  },
+  "anotherExample": {
+    "assumptions": [
+      "Two fictional learners, illustrative numbers",
+      "Learner A: demo result +300 USD; 6 of 10 checked trades broke no rule; the same rule was broken 3 times",
+      "Learner B: demo result −80 USD; 10 of 10 checked trades broke no rule"
+    ],
+    "steps": [
+      "Neither review shows the profit or the loss.",
+      "Learner A sees \"6 of 10 checked trades broke no rule\", and a gap for a rule broken often (3 times).",
+      "Learner B sees \"10 of 10 checked trades broke no rule\" and no rule gap, despite the loss.",
+      "A small sample of results says little about the future. Following your rules is something you can practise and control."
+    ]
+  },
+  "explainSimpler": "The review is a report card on your learning, not a permission slip.",
+  "commonMistake": "Reading a good review as \"I am ready for real money\". The review measures learning and discipline in practice, not readiness to trade real money.",
+  "quickCheck": [
+    {
+      "id": "fx-practice-progress-review-q1",
+      "prompt": "What does the Practice Progress Review measure?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Your simulated profit, to judge if you are ready",
+          "explanation": "No: profit and loss are not part of it, and the review gives no readiness verdict."
+        },
+        {
+          "id": "b",
+          "text": "What you have studied and practised, and the gaps to work on next",
+          "explanation": "Right: it is a learning assessment: checkpoints, calculation accuracy, rule-following, market conditions practised, and what to practise next."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "process-score"
+      ]
+    },
+    {
+      "id": "fx-practice-progress-review-q2",
+      "prompt": "Does completing all the practice show that someone is ready to trade real money?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Yes, once no gaps are listed",
+          "explanation": "No: the review is never a readiness verdict, even with no gaps."
+        },
+        {
+          "id": "b",
+          "text": "No: completing practice does not show that",
+          "explanation": "Right: the review ends with this reminder. Practice results can differ from real trading."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "demo-account"
+      ]
+    },
+    {
+      "id": "fx-practice-progress-review-q4",
+      "prompt": "Which trades does the review check for rule-following?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Paper trades and demo trades you entered by hand",
+          "explanation": "Right: those are the trades checked against your rules. The review counts how many broke no rule, had a stop, and were reviewed in the journal."
+        },
+        {
+          "id": "b",
+          "text": "Every replay, paper and demo trade, shown as a percentage score",
+          "explanation": "No: replay trades are not checked for rules, and the review shows counts, not a percentage."
+        },
+        {
+          "id": "c",
+          "text": "Only the losing trades",
+          "explanation": "No: every paper and hand-entered demo trade is checked, win or lose. A winning trade can still break a rule."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "trading-plan"
+      ]
+    }
+  ],
+  "doItNow": {
+    "kind": "reflection",
+    "instructions": "Open your Practice Progress Review. Pick the two biggest gaps it lists and schedule the linked lessons or drills. Write one sentence on what you will practise next, and one sentence on what the review cannot tell you."
+  },
+  "glossaryIds": [
+    "process-score",
+    "sample-size",
+    "trading-plan",
+    "demo-account"
+  ],
+  "sourceIds": []
+}

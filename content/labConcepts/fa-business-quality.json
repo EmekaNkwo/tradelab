@@ -1,0 +1,26 @@
+{
+  "id": "fa-business-quality",
+  "skills": ["fundamental_analysis"],
+  "lab": "fundamental",
+  "level": "intermediate",
+  "order": 6,
+  "title": "Business quality and competitive position",
+  "summary": "How the company makes money, what protects it from rivals, and what could go wrong, including how managers use the company's money. Figures are clues; the reasons need explaining.",
+  "unreliableWhen": "When past margins are treated as a promise, when a strong brand or product is assumed to last for ever, or when a good business is treated as a reason to pay any price.",
+  "goodExample": "A fictional food maker's margins hold steady while it pays dividends from free cash flow, a clue that something protects the business for now.",
+  "badExample": "A fictional app maker with thin margins and rising debt: a 5% price cut forced by a rival would wipe out almost all its profit before tax.",
+  "lessonIds": [
+    "st-business-quality",
+    "st-dividends-earnings"
+  ],
+  "chart": null,
+  "drillKind": null,
+  "scenarioIds": [],
+  "companyIds": [
+    "example-quickling-apps",
+    "example-steadybrook-foods",
+    "example-gadgetmoor-wholesale",
+    "example-faxworth-machines"
+  ],
+  "redFlagCaseIds": []
+}

@@ -1,0 +1,21 @@
+{
+  "id": "economic-calendar",
+  "term": "Economic calendar",
+  "aliases": [
+    "news calendar",
+    "event calendar"
+  ],
+  "definition": {
+    "simple": "A list of upcoming economic releases and central-bank events, with their times.",
+    "balanced": "Calendars usually show the time, country, event, an importance rating, the [[consensus-forecast]], the previous figure, and the actual once released. Check the time zone. Spreads often widen around high-importance events."
+  },
+  "example": "A learner checks the calendar each Monday and marks events for the currencies they trade.",
+  "related": [
+    "consensus-forecast",
+    "employment-report",
+    "central-bank"
+  ],
+  "markets": [],
+  "level": "beginner",
+  "sourceIds": []
+}

@@ -1,0 +1,143 @@
+{
+  "id": "ps-promotions-pump-dump",
+  "moduleId": "penny-stocks",
+  "title": "Promotions and pump-and-dump schemes",
+  "level": "beginner",
+  "estimatedMinutes": 20,
+  "inOneLine": {
+    "simple": "When a tiny share is being hyped hard, ask who is selling to you. In a [[pump-and-dump]], the people doing the hyping sell to the buyers they attract.",
+    "balanced": "A [[stock-promotion|promotion]] of a thinly traded share can push the price up for a while. When the promoters stop buying and start selling, the price can collapse, and late buyers may find almost no one to sell to. Learning to spot this is about protecting yourself, never about joining in."
+  },
+  "explain": {
+    "simple": "A pump and dump has a pattern. First, someone buys a lot of a cheap, thinly traded share. Next comes the 'pump': excited emails, posts, newsletters or chat messages promising huge gains, often with a deadline like 'before Friday'. New buyers push the price up. Then the 'dump': the early holders sell into that buying. When the buying stops, the price can fall very fast. Late buyers are left holding shares that few people want. Taking part in this kind of scheme is market manipulation and is illegal in many places. This lesson teaches you to recognise it and stay away. All examples are fictional.",
+    "balanced": "Warning signs often come together: a sudden jump in price and volume with no real company news; big claims about a new product, a 'major deal' or a hot sector, with no revenue to back them; paid-promotion disclosures in small print; insiders or large holders selling while the stock is being promoted; and late, thin or missing company reports. No single sign proves a scheme, but several together are a strong reason to stay out. Many market regulators publish investor alerts about promotions; checking those, and the company's official filings, is part of doing your own homework."
+  },
+  "realNumbers": {
+    "assumptions": [
+      "Fictional story about Glimmerpeak Lithium Dreams (fictional)",
+      "A late buyer buys 4,000 shares at 1.10 USD near the top of a promotion",
+      "After the promotion ends, the bid falls to 0.25 USD"
+    ],
+    "steps": [
+      "Cost: 4,000 × 1.10 = 4,400 USD.",
+      "Value at the new bid: 4,000 × 0.25 = 1,000 USD.",
+      "Loss = 4,400 − 1,000 = 3,400 USD, which is 3,400 ÷ 4,400 ≈ 77% of the money put in.",
+      "To get back to 1.10 from 0.25, the price would need to rise 1.10 ÷ 0.25 = 4.4 times, a gain of +340%.",
+      "And the bid at 0.25 may be for only a few hundred shares, so even selling at 0.25 may not be possible."
+    ]
+  },
+  "anotherExample": {
+    "assumptions": [
+      "A fictional message received by a learner, from an unknown sender",
+      "\"Tiny lithium explorer about to sign a MAJOR deal. Our target: 10x by Friday. Buy before the news!\"",
+      "Small print at the bottom: 'The writer has been paid 50,000 USD by a shareholder to distribute this message.'"
+    ],
+    "steps": [
+      "Red flag 1: a huge price target with a short deadline (urgency).",
+      "Red flag 2: 'about to sign' a deal with no named partner and no official filing.",
+      "Red flag 3: the writer was paid by a shareholder, who may want to sell into your buying.",
+      "Red flag 4: it came unasked, from someone you cannot identify.",
+      "Sensible action: do not buy, do not forward it, check the company's official filings and your regulator's investor alerts."
+    ]
+  },
+  "explainSimpler": "If strangers are working very hard to get you to buy a tiny share quickly, they probably want to sell it to you. Walk away.",
+  "commonMistake": "Thinking you can buy early in a pump and sell before the dump. You do not know where you are in the scheme, the price can fall faster than you can sell, and a thin market may not let you out at all.",
+  "quickCheck": [
+    {
+      "id": "ps-promotions-pump-dump-q1",
+      "prompt": "A newsletter's small print says the writer was paid by a shareholder. Why does that matter?",
+      "options": [
+        {
+          "id": "a",
+          "text": "It shows the company is well funded and stable",
+          "explanation": "No: a shareholder paying for promotion says nothing good about the company's finances."
+        },
+        {
+          "id": "b",
+          "text": "The person paying may want to sell as you buy",
+          "explanation": "Right: the person paying may profit from selling while you buy."
+        },
+        {
+          "id": "c",
+          "text": "Paid newsletters are checked by regulators",
+          "explanation": "No: do not assume anyone has checked the claims for you."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "stock-promotion"
+      ]
+    },
+    {
+      "id": "ps-promotions-pump-dump-q2",
+      "prompt": "You bought a promoted share at 0.80. It now bids 0.20. How much must it rise to get back to 0.80?",
+      "options": [
+        {
+          "id": "a",
+          "text": "+300%",
+          "explanation": "Right: 0.80 ÷ 0.20 = 4 times, which is a gain of +300%."
+        },
+        {
+          "id": "b",
+          "text": "+75%",
+          "explanation": "No: 75% is the size of the fall. Getting back needs a much bigger percentage rise."
+        },
+        {
+          "id": "c",
+          "text": "+60%",
+          "explanation": "No: 0.60 is the price gap, not the percentage needed."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "pump-and-dump"
+      ]
+    },
+    {
+      "id": "ps-promotions-pump-dump-q3",
+      "prompt": "A tiny share jumps 300% in two days on huge volume, with no company news. What is the best first step?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Buy a small amount quickly so that you do not miss out",
+          "explanation": "No: chasing an unexplained spike is how late buyers get caught in a dump."
+        },
+        {
+          "id": "b",
+          "text": "Stay out and check filings, news and regulator alerts",
+          "explanation": "Right: an unexplained spike is a reason to investigate, not to buy."
+        },
+        {
+          "id": "c",
+          "text": "Wait a day, then buy if the price is still rising",
+          "explanation": "No: a rise that lasts another day is still unexplained. Check filings, news and regulator alerts first."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "pump-and-dump",
+        "volatility"
+      ]
+    }
+  ],
+  "doItNow": {
+    "kind": "fundamental",
+    "instructions": "Open the Fundamental Analysis Lab and work through the Penny Stock Red Flag Detector case on the heavily promoted company. Tick every sign you think is a warning, then read the explanations. Write down the two signs you missed, if any, and what you would check next."
+  },
+  "glossaryIds": [
+    "pump-and-dump",
+    "stock-promotion",
+    "investment-scam",
+    "volatility"
+  ],
+  "sourceIds": []
+}

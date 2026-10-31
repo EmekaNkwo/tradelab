@@ -1,0 +1,22 @@
+{
+  "id": "gdp",
+  "term": "GDP",
+  "aliases": [
+    "gross domestic product",
+    "growth",
+    "economic growth"
+  ],
+  "definition": {
+    "simple": "The total value of goods and services an economy produces over a period. Its change is the usual measure of growth.",
+    "balanced": "Usually reported as a percentage change, for example on the previous quarter. Early figures are estimates and are often revised. Growth is read together with [[employment-report|employment]] and [[inflation]], not alone."
+  },
+  "example": "Hypothetical: output rises from 500.0 to 503.0 billion WMK. Growth = 3.0 ÷ 500.0 = 0.6%.",
+  "related": [
+    "inflation",
+    "employment-report",
+    "surprise"
+  ],
+  "markets": [],
+  "level": "beginner",
+  "sourceIds": []
+}

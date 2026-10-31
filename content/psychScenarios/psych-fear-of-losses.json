@@ -1,0 +1,37 @@
+{
+  "id": "psych-fear-of-losses",
+  "topic": "fear-of-losses",
+  "title": "The trade you will not take",
+  "situation": "After two losing demo trades this week, you see a setup that meets every rule in your plan. Your [[stop-loss|stop loss]] and size are already worked out, and the risk is within your own limit. But your finger hovers over the button and you do not take it.",
+  "question": "What do you do?",
+  "responses": [
+    {
+      "id": "a",
+      "text": "Skip it. It feels safer not to trade until you feel confident again.",
+      "quality": "mixed",
+      "explanation": "Skipping avoids a possible loss, but your results stop reflecting your plan. You also learn nothing about whether the plan works."
+    },
+    {
+      "id": "b",
+      "text": "Take it, but with a stop so tight that price can barely move.",
+      "quality": "harmful",
+      "explanation": "A stop placed out of fear, not where the setup needs it, is likely to be hit by normal price movement."
+    },
+    {
+      "id": "c",
+      "text": "Wait for extra confirmation beyond your rules, then enter late.",
+      "quality": "mixed",
+      "explanation": "Waiting longer changes your entry and your reward compared with your risk. You are no longer trading the plan you tested."
+    },
+    {
+      "id": "d",
+      "text": "Take the trade as planned. The risk is set, and a loss here is a cost you accepted in advance.",
+      "quality": "helpful",
+      "explanation": "Your plan already decided how much you can lose. Following it is how you find out whether the plan works."
+    }
+  ],
+  "takeaway": "When the risk is set in advance, following the plan matters more than how the trade feels.",
+  "glossaryIds": [
+    "stop-loss"
+  ]
+}

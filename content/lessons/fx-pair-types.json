@@ -1,0 +1,66 @@
+{
+  "id": "fx-pair-types",
+  "moduleId": "forex-basics",
+  "title": "Majors, minors, and exotics",
+  "level": "beginner",
+  "estimatedMinutes": 15,
+  "inOneLine": {
+    "simple": "Pairs are grouped by how widely traded their currencies are, which affects their costs."
+  },
+  "explain": {
+    "simple": "Major pairs contain the US dollar and one other widely traded currency, such as EUR/USD, USD/JPY, or GBP/USD. Minor pairs (also called crosses) pair two major currencies without the dollar, such as EUR/GBP or EUR/JPY. Exotic pairs pair a major currency with the currency of a smaller or emerging economy, such as USD/ZAR or USD/TRY. Exotics usually trade less, so their [[spread|spreads]] tend to be wider and prices can jump more.",
+    "balanced": "The common classification: majors are USD paired with EUR, JPY, GBP, CHF, AUD, CAD, or NZD. Crosses (minors) combine those currencies without USD. Exotics include an emerging-market or less-traded currency. Lower [[liquidity]] usually means wider spreads, larger gaps, and higher swap costs. Exact groupings vary between brokers."
+  },
+  "realNumbers": {
+    "assumptions": [
+      "Illustrative quotes, not live prices",
+      "EUR/USD bid 1.1000, ask 1.1001 (spread 1 pip)",
+      "An exotic pair with a spread of 60 pips"
+    ],
+    "steps": [
+      "Opening and immediately closing EUR/USD costs about 1 pip.",
+      "Doing the same on the exotic pair costs about 60 pips.",
+      "Before a trade on the exotic even breaks even, price must move 60 times further in your favour than on EUR/USD."
+    ]
+  },
+  "anotherExample": {
+    "assumptions": ["Classify each pair using the definitions above"],
+    "steps": ["USD/CAD: major (dollar plus a major currency).", "EUR/JPY: minor or cross (two majors, no dollar).", "USD/ZAR: exotic (South African rand)."]
+  },
+  "explainSimpler": "Majors include the dollar, minors leave the dollar out, and exotics include a less-traded currency that usually costs more to trade.",
+  "commonMistake": "Assuming every pair costs the same to trade. Always check the spread before you practise on a pair, especially exotics.",
+  "quickCheck": [
+    {
+      "id": "fx-pair-types-q1",
+      "prompt": "EUR/GBP is usually classed as…",
+      "options": [
+        { "id": "a", "text": "A major", "explanation": "No: majors include the US dollar." },
+        { "id": "b", "text": "A minor (cross)", "explanation": "Right: it pairs two major currencies without the dollar." },
+        { "id": "c", "text": "An exotic, since neither currency is the US dollar", "explanation": "No: exotic pairs include a currency from a smaller or emerging economy. Both the euro and the pound are major currencies." }
+      ],
+      "correctOptionIds": ["b"],
+      "level": "beginner",
+      "glossaryIds": []
+    },
+    {
+      "id": "fx-pair-types-q2",
+      "prompt": "Why do exotic pairs usually have wider spreads?",
+      "options": [
+        { "id": "a", "text": "They are usually traded less, so liquidity is lower", "explanation": "Right: fewer buyers and sellers usually means a wider gap between bid and ask." },
+        { "id": "b", "text": "They are newer pairs, so brokers have not settled their spreads yet", "explanation": "No: spreads reflect how much trading there is, not how new a pair is. Fewer buyers and sellers usually means a wider gap." },
+        { "id": "c", "text": "They are only traded at night", "explanation": "No: exotic pairs can be traded whenever the market is open. The wider spread comes from lower liquidity." }
+      ],
+      "correctOptionIds": ["a"],
+      "level": "beginner",
+      "glossaryIds": ["liquidity", "spread"]
+    }
+  ],
+  "doItNow": {
+    "kind": "metatrader",
+    "instructions": "In MetaTrader on your demo account, open the quotes list and add 5 pairs: 3 majors, 1 minor, and 1 exotic. Note each pair's spread.",
+    "mtTaskId": "mt-add-pairs"
+  },
+  "homework": "Check the spread on EUR/USD and on your exotic pair at two different times of day, and write both down.",
+  "glossaryIds": ["liquidity", "spread"],
+  "sourceIds": []
+}

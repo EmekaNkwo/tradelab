@@ -1,0 +1,78 @@
+{
+  "id": "fu-contracts-expiry",
+  "moduleId": "futures",
+  "title": "What a futures contract is: specs, expiry and settlement",
+  "level": "beginner",
+  "estimatedMinutes": 15,
+  "inOneLine": {
+    "simple": "A futures contract is an agreement to buy or sell something at a set price on a set future date. Its rules are written in the contract specification.",
+    "balanced": "A [[futures-contract]] is a standardised agreement traded on an exchange. Its specification sets the [[multiplier]] or [[contract-size]], the [[tick-size]], the [[contract-month|contract months]], the [[expiry]] date, and whether it ends in [[physical-settlement]] or [[cash-settlement]]."
+  },
+  "explain": {
+    "simple": "When you buy a share, you own a small piece of a company. When you buy a futures contract, you own nothing yet. You have agreed a price for a deal that completes later. Each contract has a rule book called the specification. It says how big one contract is, the smallest price step, which months you can trade, and the last day of trading, called expiry. At expiry, the contract either ends with the real goods being delivered, or with a cash payment of the difference. Every contract has its own rules, so you must read the specification of the exact contract you study.",
+    "balanced": "Each contract month is a separate contract with its own price. Close to expiry, trading activity often moves to the next month, so the contract you see on a chart may change. The [[notional-value]] of one contract is price × multiplier (or price × contract size). That is the size of the exposure you control, which is usually far bigger than the [[margin]] you put down. Settlement method matters: with physical settlement, a buyer who holds to the end can be required to take delivery, which most practice traders close or roll well before. Exchanges set and can change specifications, so never copy them from a chart, a forum or memory. All examples here use fictional specifications."
+  },
+  "realNumbers": {
+    "assumptions": [
+      "Example index future (fictional specs): multiplier 10 USD per point, tick size 0.25",
+      "Fictional contract months: March, June, September and December",
+      "Cash-settled at expiry (fictional rule)",
+      "Price today 4,000.00 points"
+    ],
+    "steps": [
+      "Notional value of 1 contract = 4,000 × 10 USD = 40,000 USD.",
+      "Notional value of 2 contracts = 2 × 40,000 = 80,000 USD.",
+      "You buy 1 contract at 4,000.00 and hold it to expiry. The final settlement price is 4,020.00.",
+      "Gain = (4,020 − 4,000) × 10 USD = 20 × 10 = 200 USD, paid in cash. Nothing is delivered.",
+      "If the final price were 3,980.00 instead, the loss would be 20 × 10 = 200 USD, taken in cash."
+    ]
+  },
+  "anotherExample": {
+    "assumptions": [
+      "Example commodity future (fictional specs): contract size 100 units of a fictional commodity, priced in USD per unit",
+      "Physically settled at expiry (fictional rule)",
+      "Price today 50.00 USD per unit"
+    ],
+    "steps": [
+      "Notional value of 1 contract = 100 × 50.00 = 5,000 USD.",
+      "If you hold a bought contract into the delivery period, the rules could require you to pay for and receive 100 units.",
+      "A practice trader who only wants price exposure must close or roll the position before the last day set in the specification.",
+      "Same idea of 'a deal for later', but a very different ending. That is why the settlement method is part of the specification you check."
+    ]
+  },
+  "explainSimpler": "A futures contract is a promise to trade later at today's agreed price. The rule book tells you its size, its price steps, when it ends, and how it ends: with goods or with cash.",
+  "commonMistake": "Thinking all futures work the same way. Contracts differ in size, tick size, months, expiry dates and settlement. Another mistake is forgetting that a contract expires: unlike a share, you cannot hold the same contract forever.",
+  "quickCheck": [
+    {
+      "id": "fu-contracts-expiry-q1",
+      "prompt": "Fictional contract: multiplier 20 USD per point, price 2,500.00. What is the notional value of 1 contract?",
+      "options": [
+        { "id": "a", "text": "2,500 USD", "explanation": "No: that is the price in points. Multiply it by the 20 USD multiplier." },
+        { "id": "b", "text": "125 USD", "explanation": "No: that divides instead of multiplying. Notional = price × multiplier." },
+        { "id": "c", "text": "50,000 USD", "explanation": "Right: 2,500 × 20 USD = 50,000 USD." }
+      ],
+      "correctOptionIds": ["c"],
+      "level": "beginner",
+      "glossaryIds": ["notional-value", "multiplier"]
+    },
+    {
+      "id": "fu-contracts-expiry-q2",
+      "prompt": "A fictional contract is cash-settled. You hold 1 bought contract to expiry. What happens?",
+      "options": [
+        { "id": "a", "text": "The price gap is settled in cash; nothing is delivered", "explanation": "Right: cash settlement pays the difference against the final settlement price. Nothing is delivered." },
+        { "id": "b", "text": "You take delivery of the goods", "explanation": "No: that describes physical settlement, not cash settlement." },
+        { "id": "c", "text": "You may be moved to the next month automatically", "explanation": "No: a contract ends at expiry. Moving to a later month is a separate choice called rolling." }
+      ],
+      "correctOptionIds": ["a"],
+      "level": "beginner",
+      "glossaryIds": ["cash-settlement", "expiry"]
+    }
+  ],
+  "doItNow": {
+    "kind": "calculator",
+    "instructions": "Open the futures contract calculator. Enter the example index future's fictional specs from this lesson (tick size 0.25 and tick value 2.50 USD, which is 0.25 × the 10 USD multiplier) and check that 1 contract at 4,000.00 shows a notional value of 40,000 USD. Then make up a second fictional contract with a different multiplier (tick value = tick size × multiplier) and compare the notional values. Write down, in one line each, the six things you would check in a real contract's specification before studying it."
+  },
+  "homework": "Write a one-page 'spec card' template with blank fields for contract size or multiplier, tick size, tick value, contract months, expiry, settlement method, initial margin and maintenance margin. Fill it in for the two fictional contracts in this lesson.",
+  "glossaryIds": ["futures-contract", "multiplier", "contract-size", "tick-size", "contract-month", "expiry", "physical-settlement", "cash-settlement", "notional-value", "margin"],
+  "sourceIds": []
+}

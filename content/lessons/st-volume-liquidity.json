@@ -1,0 +1,144 @@
+{
+  "id": "st-volume-liquidity",
+  "moduleId": "stocks-basics",
+  "title": "Volume and liquidity in shares",
+  "level": "beginner",
+  "estimatedMinutes": 15,
+  "inOneLine": {
+    "simple": "Volume is how many shares changed hands. When volume is low, getting in and out at a fair price is harder.",
+    "balanced": "[[volume|Volume]] counts shares traded in a period. Low volume usually comes with low [[liquidity]] and a wider [[spread]], so an order can move the price against you. Compare your order size with typical daily volume."
+  },
+  "explain": {
+    "simple": "Every time a buyer and a seller agree, the shares traded are added to the volume for that period. A share that trades millions of times a day is easy to buy or sell in small amounts without moving the price much. A share that trades a few thousand times a day is different: there may be no buyer at the price you want, so you either wait or accept a worse price. That ease of trading is called liquidity.",
+    "balanced": "Liquidity shows up in two places. First, the [[spread]] between [[bid]] and [[ask]]: thin markets usually have wider spreads, which you pay every time you trade. Second, the size of your order compared with daily volume: a big order in a thin share can push the price as it fills. Volume also changes over time, often rising around news and earnings reports. A volume spike shows that more shares traded; on its own it does not say which way price will go next."
+  },
+  "realNumbers": {
+    "assumptions": [
+      "Two fictional shares, both priced around 10 USD",
+      "Share A trades about 2,000,000 shares a day; Share B about 20,000",
+      "You want to sell 5,000 shares of either"
+    ],
+    "steps": [
+      "In Share A, 5,000 ÷ 2,000,000 = 0.25% of a typical day's volume. Small.",
+      "In Share B, 5,000 ÷ 20,000 = 25% of a typical day's volume. Large.",
+      "In Share B there may not be enough buyers near the current price, so you might need to accept lower prices or sell over several days.",
+      "The same order is easy in one share and hard in the other."
+    ]
+  },
+  "anotherExample": {
+    "assumptions": [
+      "Illustrative quotes for two fictional shares; costs other than the spread ignored",
+      "Share A: bid 10.00 USD, ask 10.02 USD",
+      "Share B: bid 0.50 USD, ask 0.55 USD",
+      "You buy 1,000 shares at the ask and sell them straight back at the bid"
+    ],
+    "steps": [
+      "Share A: buy for 1,000 × 10.02 = 10,020 USD; sell for 1,000 × 10.00 = 10,000 USD. Lost 20 USD, about 0.2% of 10,020.",
+      "Share B: buy for 1,000 × 0.55 = 550 USD; sell for 1,000 × 0.50 = 500 USD. Lost 50 USD, about 9.1% of 550.",
+      "In Share B, price has to rise about 10% (from 0.50 to 0.55) just for the bid to reach what you paid."
+    ]
+  },
+  "explainSimpler": "Lots of trading means easy in, easy out. Little trading means you may get stuck or pay up.",
+  "commonMistake": "Looking only at the price chart and ignoring volume and the spread. A trade that looks fine on the chart can lose money at entry in a thin share, and may be hard to exit.",
+  "quickCheck": [
+    {
+      "id": "st-volume-liquidity-q1",
+      "prompt": "A share trades about 40,000 shares a day. Your simulated order is 10,000 shares. What share of daily volume is that?",
+      "options": [
+        {
+          "id": "a",
+          "text": "4%",
+          "explanation": "No: 10,000 ÷ 40,000 is a quarter, not 4%."
+        },
+        {
+          "id": "b",
+          "text": "25%",
+          "explanation": "Right: 10,000 ÷ 40,000 = 0.25, a large part of a day's trading."
+        },
+        {
+          "id": "c",
+          "text": "40%",
+          "explanation": "No: that would be 16,000 shares."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "volume",
+        "liquidity"
+      ]
+    },
+    {
+      "id": "st-volume-liquidity-q2",
+      "prompt": "Bid 2.00 USD, ask 2.10 USD. You buy 100 shares and sell them back at once. What does the spread cost?",
+      "options": [
+        {
+          "id": "a",
+          "text": "10 USD",
+          "explanation": "Right: you pay 210 USD and get back 200 USD."
+        },
+        {
+          "id": "b",
+          "text": "1 USD",
+          "explanation": "No: the gap is 0.10 USD on each of 100 shares."
+        },
+        {
+          "id": "c",
+          "text": "0.10 USD",
+          "explanation": "No: that is the gap for one share only."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "spread",
+        "bid",
+        "ask"
+      ]
+    },
+    {
+      "id": "st-volume-liquidity-q3",
+      "prompt": "Volume jumps to five times its usual level. What does that tell you on its own?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Price is likely to rise next",
+          "explanation": "No: high volume says many shares traded, not which way price goes next."
+        },
+        {
+          "id": "b",
+          "text": "The company has good news",
+          "explanation": "No: the reason is unknown from volume alone."
+        },
+        {
+          "id": "c",
+          "text": "More shares changed hands",
+          "explanation": "Right: that is all volume measures. The reason and direction need more work."
+        }
+      ],
+      "correctOptionIds": [
+        "c"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "volume"
+      ]
+    }
+  ],
+  "doItNow": {
+    "kind": "chart_lab",
+    "instructions": "In Chart Lab, open the Breakout scenario and show the Volume pane. Note the volume on the breakout candle compared with the ten candles before it. Repeat with the False breakout scenario. Write down whether volume alone would have told you in advance which breakout would hold."
+  },
+  "glossaryIds": [
+    "volume",
+    "liquidity",
+    "spread",
+    "bid",
+    "ask"
+  ],
+  "sourceIds": []
+}

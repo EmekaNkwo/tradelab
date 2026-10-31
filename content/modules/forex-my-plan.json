@@ -1,0 +1,18 @@
+{
+  "id": "forex-my-plan",
+  "skills": ["execution_discipline", "risk_management"],
+  "title": "My trading plan",
+  "summary": "Write a one-page trading plan: what and when you trade, clear entry, exit, stop and target rules, risk and daily limits, when to stop, and a pre-trade checklist.",
+  "markets": [
+    "forex"
+  ],
+  "level": "beginner",
+  "lessonIds": [
+    "fx-plan-why",
+    "fx-plan-rules",
+    "fx-plan-checklist"
+  ],
+  "checkpointQuizId": "forex-my-plan-checkpoint",
+  "practicalResult": "One-page plan saved",
+  "minPracticeDays": 0
+}

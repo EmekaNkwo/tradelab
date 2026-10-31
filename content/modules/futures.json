@@ -1,0 +1,12 @@
+{
+  "id": "futures",
+  "skills": ["market_fundamentals", "risk_management"],
+  "title": "Futures: contracts, ticks, margin and expiry",
+  "summary": "What a futures contract is, how tick size, tick value and multipliers turn price moves into money, how margin and daily mark-to-market work, what happens at expiry, how the futures curve looks, and why losses can exceed margin.",
+  "markets": ["futures"],
+  "level": "intermediate",
+  "lessonIds": ["fu-contracts-expiry", "fu-ticks-multipliers", "fu-margin-mark-to-market", "fu-curve-rollover", "fu-leverage-gap-risk"],
+  "checkpointQuizId": "futures-checkpoint",
+  "practicalResult": "Work out P/L, notional value, leverage and the margin-call price for 5 fictional contract specs in the futures contract calculator, doing at least two by hand first, then place and manage 5 paper trades on the practice index future with a stop on every one.",
+  "minPracticeDays": 0
+}

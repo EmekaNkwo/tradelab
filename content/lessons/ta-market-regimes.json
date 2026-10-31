@@ -1,0 +1,149 @@
+{
+  "id": "ta-market-regimes",
+  "skills": ["technical_analysis"],
+  "moduleId": "ta-advanced",
+  "title": "Market regimes: why a method behaves differently",
+  "level": "advanced",
+  "estimatedMinutes": 20,
+  "inOneLine": {
+    "simple": "A market regime is the kind of market you are in: trending or ranging, and calm or jumpy. The same rules behave very differently in each.",
+    "balanced": "Classify each period with a written rule on two questions: is it trending or ranging, and is [[volatility]] high or low compared with its own past? A [[market-regime]] label lags, and regimes change without warning."
+  },
+  "explain": {
+    "simple": "Ask two questions about a chart. First: has price gone somewhere, or gone back and forth? That is trend or range. Second: are candles bigger or smaller than usual for this market? That is high or low volatility. Together they give four boxes, such as \"trending and calm\" or \"ranging and jumpy\". A rule built for one box can do badly in another. A moving-average cross follows a trend, but in a range it flips back and forth, and each flip is a small loss plus costs. A \"buy near the bottom of the range\" rule does the opposite: it suits a range and keeps buying into a falling trend.",
+    "balanced": "Turn the questions into numbers so you classify the same way each time. One simple version: trending if the net move over the last 20 candles is at least 3 × [[atr|ATR]] 14; high volatility if ATR 14 is at least 1.5 × its own 100-candle average, low if it is 0.75 × or less. The thresholds are your choice, and changing them moves periods between boxes. That is why you test how sensitive your results are to them. The label always describes the recent past: by the time 20 candles show a trend, part of it is over. When reviewing a [[backtest]], split results by regime. A method that only made money in one box depends on that box coming back."
+  },
+  "realNumbers": {
+    "assumptions": [
+      "Illustrative EUR/USD prices",
+      "Rule: trending if |close now − close 20 candles ago| ≥ 3 × ATR 14",
+      "High volatility if ATR 14 ≥ 1.5 × its 100-candle average; low if ≤ 0.75 ×",
+      "Close now 1.0950; close 20 candles ago 1.0800; ATR 14 = 40 pips; its 100-candle average = 30 pips"
+    ],
+    "steps": [
+      "Net move = 1.0950 − 1.0800 = 0.0150 = 150 pips.",
+      "In ATR: 150 ÷ 40 = 3.75, which is at least 3. Trending.",
+      "Volatility: 40 ÷ 30 ≈ 1.33. That is below 1.5 and above 0.75, so normal.",
+      "Label: trending, normal volatility. It describes the last 20 candles only."
+    ]
+  },
+  "anotherExample": {
+    "assumptions": [
+      "Illustrative commodity prices, in USD",
+      "Same rule",
+      "Close now 74.20; close 20 candles ago 73.60; ATR 14 = 0.90; its 100-candle average = 0.50"
+    ],
+    "steps": [
+      "Net move = 74.20 − 73.60 = 0.60.",
+      "In ATR: 0.60 ÷ 0.90 ≈ 0.67, well below 3. Ranging.",
+      "Volatility: 0.90 ÷ 0.50 = 1.8, at least 1.5. High volatility.",
+      "Label: ranging, high volatility: big candles going nowhere. Trend-following rules tend to flip back and forth here, paying costs each time."
+    ]
+  },
+  "explainSimpler": "A regime is the weather. A good umbrella rule is useless on a sunny day. Check the weather label, but remember it is yesterday's weather.",
+  "commonMistake": "Judging a method on one kind of market and assuming the result carries over. Or redefining the regime after the fact so the losing periods \"do not count\".",
+  "quickCheck": [
+    {
+      "id": "ta-market-regimes-q1",
+      "prompt": "Net move over 20 candles: 2.40. ATR 14: 1.20. Its 100-candle average: 0.80. Using this lesson's rule, what is the label?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Trending, high volatility",
+          "explanation": "No: 2.40 ÷ 1.20 = 2 ATR, below the 3 ATR needed for a trend."
+        },
+        {
+          "id": "b",
+          "text": "Ranging, high volatility",
+          "explanation": "Right: 2 ATR is below 3, so ranging; 1.20 ÷ 0.80 = 1.5, so high volatility."
+        },
+        {
+          "id": "c",
+          "text": "Ranging, normal volatility",
+          "explanation": "No: 1.20 ÷ 0.80 = 1.5, which meets the high-volatility threshold."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "advanced",
+      "glossaryIds": [
+        "market-regime",
+        "atr",
+        "volatility"
+      ]
+    },
+    {
+      "id": "ta-market-regimes-q2",
+      "prompt": "A moving-average cross rule loses many small trades in a row. The market has been ranging. What is a fair reading?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The rule is broken and should be dropped at once",
+          "explanation": "No: a few losses in one regime are what this rule does by design in a range."
+        },
+        {
+          "id": "b",
+          "text": "The rule flips back and forth in ranges, as built",
+          "explanation": "Right: in a range, price keeps crossing a flat average. Split results by regime before judging."
+        },
+        {
+          "id": "c",
+          "text": "The range will now turn into a trend",
+          "explanation": "No: nothing here says when the regime changes."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "advanced",
+      "glossaryIds": [
+        "market-regime",
+        "moving-average"
+      ]
+    },
+    {
+      "id": "ta-market-regimes-q3",
+      "prompt": "Why does a regime label always lag?",
+      "options": [
+        {
+          "id": "a",
+          "text": "It is measured on closed, past candles",
+          "explanation": "Right: by the time the window shows a trend, part of it is over."
+        },
+        {
+          "id": "b",
+          "text": "The broker delays the indicator data",
+          "explanation": "No: the delay comes from using past candles, not from the broker."
+        },
+        {
+          "id": "c",
+          "text": "It does not lag if you use ATR instead",
+          "explanation": "No: ATR also averages past candles."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "advanced",
+      "glossaryIds": [
+        "market-regime",
+        "lagging-indicator"
+      ]
+    }
+  ],
+  "doItNow": {
+    "kind": "chart_lab",
+    "instructions": "In Chart Lab, open four scenarios in turn: Strong uptrend, Range, High volatility and Low volatility. Show ATR 14 below the chart and SMA 20 on it. For each, write the label your rule gives on the last 20 candles. Then open Sideways and count how many times price crossed the SMA 20."
+  },
+  "glossaryIds": [
+    "market-regime",
+    "volatility",
+    "atr",
+    "trend",
+    "moving-average",
+    "backtest",
+    "lagging-indicator"
+  ],
+  "sourceIds": []
+}

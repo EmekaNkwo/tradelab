@@ -1,0 +1,22 @@
+{
+  "id": "contract-month",
+  "term": "Contract month",
+  "aliases": [
+    "delivery month",
+    "contract months"
+  ],
+  "definition": {
+    "simple": "The month in which a particular futures contract expires. Each month is a separate contract with its own price.",
+    "balanced": "A market can list several contract months at once. Prices differ between them, which forms the [[futures-curve]]. Which months exist, and which one is most traded at a given time, depends on the contract."
+  },
+  "related": [
+    "expiry",
+    "futures-curve",
+    "rollover"
+  ],
+  "markets": [
+    "futures"
+  ],
+  "level": "beginner",
+  "sourceIds": []
+}

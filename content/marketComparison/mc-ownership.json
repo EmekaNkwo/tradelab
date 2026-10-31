@@ -1,0 +1,13 @@
+{
+  "id": "mc-ownership",
+  "order": 2,
+  "dimension": "Ownership vs contract",
+  "cells": {
+    "forex": "At a retail broker you usually hold a contract on the rate, not the currencies themselves.",
+    "stocks": "Bought with your own cash, a share is part-ownership of the company; borrowing to buy changes the risk.",
+    "penny_stocks": "Also part-ownership, but small companies can issue many new shares, shrinking each holder's slice.",
+    "commodities": "Most practice-level routes are contracts or funds; owning the physical goods is a different business with storage costs.",
+    "futures": "A contract to buy or sell later, held on [[margin]]; nothing is owned until settlement, if ever."
+  },
+  "caveat": "Product type decides this, not the market name. A broker's contract on a share is not the same as owning the share, so read what the product actually is."
+}

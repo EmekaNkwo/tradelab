@@ -1,0 +1,22 @@
+{
+  "id": "volatility-adjusted-sizing",
+  "term": "Volatility-adjusted sizing",
+  "aliases": [
+    "ATR sizing",
+    "volatility sizing",
+    "ATR-based position sizing"
+  ],
+  "definition": {
+    "simple": "Setting the stop from how much the market moves, such as 2 × ATR, then sizing so the loss at the stop is a fixed amount.",
+    "balanced": "Size = money at risk ÷ (stop distance × value per unit of price), rounded down. A jumpier market gets a wider stop and a smaller size. If the smallest possible size is still too big, skip the trade. ATR is backward-looking, and gaps can still push a loss past the stop."
+  },
+  "example": "Risk 100 USD, ATR 0.80, stop 2 × ATR = 1.60: 100 ÷ 1.60 = 62.5, so 62 shares.",
+  "related": [
+    "position-sizing",
+    "atr",
+    "risk-per-trade"
+  ],
+  "markets": [],
+  "level": "advanced",
+  "sourceIds": []
+}

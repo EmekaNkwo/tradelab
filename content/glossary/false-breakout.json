@@ -1,0 +1,23 @@
+{
+  "id": "false-breakout",
+  "term": "False breakout",
+  "aliases": [
+    "fake breakout",
+    "fakeout",
+    "failed breakout",
+    "false break"
+  ],
+  "definition": {
+    "simple": "A breakout that does not continue: price moves through a level, then soon comes back inside.",
+    "balanced": "You only know a breakout was false afterwards. Rules that wait for more confirmation can avoid some false breakouts, but they enter later, at a worse price, and still get caught by some."
+  },
+  "example": "Price closes 8 pips above resistance at 1.25600, then the next two candles close back at 1.25550 and 1.25400.",
+  "related": [
+    "breakout",
+    "retest",
+    "stop-loss"
+  ],
+  "markets": [],
+  "level": "beginner",
+  "sourceIds": []
+}

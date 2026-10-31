@@ -1,0 +1,21 @@
+{
+  "id": "surprise",
+  "term": "Surprise",
+  "aliases": [
+    "data surprise",
+    "economic surprise"
+  ],
+  "definition": {
+    "simple": "The difference between the actual figure and what was expected.",
+    "balanced": "Surprise = actual − [[consensus-forecast]]. A big surprise often brings a bigger move, but the direction is not certain. Other parts of the report, revisions, and what traders had already priced in can change the reaction."
+  },
+  "example": "Hypothetical: expected 2.5%, actual 2.9%. The surprise is +0.4 percentage points.",
+  "related": [
+    "consensus-forecast",
+    "economic-calendar",
+    "volatility"
+  ],
+  "markets": [],
+  "level": "beginner",
+  "sourceIds": []
+}

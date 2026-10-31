@@ -1,0 +1,25 @@
+{
+  "id": "ta-macd",
+  "skills": ["technical_analysis"],
+  "lab": "technical",
+  "level": "intermediate",
+  "order": 3,
+  "title": "MACD",
+  "summary": "MACD is the gap between a fast and a slow moving average of price, with a signal line and a histogram. It describes momentum, and it lags.",
+  "unreliableWhen": "In sideways markets, the lines cross back and forth. After a sudden move, MACD reacts late because it is built from averages.",
+  "goodExample": "Reading a rising histogram as \"the fast average is pulling away from the slow one\".",
+  "badExample": "Taking every signal-line cross as an entry in a choppy market.",
+  "lessonIds": [
+    "fx-macd"
+  ],
+  "chart": {
+    "scenario": "sideways",
+    "overlays": [],
+    "pane": "macd",
+    "lookFor": "Count how many times the MACD line crosses its signal line. Then open Strong uptrend and compare."
+  },
+  "drillKind": null,
+  "scenarioIds": [],
+  "companyIds": [],
+  "redFlagCaseIds": []
+}

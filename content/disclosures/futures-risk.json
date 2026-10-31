@@ -1,0 +1,11 @@
+{
+  "id": "futures-risk",
+  "version": 1,
+  "title": "Futures losses can exceed margin",
+  "body": [
+    "The [[margin]] a futures broker requires is a deposit, not the most you can lose. Losses on a futures position can be larger than the margin you put up.",
+    "Prices can gap past your [[stop-loss|stop loss]], and contract specifications differ between contracts. Always check the specification of the exact contract."
+  ],
+  "triggers": ["futures"],
+  "statistics": []
+}

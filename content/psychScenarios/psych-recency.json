@@ -1,0 +1,35 @@
+{
+  "id": "psych-recency",
+  "topic": "recency",
+  "title": "Breakouts do not work anymore",
+  "situation": "Your last three breakout trades in the simulator all failed. Today a breakout setup appears that meets every rule in your plan. You think, \"Breakouts do not work anymore,\" and want to drop the strategy.",
+  "question": "What do you do?",
+  "responses": [
+    {
+      "id": "a",
+      "text": "Drop breakouts for good. The last three trades proved it.",
+      "quality": "harmful",
+      "explanation": "Three trades is far too few to judge a method. Recent results feel more important than they are."
+    },
+    {
+      "id": "b",
+      "text": "Take the trade as planned, then look at a bigger record, such as your journal or a backtest over many trades, before judging the strategy.",
+      "quality": "helpful",
+      "explanation": "A strategy is judged on many trades. A bigger record shows whether three losses in a row is unusual for it or normal."
+    },
+    {
+      "id": "c",
+      "text": "Trade the opposite way, expecting the breakout to fail.",
+      "quality": "harmful",
+      "explanation": "This is the same mistake turned around: a new idea built on just three trades, with no plan or testing behind it."
+    },
+    {
+      "id": "d",
+      "text": "Skip just this one and keep watching.",
+      "quality": "mixed",
+      "explanation": "It avoids a hasty change, but skipping valid setups makes your record less useful for judging the strategy."
+    }
+  ],
+  "takeaway": "The last few results feel like the whole story. Judge a method on many trades, not the latest ones.",
+  "glossaryIds": []
+}

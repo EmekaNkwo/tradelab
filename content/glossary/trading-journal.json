@@ -1,0 +1,19 @@
+{
+  "id": "trading-journal",
+  "term": "Trading journal",
+  "aliases": [
+    "journal",
+    "trade log"
+  ],
+  "definition": {
+    "simple": "A record of each trade: what you planned, what you did, what happened, and what you learned.",
+    "balanced": "A good journal records entry, stop, target, size, exit, result in pips, money and R, your reasons, emotions, rule breaks and a chart screenshot. Reviewing it shows patterns that single trades hide. The result of a trade is recorded separately from the quality of the decision."
+  },
+  "related": [
+    "process-score",
+    "trading-plan"
+  ],
+  "markets": [],
+  "level": "beginner",
+  "sourceIds": []
+}

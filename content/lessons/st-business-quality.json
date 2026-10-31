@@ -1,0 +1,145 @@
+{
+  "id": "st-business-quality",
+  "moduleId": "stocks-company-analysis",
+  "title": "Business quality, competition and risks",
+  "level": "intermediate",
+  "estimatedMinutes": 20,
+  "inOneLine": {
+    "simple": "Numbers show what happened. To judge what might happen next, ask how the company makes money, what protects it from rivals, and what could go wrong.",
+    "balanced": "Understand the [[business-model]], look for a possible [[competitive-advantage]] (steady margins and [[return-on-capital]] are one clue, not proof), and list the risks: competition, debt, management decisions, and customers or products that could fade."
+  },
+  "explain": {
+    "simple": "Start with the business model: what does the company sell, who pays, and what does it cost to serve them? Then ask what stops a rival from taking those customers. A trusted brand, lower costs, or customers who find it hard to switch can all help. Finally list what could go wrong: new competitors, a product going out of fashion, too much debt, or managers making poor choices with the company's money.",
+    "balanced": "Figures give clues. Margins that hold steady for years, and a return on capital that stays high, suggest something protects the business, but advantages can fade and the past does not promise the future. Thin margins combined with debt make a business fragile: a small price cut can wipe out profit. Management risks include spending on deals that do not pay off, raising debt to fund dividends, or explanations for weak cash flow that keep changing. These are judgements, so write down your reasoning and what would change your mind."
+  },
+  "realNumbers": {
+    "assumptions": [
+      "Fictional companies from the Fundamental Analysis Lab, millions of USD",
+      "Operating margin, Years 1 to 3: Example Steadybrook Pantry Foods (fictional) 14.8%, 14.9%, 15.0%; Example Faxworth Office Machines (fictional) 16.0%, 14.0%, 10.8%",
+      "Return on capital in Year 3: Steadybrook 156 ÷ (100 + 654); Faxworth 40 ÷ (150 + 422)"
+    ],
+    "steps": [
+      "Steadybrook return on capital = 156 ÷ 754 = about 20.7%. Its margin barely moved.",
+      "Faxworth return on capital = 40 ÷ 572 = about 7.0%. Its margin fell every year.",
+      "Steady margins and high returns are a clue that something protects Steadybrook, for now.",
+      "Faxworth's falling margin fits a product losing customers. Neither clue is proof; both need a reason you can explain."
+    ]
+  },
+  "anotherExample": {
+    "assumptions": [
+      "Illustrative scenario: a rival forces each company to cut prices by 5%",
+      "Year 3 costs and interest stay the same; tax ignored for simplicity",
+      "Quickling: revenue 450, cost of sales 270, operating expenses 140, interest 16. Steadybrook: revenue 1,040, cost of sales 624, operating expenses 260, interest 4"
+    ],
+    "steps": [
+      "Quickling revenue = 450 × 0.95 = 427.5. Profit before tax = 427.5 − 270 − 140 − 16 = 1.5. Before the cut it was 24.",
+      "Steadybrook revenue = 1,040 × 0.95 = 988. Profit before tax = 988 − 624 − 260 − 4 = 100. Before the cut it was 152.",
+      "Quickling's profit almost disappears; Steadybrook's falls by about a third.",
+      "Thin margins plus interest make a business fragile when competition bites."
+    ]
+  },
+  "explainSimpler": "How does it make money, who could take that away, and what could go wrong? The numbers are clues to those answers, not the answers.",
+  "commonMistake": "Treating a strong business as safe from change, or treating a strong business as a reason to buy at any price. Advantages can fade, and price still matters.",
+  "quickCheck": [
+    {
+      "id": "st-business-quality-q1",
+      "prompt": "A company's operating margin has held near 20% for many years while rivals tried to compete. What is the fairest reading?",
+      "options": [
+        {
+          "id": "a",
+          "text": "It has a permanent advantage over rivals",
+          "explanation": "No: advantages can fade; past margins do not promise future ones."
+        },
+        {
+          "id": "b",
+          "text": "A clue that something protects it",
+          "explanation": "Right: steady high margins are a clue worth explaining, not proof."
+        },
+        {
+          "id": "c",
+          "text": "Its shares are a good investment now",
+          "explanation": "No: business quality and the price paid are separate questions."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "intermediate",
+      "glossaryIds": [
+        "competitive-advantage",
+        "profit-margin"
+      ]
+    },
+    {
+      "id": "st-business-quality-q2",
+      "prompt": "Revenue 100, all costs 92, interest 6 (fictional). A rival forces a 5% price cut; costs stay the same. What is profit before tax now?",
+      "options": [
+        {
+          "id": "a",
+          "text": "−3",
+          "explanation": "Right: 95 − 92 − 6 = −3. Thin margins plus interest turn a small cut into a loss."
+        },
+        {
+          "id": "b",
+          "text": "2",
+          "explanation": "No: that is the profit before the price cut."
+        },
+        {
+          "id": "c",
+          "text": "−5",
+          "explanation": "No: that only counts the price cut."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "intermediate",
+      "glossaryIds": [
+        "profit-margin"
+      ]
+    },
+    {
+      "id": "st-business-quality-q3",
+      "prompt": "Which is a management risk worth noting?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The company has changed its ticker code",
+          "explanation": "No: a ticker change says little about how the company is run."
+        },
+        {
+          "id": "b",
+          "text": "The share price fell sharply last week",
+          "explanation": "No: a price move is not a management decision."
+        },
+        {
+          "id": "c",
+          "text": "Borrowing to keep paying a dividend",
+          "explanation": "Right: paying dividends with debt rather than cash can weaken the company."
+        }
+      ],
+      "correctOptionIds": [
+        "c"
+      ],
+      "level": "intermediate",
+      "glossaryIds": [
+        "business-model",
+        "dividend"
+      ]
+    }
+  ],
+  "doItNow": {
+    "kind": "fundamental",
+    "instructions": "Open the Fundamental Analysis Lab → Company analysis and pick one fictional company. Write: its business model in one sentence, one possible competitive advantage, three risks, and one figure you would watch to see whether your view is wrong. Read its notes on the screen to compare."
+  },
+  "homework": "Do the same short write-up for a second fictional company and compare the two.",
+  "glossaryIds": [
+    "business-model",
+    "competitive-advantage",
+    "return-on-capital",
+    "profit-margin",
+    "net-debt",
+    "dividend"
+  ],
+  "sourceIds": []
+}

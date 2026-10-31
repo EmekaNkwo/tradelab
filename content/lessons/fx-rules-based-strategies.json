@@ -1,0 +1,115 @@
+{
+  "id": "fx-rules-based-strategies",
+  "moduleId": "forex-rules-based-strategies",
+  "title": "What makes a strategy rules-based",
+  "level": "intermediate",
+  "estimatedMinutes": 15,
+  "inOneLine": {
+    "simple": "A rules-based strategy writes down exactly when to enter, when to exit and how much to risk, so two people applying it to the same chart make the same trades.",
+    "balanced": "Exact rules can be tested on past and simulated charts, and the results can be compared fairly. Vague rules cannot: the result depends on who applies them and in what mood."
+  },
+  "explain": {
+    "simple": "\"Buy when the trend looks strong\" is an opinion. \"Buy on a close above the highest high of the previous 20 candles\" is a rule: anyone can check whether it happened. A full rule set covers the entry, the exit, the [[stop-loss]], the position size and which markets and [[timeframe|timeframes]] it applies to. This module teaches two well-known families, moving-average trend following and channel breakouts, as simplified educational versions. Named historical versions of these systems are added to TradeLab only after a person has checked them against reliable sources.",
+    "balanced": "Rules make testing possible, but they do not make a strategy good. A rule set needs enough trades to judge ([[sample-size]]), results measured in R so different trades compare fairly ([[r-multiple]]), and costs included. Trend and breakout rules usually lose more often than they win and rely on a few large winners, so a long [[losing-streak]] is part of their normal behaviour. Named historical versions of these systems are added to TradeLab only after a person has checked them against reliable sources."
+  },
+  "realNumbers": {
+    "assumptions": [
+      "Illustrative EUR/USD daily candles (simulated)",
+      "Rule: enter long on a close above the highest high of the previous 20 candles",
+      "Before day 1, the highest high of the previous 20 candles is 1.1180"
+    ],
+    "steps": [
+      "Day 1 closes at 1.1175. That is below 1.1180, so there is no entry, even though the day's high reached 1.1190.",
+      "Day 2: the previous 20 candles now include day 1, so the level rises to 1.1190. Day 2 closes at 1.1195, above 1.1190: the rule triggers.",
+      "The order fills at day 3's open, because the signal is only known once day 2 has closed.",
+      "Anyone applying the rule to these candles reaches the same answer: that is what makes it testable."
+    ]
+  },
+  "anotherExample": {
+    "assumptions": [
+      "30 replay trades following one rule set (illustrative practice results, not real performance)",
+      "11 winners averaging +2.1R; 19 losers of −1R each"
+    ],
+    "steps": [
+      "Total = 11 × 2.1 − 19 × 1 = 23.1 − 19 = +4.1R.",
+      "Expectancy = 4.1 ÷ 30 ≈ +0.14R per trade.",
+      "Win rate = 11 ÷ 30 ≈ 37%: most trades lost, yet the total is positive in this sample.",
+      "30 trades is a small sample. A few different results would change the conclusion, so this says little about the future."
+    ]
+  },
+  "explainSimpler": "A recipe instead of a feeling: if the rule is written exactly, anyone can follow it and check it.",
+  "commonMistake": "Changing the rules after every loss. Each change creates a new strategy with no test behind it, and the losing streaks that trend and breakout rules normally have are never sat through long enough to judge them.",
+  "quickCheck": [
+    {
+      "id": "fx-rules-based-strategies-q1",
+      "prompt": "Which rule is specific enough to test?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Buy on a close above the highest high of the last 20 candles",
+          "explanation": "Right: anyone can check whether it happened, so the result does not depend on who applies it."
+        },
+        {
+          "id": "b",
+          "text": "Buy when the trend feels strong and the news is good",
+          "explanation": "No: \"feels strong\" and \"good news\" mean different things to different people."
+        },
+        {
+          "id": "c",
+          "text": "Buy when momentum is building",
+          "explanation": "No: \"building\" is not defined, so two people would trade it differently."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "intermediate",
+      "glossaryIds": [
+        "backtest"
+      ]
+    },
+    {
+      "id": "fx-rules-based-strategies-q2",
+      "prompt": "30 trades: 11 winners averaging +2.1R and 19 losers of −1R. What is the expectancy per trade?",
+      "options": [
+        {
+          "id": "a",
+          "text": "About +1.1R per trade",
+          "explanation": "No: that is the average win minus the average loss (2.1 − 1), which ignores how often each happens."
+        },
+        {
+          "id": "b",
+          "text": "About +0.14R",
+          "explanation": "Right: (11 × 2.1 − 19 × 1) ÷ 30 = 4.1 ÷ 30 ≈ +0.14R."
+        },
+        {
+          "id": "c",
+          "text": "About −0.27R, since most trades lost",
+          "explanation": "No: a low win rate can still give a positive total when winners are larger than losers."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "intermediate",
+      "glossaryIds": [
+        "expectancy",
+        "r-multiple"
+      ]
+    }
+  ],
+  "doItNow": {
+    "kind": "replay",
+    "instructions": "Open Replay with the Breakout scenario. Before you start, write your entry, exit, stop and size rules in one sentence each. Take 5 trades using only those rules, and note any moment you wanted to break them."
+  },
+  "homework": "Rewrite one vague trading idea of your own as exact rules for entry, exit, stop and size.",
+  "glossaryIds": [
+    "backtest",
+    "stop-loss",
+    "r-multiple",
+    "expectancy",
+    "sample-size",
+    "losing-streak"
+  ],
+  "sourceIds": []
+}

@@ -1,0 +1,109 @@
+{
+  "id": "fx-plan-rules",
+  "moduleId": "forex-my-plan",
+  "title": "Entry, exit, stop and target rules",
+  "level": "beginner",
+  "estimatedMinutes": 15,
+  "inOneLine": {
+    "simple": "Good rules are clear enough that someone else could follow them and get the same trades.",
+    "balanced": "Write each rule as \"if this, then that\", using things you can see on the chart at the time. Vague rules (\"buy when it looks strong\") cannot be tested or reviewed."
+  },
+  "explain": {
+    "simple": "Your plan needs four kinds of rule. An entry rule says when to open a trade. A stop rule says where your idea is wrong, so you get out. A target rule says where you take the gain. An exit rule covers anything else, like closing before the weekend. Each rule should be something you can check on the chart. \"Buy when it looks strong\" is not a rule. \"Buy when a 1-hour candle closes above the level I marked earlier\" is a rule. You enter these in the plan builder under entry, exit, stop and target.",
+    "balanced": "Test each rule with one question: could another person follow it and take the same trade? If not, make it more specific. Decide the [[stop-loss]] from the chart first, then choose the position size so the money at risk fits your limit. Do not pick a stop distance to fit a size. A [[take-profit]] can be set as a multiple of the stop distance (for example 2R), or at a level on the chart. Neither choice makes a trade more likely to win; it only defines what you aim for."
+  },
+  "realNumbers": {
+    "assumptions": [
+      "Illustrative prices, EUR/USD, account currency USD",
+      "Buy at 1.10000; the chart puts the stop at 1.09700 (30 pips below)",
+      "0.10 lot, pip value 1 USD",
+      "Plan's example risk limit per trade: 50 USD",
+      "No slippage in this example"
+    ],
+    "steps": [
+      "Stop distance = 1.10000 − 1.09700 = 0.00300 = 30 pips.",
+      "Money at risk = 30 pips × 1 USD = 30 USD.",
+      "30 USD is within the 50 USD limit, so the trade passes the risk rule.",
+      "Target at 2R = 2 × 30 pips = 60 pips above entry = 1.10600. This is a goal, not a promise."
+    ]
+  },
+  "anotherExample": {
+    "assumptions": [
+      "Fictional rule rewrite",
+      "Same learner, same pair"
+    ],
+    "steps": [
+      "Vague: \"Sell when the trend is down and it looks weak.\"",
+      "Clearer: \"On the 1-hour chart, if price has made a lower high and a lower low, sell when a candle closes below the most recent low.\"",
+      "Stop rule: \"Stop goes a few pips above the most recent lower high.\"",
+      "Target rule: \"Take profit at 2 times the stop distance, or close at the end of the session, whichever comes first.\""
+    ]
+  },
+  "explainSimpler": "Write rules like a recipe: exact steps someone else could follow and get the same dish.",
+  "commonMistake": "Choosing the lot size first, then squeezing the stop to fit it. The stop should come from where the idea is wrong, and the size should fit the stop.",
+  "quickCheck": [
+    {
+      "id": "fx-plan-rules-q1",
+      "prompt": "Which of these is a rule you can test?",
+      "options": [
+        {
+          "id": "a",
+          "text": "\"Buy when the market feels bullish\"",
+          "explanation": "No: feelings cannot be checked on a chart or repeated."
+        },
+        {
+          "id": "b",
+          "text": "\"Buy when a 1-hour candle closes above the level I marked before the session\"",
+          "explanation": "Right: anyone can check it on the chart at the time."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "trading-plan"
+      ]
+    },
+    {
+      "id": "fx-plan-rules-q2",
+      "prompt": "Stop distance 40 pips, pip value 1 USD, plan risk limit 30 USD. What should you do?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Take the trade; 40 USD is close enough",
+          "explanation": "No: 40 × 1 = 40 USD, which breaks the 30 USD limit."
+        },
+        {
+          "id": "b",
+          "text": "Move the stop to 30 pips so it fits",
+          "explanation": "No: the stop should come from the chart, not from the size."
+        },
+        {
+          "id": "c",
+          "text": "Use a smaller size, or skip the trade",
+          "explanation": "Right: reduce size so risk fits the limit, or pass on the trade."
+        }
+      ],
+      "correctOptionIds": [
+        "c"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "stop-loss",
+        "pip-value"
+      ]
+    }
+  ],
+  "doItNow": {
+    "kind": "reflection",
+    "instructions": "In More → Tools → Trading plan, write your entry, exit, stop and target rules. For each, ask: could someone else follow this and take the same trade? Rewrite any rule that fails that test."
+  },
+  "glossaryIds": [
+    "trading-plan",
+    "stop-loss",
+    "take-profit",
+    "pip-value"
+  ],
+  "sourceIds": []
+}

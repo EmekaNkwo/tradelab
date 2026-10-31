@@ -1,0 +1,27 @@
+{
+  "id": "fa-valuation-pe",
+  "skills": ["fundamental_analysis"],
+  "lab": "fundamental",
+  "level": "intermediate",
+  "order": 5,
+  "title": "Valuation and P/E",
+  "summary": "P/E = price ÷ EPS. Earnings yield = EPS ÷ price. Dividend yield and payout ratio show how much profit comes back as cash. A good business can be a poor investment at a high price.",
+  "unreliableWhen": "When earnings are zero or negative, when one year's profit is unusual, or when a low P/E reflects a business that is shrinking.",
+  "goodExample": "A fictional food maker on a P/E near 12 with steady profit: the price assumes little growth, so modest results do not need to surprise anyone.",
+  "badExample": "A fictional app maker on a P/E of 80: even fast growth may leave the price looking high, and if growth slows the price has a long way to fall.",
+  "lessonIds": [
+    "st-valuation",
+    "st-styles-horizons",
+    "st-market-cap"
+  ],
+  "chart": null,
+  "drillKind": null,
+  "scenarioIds": [],
+  "companyIds": [
+    "example-quickling-apps",
+    "example-steadybrook-foods",
+    "example-gadgetmoor-wholesale",
+    "example-faxworth-machines"
+  ],
+  "redFlagCaseIds": []
+}

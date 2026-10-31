@@ -1,0 +1,13 @@
+{
+  "id": "mc-typical-costs",
+  "order": 5,
+  "dimension": "Typical costs",
+  "cells": {
+    "forex": "Mainly the [[spread]], sometimes a commission, plus [[swap|overnight swaps]] on positions held past the daily cut-off.",
+    "stocks": "Spread and commission, which vary by broker; holding with your own cash has no financing charge.",
+    "penny_stocks": "Spreads can be a large share of the price, so getting in and out can cost a lot before price moves.",
+    "commodities": "Spread and commission, plus storage-related costs built into the product, such as roll costs in futures.",
+    "futures": "Commission and exchange fees per contract, the spread, and the cost of rolling to a later month."
+  },
+  "caveat": "Costs depend on the broker, account type, product, size, time of day and conditions. Measure them on a demo or in the simulator at the times you would trade."
+}

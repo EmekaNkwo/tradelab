@@ -1,0 +1,178 @@
+{
+  "id": "seasonality",
+  "skills": ["strategy_understanding", "statistical_reasoning"],
+  "title": "Seasonality (read the caveats)",
+  "category": "trading",
+  "family": "seasonality",
+  "markets": [
+    "commodities",
+    "stocks"
+  ],
+  "level": "advanced",
+  "horizon": "position",
+  "style": "discretionary",
+  "analysis": "quantitative",
+  "attribution": "generic",
+  "traderIds": [],
+  "overview": {
+    "objective": "Look for price patterns that repeat at the same time of year.",
+    "holdingPeriod": "Weeks to a few months.",
+    "context": "A concept page with strong warnings. Seasonal patterns are easy to find by chance and hard to confirm."
+  },
+  "evidence": null,
+  "simple": {
+    "simple": "[[seasonality|Seasonality]] means a price tends to do something at the same time each year. A few patterns have a physical cause, like harvests or heating demand. Most patterns found by searching old charts are coincidence.",
+    "balanced": "With only one data point per year, even decades give a small [[sample-size]]. Searching many calendar windows and keeping the best guarantees some will look strong by chance. A known cause, a test on years not used to find the pattern ([[out-of-sample]]) and humility about the result are the minimum."
+  },
+  "reasoning": "Where a physical cycle, such as a harvest or a heating season, changes supply or demand at the same time each year, prices could show a pattern. That is the reasoning; if the cause is known, others may already have priced it in.",
+  "rules": null,
+  "demo": null,
+  "replay": null,
+  "exercise": {
+    "prompt": "Which statements are true for this fictional table? Pick all that apply.",
+    "situation": "A fictional commodity. A table says it rose in a given month in 8 of the last 10 years. The 8 rising years averaged +3%. The 2 falling years were −9% and −7%.",
+    "options": [
+      {
+        "id": "a",
+        "text": "The average over all 10 years is +0.8%",
+        "correct": true,
+        "explanation": "Right: 8 × 3 = 24; 24 − 9 − 7 = 8; 8 ÷ 10 = 0.8%."
+      },
+      {
+        "id": "b",
+        "text": "Ten years are too few to rely on",
+        "correct": true,
+        "explanation": "Right: ten data points say little."
+      },
+      {
+        "id": "c",
+        "text": "With 8 of 10 up, the chance next year is 80%",
+        "correct": false,
+        "explanation": "No: past frequency in a small sample is not a probability for next year."
+      },
+      {
+        "id": "d",
+        "text": "The losing years were bigger than the typical rising year",
+        "correct": true,
+        "explanation": "Right: −9% and −7% against an average rise of +3%."
+      },
+      {
+        "id": "e",
+        "text": "Seasonal patterns stay the same once found",
+        "correct": false,
+        "explanation": "No: patterns change, especially once many people trade them."
+      }
+    ]
+  },
+  "failureAnalysis": [
+    "The pattern was found by chance and does not repeat.",
+    "A cause that was real gets priced in once many people know it.",
+    "One bad year can outweigh several good ones.",
+    "Supply shocks and news override the calendar."
+  ],
+  "limitations": [
+    "This page gives no trading rules.",
+    "Tables of seasonal win rates are usually based on very few years.",
+    "No claim is made that any seasonal pattern exists or works."
+  ],
+  "knowledgeCheck": [
+    {
+      "id": "seasonality-q1",
+      "prompt": "A pattern held in 9 of the last 12 years. What is the main problem?",
+      "options": [
+        {
+          "id": "a",
+          "text": "It is too recent",
+          "explanation": "No: recency is not the main issue."
+        },
+        {
+          "id": "b",
+          "text": "Twelve years is a very small sample",
+          "explanation": "Right: twelve data points cannot separate a pattern from chance."
+        },
+        {
+          "id": "c",
+          "text": "Nothing: 9 of 12 is 75%, so it will come true three years in four",
+          "explanation": "No: a frequency in a small sample is not a reliable probability."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "advanced",
+      "glossaryIds": [
+        "sample-size"
+      ]
+    },
+    {
+      "id": "seasonality-q2",
+      "prompt": "You searched 50 calendar windows and kept the best one. Why distrust it?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Calendar windows only work on very old data",
+          "explanation": "No: the age of the data is not the issue; the search is."
+        },
+        {
+          "id": "b",
+          "text": "The seasons themselves shift from year to year",
+          "explanation": "No: the calendar is fixed; the problem is how many windows were tried."
+        },
+        {
+          "id": "c",
+          "text": "Testing many windows makes some look good by chance, so the best one is likely flattered",
+          "explanation": "Right: the more you search, the more you find by luck."
+        }
+      ],
+      "correctOptionIds": [
+        "c"
+      ],
+      "level": "advanced",
+      "glossaryIds": [
+        "overfitting"
+      ]
+    },
+    {
+      "id": "seasonality-q3",
+      "prompt": "Which makes a seasonal pattern more believable?",
+      "options": [
+        {
+          "id": "a",
+          "text": "A known physical cause",
+          "explanation": "Right: a cause like a harvest gives a reason, though it may be priced in."
+        },
+        {
+          "id": "b",
+          "text": "A higher win rate over the last few years",
+          "explanation": "No: a few more years of wins is still a small sample."
+        },
+        {
+          "id": "c",
+          "text": "That it appears in a chart shared widely online by many traders",
+          "explanation": "No: popularity is not evidence, and a well-known pattern may be priced in."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "advanced",
+      "glossaryIds": [
+        "seasonality",
+        "priced-in"
+      ]
+    }
+  ],
+  "lessonIds": [
+    "cm-seasonality-geopolitics",
+    "fx-backtest-overfitting"
+  ],
+  "glossaryIds": [
+    "seasonality",
+    "sample-size",
+    "out-of-sample",
+    "overfitting",
+    "priced-in"
+  ],
+  "sourceIds": [],
+  "review": null
+}

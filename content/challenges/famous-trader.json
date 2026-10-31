@@ -1,0 +1,23 @@
+{
+  "id": "famous-trader",
+  "type": "famous_trader",
+  "title": "Famous Trader Challenge",
+  "summary": "Study reviewed famous-trader pages: what is documented, what is interpretation, and why a method may not work again. Available once trader pages have passed human review.",
+  "skills": ["strategy_understanding"],
+  "criteria": [
+    {
+      "kind": "traders_studied",
+      "count": 3,
+      "label": "Complete the strategy pages of 3 reviewed traders",
+      "dimension": "understanding"
+    },
+    {
+      "kind": "skill_questions",
+      "skill": "strategy_understanding",
+      "count": 15,
+      "accuracy": 0.8,
+      "label": "Answer 15 strategy questions at 80% or better (latest answer to each)",
+      "dimension": "uncertainty"
+    }
+  ]
+}

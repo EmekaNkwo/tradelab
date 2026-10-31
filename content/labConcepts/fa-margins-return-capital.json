@@ -1,0 +1,27 @@
+{
+  "id": "fa-margins-return-capital",
+  "skills": ["fundamental_analysis"],
+  "lab": "fundamental",
+  "level": "intermediate",
+  "order": 4,
+  "title": "Margins and return on capital",
+  "summary": "Margins show how much of each dollar of revenue becomes profit. Return on capital = operating profit ÷ (debt + equity) shows how well all the money tied up in the business is used.",
+  "unreliableWhen": "When margins are compared across very different industries, when one unusual year flatters the figures, or when return on equity looks high only because of heavy borrowing.",
+  "goodExample": "A fictional food maker keeps its operating margin near 15% and its return on capital near 21% for three years.",
+  "badExample": "A fictional office-machine maker's operating margin falls from 16% to under 11% and its return on capital drops to about 7%.",
+  "lessonIds": [
+    "st-income-statement",
+    "st-balance-sheet",
+    "st-business-quality"
+  ],
+  "chart": null,
+  "drillKind": null,
+  "scenarioIds": [],
+  "companyIds": [
+    "example-quickling-apps",
+    "example-steadybrook-foods",
+    "example-gadgetmoor-wholesale",
+    "example-faxworth-machines"
+  ],
+  "redFlagCaseIds": []
+}

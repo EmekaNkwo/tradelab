@@ -1,0 +1,21 @@
+{
+  "id": "r-multiple",
+  "term": "R-multiple",
+  "aliases": [
+    "R",
+    "R multiple"
+  ],
+  "definition": {
+    "simple": "A result measured in units of the amount you risked. 1R is the planned loss.",
+    "balanced": "R-multiple = profit or loss ÷ planned risk. A win of twice the risk is +2R. A full stop-out is −1R. Slippage can make a loss worse than −1R. Using R lets you compare trades of different sizes."
+  },
+  "example": "You risked 50 USD and made 75 USD. That trade was +1.5R.",
+  "related": [
+    "risk-per-trade",
+    "risk-reward-ratio",
+    "expectancy"
+  ],
+  "markets": [],
+  "level": "beginner",
+  "sourceIds": []
+}

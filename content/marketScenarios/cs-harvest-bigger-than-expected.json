@@ -1,0 +1,17 @@
+{
+  "id": "cs-harvest-bigger-than-expected",
+  "category": "commodity",
+  "title": "A bigger harvest estimate than expected (fictional)",
+  "setup": "A fictional agriculture office in fictional Westmark publishes its harvest estimate for a grain. The estimate comes in above what forecasters expected and above last year. At the same time, a fictional neighbouring region is in a dry spell, and its crop is still in the fields. All places, offices and figures are fictional.",
+  "release": { "name": "Westmark grain harvest estimate (fictional)", "unit": "million tonnes", "consensus": 120.0, "actual": 126.0, "previous": 118.0 },
+  "pricedIn": "Good weather all summer had led many traders to expect a large crop, and the simulated grain price had drifted lower for weeks. Some private estimates were even higher than the official consensus.",
+  "question": "Surprise = 126.0 − 120.0 = +6.0 million tonnes, a bigger crop than expected. Which reactions are plausible?",
+  "reactions": [
+    { "id": "a", "text": "Price falls, as more supply is coming than expected.", "plausible": true, "explanation": "A bigger crop is more supply. That tends to weigh on price, as a tendency only." },
+    { "id": "b", "text": "Price hardly moves, or even rises, because the big crop was already priced in.", "plausible": true, "explanation": "The price had already fallen for weeks and some estimates were higher still. Traders who sold early may buy back after the report." },
+    { "id": "c", "text": "Price rises because the dry spell next door takes over the story.", "plausible": true, "explanation": "Supply is about the whole market. Worry about the neighbouring crop could outweigh good news at home." },
+    { "id": "d", "text": "Price must fall exactly 5%, since the crop is 5% above the consensus.", "plausible": false, "explanation": "6.0 ÷ 120.0 = 5%, but price does not move one-for-one with a surprise. There is no fixed formula for the reaction." }
+  ],
+  "takeaway": "A bigger-than-expected harvest points to more supply, but what was priced in and what is happening elsewhere can lead to very different reactions. Seasonal reports are scenarios, not forecasts.",
+  "glossaryIds": ["seasonality", "surprise", "consensus-forecast", "commodity"]
+}

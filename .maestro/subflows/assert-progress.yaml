@@ -1,0 +1,75 @@
+appId: com.tradelab.app
+---
+# Asserts the progress made by flows 01-08 is on screen. Used after a restart (09)
+# and after a restore (10c). Starts and ends on Home.
+#
+# Home (app/(tabs)/home/index.tsx): ProgramCard progress line
+#   `${completedUnits} of ${totalUnits} lessons and checkpoints done · finishes <date>`
+- extendedWaitUntil:
+    visible:
+      id: "home-screen"
+    timeout: 30000
+# ProgramCard heading, below the hero, quick actions and week tiles since the restyle.
+- scrollUntilVisible:
+    element:
+      text: "Practical Forex Trader"
+    direction: DOWN
+- scrollUntilVisible:
+    element:
+      text: "[1-9][0-9]* of [0-9]+ lessons and checkpoints done.*"
+    direction: DOWN
+- takeScreenshot: progress-home
+
+# Learn > MetaTrader practice: the finished task row has a "✓ " prefix
+# (app/(tabs)/learn/metatrader.tsx).
+- runFlow:
+    file: open-tab.yaml
+    env:
+      TAB: Learn
+- scrollUntilVisible:
+    element:
+      id: "learn-metatrader"
+    direction: DOWN
+    # The Learn tab lists every module before the Tools card; on the Xiaomi the
+    # scroll down to it took 58-65 s (Maestro re-reads the long hierarchy after
+    # each swipe), so 60 s was flaky.
+    timeout: 120000
+- tapOn:
+    id: "learn-metatrader"
+- scrollUntilVisible:
+    element:
+      text: "✓ Read the bid, ask and spread"
+    direction: DOWN
+- back
+
+# Practice: "Recent replays" lists the replay from 05 (testID replay-history-item,
+# text `${scenario} · N trades · process ... · <time>`).
+- runFlow:
+    file: open-tab.yaml
+    env:
+      TAB: Practice
+- scrollUntilVisible:
+    element:
+      id: "replay-history-item"
+    direction: DOWN
+- assertVisible: "Breakout · [0-9]+ trades · .*"
+
+# Journal: the reviewed paper trade from 06/07.
+- runFlow:
+    file: open-tab.yaml
+    env:
+      TAB: Journal
+- extendedWaitUntil:
+    visible:
+      id: "journal-screen"
+    timeout: 10000
+- scrollUntilVisible:
+    element:
+      text: ".* · reviewed"
+    direction: DOWN
+- takeScreenshot: progress-journal
+
+- runFlow:
+    file: open-tab.yaml
+    env:
+      TAB: Home

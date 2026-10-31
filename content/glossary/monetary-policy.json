@@ -1,0 +1,18 @@
+{
+  "id": "monetary-policy",
+  "term": "Monetary policy",
+  "aliases": [],
+  "definition": {
+    "simple": "What a central bank does to influence interest rates and the money supply, usually to keep inflation steady.",
+    "balanced": "The main tool is the policy [[interest-rate]]; banks may also use guidance about future moves and other tools. Markets react to expected future policy as much as to today's decision. Compare [[fiscal-policy]]."
+  },
+  "related": [
+    "central-bank",
+    "interest-rate",
+    "fiscal-policy",
+    "inflation"
+  ],
+  "markets": [],
+  "level": "beginner",
+  "sourceIds": []
+}

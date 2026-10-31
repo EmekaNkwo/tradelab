@@ -1,0 +1,21 @@
+{
+  "id": "basis",
+  "term": "Basis",
+  "aliases": [],
+  "definition": {
+    "simple": "The difference between the spot price of something and the price of a futures contract on it.",
+    "balanced": "Often defined as spot − futures, though some sources use futures − spot, so check which is meant. Basis tends to shrink toward zero as [[expiry]] nears, but it can widen or narrow along the way."
+  },
+  "example": "Fictional: spot 50.00, near-month future 50.60. Basis (spot − futures) = −0.60.",
+  "related": [
+    "futures-curve",
+    "contango",
+    "backwardation"
+  ],
+  "markets": [
+    "commodities",
+    "futures"
+  ],
+  "level": "intermediate",
+  "sourceIds": []
+}

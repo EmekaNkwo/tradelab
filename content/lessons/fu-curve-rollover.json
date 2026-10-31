@@ -1,0 +1,77 @@
+{
+  "id": "fu-curve-rollover",
+  "moduleId": "futures",
+  "title": "Rollover, basis, contango and backwardation",
+  "level": "intermediate",
+  "estimatedMinutes": 20,
+  "inOneLine": {
+    "simple": "Each contract month has its own price. Lining them up shows the futures curve, and moving from one month to the next is called rolling.",
+    "balanced": "The [[futures-curve]] is in [[contango]] when later months are priced higher and in [[backwardation]] when they are lower. [[basis|Basis]] compares the spot price with a futures price. A [[rollover]] closes one month and opens the next, at the price gap between them: a [[calendar-spread]]."
+  },
+  "explain": {
+    "simple": "The spot price is the price for buying the thing now. Futures prices for later months can be higher or lower than spot. If later months cost more, the curve slopes up: that is contango. If later months cost less, it slopes down: that is backwardation. Before your contract expires, you can close it, let it settle, or roll it: sell the month you hold and buy a later one. Rolling is two trades, so it has costs, and you buy the new month at its own price, not at the old one.",
+    "balanced": "Curve shape can reflect things like storage and financing costs, current supply and demand, and expectations, but the reasons differ by market and can change. Neither shape is a signal by itself. A futures price tends to move toward the spot price as expiry nears, so a long position that keeps rolling in contango can lose even if spot does not move; in backwardation the effect can run the other way. Basis is often defined as spot − futures, but some sources use futures − spot, so check which one is meant. All prices here are fictional."
+  },
+  "realNumbers": {
+    "assumptions": [
+      "Example commodity future (fictional specs): 100 units per contract, prices in USD per unit",
+      "Fictional prices: spot 50.00, near month 50.60, next month 51.30",
+      "Basis defined here as spot − futures",
+      "Fees left out"
+    ],
+    "steps": [
+      "Later months are higher (50.60, then 51.30), so the curve is in contango.",
+      "Basis for the near month = 50.00 − 50.60 = −0.60 USD per unit.",
+      "Calendar spread, next − near = 51.30 − 50.60 = 0.70 USD per unit, which is 0.70 × 100 = 70 USD per contract.",
+      "To roll a long position, sell the near month at 50.60 and buy the next month at 51.30. You now hold exposure at the higher price.",
+      "Scenario: if spot stays at 50.00 and the next month's price moves to spot by its expiry, the long loses (51.30 − 50.00) × 100 = 130 USD, plus fees on every trade."
+    ]
+  },
+  "anotherExample": {
+    "assumptions": [
+      "Same fictional contract",
+      "Fictional prices: spot 49.00, near month 48.00, next month 47.20"
+    ],
+    "steps": [
+      "Later months are lower (48.00, then 47.20), so the curve is in backwardation.",
+      "Basis for the near month = 49.00 − 48.00 = +1.00 USD per unit.",
+      "Calendar spread, next − near = 47.20 − 48.00 = −0.80 USD per unit, or −80 USD per contract.",
+      "Rolling a long here buys the next month at a lower price than the month you sell. That is not free money: the curve can change shape at any time, and the spot price can fall."
+    ]
+  },
+  "explainSimpler": "Each month has its own price. If later months cost more, that is contango; if they cost less, backwardation. Rolling means swapping your month for a later one at its own price.",
+  "commonMistake": "Comparing a futures chart with the spot price and calling the gap a mistake, or joining two contract months on one chart without noticing the jump between them. Another mistake is thinking rolling is free: it is two trades, each with costs, at whatever price gap the curve shows that day.",
+  "quickCheck": [
+    {
+      "id": "fu-curve-rollover-q1",
+      "prompt": "Fictional prices: near month 70.00, next month 71.50, the month after 72.80. What shape is the curve?",
+      "options": [
+        { "id": "a", "text": "Backwardation", "explanation": "No: backwardation means later months are priced lower." },
+        { "id": "b", "text": "Contango", "explanation": "Right: later months are priced higher, so the curve slopes up." },
+        { "id": "c", "text": "Flat", "explanation": "No: the prices rise from month to month, so the curve is not flat." }
+      ],
+      "correctOptionIds": ["b"],
+      "level": "intermediate",
+      "glossaryIds": ["contango", "backwardation", "futures-curve"]
+    },
+    {
+      "id": "fu-curve-rollover-q2",
+      "prompt": "Fictional: spot 30.00, near-month future 30.45. Using basis = spot − futures, what is the basis?",
+      "options": [
+        { "id": "a", "text": "+0.45", "explanation": "No: that is futures − spot. Here basis is spot − futures." },
+        { "id": "b", "text": "+60.45", "explanation": "No: that adds the prices instead of taking one from the other." },
+        { "id": "c", "text": "−0.45", "explanation": "Right: 30.00 − 30.45 = −0.45." }
+      ],
+      "correctOptionIds": ["c"],
+      "level": "intermediate",
+      "glossaryIds": ["basis"]
+    }
+  ],
+  "doItNow": {
+    "kind": "calculator",
+    "instructions": "Using the fictional contract in this lesson, work out by hand the calendar spread and the near-month basis for both curves. Then open the futures contract calculator, enter a tick size of 0.01 and a tick value of 1 USD (100 units × 0.01), and use it to check the 130 USD loss in the roll scenario (buy at 51.30, exit at 50.00)."
+  },
+  "homework": "Make up a fictional curve of four contract months twice: once in contango and once in backwardation. For each, write the calendar spread between each pair of neighbouring months.",
+  "glossaryIds": ["futures-curve", "contango", "backwardation", "basis", "rollover", "calendar-spread", "expiry"],
+  "sourceIds": []
+}

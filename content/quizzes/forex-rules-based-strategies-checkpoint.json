@@ -1,0 +1,174 @@
+{
+  "id": "forex-rules-based-strategies-checkpoint",
+  "title": "Checkpoint: rules-based strategies",
+  "passMark": 0.8,
+  "questions": [
+    {
+      "id": "forex-rules-based-strategies-checkpoint-q1",
+      "prompt": "What makes a strategy rules-based?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Entry, exit, stop and size are defined exactly",
+          "explanation": "Right: then anyone applying it to the same chart makes the same trades."
+        },
+        {
+          "id": "b",
+          "text": "It uses at least one indicator",
+          "explanation": "No: an indicator can still be read by feel."
+        },
+        {
+          "id": "c",
+          "text": "It has made money in a backtest before",
+          "explanation": "No: results say nothing about whether the rules are exact."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "intermediate",
+      "glossaryIds": []
+    },
+    {
+      "id": "forex-rules-based-strategies-checkpoint-q2",
+      "prompt": "Average 1.3500 now, 1.3420 ten candles ago; latest close 1.3460. What do the simplified trend rules allow?",
+      "options": [
+        {
+          "id": "a",
+          "text": "A long, because the average is rising",
+          "explanation": "No: a long also needs a close above the average, and 1.3460 is below 1.3500."
+        },
+        {
+          "id": "b",
+          "text": "No entry: below a rising average",
+          "explanation": "Right: a long needs a close above a rising average; a short needs a close below a falling one. Neither holds."
+        },
+        {
+          "id": "c",
+          "text": "A short, because the close is below the average",
+          "explanation": "No: a short also needs a falling average, and this one rose from 1.3420."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "intermediate",
+      "glossaryIds": [
+        "moving-average"
+      ]
+    },
+    {
+      "id": "forex-rules-based-strategies-checkpoint-q3",
+      "prompt": "A long fills at 1.0850 with ATR 0.0025. Where is a 2 × ATR stop?",
+      "options": [
+        {
+          "id": "a",
+          "text": "1.0825, one ATR below",
+          "explanation": "No: that is 1 × ATR. The rule uses 2 × 0.0025 = 0.0050."
+        },
+        {
+          "id": "b",
+          "text": "1.0900, above the entry",
+          "explanation": "No: a long's stop is below the entry."
+        },
+        {
+          "id": "c",
+          "text": "1.0800",
+          "explanation": "Right: 1.0850 − 0.0050 = 1.0800."
+        }
+      ],
+      "correctOptionIds": [
+        "c"
+      ],
+      "level": "intermediate",
+      "glossaryIds": [
+        "atr",
+        "stop-loss"
+      ]
+    },
+    {
+      "id": "forex-rules-based-strategies-checkpoint-q4",
+      "prompt": "Previous 20 candles' high 1.2740, low 1.2610. Today's high is 1.2755 but it closes at 1.2735. Is there a long signal?",
+      "options": [
+        {
+          "id": "a",
+          "text": "No: the close is inside the channel",
+          "explanation": "Right: the rules use closes, and 1.2735 is below 1.2740."
+        },
+        {
+          "id": "b",
+          "text": "Yes: the high went above 1.2740",
+          "explanation": "No: an intraday spike that closes inside the channel is not a signal."
+        },
+        {
+          "id": "c",
+          "text": "Yes, if volume was high",
+          "explanation": "No: these simplified rules have no volume condition; the close decides."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "intermediate",
+      "glossaryIds": [
+        "channel",
+        "breakout"
+      ]
+    },
+    {
+      "id": "forex-rules-based-strategies-checkpoint-q5",
+      "prompt": "You compared 8 lookbacks on the same years and kept the best. What should you do next?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Use it at once, as it was the best",
+          "explanation": "No: the best of several settings on one data set usually flatters the result."
+        },
+        {
+          "id": "b",
+          "text": "Test it on data you did not use to choose it",
+          "explanation": "Right: an out-of-sample check shows how much of the result was fitted to noise."
+        },
+        {
+          "id": "c",
+          "text": "Keep adjusting it until every year is positive",
+          "explanation": "No: tuning until everything looks good is overfitting."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "intermediate",
+      "glossaryIds": [
+        "out-of-sample",
+        "overfitting"
+      ]
+    },
+    {
+      "id": "forex-rules-based-strategies-checkpoint-q6",
+      "prompt": "Why does this module teach generic versions rather than named traders' systems?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Named systems are known to have stopped working",
+          "explanation": "No: the module makes no claim about how any named system performs."
+        },
+        {
+          "id": "b",
+          "text": "Generic versions are proven to work better",
+          "explanation": "No: nothing here is proven to work; the versions are for learning and testing."
+        },
+        {
+          "id": "c",
+          "text": "Named versions need a person to check their sources first",
+          "explanation": "Right: attributions, rules and results for named traders are added only after human review against reliable sources."
+        }
+      ],
+      "correctOptionIds": [
+        "c"
+      ],
+      "level": "intermediate",
+      "glossaryIds": []
+    }
+  ]
+}

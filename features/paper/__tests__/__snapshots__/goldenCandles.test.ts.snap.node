@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`paper candles are stable for saved accounts sim-eurusd 1`] = `
+{
+  "count": 400,
+  "fingerprint": [
+    "1.09857",
+    "1.14154",
+    "1.37308",
+  ],
+}
+`;
+
+exports[`paper candles are stable for saved accounts sim-gold 1`] = `
+{
+  "count": 400,
+  "fingerprint": [
+    "1897.54",
+    "1971.75",
+    "2371.69",
+  ],
+}
+`;
+
+exports[`paper candles are stable for saved accounts sim-index-future 1`] = `
+{
+  "count": 400,
+  "fingerprint": [
+    "4494.17",
+    "4669.94",
+    "5617.16",
+  ],
+}
+`;
+
+exports[`paper candles are stable for saved accounts sim-penny 1`] = `
+{
+  "count": 400,
+  "fingerprint": [
+    "0.4195",
+    "0.4359",
+    "0.5243",
+  ],
+}
+`;
+
+exports[`paper candles are stable for saved accounts sim-stock 1`] = `
+{
+  "count": 400,
+  "fingerprint": [
+    "84.89",
+    "88.21",
+    "106.1",
+  ],
+}
+`;

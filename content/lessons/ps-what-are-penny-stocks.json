@@ -1,0 +1,141 @@
+{
+  "id": "ps-what-are-penny-stocks",
+  "moduleId": "penny-stocks",
+  "title": "What penny stocks and microcaps are",
+  "level": "beginner",
+  "estimatedMinutes": 15,
+  "inOneLine": {
+    "simple": "A [[penny-stock]] is a low-priced share in a very small company. A low price does not mean cheap, and small companies carry extra risks.",
+    "balanced": "There is no single worldwide definition. Markets, regulators and brokers draw the line differently, by share price, by company size, or both. Company size means market value, and a [[microcap]] is a company with a very small one."
+  },
+  "explain": {
+    "simple": "People use the words 'penny stock' in different ways. In some places it means a share with a low price. In others it means a share in a tiny company. The rules and the exact limits depend on the country and on who is using the word, so check the meaning where you are. The more useful number is the company's total value, called market value: share price × number of shares. A share priced at 0.10 can belong to a bigger company than a share priced at 40. Many very small companies trade on an [[otc-market|over-the-counter (OTC) market]] rather than a main exchange, where reporting rules are often lighter. All examples in this lesson are fictional.",
+    "balanced": "What penny stocks and microcaps tend to share is not the price but the conditions: low [[liquidity]], wide [[spread|spreads]], little independent research, and sometimes thin or late company reports. Those conditions make them easier to push around with [[stock-promotion|promotions]]. Trading OTC is not wrong in itself, and some small companies are real, honest businesses. But less information means you must check more for yourself, and sometimes the honest answer is that you cannot check enough."
+  },
+  "realNumbers": {
+    "assumptions": [
+      "Fictional Company A (fictional): share price 0.10 USD, 2,000 million shares",
+      "Fictional Company B (fictional): share price 40.00 USD, 1 million shares",
+      "Market value = share price × shares outstanding"
+    ],
+    "steps": [
+      "Company A: 0.10 × 2,000,000,000 = 200,000,000 USD, so 200 million USD.",
+      "Company B: 40.00 × 1,000,000 = 40,000,000 USD, so 40 million USD.",
+      "Company A has the lower share price but is 5 times bigger by market value (200 ÷ 40 = 5).",
+      "The share price alone tells you almost nothing about the size of a company."
+    ]
+  },
+  "anotherExample": {
+    "assumptions": [
+      "Fictional Pebblebrook Minerals (fictional): share price 0.25 USD, 40 million shares",
+      "It trades over the counter and publishes short, irregular reports"
+    ],
+    "steps": [
+      "Market value = 0.25 × 40,000,000 = 10,000,000 USD, so 10 million USD. That is a microcap by most people's use of the word.",
+      "'Only 0.25 a share' sounds cheap, but cheap compared with what? You would need revenue, cash and debt to judge value.",
+      "The irregular reports mean you may not be able to find those figures.",
+      "First question for any small share: can I find enough reliable information to judge it at all?"
+    ]
+  },
+  "explainSimpler": "Penny stocks are shares in tiny companies. A small price per share is not a bargain. The real questions are how big the company is, how much you can find out about it, and how easy it is to sell.",
+  "commonMistake": "Thinking a share at 0.05 can 'easily' go to 1.00 because the number is small. A rise from 0.05 to 1.00 is a 20-fold increase in the whole company's value, whatever the price per share looks like.",
+  "quickCheck": [
+    {
+      "id": "ps-what-are-penny-stocks-q1",
+      "prompt": "Fictional share: price 0.50 USD, 30 million shares outstanding. What is the market value?",
+      "options": [
+        {
+          "id": "a",
+          "text": "60 million USD",
+          "explanation": "No: that is 30 million ÷ 0.50. Market value multiplies the two."
+        },
+        {
+          "id": "b",
+          "text": "15 million USD",
+          "explanation": "Right: 0.50 × 30,000,000 = 15,000,000 USD."
+        },
+        {
+          "id": "c",
+          "text": "0.50 USD",
+          "explanation": "No: that is the price of one share, not the value of the company."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "microcap"
+      ]
+    },
+    {
+      "id": "ps-what-are-penny-stocks-q2",
+      "prompt": "Which statement about the meaning of 'penny stock' is most accurate?",
+      "options": [
+        {
+          "id": "a",
+          "text": "It means any share priced below one unit of currency, in every country",
+          "explanation": "No: there is no single worldwide rule. Different markets and regulators draw the line differently."
+        },
+        {
+          "id": "b",
+          "text": "It only means shares that trade on over-the-counter markets",
+          "explanation": "No: trading venue is part of the picture in some uses, but it is not the whole definition anywhere you can assume."
+        },
+        {
+          "id": "c",
+          "text": "It varies by market, often based on low price or small company size",
+          "explanation": "Right: check how the term is used where you are."
+        }
+      ],
+      "correctOptionIds": [
+        "c"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "penny-stock"
+      ]
+    },
+    {
+      "id": "ps-what-are-penny-stocks-q3",
+      "prompt": "A share trades over the counter. What does that tell you?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Reporting rules are often lighter, so check more yourself",
+          "explanation": "Right: OTC trading is not a scam in itself, but information can be thinner."
+        },
+        {
+          "id": "b",
+          "text": "It must be a scam and should be reported to a regulator",
+          "explanation": "No: many OTC shares are not scams. The venue alone does not prove fraud."
+        },
+        {
+          "id": "c",
+          "text": "It can mean the company is big enough to skip an exchange",
+          "explanation": "No: OTC trading says nothing good about size. Many OTC shares are small, and information can be thinner."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "otc-market"
+      ]
+    }
+  ],
+  "doItNow": {
+    "kind": "reflection",
+    "instructions": "Make up two fictional companies with different share prices and share counts, so that the one with the lower share price is the bigger company. Work out both market values. Then write one sentence on why a low share price is not the same as a cheap company."
+  },
+  "glossaryIds": [
+    "penny-stock",
+    "microcap",
+    "otc-market",
+    "liquidity",
+    "spread",
+    "stock-promotion"
+  ],
+  "sourceIds": []
+}

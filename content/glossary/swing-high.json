@@ -1,0 +1,21 @@
+{
+  "id": "swing-high",
+  "term": "Swing high",
+  "aliases": [
+    "swing highs",
+    "peak",
+    "pivot high"
+  ],
+  "definition": {
+    "simple": "A turning point at the top: a high with lower highs on both sides of it.",
+    "balanced": "People define it in different ways. One common rule is a candle whose high is above the highs of the two candles before and the two candles after it. Because you need the later candles, a swing high is only confirmed after some time has passed."
+  },
+  "related": [
+    "swing-low",
+    "trend",
+    "resistance"
+  ],
+  "markets": [],
+  "level": "beginner",
+  "sourceIds": []
+}

@@ -1,0 +1,21 @@
+{
+  "id": "swing-low",
+  "term": "Swing low",
+  "aliases": [
+    "swing lows",
+    "trough",
+    "pivot low"
+  ],
+  "definition": {
+    "simple": "A turning point at the bottom: a low with higher lows on both sides of it.",
+    "balanced": "Like a swing high, it depends on the rule you use, and it is only confirmed after the candles that follow it have formed."
+  },
+  "related": [
+    "swing-high",
+    "trend",
+    "support"
+  ],
+  "markets": [],
+  "level": "beginner",
+  "sourceIds": []
+}

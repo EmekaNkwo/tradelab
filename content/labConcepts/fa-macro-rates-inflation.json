@@ -1,0 +1,24 @@
+{
+  "id": "fa-macro-rates-inflation",
+  "skills": ["fundamental_analysis"],
+  "lab": "fundamental",
+  "level": "beginner",
+  "order": 40,
+  "title": "Rates and inflation",
+  "summary": "A [[central-bank]] usually raises its [[interest-rate]] when [[inflation]] runs above its target and cuts when the economy is weak. Markets trade on the expected path of rates, so currencies and other markets often move before the decision, not on it.",
+  "unreliableWhen": "When the rate change was fully expected, when the bank's guidance about future moves says something different from the decision, or when other news such as risk mood or the other currency in a pair dominates.",
+  "goodExample": "Fictional Westmark inflation comes in well above target and few traders expected it. Traders raise their rate expectations, and WMK rises and holds. The chain held this time, but it was a tendency, not a guarantee.",
+  "badExample": "A learner sees inflation above consensus and buys WMK expecting a sure rise, but traders had already bought heavily before the release. WMK spikes, then falls back below where it started.",
+  "lessonIds": [
+    "fx-rates-central-banks",
+    "fm-growth-jobs-inflation"
+  ],
+  "chart": null,
+  "drillKind": null,
+  "scenarioIds": [
+    "macro-westmark-inflation-calm",
+    "macro-westmark-inflation-crowded"
+  ],
+  "companyIds": [],
+  "redFlagCaseIds": []
+}

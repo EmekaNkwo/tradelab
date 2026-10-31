@@ -1,0 +1,14 @@
+{
+  "id": "equity",
+  "term": "Equity",
+  "aliases": [],
+  "definition": {
+    "simple": "Your balance plus or minus the profit or loss on your open trades right now.",
+    "balanced": "Equity = [[balance]] + floating profit − floating loss on open positions. It changes every time prices move. [[free-margin|Free margin]] and [[margin-level]] are both worked out from equity."
+  },
+  "example": "Balance 1,000 USD and an open trade showing −150 USD: equity is 850 USD.",
+  "related": ["balance", "free-margin", "margin-level"],
+  "markets": [],
+  "level": "beginner",
+  "sourceIds": []
+}

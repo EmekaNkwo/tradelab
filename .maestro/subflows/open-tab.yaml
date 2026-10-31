@@ -1,0 +1,17 @@
+appId: com.tradelab.app
+---
+# Taps a bottom tab by its testID, tab-<route name> (tabBarButtonTestID in
+# app/(tabs)/_layout.tsx): tab-home, tab-learn, tab-practice, tab-strategies,
+# tab-journal, tab-more. TAB is the tab's title (Home, Learn, Practice,
+# Strategies, Journal, More); its lower-case form is the route name.
+# Usage:
+#   - runFlow:
+#       file: subflows/open-tab.yaml
+#       env:
+#         TAB: Practice
+# By id, so a screen that shows the same word (the "Journal" notice on a
+# journal entry, the "Practice" title) can't take the tap.
+- tapOn:
+    id: ${'tab-' + TAB.toLowerCase()}
+- waitForAnimationToEnd:
+    timeout: 3000

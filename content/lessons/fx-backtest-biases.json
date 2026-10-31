@@ -1,0 +1,129 @@
+{
+  "id": "fx-backtest-biases",
+  "moduleId": "forex-backtest-plan",
+  "title": "Look-ahead, selection and survivorship bias",
+  "level": "intermediate",
+  "estimatedMinutes": 15,
+  "inOneLine": {
+    "simple": "Three common test errors: using information you could not have known ([[look-ahead-bias]]), only testing the periods you remember as good (selection bias, or cherry-picking), and copying a method only because it is one that happened to work ([[survivorship-bias]]).",
+    "balanced": "All three make a backtest or a method look better than real trading could be. Replay reduces look-ahead bias by hiding future bars. You reduce selection bias by choosing test periods before you look, across different market conditions. You reduce survivorship bias by testing a method yourself instead of trusting that it worked for someone."
+  },
+  "explain": {
+    "simple": "Look-ahead bias means using the future by accident. For example, you draw a support line on an old chart. But the bounce that made the line obvious happened after your entry. At the time, you could not have known it was support. Replay helps, because it hides bars that have not happened yet. Selection bias, or cherry-picking, means only testing the periods that suit your rules. Maybe you only replay charts with big, clean trends because those are the ones you remember. The quiet, choppy periods are missing from your test. Survivorship bias means only seeing the winners. Maybe you copy a method only because you heard it worked for someone. You never hear about the similar methods that failed and were dropped.",
+    "balanced": "To limit look-ahead bias: mark levels only with bars visible at that point, decide on a bar only after it closes, and never skip forward to \"check\" before deciding. To limit selection bias: pick your replay periods before you look at them, and include trending, ranging, quiet, busy and news-driven periods. Write down every trade, including the ones you would rather forget. A test that only includes good-looking periods tells you how your rules do in good-looking periods. To limit survivorship bias: treat a method you heard about as an idea to test, not as proof. The stories you hear come from the methods that happened to work; the ones that failed are rarely mentioned."
+  },
+  "realNumbers": {
+    "assumptions": [
+      "Fictional example on EUR/USD, illustrative prices",
+      "Learner tests a \"buy at support\" rule on a full, finished chart",
+      "Support is drawn at 1.08000 using a low that formed 2 days after the planned entry"
+    ],
+    "steps": [
+      "On the finished chart, 1.08000 looks like strong support, so the buy looks great.",
+      "But at the planned entry time, that low had not happened yet.",
+      "The trade could not have been taken that way in real time. This is look-ahead bias.",
+      "In Replay, the future low is hidden, so the line cannot be drawn there yet. The test becomes honest."
+    ]
+  },
+  "anotherExample": {
+    "assumptions": [
+      "Fictional learner, 30 replay trades",
+      "24 trades chosen from periods the learner remembered as \"strong trends\"",
+      "6 trades from random periods"
+    ],
+    "steps": [
+      "The 24 remembered-trend trades look good.",
+      "The 6 random-period trades look worse.",
+      "Most of the test came from the conditions the learner already knew suited the rules. That is selection bias, also called cherry-picking.",
+      "The fix: choose periods first, then replay them, and include ranges and quiet markets."
+    ]
+  },
+  "explainSimpler": "Look-ahead bias: peeking at the answers. Selection bias: only sitting the tests you know you will pass. Survivorship bias: only hearing from the people who passed.",
+  "commonMistake": "Testing on a fully visible chart and \"spotting\" setups after the fact. Nearly everything looks obvious in hindsight.",
+  "quickCheck": [
+    {
+      "id": "fx-backtest-biases-q1",
+      "prompt": "You mark a resistance level using a high that formed after your planned entry. What is this?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Look-ahead bias",
+          "explanation": "Right: you used information that did not exist at the time."
+        },
+        {
+          "id": "b",
+          "text": "Survivorship bias",
+          "explanation": "No: survivorship bias is copying a method because it is one of the ones that happened to work, while the failures are forgotten."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "look-ahead-bias"
+      ]
+    },
+    {
+      "id": "fx-backtest-biases-q2",
+      "prompt": "You only replay periods with strong trends because those are the charts you remember. What is the risk?",
+      "options": [
+        {
+          "id": "a",
+          "text": "None: trends are where you would actually trade",
+          "explanation": "No: your rules will also meet ranges and quiet markets, and you cannot always tell in advance which period you are in."
+        },
+        {
+          "id": "b",
+          "text": "Your test leaves out conditions where the rules may fail, so it looks better than it is",
+          "explanation": "Right: this is selection bias, also called cherry-picking."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "survivorship-bias"
+      ]
+    },
+    {
+      "id": "fx-backtest-biases-q3",
+      "prompt": "You copy a method only because you heard it made money for someone. Which bias is this a risk of?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Survivorship bias",
+          "explanation": "Right: you hear about the methods that happened to work, not the similar ones that failed. Test it yourself before trusting it."
+        },
+        {
+          "id": "b",
+          "text": "Look-ahead bias",
+          "explanation": "No: look-ahead bias is using information that did not exist at the time of the trade."
+        },
+        {
+          "id": "c",
+          "text": "Selection bias in your test periods",
+          "explanation": "No: selection bias is choosing only the test periods that suit your rules. Here the problem is which methods you hear about."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "survivorship-bias"
+      ]
+    }
+  ],
+  "doItNow": {
+    "kind": "replay",
+    "instructions": "Before opening Replay, write a list of 4 periods to test: one trending, one ranging, one quiet, and one around a news event. Then open Practice → Replay and take your next 10 trades across those periods, following your plan. Decide only on closed bars."
+  },
+  "glossaryIds": [
+    "look-ahead-bias",
+    "survivorship-bias",
+    "backtest"
+  ],
+  "sourceIds": []
+}

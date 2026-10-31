@@ -1,0 +1,14 @@
+{
+  "id": "gap",
+  "term": "Gap",
+  "aliases": ["gaps", "price gap"],
+  "definition": {
+    "simple": "A jump in price with no trading in between, for example from Friday's close to Monday's open.",
+    "balanced": "When the market reopens, or after sudden news, price can start at a level far from the last one. Orders resting inside the gap, including a [[stop-loss]], fill at the first available price, which can be much worse than their level."
+  },
+  "example": "A buy trade's stop sits at 1.09500. The market closes at 1.09800 and reopens at 1.09200. The stop fills near 1.09200, not 1.09500.",
+  "related": ["slippage", "stop-loss"],
+  "markets": [],
+  "level": "beginner",
+  "sourceIds": []
+}

@@ -1,0 +1,144 @@
+{
+  "id": "st-dividends-earnings",
+  "moduleId": "stocks-basics",
+  "title": "Dividends and earnings reports",
+  "level": "beginner",
+  "estimatedMinutes": 20,
+  "inOneLine": {
+    "simple": "A dividend is cash a company pays its shareholders from profit. An earnings report is the company's regular update on its revenue and profit.",
+    "balanced": "A [[dividend]] is paid at the company's choice and can be cut. [[dividend-yield|Dividend yield]] = dividend per share ÷ price; [[payout-ratio]] = dividends ÷ net income. An [[earnings-report]] can move the price sharply, mostly because of the gap between the results and what was expected."
+  },
+  "explain": {
+    "simple": "Some companies share part of their profit with shareholders as cash: a dividend. The company's board decides whether to pay one and how much. It can raise it, cut it or stop it. Listed companies also publish an earnings report on a regular schedule, showing how much they sold and how much profit they made. Share prices often move a lot around these reports.",
+    "balanced": "Two ratios help you read a dividend. Dividend yield compares the yearly dividend per share with the price. Payout ratio compares the dividends with the profit. A very high yield often appears after the price has fallen, sometimes because buyers expect a cut. A payout ratio near or above 100% leaves little room for a bad year. Around earnings reports, prices react to results compared with expectations (see [[surprise]]), so a company can report higher profit and still see its price fall. Prices can also [[gap]] from one session to the next around a report."
+  },
+  "realNumbers": {
+    "assumptions": [
+      "Example Steadybrook Pantry Foods (fictional), Year 3, millions of USD",
+      "Dividends paid 87; net income 114; 200 million shares; price 6.80 USD",
+      "You own 1,000 shares; tax on dividends ignored"
+    ],
+    "steps": [
+      "Dividend per share = 87 ÷ 200 = 0.435 USD.",
+      "Your dividend = 1,000 × 0.435 = 435 USD for the year.",
+      "Dividend yield = 0.435 ÷ 6.80 = about 6.4%.",
+      "Payout ratio = 87 ÷ 114 = about 76%. About three quarters of the profit was paid out."
+    ]
+  },
+  "anotherExample": {
+    "assumptions": [
+      "Example Steadybrook Pantry Foods (fictional); illustrative expectations, not a forecast",
+      "Last year's EPS 0.555 USD; this year's reported EPS 0.57 USD",
+      "Before the report, buyers on average expected EPS of 0.60 USD"
+    ],
+    "steps": [
+      "Change from last year = 0.57 ÷ 0.555 − 1 = about +2.7%. Profit grew.",
+      "Compared with expectations: 0.57 − 0.60 = −0.03 USD, below what was expected.",
+      "One possible reaction is a falling price, because buyers had priced in 0.60.",
+      "Another is little change, if buyers had already lowered their hopes. The same number can cause different reactions."
+    ]
+  },
+  "explainSimpler": "Dividends are a share of profit paid in cash, by choice, not by promise. Earnings reports are the scorecard, judged against what people expected.",
+  "commonMistake": "Picking a share only for its high dividend yield. The yield is based on past payments, and a very high one can be a sign the market expects the dividend to be cut.",
+  "quickCheck": [
+    {
+      "id": "st-dividends-earnings-q1",
+      "prompt": "Dividend 0.30 USD per share; price 10.00 USD. What is the dividend yield?",
+      "options": [
+        {
+          "id": "a",
+          "text": "30%",
+          "explanation": "No: 0.30 ÷ 10.00 is 0.03, not 0.30."
+        },
+        {
+          "id": "b",
+          "text": "0.3%",
+          "explanation": "No: that is ten times too small."
+        },
+        {
+          "id": "c",
+          "text": "3%",
+          "explanation": "Right: 0.30 ÷ 10.00 = 0.03, which is 3%."
+        }
+      ],
+      "correctOptionIds": [
+        "c"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "dividend-yield"
+      ]
+    },
+    {
+      "id": "st-dividends-earnings-q2",
+      "prompt": "Net income 50; dividends paid 55 (fictional, millions USD). What is the payout ratio, and what does it suggest?",
+      "options": [
+        {
+          "id": "a",
+          "text": "110%: more is paid out than earned",
+          "explanation": "Right: 55 ÷ 50 = 1.10. That cannot continue for ever without cash or borrowing."
+        },
+        {
+          "id": "b",
+          "text": "91%: the dividend looks fully covered",
+          "explanation": "No: that divides 50 by 55, the wrong way round."
+        },
+        {
+          "id": "c",
+          "text": "5%: almost all profit is kept",
+          "explanation": "No: that is the difference, 55 − 50, not a ratio."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "payout-ratio"
+      ]
+    },
+    {
+      "id": "st-dividends-earnings-q3",
+      "prompt": "A company reports profit up 10%, but below what buyers expected. What could happen to the price?",
+      "options": [
+        {
+          "id": "a",
+          "text": "It must rise, since profit grew",
+          "explanation": "No: prices react to results compared with expectations."
+        },
+        {
+          "id": "b",
+          "text": "A miss like this often pushes the price down",
+          "explanation": "Right: a miss against expectations can push the price down even when profit grew."
+        },
+        {
+          "id": "c",
+          "text": "It may only react once the next report is out",
+          "explanation": "No: prices can move at any time, often sharply around a report."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "earnings-report",
+        "surprise"
+      ]
+    }
+  ],
+  "doItNow": {
+    "kind": "fundamental",
+    "instructions": "In the Fundamental Analysis Lab, open Example Steadybrook Pantry Foods (fictional) and check its dividend per share, dividend yield and payout ratio. Then open Example Faxworth Office Machines (fictional) and write down how its dividends paid changed from Year 1 to Year 3."
+  },
+  "glossaryIds": [
+    "dividend",
+    "dividend-yield",
+    "payout-ratio",
+    "earnings-report",
+    "eps",
+    "surprise",
+    "gap"
+  ],
+  "sourceIds": []
+}

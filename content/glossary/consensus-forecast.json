@@ -1,0 +1,21 @@
+{
+  "id": "consensus-forecast",
+  "term": "Consensus forecast",
+  "aliases": [
+    "consensus",
+    "forecast",
+    "expected figure"
+  ],
+  "definition": {
+    "simple": "The figure most forecasters expect a release to show, before it comes out.",
+    "balanced": "The consensus is often a median of analyst forecasts. Prices may already reflect it before the release. That is why the gap between actual and expected, the [[surprise]], often matters more than the number itself."
+  },
+  "example": "Hypothetical: the consensus for a fictional inflation release is 2.5%.",
+  "related": [
+    "surprise",
+    "economic-calendar"
+  ],
+  "markets": [],
+  "level": "beginner",
+  "sourceIds": []
+}

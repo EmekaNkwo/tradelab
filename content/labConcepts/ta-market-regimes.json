@@ -1,0 +1,27 @@
+{
+  "id": "ta-market-regimes",
+  "skills": ["technical_analysis"],
+  "lab": "technical",
+  "level": "advanced",
+  "order": 1,
+  "title": "Market regime classification",
+  "summary": "Label each period trending or ranging, and high or low volatility, with a written rule. The same method behaves differently in each regime.",
+  "unreliableWhen": "The label uses past candles, so it lags, and regimes change without warning. The thresholds are your choice; changing them moves periods between labels.",
+  "goodExample": "Splitting backtest results by regime and finding a crossover rule did well only in trends and lost small amounts in ranges.",
+  "badExample": "Leaving the losing ranging periods out of a test because \"the rule is not meant for those\".",
+  "lessonIds": [
+    "ta-market-regimes"
+  ],
+  "chart": {
+    "scenario": "sideways",
+    "overlays": [
+      "sma20"
+    ],
+    "pane": "atr",
+    "lookFor": "Measure the net move over the last 20 candles in ATR terms and give the chart a label. Count how often price crossed the SMA 20. Then compare with Strong uptrend and High volatility."
+  },
+  "drillKind": "find_the_trend",
+  "scenarioIds": [],
+  "companyIds": [],
+  "redFlagCaseIds": []
+}

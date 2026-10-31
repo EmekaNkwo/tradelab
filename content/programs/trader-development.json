@@ -1,0 +1,17 @@
+{
+  "id": "trader-development",
+  "title": "Trader Development",
+  "summary": "All five markets compared, then stocks, penny stocks, commodities and futures, followed by technical analysis patterns, advanced testing ideas and macro fundamentals. Practice is simulated or on a demo account.",
+  "moduleIds": [
+    "markets-compared",
+    "stocks-basics",
+    "stocks-company-analysis",
+    "penny-stocks",
+    "commodities",
+    "futures",
+    "ta-patterns",
+    "ta-advanced",
+    "fa-macro"
+  ],
+  "defaultWeeks": 16
+}

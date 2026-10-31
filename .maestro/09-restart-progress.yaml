@@ -1,0 +1,29 @@
+appId: com.tradelab.app
+name: 09 App restart and progress check
+tags:
+  - e2e
+  - journey
+---
+# Spec §36 step 9: force-stop the app, start it cold (no clearState), and check
+# that everything from 01-08 persisted (SQLite via expo-sqlite, data/db).
+# Needs: 01-08.
+- launchApp:
+    appId: com.tradelab.app
+- extendedWaitUntil:
+    visible:
+      id: "home-screen"
+    timeout: 30000
+- stopApp: com.tradelab.app        # am force-stop: process gone, nothing in memory
+- launchApp:
+    appId: com.tradelab.app
+    stopApp: true
+# A cold start goes through app/_layout.tsx bootstrap ("Opening TradeLab…").
+- extendedWaitUntil:
+    visible:
+      id: "home-screen"
+    timeout: 30000
+# Not sent back to onboarding: the profile persisted.
+- assertNotVisible:
+    id: "onboarding-screen"
+- runFlow: subflows/assert-progress.yaml
+- takeScreenshot: 09-after-restart

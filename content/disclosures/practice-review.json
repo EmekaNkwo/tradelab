@@ -1,0 +1,11 @@
+{
+  "id": "practice-review",
+  "version": 1,
+  "title": "Practice is not a green light",
+  "body": [
+    "Completing lessons, simulations, and demo practice shows what you have learned. It does not show that you are ready to trade real money.",
+    "Simulated and demo results can differ from real trading, where costs, fills, and emotions are different."
+  ],
+  "triggers": ["final_module"],
+  "statistics": []
+}

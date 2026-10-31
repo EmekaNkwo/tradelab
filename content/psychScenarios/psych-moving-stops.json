@@ -1,0 +1,37 @@
+{
+  "id": "psych-moving-stops",
+  "topic": "moving-stops",
+  "title": "Just give it more room",
+  "situation": "Your demo trade on EUR/GBP is 3 pips from your [[stop-loss|stop loss]], which you placed using the rule in your plan. You want to move the stop 20 pips further away \"to give it room.\"",
+  "question": "What do you do?",
+  "responses": [
+    {
+      "id": "a",
+      "text": "Move the stop further away. It will probably turn around.",
+      "quality": "harmful",
+      "explanation": "Moving the stop away makes the loss bigger than the one you planned. \"Probably\" is a hope, not a rule."
+    },
+    {
+      "id": "b",
+      "text": "Close the trade now, before the stop is hit.",
+      "quality": "mixed",
+      "explanation": "This keeps the loss within your plan. But it is still a decision made on a feeling, and it blurs what your stop rule would have done."
+    },
+    {
+      "id": "c",
+      "text": "Remove the stop and watch the trade closely instead.",
+      "quality": "harmful",
+      "explanation": "Watching is not a limit. If price moves fast, there is nothing to stop the loss growing."
+    },
+    {
+      "id": "d",
+      "text": "Leave the stop where it is. If it is hit, review later whether your stop rule needs work.",
+      "quality": "helpful",
+      "explanation": "The stop was set when you were calm. If the rule needs changing, a review is the place to do it."
+    }
+  ],
+  "takeaway": "A stop is a decision made when you were calm. Moving it further away means that if price gets there, you lose more than you planned.",
+  "glossaryIds": [
+    "stop-loss"
+  ]
+}

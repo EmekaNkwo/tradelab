@@ -1,0 +1,22 @@
+{
+  "id": "in-sample",
+  "term": "In-sample",
+  "aliases": [
+    "in-sample data",
+    "training data",
+    "tuning period"
+  ],
+  "definition": {
+    "simple": "The part of the data used to build or tune a rule.",
+    "balanced": "In-sample results flatter a rule because the rule was shaped to fit them. Judge a rule on [[out-of-sample]] data instead."
+  },
+  "example": "+18R over 60 in-sample trades fell to +2R over 25 out-of-sample trades.",
+  "related": [
+    "out-of-sample",
+    "overfitting",
+    "backtest"
+  ],
+  "markets": [],
+  "level": "advanced",
+  "sourceIds": []
+}

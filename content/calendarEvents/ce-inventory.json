@@ -1,0 +1,18 @@
+{
+  "id": "ce-inventory",
+  "kind": "inventory",
+  "title": "Inventory reports",
+  "measures": "How much of a commodity is held in storage, such as crude oil, fuels, natural gas or grain, and how much that changed since the last report.",
+  "whyItMatters": "Stocks in storage show the balance between supply and demand. A larger-than-expected fall can point to tighter supply, and a larger-than-expected rise to weaker demand or more supply.",
+  "affectedMarkets": ["commodities", "futures"],
+  "expectations": "Forecasters estimate the change before the release, and private estimates may circulate earlier. Traders compare the official figure with those numbers.",
+  "surprises": "Reports have several parts, such as crude and refined fuels, and they can point different ways. A surprise that was already hinted at by private estimates may be priced in, and the reaction can fade within minutes.",
+  "limits": "A draw does not guarantee a rise, and a build does not guarantee a fall. Seasons, weather, the futures curve and wider news all matter, and futures can move sharply around the release.",
+  "keywords": ["inventory", "inventories", "stockpiles", "crude stocks", "storage", "draw", "build", "barrels", "stocks of crude", "grain stocks"],
+  "glossaryIds": ["inventory-report", "commodity", "surprise", "consensus-forecast", "supply-shock"],
+  "lessonIds": ["cm-supply-demand-inventories", "cm-what-are-commodities", "fm-priced-in"],
+  "scenarioIds": ["cs-crude-inventory-draw"],
+  "samples": [
+    { "id": "s1", "title": "Northland weekly crude inventories (fictional)", "day": 3, "time": "14:30", "timeZone": "UTC", "where": "Northland (fictional)", "details": "A sample weekly report on crude oil and refined fuels held in storage in the fictional country of Northland." }
+  ]
+}

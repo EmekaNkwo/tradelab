@@ -1,0 +1,146 @@
+{
+  "id": "fx-timeframes",
+  "moduleId": "forex-charts",
+  "title": "Timeframes",
+  "level": "beginner",
+  "estimatedMinutes": 15,
+  "inOneLine": {
+    "simple": "The timeframe is how much time one candle covers. Changing it changes how the same market looks.",
+    "balanced": "Four H1 candles combine into one H4 candle: the first open, the highest high, the lowest low and the last close. Longer [[timeframe|timeframes]] hide the moves inside each candle."
+  },
+  "explain": {
+    "simple": "On an M15 chart each candle covers 15 minutes. On H1 it is one hour, on H4 four hours, and on D1 one day. A 1-hour chart and a 1-day chart of EUR/USD show the same prices, grouped differently. Shorter timeframes show more detail and more back-and-forth. Longer ones show the bigger picture. Neither is the true one. They answer different questions.",
+    "balanced": "To build a longer candle from shorter ones: open = the first candle's open, close = the last candle's close, high = the highest high, low = the lowest low. A [[trend]] on D1 can sit alongside a move the other way on M15, because each covers a different stretch of time. Many people choose one main timeframe for decisions and look at one longer timeframe for context. Spreads stay the same whatever chart you watch, so on short timeframes they are a bigger share of a typical candle."
+  },
+  "realNumbers": {
+    "assumptions": [
+      "Illustrative prices for four EUR/USD H1 candles in a row",
+      "Candle 1: O 1.10000, H 1.10100, L 1.09950, C 1.10080",
+      "Candle 2: O 1.10080, H 1.10200, L 1.10050, C 1.10150",
+      "Candle 3: O 1.10150, H 1.10180, L 1.09980, C 1.10000",
+      "Candle 4: O 1.10000, H 1.10060, L 1.09900, C 1.10040"
+    ],
+    "steps": [
+      "H4 open = candle 1 open = 1.10000. H4 close = candle 4 close = 1.10040.",
+      "H4 high = the highest of 1.10100, 1.10200, 1.10180, 1.10060 = 1.10200.",
+      "H4 low = the lowest of 1.09950, 1.10050, 1.09980, 1.09900 = 1.09900.",
+      "The H4 candle has a 4-pip body (1.10040 − 1.10000) and a 30-pip range (1.10200 − 1.09900).",
+      "On H4 you see one small up candle. On H1 you can see price rose about 20 pips, then fell back. The longer timeframe hides that."
+    ]
+  },
+  "anotherExample": {
+    "assumptions": [
+      "Forex trades about 24 hours a day on weekdays",
+      "Illustrative chart that shows 100 candles on screen"
+    ],
+    "steps": [
+      "On M15 there are 4 candles per hour, so 100 candles cover 100 ÷ 4 = 25 hours, about one day.",
+      "On H1, 100 candles cover 100 hours, a little over 4 trading days.",
+      "On D1, 100 candles cover 100 trading days, roughly 5 months.",
+      "If the D1 chart rises over those months while the last day on M15 falls, both are true. They describe different windows of time."
+    ]
+  },
+  "explainSimpler": "A timeframe is like zooming a map: street view and country view show the same place at different detail.",
+  "commonMistake": "Flicking between timeframes until one shows what you hoped to see. Choose your timeframe before you look, and stick to it for that analysis.",
+  "quickCheck": [
+    {
+      "id": "fx-timeframes-q1",
+      "prompt": "How many H1 candles cover the same time as one H4 candle?",
+      "options": [
+        {
+          "id": "a",
+          "text": "4",
+          "explanation": "Right: an H4 candle covers four hours."
+        },
+        {
+          "id": "b",
+          "text": "1",
+          "explanation": "No: one H1 candle covers only one hour."
+        },
+        {
+          "id": "c",
+          "text": "24",
+          "explanation": "No: 24 H1 candles cover a whole day, like one D1 candle."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "timeframe"
+      ]
+    },
+    {
+      "id": "fx-timeframes-q2",
+      "prompt": "You combine four H1 candles into one H4 candle. Which price becomes the H4 close?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The close of the last H1 candle",
+          "explanation": "Right: the H4 period ends when the fourth hour ends."
+        },
+        {
+          "id": "b",
+          "text": "The highest close of the four",
+          "explanation": "No: the close is simply the last price in the period."
+        },
+        {
+          "id": "c",
+          "text": "The average of the four closing prices",
+          "explanation": "No: candles do not average prices."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "timeframe",
+        "ohlc"
+      ]
+    },
+    {
+      "id": "fx-timeframes-q3",
+      "prompt": "The D1 chart shows an uptrend and the M15 chart shows a fall. Which is correct?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Both: they describe different stretches of time",
+          "explanation": "Right: a short fall can happen inside a longer rise."
+        },
+        {
+          "id": "b",
+          "text": "Only D1, because the longer timeframe is always the true trend",
+          "explanation": "No: neither timeframe is the true one. They answer different questions."
+        },
+        {
+          "id": "c",
+          "text": "Only M15, because it is more recent",
+          "explanation": "No: both charts include the latest prices."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "timeframe",
+        "trend"
+      ]
+    }
+  ],
+  "doItNow": {
+    "kind": "metatrader",
+    "instructions": "On your demo account, open a EUR/USD chart and switch between M15, H1, H4 and D1. Follow the task card and note how the same latest price looks on each.",
+    "mtTaskId": "mt-change-timeframe"
+  },
+  "glossaryIds": [
+    "timeframe",
+    "candlestick",
+    "ohlc",
+    "trend",
+    "spread"
+  ],
+  "sourceIds": []
+}

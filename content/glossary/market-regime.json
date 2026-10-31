@@ -1,0 +1,23 @@
+{
+  "id": "market-regime",
+  "term": "Market regime",
+  "aliases": [
+    "regime",
+    "regimes",
+    "market condition",
+    "regime classification"
+  ],
+  "definition": {
+    "simple": "The type of market in a period: trending or ranging, and calm or jumpy compared with its own past.",
+    "balanced": "Classify with a written rule, for example by comparing the net move with ATR, and current ATR with its longer average. The label lags because it uses past candles, and regimes change without warning. Rules often behave very differently from one regime to another, so review test results by regime."
+  },
+  "example": "Net move 150 pips over 20 candles with ATR 40 pips is 3.75 ATR: trending under a 3 ATR rule.",
+  "related": [
+    "volatility",
+    "trend",
+    "atr"
+  ],
+  "markets": [],
+  "level": "advanced",
+  "sourceIds": []
+}

@@ -1,0 +1,141 @@
+{
+  "id": "cm-seasonality-geopolitics",
+  "moduleId": "commodities",
+  "title": "Seasons, weather, geopolitics and supply shocks",
+  "level": "beginner",
+  "estimatedMinutes": 20,
+  "inOneLine": {
+    "simple": "Harvests, winters and political events change how much of a commodity is available. Prices react most when what happens differs from what was expected.",
+    "balanced": "[[seasonality|Seasonal]] patterns are usually known in advance and often priced in. [[supply-shock|Supply shocks]] and [[geopolitical-risk|geopolitical]] events are not. Their effect depends on size, duration, spare supply and stored stock, and early price jumps can reverse once the picture clears."
+  },
+  "explain": {
+    "simple": "Many crops are harvested once a year, so new supply arrives in a rush and then has to last until the next harvest. In places that heat homes with natural gas, demand usually rises in cold months. These patterns repeat, so traders expect them. What surprises the market is a harvest much smaller or bigger than expected, or a winter much colder or milder than normal. Supply can also be cut suddenly: a mine floods, a pipeline breaks, a port closes, or a conflict blocks a shipping route. All places, firms and figures in this lesson are fictional.",
+    "balanced": "A useful way to judge a disruption is to ask four questions. How big is it, as a share of total supply? How long will it last? Can other producers or stored stock fill the gap? What had the market already expected? A small, short outage when storage is full may barely matter. A large, open-ended one when storage is low can move prices a lot. Political events are especially uncertain: prices may rise on worry before any supply is lost, then fall back if the worry fades. Treat every story as a set of scenarios, not a price call."
+  },
+  "realNumbers": {
+    "assumptions": [
+      "Fictional grain market in a fictional region, in million tonnes",
+      "Stock left from last year: 30. Expected harvest: 120. Expected use: 125",
+      "Then a drought cuts the harvest by 10%"
+    ],
+    "steps": [
+      "Expected supply = 30 + 120 = 150. Expected stock left at year end = 150 − 125 = 25.",
+      "Stock-to-use = 25 ÷ 125 = 20%.",
+      "With the drought, harvest = 120 × 0.90 = 108. Supply = 30 + 108 = 138.",
+      "Stock left at year end = 138 − 125 = 13, so stock-to-use = 13 ÷ 125 = 10.4%, about half the earlier cushion.",
+      "A thinner cushion can make prices more sensitive. Whether they rise depends on how much of the drought was already expected."
+    ]
+  },
+  "anotherExample": {
+    "assumptions": [
+      "Fictional region where natural gas heats homes",
+      "Typical use: 60 units a day in summer, 90 units a day in winter"
+    ],
+    "steps": [
+      "Winter use is 90 − 60 = 30 units a day higher.",
+      "30 ÷ 60 = 0.5, so winter use is 50% above summer use.",
+      "This pattern is known, so prices often reflect it before winter arrives.",
+      "What can move prices is a winter much colder or milder than forecasters expected."
+    ]
+  },
+  "explainSimpler": "Everyone knows winter comes and harvests happen. Prices move when the winter or the harvest turns out different from what people guessed, or when something suddenly cuts supply.",
+  "commonMistake": "Assuming a scary headline means prices must keep rising. Markets may have priced in the worry already, the disruption may be short, or other supply may fill the gap.",
+  "quickCheck": [
+    {
+      "id": "cm-seasonality-geopolitics-q1",
+      "prompt": "Fictional crop: stock 20, harvest 100, use 105 (million tonnes). What stock is left at year end?",
+      "options": [
+        {
+          "id": "a",
+          "text": "5 million tonnes",
+          "explanation": "No: that leaves out the 20 already in stock."
+        },
+        {
+          "id": "b",
+          "text": "15 million tonnes",
+          "explanation": "Right: 20 + 100 − 105 = 15 million tonnes."
+        },
+        {
+          "id": "c",
+          "text": "25 million tonnes",
+          "explanation": "No: that adds the 5 shortfall to the stock instead of taking it away: 20 − 5 = 15."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "seasonality"
+      ]
+    },
+    {
+      "id": "cm-seasonality-geopolitics-q2",
+      "prompt": "A fictional pipeline closes for a few days while storage is unusually full. What is a reasonable expectation?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Prices must rise strongly for weeks after any outage",
+          "explanation": "No: a short outage with full storage may have only a small or brief effect."
+        },
+        {
+          "id": "b",
+          "text": "Any effect is likely small or brief, since full storage covers the gap",
+          "explanation": "Right: size, duration and stored stock all shape the reaction, which stays uncertain."
+        },
+        {
+          "id": "c",
+          "text": "Prices may spike for months, since outages are rare",
+          "explanation": "No: a few days of outage with full storage gives little reason for a long spike, rare or not."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "supply-shock",
+        "inventory-report"
+      ]
+    },
+    {
+      "id": "cm-seasonality-geopolitics-q3",
+      "prompt": "Why does a normal seasonal rise in heating demand often move prices less than expected?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Seasonal demand does not affect commodity prices at all",
+          "explanation": "No: it does affect them, but the effect is usually expected in advance."
+        },
+        {
+          "id": "b",
+          "text": "Governments fix prices during winter",
+          "explanation": "No: this is not a general rule, and it is not the reason here."
+        },
+        {
+          "id": "c",
+          "text": "The market already knows the calendar and prices it in",
+          "explanation": "Right: the surprise is a season that differs from what was expected."
+        }
+      ],
+      "correctOptionIds": [
+        "c"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "seasonality"
+      ]
+    }
+  ],
+  "doItNow": {
+    "kind": "chart_lab",
+    "instructions": "In Chart Lab, load the News shock scenario with the Volume pane on, then the High volatility scenario. For the News shock, mark the first jump and note whether price held, partly reversed or fully reversed. Write one sentence on how a supply disruption story could produce each of those three paths."
+  },
+  "glossaryIds": [
+    "seasonality",
+    "supply-shock",
+    "geopolitical-risk",
+    "inventory-report"
+  ],
+  "sourceIds": []
+}

@@ -1,0 +1,20 @@
+{
+  "id": "sample-size",
+  "term": "Sample size",
+  "aliases": [
+    "number of trades",
+    "sample"
+  ],
+  "definition": {
+    "simple": "How many trades (or results) you are judging from. A small sample says little.",
+    "balanced": "With few trades, luck can make bad rules look good or good rules look bad. With 10 trades, changing one result moves the win rate by 10 percentage points, and adding one more trade moves it by up to about 9. With 50 trades, changing one result moves it by 2. More trades make the picture steadier, but even a large sample from the past does not promise the future."
+  },
+  "example": "Winning 4 of your first 5 replay trades tells you very little about your rules.",
+  "related": [
+    "backtest",
+    "overfitting"
+  ],
+  "markets": [],
+  "level": "intermediate",
+  "sourceIds": []
+}

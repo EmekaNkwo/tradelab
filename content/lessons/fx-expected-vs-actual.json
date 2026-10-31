@@ -1,0 +1,86 @@
+{
+  "id": "fx-expected-vs-actual",
+  "moduleId": "forex-fundamentals",
+  "title": "Jobs data: expected vs. actual",
+  "level": "beginner",
+  "estimatedMinutes": 20,
+  "inOneLine": {
+    "simple": "Markets react to the gap between what was expected and what came out, not to the number alone.",
+    "balanced": "[[surprise|Surprise]] = actual − [[consensus-forecast]]. A bigger surprise often means a bigger move, but the direction can still go either way, or the news may already be priced in."
+  },
+  "explain": {
+    "simple": "Before a release such as an [[employment-report]], forecasters publish what they expect. Prices start to reflect that guess. When the real number comes out, traders compare it with the guess. Better than expected and worse than expected are what move prices. A number that matches the guess may cause little change. But the reaction is never certain. The first jump can reverse within minutes.",
+    "balanced": "A jobs report has several parts: jobs added, the unemployment rate, wages, and revisions to earlier months. They can point in different directions. Traders may also have expected something different from the published consensus. So the same surprise can bring different reactions: a lasting move, a spike that reverses, or almost nothing. Read each case as a set of possible scenarios. All examples here are fictional."
+  },
+  "realNumbers": {
+    "assumptions": [
+      "Fictional country: Westmark, currency WMK",
+      "Hypothetical consensus: +150,000 jobs; unemployment 4.5%",
+      "Hypothetical actual: +90,000 jobs; unemployment 4.3%"
+    ],
+    "steps": [
+      "Jobs surprise = 90,000 − 150,000 = −60,000. Weaker than expected.",
+      "Unemployment surprise = 4.3% − 4.5% = −0.2 points. Lower unemployment is stronger than expected.",
+      "The two parts disagree. WMK could fall on the weak jobs number, rise on the low unemployment, or swing both ways.",
+      "Scenario thinking: list each possible reaction and what would make it more likely. Do not pick one as certain."
+    ]
+  },
+  "anotherExample": {
+    "assumptions": [
+      "Fictional Westmark inflation release",
+      "Hypothetical consensus 2.5%, hypothetical actual 2.9%",
+      "Three made-up market stories for the same number"
+    ],
+    "steps": [
+      "Surprise = 2.9% − 2.5% = +0.4 points, higher than expected.",
+      "Story 1: traders now expect higher rates, and WMK rises and holds.",
+      "Story 2: many traders had already bet on a high number. WMK spikes, then falls back as they take profits.",
+      "Story 3: a bigger story elsewhere dominates the day, and WMK hardly moves. Same number, three different outcomes."
+    ]
+  },
+  "explainSimpler": "It is not 'good news, price up'. It is 'better or worse than people guessed'. Even then, the market can surprise you.",
+  "commonMistake": "Reading only the headline number and ignoring the forecast. Another mistake is assuming the first move after a release will continue. It often reverses.",
+  "quickCheck": [
+    {
+      "id": "fx-expected-vs-actual-q1",
+      "prompt": "Hypothetical release: consensus 3.0%, actual 3.4%. What is the surprise?",
+      "options": [
+        { "id": "a", "text": "+0.4 points", "explanation": "Right: 3.4 − 3.0 = +0.4 points." },
+        { "id": "b", "text": "−0.4 points, a negative surprise", "explanation": "No: surprise is actual minus expected, and actual is higher." },
+        { "id": "c", "text": "3.4 points", "explanation": "No: that is the actual figure, not the gap." }
+      ],
+      "correctOptionIds": ["a"],
+      "level": "beginner",
+      "glossaryIds": ["surprise", "consensus-forecast"]
+    },
+    {
+      "id": "fx-expected-vs-actual-q2",
+      "prompt": "A fictional jobs report comes out exactly in line with the consensus. What is the most accurate expectation?",
+      "options": [
+        { "id": "a", "text": "No move at all, because there is no surprise to react to", "explanation": "No: other parts of the report and revisions can still move price." },
+        { "id": "b", "text": "Often a smaller reaction, but other details can still move price either way", "explanation": "Right: no headline surprise, but wages, revisions or the unemployment rate may matter." },
+        { "id": "c", "text": "A large move in the direction of the recent trend, since the news was as expected", "explanation": "No: an in-line release gives no headline surprise, and it does not decide the direction of any move." }
+      ],
+      "correctOptionIds": ["b"],
+      "level": "beginner",
+      "glossaryIds": ["employment-report", "consensus-forecast"]
+    },
+    {
+      "id": "fx-expected-vs-actual-q3",
+      "prompt": "Why can a better-than-expected number still be followed by the currency falling?",
+      "options": [
+        { "id": "a", "text": "Traders may have expected even better, or already bought before the release", "explanation": "Right: if it was priced in, some traders sell into the news." },
+        { "id": "b", "text": "The number must have been wrong, so the market ignores it", "explanation": "No: the number does not need to be wrong. What traders expected, and how they were already positioned, can matter more than the headline." }
+      ],
+      "correctOptionIds": ["a"],
+      "level": "beginner",
+      "glossaryIds": ["surprise"]
+    }
+  ],
+  "doItNow": {
+    "kind": "reflection",
+    "instructions": "News scenarios: make up three fictional releases, each with a consensus and an actual. For each, work out the surprise and write two different ways the currency could react, with a reason for each."
+  },
+  "glossaryIds": ["surprise", "consensus-forecast", "employment-report", "inflation"],
+  "sourceIds": []
+}

@@ -1,0 +1,120 @@
+appId: com.tradelab.app
+name: 07 Journal review
+tags:
+  - e2e
+  - journey
+---
+# Spec §36 step 7: review the closed paper trade in the journal.
+# Needs: 06 (a closed paper trade). Screens: app/(tabs)/journal/index.tsx and
+# app/(tabs)/journal/entry/[id].tsx.
+- launchApp:
+    appId: com.tradelab.app
+- extendedWaitUntil:
+    visible:
+      id: "home-screen"
+    timeout: 30000
+- runFlow:
+    file: subflows/open-tab.yaml
+    env:
+      TAB: Journal
+- extendedWaitUntil:
+    visible:
+      id: "journal-screen"
+    timeout: 10000
+# Source filter chip; labels from JOURNAL_SOURCE_LABELS (domain/models/journal.ts)
+- scrollUntilVisible:
+    element:
+      text: "Paper trading \\(simulated\\)"
+    direction: DOWN
+- tapOn: "Paper trading \\(simulated\\)"
+# Row title `${Long|Short} ${instrument}`; testID journal-row (not unique: one per entry).
+- scrollUntilVisible:
+    element:
+      id: "journal-row"
+    direction: DOWN
+- takeScreenshot: 07-journal-list
+- tapOn:
+    id: "journal-row"
+    index: 0
+- extendedWaitUntil:
+    visible:
+      id: "journal-entry-screen"
+    timeout: 10000
+# Entry screen order (restyle stage 4): Result card, Process card, Trade details,
+# Review. The process card and the details may be below the fold on a phone,
+# so each is scrolled to before it is checked.
+- scrollUntilVisible:
+    element:
+      id: "journal-process"          # "Process score: N%" / "not yet"
+    direction: DOWN
+- scrollUntilVisible:
+    element:
+      text: "Source: Paper trading \\(simulated\\)"
+    direction: DOWN
+
+# ---- Review (six prompts) ----
+# Review fields have testIDs (app/(tabs)/journal/entry/[id].tsx): review-thesis,
+# review-plan-vs-actual, review-result, review-next-goal, review-lesson.
+- scrollUntilVisible:
+    element:
+      id: "review-thesis"
+    direction: DOWN
+- tapOn:
+    id: "review-thesis"
+- inputText: "E2E: practice entry on a range scenario."
+- hideKeyboard
+# "3. Did you follow your rules?" (FOLLOWED, a ChoiceChips). ChoiceChips now
+# shows its label as text (fix for the 2026-10-30 device run,
+# docs/device-test-results.md), so the question is asserted. The Yes / No chips
+# sit directly under field 2 (review-plan-vs-actual) and above field 4
+# (review-result), so the tap stays scoped between those two fields.
+- scrollUntilVisible:
+    element:
+      id: "review-result"
+    direction: DOWN
+- assertVisible: "3\\. Did you follow your rules\\?"
+- tapOn:
+    text: "Yes"
+    below:
+      id: "review-plan-vs-actual"
+    above:
+      id: "review-result"
+- scrollUntilVisible:
+    element:
+      id: "review-lesson"
+    direction: DOWN
+- tapOn:
+    id: "review-lesson"
+- inputText: "Set the stop before the entry."
+- hideKeyboard
+- scrollUntilVisible:
+    element:
+      text: "(Save review|Update review)"
+    direction: DOWN
+- tapOn: "(Save review|Update review)"
+- scrollUntilVisible:
+    element:
+      text: "Review saved\\."
+    direction: DOWN
+    timeout: 10000
+- takeScreenshot: 07-journal-reviewed
+# Proves the rules answer and the lesson were saved: the process checks
+# (domain/journal/processScore.ts) turn from "not judged yet" / "✗" to "✓".
+- scrollUntilVisible:
+    element:
+      text: "✓ You followed your plan"
+    direction: UP
+- scrollUntilVisible:
+    element:
+      text: "✓ The trade was reviewed with a lesson"
+    direction: DOWN
+- back
+# The list subtitle gains " · reviewed".
+- extendedWaitUntil:
+    visible:
+      id: "journal-screen"
+    timeout: 10000
+- scrollUntilVisible:
+    element:
+      text: ".* · reviewed"
+    direction: DOWN

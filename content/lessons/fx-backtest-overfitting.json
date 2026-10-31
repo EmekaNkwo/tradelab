@@ -1,0 +1,133 @@
+{
+  "id": "fx-backtest-overfitting",
+  "moduleId": "forex-backtest-plan",
+  "title": "Overfitting, and reviewing 50 replay trades",
+  "level": "intermediate",
+  "estimatedMinutes": 18,
+  "inOneLine": {
+    "simple": "[[overfitting|Overfitting]] means adding rules until the past looks perfect. Review your 50 replay trades for process first, and test any rule change on new data.",
+    "balanced": "Each new filter that removes a few past losers improves the old results, but it was chosen after seeing them. Keep rules simple, change one thing at a time, save a new plan version, and test the change on periods you have not used."
+  },
+  "explain": {
+    "simple": "After some replay trades, you will see losers and think, \"If I had added one more rule, I would have avoided that one.\" Then another rule. Then another. Soon the rules fit the past perfectly. This is overfitting. The rules were shaped by the answers, so they may not work on new charts. When you review your 50 replay trades in the Journal, start with the process. Did you follow the plan on each trade? Were stops and size right? Only then look at results, and remember 50 trades is still a small sample.",
+    "balanced": "A useful review asks: how many trades followed every rule? Which rules were broken, and how often? Did results differ across trending, ranging and news periods? What was the result in R (multiples of the planned risk), and how spread out was it? If you want to change a rule, change one thing, save it as a new plan version, and replay fresh periods with it. A change that only helps the trades you already saw is not evidence of anything."
+  },
+  "realNumbers": {
+    "assumptions": [
+      "Fictional set of 50 replay trades, illustrative only",
+      "20 wins of +2R each; 30 losses of −1R each",
+      "R = the planned risk on each trade",
+      "All 50 trades followed the plan"
+    ],
+    "steps": [
+      "Total from wins = 20 × 2R = +40R.",
+      "Total from losses = 30 × −1R = −30R.",
+      "Net = +10R. Average per trade = 10R ÷ 50 = +0.2R.",
+      "This is one small sample from the past. A few different trades could flip the sign. It says how this test went, not what will happen next."
+    ]
+  },
+  "anotherExample": {
+    "assumptions": [
+      "Fictional learner, 30 replay trades so far",
+      "Learner adds 4 new filters after reviewing the losers",
+      "The filters would have removed 8 past losing trades and 1 past winner"
+    ],
+    "steps": [
+      "On the old 30 trades, results now look much better.",
+      "But the filters were chosen by looking at those exact trades.",
+      "Number of new trades the changed plan has been tested on: zero.",
+      "The learner saves it as a new plan version and replays 20 fresh periods before judging it."
+    ]
+  },
+  "explainSimpler": "Overfitting is tailoring a suit to fit one photo of a person. It may not fit the person when they move.",
+  "commonMistake": "Judging a replay test by profit alone. A profitable test full of rule breaks tells you less than a flat test where every rule was followed.",
+  "quickCheck": [
+    {
+      "id": "fx-backtest-overfitting-q1",
+      "prompt": "After reviewing losers, you add 3 rules that would have avoided them. What should you do next?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Trust the new rules; they removed the past losses",
+          "explanation": "No: they were chosen from the answers. That is overfitting."
+        },
+        {
+          "id": "b",
+          "text": "Save a new plan version and test it on periods you have not used yet",
+          "explanation": "Right: only new data can show whether a change helps."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "overfitting"
+      ]
+    },
+    {
+      "id": "fx-backtest-overfitting-q2",
+      "prompt": "50 trades: 15 wins of +2R, 35 losses of −1R. What is the net result in R?",
+      "options": [
+        {
+          "id": "a",
+          "text": "−5R",
+          "explanation": "Right: 15 × 2 = +30R, 35 × −1 = −35R, net −5R."
+        },
+        {
+          "id": "b",
+          "text": "+5R",
+          "explanation": "No: check the losses. 35 × −1R = −35R."
+        },
+        {
+          "id": "c",
+          "text": "−20R",
+          "explanation": "No: 30R − 35R is −5R."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "sample-size"
+      ]
+    },
+    {
+      "id": "fx-backtest-overfitting-q3",
+      "prompt": "When reviewing your replay trades, what should you look at first?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The total profit or loss",
+          "explanation": "No: results from a small sample say little."
+        },
+        {
+          "id": "b",
+          "text": "Whether each trade followed the plan",
+          "explanation": "Right: process first. You cannot judge rules you did not follow."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "trading-journal"
+      ]
+    }
+  ],
+  "doItNow": {
+    "kind": "replay",
+    "instructions": "Finish 50 replay trades in Practice → Replay, all following the same plan version. Then review them in the Journal: count rule breaks, compare trending, ranging and news periods, and write down one rule you might test next and why."
+  },
+  "homework": "Write three sentences: what the 50 trades taught you about your rules, about your discipline, and what they cannot tell you.",
+  "glossaryIds": [
+    "overfitting",
+    "sample-size",
+    "backtest",
+    "trading-journal",
+    "trading-plan"
+  ],
+  "sourceIds": []
+}

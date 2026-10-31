@@ -1,0 +1,548 @@
+{
+  "title": "TradeLab challenges",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "beginner_market",
+        "risk_management",
+        "chart_reading",
+        "replay",
+        "strategy_research",
+        "backtesting",
+        "famous_trader",
+        "forex_metatrader",
+        "fundamental_analysis"
+      ]
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "summary": {
+      "type": "string",
+      "minLength": 1
+    },
+    "skills": {
+      "minItems": 1,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "market_fundamentals",
+          "chart_reading",
+          "technical_analysis",
+          "fundamental_analysis",
+          "risk_management",
+          "strategy_understanding",
+          "execution_discipline",
+          "psychology",
+          "backtesting_literacy",
+          "statistical_reasoning"
+        ]
+      }
+    },
+    "criteria": {
+      "minItems": 1,
+      "maxItems": 8,
+      "type": "array",
+      "items": {
+        "oneOf": [
+          {
+            "type": "object",
+            "properties": {
+              "kind": {
+                "type": "string",
+                "const": "checkpoint_passed"
+              },
+              "moduleId": {
+                "type": "string",
+                "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+              },
+              "orModuleIds": {
+                "minItems": 1,
+                "maxItems": 4,
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+                }
+              },
+              "label": {
+                "type": "string",
+                "minLength": 1
+              },
+              "dimension": {
+                "type": "string",
+                "enum": [
+                  "understanding",
+                  "risk_control",
+                  "consistency",
+                  "reasoning",
+                  "rule_use",
+                  "uncertainty"
+                ]
+              }
+            },
+            "required": [
+              "kind",
+              "moduleId",
+              "label",
+              "dimension"
+            ],
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "kind": {
+                "type": "string",
+                "const": "skill_questions"
+              },
+              "skill": {
+                "type": "string",
+                "enum": [
+                  "market_fundamentals",
+                  "chart_reading",
+                  "technical_analysis",
+                  "fundamental_analysis",
+                  "risk_management",
+                  "strategy_understanding",
+                  "execution_discipline",
+                  "psychology",
+                  "backtesting_literacy",
+                  "statistical_reasoning"
+                ]
+              },
+              "count": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 500
+              },
+              "accuracy": {
+                "type": "number",
+                "exclusiveMinimum": 0,
+                "maximum": 1
+              },
+              "label": {
+                "type": "string",
+                "minLength": 1
+              },
+              "dimension": {
+                "type": "string",
+                "enum": [
+                  "understanding",
+                  "risk_control",
+                  "consistency",
+                  "reasoning",
+                  "rule_use",
+                  "uncertainty"
+                ]
+              }
+            },
+            "required": [
+              "kind",
+              "skill",
+              "count",
+              "accuracy",
+              "label",
+              "dimension"
+            ],
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "kind": {
+                "type": "string",
+                "const": "drill"
+              },
+              "drillKind": {
+                "type": "string",
+                "enum": [
+                  "find_the_trend",
+                  "breakout_or_fake",
+                  "where_is_the_stop",
+                  "size_it"
+                ]
+              },
+              "count": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 500
+              },
+              "accuracy": {
+                "type": "number",
+                "exclusiveMinimum": 0,
+                "maximum": 1
+              },
+              "label": {
+                "type": "string",
+                "minLength": 1
+              },
+              "dimension": {
+                "type": "string",
+                "enum": [
+                  "understanding",
+                  "risk_control",
+                  "consistency",
+                  "reasoning",
+                  "rule_use",
+                  "uncertainty"
+                ]
+              }
+            },
+            "required": [
+              "kind",
+              "drillKind",
+              "count",
+              "accuracy",
+              "label",
+              "dimension"
+            ],
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "kind": {
+                "type": "string",
+                "const": "clean_trades"
+              },
+              "count": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 500
+              },
+              "label": {
+                "type": "string",
+                "minLength": 1
+              },
+              "dimension": {
+                "type": "string",
+                "enum": [
+                  "understanding",
+                  "risk_control",
+                  "consistency",
+                  "reasoning",
+                  "rule_use",
+                  "uncertainty"
+                ]
+              }
+            },
+            "required": [
+              "kind",
+              "count",
+              "label",
+              "dimension"
+            ],
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "kind": {
+                "type": "string",
+                "const": "reviewed_trades"
+              },
+              "count": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 500
+              },
+              "label": {
+                "type": "string",
+                "minLength": 1
+              },
+              "dimension": {
+                "type": "string",
+                "enum": [
+                  "understanding",
+                  "risk_control",
+                  "consistency",
+                  "reasoning",
+                  "rule_use",
+                  "uncertainty"
+                ]
+              }
+            },
+            "required": [
+              "kind",
+              "count",
+              "label",
+              "dimension"
+            ],
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "kind": {
+                "type": "string",
+                "const": "replays"
+              },
+              "count": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 500
+              },
+              "minProcessScore": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1
+              },
+              "conditions": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 7
+              },
+              "label": {
+                "type": "string",
+                "minLength": 1
+              },
+              "dimension": {
+                "type": "string",
+                "enum": [
+                  "understanding",
+                  "risk_control",
+                  "consistency",
+                  "reasoning",
+                  "rule_use",
+                  "uncertainty"
+                ]
+              }
+            },
+            "required": [
+              "kind",
+              "count",
+              "minProcessScore",
+              "conditions",
+              "label",
+              "dimension"
+            ],
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "kind": {
+                "type": "string",
+                "const": "lab_cases"
+              },
+              "labKind": {
+                "type": "string",
+                "enum": [
+                  "red_flag",
+                  "scenario"
+                ]
+              },
+              "count": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 500
+              },
+              "minScore": {
+                "type": "number",
+                "exclusiveMinimum": 0,
+                "maximum": 1
+              },
+              "label": {
+                "type": "string",
+                "minLength": 1
+              },
+              "dimension": {
+                "type": "string",
+                "enum": [
+                  "understanding",
+                  "risk_control",
+                  "consistency",
+                  "reasoning",
+                  "rule_use",
+                  "uncertainty"
+                ]
+              }
+            },
+            "required": [
+              "kind",
+              "labKind",
+              "count",
+              "minScore",
+              "label",
+              "dimension"
+            ],
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "kind": {
+                "type": "string",
+                "const": "strategies_completed"
+              },
+              "count": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 500
+              },
+              "label": {
+                "type": "string",
+                "minLength": 1
+              },
+              "dimension": {
+                "type": "string",
+                "enum": [
+                  "understanding",
+                  "risk_control",
+                  "consistency",
+                  "reasoning",
+                  "rule_use",
+                  "uncertainty"
+                ]
+              }
+            },
+            "required": [
+              "kind",
+              "count",
+              "label",
+              "dimension"
+            ],
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "kind": {
+                "type": "string",
+                "const": "backtests_tested_out_of_sample"
+              },
+              "count": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 500
+              },
+              "label": {
+                "type": "string",
+                "minLength": 1
+              },
+              "dimension": {
+                "type": "string",
+                "enum": [
+                  "understanding",
+                  "risk_control",
+                  "consistency",
+                  "reasoning",
+                  "rule_use",
+                  "uncertainty"
+                ]
+              }
+            },
+            "required": [
+              "kind",
+              "count",
+              "label",
+              "dimension"
+            ],
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "kind": {
+                "type": "string",
+                "const": "mt_tasks"
+              },
+              "taskIds": {
+                "minItems": 1,
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+                }
+              },
+              "label": {
+                "type": "string",
+                "minLength": 1
+              },
+              "dimension": {
+                "type": "string",
+                "enum": [
+                  "understanding",
+                  "risk_control",
+                  "consistency",
+                  "reasoning",
+                  "rule_use",
+                  "uncertainty"
+                ]
+              }
+            },
+            "required": [
+              "kind",
+              "taskIds",
+              "label",
+              "dimension"
+            ],
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "kind": {
+                "type": "string",
+                "const": "traders_studied"
+              },
+              "count": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 500
+              },
+              "label": {
+                "type": "string",
+                "minLength": 1
+              },
+              "dimension": {
+                "type": "string",
+                "enum": [
+                  "understanding",
+                  "risk_control",
+                  "consistency",
+                  "reasoning",
+                  "rule_use",
+                  "uncertainty"
+                ]
+              }
+            },
+            "required": [
+              "kind",
+              "count",
+              "label",
+              "dimension"
+            ],
+            "additionalProperties": false
+          }
+        ]
+      }
+    },
+    "traderIds": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+      }
+    }
+  },
+  "required": [
+    "id",
+    "type",
+    "title",
+    "summary",
+    "skills",
+    "criteria"
+  ],
+  "additionalProperties": false
+}

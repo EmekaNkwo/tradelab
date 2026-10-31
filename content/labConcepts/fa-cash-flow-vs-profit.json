@@ -1,0 +1,25 @@
+{
+  "id": "fa-cash-flow-vs-profit",
+  "skills": ["fundamental_analysis"],
+  "lab": "fundamental",
+  "level": "beginner",
+  "order": 3,
+  "title": "Cash flow vs profit",
+  "summary": "Operating cash flow is the cash the business actually collected. Free cash flow = operating cash flow − capital expenditure. Over time, cash should roughly follow profit.",
+  "unreliableWhen": "In a single year, when a big order or a delayed payment shifts cash between years, or for a young company investing heavily on purpose.",
+  "goodExample": "A fictional food maker's operating cash flow is above its net income every year, and free cash flow covers its dividend.",
+  "badExample": "A fictional wholesaler reports rising profit while its operating cash flow falls almost to zero and it borrows to fill the gap.",
+  "lessonIds": [
+    "st-cash-flow"
+  ],
+  "chart": null,
+  "drillKind": null,
+  "scenarioIds": [],
+  "companyIds": [
+    "example-quickling-apps",
+    "example-steadybrook-foods",
+    "example-gadgetmoor-wholesale",
+    "example-faxworth-machines"
+  ],
+  "redFlagCaseIds": []
+}

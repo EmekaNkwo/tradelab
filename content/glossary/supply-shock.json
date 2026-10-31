@@ -1,0 +1,13 @@
+{
+  "id": "supply-shock",
+  "term": "Supply shock",
+  "aliases": ["supply disruption", "outage", "supply disruptions"],
+  "definition": {
+    "simple": "A sudden, unexpected change in how much of something can be produced or delivered, such as a mine flooding or a pipeline closing.",
+    "balanced": "A negative supply shock removes supply and can push prices up, especially if [[inventory-report|inventories]] are low. How much it matters depends on its size, how long it lasts, whether other producers can make up the gap, and what the market had already expected. Prices can jump on the news and fall back once the picture is clearer."
+  },
+  "related": ["commodity", "geopolitical-risk", "inventory-report", "volatility"],
+  "markets": ["commodities", "futures"],
+  "level": "beginner",
+  "sourceIds": []
+}

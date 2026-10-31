@@ -1,0 +1,101 @@
+{
+  "title": "TradeLab psychScenarios",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+    },
+    "topic": {
+      "type": "string",
+      "enum": [
+        "fomo",
+        "revenge-trading",
+        "overtrading",
+        "fear-of-losses",
+        "greed",
+        "overconfidence",
+        "confirmation",
+        "loss-aversion",
+        "recency",
+        "sunk-cost",
+        "impulsive-entries",
+        "moving-stops",
+        "sizing-up-after-losses",
+        "quitting-after-normal-losing-streak"
+      ]
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "situation": {
+      "type": "string",
+      "minLength": 1
+    },
+    "question": {
+      "type": "string",
+      "minLength": 1
+    },
+    "responses": {
+      "minItems": 3,
+      "maxItems": 4,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z]$"
+          },
+          "text": {
+            "type": "string",
+            "minLength": 1
+          },
+          "quality": {
+            "type": "string",
+            "enum": [
+              "helpful",
+              "mixed",
+              "harmful"
+            ]
+          },
+          "explanation": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "id",
+          "text",
+          "quality",
+          "explanation"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "takeaway": {
+      "type": "string",
+      "minLength": 1
+    },
+    "glossaryIds": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+      }
+    }
+  },
+  "required": [
+    "id",
+    "topic",
+    "title",
+    "situation",
+    "question",
+    "responses",
+    "takeaway",
+    "glossaryIds"
+  ],
+  "additionalProperties": false
+}

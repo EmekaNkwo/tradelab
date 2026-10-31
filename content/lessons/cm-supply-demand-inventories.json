@@ -1,0 +1,142 @@
+{
+  "id": "cm-supply-demand-inventories",
+  "moduleId": "commodities",
+  "title": "Supply, demand and inventory reports",
+  "level": "beginner",
+  "estimatedMinutes": 20,
+  "inOneLine": {
+    "simple": "When more is produced than used, stored amounts rise. When less is produced than used, they fall. An [[inventory-report|inventory report]] shows which is happening.",
+    "balanced": "Inventory change ≈ supply − demand over the period. A draw (fall) bigger than expected can suggest tighter supply; a surprise build the opposite. As with any release, the [[surprise]] against the [[consensus-forecast|consensus]] matters more than the headline, and the reaction is never certain."
+  },
+  "explain": {
+    "simple": "Think of a giant tank. Production and imports pour in; factories, refineries and buyers take out. If more goes in than comes out, the level rises: that is a build. If more comes out, the level falls: that is a draw. Many commodities have regular reports on stored amounts. Before each report, forecasters publish what they expect. Prices often react to the gap between the actual change and the expected change, not to the change itself. All countries, reports and figures here are fictional.",
+    "balanced": "Supply comes from production, imports and stored stock; demand from use and exports. Production can take months or years to change, so short-term moves are often about stocks in storage. Reports have several parts, such as crude, fuel products and regional figures, and they can disagree. Traders may also have expected something different from the published consensus. So a big draw might lift prices, do nothing, or even be followed by a fall if it was already priced in. Treat each report as a scenario with several possible outcomes."
+  },
+  "realNumbers": {
+    "assumptions": [
+      "Fictional country: Northland. Fictional weekly report on crude oil in storage",
+      "Supply into storage this week: 10.0 million barrels; taken out: 11.5 million",
+      "Consensus forecast: a draw of 0.5 million barrels"
+    ],
+    "steps": [
+      "Inventory change = 10.0 − 11.5 = −1.5 million barrels, a draw.",
+      "Surprise = actual − consensus = −1.5 − (−0.5) = −1.0 million barrels.",
+      "The draw was 1.0 million barrels bigger than expected, which hints at tighter supply.",
+      "Scenario thinking: price might rise, rise then fade, or barely move. Do not pick one as certain."
+    ]
+  },
+  "anotherExample": {
+    "assumptions": [
+      "Same fictional Northland report, a different week",
+      "Consensus: a draw of 0.5 million barrels",
+      "Actual: a build of 0.8 million barrels"
+    ],
+    "steps": [
+      "Surprise = +0.8 − (−0.5) = +1.3 million barrels.",
+      "More is in storage than expected, which hints at looser supply or weaker use.",
+      "Story 1: prices fall as traders see more supply than they thought.",
+      "Story 2: fuel stocks drew sharply in the same report, and that detail dominates. Prices hardly move.",
+      "Same headline surprise, different outcomes, depending on the details and on what was priced in."
+    ]
+  },
+  "explainSimpler": "Watch the tank level and compare it with what people guessed. A bigger fall than guessed can mean tight supply, but the market may already have guessed right.",
+  "commonMistake": "Reading a draw as 'bad' because a number fell. A draw means more was used than added, which points to tighter supply, not weaker demand. And the sign of the surprise matters more than the sign of the change.",
+  "quickCheck": [
+    {
+      "id": "cm-supply-demand-inventories-q1",
+      "prompt": "Fictional report: consensus a build of 1.0 million barrels, actual a draw of 2.0 million. What is the surprise?",
+      "options": [
+        {
+          "id": "a",
+          "text": "+3.0 million barrels",
+          "explanation": "No: actual minus consensus is −2.0 − (+1.0), which is negative."
+        },
+        {
+          "id": "b",
+          "text": "−1.0 million barrels",
+          "explanation": "No: that adds the two numbers instead of subtracting."
+        },
+        {
+          "id": "c",
+          "text": "−3.0 million barrels",
+          "explanation": "Right: −2.0 − (+1.0) = −3.0 million barrels, a much tighter week than expected."
+        }
+      ],
+      "correctOptionIds": [
+        "c"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "inventory-report",
+        "surprise"
+      ]
+    },
+    {
+      "id": "cm-supply-demand-inventories-q2",
+      "prompt": "Stored amounts of a commodity fall more than expected. What is the most accurate reading?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Supply is likely tighter than thought, but the price reaction is not certain",
+          "explanation": "Right: a tendency only. It may have been priced in, or other details may dominate."
+        },
+        {
+          "id": "b",
+          "text": "Demand is weak, so the price will certainly fall this week",
+          "explanation": "No: a draw means use exceeded supply, and no reaction is certain."
+        },
+        {
+          "id": "c",
+          "text": "Supply may be looser than thought, so prices may slip",
+          "explanation": "No: a bigger draw than expected points to tighter supply, not looser."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "inventory-report"
+      ]
+    },
+    {
+      "id": "cm-supply-demand-inventories-q3",
+      "prompt": "In one week, 8.0 units go into storage and 6.5 units come out. What happened?",
+      "options": [
+        {
+          "id": "a",
+          "text": "A build of 1.5 units",
+          "explanation": "Right: 8.0 − 6.5 = +1.5, so stored amounts rose."
+        },
+        {
+          "id": "b",
+          "text": "A draw of 1.5 units",
+          "explanation": "No: more went in than came out, so the level rose."
+        },
+        {
+          "id": "c",
+          "text": "A build of 14.5 units",
+          "explanation": "No: that adds the flows instead of subtracting them."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "inventory-report"
+      ]
+    }
+  ],
+  "doItNow": {
+    "kind": "fundamental",
+    "instructions": "Open the Fundamental Analysis Lab and work through the fictional weekly crude inventory scenario. Before you look at the reactions, write down the surprise and two different ways price could react. Then compare your list with the reactions in the scenario."
+  },
+  "glossaryIds": [
+    "inventory-report",
+    "surprise",
+    "consensus-forecast",
+    "commodity"
+  ],
+  "sourceIds": []
+}

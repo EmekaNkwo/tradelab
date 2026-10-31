@@ -1,0 +1,25 @@
+{
+  "id": "fa-macro-surprises",
+  "skills": ["fundamental_analysis"],
+  "lab": "fundamental",
+  "level": "intermediate",
+  "order": 43,
+  "title": "Surprises vs. expectations",
+  "summary": "The [[surprise]] is actual minus [[consensus-forecast]], but the reaction also depends on what was already [[priced-in|priced in]] and how traders were positioned. The same number can bring different reactions on different days.",
+  "unreliableWhen": "When positioning is unclear, when the consensus is not what traders really expected, when other parts of a report matter more than the headline, or when a bigger story dominates.",
+  "goodExample": "A learner compares the calm and crowded fictional Westmark inflation scenarios: same +0.4 surprise, different run-ups. They write a different most-plausible reaction for each and one outcome that would prove them wrong.",
+  "badExample": "A learner decides 'better than expected means up' and ignores a three-week run-up in which many traders had already bought. The price falls on the news.",
+  "lessonIds": [
+    "fm-priced-in",
+    "fx-expected-vs-actual"
+  ],
+  "chart": null,
+  "drillKind": null,
+  "scenarioIds": [
+    "macro-westmark-inflation-calm",
+    "macro-westmark-inflation-crowded",
+    "macro-westmark-gdp-revision"
+  ],
+  "companyIds": [],
+  "redFlagCaseIds": []
+}

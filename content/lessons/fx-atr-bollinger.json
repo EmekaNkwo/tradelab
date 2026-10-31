@@ -1,0 +1,140 @@
+{
+  "id": "fx-atr-bollinger",
+  "moduleId": "forex-indicators",
+  "title": "ATR and Bollinger Bands: measuring volatility",
+  "level": "intermediate",
+  "estimatedMinutes": 20,
+  "inOneLine": {
+    "simple": "ATR and Bollinger Bands measure how much price has been moving. Neither tells you which way it will move next.",
+    "balanced": "[[atr|ATR]] averages the true range of recent candles. [[bollinger-bands|Bollinger Bands]] put bands 2 standard deviations around a 20-period average. Both describe past volatility and are slow to react to sudden changes."
+  },
+  "explain": {
+    "simple": "ATR answers: how far has price typically moved per candle lately? On EUR/USD H1, an ATR of 0.00120 means about 12 pips per candle. That helps you see if a stop is tiny compared with normal movement. Bollinger Bands draw a line above and below an average. When price has been jumpy, the bands spread out. When it has been calm, they squeeze together. Neither tool says up or down.",
+    "balanced": "True range = the largest of high − low, |high − previous close| and |low − previous close|, so it includes gaps. ATR 14 averages it, with smoothing in most apps. ATR is backward-looking: before news it may be low, and then one candle is several times larger. Bollinger (20, 2): middle = SMA 20, bands = middle ± 2 × the standard deviation of the last 20 closes. A touch of the upper band is not \"too high\". In strong trends price can ride a band for many candles. A squeeze shows recent calm, and the move that follows can go either way, or not come at all."
+  },
+  "realNumbers": {
+    "assumptions": [
+      "Illustrative EUR/USD H1 candle",
+      "Previous close 1.10000; this candle: high 1.10300, low 1.10050"
+    ],
+    "steps": [
+      "High − low = 1.10300 − 1.10050 = 25 pips.",
+      "|High − previous close| = 1.10300 − 1.10000 = 30 pips.",
+      "|Low − previous close| = 1.10050 − 1.10000 = 5 pips.",
+      "True range = the largest = 30 pips. It is bigger than the candle itself because price gapped up from the previous close.",
+      "If ATR 14 is 12 pips, a 5-pip stop is less than half a typical candle's movement and could be hit by ordinary noise. A wider stop needs a smaller position to keep the same money at risk."
+    ]
+  },
+  "anotherExample": {
+    "assumptions": [
+      "Illustrative Bollinger (20, 2) on EUR/USD H4",
+      "Middle line (SMA 20) = 1.10000; standard deviation of the last 20 closes = 0.00150"
+    ],
+    "steps": [
+      "Upper band = 1.10000 + 2 × 0.00150 = 1.10300.",
+      "Lower band = 1.10000 − 2 × 0.00150 = 1.09700.",
+      "Band width = 1.10300 − 1.09700 = 0.00600 = 60 pips.",
+      "Price closes at 1.10320, above the upper band. In a strong uptrend this can happen candle after candle. Selling only because price is outside the band would mean selling into that trend."
+    ]
+  },
+  "explainSimpler": "ATR is how big the waves have been. Bollinger Bands draw a lane that widens with bigger waves. Neither tells you which way the next wave goes.",
+  "commonMistake": "Treating a Bollinger Band touch as a reversal signal, or a squeeze as a sign of which way price will break. Another mistake is trusting ATR right before major news, when the next candle may be far bigger than recent ones.",
+  "quickCheck": [
+    {
+      "id": "fx-atr-bollinger-q1",
+      "prompt": "Previous close 1.20000. Candle high 1.20100, low 1.19750. What is the true range?",
+      "options": [
+        {
+          "id": "a",
+          "text": "35 pips",
+          "explanation": "Right: high − low = 35 pips, which is larger than 10 pips (high − previous close) and 25 pips (previous close − low)."
+        },
+        {
+          "id": "b",
+          "text": "3.5 pips",
+          "explanation": "No: 1 pip is 0.00010, so a gap of 0.00350 is 35 pips, not 3.5. True range is the largest of high − low (35), high − previous close (10) and previous close − low (25)."
+        },
+        {
+          "id": "c",
+          "text": "25 pips",
+          "explanation": "No: that is only previous close − low."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "intermediate",
+      "glossaryIds": [
+        "atr"
+      ]
+    },
+    {
+      "id": "fx-atr-bollinger-q2",
+      "prompt": "Bollinger Bands are squeezed very tight. What does that tell you?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Recent price movement has been small",
+          "explanation": "Right: narrow bands only describe recent calm."
+        },
+        {
+          "id": "b",
+          "text": "A breakout upward is due next",
+          "explanation": "No: a squeeze says nothing about direction, and a big move may not come at all."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "intermediate",
+      "glossaryIds": [
+        "bollinger-bands"
+      ]
+    },
+    {
+      "id": "fx-atr-bollinger-q3",
+      "prompt": "ATR 14 on EUR/USD H1 reads 0.00090. What does it mean?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Price has moved about 9 pips per candle recently, in either direction",
+          "explanation": "Right: ATR measures size of movement, not direction."
+        },
+        {
+          "id": "b",
+          "text": "Price will rise 9 pips next hour",
+          "explanation": "No: ATR has no direction and does not forecast."
+        },
+        {
+          "id": "c",
+          "text": "Price has moved about 90 pips per candle recently, in either direction",
+          "explanation": "No: 0.00090 is 9 pips, not 90, because 1 pip is 0.00010."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "intermediate",
+      "glossaryIds": [
+        "atr",
+        "pip"
+      ]
+    }
+  ],
+  "doItNow": {
+    "kind": "metatrader",
+    "instructions": "On your demo account, add a moving average, Bollinger Bands, RSI, MACD and ATR to a EUR/USD chart, check their settings, then remove them. Follow the task card.",
+    "mtTaskId": "mt-add-indicators"
+  },
+  "homework": "In Chart Lab, choose the News shock scenario, turn on Bollinger (20, 2) and show ATR 14 below the chart. Long-press to compare the ATR just before the shock with the range of the shock candle. Then choose the Strong uptrend scenario and find a stretch where price rode along the upper band. Finally, pick one indicator from this module and write two sentences: what it measures, and one market condition where it misleads.",
+  "glossaryIds": [
+    "atr",
+    "bollinger-bands",
+    "moving-average",
+    "indicator",
+    "stop-loss",
+    "gap",
+    "pip"
+  ],
+  "sourceIds": []
+}

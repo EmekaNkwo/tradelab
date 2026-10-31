@@ -1,0 +1,134 @@
+appId: com.tradelab.app
+name: 11 Final assessment
+tags:
+  - e2e
+  - journey
+---
+# Spec §36 step 11: the final assessment.
+# TradeLab's graded assessment is the module checkpoint (spec §7, §27): a class of
+# kind 'checkpoint' (app/class/[id].tsx CheckpointView, pass mark 80%,
+# content/quizzes/forex-basics-checkpoint.json). This flow opens the Forex basics
+# checkpoint class from the program's class list, passes it with the known
+# correct answers, then opens the Practice Progress Review (spec §28,
+# app/(tabs)/more/progress-review.tsx), the program-level learning assessment.
+#
+# NOTE: the checkpoint is opened from "All classes" (app/(tabs)/home/program.tsx
+# ClassHistory), i.e. possibly ahead of schedule. The app allows opening any
+# class there. If you want it in schedule order instead, repeat 03 until Home
+# shows "Checkpoint class".
+# Needs: 01 (works after 10c too, since the restore brings the schedule back).
+- launchApp:
+    appId: com.tradelab.app
+- extendedWaitUntil:
+    visible:
+      id: "home-screen"
+    timeout: 30000
+- scrollUntilVisible:
+    element:
+      text: "(Timeline and settings|Catch up)"
+    direction: DOWN
+- tapOn: "(Timeline and settings|Catch up)"
+- extendedWaitUntil:
+    visible:
+      id: "program-screen"
+    timeout: 10000
+# Rows: title `${date} · ${Lesson|Review|Checkpoint}`, subtitle
+# `${module title} · ${Planned|In progress|Done|Skipped}[ · score]`.
+# The first checkpoint row belongs to the first module, Forex basics.
+- scrollUntilVisible:
+    element:
+      text: ".* · Checkpoint"
+    direction: DOWN
+    timeout: 60000
+- assertVisible: "Forex basics · (Planned|In progress|Done|Skipped).*"
+- takeScreenshot: 11-checkpoint-row
+- tapOn:
+    text: ".* · Checkpoint"
+    index: 0
+- extendedWaitUntil:
+    visible:
+      id: "class-screen"
+    timeout: 20000
+# A finished checkpoint opens read-only ("Class (review)"); stop there.
+- evalScript: ${output.checkpointDone = false}
+# Give "Completed class" a moment to render before deciding the branch.
+- extendedWaitUntil:
+    visible: "Completed class"
+    timeout: 3000
+    optional: true
+- runFlow:
+    when:
+      visible: "Completed class"
+    commands:
+      - evalScript: ${output.checkpointDone = true}
+      - takeScreenshot: 11-checkpoint-already-done
+      # Back to Home (class -> program screen -> Home), where run-class would
+      # also have ended. Needed after a restore that already holds the passed
+      # checkpoint (device run 2026-10-30, after 10c).
+      - back
+      - extendedWaitUntil:
+          visible:
+            id: "program-screen"
+          timeout: 10000
+      - back
+      - extendedWaitUntil:
+          visible:
+            id: "home-screen"
+          timeout: 10000
+# A flag, not "Completed class" not visible: after the Back presses above,
+# that text is gone from Home too.
+- runFlow:
+    when:
+      true: ${!output.checkpointDone}
+    commands:
+      - runFlow: subflows/run-class.yaml
+# run-class ends on Home; the result is recorded in the class list as "Done · NN%".
+- scrollUntilVisible:
+    element:
+      text: "(Timeline and settings|Catch up)"
+    direction: DOWN
+- tapOn: "(Timeline and settings|Catch up)"
+- scrollUntilVisible:
+    element:
+      text: "Forex basics · Done · [0-9]+%"
+    direction: DOWN
+    timeout: 60000
+- takeScreenshot: 11-checkpoint-passed
+- back
+
+# ---- Learn tab: module card shows the checkpoint as passed ----
+- runFlow:
+    file: subflows/open-tab.yaml
+    env:
+      TAB: Learn
+- scrollUntilVisible:
+    element:
+      id: "module-progress-forex-basics"
+    direction: DOWN
+- assertVisible: "[0-9]+ of 4 lessons · checkpoint passed"
+
+# ---- Practice Progress Review ----
+- runFlow:
+    file: subflows/open-tab.yaml
+    env:
+      TAB: More
+- tapOn:
+    id: "more-progressReview"        # ListRow "Practice Progress Review"
+- extendedWaitUntil:
+    visible:
+      id: "progress-review-screen"
+    timeout: 15000
+- assertVisible: "Practice Progress Review · Practical Forex Trader"
+- scrollUntilVisible:
+    element:
+      text: "Learning objectives"
+    direction: DOWN
+- scrollUntilVisible:
+    element:
+      id: "review-objective-forex-basics"
+    direction: DOWN
+- scrollUntilVisible:
+    element:
+      id: "review-rules"
+    direction: DOWN
+- takeScreenshot: 11-progress-review

@@ -1,0 +1,13 @@
+{
+  "id": "stop-order",
+  "term": "Stop order",
+  "aliases": ["buy stop", "sell stop"],
+  "definition": {
+    "simple": "An order to buy once price rises to a level above now, or sell once it falls to a level below now.",
+    "balanced": "A buy stop sits above the current [[ask]]; a sell stop sits below the current [[bid]]. When price reaches the level, it becomes a [[market-order]], so the fill can be worse than the level. A [[stop-loss]] works the same way."
+  },
+  "related": ["pending-order", "limit-order", "stop-loss", "slippage"],
+  "markets": [],
+  "level": "beginner",
+  "sourceIds": []
+}

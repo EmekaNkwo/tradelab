@@ -1,0 +1,155 @@
+{
+  "id": "forex-backtest-plan-checkpoint",
+  "title": "Checkpoint: backtesting my plan",
+  "passMark": 0.8,
+  "questions": [
+    {
+      "id": "forex-backtest-plan-checkpoint-q1",
+      "prompt": "Your first 6 replay trades were all losses. What is the most sensible view?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The rules are broken, so drop them now and start again with a different method",
+          "explanation": "No: 6 trades is a tiny sample. Losing streaks happen even with sound rules."
+        },
+        {
+          "id": "b",
+          "text": "Too early to judge; check you followed the plan and keep collecting trades",
+          "explanation": "Right: a small sample says little."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "sample-size"
+      ]
+    },
+    {
+      "id": "forex-backtest-plan-checkpoint-q2",
+      "prompt": "Which is an example of look-ahead bias?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Drawing support on a past chart using a low that formed after your entry",
+          "explanation": "Right: you used information that did not exist at the time."
+        },
+        {
+          "id": "b",
+          "text": "Testing on a quiet, ranging period you chose in advance",
+          "explanation": "No: no future information is used. Picking periods before you look, including quiet ones, is a good way to reduce selection bias."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "look-ahead-bias"
+      ]
+    },
+    {
+      "id": "forex-backtest-plan-checkpoint-q3",
+      "prompt": "You only test periods you remember as big trends. What bias is this?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Look-ahead bias",
+          "explanation": "No: look-ahead bias is using future information."
+        },
+        {
+          "id": "b",
+          "text": "Selection bias",
+          "explanation": "Right: this is selection bias, also called cherry-picking. You only test what stood out, and leave out the rest."
+        },
+        {
+          "id": "c",
+          "text": "Survivorship bias",
+          "explanation": "No: survivorship bias is copying a method because it is one of the ones that happened to work. Picking only the periods you remember is selection bias."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "survivorship-bias"
+      ]
+    },
+    {
+      "id": "forex-backtest-plan-checkpoint-q4",
+      "prompt": "You add a filter that removes 5 past losers. How do you know if it helps?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The past results improved, so it helps",
+          "explanation": "No: it was chosen from those trades. That is overfitting."
+        },
+        {
+          "id": "b",
+          "text": "Test it as a new plan version on fresh periods",
+          "explanation": "Right: only new data can show that."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "overfitting"
+      ]
+    },
+    {
+      "id": "forex-backtest-plan-checkpoint-q5",
+      "prompt": "Fictional test: 40 trades, 12 wins of +3R, 28 losses of −1R. Net result?",
+      "options": [
+        {
+          "id": "a",
+          "text": "+8R",
+          "explanation": "Right: 12 × 3 = +36R, 28 × −1 = −28R, net +8R."
+        },
+        {
+          "id": "b",
+          "text": "+36R",
+          "explanation": "No: that ignores the losses."
+        },
+        {
+          "id": "c",
+          "text": "−8R",
+          "explanation": "No: 36R − 28R is positive."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "sample-size"
+      ]
+    },
+    {
+      "id": "forex-backtest-plan-checkpoint-q6",
+      "prompt": "What can a 50-trade replay test show you?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Whether the plan has a real edge that will keep working on a live account in future",
+          "explanation": "No: past tests promise nothing about the future."
+        },
+        {
+          "id": "b",
+          "text": "How your rules behave in different conditions and how well you follow them",
+          "explanation": "Right: it is a learning tool, not a forecast."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "backtest"
+      ]
+    }
+  ]
+}

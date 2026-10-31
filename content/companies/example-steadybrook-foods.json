@@ -1,0 +1,68 @@
+{
+  "id": "example-steadybrook-foods",
+  "name": "Example Steadybrook Pantry Foods (fictional)",
+  "sector": "Packaged food (fictional)",
+  "summary": "A fictional food maker with slow, steady growth of about 2% a year. It turns most of its profit into cash, pays out roughly three quarters of its profit as dividends, and trades on a low P/E.",
+  "assumptions": "All figures are fictional and in millions of USD, except the share price. The same tax rate (25% of pre-tax profit), tax rules and accounting apply to every company. No one-off items, share issues or buybacks. Ratios use Year 3 and the current share price. Simulated for learning; not a real firm.",
+  "currency": "USD",
+  "sharePrice": 6.8,
+  "sharesOutstanding": 200,
+  "years": [
+    {
+      "label": "Year 1",
+      "revenue": 1000,
+      "costOfSales": 600,
+      "operatingExpenses": 252,
+      "interest": 4,
+      "tax": 36.0,
+      "operatingCashFlow": 140,
+      "capitalExpenditure": 30,
+      "dividendsPaid": 80,
+      "cash": 60,
+      "debt": 100,
+      "equity": 600
+    },
+    {
+      "label": "Year 2",
+      "revenue": 1020,
+      "costOfSales": 612,
+      "operatingExpenses": 256,
+      "interest": 4,
+      "tax": 37.0,
+      "operatingCashFlow": 146,
+      "capitalExpenditure": 30,
+      "dividendsPaid": 84,
+      "cash": 92,
+      "debt": 100,
+      "equity": 627.0
+    },
+    {
+      "label": "Year 3",
+      "revenue": 1040,
+      "costOfSales": 624,
+      "operatingExpenses": 260,
+      "interest": 4,
+      "tax": 38.0,
+      "operatingCashFlow": 150,
+      "capitalExpenditure": 32,
+      "dividendsPaid": 87,
+      "cash": 123,
+      "debt": 100,
+      "equity": 654.0
+    }
+  ],
+  "notes": [
+    "Operating cash flow is higher than net income every year, and free cash flow comfortably covers the dividend.",
+    "Return on capital of about 21% suggests the business earns well on the money tied up in it, under these fictional figures.",
+    "Slow growth: the low P/E may reflect that buyers expect little growth. A high payout leaves less to reinvest.",
+    "Risk to watch: a cheaper rival or a change in what shoppers want could squeeze the steady margin."
+  ],
+  "glossaryIds": [
+    "dividend",
+    "dividend-yield",
+    "payout-ratio",
+    "free-cash-flow",
+    "return-on-capital",
+    "value-investing"
+  ]
+}

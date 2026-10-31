@@ -1,0 +1,19 @@
+{
+  "id": "overbought-oversold",
+  "term": "Overbought and oversold",
+  "aliases": [
+    "overbought",
+    "oversold"
+  ],
+  "definition": {
+    "simple": "Labels for an indicator reading that is high (overbought) or low (oversold) compared with its usual range.",
+    "balanced": "For RSI, 70 and 30 are common default lines. The labels say price has moved a lot in one direction recently. They do not say it must turn. In a strong trend, overbought or oversold readings can last a long time."
+  },
+  "related": [
+    "rsi",
+    "indicator"
+  ],
+  "markets": [],
+  "level": "intermediate",
+  "sourceIds": []
+}

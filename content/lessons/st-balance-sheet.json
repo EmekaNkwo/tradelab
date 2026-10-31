@@ -1,0 +1,141 @@
+{
+  "id": "st-balance-sheet",
+  "moduleId": "stocks-company-analysis",
+  "title": "The balance sheet: cash, debt and return on capital",
+  "level": "beginner",
+  "estimatedMinutes": 20,
+  "inOneLine": {
+    "simple": "The balance sheet shows what a company has and what it owes on one day. Debt minus cash is net debt, and profit compared with all the money tied up shows how well that money is used.",
+    "balanced": "[[balance-sheet|Balance sheet]]: cash, debt and equity. [[net-debt|Net debt]] = debt − cash. [[return-on-capital|Return on capital]] = operating profit ÷ (debt + equity). [[return-on-equity|ROE]] = net income ÷ equity."
+  },
+  "explain": {
+    "simple": "The income statement covers a whole year. The balance sheet is a snapshot of one day. Start with three lines. Cash is money in the bank. Debt is money borrowed that must be repaid with interest. Equity is roughly what would be left for shareholders if the company sold everything at its book value and paid all its debts. Debt minus cash is net debt: what the company would still owe if it used all its cash to repay lenders.",
+    "balanced": "Debt is not bad in itself, but it adds a fixed cost, interest, that must be paid in good years and bad. Compare debt with operating profit: if operating profit covers interest many times over, a dip is easier to survive. Return on capital compares operating profit with all the money lenders and owners have put in, so it shows how productively that money is used. Return on equity can look high just because a company borrowed a lot, so read it with debt. This app uses operating profit ÷ (debt + equity); other sources may define return on capital differently."
+  },
+  "realNumbers": {
+    "assumptions": [
+      "Example Quickling Apps Co (fictional), Year 3, millions of USD",
+      "Cash 71; debt 160; equity 183; operating profit 40; interest 16; net income 18"
+    ],
+    "steps": [
+      "Net debt = 160 − 71 = 89.",
+      "Return on capital = 40 ÷ (160 + 183) = 40 ÷ 343 = about 11.7%.",
+      "Return on equity = 18 ÷ 183 = about 9.8%.",
+      "Operating profit covers interest 40 ÷ 16 = 2.5 times. A fall in operating profit of more than 60% would leave too little to cover the interest."
+    ]
+  },
+  "anotherExample": {
+    "assumptions": [
+      "Example Faxworth Office Machines (fictional), millions of USD",
+      "Debt 150 in every year; interest 12 every year",
+      "Operating profit: Year 1 80, Year 3 40; cash in Year 3 71"
+    ],
+    "steps": [
+      "Net debt in Year 3 = 150 − 71 = 79.",
+      "Interest as a share of operating profit: Year 1 = 12 ÷ 80 = 15%; Year 3 = 12 ÷ 40 = 30%.",
+      "The debt did not grow, but the profit that pays for it halved.",
+      "The same debt is riskier for a company whose profit is shrinking."
+    ]
+  },
+  "explainSimpler": "Cash minus debt shows the cushion. Profit compared with all the money tied up shows how hard that money works.",
+  "commonMistake": "Judging debt by its size alone. 150 million of debt can be easy for one company and dangerous for another; compare it with profit and cash flow.",
+  "quickCheck": [
+    {
+      "id": "st-balance-sheet-q1",
+      "prompt": "Debt 90, cash 120 (fictional, millions USD). What is net debt?",
+      "options": [
+        {
+          "id": "a",
+          "text": "−30: the company has net cash",
+          "explanation": "Right: 90 − 120 = −30, so cash is larger than debt."
+        },
+        {
+          "id": "b",
+          "text": "30: the company owes more than it holds",
+          "explanation": "No: cash is larger than debt here."
+        },
+        {
+          "id": "c",
+          "text": "210: debt and cash added together",
+          "explanation": "No: net debt subtracts cash from debt."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "net-debt"
+      ]
+    },
+    {
+      "id": "st-balance-sheet-q2",
+      "prompt": "Operating profit 60, debt 100, equity 200 (fictional). What is return on capital, as this app defines it?",
+      "options": [
+        {
+          "id": "a",
+          "text": "30%",
+          "explanation": "No: that uses equity only."
+        },
+        {
+          "id": "b",
+          "text": "60%",
+          "explanation": "No: that uses debt only."
+        },
+        {
+          "id": "c",
+          "text": "20%",
+          "explanation": "Right: 60 ÷ (100 + 200) = 0.20."
+        }
+      ],
+      "correctOptionIds": [
+        "c"
+      ],
+      "level": "intermediate",
+      "glossaryIds": [
+        "return-on-capital"
+      ]
+    },
+    {
+      "id": "st-balance-sheet-q3",
+      "prompt": "Company A and Company B each owe 200. A's operating profit is 100; B's is 20. Which is true?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Both carry the same debt risk",
+          "explanation": "No: the same debt weighs far more on the smaller profit."
+        },
+        {
+          "id": "b",
+          "text": "B's debt is far riskier than A's",
+          "explanation": "Right: B has much less profit to pay interest and repay debt."
+        },
+        {
+          "id": "c",
+          "text": "A's debt is riskier, as A earns more",
+          "explanation": "No: more profit makes the same debt easier to carry."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "net-debt",
+        "balance-sheet"
+      ]
+    }
+  ],
+  "doItNow": {
+    "kind": "fundamental",
+    "instructions": "Open the Fundamental Analysis Lab → Company analysis. For each fictional company, write down Year 3 net debt and return on capital. Which company has net cash? Which has the lowest return on capital, and is its debt growing or shrinking compared with its profit?"
+  },
+  "glossaryIds": [
+    "balance-sheet",
+    "net-debt",
+    "return-on-capital",
+    "return-on-equity",
+    "earnings"
+  ],
+  "sourceIds": []
+}

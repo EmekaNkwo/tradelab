@@ -1,0 +1,14 @@
+{
+  "id": "currency-pair",
+  "term": "Currency pair",
+  "aliases": ["pair"],
+  "definition": {
+    "simple": "Two currencies quoted against each other, like EUR/USD. The price says how much of the second you need for one of the first.",
+    "balanced": "A forex quote of the form BASE/QUOTE: the price of one unit of the [[base-currency]] in units of the [[quote-currency]]."
+  },
+  "example": "EUR/USD 1.1000: one euro costs 1.10 US dollars.",
+  "related": ["base-currency", "quote-currency"],
+  "markets": ["forex"],
+  "level": "beginner",
+  "sourceIds": []
+}

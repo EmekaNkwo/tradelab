@@ -1,0 +1,26 @@
+{
+  "id": "commodity",
+  "term": "Commodity",
+  "aliases": [
+    "commodities",
+    "raw material",
+    "raw materials"
+  ],
+  "definition": {
+    "simple": "A basic raw material that is much the same whoever produces it, such as gold, oil, natural gas, wheat or coffee.",
+    "balanced": "Commodities are often grouped as metals (gold, silver), energy (crude oil, natural gas) and agricultural goods (grains, soft crops, livestock). Their prices move with supply and demand, [[inventory-report|inventories]], [[seasonality]], weather, politics and currencies. Traders can gain exposure through futures contracts, funds or CFDs, each with its own costs and risks."
+  },
+  "related": [
+    "inventory-report",
+    "seasonality",
+    "supply-shock",
+    "storage-cost",
+    "futures-contract"
+  ],
+  "markets": [
+    "commodities",
+    "futures"
+  ],
+  "level": "beginner",
+  "sourceIds": []
+}

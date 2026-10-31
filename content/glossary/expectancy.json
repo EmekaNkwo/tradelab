@@ -1,0 +1,22 @@
+{
+  "id": "expectancy",
+  "term": "Expectancy",
+  "aliases": [
+    "expected value",
+    "EV",
+    "expected value per trade"
+  ],
+  "definition": {
+    "simple": "The average result per trade you would get over many trades, if your numbers held.",
+    "balanced": "Expectancy = [[win-rate]] × average win − loss rate × average loss. It is often given in R. It is arithmetic on your inputs. Real win rates and averages change, and a positive past figure does not guarantee a future one."
+  },
+  "example": "Example inputs: win rate 40%, average win 2R, average loss 1R. Expectancy = 0.40 × 2 − 0.60 × 1 = +0.2R per trade.",
+  "related": [
+    "win-rate",
+    "r-multiple",
+    "risk-reward-ratio"
+  ],
+  "markets": [],
+  "level": "intermediate",
+  "sourceIds": []
+}

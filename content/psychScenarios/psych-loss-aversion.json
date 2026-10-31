@@ -1,0 +1,38 @@
+{
+  "id": "psych-loss-aversion",
+  "topic": "loss-aversion",
+  "title": "Lock in the win, hope on the loss",
+  "situation": "You have two demo trades open. One is 30 pips in profit. The other is 35 pips down and close to its [[stop-loss|stop loss]]. You want to close the winner now to lock something in, and remove the stop on the loser so it has time to come back.",
+  "question": "What do you do?",
+  "responses": [
+    {
+      "id": "a",
+      "text": "Close the winner and remove the stop on the loser.",
+      "quality": "harmful",
+      "explanation": "This is the pattern that leads to small wins and large losses. Without a stop, the losing trade has no limit."
+    },
+    {
+      "id": "b",
+      "text": "Close both trades now to end the discomfort.",
+      "quality": "mixed",
+      "explanation": "This does stop the risk. But it is a decision made to escape a feeling, not one from your plan, so it tells you little about the plan."
+    },
+    {
+      "id": "c",
+      "text": "Leave the winner, but move the stop on the loser a bit further away.",
+      "quality": "harmful",
+      "explanation": "Moving a stop further away makes the loss you agreed to bigger."
+    },
+    {
+      "id": "d",
+      "text": "Leave both trades with the stops and [[take-profit|targets]] you planned.",
+      "quality": "helpful",
+      "explanation": "Loss aversion means losses feel bigger than gains of the same size. Your planned levels were set before that feeling kicked in."
+    }
+  ],
+  "takeaway": "Losses feel bigger than equal gains. Planned stops and targets stop you acting on that feeling.",
+  "glossaryIds": [
+    "stop-loss",
+    "take-profit"
+  ]
+}

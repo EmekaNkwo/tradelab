@@ -1,0 +1,141 @@
+{
+  "id": "fx-rsi",
+  "moduleId": "forex-indicators",
+  "title": "RSI: momentum, not a reversal signal",
+  "level": "intermediate",
+  "estimatedMinutes": 20,
+  "inOneLine": {
+    "simple": "RSI scores recent up moves against recent down moves on a scale of 0 to 100. A high reading means price has risen a lot lately, not that it must fall.",
+    "balanced": "[[rsi|RSI]] = 100 − 100 ÷ (1 + RS), where RS = average gain ÷ average loss over the period, often 14. Above 70 and below 30 are labelled [[overbought-oversold|overbought and oversold]], which describes the past move only."
+  },
+  "explain": {
+    "simple": "RSI looks at the last 14 candles and asks: were the up moves bigger than the down moves? If up moves were much bigger, RSI is high, near 70 or above. If down moves were bigger, RSI is low, near 30 or below. Around 50 they were similar. People call above 70 \"overbought\" and below 30 \"oversold\". Those are just names. In a strong uptrend RSI can stay above 70 for a long time while price keeps rising.",
+    "balanced": "RSI uses smoothed averages, so the number in your app will differ a little from a quick hand calculation. Some people look for divergence: price makes a higher high while RSI makes a lower high. Divergence can last a long time while price keeps going, so it is a description, not a timing tool. Selling every time RSI crosses 70 in a strong uptrend means selling into a rising market again and again."
+  },
+  "realNumbers": {
+    "assumptions": [
+      "Illustrative and simplified: plain averages instead of the smoothed averages real RSI uses",
+      "Over 14 EUR/USD candles: average gain 6 pips, average loss 2 pips"
+    ],
+    "steps": [
+      "RS = 6 ÷ 2 = 3.",
+      "RSI = 100 − 100 ÷ (1 + 3) = 100 − 25 = 75.",
+      "That is above 70, so many apps would call it overbought.",
+      "It only says up moves have been about three times the size of down moves lately. Price can keep rising with RSI above 70."
+    ]
+  },
+  "anotherExample": {
+    "assumptions": [
+      "Illustrative and simplified, as before",
+      "Over 14 candles: average gain 2 pips, average loss 8 pips"
+    ],
+    "steps": [
+      "RS = 2 ÷ 8 = 0.25.",
+      "RSI = 100 − 100 ÷ (1 + 0.25) = 100 − 80 = 20.",
+      "That is below 30, so it would be labelled oversold.",
+      "In a strong downtrend, RSI can sit near 20 for many candles while price keeps falling. Buying just because RSI is low would mean buying into that fall."
+    ]
+  },
+  "explainSimpler": "RSI is a scoreboard of recent ups versus downs. A lopsided score tells you who has been winning, not who wins next.",
+  "commonMistake": "Selling just because RSI is above 70, or buying because it is below 30. In strong trends, RSI often stays at those levels while price keeps going the same way.",
+  "quickCheck": [
+    {
+      "id": "fx-rsi-q1",
+      "prompt": "Average gain 4 pips, average loss 4 pips. Using the simplified formula, what is RSI?",
+      "options": [
+        {
+          "id": "a",
+          "text": "50",
+          "explanation": "Right: RS = 1, so RSI = 100 − 100 ÷ 2 = 50."
+        },
+        {
+          "id": "b",
+          "text": "100",
+          "explanation": "No: RSI is 100 only when there are no losses at all."
+        },
+        {
+          "id": "c",
+          "text": "0",
+          "explanation": "No: RSI is 0 only when there are no gains at all."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "intermediate",
+      "glossaryIds": [
+        "rsi"
+      ]
+    },
+    {
+      "id": "fx-rsi-q2",
+      "prompt": "In a strong uptrend, RSI 14 stays above 70 for many candles. What does that mean?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Up moves have been much bigger than down moves recently",
+          "explanation": "Right: that is all RSI measures."
+        },
+        {
+          "id": "b",
+          "text": "Price is overbought, so a fall is now more likely than a rise",
+          "explanation": "No: overbought is a label, not a forecast. In a strong uptrend, price can keep rising while RSI stays high."
+        },
+        {
+          "id": "c",
+          "text": "The indicator is broken",
+          "explanation": "No: RSI is working as designed. It shows that up moves have been bigger than down moves."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "intermediate",
+      "glossaryIds": [
+        "rsi",
+        "overbought-oversold"
+      ]
+    },
+    {
+      "id": "fx-rsi-q3",
+      "prompt": "When does \"RSI below 30, so buy\" mislead most often?",
+      "options": [
+        {
+          "id": "a",
+          "text": "In a strong downtrend",
+          "explanation": "Right: RSI can stay low while price keeps falling."
+        },
+        {
+          "id": "b",
+          "text": "In a calm, sideways range",
+          "explanation": "No: in a calm range, \"buy below 30\" tends to mislead less. In a strong downtrend, RSI can stay low while price keeps falling."
+        },
+        {
+          "id": "c",
+          "text": "Never",
+          "explanation": "No: every indicator has conditions where it misleads."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "intermediate",
+      "glossaryIds": [
+        "rsi",
+        "overbought-oversold",
+        "trend"
+      ]
+    }
+  ],
+  "doItNow": {
+    "kind": "chart_lab",
+    "instructions": "In Chart Lab, choose the Strong uptrend scenario and show RSI 14 below the chart. Find a stretch where RSI stayed above 70 while price kept rising. Write down how many candles it lasted. Try the Crash scenario for the same thing below 30."
+  },
+  "glossaryIds": [
+    "rsi",
+    "overbought-oversold",
+    "indicator",
+    "trend"
+  ],
+  "sourceIds": []
+}

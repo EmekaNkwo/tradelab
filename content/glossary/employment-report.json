@@ -1,0 +1,22 @@
+{
+  "id": "employment-report",
+  "term": "Employment report",
+  "aliases": [
+    "jobs report",
+    "jobs data",
+    "labour market report"
+  ],
+  "definition": {
+    "simple": "A regular release showing how many jobs were added or lost and how many people are unemployed.",
+    "balanced": "Jobs reports usually include jobs added, the unemployment rate and wage growth. Markets compare each figure with the [[consensus-forecast]]. Earlier months may be revised, which can change the reaction."
+  },
+  "example": "Hypothetical: a fictional country was expected to add 150,000 jobs and added 90,000.",
+  "related": [
+    "consensus-forecast",
+    "surprise",
+    "economic-calendar"
+  ],
+  "markets": [],
+  "level": "beginner",
+  "sourceIds": []
+}

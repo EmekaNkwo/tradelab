@@ -1,0 +1,137 @@
+{
+  "id": "fx-plan-why",
+  "moduleId": "forex-my-plan",
+  "title": "Why write a trading plan",
+  "level": "beginner",
+  "estimatedMinutes": 12,
+  "inOneLine": {
+    "simple": "A [[trading-plan]] is your rules, written down before you trade, while you are calm.",
+    "balanced": "A plan turns many in-the-moment choices into decisions made in advance. It sets what you trade, when, how you enter and exit, and how much you risk, so each trade can be checked against it."
+  },
+  "explain": {
+    "simple": "During a trade, it is hard to think clearly. Price moves, and fear or excitement push you to act. A trading plan answers the big questions before that happens. What do I trade? When? What tells me to enter? Where is my stop? How much can I lose today? If you write these down first, you only need to follow them. You build yours in More → Tools → Trading plan. Start simple. A short plan you follow is better than a long one you ignore.",
+    "balanced": "The plan builder covers: instruments, sessions, timeframe, entry rules, exit rules, [[stop-loss]] and [[take-profit]] rules, risk per trade, daily loss limit, maximum trades per day, and when to stop. The plan is versioned. When you change a rule, you save a new version, so later you can compare how each version was followed. A plan does not make trades win. It makes your behaviour consistent enough to learn from, because you can tell whether a result came from the rules or from breaking them."
+  },
+  "realNumbers": {
+    "assumptions": [
+      "Fictional learner, demo account balance 10,000 USD",
+      "Example risk per trade: 1% of balance (an example, not a recommendation)",
+      "Example daily loss limit: 2% of balance",
+      "Every trade has a stop loss and the loss equals the planned risk (no slippage)"
+    ],
+    "steps": [
+      "Risk per trade = 1% × 10,000 USD = 100 USD.",
+      "Daily loss limit = 2% × 10,000 USD = 200 USD.",
+      "200 USD ÷ 100 USD = 2. So the plan says: stop for the day after 2 full losses.",
+      "The learner writes \"Stop after 2 losses or 200 USD down, whichever comes first\" in the plan."
+    ]
+  },
+  "anotherExample": {
+    "assumptions": [
+      "Fictional learner with no written plan",
+      "Paper account, illustrative trades",
+      "Each trade was chosen \"by feel\""
+    ],
+    "steps": [
+      "Trade 1: no stop, closed by hand at −35 USD.",
+      "Trade 2: bigger size \"to win it back\", closed at −80 USD.",
+      "Trade 3: a winner of +60 USD, closed early from fear.",
+      "At the end, the learner cannot say which choices came from a rule and which from a feeling. There is nothing to review against. A written plan fixes that."
+    ]
+  },
+  "explainSimpler": "A trading plan is a recipe. You decide the recipe before you cook, not while the pan is on fire.",
+  "commonMistake": "Writing a plan, then changing it in the middle of a trade because the market \"looks different\". Changes belong between sessions, saved as a new version.",
+  "quickCheck": [
+    {
+      "id": "fx-plan-why-q1",
+      "prompt": "When should you write or change your trading plan?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Before or between trading sessions, while calm",
+          "explanation": "Right: decisions made in advance are less driven by fear or excitement."
+        },
+        {
+          "id": "b",
+          "text": "During a trade, as soon as price moves against your plan",
+          "explanation": "No: that is when emotions are strongest and rules get broken."
+        },
+        {
+          "id": "c",
+          "text": "Whenever you feel like it",
+          "explanation": "No: a plan changed on a whim is not a plan. Change it calmly, before or between sessions."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "trading-plan"
+      ]
+    },
+    {
+      "id": "fx-plan-why-q2",
+      "prompt": "A demo balance is 5,000 USD. Example risk per trade is 1%. What is the risk per trade in money?",
+      "options": [
+        {
+          "id": "a",
+          "text": "5 USD",
+          "explanation": "No: that would be 0.1%."
+        },
+        {
+          "id": "b",
+          "text": "50 USD",
+          "explanation": "Right: 1% × 5,000 USD = 50 USD."
+        },
+        {
+          "id": "c",
+          "text": "500 USD",
+          "explanation": "No: that would be 10%."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "trading-plan"
+      ]
+    },
+    {
+      "id": "fx-plan-why-q3",
+      "prompt": "What can a trading plan do for you?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Make most of your trades win",
+          "explanation": "No: no plan can promise results. Following rules keeps your behaviour consistent; it does not make trades win."
+        },
+        {
+          "id": "b",
+          "text": "Keep your behaviour consistent, so you can learn from your results",
+          "explanation": "Right: a plan lets you separate the rules from rule-breaking when you review."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "trading-plan"
+      ]
+    }
+  ],
+  "doItNow": {
+    "kind": "reflection",
+    "instructions": "Open More → Tools → Trading plan. Fill in the first part: which instruments you will trade, which sessions, and which timeframe. Keep it short. One or two pairs is enough to start."
+  },
+  "homework": "Write one sentence on why you want each rule. If you cannot explain a rule, leave it out for now.",
+  "glossaryIds": [
+    "trading-plan",
+    "stop-loss",
+    "take-profit",
+    "demo-account"
+  ],
+  "sourceIds": []
+}

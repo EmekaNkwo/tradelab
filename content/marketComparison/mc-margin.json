@@ -1,0 +1,13 @@
+{
+  "id": "mc-margin",
+  "order": 7,
+  "dimension": "Margin",
+  "cells": {
+    "forex": "A deposit per trade set by the broker; falling too low can bring a [[margin-call]] and a [[stop-out]].",
+    "stocks": "None if you pay in full; a borrowing account has margin rules of its own.",
+    "penny_stocks": "Usually paid in full; many brokers restrict borrowing against these shares.",
+    "commodities": "Depends on the route: futures margin, broker contract margin, or full payment for a fund.",
+    "futures": "[[initial-margin|Initial]] and [[maintenance-margin|maintenance]] margin per contract, with daily [[mark-to-market]] settlement."
+  },
+  "caveat": "Margin rules are set by exchanges, brokers and regulators and can be raised at short notice. In every market, required margin is a deposit, not the most you can lose."
+}

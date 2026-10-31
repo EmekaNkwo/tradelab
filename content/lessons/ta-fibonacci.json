@@ -1,0 +1,144 @@
+{
+  "id": "ta-fibonacci",
+  "moduleId": "ta-patterns",
+  "title": "Fibonacci retracements: a convention, not a forecast",
+  "level": "intermediate",
+  "estimatedMinutes": 15,
+  "inOneLine": {
+    "simple": "Fibonacci retracements are lines at set percentages of a move. Some traders watch them. They do not predict where a pullback stops.",
+    "balanced": "A [[fibonacci-retracement]] tool draws levels at 23.6%, 38.2%, 50%, 61.8% and 78.6% of a chosen swing. They are a convention for describing how deep a [[pullback]] went. With five levels close together, price will usually be near one of them."
+  },
+  "explain": {
+    "simple": "Pick a swing, say from a low to a high. The tool draws lines at fixed shares of that move, counted back from the high: 23.6%, 38.2%, 50%, 61.8% and 78.6%. The 50% line is not a Fibonacci ratio, but most tools include it. Some traders watch these lines, and some place orders near them. If the lines matter at all, it is because people watch them, not because of anything special in the numbers. Think of them as a shared way of labelling depth, like saying \"about halfway back\".",
+    "balanced": "The levels depend on which swing you pick, and different people pick different swings. Five levels inside one move leave little space between them, so almost any pullback ends \"near a level\" if you allow some tolerance. That makes them look accurate after the fact. Treat them as a ruler, not a signal. If you use them, write the anchor rule (which swing low and high) and the tolerance before you look, and judge them like any other rule, on a test you set up in advance."
+  },
+  "realNumbers": {
+    "assumptions": [
+      "Illustrative stock prices",
+      "Swing low 40.00, swing high 50.00, so the move is 10.00",
+      "Levels are counted back down from the high"
+    ],
+    "steps": [
+      "38.2% level = 50.00 − 0.382 × 10.00 = 50.00 − 3.82 = 46.18.",
+      "50% level = 50.00 − 0.5 × 10.00 = 45.00.",
+      "61.8% level = 50.00 − 0.618 × 10.00 = 50.00 − 6.18 = 43.82.",
+      "If you anchor on an earlier low of 38.00 instead, the move is 12.00 and the 61.8% level is 50.00 − 7.416 ≈ 42.58. Same chart, different lines."
+    ]
+  },
+  "anotherExample": {
+    "assumptions": [
+      "Same 40.00 to 50.00 swing",
+      "The five levels are 47.64, 46.18, 45.00, 43.82 and 42.14",
+      "You count \"near a level\" as within 0.60 either side"
+    ],
+    "steps": [
+      "Each level covers a band 1.20 wide, for example 46.18 ± 0.60 = 45.58 to 46.78.",
+      "The bands run from 41.54 to 48.24, a span of 6.70.",
+      "Allowing for small overlaps, the five bands cover about 5.96 of that span.",
+      "5.96 ÷ 6.70 ≈ 89%. So most pullbacks in that zone would end \"near a Fibonacci level\" by chance alone."
+    ]
+  },
+  "explainSimpler": "Fibonacci lines are tick marks on a ruler. They help you describe how far price came back. They do not tell price where to stop.",
+  "commonMistake": "Drawing the tool on several swings until one level lines up with a turn, then calling it proof. Or treating a level as a reason to enter without a stop.",
+  "quickCheck": [
+    {
+      "id": "ta-fibonacci-q1",
+      "prompt": "Swing low 1.1000, swing high 1.1200. Where is the 50% retracement?",
+      "options": [
+        {
+          "id": "a",
+          "text": "1.1050",
+          "explanation": "No: that is 25% of the move above the low. The move is 200 pips; halfway is 1.1100."
+        },
+        {
+          "id": "b",
+          "text": "1.1100",
+          "explanation": "Right: 1.1200 − 0.5 × 0.0200 = 1.1100."
+        },
+        {
+          "id": "c",
+          "text": "1.1150",
+          "explanation": "No: that is only 50 pips back from the high, which is 25%."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "intermediate",
+      "glossaryIds": [
+        "fibonacci-retracement"
+      ]
+    },
+    {
+      "id": "ta-fibonacci-q2",
+      "prompt": "Price turns exactly at the 61.8% line. What does that show?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The level caused price to turn there",
+          "explanation": "No: with five levels close together, some turns land on a level by chance."
+        },
+        {
+          "id": "b",
+          "text": "The 61.8% level works for this market",
+          "explanation": "No: one turn is one example. It says nothing about how often that happens."
+        },
+        {
+          "id": "c",
+          "text": "Only where this pullback ended",
+          "explanation": "Right: it describes the depth. It does not show the line has predictive power."
+        }
+      ],
+      "correctOptionIds": [
+        "c"
+      ],
+      "level": "intermediate",
+      "glossaryIds": [
+        "fibonacci-retracement",
+        "pullback"
+      ]
+    },
+    {
+      "id": "ta-fibonacci-q3",
+      "prompt": "Two learners draw Fibonacci levels on the same chart and get different lines. Why?",
+      "options": [
+        {
+          "id": "a",
+          "text": "They picked different swing points",
+          "explanation": "Right: the levels depend entirely on the chosen start and end of the move."
+        },
+        {
+          "id": "b",
+          "text": "One of them used the wrong ratios",
+          "explanation": "No: the tool uses the same ratios for everyone. The anchors differ."
+        },
+        {
+          "id": "c",
+          "text": "Fibonacci levels may shift as new candles form",
+          "explanation": "No: once the two anchors are chosen, the levels stay put. New candles do not move them."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "intermediate",
+      "glossaryIds": [
+        "fibonacci-retracement",
+        "swing-high",
+        "swing-low"
+      ]
+    }
+  ],
+  "doItNow": {
+    "kind": "chart_lab",
+    "instructions": "In Chart Lab, open the Pullback scenario. Write your anchor rule first, for example \"the lowest low and highest high of the last swing up\". Use the Fibonacci tool from that low to that high. Note which level the pullback ended nearest, then redraw from a different low and see how the lines move."
+  },
+  "glossaryIds": [
+    "fibonacci-retracement",
+    "pullback",
+    "swing-high",
+    "swing-low",
+    "retest"
+  ],
+  "sourceIds": []
+}

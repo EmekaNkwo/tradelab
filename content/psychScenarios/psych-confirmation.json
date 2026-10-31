@@ -1,0 +1,29 @@
+{
+  "id": "psych-confirmation",
+  "topic": "confirmation",
+  "title": "Only hearing one side",
+  "situation": "You have decided EUR/USD should rise and you are planning a demo buy. You read three posts that agree with you and skip one that argues the opposite. On the chart, price has just closed below the level your plan says would cancel the idea.",
+  "question": "What do you do next?",
+  "responses": [
+    {
+      "id": "a",
+      "text": "Treat the idea as cancelled, as your plan says. Write down what would make you look at it again.",
+      "quality": "helpful",
+      "explanation": "You set this level in advance so you would not have to argue with yourself now. Acting on it keeps the plan honest."
+    },
+    {
+      "id": "b",
+      "text": "Ignore the break. The posts agree with you.",
+      "quality": "harmful",
+      "explanation": "Looking only for views that match yours is called confirmation bias. Here it is overriding the rule you set to protect you."
+    },
+    {
+      "id": "c",
+      "text": "Read the opposing post too, then decide.",
+      "quality": "mixed",
+      "explanation": "Hearing both sides is a good habit. But your plan already gave the answer, and opinions should not override it."
+    }
+  ],
+  "takeaway": "Decide in advance what would prove your idea wrong, and act on it when you see it.",
+  "glossaryIds": []
+}

@@ -1,0 +1,23 @@
+{
+  "id": "fibonacci-retracement",
+  "term": "Fibonacci retracement",
+  "aliases": [
+    "Fibonacci levels",
+    "Fib levels",
+    "fib retracement",
+    "Fibonacci"
+  ],
+  "definition": {
+    "simple": "A drawing tool that marks set percentages of a price move, such as 38.2%, 50% and 61.8%, as lines on the chart.",
+    "balanced": "It is a convention some traders watch, not a prediction. The levels depend on which swing you anchor to, and with several levels close together, many pullbacks end near one by chance. Use it as a ruler for describing depth."
+  },
+  "example": "Move from 40.00 to 50.00: the 50% level is 45.00 and the 61.8% level is 50.00 − 6.18 = 43.82.",
+  "related": [
+    "pullback",
+    "swing-high",
+    "swing-low"
+  ],
+  "markets": [],
+  "level": "intermediate",
+  "sourceIds": []
+}

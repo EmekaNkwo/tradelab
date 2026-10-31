@@ -1,0 +1,19 @@
+{
+  "id": "signal-group",
+  "term": "Signal group",
+  "aliases": [
+    "paid signals",
+    "signal service"
+  ],
+  "definition": {
+    "simple": "A chat group or service that sends \"buy\" and \"sell\" calls, often for a fee.",
+    "balanced": "Some are run by people who earn from fees or referrals, not from trading. Claimed results are usually screenshots you cannot check. Following signals also skips your own [[trading-plan]] and risk rules."
+  },
+  "related": [
+    "investment-scam",
+    "trading-plan"
+  ],
+  "markets": [],
+  "level": "beginner",
+  "sourceIds": []
+}

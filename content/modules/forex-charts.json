@@ -1,0 +1,19 @@
+{
+  "id": "forex-charts",
+  "skills": ["chart_reading"],
+  "title": "Charts, trends and structure",
+  "summary": "Read candlesticks and OHLC, switch timeframes, and describe a trend from its swing highs and lows, without treating it as a forecast.",
+  "markets": [
+    "forex"
+  ],
+  "level": "beginner",
+  "lessonIds": [
+    "fx-candlesticks",
+    "fx-timeframes",
+    "fx-trends",
+    "fx-market-structure"
+  ],
+  "checkpointQuizId": "forex-charts-checkpoint",
+  "practicalResult": "Say whether the trend is up, down or sideways on 20 charts you have not seen before, using the Find the trend drill.",
+  "minPracticeDays": 0
+}

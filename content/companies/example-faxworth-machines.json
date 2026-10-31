@@ -1,0 +1,67 @@
+{
+  "id": "example-faxworth-machines",
+  "name": "Example Faxworth Office Machines (fictional)",
+  "sector": "Office equipment (fictional)",
+  "summary": "A fictional maker of an old type of office machine. Revenue falls every year, profit is shrinking faster, and the dividend was cut. It looks cheap on P/E, and may be cheap for a reason.",
+  "assumptions": "All figures are fictional and in millions of USD, except the share price. The same tax rate (25% of pre-tax profit), tax rules and accounting apply to every company. No one-off items, share issues or buybacks. Ratios use Year 3 and the current share price. Simulated for learning; not a real firm.",
+  "currency": "USD",
+  "sharePrice": 1.05,
+  "sharesOutstanding": 100,
+  "years": [
+    {
+      "label": "Year 1",
+      "revenue": 500,
+      "costOfSales": 330,
+      "operatingExpenses": 90,
+      "interest": 12,
+      "tax": 17.0,
+      "operatingCashFlow": 50,
+      "capitalExpenditure": 10,
+      "dividendsPaid": 30,
+      "cash": 50,
+      "debt": 150,
+      "equity": 400
+    },
+    {
+      "label": "Year 2",
+      "revenue": 430,
+      "costOfSales": 290,
+      "operatingExpenses": 80,
+      "interest": 12,
+      "tax": 12.0,
+      "operatingCashFlow": 40,
+      "capitalExpenditure": 8,
+      "dividendsPaid": 25,
+      "cash": 57,
+      "debt": 150,
+      "equity": 411.0
+    },
+    {
+      "label": "Year 3",
+      "revenue": 370,
+      "costOfSales": 260,
+      "operatingExpenses": 70,
+      "interest": 12,
+      "tax": 7.0,
+      "operatingCashFlow": 30,
+      "capitalExpenditure": 6,
+      "dividendsPaid": 10,
+      "cash": 71,
+      "debt": 150,
+      "equity": 422.0
+    }
+  ],
+  "notes": [
+    "Revenue fell from 500 to 370 million in two years as customers move to newer products. Net income fell by more than half.",
+    "The P/E of 5 uses Year 3 earnings. If earnings keep falling, next year's P/E at the same price would be higher, so the low number may not stay low.",
+    "The dividend was cut from 30 to 10 million. A high dividend yield based on past payments can disappear.",
+    "Debt of 150 million stays the same while profit shrinks, so the interest bill takes a bigger share of operating profit each year."
+  ],
+  "glossaryIds": [
+    "pe-ratio",
+    "dividend-yield",
+    "earnings",
+    "valuation",
+    "net-debt"
+  ]
+}

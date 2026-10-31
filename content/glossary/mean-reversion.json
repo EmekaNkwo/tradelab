@@ -1,0 +1,21 @@
+{
+  "id": "mean-reversion",
+  "term": "Mean reversion",
+  "aliases": [
+    "mean-reverting",
+    "reversion to the mean"
+  ],
+  "definition": {
+    "simple": "The idea that a price that has moved far from its recent average tends to drift back towards it.",
+    "balanced": "It describes some quiet, sideways markets better than trending ones. In a trend, a price that looks stretched can keep moving the same way for a long time, so mean-reversion rules need a [[market-regime]] filter and a stop."
+  },
+  "related": [
+    "bollinger-bands",
+    "rsi",
+    "market-regime",
+    "overbought-oversold"
+  ],
+  "markets": [],
+  "level": "intermediate",
+  "sourceIds": []
+}

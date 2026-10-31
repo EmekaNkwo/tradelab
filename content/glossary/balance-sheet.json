@@ -1,0 +1,21 @@
+{
+  "id": "balance-sheet",
+  "term": "Balance sheet",
+  "aliases": [
+    "statement of financial position"
+  ],
+  "definition": {
+    "simple": "A snapshot of what a company owns, what it owes, and what is left for the owners, on one day.",
+    "balanced": "Assets = liabilities + equity. Key lines for beginners: cash, debt, and equity (what would be left for shareholders if everything were sold at book value and all debts paid). Debt − cash = [[net-debt]]."
+  },
+  "related": [
+    "net-debt",
+    "return-on-equity",
+    "return-on-capital"
+  ],
+  "markets": [
+    "stocks"
+  ],
+  "level": "beginner",
+  "sourceIds": []
+}

@@ -1,0 +1,18 @@
+{
+  "id": "fa-commodity-supply-demand",
+  "skills": ["fundamental_analysis"],
+  "lab": "fundamental",
+  "level": "beginner",
+  "order": 31,
+  "title": "Commodity supply and demand scenarios",
+  "summary": "Work through fictional inventory reports, supply disruptions and harvest estimates. Compare the actual with the expected, note what was already priced in, and list several plausible reactions instead of one prediction.",
+  "unreliableWhen": "Supply and demand explain tendencies, not exact moves. Reactions can be swamped by other news, by positioning, by currency and rate moves, or by details in the same report. A report may also be revised later.",
+  "goodExample": "Working out that a draw was 2.7 million barrels bigger than expected, then noting that private estimates had already priced much of it in, and writing three possible reactions with a reason for each.",
+  "badExample": "Seeing 'big draw' in a headline and assuming the price must rise all week, without checking the consensus, the rest of the report, or what the market had already expected.",
+  "lessonIds": ["cm-supply-demand-inventories", "cm-seasonality-geopolitics"],
+  "chart": null,
+  "drillKind": null,
+  "scenarioIds": ["cs-crude-inventory-draw", "cs-gas-supply-disruption", "cs-harvest-bigger-than-expected"],
+  "companyIds": [],
+  "redFlagCaseIds": []
+}

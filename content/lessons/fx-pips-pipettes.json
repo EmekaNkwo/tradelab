@@ -1,0 +1,84 @@
+{
+  "id": "fx-pips-pipettes",
+  "moduleId": "forex-pips-lots-leverage",
+  "title": "Pips and pipettes",
+  "level": "beginner",
+  "estimatedMinutes": 15,
+  "inOneLine": {
+    "simple": "A pip is the usual small step in a currency price. A pipette is one tenth of a pip.",
+    "balanced": "Price moves are counted in [[pip|pips]]: 0.0001 for most pairs and 0.01 for most yen pairs. The extra digit many platforms show is a [[pipette]]."
+  },
+  "explain": {
+    "simple": "Traders count price moves in pips. For most pairs, like EUR/USD, one pip is 0.0001, the fourth digit after the dot. For pairs with the Japanese yen, like USD/JPY, one pip is 0.01, the second digit after the dot. Many platforms show one more digit than that. That last digit is a pipette. Ten pipettes make one pip.",
+    "balanced": "A 5-digit quote such as 1.10253 has a pip in the fourth decimal and a [[pipette]] in the fifth. A 3-digit yen quote such as 150.253 has a pip in the second decimal and a pipette in the third. MetaTrader often calls a pipette a 'point', so a distance of 50 points on a 5-digit pair is only 5 pips. Always check whether a number is in pips or points."
+  },
+  "realNumbers": {
+    "assumptions": [
+      "Illustrative prices, not live market data",
+      "EUR/USD quoted to 5 decimals; 1 pip = 0.0001",
+      "USD/JPY quoted to 3 decimals; 1 pip = 0.01"
+    ],
+    "steps": [
+      "EUR/USD moves from 1.10250 to 1.10750.",
+      "Change = 1.10750 − 1.10250 = 0.00500.",
+      "0.00500 ÷ 0.0001 = 50 pips (500 pipettes).",
+      "USD/JPY moves from 150.000 to 150.450.",
+      "Change = 0.450. 0.450 ÷ 0.01 = 45 pips (450 pipettes)."
+    ]
+  },
+  "anotherExample": {
+    "assumptions": ["Illustrative prices", "GBP/USD quoted to 5 decimals; 1 pip = 0.0001"],
+    "steps": [
+      "GBP/USD moves from 1.25003 to 1.25010.",
+      "Change = 0.00007, which is 7 pipettes.",
+      "7 pipettes ÷ 10 = 0.7 pips."
+    ]
+  },
+  "explainSimpler": "A pip is like one centimetre on a ruler for price. Most pairs use the fourth digit after the dot. Yen pairs use the second.",
+  "commonMistake": "Treating the last digit on the screen as a pip. On a 5-digit quote the last digit is a pipette, so a 30-point move is only 3 pips. Yen pairs are another trap: using 0.0001 for USD/JPY makes your pip count 100 times too big.",
+  "quickCheck": [
+    {
+      "id": "fx-pips-pipettes-q1",
+      "prompt": "EUR/USD moves from 1.2000 to 1.2025. How many pips is that?",
+      "options": [
+        { "id": "a", "text": "2.5 pips", "explanation": "No: 0.0025 is 25 steps of 0.0001, not 2.5." },
+        { "id": "b", "text": "25 pips", "explanation": "Right: 1.2025 − 1.2000 = 0.0025, and 0.0025 ÷ 0.0001 = 25 pips." },
+        { "id": "c", "text": "250 pips", "explanation": "No: 250 pips would be a move of 0.0250." }
+      ],
+      "correctOptionIds": ["b"],
+      "level": "beginner",
+      "glossaryIds": ["pip"]
+    },
+    {
+      "id": "fx-pips-pipettes-q2",
+      "prompt": "USD/JPY moves from 148.20 to 148.50. How many pips is that?",
+      "options": [
+        { "id": "a", "text": "30 pips", "explanation": "Right: for yen pairs a pip is 0.01, and 0.30 ÷ 0.01 = 30 pips." },
+        { "id": "b", "text": "3,000 pips", "explanation": "No: that uses 0.0001 as the pip, which is wrong for yen pairs." },
+        { "id": "c", "text": "3 pips", "explanation": "No: 3 pips on a yen pair would be a move of 0.03." }
+      ],
+      "correctOptionIds": ["a"],
+      "level": "beginner",
+      "glossaryIds": ["pip"]
+    },
+    {
+      "id": "fx-pips-pipettes-q3",
+      "prompt": "On a 5-digit EUR/USD quote, how many pipettes make one pip?",
+      "options": [
+        { "id": "a", "text": "10", "explanation": "Right: a pipette is one tenth of a pip." },
+        { "id": "b", "text": "100", "explanation": "No: 100 pipettes would be 10 pips." },
+        { "id": "c", "text": "1", "explanation": "No: a pipette is smaller than a pip, not the same size." }
+      ],
+      "correctOptionIds": ["a"],
+      "level": "beginner",
+      "glossaryIds": ["pipette", "pip"]
+    }
+  ],
+  "doItNow": {
+    "kind": "reflection",
+    "instructions": "Pick three pairs, including one yen pair. For each one, write down two made-up prices and work out the move in pips and in pipettes. Check the yen pair uses 0.01 per pip."
+  },
+  "homework": "In MetaTrader on your demo account, note the price of EUR/USD and USD/JPY now and again in an hour. Work out how many pips each one moved.",
+  "glossaryIds": ["pip", "pipette"],
+  "sourceIds": []
+}

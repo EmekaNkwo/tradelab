@@ -1,0 +1,28 @@
+{
+  "id": "ta-trends",
+  "skills": ["chart_reading", "technical_analysis"],
+  "lab": "technical",
+  "level": "beginner",
+  "order": 2,
+  "title": "Trends: higher highs and higher lows",
+  "summary": "An uptrend makes higher swing highs and higher swing lows; a downtrend makes lower highs and lower lows. Anything else is sideways or unclear.",
+  "unreliableWhen": "In choppy, sideways markets, the swings overlap and the label flips back and forth. A trend describes the past and can stop at any time.",
+  "goodExample": "Marking swing lows at 1.0950, 1.0985 and 1.1010 with rising highs between them, and calling it an uptrend so far.",
+  "badExample": "Calling a trend from two candles, or from one big move without any swings to compare.",
+  "lessonIds": [
+    "fx-trends",
+    "fx-market-structure"
+  ],
+  "chart": {
+    "scenario": "strong_uptrend",
+    "overlays": [
+      "sma20"
+    ],
+    "pane": "none",
+    "lookFor": "Mark the last four swing lows and swing highs. Check that each is higher than the one before, and that the SMA 20 slopes up. Then try the Downtrend scenario."
+  },
+  "drillKind": "find_the_trend",
+  "scenarioIds": [],
+  "companyIds": [],
+  "redFlagCaseIds": []
+}

@@ -1,0 +1,11 @@
+{
+  "id": "leverage-risk",
+  "version": 1,
+  "title": "Leverage makes losses bigger too",
+  "body": [
+    "[[leverage|Leverage]] lets a small deposit control a much larger position. It increases losses in exactly the same way it increases gains.",
+    "A small price move against a leveraged position can use up your [[margin]] quickly. Practise sizing so that one losing trade costs only a small, planned amount."
+  ],
+  "triggers": ["leverage"],
+  "statistics": []
+}

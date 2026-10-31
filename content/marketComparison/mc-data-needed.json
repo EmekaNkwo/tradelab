@@ -1,0 +1,13 @@
+{
+  "id": "mc-data-needed",
+  "order": 11,
+  "dimension": "Data you need",
+  "cells": {
+    "forex": "Prices, an [[economic-calendar]], interest-rate and inflation news for both currencies, and your broker's spreads and swaps.",
+    "stocks": "Prices and volume, company reports and filings, and the market's general mood.",
+    "penny_stocks": "Filings, share count changes, trading volume and any promotion activity, and whether information is reliable at all.",
+    "commodities": "Supply and demand news, inventories, the futures curve, and the currency it is priced in.",
+    "futures": "The contract specification, margin levels, the futures curve and the underlying market's own data."
+  },
+  "caveat": "What is available, how reliable it is and whether it costs money depends on the market, the venue and the provider. Check the source of any data you use."
+}

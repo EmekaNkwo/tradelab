@@ -1,0 +1,13 @@
+{
+  "id": "balance",
+  "term": "Balance",
+  "aliases": ["account balance"],
+  "definition": {
+    "simple": "The money in your account, not counting trades that are still open.",
+    "balanced": "Your deposits plus or minus the results of closed trades and charges such as [[swap|swaps]]. Profits and losses on open trades are not in the balance until the trades close. See also [[equity]]."
+  },
+  "related": ["equity", "free-margin"],
+  "markets": [],
+  "level": "beginner",
+  "sourceIds": []
+}

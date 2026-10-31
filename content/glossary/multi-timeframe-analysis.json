@@ -1,0 +1,22 @@
+{
+  "id": "multi-timeframe-analysis",
+  "term": "Multi-timeframe analysis",
+  "aliases": [
+    "multiple timeframes",
+    "top-down analysis",
+    "MTF"
+  ],
+  "definition": {
+    "simple": "Looking at the same market on two or three timeframes: a higher one for context and a lower one for detail.",
+    "balanced": "The views often disagree: a daily uptrend can contain a 1-hour fall. Choose your timeframes before you look. The timeframe used for the stop sets its distance, and so the size. Agreement between timeframes is two views of the same prices, not a forecast."
+  },
+  "example": "Daily chart: uptrend. 1-hour chart: falling for 15 hours. Both can be true: a pullback inside the daily uptrend.",
+  "related": [
+    "timeframe",
+    "trend",
+    "pullback"
+  ],
+  "markets": [],
+  "level": "intermediate",
+  "sourceIds": []
+}

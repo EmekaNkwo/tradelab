@@ -1,0 +1,49 @@
+{
+  "id": "macro-westmark-gdp-revision",
+  "category": "macro",
+  "title": "Westmark growth (fictional) misses, but last quarter is revised up",
+  "setup": "Fictional Westmark publishes its quarterly [[gdp|GDP]] estimate. The headline growth figure is below the consensus, but the same report revises the previous quarter up from 0.6% to 0.9%. Inflation is above the central bank's target. All figures are made up; this is a practice scenario, not a forecast.",
+  "release": {
+    "name": "Westmark GDP growth (fictional)",
+    "unit": "% quarter on quarter",
+    "consensus": 0.5,
+    "actual": 0.2,
+    "previous": 0.9
+  },
+  "pricedIn": "Moderate. Recent jobs data had been strong and traders expected solid growth. Their bets implied rates staying high for some time. Over the two quarters together, growth of 0.9% then 0.2% is about the same as the 0.6% then 0.5% expected before the revision.",
+  "question": "Growth comes in at 0.2% against a 0.5% consensus, a −0.3-point surprise, while the previous quarter is revised up by 0.3 points. Which reactions are plausible?",
+  "reactions": [
+    {
+      "id": "a",
+      "text": "WMK dips on the headline miss, then recovers as traders notice the revision.",
+      "plausible": true,
+      "explanation": "Plausible: fast reactions often follow the headline; slower ones take in the whole report."
+    },
+    {
+      "id": "b",
+      "text": "WMK falls and stays lower as traders expect rates to be cut sooner.",
+      "plausible": true,
+      "explanation": "Plausible: if traders focus on the latest quarter's slowdown, rate expectations can shift down."
+    },
+    {
+      "id": "c",
+      "text": "Little net change, since growth over two quarters is about as expected.",
+      "plausible": true,
+      "explanation": "Plausible: the miss and the revision roughly cancel out over the two quarters."
+    },
+    {
+      "id": "d",
+      "text": "WMK must fall sharply, because revisions never matter to markets.",
+      "plausible": false,
+      "explanation": "Not plausible: revisions change the picture of the economy and can matter a lot."
+    }
+  ],
+  "takeaway": "A headline miss is not the whole story. Read revisions and the full report, and remember that growth is read alongside jobs and inflation.",
+  "glossaryIds": [
+    "gdp",
+    "surprise",
+    "consensus-forecast",
+    "priced-in",
+    "inflation"
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "id": "fu-leverage-gap-risk",
+  "moduleId": "futures",
+  "title": "Leverage, gaps and forced liquidation",
+  "level": "beginner",
+  "estimatedMinutes": 20,
+  "inOneLine": {
+    "simple": "Futures let a small deposit control a large position, so a small price move can wipe out the deposit, and a gap can push the loss past your stop.",
+    "balanced": "Risk comes from [[notional-value]], not from [[margin]]. A [[gap]] can fill a [[stop-loss]] far past its level, and a broker can close positions at the market price when margin runs short. Losses can exceed the margin and the account."
+  },
+  "explain": {
+    "simple": "With futures, the money you put down is a small part of the position's full value. That is leverage. A move of a few percent in price can equal the whole margin. Markets can also jump between one price and the next, for example after a close or sudden news. A stop loss is an order, not a guarantee: in a gap it fills at the first available price. And if your account falls below the maintenance margin and you do not add money, the broker can close your position for you, at whatever price it can get.",
+    "balanced": "Plan risk from the stop distance and the money per point, then add room for gaps and [[slippage]]. Margin requirements can be raised during fast markets, which can cause a margin call without any new loss. Forced liquidation does not wait for a good price, and in thin trading it can fill badly. Holding several contracts multiplies everything. A simple check before any futures trade: what would a 2.5% move against me cost, as money and as a share of my account?"
+  },
+  "realNumbers": {
+    "assumptions": [
+      "Example index future (fictional specs): multiplier 10 USD per point, tick size 0.25",
+      "Fictional margins: initial 2,000 USD, maintenance 1,600 USD per contract",
+      "Account balance 3,000 USD; buy 1 contract at 4,000.00",
+      "Stop loss at 3,980.00",
+      "Price closes at 3,990.00 and reopens at 3,820.00 after news"
+    ],
+    "steps": [
+      "Planned loss = (4,000 − 3,980) × 10 = 20 × 10 = 200 USD.",
+      "The gap jumps over the stop. It fills near the first price, 3,820.00.",
+      "Actual loss = (4,000 − 3,820) × 10 = 180 × 10 = 1,800 USD. That is 1,800 ÷ 200 = 9 times the planned loss.",
+      "Account = 3,000 − 1,800 = 1,200 USD. Without a stop, the position would still be open with the account below the 1,600 USD maintenance margin, so a margin call would follow.",
+      "This is a made-up case to show the mechanism. It is not a prediction of how often gaps happen."
+    ]
+  },
+  "anotherExample": {
+    "assumptions": [
+      "Same fictional contract and margins",
+      "Account balance 10,000 USD",
+      "Price 4,000.00; compare holding 1 contract with holding 4"
+    ],
+    "steps": [
+      "4 contracts need initial margin of 4 × 2,000 = 8,000 USD, so the account allows it.",
+      "Notional for 4 contracts = 4 × 40,000 = 160,000 USD, which is 160,000 ÷ 10,000 = 16 times the account.",
+      "A 100-point move against you, only 100 ÷ 4,000 = 2.5%, loses 100 × 10 × 4 = 4,000 USD: 40% of the account.",
+      "With 1 contract the same move loses 100 × 10 = 1,000 USD: 10% of the account.",
+      "The margin let you open 4. It did not tell you whether 4 was a sensible risk."
+    ]
+  },
+  "explainSimpler": "A small deposit holds a big position. A small move can take the deposit, a jump can skip your stop, and the broker can close you out at a bad price.",
+  "commonMistake": "Sizing a futures trade by how many contracts the margin allows. Size it from the money you can afford to lose if price moves past your stop, and remember that a gap can make the real loss much bigger than the planned one.",
+  "quickCheck": [
+    {
+      "id": "fu-leverage-gap-risk-q1",
+      "prompt": "Example index future (fictional: 10 USD per point). Buy 1 at 4,000.00 with a stop at 3,990.00. Price gaps and the stop fills at 3,950.00. What is the loss?",
+      "options": [
+        { "id": "a", "text": "100 USD", "explanation": "No: that is the planned loss, 10 points × 10 USD. The fill was worse." },
+        { "id": "b", "text": "500 USD", "explanation": "Right: (4,000 − 3,950) × 10 = 50 × 10 = 500 USD." },
+        { "id": "c", "text": "400 USD", "explanation": "No: that is only the part beyond the stop, 40 × 10. Count from the entry." }
+      ],
+      "correctOptionIds": ["b"],
+      "level": "beginner",
+      "glossaryIds": ["gap", "stop-loss", "slippage"]
+    },
+    {
+      "id": "fu-leverage-gap-risk-q2",
+      "prompt": "Which statement about futures margin is true?",
+      "options": [
+        { "id": "a", "text": "Losses stop once the margin is used up", "explanation": "No: losses can keep growing past the margin and even past the account balance." },
+        { "id": "b", "text": "Losses are never capped at the margin", "explanation": "Right: profit and loss come from the full notional value." },
+        { "id": "c", "text": "Margin can never change after you open", "explanation": "No: exchanges and brokers can raise margins, sometimes at short notice." }
+      ],
+      "correctOptionIds": ["b"],
+      "level": "beginner",
+      "glossaryIds": ["margin", "initial-margin"]
+    }
+  ],
+  "doItNow": {
+    "kind": "paper",
+    "instructions": "In the paper trading simulator, open the Practice index future and read its notes on margin per contract and the stop-out. Before each trade, write the stop distance in points, the money at risk for 1 contract, and the money lost if price moved 2.5% against you. Place 5 paper trades of 1 contract, each with a stop loss, and record any fill worse than your stop."
+  },
+  "homework": "Write one futures rule for your plan: the most money you will risk per trade, and how you will size contracts from it rather than from the margin allowed.",
+  "glossaryIds": ["leverage", "margin", "notional-value", "gap", "stop-loss", "slippage", "margin-call", "stop-out", "maintenance-margin"],
+  "sourceIds": []
+}

@@ -1,0 +1,68 @@
+{
+  "id": "example-quickling-apps",
+  "name": "Example Quickling Apps Co (fictional)",
+  "sector": "Software subscriptions (fictional)",
+  "summary": "A fictional app maker growing revenue about 50% a year. Margins are thin, free cash flow is negative, and growth is partly paid for with new debt. The share price is high compared with its earnings.",
+  "assumptions": "All figures are fictional and in millions of USD, except the share price. The same tax rate (25% of pre-tax profit), tax rules and accounting apply to every company. No one-off items, share issues or buybacks. Ratios use Year 3 and the current share price. Simulated for learning; not a real firm.",
+  "currency": "USD",
+  "sharePrice": 14.4,
+  "sharesOutstanding": 100,
+  "years": [
+    {
+      "label": "Year 1",
+      "revenue": 200,
+      "costOfSales": 120,
+      "operatingExpenses": 60,
+      "interest": 6,
+      "tax": 3.5,
+      "operatingCashFlow": 12,
+      "capitalExpenditure": 20,
+      "dividendsPaid": 0,
+      "cash": 30,
+      "debt": 80,
+      "equity": 150
+    },
+    {
+      "label": "Year 2",
+      "revenue": 300,
+      "costOfSales": 180,
+      "operatingExpenses": 90,
+      "interest": 10,
+      "tax": 5.0,
+      "operatingCashFlow": 16,
+      "capitalExpenditure": 30,
+      "dividendsPaid": 0,
+      "cash": 46,
+      "debt": 110,
+      "equity": 165.0
+    },
+    {
+      "label": "Year 3",
+      "revenue": 450,
+      "costOfSales": 270,
+      "operatingExpenses": 140,
+      "interest": 16,
+      "tax": 6.0,
+      "operatingCashFlow": 20,
+      "capitalExpenditure": 45,
+      "dividendsPaid": 0,
+      "cash": 71,
+      "debt": 160,
+      "equity": 183.0
+    }
+  ],
+  "notes": [
+    "Fast revenue growth, but operating expenses grew even faster in Year 3 (+56% vs +50%), so the operating margin slipped from 10% to under 9%.",
+    "Spending on equipment and software (capital expenditure) is bigger than the cash the business brings in, so free cash flow is negative and debt has doubled in two years.",
+    "The high P/E means buyers are paying today for profits the company has not made yet. If growth slows, the price has a long way to fall even if the business is fine.",
+    "Competitive position unclear: other fictional app makers could copy its product, and customers may switch easily."
+  ],
+  "glossaryIds": [
+    "revenue",
+    "profit-margin",
+    "free-cash-flow",
+    "pe-ratio",
+    "growth-investing",
+    "net-debt"
+  ]
+}

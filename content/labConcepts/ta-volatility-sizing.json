@@ -1,0 +1,26 @@
+{
+  "id": "ta-volatility-sizing",
+  "skills": ["risk_management", "technical_analysis"],
+  "lab": "technical",
+  "level": "advanced",
+  "order": 2,
+  "title": "Volatility-adjusted position sizing",
+  "summary": "Set the stop from the market's movement, such as 2 × ATR, then size = money at risk ÷ (stop distance × value per unit). The loss at the stop stays the same.",
+  "unreliableWhen": "ATR describes the past and can be low just before a jump. Gaps and slippage can push a loss past the stop. Some markets cannot be sized small enough, so the answer is to skip.",
+  "goodExample": "Two stocks at 40.00: ATR 0.80 gives 62 shares and ATR 2.00 gives 25 shares, both risking about 100 USD.",
+  "badExample": "Keeping the same size when ATR doubles, so the loss at the stop doubles too.",
+  "lessonIds": [
+    "ta-volatility-sizing",
+    "fx-position-sizing"
+  ],
+  "chart": {
+    "scenario": "high_volatility",
+    "overlays": [],
+    "pane": "atr",
+    "lookFor": "Read ATR 14 at the start and end of the chart. Work out a 2 × ATR stop and the size for the same money at risk at each point."
+  },
+  "drillKind": "size_it",
+  "scenarioIds": [],
+  "companyIds": [],
+  "redFlagCaseIds": []
+}

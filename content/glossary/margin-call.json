@@ -1,0 +1,13 @@
+{
+  "id": "margin-call",
+  "term": "Margin call",
+  "aliases": [],
+  "definition": {
+    "simple": "A warning from your broker that your account is low compared with the margin your trades need.",
+    "balanced": "When your [[margin-level]] falls to a level set by the broker, the broker warns you and may stop you opening new trades. If losses continue, a [[stop-out]] can follow. The level differs between brokers and account types."
+  },
+  "related": ["margin-level", "stop-out", "margin"],
+  "markets": ["forex", "commodities", "futures"],
+  "level": "beginner",
+  "sourceIds": []
+}

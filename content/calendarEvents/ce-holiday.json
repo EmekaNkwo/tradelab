@@ -1,0 +1,18 @@
+{
+  "id": "ce-holiday",
+  "kind": "holiday",
+  "title": "Market holidays and short sessions",
+  "measures": "Nothing is measured. An exchange or a country's banks close, or trade for shorter hours.",
+  "whyItMatters": "With fewer traders active, liquidity can be thin, spreads can widen and prices can move further on small orders. Some markets stay open while related ones close, and the next session can open with a gap.",
+  "affectedMarkets": ["forex", "stocks", "penny_stocks", "commodities", "futures"],
+  "expectations": "Holiday calendars are published by exchanges in advance. Check the exchange's own calendar for the market you are studying.",
+  "surprises": "There is no figure to beat. The risk is being caught by thin trading or a gap at the reopening, especially with positions held through the closure.",
+  "limits": "A holiday does not point prices in any direction. It changes how easily and cheaply you can trade, not where the market is going.",
+  "keywords": ["holiday", "market closed", "markets closed", "early close", "half day", "short session", "bank holiday", "exchange closed"],
+  "glossaryIds": ["liquidity", "spread", "gap", "trading-session"],
+  "lessonIds": ["fx-sessions", "ps-gaps-halts-staying-out"],
+  "scenarioIds": [],
+  "samples": [
+    { "id": "s1", "title": "Westmark national holiday: exchange closed (fictional)", "day": 1, "time": "00:00", "timeZone": "UTC", "where": "Westmark (fictional)", "details": "A sample full-day closure of the fictional Westmark exchange and banks. Other markets trade with fewer participants." }
+  ]
+}

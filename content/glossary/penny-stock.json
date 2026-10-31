@@ -1,0 +1,14 @@
+{
+  "id": "penny-stock",
+  "term": "Penny stock",
+  "aliases": ["penny stocks", "penny share", "penny shares"],
+  "definition": {
+    "simple": "A share in a very small company that trades at a low price per share. Penny stocks are often hard to sell quickly and easy to push around.",
+    "balanced": "There is no single worldwide definition. Different markets, regulators and brokers draw the line in different ways, some by price per share and some by company size. What they share is the risk: low [[liquidity]], wide [[spread|spreads]], thin information, and a higher chance of [[stock-promotion|promotions]] and [[pump-and-dump]] schemes."
+  },
+  "example": "Fictional: a share priced at 0.25 USD in a company worth 10 million USD in total, with only a few thousand shares traded on a typical day.",
+  "related": ["microcap", "liquidity", "pump-and-dump", "otc-market"],
+  "markets": ["penny_stocks"],
+  "level": "beginner",
+  "sourceIds": []
+}

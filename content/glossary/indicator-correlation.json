@@ -1,0 +1,23 @@
+{
+  "id": "indicator-correlation",
+  "term": "Indicator correlation",
+  "aliases": [
+    "correlated indicators",
+    "redundant indicators",
+    "double counting"
+  ],
+  "definition": {
+    "simple": "When two indicators tend to say the same thing because they are calculated from the same prices.",
+    "balanced": "RSI, MACD and moving averages all use recent closing prices, so they often turn together. Their agreement is closer to one reading than to two confirmations. Information from a different source, such as structure or volume, is less likely to repeat it."
+  },
+  "example": "RSI 14 crosses above 50 and MACD crosses above zero on the same candle: largely the same message twice.",
+  "related": [
+    "indicator",
+    "rsi",
+    "macd",
+    "correlation"
+  ],
+  "markets": [],
+  "level": "advanced",
+  "sourceIds": []
+}

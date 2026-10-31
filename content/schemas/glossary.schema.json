@@ -1,0 +1,93 @@
+{
+  "title": "TradeLab glossary",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+    },
+    "term": {
+      "type": "string",
+      "minLength": 1
+    },
+    "aliases": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "definition": {
+      "type": "object",
+      "properties": {
+        "simple": {
+          "type": "string",
+          "minLength": 1
+        },
+        "balanced": {
+          "type": "string",
+          "minLength": 1
+        },
+        "advanced": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "simple"
+      ],
+      "additionalProperties": false
+    },
+    "example": {
+      "type": "string",
+      "minLength": 1
+    },
+    "related": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+      }
+    },
+    "markets": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "forex",
+          "stocks",
+          "penny_stocks",
+          "commodities",
+          "futures"
+        ]
+      }
+    },
+    "level": {
+      "type": "string",
+      "enum": [
+        "beginner",
+        "intermediate",
+        "advanced"
+      ]
+    },
+    "sourceIds": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+      }
+    }
+  },
+  "required": [
+    "id",
+    "term",
+    "aliases",
+    "definition",
+    "related",
+    "markets",
+    "level",
+    "sourceIds"
+  ],
+  "additionalProperties": false
+}

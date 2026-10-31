@@ -1,0 +1,91 @@
+{
+  "id": "fx-risk-per-trade",
+  "skills": ["risk_management"],
+  "moduleId": "forex-risk",
+  "title": "Risk per trade: the 1% example",
+  "level": "beginner",
+  "estimatedMinutes": 15,
+  "inOneLine": {
+    "simple": "Decide before each trade how much money you can lose on it. Keep that amount small so a run of losses cannot wipe you out.",
+    "balanced": "[[risk-per-trade|Risk per trade]] = balance × your chosen percentage. This lesson uses 1% as a learning example only. It is not a right number for everyone, and you can change it in your risk rules."
+  },
+  "explain": {
+    "simple": "Every trade can lose. So before you enter, choose the most you are willing to lose if the stop loss is hit. Many learners use a small share of the account, such as 1%, as an example rule. With a 10,000 USD account, 1% is 100 USD. The point is not the exact number. The point is that one bad trade, or ten, should not end your practice. A small fixed share also shrinks your risk in money as the account falls, which slows the damage.",
+    "balanced": "Risk is set as a percentage of current balance, then turned into a position size from the stop distance. The percentage in this lesson is a configurable learning example, not advice. Fixed-percentage risk means each loss is a little smaller in money than the last while you are in a [[drawdown]]. The opposite habit, raising size to win back losses, makes drawdowns deeper and faster. A [[stop-loss]] can slip, so the real loss can be larger than the plan. Set your own example limits in More → Risk rules."
+  },
+  "realNumbers": {
+    "assumptions": [
+      "Example account: 10,000 USD",
+      "Example rule: risk 1% of the current balance per trade. This is a learning example, not a recommendation",
+      "Every stop fills exactly at its level, with no slippage or costs",
+      "10 losses in a row"
+    ],
+    "steps": [
+      "Trade 1: risk = 10,000 × 0.01 = 100 USD. After the loss the balance is 9,900 USD.",
+      "Trade 2: risk = 9,900 × 0.01 = 99 USD. The money at risk shrinks as the balance falls.",
+      "After 10 losses: 10,000 × 0.99^10 = 9,043.82 USD. That is a fall of about 9.56%.",
+      "Same streak at an example 10% per trade: 10,000 × 0.90^10 = 3,486.78 USD. That is a fall of about 65.13%."
+    ]
+  },
+  "anotherExample": {
+    "assumptions": [
+      "Example account: 10,000 USD",
+      "Example rule: 1% of the current balance per trade",
+      "Three losses in a row, then one more loss",
+      "No slippage or costs"
+    ],
+    "steps": [
+      "Three losses: 100 + 99 + 98.01 = 297.01 USD. Balance = 9,702.99 USD.",
+      "Sticking to the rule, trade 4 risks 9,702.99 × 0.01 = 97.03 USD. If it loses, the balance is 9,605.96 USD, down about 3.94%.",
+      "Raising risk to 4% to 'win it back' means risking 9,702.99 × 0.04 = 388.12 USD. If it loses, the balance is 9,314.87 USD, down about 6.85%.",
+      "One extra loss at the bigger size left a total fall of about 6.85% instead of 3.94%, about 1.7 times the damage. Bigger size after losses is the wrong reaction."
+    ]
+  },
+  "explainSimpler": "Pick a small slice of your account to risk on each trade. If you lose, the next slice gets a bit smaller. Never make the slice bigger to get money back.",
+  "commonMistake": "Treating 1% as a rule everyone must use, or forgetting to recalculate it from the current balance. Another mistake is raising size after a loss to recover faster. That turns a normal losing run into a deep drawdown.",
+  "quickCheck": [
+    {
+      "id": "fx-risk-per-trade-q1",
+      "prompt": "Your example rule is 1% risk per trade. Your balance is 8,000 USD. How much do you risk on the next trade?",
+      "options": [
+        { "id": "a", "text": "8 USD", "explanation": "No: that is 0.1% of 8,000." },
+        { "id": "b", "text": "80 USD", "explanation": "Right: 8,000 × 0.01 = 80 USD." },
+        { "id": "c", "text": "100 USD", "explanation": "No: use the current balance, not the starting one." }
+      ],
+      "correctOptionIds": ["b"],
+      "level": "beginner",
+      "glossaryIds": ["risk-per-trade"]
+    },
+    {
+      "id": "fx-risk-per-trade-q2",
+      "prompt": "You have lost 4 trades in a row. What does a sound risk plan say about the next trade's size?",
+      "options": [
+        { "id": "a", "text": "Double it, since a win is more likely after a long losing run", "explanation": "No: past losses do not make a win more likely, and bigger size after losses makes the drawdown deeper and faster." },
+        { "id": "b", "text": "Keep the same percentage of the current balance, or lower it", "explanation": "Right: the rule stays the same. Some learners also pause and review after a set number of losses." },
+        { "id": "c", "text": "Remove the stop loss so the trade can come back", "explanation": "No: without a stop the possible loss has no limit." }
+      ],
+      "correctOptionIds": ["b"],
+      "level": "beginner",
+      "glossaryIds": ["risk-per-trade", "losing-streak"]
+    },
+    {
+      "id": "fx-risk-per-trade-q3",
+      "prompt": "Why is the 1% in this lesson called a learning example?",
+      "options": [
+        { "id": "a", "text": "Because it is the one correct number for every trader, whatever the account size", "explanation": "No: no single percentage suits everyone." },
+        { "id": "b", "text": "It is a number to practise with, and you can change it in your risk rules", "explanation": "Right: it shows the method. The right number depends on the person and the plan." },
+        { "id": "c", "text": "Because the app sets it and you cannot change it", "explanation": "No: you can set your own example limits in More → Risk rules." }
+      ],
+      "correctOptionIds": ["b"],
+      "level": "beginner",
+      "glossaryIds": ["risk-per-trade"]
+    }
+  ],
+  "doItNow": {
+    "kind": "reflection",
+    "instructions": "Open More → Risk rules and set your own example limits: risk per trade, daily loss limit, and when to stop and review after losses. Then write one sentence on why you chose each number."
+  },
+  "homework": "Work out by hand what 5 losses in a row would do to a 10,000 USD example account at 1% and at 5% of the current balance.",
+  "glossaryIds": ["risk-per-trade", "drawdown", "stop-loss", "losing-streak"],
+  "sourceIds": []
+}

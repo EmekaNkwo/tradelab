@@ -1,0 +1,90 @@
+{
+  "id": "mt-check-margin",
+  "title": "Read balance, equity and margin",
+  "summary": "Find your [[balance]], [[equity]], [[margin]], [[free-margin|free margin]] and [[margin-level|margin level]] in the Trade tab, and watch them change with one small demo trade.",
+  "level": "beginner",
+  "requiresDemo": true,
+  "steps": [
+    {
+      "text": "Check you are on your demo account before you start."
+    },
+    {
+      "text": "Open the Trade tab. With no trades open, write down the balance, equity, margin and free margin. Margin level may be blank when nothing is open."
+    },
+    {
+      "text": "Go to the Quotes tab, tap EUR/USD and choose the option to trade."
+    },
+    {
+      "text": "On the order screen, set the volume to 0.01 and place a market buy. Leaving stop loss and take profit empty is for this short check only: you will close the trade a moment later. In your own practice, always set a stop loss."
+    },
+    {
+      "text": "Go back to the Trade tab. Write down the balance, equity, margin, free margin and margin level again."
+    },
+    {
+      "text": "Check: equity minus margin should equal free margin, and equity ÷ margin × 100 should match the margin level, allowing for prices moving while you read."
+    },
+    {
+      "text": "Tap or press and hold the open position (it depends on your app version), then choose the option to close it."
+    },
+    {
+      "text": "Read the balance once more. It now includes the result of the closed trade."
+    }
+  ],
+  "afterQuestions": [
+    {
+      "id": "mt-check-margin-q1",
+      "prompt": "While the trade was open, which number changed with every price tick?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Equity",
+          "explanation": "Right: equity includes the open profit or loss, so it moves with price."
+        },
+        {
+          "id": "b",
+          "text": "Balance",
+          "explanation": "No: the balance only changes when a trade is closed or a charge is applied."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "equity",
+        "balance"
+      ]
+    },
+    {
+      "id": "mt-check-margin-q2",
+      "prompt": "What happened to free margin when you opened the trade?",
+      "options": [
+        {
+          "id": "a",
+          "text": "It went up",
+          "explanation": "No: opening a trade ties up margin, so less is free."
+        },
+        {
+          "id": "b",
+          "text": "It went down by about the margin the trade used",
+          "explanation": "Right: free margin = equity − used margin, so opening a trade reduces it."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "free-margin"
+      ]
+    }
+  ],
+  "glossaryIds": [
+    "balance",
+    "equity",
+    "margin",
+    "free-margin",
+    "margin-level",
+    "demo-account"
+  ]
+}

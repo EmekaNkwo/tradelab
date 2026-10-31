@@ -1,0 +1,12 @@
+{
+  "id": "commodities",
+  "skills": ["market_fundamentals", "fundamental_analysis"],
+  "title": "Commodities: supply, demand and scenarios",
+  "summary": "What drives gold, silver, crude oil, natural gas and crops: supply and demand, inventories, seasons, geopolitics, inflation, rates and currencies, plus a first look at futures curves, contango, backwardation and storage.",
+  "markets": ["commodities"],
+  "level": "beginner",
+  "lessonIds": ["cm-what-are-commodities", "cm-supply-demand-inventories", "cm-seasonality-geopolitics", "cm-inflation-rates-currency", "cm-futures-curves-intro"],
+  "checkpointQuizId": "commodities-checkpoint",
+  "practicalResult": "Work through the three fictional commodity scenarios in the Fundamental Analysis Lab, writing at least two possible reactions for each before revealing them, and place one planned practice trade on the Practice commodity.",
+  "minPracticeDays": 0
+}

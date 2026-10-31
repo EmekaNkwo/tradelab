@@ -1,0 +1,24 @@
+{
+  "id": "market-capitalisation",
+  "term": "Market capitalisation",
+  "aliases": [
+    "market cap",
+    "market capitalization",
+    "market value"
+  ],
+  "definition": {
+    "simple": "What the market says the whole company is worth: share price × number of shares.",
+    "balanced": "Market cap = share price × shares outstanding. It measures size in the market's eyes, not quality. A high market cap with small profits means buyers expect a lot of future growth. It moves every time the share price moves."
+  },
+  "example": "Price 14.40 USD × 100 million shares = 1,440 million USD market cap.",
+  "related": [
+    "share",
+    "valuation",
+    "pe-ratio"
+  ],
+  "markets": [
+    "stocks"
+  ],
+  "level": "beginner",
+  "sourceIds": []
+}

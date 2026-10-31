@@ -1,0 +1,21 @@
+{
+  "id": "risk-per-trade",
+  "term": "Risk per trade",
+  "aliases": [
+    "risk per trade",
+    "per-trade risk"
+  ],
+  "definition": {
+    "simple": "The money you would lose on one trade if the stop loss is hit, often set as a share of your account.",
+    "balanced": "Risk per trade = account balance × the risk percentage you chose. Rules such as 1% are learning examples, not a right number for everyone. The real loss can be larger than planned if the [[stop-loss]] slips."
+  },
+  "example": "Example only: a 10,000 USD account with a 1% example rule risks 100 USD per trade.",
+  "related": [
+    "position-sizing",
+    "stop-loss",
+    "drawdown"
+  ],
+  "markets": [],
+  "level": "beginner",
+  "sourceIds": []
+}

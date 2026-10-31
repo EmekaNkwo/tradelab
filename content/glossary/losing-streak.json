@@ -1,0 +1,21 @@
+{
+  "id": "losing-streak",
+  "term": "Losing streak",
+  "aliases": [
+    "losing run",
+    "consecutive losses"
+  ],
+  "definition": {
+    "simple": "Several losing trades in a row.",
+    "balanced": "Losing streaks are normal, even for a plan that works over time. If each trade loses with chance L, independently, the chance the next N trades all lose is L to the power N. Over many trades, the chance of seeing some streak is much higher. Never raise size to win losses back."
+  },
+  "example": "With an example 50% loss chance, the next 5 trades all lose with chance 0.5^5 = 3.125%.",
+  "related": [
+    "drawdown",
+    "risk-of-ruin",
+    "risk-per-trade"
+  ],
+  "markets": [],
+  "level": "beginner",
+  "sourceIds": []
+}

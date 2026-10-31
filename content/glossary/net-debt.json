@@ -1,0 +1,21 @@
+{
+  "id": "net-debt",
+  "term": "Net debt",
+  "aliases": [
+    "net cash"
+  ],
+  "definition": {
+    "simple": "Debt minus cash: how much a company would still owe if it used all its cash to repay debt.",
+    "balanced": "Net debt = debt − cash. If it is negative, the company has net cash. Compare net debt with operating profit or cash flow: the same debt is much riskier for a company whose profit is shrinking."
+  },
+  "example": "Debt 160, cash 71: net debt = 89 (fictional, millions USD).",
+  "related": [
+    "balance-sheet",
+    "free-cash-flow"
+  ],
+  "markets": [
+    "stocks"
+  ],
+  "level": "beginner",
+  "sourceIds": []
+}

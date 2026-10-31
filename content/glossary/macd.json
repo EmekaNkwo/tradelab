@@ -1,0 +1,21 @@
+{
+  "id": "macd",
+  "term": "MACD",
+  "aliases": [
+    "moving average convergence divergence",
+    "MACD 12 26 9"
+  ],
+  "definition": {
+    "simple": "An indicator that shows the gap between a faster and a slower average of price, plus an average of that gap.",
+    "balanced": "With the common settings, the MACD line is the 12-period EMA minus the 26-period EMA. The signal line is a 9-period EMA of the MACD line. The histogram is the MACD line minus the signal line. It is built from averages, so it lags. Some apps draw the MACD line as bars, so check what each part shows in yours."
+  },
+  "example": "EMA 12 = 1.10350 and EMA 26 = 1.10200, so the MACD line is 0.00150.",
+  "related": [
+    "moving-average",
+    "indicator",
+    "lagging-indicator"
+  ],
+  "markets": [],
+  "level": "intermediate",
+  "sourceIds": []
+}

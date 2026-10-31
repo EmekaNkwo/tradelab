@@ -1,0 +1,27 @@
+appId: com.tradelab.app
+name: TradeLab full E2E journey (spec §36), automated part
+tags:
+  - e2e
+  - full
+---
+# Runs the journey in order on ONE device, with no outside help. Each step
+# depends on state left by the steps before it (docs/e2e.md, "Flow dependencies").
+#   maestro --device tckflfrc8599wwts test .maestro/full-run.yaml
+#
+# Step 10 here is 10a only: it proves the backup file is written in app
+# storage, without relying on the share sheet. The real round trip (export to
+# Google Drive, uninstall, install, restore) cannot run inside one Maestro flow,
+# because the APK must be reinstalled from outside. Run the whole journey with
+# it, in the spec's order, with:
+#   scripts/e2e-journey.sh
+- runFlow: 01-onboarding.yaml
+- runFlow: 02-program-setup.yaml
+- runFlow: 03-daily-class.yaml
+- runFlow: 04-mt-task.yaml
+- runFlow: 05-replay-drill.yaml
+- runFlow: 06-paper-trade.yaml
+- runFlow: 07-journal-review.yaml
+- runFlow: 08-strategy-backtest.yaml
+- runFlow: 09-restart-progress.yaml
+- runFlow: 10a-backup-create.yaml
+- runFlow: 11-final-assessment.yaml

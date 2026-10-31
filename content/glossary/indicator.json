@@ -1,0 +1,21 @@
+{
+  "id": "indicator",
+  "term": "Indicator",
+  "aliases": [
+    "indicators",
+    "technical indicator",
+    "study"
+  ],
+  "definition": {
+    "simple": "A line or chart calculated from past prices, such as an average, to summarise what price has done.",
+    "balanced": "Indicators only rearrange information already on the chart: past prices, and sometimes volume. They do not see the future. Each has settings, such as a period, and the result changes when the settings change. Each has market conditions where it gives many misleading readings."
+  },
+  "related": [
+    "lagging-indicator",
+    "moving-average",
+    "rsi"
+  ],
+  "markets": [],
+  "level": "intermediate",
+  "sourceIds": []
+}

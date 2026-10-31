@@ -1,0 +1,13 @@
+{
+  "id": "mc-volatility",
+  "order": 8,
+  "dimension": "Volatility",
+  "cells": {
+    "forex": "Often modest day to day for major pairs, but releases and policy surprises can bring sharp moves.",
+    "stocks": "Varies by company and sector; company news such as earnings can move a share a lot in one day.",
+    "penny_stocks": "Can be extreme: large daily swings, sudden spikes and falls, and gaps.",
+    "commodities": "Can be high; supply news, inventories and weather-type events can move prices quickly.",
+    "futures": "Follows the underlying, but leverage makes each move large compared with the margin."
+  },
+  "caveat": "[[volatility|Volatility]] changes over time and with conditions. A calm period says little about the next one, and leverage turns a small move into a big result."
+}

@@ -1,0 +1,23 @@
+{
+  "id": "walk-forward-testing",
+  "term": "Walk-forward testing",
+  "aliases": [
+    "walk-forward",
+    "walk-forward analysis",
+    "rolling out-of-sample test"
+  ],
+  "definition": {
+    "simple": "Testing in steps: tune rules on one block of history, test them unchanged on the next block, then slide forward and repeat.",
+    "balanced": "Only the joined test blocks are judged, since each was tested with rules tuned on earlier data. It shows how rules cope as conditions change. It is still a test of the past with a limited sample, and any leak of future data spoils it."
+  },
+  "example": "Tune on candles 1–200, test 201–300; tune on 101–300, test 301–400; and so on.",
+  "related": [
+    "out-of-sample",
+    "in-sample",
+    "backtest",
+    "overfitting"
+  ],
+  "markets": [],
+  "level": "advanced",
+  "sourceIds": []
+}

@@ -1,0 +1,19 @@
+{
+  "id": "pre-trade-checklist",
+  "term": "Pre-trade checklist",
+  "aliases": [
+    "checklist",
+    "pre-trade check"
+  ],
+  "definition": {
+    "simple": "A few quick questions you answer before every trade: Is it in my plan? Is a stop loss set? Is the risk within my limit? Is important news due soon for this market? Am I calm, and not trying to win back a loss?",
+    "balanced": "The checklist sits between your [[trading-plan]] and the order button. If an answer raises a caution (for example no stop, risk over your limit, news due soon, not calm, or not sure), you wait or skip that trade. It catches rushed or emotional trades before they happen."
+  },
+  "related": [
+    "trading-plan",
+    "stop-loss"
+  ],
+  "markets": [],
+  "level": "beginner",
+  "sourceIds": []
+}

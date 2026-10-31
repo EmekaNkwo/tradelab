@@ -1,0 +1,22 @@
+{
+  "id": "parameter-sensitivity",
+  "term": "Parameter sensitivity",
+  "aliases": [
+    "sensitivity test",
+    "parameter stability",
+    "robustness check"
+  ],
+  "definition": {
+    "simple": "How much a test result changes when you nudge a setting, such as an average length from 20 to 18 or 22.",
+    "balanced": "If neighbouring settings give similar results, the result is less fragile. A single sharp peak surrounded by losses is a warning sign of [[overfitting]]. Low sensitivity does not prove a rule has an edge; it only shows the result does not hinge on one exact number."
+  },
+  "example": "Lengths 16 to 24 give −4R, −1R, +12R, −2R, −5R: the +12R at length 20 stands alone and is fragile.",
+  "related": [
+    "overfitting",
+    "backtest",
+    "indicator"
+  ],
+  "markets": [],
+  "level": "advanced",
+  "sourceIds": []
+}

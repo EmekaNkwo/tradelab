@@ -1,0 +1,81 @@
+{
+  "id": "fu-margin-mark-to-market",
+  "moduleId": "futures",
+  "title": "Initial margin, maintenance margin and margin calls",
+  "level": "beginner",
+  "estimatedMinutes": 20,
+  "inOneLine": {
+    "simple": "You put down a deposit to open a futures trade. Every day, gains and losses are added to or taken from your account, and if it falls too low you must add money or be closed out.",
+    "balanced": "[[initial-margin|Initial margin]] is needed to open; [[maintenance-margin]] is the lower level the account must stay above. Through [[mark-to-market]], each day's gain or loss is settled in cash. Falling below maintenance brings a [[margin-call]]. Required margin is not the maximum loss."
+  },
+  "explain": {
+    "simple": "Initial margin is a good-faith deposit for each contract, not the price of the contract. Each trading day the position is valued at that day's settlement price, and the gain or loss moves into or out of your account. This is called mark-to-market. If the account falls below the maintenance margin, you get a margin call: you must add money, or the broker can close your position. Margin is only a deposit. A large move can take more than the margin, and even more than your whole account.",
+    "balanced": "Exchanges set minimum margins and brokers may ask for more; both can raise margins at short notice, often when markets are moving fast. Rules on how much to add after a margin call differ: in this lesson's example the broker asks you to top the account back up to the initial margin. The price that triggers a margin call depends on your balance, not only the margin: margin-call price for a buyer = entry − (balance − maintenance margin × contracts) ÷ (money per point × contracts). Notional ÷ initial margin shows the [[leverage]] built into the trade."
+  },
+  "realNumbers": {
+    "assumptions": [
+      "Example index future (fictional specs): multiplier 10 USD per point, tick size 0.25",
+      "Fictional margins: initial 2,000 USD, maintenance 1,600 USD per contract",
+      "Account balance before the trade: 2,000 USD",
+      "Buy 1 contract at 4,000.00",
+      "Fictional rule: after a margin call you must top up to the initial margin"
+    ],
+    "steps": [
+      "Notional value = 4,000 × 10 = 40,000 USD. Leverage = 40,000 ÷ 2,000 = 20 times.",
+      "Day 1 settles at 3,985.00: change = −15 points × 10 = −150 USD. Account = 2,000 − 150 = 1,850 USD, still above 1,600.",
+      "Day 2 settles at 3,955.00: change = −30 points × 10 = −300 USD. Account = 1,850 − 300 = 1,550 USD, below 1,600.",
+      "Margin call: top up to 2,000 USD, so add 2,000 − 1,550 = 450 USD, or the broker may close the position.",
+      "Margin-call price = 4,000 − (2,000 − 1,600) ÷ 10 = 4,000 − 40 = 3,960.00. Day 2's 3,955.00 is below it.",
+      "A 200-point fall, only 200 ÷ 4,000 = 5% of the price, would lose 200 × 10 = 2,000 USD: the whole initial margin."
+    ]
+  },
+  "anotherExample": {
+    "assumptions": [
+      "Same fictional specs and margins",
+      "Account balance before the trade: 5,000 USD",
+      "Sell (go short) 1 contract at 4,000.00"
+    ],
+    "steps": [
+      "For a short, losses come from price rising.",
+      "Margin-call price = 4,000 + (5,000 − 1,600) ÷ 10 = 4,000 + 340 = 4,340.00.",
+      "The whole balance is gone at 4,000 + 5,000 ÷ 10 = 4,500.00.",
+      "Price can keep rising past 4,500.00. At 4,600.00 the loss would be 600 × 10 = 6,000 USD, which is 1,000 USD more than the account held.",
+      "Extra cash moves the margin-call price further away. It does not cap the loss."
+    ]
+  },
+  "explainSimpler": "Margin is a deposit that gets topped up or drained every day. If it drains below a line, you must refill it or lose the position. And the loss can be bigger than the deposit.",
+  "commonMistake": "Treating the initial margin as the price of the trade or as the most you can lose. Your profit and loss is based on the full notional value, and it is settled every day, so a run of bad days can force a margin call well before you planned to exit.",
+  "quickCheck": [
+    {
+      "id": "fu-margin-mark-to-market-q1",
+      "prompt": "Fictional margins: initial 2,000 USD, maintenance 1,600 USD. You opened with 2,000 USD. Your account holds 1,700 USD after today's mark-to-market. What happens?",
+      "options": [
+        { "id": "a", "text": "Nothing yet: still above maintenance", "explanation": "Right: 1,700 is above 1,600, so there is no margin call yet, even though the account is below the initial margin." },
+        { "id": "b", "text": "A margin call: you are below initial margin", "explanation": "No: in this example the call comes when the account falls below the maintenance margin, 1,600 USD." },
+        { "id": "c", "text": "The trade is closed with a 300 USD gain", "explanation": "No: the account has fallen by 300 USD, which is a loss, and nothing forces a close yet." }
+      ],
+      "correctOptionIds": ["a"],
+      "level": "beginner",
+      "glossaryIds": ["maintenance-margin", "initial-margin", "margin-call", "mark-to-market"]
+    },
+    {
+      "id": "fu-margin-mark-to-market-q2",
+      "prompt": "Example index future (fictional: 10 USD per point). Balance 3,000 USD, maintenance 1,600 USD, buy 1 contract at 4,000.00. At what price does the margin call start?",
+      "options": [
+        { "id": "a", "text": "3,840.00", "explanation": "No: that uses the maintenance margin alone, 1,600 ÷ 10. Start from the balance above maintenance." },
+        { "id": "b", "text": "3,700.00", "explanation": "No: that is where the whole 3,000 USD balance is gone." },
+        { "id": "c", "text": "3,860.00", "explanation": "Right: (3,000 − 1,600) ÷ 10 = 140 points, and 4,000 − 140 = 3,860.00." }
+      ],
+      "correctOptionIds": ["c"],
+      "level": "beginner",
+      "glossaryIds": ["maintenance-margin", "margin-call"]
+    }
+  ],
+  "doItNow": {
+    "kind": "calculator",
+    "instructions": "Open the futures contract calculator and enter this lesson's fictional specs (tick size 0.25 and tick value 2.50 USD, which is 0.25 × 10) and margins, with a 2,000 USD balance and a buy at 4,000.00. Check that it shows a notional value of 40,000 USD, leverage of 20 and a margin-call price of 3,960.00. Then raise the balance to 3,000 USD and to 5,000 USD and write down how the margin-call price moves. Note the price where the balance would be gone, and remember price can go further than that."
+  },
+  "homework": "Make a mark-to-market table for 5 made-up settlement prices on the example index future. For each day, write the daily gain or loss, the account balance, and whether a margin call would happen.",
+  "glossaryIds": ["initial-margin", "maintenance-margin", "mark-to-market", "margin-call", "margin", "leverage", "notional-value"],
+  "sourceIds": []
+}

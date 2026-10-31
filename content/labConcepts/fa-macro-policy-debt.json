@@ -1,0 +1,23 @@
+{
+  "id": "fa-macro-policy-debt",
+  "skills": ["fundamental_analysis"],
+  "lab": "fundamental",
+  "level": "intermediate",
+  "order": 42,
+  "title": "Policy and government debt",
+  "summary": "[[monetary-policy|Monetary policy]] (the central bank's rates) and [[fiscal-policy|fiscal policy]] (the government's spending and taxes) both affect growth and inflation. Deficits add to [[government-debt]], and higher rates make that debt more costly.",
+  "unreliableWhen": "When the two policies pull in opposite directions, when the reaction depends on how lenders feel about the debt that day, or when one debt figure is treated as a fixed danger line. There is no single level at which debt becomes a problem.",
+  "goodExample": "A learner reads fictional Westmark's bigger-than-expected deficit and lists two chains: the central bank keeping rates high (WMK up) and debt worries (WMK down). They plan for either.",
+  "badExample": "A learner assumes a bigger deficit must sink the currency, ignoring that the central bank may respond with higher rates.",
+  "lessonIds": [
+    "fm-monetary-fiscal-debt",
+    "fx-rates-central-banks"
+  ],
+  "chart": null,
+  "drillKind": null,
+  "scenarioIds": [
+    "macro-westmark-budget-deficit"
+  ],
+  "companyIds": [],
+  "redFlagCaseIds": []
+}

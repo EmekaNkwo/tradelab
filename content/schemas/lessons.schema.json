@@ -1,0 +1,316 @@
+{
+  "title": "TradeLab lessons",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+    },
+    "moduleId": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "level": {
+      "type": "string",
+      "enum": [
+        "beginner",
+        "intermediate",
+        "advanced"
+      ]
+    },
+    "estimatedMinutes": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 60
+    },
+    "inOneLine": {
+      "type": "object",
+      "properties": {
+        "simple": {
+          "type": "string",
+          "minLength": 1
+        },
+        "balanced": {
+          "type": "string",
+          "minLength": 1
+        },
+        "advanced": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "simple"
+      ],
+      "additionalProperties": false
+    },
+    "explain": {
+      "type": "object",
+      "properties": {
+        "simple": {
+          "type": "string",
+          "minLength": 1
+        },
+        "balanced": {
+          "type": "string",
+          "minLength": 1
+        },
+        "advanced": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "simple"
+      ],
+      "additionalProperties": false
+    },
+    "realNumbers": {
+      "type": "object",
+      "properties": {
+        "assumptions": {
+          "minItems": 1,
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "steps": {
+          "minItems": 1,
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      },
+      "required": [
+        "assumptions",
+        "steps"
+      ],
+      "additionalProperties": false
+    },
+    "anotherExample": {
+      "type": "object",
+      "properties": {
+        "assumptions": {
+          "minItems": 1,
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "steps": {
+          "minItems": 1,
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      },
+      "required": [
+        "assumptions",
+        "steps"
+      ],
+      "additionalProperties": false
+    },
+    "explainSimpler": {
+      "type": "string",
+      "minLength": 1
+    },
+    "commonMistake": {
+      "type": "string",
+      "minLength": 1
+    },
+    "quickCheck": {
+      "minItems": 2,
+      "maxItems": 3,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+          },
+          "prompt": {
+            "type": "string",
+            "minLength": 1
+          },
+          "options": {
+            "minItems": 2,
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+                },
+                "text": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "explanation": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "id",
+                "text",
+                "explanation"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "correctOptionIds": {
+            "minItems": 1,
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+            }
+          },
+          "level": {
+            "type": "string",
+            "enum": [
+              "beginner",
+              "intermediate",
+              "advanced"
+            ]
+          },
+          "glossaryIds": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+            }
+          },
+          "skills": {
+            "minItems": 1,
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "market_fundamentals",
+                "chart_reading",
+                "technical_analysis",
+                "fundamental_analysis",
+                "risk_management",
+                "strategy_understanding",
+                "execution_discipline",
+                "psychology",
+                "backtesting_literacy",
+                "statistical_reasoning"
+              ]
+            }
+          }
+        },
+        "required": [
+          "id",
+          "prompt",
+          "options",
+          "correctOptionIds",
+          "level",
+          "glossaryIds"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "doItNow": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "type": "string",
+          "enum": [
+            "chart_lab",
+            "replay",
+            "paper",
+            "backtest",
+            "fundamental",
+            "metatrader",
+            "calculator",
+            "reflection"
+          ]
+        },
+        "instructions": {
+          "type": "string",
+          "minLength": 1
+        },
+        "mtTaskId": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+        }
+      },
+      "required": [
+        "kind",
+        "instructions"
+      ],
+      "additionalProperties": false
+    },
+    "homework": {
+      "type": "string",
+      "minLength": 1
+    },
+    "glossaryIds": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+      }
+    },
+    "sourceIds": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+      }
+    },
+    "skills": {
+      "minItems": 1,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "market_fundamentals",
+          "chart_reading",
+          "technical_analysis",
+          "fundamental_analysis",
+          "risk_management",
+          "strategy_understanding",
+          "execution_discipline",
+          "psychology",
+          "backtesting_literacy",
+          "statistical_reasoning"
+        ]
+      }
+    }
+  },
+  "required": [
+    "id",
+    "moduleId",
+    "title",
+    "level",
+    "estimatedMinutes",
+    "inOneLine",
+    "explain",
+    "realNumbers",
+    "anotherExample",
+    "explainSimpler",
+    "commonMistake",
+    "quickCheck",
+    "doItNow",
+    "glossaryIds",
+    "sourceIds"
+  ],
+  "additionalProperties": false
+}

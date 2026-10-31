@@ -1,0 +1,76 @@
+{
+  "id": "fm-priced-in",
+  "moduleId": "fa-macro",
+  "title": "Expectations: what was already priced in",
+  "level": "intermediate",
+  "estimatedMinutes": 20,
+  "inOneLine": {
+    "simple": "Prices move on what people expect before news arrives. When the news comes, what matters is how different it is from what was already in the price.",
+    "balanced": "The [[surprise]] against the [[consensus-forecast]] is a start, but what was [[priced-in|priced in]] also depends on how traders were positioned. That is why the same number can bring different reactions on different days."
+  },
+  "explain": {
+    "simple": "You learned in the forex lesson on expected vs. actual that surprise = actual − consensus. This lesson adds a second layer. Before a release, traders act on what they expect, so the price already reflects some outcome. If many have already bought on a hoped-for number, a good number may bring little more buying, and some may sell to take profit. If nobody was prepared, the same number can bring a bigger, longer move. So ask two questions: how big was the surprise, and what was the market already set up for?",
+    "balanced": "Clues to what is priced in include how far the price moved in the run-up, how one-sided commentary has been, and, for rate decisions, how likely traders' bets make each outcome. None of these is exact, so treat 'priced in' as a working guess. A simple way to measure a rate decision against expectations: expected change = probability × size. The real surprise is the actual change minus that expected change, not minus zero. All scenarios here use fictional Westmark data and are not forecasts."
+  },
+  "realNumbers": {
+    "assumptions": [
+      "Fictional Westmark central bank, policy rate 3.00%",
+      "Suppose traders' bets imply about an 80% chance of a 0.25-point rise and a 20% chance of no change",
+      "Two possible outcomes, both made up"
+    ],
+    "steps": [
+      "Expected change = 0.80 × 0.25 = 0.20 points. Most of the rise is already priced in.",
+      "Outcome A, a 0.25 rise: surprise against what was priced = 0.25 − 0.20 = +0.05 points. Small.",
+      "Outcome B, no change: surprise = 0 − 0.20 = −0.20 points. Four times larger, in the opposite direction.",
+      "So 'no change' can move WMK more than a rise, because it was the outcome fewer people prepared for. Possible, not certain."
+    ]
+  },
+  "anotherExample": {
+    "assumptions": [
+      "Fictional Westmark inflation release: consensus 3.0%, actual 3.4%",
+      "Context 1: WMK was flat beforehand, and few traders had bet on a high number",
+      "Context 2: WMK had risen for weeks, and many traders had bet on a high number"
+    ],
+    "steps": [
+      "Surprise in both = 3.4 − 3.0 = +0.4 points. The number is identical.",
+      "Context 1: little was priced in, so WMK may rise and hold as traders adjust.",
+      "Context 2: much was priced in, so WMK may spike, then fall back as early buyers take profit.",
+      "Same number, different setup, different plausible reactions. The two Westmark inflation scenarios in the Fundamental Analysis Lab let you try this."
+    ]
+  },
+  "explainSimpler": "News that everybody expected is old news. It moves price less, and sometimes the 'wrong' way, because people acted on it early.",
+  "commonMistake": "Measuring a surprise only against the published consensus and ignoring how the market was positioned. Another mistake is being sure you know what is priced in. It is always an estimate.",
+  "quickCheck": [
+    {
+      "id": "fm-priced-in-q1",
+      "prompt": "Suppose traders' bets imply a 60% chance of a 0.50-point rate cut and 40% of no change. How much of a cut is priced in?",
+      "options": [
+        { "id": "a", "text": "0.50 points", "explanation": "No: that assumes the cut is certain. Multiply by the 60% chance." },
+        { "id": "b", "text": "0.60 points", "explanation": "No: that is the probability, not the size of the cut." },
+        { "id": "c", "text": "0.30 points", "explanation": "Right: 0.60 × 0.50 = 0.30 points expected." }
+      ],
+      "correctOptionIds": ["c"],
+      "level": "intermediate",
+      "glossaryIds": ["priced-in"]
+    },
+    {
+      "id": "fm-priced-in-q2",
+      "prompt": "Two fictional releases have the same consensus and actual. Why might the reactions differ?",
+      "options": [
+        { "id": "a", "text": "One of the two releases must contain an error", "explanation": "No: the numbers can be correct; the setup before them differed." },
+        { "id": "b", "text": "Traders were positioned differently beforehand", "explanation": "Right: what was priced in and how traders were positioned change the reaction." },
+        { "id": "c", "text": "The surprise may have been bigger in one of them", "explanation": "No: the same consensus and the same actual means the same surprise. The setup before them differed." }
+      ],
+      "correctOptionIds": ["b"],
+      "level": "intermediate",
+      "glossaryIds": ["priced-in", "surprise"]
+    }
+  ],
+  "doItNow": {
+    "kind": "fundamental",
+    "instructions": "In the Fundamental Analysis Lab, open the two Westmark inflation scenarios, the calm one and the crowded one. Work out the surprise in each, then read what was priced in. For each, write the reaction you think is most plausible and one that would prove you wrong."
+  },
+  "homework": "Before the next release you see on an economic calendar, write down the consensus and one sentence on what you think is already priced in. After the release, note what happened, without judging yourself on whether you guessed right.",
+  "glossaryIds": ["priced-in", "surprise", "consensus-forecast", "economic-calendar"],
+  "sourceIds": []
+}

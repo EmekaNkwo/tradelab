@@ -1,0 +1,102 @@
+appId: com.tradelab.app
+---
+# Runs the class screen that is currently open (app/class/[id].tsx) to the end,
+# whatever its sections are. Section kinds and their buttons (SectionView):
+#   warmup     -> "Skip warm-up"            (QuestionSequence; we skip it)
+#   learn      -> "Continue"                (after LearnSection)
+#   watch      -> "Continue"
+#   practise   -> "I've done this" / "Skip for now"
+#   quiz       -> QuestionCard: "Check answer", then "Next question" / "Finish";
+#                 retry path "Let me try again"; then "Continue"
+#   checkpoint -> same QuestionCard (no retry), then "Continue" or "Try the checkpoint again"
+#   homework   -> "I've done it" / "I'll do it later"
+#   summary    -> "Finish class", then "Back to Home"
+# The progress caption (testID section-progress) reads e.g. "Learn · 1 of 7".
+# testIDs (app/class/[id].tsx): section-next on every forward button
+# (Continue, "I've done this", "I've done it"), section-skip on "Skip warm-up",
+# "Skip for now" and "I'll do it later", class-finish, class-back-home.
+# The plain "Continue" taps use section-next + text, so onboarding-style
+# "Continue" text elsewhere can't match.
+#
+# Each loop pass scrolls until one of the action buttons is on screen, then
+# fires whichever handler matches. Passes are bounded; if content changes so
+# that no known answer is correct, the loop runs out and the final assert fails.
+- extendedWaitUntil:
+    visible:
+      id: "class-screen"
+    timeout: 20000
+- repeat:
+    while:
+      notVisible:
+        id: "class-back-home"
+    times: 60
+    commands:
+      - scrollUntilVisible:
+          element:
+            text: "(Continue|Skip warm-up|I've done this|I'll do it later|Check answer|Let me try again|Next question|Finish|Finish class|Try the checkpoint again|Back to Home)"
+          direction: DOWN
+          timeout: 20000
+          centerElement: false
+      - runFlow:
+          when:
+            visible: "Skip warm-up"
+          commands:
+            - tapOn: "Skip warm-up"
+      - runFlow:
+          when:
+            visible: "I've done this"
+          commands:
+            - tapOn: "I've done this"
+      - runFlow:
+          when:
+            visible: "I'll do it later"
+          commands:
+            - tapOn: "I'll do it later"
+      - runFlow:
+          when:
+            visible: "Let me try again"
+          commands:
+            # A wrong first answer: reset and answer again from the known list.
+            - tapOn: "Let me try again"
+      - runFlow:
+          when:
+            visible: "Check answer"
+          file: answer-forex-basics.yaml
+      - runFlow:
+          when:
+            visible: "(Next question|Finish)"
+          commands:
+            - tapOn: "(Next question|Finish)"
+      - runFlow:
+          when:
+            visible: "Try the checkpoint again"
+          commands:
+            - takeScreenshot: checkpoint-not-passed
+            - tapOn: "Try the checkpoint again"
+      - runFlow:
+          when:
+            visible:
+              id: "section-next"
+              text: "Continue"
+          commands:
+            - tapOn:
+                id: "section-next"
+                text: "Continue"
+      - runFlow:
+          when:
+            visible:
+              id: "class-finish"
+          commands:
+            - tapOn:
+                id: "class-finish"
+                enabled: true
+- assertVisible:
+    id: "class-back-home"
+- takeScreenshot: class-summary
+- tapOn:
+    id: "class-back-home"
+# Back on Home (app/(tabs)/home/index.tsx), waited for by its testID.
+- extendedWaitUntil:
+    visible:
+      id: "home-screen"
+    timeout: 10000

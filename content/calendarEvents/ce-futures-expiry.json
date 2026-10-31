@@ -1,0 +1,18 @@
+{
+  "id": "ce-futures-expiry",
+  "kind": "futures_expiry",
+  "title": "Futures expiries and rollovers",
+  "measures": "Nothing is measured. It is the date a futures contract month stops trading, with related dates such as the last trading day and, for physically settled contracts, the first notice day.",
+  "whyItMatters": "Positions in an expiring contract must be closed or rolled to a later month. Trading activity moves from one contract month to the next, and prices of the two months can differ. Holding a physically settled contract too long can mean taking or making delivery.",
+  "affectedMarkets": ["futures", "commodities", "stocks"],
+  "expectations": "Expiry dates are set by each exchange's contract rules and are known in advance. Check them in the exchange's own contract specification, not from memory.",
+  "surprises": "There is no forecast to beat, but trading near expiry can be thin in the old month, spreads can widen, and the gap between months can look like a price jump on a continuous chart that joins the contracts together.",
+  "limits": "An expiry does not tell you where prices are going. Charts that join contract months need to say how they were joined, or they can show jumps that never happened in any one contract.",
+  "keywords": ["expiry", "expiration", "rollover", "roll over", "contract month", "first notice", "last trading day", "settlement", "quarterly expiry"],
+  "glossaryIds": ["expiry", "rollover", "contract-month", "futures-contract", "physical-settlement", "cash-settlement", "futures-curve"],
+  "lessonIds": ["fu-contracts-expiry", "fu-curve-rollover"],
+  "scenarioIds": [],
+  "samples": [
+    { "id": "s1", "title": "IDX practice future: last trading day (fictional)", "day": 5, "time": "15:00", "timeZone": "UTC", "where": "Fictional practice exchange", "details": "A sample last trading day for the app's fictional index future. Positions would need to be closed or rolled to the next fictional contract month before it." }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "id": "backtest",
+  "term": "Backtest",
+  "aliases": [
+    "backtesting",
+    "back test"
+  ],
+  "definition": {
+    "simple": "Testing your trading rules on past price data to see how they would have behaved.",
+    "balanced": "A backtest applies fixed rules to historical bars. It can show how often the rules found trades, how they handled different conditions, and where they broke down. It cannot show what will happen next. Results depend on [[sample-size]] and can be distorted by [[look-ahead-bias]], [[overfitting]] and [[survivorship-bias]]."
+  },
+  "example": "You step through 50 past setups in Replay, following your plan exactly, and record each result.",
+  "related": [
+    "forward-test",
+    "sample-size",
+    "look-ahead-bias",
+    "overfitting",
+    "survivorship-bias"
+  ],
+  "markets": [],
+  "level": "intermediate",
+  "sourceIds": []
+}

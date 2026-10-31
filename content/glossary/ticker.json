@@ -1,0 +1,22 @@
+{
+  "id": "ticker",
+  "term": "Ticker",
+  "aliases": [
+    "ticker symbol",
+    "stock symbol",
+    "symbol"
+  ],
+  "definition": {
+    "simple": "A short code of letters that stands for a company's shares on an exchange.",
+    "balanced": "Tickers save space on quote screens. Similar-looking tickers can belong to very different companies, and the same company can have different tickers on different exchanges, so check the full name before you act."
+  },
+  "related": [
+    "stock-exchange",
+    "share"
+  ],
+  "markets": [
+    "stocks"
+  ],
+  "level": "beginner",
+  "sourceIds": []
+}

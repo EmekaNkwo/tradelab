@@ -1,0 +1,37 @@
+appId: com.tradelab.app
+name: 01 Onboarding
+tags:
+  - e2e
+  - journey
+---
+# Spec §36 step 1: onboarding. Starts from a CLEAN install state.
+# clearState wipes the SQLite database and app files (same as `pm clear`).
+# permissions.notifications: allow pre-grants POST_NOTIFICATIONS (Android 13+),
+# so the reminder prompt at the end of onboarding normally does not appear;
+# subflows/allow-notifications.yaml handles it if it does.
+- launchApp:
+    appId: com.tradelab.app
+    clearState: true
+    permissions:
+      notifications: allow
+# app/_layout.tsx shows "Opening TradeLab…" while bootstrapping; Home then
+# redirects to /onboarding because there is no profile (app/(tabs)/home/index.tsx).
+- extendedWaitUntil:
+    visible:
+      id: "onboarding-screen"
+    timeout: 30000
+- assertVisible: "Welcome to TradeLab"   # Stack title, app/_layout.tsx
+- takeScreenshot: 01-onboarding-start
+- runFlow: subflows/complete-onboarding.yaml
+
+# Home after onboarding (app/(tabs)/home/index.tsx)
+- assertVisible:
+    id: "home-screen"
+- assertVisible:
+    text: "(Start|Continue) today's class"  # TodayHero button; all 7 study days were chosen, so a class is due today
+# ProgramCard heading = program title (content/programs/practical-forex-trader.json), below the fold since the restyle.
+- scrollUntilVisible:
+    element:
+      text: "Practical Forex Trader"
+    direction: DOWN
+- takeScreenshot: 01-home-after-onboarding

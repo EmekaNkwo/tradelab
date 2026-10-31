@@ -1,0 +1,22 @@
+{
+  "id": "stock-exchange",
+  "term": "Stock exchange",
+  "aliases": [
+    "exchange",
+    "stock market",
+    "exchanges"
+  ],
+  "definition": {
+    "simple": "A market where buyers and sellers trade shares under set rules.",
+    "balanced": "An exchange lists companies that meet its rules, matches buy and sell orders, and publishes prices. Each listed company has a short [[ticker]] code. Many exchanges trade only during set hours, so prices can [[gap]] between one session and the next."
+  },
+  "related": [
+    "share",
+    "ticker"
+  ],
+  "markets": [
+    "stocks"
+  ],
+  "level": "beginner",
+  "sourceIds": []
+}

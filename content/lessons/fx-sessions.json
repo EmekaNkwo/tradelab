@@ -1,0 +1,106 @@
+{
+  "id": "fx-sessions",
+  "moduleId": "forex-basics",
+  "title": "Trading sessions",
+  "level": "beginner",
+  "estimatedMinutes": 15,
+  "inOneLine": {
+    "simple": "Forex trades around the clock on weekdays, but activity rises and falls as different financial centres open and close."
+  },
+  "explain": {
+    "simple": "There is no single forex exchange. Banks and brokers in different cities trade during their working day, so the market runs from Monday morning in Asia to Friday evening in New York. People usually talk about the Sydney, Tokyo, London, and New York [[trading-session|sessions]]. When London and New York are both open, many pairs trade most actively, and spreads are often tighter.",
+    "balanced": "Session times are conventions, not official hours, and they shift with daylight saving time in each city. Activity in a pair is usually highest when its home markets are open, for example EUR and GBP pairs during London hours. Quiet periods and the weekly open can bring wider spreads and gaps."
+  },
+  "realNumbers": {
+    "assumptions": [
+      "Approximate convention: London ≈ 08:00–17:00 London time; New York ≈ 08:00–17:00 New York time",
+      "Your time zone is West Africa Time (UTC+1, no daylight saving)",
+      "Winter: London is UTC+0 and New York is UTC−5",
+      "If you live in another time zone, convert from UTC in the same way"
+    ],
+    "steps": [
+      "London 08:00 (UTC+0) = 09:00 your time.",
+      "New York 08:00 (UTC−5) = 13:00 UTC = 14:00 your time.",
+      "London closes about 17:00 London time = 18:00 your time, so the overlap is roughly 14:00–18:00 your time in winter.",
+      "In summer both cities move their clocks forward one hour, so these times come one hour earlier for you. The US and UK change their clocks on different dates, so for a few weeks each spring and autumn the gap between London and New York is an hour different from usual."
+    ]
+  },
+  "anotherExample": {
+    "assumptions": [
+      "Summer: London is UTC+1 and New York is UTC−4",
+      "Your time zone stays UTC+1"
+    ],
+    "steps": [
+      "London 08:00 = 08:00 your time.",
+      "New York 08:00 = 12:00 UTC = 13:00 your time.",
+      "Overlap is roughly 13:00–17:00 your time."
+    ]
+  },
+  "explainSimpler": "The market is open on weekdays, day and night. It is usually busiest when London and New York are both open, which is the afternoon in West Africa.",
+  "commonMistake": "Thinking every hour is the same. Spreads and how much prices move can change a lot between busy and quiet hours.",
+  "quickCheck": [
+    {
+      "id": "fx-sessions-q1",
+      "prompt": "When is EUR/USD usually most active?",
+      "options": [
+        {
+          "id": "a",
+          "text": "When London and New York are both open",
+          "explanation": "Right: the overlap of the two largest centres usually brings the most activity."
+        },
+        {
+          "id": "b",
+          "text": "On Saturday",
+          "explanation": "No: the main forex market is closed at the weekend."
+        },
+        {
+          "id": "c",
+          "text": "During the Asian session, when Tokyo is open",
+          "explanation": "No: EUR/USD is usually quieter then. Activity usually peaks when London and New York are both open."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "trading-session"
+      ]
+    },
+    {
+      "id": "fx-sessions-q2",
+      "prompt": "Why do session times in your local time change during the year?",
+      "options": [
+        {
+          "id": "a",
+          "text": "London and New York switch to daylight saving time",
+          "explanation": "Right: their clocks move, so the times shift for you."
+        },
+        {
+          "id": "b",
+          "text": "The market changes its official opening hours every month",
+          "explanation": "No: sessions are conventions based on local business hours."
+        },
+        {
+          "id": "c",
+          "text": "Your phone's clock is wrong",
+          "explanation": "No: the shift is real. London and New York move their clocks for daylight saving, on dates that can differ from yours."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "beginner",
+      "glossaryIds": []
+    }
+  ],
+  "doItNow": {
+    "kind": "reflection",
+    "instructions": "Using today's date, work out roughly when the London–New York overlap starts and ends in your time zone. Write it down and compare it with when you are free to study."
+  },
+  "glossaryIds": [
+    "trading-session",
+    "liquidity"
+  ],
+  "sourceIds": []
+}

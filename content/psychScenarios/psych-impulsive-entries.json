@@ -1,0 +1,32 @@
+{
+  "id": "psych-impulsive-entries",
+  "topic": "impulsive-entries",
+  "title": "The big green candle",
+  "situation": "You are scrolling through charts in the simulator when a big green candle appears on gold. Without checking your plan, you open the order ticket. You have not set a [[stop-loss|stop loss]] or worked out your size.",
+  "question": "What do you do next?",
+  "responses": [
+    {
+      "id": "a",
+      "text": "Cancel the ticket and run your pre-trade checklist. If the setup passes, enter with a stop and a size you worked out.",
+      "quality": "helpful",
+      "explanation": "A short pause turns a sudden urge into a decision you can explain and review later."
+    },
+    {
+      "id": "b",
+      "text": "Enter now and add the stop later, once you see where price goes.",
+      "quality": "harmful",
+      "explanation": "Without a stop, the trade has no planned limit. \"Later\" often comes after price has already moved against you."
+    },
+    {
+      "id": "c",
+      "text": "Enter with your smallest [[lot]] size so it does not matter.",
+      "quality": "mixed",
+      "explanation": "Small size limits the damage, but it still rewards the habit of entering without a plan."
+    }
+  ],
+  "takeaway": "A short pause and a checklist turn a sudden urge into a decision you can review.",
+  "glossaryIds": [
+    "stop-loss",
+    "lot"
+  ]
+}

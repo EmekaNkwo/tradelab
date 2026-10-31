@@ -1,0 +1,116 @@
+{
+  "id": "fx-channel-breakouts",
+  "moduleId": "forex-rules-based-strategies",
+  "title": "Channel breakouts and choosing a lookback",
+  "level": "intermediate",
+  "estimatedMinutes": 20,
+  "inOneLine": {
+    "simple": "A channel marks the highest high and lowest low of the last few candles; a close beyond it is a breakout signal, and a shorter channel on the other side is the exit.",
+    "balanced": "Most breaks fail and fall back inside, so the rule relies on the occasional break that becomes a long move. The lookback length changes the trades completely, and choosing it on past data is a common way to overfit."
+  },
+  "explain": {
+    "simple": "The simplified version here uses the previous 20 daily candles for the entry [[channel]] and the previous 15 for the exit. A close above the 20-candle high enters long; a close below the 15-candle low exits. The channel leaves out the current candle, so a break means a close beyond every candle in the lookback. In Chart Lab, the Channel 20 overlay draws the 20-candle entry channel; count the 15-candle exit level from the candles. This is a simplified educational version, not any trader's system.",
+    "balanced": "A short lookback gives more signals and more [[false-breakout|false breakouts]]; a long one gives fewer, later signals. Comparing lookbacks is useful, but only if the final choice is tested on data that was not used to make it ([[out-of-sample]]). Gaps through the channel mean fills can be worse than the level, and the exit channel always gives back part of a gain before it triggers."
+  },
+  "realNumbers": {
+    "assumptions": [
+      "Illustrative GBP/USD daily chart (simulated)",
+      "Previous 20 candles: high 1.3150, low 1.2980; previous 15 candles' low 1.3060",
+      "Account 10,000 USD (simulated); 1 pip = 1 USD per 10,000 units"
+    ],
+    "steps": [
+      "Today closes at 1.3165, above 1.3150: a long signal.",
+      "The order fills at the next open, 1.3170. The stop at the 15-candle low, 1.3060, is 110 pips away.",
+      "1% risk = 100 USD. 100 ÷ 110 ≈ 0.91 USD per pip, about 9,090 units. Round down to 9,000 units.",
+      "Check: 9,000 units = 0.90 USD per pip; 0.90 × 110 = 99 USD at the stop."
+    ]
+  },
+  "anotherExample": {
+    "assumptions": [
+      "Illustrative practice test, not real results",
+      "Lookbacks of 10, 20, 40 and 60 candles compared on simulated years 1–3, then checked on year 4"
+    ],
+    "steps": [
+      "On years 1–3, the 40-candle lookback did best: +0.30R per trade.",
+      "Year 4 was not used to choose it. There, the 40-candle lookback gave +0.05R per trade.",
+      "The drop suggests part of the year 1–3 result came from fitting that data's noise.",
+      "Out-of-sample results are the fairer guide, and they are usually weaker than the best in-sample result."
+    ]
+  },
+  "explainSimpler": "Draw a box around recent prices. Buy when price closes above the top, and get out if it falls below a smaller box.",
+  "commonMistake": "Counting an intraday spike above the channel as a breakout. The simplified rules use closes only, so a candle whose high pierced the channel but closed inside it is not a signal.",
+  "quickCheck": [
+    {
+      "id": "fx-channel-breakouts-q1",
+      "prompt": "The previous 20 candles' highest high is 0.6850. Which daily close triggers a long?",
+      "options": [
+        {
+          "id": "a",
+          "text": "0.6840, after a high of 0.6862",
+          "explanation": "No: the high pierced the channel, but the close is inside it."
+        },
+        {
+          "id": "b",
+          "text": "0.6850, exactly equal to the high",
+          "explanation": "No: the close must be above the channel high, not equal to it."
+        },
+        {
+          "id": "c",
+          "text": "0.6855",
+          "explanation": "Right: 0.6855 is a close above 0.6850."
+        }
+      ],
+      "correctOptionIds": [
+        "c"
+      ],
+      "level": "intermediate",
+      "glossaryIds": [
+        "channel",
+        "breakout"
+      ]
+    },
+    {
+      "id": "fx-channel-breakouts-q2",
+      "prompt": "A lookback chosen because it did best on years 1–3 does worse on year 4. What is the most likely reason?",
+      "options": [
+        {
+          "id": "a",
+          "text": "It was partly fitted to the noise in years 1–3",
+          "explanation": "Right: the best of many settings on one data set usually looks better than it is."
+        },
+        {
+          "id": "b",
+          "text": "The year 4 data might be faulty",
+          "explanation": "No: weaker out-of-sample results are normal, not a sign of bad data."
+        },
+        {
+          "id": "c",
+          "text": "A shorter lookback is always better than a longer one",
+          "explanation": "No: no lookback is always better; each trades differently."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "intermediate",
+      "glossaryIds": [
+        "overfitting",
+        "out-of-sample"
+      ]
+    }
+  ],
+  "doItNow": {
+    "kind": "chart_lab",
+    "instructions": "In Chart Lab, choose Breakout and turn on Channel 20. Mark each close beyond the channel. Then choose False breakout and count how many breaks fell back inside within 5 candles."
+  },
+  "homework": "Write down two lookbacks you would compare, and how you would keep some data aside to check the one you choose.",
+  "glossaryIds": [
+    "channel",
+    "breakout",
+    "false-breakout",
+    "out-of-sample",
+    "overfitting",
+    "gap"
+  ],
+  "sourceIds": []
+}

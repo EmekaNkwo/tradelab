@@ -1,0 +1,21 @@
+{
+  "id": "volatility",
+  "term": "Volatility",
+  "aliases": [
+    "volatile",
+    "price volatility"
+  ],
+  "definition": {
+    "simple": "How much and how fast a price moves up and down.",
+    "balanced": "High volatility means bigger swings, in both directions. It often rises around news. Wider swings need wider stops for the same idea, which means a smaller size for the same money at risk. [[slippage|Slippage]] and wider spreads are more common when volatility is high."
+  },
+  "example": "A pair that usually moves 50 pips a day moves 150 pips on a news day.",
+  "related": [
+    "slippage",
+    "spread",
+    "gap"
+  ],
+  "markets": [],
+  "level": "beginner",
+  "sourceIds": []
+}

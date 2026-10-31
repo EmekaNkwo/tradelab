@@ -1,0 +1,14 @@
+{
+  "id": "float",
+  "term": "Float",
+  "aliases": ["free float", "public float", "low float"],
+  "definition": {
+    "simple": "The shares that are actually available for the public to trade. Shares held by insiders or locked up are usually left out.",
+    "balanced": "A company can have many shares outstanding but a small float if most are held by insiders or cannot be sold yet. A low float means a modest amount of buying or selling can move the price a lot, which makes sharp spikes and sharp falls more likely."
+  },
+  "example": "Fictional: 50 million shares outstanding, 45 million held by insiders. The float is about 5 million shares.",
+  "related": ["microcap", "liquidity", "dilution"],
+  "markets": ["stocks", "penny_stocks"],
+  "level": "beginner",
+  "sourceIds": []
+}

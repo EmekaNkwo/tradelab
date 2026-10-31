@@ -1,0 +1,196 @@
+{
+  "id": "range-trading",
+  "skills": ["strategy_understanding", "technical_analysis", "chart_reading"],
+  "title": "Range trading",
+  "category": "trading",
+  "family": "range",
+  "markets": [
+    "forex",
+    "commodities"
+  ],
+  "level": "beginner",
+  "horizon": "swing",
+  "style": "rules_based",
+  "analysis": "technical",
+  "attribution": "generic",
+  "traderIds": [],
+  "overview": {
+    "objective": "Buy near the bottom of a sideways range and sell near the top.",
+    "holdingPeriod": "Days.",
+    "context": "Markets that have tested the same support and resistance several times."
+  },
+  "evidence": null,
+  "simple": {
+    "simple": "Find a market bouncing between a floor ([[support]]) and a ceiling ([[resistance]]). Buy after price bounces off the floor, aim just below the ceiling, and stop trading the range once price closes outside it.",
+    "balanced": "Ranges end with a breakout, often after some false ones. Waiting for a close back above support, instead of buying as price falls, avoids some breaks at a worse price. The [[risk-reward-ratio]] is limited by the height of the range."
+  },
+  "reasoning": "If many traders watch the same levels, price may keep turning near them until something changes. Trading inside those levels with a nearby stop could then have small, defined risk. That is the reasoning, not evidence; ranges end without warning.",
+  "rules": {
+    "label": "A simplified educational version, not any trader's system",
+    "rules": [
+      "A range needs at least two touches of support and two of resistance.",
+      "Buy only after a candle closes back above support (dips below that close back inside are allowed).",
+      "Place the stop 0.5 × ATR below support.",
+      "Take profit just below resistance.",
+      "Once a candle closes outside the range, stop trading it until a new range forms. Size for no more than 1% risk."
+    ]
+  },
+  "demo": {
+    "scenario": "range",
+    "overlays": [
+      "sma20"
+    ],
+    "pane": "atr",
+    "lookFor": "Mark support and resistance where price turned at least twice. Note how close each turn came to the line, and what happened when price finally closed outside."
+  },
+  "replay": {
+    "scenario": "sideways",
+    "instructions": "Replay the Sideways scenario. Draw the range only after two touches of each side, trade only bounces that close back inside, and stop when a candle closes outside."
+  },
+  "exercise": {
+    "prompt": "Which statements are true under the simplified rules? Pick all that apply.",
+    "situation": "A fictional commodity in USD (simulated). Support at 85.00 was touched 3 times, resistance at 89.00 twice. The latest candle dipped to 84.80 and closed at 85.30. ATR is 1.20.",
+    "options": [
+      {
+        "id": "a",
+        "text": "The range has enough touches for the rules",
+        "correct": true,
+        "explanation": "Right: at least two on each side."
+      },
+      {
+        "id": "b",
+        "text": "The close back above support is an entry trigger",
+        "correct": true,
+        "explanation": "Right: the candle closed at 85.30, above 85.00."
+      },
+      {
+        "id": "c",
+        "text": "A stop 0.5 × ATR below support is at 84.40",
+        "correct": true,
+        "explanation": "Right: 0.5 × 1.20 = 0.60, and 85.00 − 0.60 = 84.40."
+      },
+      {
+        "id": "d",
+        "text": "The target should be above 89.00, in case it breaks out",
+        "correct": false,
+        "explanation": "No: the target is just below resistance."
+      },
+      {
+        "id": "e",
+        "text": "The dip to 84.80 ended the range",
+        "correct": false,
+        "explanation": "No: the rules end the range on a close outside it, and this candle closed inside."
+      }
+    ]
+  },
+  "failureAnalysis": [
+    "A breakout through support hits the stop, sometimes with a gap.",
+    "Many touches can mean the level is weakening, not strengthening.",
+    "Targets are limited by the range height, so costs take a larger share.",
+    "Deciding where the range is involves judgement."
+  ],
+  "limitations": [
+    "Touch counts and the 0.5 × ATR stop are examples for learning, not tested values.",
+    "No claim is made that ranges hold or that these rules make money."
+  ],
+  "knowledgeCheck": [
+    {
+      "id": "range-trading-q1",
+      "prompt": "Support is 1.2600 and resistance 1.2700. A candle closes at 1.2580. What do the rules say?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Buy, it is cheap",
+          "explanation": "No: price is outside the range."
+        },
+        {
+          "id": "b",
+          "text": "Wait for RSI to fall further",
+          "explanation": "No: RSI is not part of these rules."
+        },
+        {
+          "id": "c",
+          "text": "Do not buy: a close outside the range ends it until a new range forms",
+          "explanation": "Right: the rules stop trading the range after a close outside it."
+        }
+      ],
+      "correctOptionIds": [
+        "c"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "support"
+      ]
+    },
+    {
+      "id": "range-trading-q2",
+      "prompt": "Entry 1.2615, stop 1.2585, target 1.2690. What is the reward-to-risk ratio?",
+      "options": [
+        {
+          "id": "a",
+          "text": "2.5",
+          "explanation": "Right: reward 75 pips, risk 30 pips, and 75 ÷ 30 = 2.5."
+        },
+        {
+          "id": "b",
+          "text": "3.3, using the full 100-pip range",
+          "explanation": "No: use the distance from entry to target, not the range height."
+        },
+        {
+          "id": "c",
+          "text": "0.4, dividing the risk by the reward instead of the other way round",
+          "explanation": "No: reward-to-risk is reward ÷ risk."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "risk-reward-ratio"
+      ]
+    },
+    {
+      "id": "range-trading-q3",
+      "prompt": "What usually ends a range?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Time alone",
+          "explanation": "No: ranges do not end on a schedule."
+        },
+        {
+          "id": "b",
+          "text": "A breakout, often after false ones",
+          "explanation": "Right: eventually price leaves the range."
+        },
+        {
+          "id": "c",
+          "text": "Nothing: once it is established, a range keeps going until people stop trading it",
+          "explanation": "No: ranges do end, often without warning."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "breakout",
+        "consolidation"
+      ]
+    }
+  ],
+  "lessonIds": [
+    "fx-support-resistance",
+    "ta-consolidation-channels"
+  ],
+  "glossaryIds": [
+    "support",
+    "resistance",
+    "consolidation",
+    "risk-reward-ratio",
+    "atr"
+  ],
+  "sourceIds": [],
+  "review": null
+}

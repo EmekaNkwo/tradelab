@@ -1,0 +1,24 @@
+{
+  "id": "trend",
+  "term": "Trend",
+  "aliases": [
+    "trends",
+    "uptrend",
+    "downtrend",
+    "trending"
+  ],
+  "definition": {
+    "simple": "The general direction price has moved in: up, down or sideways.",
+    "balanced": "An uptrend is often described as a series of higher [[swing-high|swing highs]] and higher [[swing-low|swing lows]]. A downtrend has lower highs and lower lows. When neither is clear, the market is called sideways or ranging. A trend describes the past. It can stop or turn at any time."
+  },
+  "example": "Swing lows at 1.09500, 1.09850 and 1.10100, with swing highs at 1.10200 and 1.10600, form higher lows and higher highs: an uptrend so far.",
+  "related": [
+    "swing-high",
+    "swing-low",
+    "market-structure",
+    "timeframe"
+  ],
+  "markets": [],
+  "level": "beginner",
+  "sourceIds": []
+}

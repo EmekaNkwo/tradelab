@@ -1,0 +1,133 @@
+appId: com.tradelab.app
+---
+# Answers the question card currently on screen (components/learning/QuestionCard.tsx)
+# by tapping every CORRECT option of the 'Forex basics' module that is visible,
+# then 'Check answer'.
+#
+# Correct option texts are copied from content (not invented):
+#   - lesson quick checks: content/lessons/fx-currency-pairs.json, fx-pair-types.json,
+#     fx-bid-ask-spread.json, fx-sessions.json (quickCheck[].correctOptionIds)
+#   - module checkpoint:   content/quizzes/forex-basics-checkpoint.json
+# Options are shuffled per learner (domain/learning/optionOrder.ts), so we match by
+# text, never by position. Selectors are full-match regexes, so '3 pips' does not
+# match '0.3 pips' or '30 pips', and 'The ask' does not match 'The ask (the higher price)'.
+# Each correct text is unique across the module, so a tap never hits a wrong option.
+# If content changes, regenerate this list from data/content/generated/contentBundle.json.
+
+# fx-currency-pairs-q1
+- runFlow:
+    when:
+      visible:
+        text: 'GBP'
+    commands:
+      - tapOn:
+          text: 'GBP'
+# fx-currency-pairs-q2
+- runFlow:
+    when:
+      visible:
+        text: 'The euro weakened against the dollar'
+    commands:
+      - tapOn:
+          text: 'The euro weakened against the dollar'
+# fx-pair-types-q1
+- runFlow:
+    when:
+      visible:
+        text: 'A minor \(cross\)'
+    commands:
+      - tapOn:
+          text: 'A minor \(cross\)'
+# fx-pair-types-q2
+- runFlow:
+    when:
+      visible:
+        text: 'They are usually traded less, so liquidity is lower'
+    commands:
+      - tapOn:
+          text: 'They are usually traded less, so liquidity is lower'
+# fx-bid-ask-spread-q1
+- runFlow:
+    when:
+      visible:
+        text: 'The ask'
+    commands:
+      - tapOn:
+          text: 'The ask'
+# fx-bid-ask-spread-q2
+- runFlow:
+    when:
+      visible:
+        text: '3 pips'
+    commands:
+      - tapOn:
+          text: '3 pips'
+# fx-sessions-q1
+- runFlow:
+    when:
+      visible:
+        text: 'When London and New York are both open'
+    commands:
+      - tapOn:
+          text: 'When London and New York are both open'
+# fx-sessions-q2
+- runFlow:
+    when:
+      visible:
+        text: 'London and New York switch to daylight saving time'
+    commands:
+      - tapOn:
+          text: 'London and New York switch to daylight saving time'
+# forex-basics-checkpoint Q1
+- runFlow:
+    when:
+      visible:
+        text: 'Buying dollars and paying with yen'
+    commands:
+      - tapOn:
+          text: 'Buying dollars and paying with yen'
+# forex-basics-checkpoint Q2
+- runFlow:
+    when:
+      visible:
+        text: 'AUD/USD'
+    commands:
+      - tapOn:
+          text: 'AUD/USD'
+# forex-basics-checkpoint Q3
+- runFlow:
+    when:
+      visible:
+        text: 'The bid \(the lower price\)'
+    commands:
+      - tapOn:
+          text: 'The bid \(the lower price\)'
+# forex-basics-checkpoint Q4
+- runFlow:
+    when:
+      visible:
+        text: '2 USD'
+    commands:
+      - tapOn:
+          text: '2 USD'
+# forex-basics-checkpoint Q5 (multi)
+- runFlow:
+    when:
+      visible:
+        text: 'Spreads can widen in quiet hours'
+    commands:
+      - tapOn:
+          text: 'Spreads can widen in quiet hours'
+# forex-basics-checkpoint Q5 (multi)
+- runFlow:
+    when:
+      visible:
+        text: 'Session times shift with daylight saving'
+    commands:
+      - tapOn:
+          text: 'Session times shift with daylight saving'
+
+- tapOn:
+    text: "Check answer"
+    enabled: true
+    optional: true

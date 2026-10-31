@@ -1,0 +1,175 @@
+{
+  "id": "forex-levels-checkpoint",
+  "title": "Checkpoint: support, resistance and breakouts",
+  "passMark": 0.8,
+  "questions": [
+    {
+      "id": "forex-levels-checkpoint-q1",
+      "prompt": "Price has turned down three times near 1.0900. What is that area called?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Resistance",
+          "explanation": "Right: rising price has turned down there before."
+        },
+        {
+          "id": "b",
+          "text": "Support",
+          "explanation": "No: support is where falling price has turned up."
+        },
+        {
+          "id": "c",
+          "text": "A breakout zone",
+          "explanation": "No: a breakout is a close beyond a level. Here price keeps turning down before it gets through."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "resistance"
+      ]
+    },
+    {
+      "id": "forex-levels-checkpoint-q2",
+      "prompt": "Swing lows at 1.25030, 1.24980 and 1.25070. What support zone do they make, and how wide is it?",
+      "options": [
+        {
+          "id": "a",
+          "text": "1.24980 to 1.25070, 9 pips wide",
+          "explanation": "Right: from the lowest to the highest low, 1.25070 − 1.24980 = 0.00090 = 9 pips."
+        },
+        {
+          "id": "b",
+          "text": "1.24980 to 1.25070, 90 pips wide",
+          "explanation": "No: 0.00090 is 9 pips, not 90."
+        },
+        {
+          "id": "c",
+          "text": "Exactly 1.25030",
+          "explanation": "No: support is better drawn as a zone than a single price."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "support",
+        "pip"
+      ]
+    },
+    {
+      "id": "forex-levels-checkpoint-q3",
+      "prompt": "Resistance zone tops at 1.10500. Your rule: a breakout is a close at least 5 pips above it. Which candle counts?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Close 1.10560",
+          "explanation": "Right: 1.10560 − 1.10500 = 6 pips, which is at least 5."
+        },
+        {
+          "id": "b",
+          "text": "High 1.10600, close 1.10490",
+          "explanation": "No: only the wick went above. It closed inside the zone."
+        },
+        {
+          "id": "c",
+          "text": "Close 1.10530",
+          "explanation": "No: that is only 3 pips above the zone."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "breakout",
+        "resistance"
+      ]
+    },
+    {
+      "id": "forex-levels-checkpoint-q4",
+      "prompt": "Buy 0.10 lot (pip value 1 USD) on a breakout at 1.26680 with a stop at 1.26450. It turns into a false breakout and the stop fills at its level. What is the loss?",
+      "options": [
+        {
+          "id": "a",
+          "text": "23 USD",
+          "explanation": "Right: 1.26680 − 1.26450 = 0.00230 = 23 pips, and 23 × 1 USD = 23 USD."
+        },
+        {
+          "id": "b",
+          "text": "2.30 USD",
+          "explanation": "No: 0.00230 is 23 pips, not 2.3."
+        },
+        {
+          "id": "c",
+          "text": "230 USD",
+          "explanation": "No: that would need a pip value of 10 USD."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "false-breakout",
+        "stop-loss",
+        "pip-value"
+      ]
+    },
+    {
+      "id": "forex-levels-checkpoint-q5",
+      "prompt": "Price breaks above resistance, then comes back down to that level from above. What is this called?",
+      "options": [
+        {
+          "id": "a",
+          "text": "A retest",
+          "explanation": "Right: price returns to test the level it broke."
+        },
+        {
+          "id": "b",
+          "text": "A guaranteed buy signal",
+          "explanation": "No: the old resistance may act as support, or price may fall straight through."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "retest"
+      ]
+    },
+    {
+      "id": "forex-levels-checkpoint-q6",
+      "prompt": "Which statement about false breakouts is true?",
+      "options": [
+        {
+          "id": "a",
+          "text": "You usually only know a breakout was false afterwards",
+          "explanation": "Right: at the moment of the break, both kinds can look the same."
+        },
+        {
+          "id": "b",
+          "text": "Waiting for a second close beyond the level removes them all",
+          "explanation": "No: stricter rules skip some, enter later, and still get caught by others."
+        },
+        {
+          "id": "c",
+          "text": "They only happen to beginners who enter too early",
+          "explanation": "No: they are a normal part of how price moves."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "false-breakout",
+        "breakout"
+      ]
+    }
+  ]
+}

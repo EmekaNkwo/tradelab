@@ -1,0 +1,22 @@
+{
+  "id": "free-cash-flow",
+  "term": "Free cash flow",
+  "aliases": [
+    "FCF"
+  ],
+  "definition": {
+    "simple": "The cash left after the business pays to keep itself running and growing.",
+    "balanced": "Free cash flow = operating cash flow − capital expenditure (money spent on equipment, buildings, software). It is the cash available to pay debt, pay [[dividend|dividends]], or save. Negative free cash flow is normal for some growing firms, but it has to be funded by cash, borrowing or new shares."
+  },
+  "example": "Operating cash flow 150, capital expenditure 32: free cash flow = 118 (fictional, millions USD).",
+  "related": [
+    "cash-flow",
+    "cash-flow-statement",
+    "net-debt"
+  ],
+  "markets": [
+    "stocks"
+  ],
+  "level": "beginner",
+  "sourceIds": []
+}

@@ -1,0 +1,19 @@
+{
+  "id": "regulator",
+  "term": "Financial regulator",
+  "aliases": [
+    "regulator",
+    "financial authority"
+  ],
+  "definition": {
+    "simple": "A government or official body that licenses and supervises financial firms in a country or region.",
+    "balanced": "Many regulators keep a public register of firms they authorise. To check a broker, find the regulator's own official website yourself, search its register, and make sure the firm's exact name, address and website match. Rules differ between countries, so also check what applies where you live."
+  },
+  "example": "Examples of regulators include the FCA, ASIC and CySEC.",
+  "related": [
+    "investment-scam"
+  ],
+  "markets": [],
+  "level": "beginner",
+  "sourceIds": []
+}

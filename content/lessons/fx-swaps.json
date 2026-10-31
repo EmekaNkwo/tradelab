@@ -1,0 +1,75 @@
+{
+  "id": "fx-swaps",
+  "moduleId": "forex-pips-lots-leverage",
+  "title": "Swaps: the cost of holding overnight",
+  "level": "beginner",
+  "estimatedMinutes": 15,
+  "inOneLine": {
+    "simple": "Keep a trade open overnight and you may pay, or sometimes receive, a small amount called a swap.",
+    "balanced": "A [[swap]] is a daily financing adjustment on open leveraged positions. It differs for buys and sells, by symbol and by broker, and can be negative or positive."
+  },
+  "explain": {
+    "simple": "If you hold a trade past your broker's daily cut-off time, the broker adds or takes away a small amount. This is the swap. Often it is a cost. Sometimes it is a credit. Buys and sells on the same pair usually have different swaps. Some brokers charge extra on one night of the week to cover the weekend. Which night, and how much, depends on your broker, so check its contract specification.",
+    "balanced": "Swaps reflect the interest rate difference between the two currencies plus the broker's own charge, so they change over time. Brokers show them in different units, such as points or money per lot. Positive swaps can turn negative when rates or broker terms change, so they are not reliable income. For trades held for days or weeks, swaps can add up and should be counted in your costs, next to the [[spread]]."
+  },
+  "realNumbers": {
+    "assumptions": [
+      "Illustrative swap, not any broker's real rate",
+      "Swap for this buy trade: −0.50 USD per night for 0.10 lot",
+      "The trade is held for 4 nights",
+      "This made-up broker charges three nights' worth on one of those nights"
+    ],
+    "steps": [
+      "Normal nights: 3 × 1 = 3 swap charges.",
+      "The extra night counts as 3 charges.",
+      "Total charges = 3 + 3 = 6.",
+      "Total swap = 6 × −0.50 = −3.00 USD."
+    ]
+  },
+  "anotherExample": {
+    "assumptions": [
+      "Illustrative swap: +0.20 USD per night for 0.10 lot on a sell trade",
+      "Held for 10 nights, with no extra charges in this example",
+      "The broker may change swap rates at any time"
+    ],
+    "steps": [
+      "Total swap = 10 × 0.20 = +2.00 USD.",
+      "If the rate changed to −0.20 USD halfway through, the total would be 5 × 0.20 + 5 × (−0.20) = 0.00 USD."
+    ]
+  },
+  "explainSimpler": "Holding a trade overnight is like borrowing overnight. Usually you pay a little rent. Sometimes you get a little back.",
+  "commonMistake": "Ignoring swaps on trades held for a long time, or holding a trade just to collect a positive swap. Swap rates can change, and price moves usually matter far more than the swap.",
+  "quickCheck": [
+    {
+      "id": "fx-swaps-q1",
+      "prompt": "Which statement about swaps is true?",
+      "options": [
+        { "id": "a", "text": "They can be positive or negative and differ by broker", "explanation": "Right: they depend on the pair, the direction and the broker's terms." },
+        { "id": "b", "text": "They are always a fixed fee the same at every broker", "explanation": "No: they vary by broker, symbol and direction, and change over time." },
+        { "id": "c", "text": "They apply to trades opened and closed in the same day", "explanation": "No: swaps apply when a trade is held past the broker's daily cut-off." }
+      ],
+      "correctOptionIds": ["a"],
+      "level": "beginner",
+      "glossaryIds": ["swap"]
+    },
+    {
+      "id": "fx-swaps-q2",
+      "prompt": "A trade's swap is −0.40 USD per night. You hold it 5 nights with no extra charges. What is the total swap?",
+      "options": [
+        { "id": "a", "text": "−2.00 USD", "explanation": "Right: 5 × −0.40 = −2.00 USD." },
+        { "id": "b", "text": "−0.40 USD", "explanation": "No: that is only one night." },
+        { "id": "c", "text": "+2.00 USD", "explanation": "No: a negative swap is a cost, so the total is negative." }
+      ],
+      "correctOptionIds": ["a"],
+      "level": "beginner",
+      "glossaryIds": ["swap"]
+    }
+  ],
+  "doItNow": {
+    "kind": "reflection",
+    "instructions": "Find your demo broker's contract specification for EUR/USD, usually on its website. Write down the buy swap, the sell swap, the units they are shown in, and which night, if any, is charged extra."
+  },
+  "homework": "Compare the buy and sell swaps on EUR/USD and on one exotic pair at your demo broker. Note which ones are costs and which are credits.",
+  "glossaryIds": ["swap", "spread"],
+  "sourceIds": []
+}

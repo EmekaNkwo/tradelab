@@ -1,0 +1,158 @@
+{
+  "title": "TradeLab calendarEvents",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+    },
+    "kind": {
+      "type": "string",
+      "enum": [
+        "central_bank_meeting",
+        "rate_decision",
+        "inflation",
+        "jobs",
+        "earnings",
+        "inventory",
+        "futures_expiry",
+        "holiday"
+      ]
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "measures": {
+      "type": "string",
+      "minLength": 1
+    },
+    "whyItMatters": {
+      "type": "string",
+      "minLength": 1
+    },
+    "affectedMarkets": {
+      "minItems": 1,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "forex",
+          "stocks",
+          "penny_stocks",
+          "commodities",
+          "futures"
+        ]
+      }
+    },
+    "expectations": {
+      "type": "string",
+      "minLength": 1
+    },
+    "surprises": {
+      "type": "string",
+      "minLength": 1
+    },
+    "limits": {
+      "type": "string",
+      "minLength": 1
+    },
+    "keywords": {
+      "minItems": 3,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 3,
+        "pattern": "^[a-z0-9 '-]+$"
+      }
+    },
+    "glossaryIds": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+      }
+    },
+    "lessonIds": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+      }
+    },
+    "scenarioIds": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+      }
+    },
+    "samples": {
+      "minItems": 1,
+      "maxItems": 5,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1
+          },
+          "day": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 7
+          },
+          "time": {
+            "type": "string",
+            "pattern": "^([01]\\d|2[0-3]):[0-5]\\d$"
+          },
+          "timeZone": {
+            "type": "string",
+            "const": "UTC"
+          },
+          "where": {
+            "type": "string",
+            "minLength": 1
+          },
+          "details": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "id",
+          "title",
+          "day",
+          "time",
+          "timeZone",
+          "where",
+          "details"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "id",
+    "kind",
+    "title",
+    "measures",
+    "whyItMatters",
+    "affectedMarkets",
+    "expectations",
+    "surprises",
+    "limits",
+    "keywords",
+    "glossaryIds",
+    "lessonIds",
+    "scenarioIds",
+    "samples"
+  ],
+  "additionalProperties": false
+}

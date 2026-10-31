@@ -1,0 +1,23 @@
+{
+  "id": "cash-flow",
+  "term": "Cash flow",
+  "aliases": [
+    "operating cash flow",
+    "cash from operations"
+  ],
+  "definition": {
+    "simple": "The actual cash moving into and out of a company over a period.",
+    "balanced": "Operating cash flow is the cash the day-to-day business brings in. It can differ from [[earnings]] because profit counts sales when they are made, even if customers have not paid yet. Profit that rarely turns into cash is a warning sign worth investigating."
+  },
+  "example": "Profit 52.5 million USD but operating cash flow only 2 million USD: the profit is not arriving as cash (fictional).",
+  "related": [
+    "free-cash-flow",
+    "cash-flow-statement",
+    "earnings"
+  ],
+  "markets": [
+    "stocks"
+  ],
+  "level": "beginner",
+  "sourceIds": []
+}

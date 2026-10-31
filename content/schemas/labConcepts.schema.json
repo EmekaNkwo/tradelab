@@ -1,0 +1,196 @@
+{
+  "title": "TradeLab labConcepts",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+    },
+    "lab": {
+      "type": "string",
+      "enum": [
+        "technical",
+        "fundamental"
+      ]
+    },
+    "level": {
+      "type": "string",
+      "enum": [
+        "beginner",
+        "intermediate",
+        "advanced"
+      ]
+    },
+    "order": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 9007199254740991
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "summary": {
+      "type": "string",
+      "minLength": 1
+    },
+    "unreliableWhen": {
+      "type": "string",
+      "minLength": 1
+    },
+    "goodExample": {
+      "type": "string",
+      "minLength": 1
+    },
+    "badExample": {
+      "type": "string",
+      "minLength": 1
+    },
+    "lessonIds": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+      }
+    },
+    "chart": {
+      "anyOf": [
+        {
+          "type": "object",
+          "properties": {
+            "scenario": {
+              "type": "string",
+              "enum": [
+                "strong_uptrend",
+                "downtrend",
+                "range",
+                "breakout",
+                "false_breakout",
+                "pullback",
+                "reversal",
+                "high_volatility",
+                "low_volatility",
+                "news_shock",
+                "crash",
+                "recovery",
+                "sideways"
+              ]
+            },
+            "overlays": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "enum": [
+                  "sma20",
+                  "ema50",
+                  "bollinger",
+                  "channel20"
+                ]
+              }
+            },
+            "pane": {
+              "type": "string",
+              "enum": [
+                "none",
+                "volume",
+                "rsi",
+                "macd",
+                "atr"
+              ]
+            },
+            "lookFor": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "scenario",
+            "overlays",
+            "pane",
+            "lookFor"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "drillKind": {
+      "anyOf": [
+        {
+          "type": "string",
+          "enum": [
+            "find_the_trend",
+            "breakout_or_fake",
+            "where_is_the_stop",
+            "size_it"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "scenarioIds": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+      }
+    },
+    "companyIds": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+      }
+    },
+    "redFlagCaseIds": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+      }
+    },
+    "skills": {
+      "minItems": 1,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "market_fundamentals",
+          "chart_reading",
+          "technical_analysis",
+          "fundamental_analysis",
+          "risk_management",
+          "strategy_understanding",
+          "execution_discipline",
+          "psychology",
+          "backtesting_literacy",
+          "statistical_reasoning"
+        ]
+      }
+    }
+  },
+  "required": [
+    "id",
+    "lab",
+    "level",
+    "order",
+    "title",
+    "summary",
+    "unreliableWhen",
+    "goodExample",
+    "badExample",
+    "lessonIds",
+    "chart",
+    "drillKind",
+    "scenarioIds",
+    "companyIds",
+    "redFlagCaseIds",
+    "skills"
+  ],
+  "additionalProperties": false
+}

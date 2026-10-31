@@ -1,0 +1,21 @@
+{
+  "id": "central-bank",
+  "term": "Central bank",
+  "aliases": [
+    "central banks",
+    "monetary authority"
+  ],
+  "definition": {
+    "simple": "The public body that sets a country's main interest rate and looks after its currency.",
+    "balanced": "Most central banks aim for stable prices, and some also for jobs or growth. They change the policy [[interest-rate]] and give guidance about future moves. Their decisions and statements can move currencies sharply."
+  },
+  "example": "Hypothetical: a fictional central bank holds rates but says it may cut later. Its currency may weaken, or not move if this was already expected.",
+  "related": [
+    "interest-rate",
+    "inflation",
+    "economic-calendar"
+  ],
+  "markets": [],
+  "level": "beginner",
+  "sourceIds": []
+}

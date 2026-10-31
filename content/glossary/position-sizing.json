@@ -1,0 +1,23 @@
+{
+  "id": "position-sizing",
+  "term": "Position sizing",
+  "aliases": [
+    "position size",
+    "sizing",
+    "trade size"
+  ],
+  "definition": {
+    "simple": "Choosing how big a trade is so that hitting the stop loses only the amount you planned.",
+    "balanced": "Size in lots = money at risk ÷ (stop distance in pips × [[pip-value]] for 1 lot). Round down to your broker's size step, so the real risk stays at or under the plan. Costs such as the [[spread]] add to the loss."
+  },
+  "example": "Example: risk 100 USD, stop 40 pips, pip value 10 USD per lot. Size = 100 ÷ (40 × 10) = 0.25 lot.",
+  "related": [
+    "risk-per-trade",
+    "pip-value",
+    "lot",
+    "stop-loss"
+  ],
+  "markets": [],
+  "level": "beginner",
+  "sourceIds": []
+}

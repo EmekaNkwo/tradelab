@@ -1,0 +1,182 @@
+{
+  "id": "ta-patterns-checkpoint",
+  "title": "Checkpoint: chart patterns and context",
+  "passMark": 0.8,
+  "questions": [
+    {
+      "id": "ta-patterns-checkpoint-q1",
+      "prompt": "Average volume is 120,000 contracts. Today 300,000 trade. What is the relative volume?",
+      "options": [
+        {
+          "id": "a",
+          "text": "180,000 more, so 1.8 times",
+          "explanation": "No: 180,000 is the difference. 300,000 ÷ 120,000 = 2.5."
+        },
+        {
+          "id": "b",
+          "text": "0.4 times the average",
+          "explanation": "No: that is average ÷ today. Divide today by the average."
+        },
+        {
+          "id": "c",
+          "text": "2.5 times the average",
+          "explanation": "Right: 300,000 ÷ 120,000 = 2.5."
+        }
+      ],
+      "correctOptionIds": [
+        "c"
+      ],
+      "level": "intermediate",
+      "glossaryIds": [
+        "volume"
+      ]
+    },
+    {
+      "id": "ta-patterns-checkpoint-q2",
+      "prompt": "Swing low 80.00, swing high 100.00. Where is the 61.8% retracement?",
+      "options": [
+        {
+          "id": "a",
+          "text": "87.64",
+          "explanation": "Right: 100.00 − 0.618 × 20.00 = 100.00 − 12.36 = 87.64."
+        },
+        {
+          "id": "b",
+          "text": "92.36",
+          "explanation": "No: that is the 38.2% level: 100.00 − 7.64."
+        },
+        {
+          "id": "c",
+          "text": "61.80",
+          "explanation": "No: 61.8% is a share of the move, not a price."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "intermediate",
+      "glossaryIds": [
+        "fibonacci-retracement"
+      ]
+    },
+    {
+      "id": "ta-patterns-checkpoint-q3",
+      "prompt": "Downtrend; the last lower high is 1.3400. Price rallies to 1.3350 and turns down. Is the downtrend structure intact?",
+      "options": [
+        {
+          "id": "a",
+          "text": "No: any rally ends a downtrend",
+          "explanation": "No: rallies within a downtrend are normal. The question is whether one breaks the last lower high."
+        },
+        {
+          "id": "b",
+          "text": "Yes: price stayed below 1.3400",
+          "explanation": "Right: 1.3350 is below 1.3400, so this is a pullback so far."
+        },
+        {
+          "id": "c",
+          "text": "No: 1.3350 marks the reversal",
+          "explanation": "No: nothing broke. A reversal needs the structure to break first."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "intermediate",
+      "glossaryIds": [
+        "pullback",
+        "reversal",
+        "market-structure"
+      ]
+    },
+    {
+      "id": "ta-patterns-checkpoint-q4",
+      "prompt": "Stock A falls from 80 to 76. Its index falls from 2,000 to 1,800. What is true?",
+      "options": [
+        {
+          "id": "a",
+          "text": "A outperformed, so A went up",
+          "explanation": "No: A fell 5%. It just fell less than the index."
+        },
+        {
+          "id": "b",
+          "text": "The ratio fell because both prices fell",
+          "explanation": "No: 76 ÷ 1,800 is higher than 80 ÷ 2,000, so the ratio rose."
+        },
+        {
+          "id": "c",
+          "text": "A fell less, so the ratio rose",
+          "explanation": "Right: A fell 5%, the index 10%."
+        }
+      ],
+      "correctOptionIds": [
+        "c"
+      ],
+      "level": "intermediate",
+      "glossaryIds": [
+        "relative-strength"
+      ]
+    },
+    {
+      "id": "ta-patterns-checkpoint-q5",
+      "prompt": "You bought 100 shares at 25.50 with a stop at 24.00. The stock closes at 25.00 and opens at 23.50. Roughly what is the loss?",
+      "options": [
+        {
+          "id": "a",
+          "text": "150 USD, as planned",
+          "explanation": "No: the open is below the stop, so the stop fills near 23.50, not 24.00."
+        },
+        {
+          "id": "b",
+          "text": "About 200 USD",
+          "explanation": "Right: (25.50 − 23.50) × 100 = 200 USD, not the planned 150."
+        },
+        {
+          "id": "c",
+          "text": "About 50 USD",
+          "explanation": "No: 50 USD is only the extra loss from the gap: (24.00 − 23.50) × 100."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "intermediate",
+      "glossaryIds": [
+        "gap",
+        "stop-loss",
+        "slippage"
+      ]
+    },
+    {
+      "id": "ta-patterns-checkpoint-q6",
+      "prompt": "Which pairs show a way these tools can mislead? Select all that apply.",
+      "options": [
+        {
+          "id": "a",
+          "text": "Channel lines: redrawn after every candle",
+          "explanation": "Right: lines that keep moving to fit price say nothing."
+        },
+        {
+          "id": "b",
+          "text": "Volume: never, since it counts real trades",
+          "explanation": "No: heavy-volume moves can fail, and forex tick volume is only a stand-in."
+        },
+        {
+          "id": "c",
+          "text": "Fibonacci: near-misses look like hits",
+          "explanation": "Right: with five levels close together, many turns land near one by chance."
+        }
+      ],
+      "correctOptionIds": [
+        "a",
+        "c"
+      ],
+      "level": "intermediate",
+      "glossaryIds": [
+        "channel",
+        "volume",
+        "fibonacci-retracement"
+      ]
+    }
+  ]
+}

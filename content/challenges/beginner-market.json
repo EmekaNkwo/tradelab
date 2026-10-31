@@ -1,0 +1,37 @@
+{
+  "id": "beginner-market",
+  "type": "beginner_market",
+  "title": "Beginner Market Challenge",
+  "summary": "Show you understand how the market your program starts with works, how its prices are quoted and what it risks, before you study strategies. Each step accepts the matching checkpoint from either program.",
+  "skills": [
+    "market_fundamentals"
+  ],
+  "criteria": [
+    {
+      "kind": "checkpoint_passed",
+      "moduleId": "forex-basics",
+      "orModuleIds": [
+        "markets-compared"
+      ],
+      "label": "Pass your program's first market checkpoint: Forex basics (Practical Forex Trader) or Five markets compared (Trader Development)",
+      "dimension": "understanding"
+    },
+    {
+      "kind": "checkpoint_passed",
+      "moduleId": "forex-pips-lots-leverage",
+      "orModuleIds": [
+        "stocks-basics"
+      ],
+      "label": "Pass your program's pricing checkpoint: Pips, lots, leverage and margin (Practical Forex Trader) or Stocks: the basics (Trader Development)",
+      "dimension": "uncertainty"
+    },
+    {
+      "kind": "skill_questions",
+      "skill": "market_fundamentals",
+      "count": 20,
+      "accuracy": 0.8,
+      "label": "Answer 20 market-basics questions at 80% or better (latest answer to each)",
+      "dimension": "understanding"
+    }
+  ]
+}

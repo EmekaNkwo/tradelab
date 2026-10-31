@@ -1,0 +1,142 @@
+{
+  "id": "fx-trends",
+  "moduleId": "forex-charts",
+  "title": "Trends: higher highs and lower lows",
+  "level": "beginner",
+  "estimatedMinutes": 20,
+  "inOneLine": {
+    "simple": "An uptrend makes higher highs and higher lows. A downtrend makes lower highs and lower lows. Anything else is sideways or unclear.",
+    "balanced": "Mark the [[swing-high|swing highs]] and [[swing-low|swing lows]], then compare each with the one before. The [[trend]] is a description of those swings, not a forecast."
+  },
+  "explain": {
+    "simple": "Price rarely moves in a straight line. It goes up, dips, goes up again. The turning points at the top are swing highs. The turning points at the bottom are swing lows. If each high is higher than the last, and each low is higher than the last, you can call it an uptrend. If each high and low is lower, it is a downtrend. If they overlap or mix, call it sideways or unclear. \"Unclear\" is a valid answer.",
+    "balanced": "A swing point is only confirmed after the candles that come after it. One common rule: a swing high is a candle whose high is above the highs of the 2 candles on each side. Different rules mark different swings, so be consistent. Use the same [[timeframe]] for every swing you compare. A trend so far says nothing certain about the next candle. Trends end, and the last swings before a turn often look just like the ones before."
+  },
+  "realNumbers": {
+    "assumptions": [
+      "Illustrative EUR/USD H4 swing points, in time order",
+      "Swing low 1.09500, swing high 1.10200, swing low 1.09850, swing high 1.10600, swing low 1.10100"
+    ],
+    "steps": [
+      "Highs: 1.10200, then 1.10600. The second is higher, so that is a higher high.",
+      "Lows: 1.09500, then 1.09850, then 1.10100. Each is higher, so these are higher lows.",
+      "Higher highs and higher lows: you can describe this as an uptrend so far.",
+      "If the next low falls below 1.10100, that description no longer fits."
+    ]
+  },
+  "anotherExample": {
+    "assumptions": [
+      "Illustrative USD/JPY H1 swing points, in time order",
+      "For USD/JPY, 1 pip = 0.01",
+      "Swing high 151.80, swing low 150.90, swing high 151.20, swing low 150.30, swing high 150.70"
+    ],
+    "steps": [
+      "Highs: 151.80, 151.20, 150.70. Each is lower: lower highs.",
+      "Lows: 150.90, then 150.30. The second is lower: a lower low.",
+      "Lower highs and lower lows: a downtrend so far.",
+      "The highs fell by 60 pips (151.80 − 151.20 = 0.60) and then 50 pips (151.20 − 150.70 = 0.50). The size of each step varies. It does not have to be regular."
+    ]
+  },
+  "explainSimpler": "Up stairs: each step higher. Down stairs: each step lower. Flat or messy: no clear trend.",
+  "commonMistake": "Calling a trend from one or two candles, or from the last big move. Compare swing points, not single candles. Another mistake is assuming the trend must continue.",
+  "quickCheck": [
+    {
+      "id": "fx-trends-q1",
+      "prompt": "Swing highs: 1.2650, 1.2700, 1.2760. Swing lows: 1.2600, 1.2640, 1.2690. What do the swings describe?",
+      "options": [
+        {
+          "id": "a",
+          "text": "An uptrend",
+          "explanation": "Right: both the highs and the lows are rising."
+        },
+        {
+          "id": "b",
+          "text": "A downtrend",
+          "explanation": "No: a downtrend needs lower highs and lower lows."
+        },
+        {
+          "id": "c",
+          "text": "Sideways",
+          "explanation": "No: the swings are not overlapping. Each one is higher."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "trend",
+        "swing-high",
+        "swing-low"
+      ]
+    },
+    {
+      "id": "fx-trends-q2",
+      "prompt": "Swing highs: 1.1050, then 1.1048. Swing lows: 1.0990, then 1.1000. What is the best description?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Sideways or unclear",
+          "explanation": "Right: the high slipped lower while the low rose. That is a mix, not a trend."
+        },
+        {
+          "id": "b",
+          "text": "A clear uptrend, as the lows are rising",
+          "explanation": "No: rising lows alone are not enough. An uptrend needs higher highs too, and 1.1048 is below 1.1050."
+        },
+        {
+          "id": "c",
+          "text": "A clear downtrend",
+          "explanation": "No: a downtrend needs lower lows, and 1.1000 is above 1.0990."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "trend"
+      ]
+    },
+    {
+      "id": "fx-trends-q3",
+      "prompt": "A chart shows a clear uptrend. What does that tell you about the next candle?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Nothing certain: a trend describes the past",
+          "explanation": "Right: trends can stop or turn at any time."
+        },
+        {
+          "id": "b",
+          "text": "It will probably close higher, because the trend is up",
+          "explanation": "No: a trend describes the past. It does not tell you what the next candle will do."
+        },
+        {
+          "id": "c",
+          "text": "It will close lower",
+          "explanation": "No: a trend does not tell you the next candle, either way."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "trend"
+      ]
+    }
+  ],
+  "doItNow": {
+    "kind": "chart_lab",
+    "instructions": "In Practice, open the Find the trend drill. For each chart, mark the last few swing highs and lows, then answer up, down or sideways. Aim for 20 charts in total over this module."
+  },
+  "glossaryIds": [
+    "trend",
+    "swing-high",
+    "swing-low",
+    "timeframe",
+    "pip"
+  ],
+  "sourceIds": []
+}

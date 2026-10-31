@@ -1,0 +1,14 @@
+{
+  "id": "inventory-report",
+  "term": "Inventory report",
+  "aliases": ["inventories", "stock report", "inventory data", "stockpiles", "draw", "build"],
+  "definition": {
+    "simple": "A regular report of how much of a commodity is held in storage, and how much that changed since the last report.",
+    "balanced": "A fall in stored amounts is called a draw; a rise is called a build. Traders compare the change with what was expected. A bigger draw than expected can suggest supply is tighter than thought, and a surprise build the opposite. As with any release, what moves price is the [[surprise]], and even that reaction is not certain."
+  },
+  "example": "Fictional: consensus −1.5 million barrels, actual −4.2 million. The draw was 2.7 million barrels bigger than expected.",
+  "related": ["commodity", "surprise", "consensus-forecast", "storage-cost"],
+  "markets": ["commodities", "futures"],
+  "level": "beginner",
+  "sourceIds": []
+}

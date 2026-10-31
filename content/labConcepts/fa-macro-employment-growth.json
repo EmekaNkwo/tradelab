@@ -1,0 +1,23 @@
+{
+  "id": "fa-macro-employment-growth",
+  "skills": ["fundamental_analysis"],
+  "lab": "fundamental",
+  "level": "beginner",
+  "order": 41,
+  "title": "Employment and growth",
+  "summary": "[[gdp|GDP]] growth and the [[employment-report]] show how strongly an economy is running. Read together with [[inflation]], they shape what traders expect a central bank to do next.",
+  "unreliableWhen": "When early figures are later revised, when parts of a report disagree (for example jobs added vs. the unemployment rate), or when one noisy month is read as a trend.",
+  "goodExample": "A learner reads fictional Westmark's GDP, jobs and inflation together, notes that all three point the same way, and writes two plausible reactions with a reason for each.",
+  "badExample": "A learner reacts to a single weak GDP headline without noticing that the previous quarter was revised up, so growth over two quarters was about as expected.",
+  "lessonIds": [
+    "fm-growth-jobs-inflation",
+    "fx-expected-vs-actual"
+  ],
+  "chart": null,
+  "drillKind": null,
+  "scenarioIds": [
+    "macro-westmark-gdp-revision"
+  ],
+  "companyIds": [],
+  "redFlagCaseIds": []
+}

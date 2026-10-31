@@ -1,0 +1,23 @@
+{
+  "id": "physical-settlement",
+  "term": "Physical settlement",
+  "aliases": [
+    "physical delivery",
+    "delivery"
+  ],
+  "definition": {
+    "simple": "Ending a futures contract by actually delivering the goods for payment.",
+    "balanced": "A buyer who holds a physically settled contract into its delivery period can be required to pay for and receive the goods. Practice traders who want only price exposure close or [[rollover|roll]] before the dates in the specification. Compare [[cash-settlement]]."
+  },
+  "related": [
+    "cash-settlement",
+    "expiry",
+    "rollover"
+  ],
+  "markets": [
+    "commodities",
+    "futures"
+  ],
+  "level": "beginner",
+  "sourceIds": []
+}

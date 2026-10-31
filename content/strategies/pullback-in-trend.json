@@ -1,0 +1,199 @@
+{
+  "id": "pullback-in-trend",
+  "skills": ["strategy_understanding", "technical_analysis", "chart_reading"],
+  "title": "Pullback in a trend",
+  "category": "trading",
+  "family": "pullback",
+  "markets": [
+    "forex",
+    "stocks"
+  ],
+  "level": "intermediate",
+  "horizon": "swing",
+  "style": "rules_based",
+  "analysis": "technical",
+  "attribution": "generic",
+  "traderIds": [],
+  "overview": {
+    "objective": "Join an existing trend after a pause, instead of chasing it.",
+    "holdingPeriod": "Days to a few weeks.",
+    "context": "Markets already in a clear trend on the daily or 4-hour chart."
+  },
+  "evidence": null,
+  "simple": {
+    "simple": "In an uptrend, wait for price to dip without breaking the last higher low. Buy when it starts rising again, with a stop under the dip.",
+    "balanced": "At the time, a [[pullback]] and the start of a [[reversal]] look the same; only later candles show which it was. Waiting for a close above the prior candle's high gives some sign the dip has paused, at the cost of a worse price. The stop under the pullback low defines the risk, and [[market-structure]] tells you when the trend idea is wrong."
+  },
+  "reasoning": "In a trend, dips may attract buyers who missed the earlier move, so entering after a dip gives a nearer stop than entering at the high. That is the reasoning only. It assumes the trend continues, which it often does not.",
+  "rules": {
+    "label": "A simplified educational version, not any trader's system",
+    "rules": [
+      "Trend filter: the close is above a rising EMA 50, and the last swing low is higher than the one before.",
+      "Wait for a pullback that stays above the last higher low.",
+      "Enter on a close above the high of the previous candle after the pullback.",
+      "Place the stop just below the pullback low.",
+      "Exit at 2R, or on a close below the EMA 50, whichever comes first. Size for no more than 1% risk."
+    ]
+  },
+  "demo": {
+    "scenario": "pullback",
+    "overlays": [
+      "ema50"
+    ],
+    "pane": "none",
+    "lookFor": "Mark the last higher low, the pullback low and the first close above the prior candle's high. Then switch to Reversal and see how the same set-up looks when the trend ends."
+  },
+  "replay": {
+    "scenario": "pullback",
+    "instructions": "Replay the Pullback scenario with EMA 50 on. Mark the last higher low before you trade, enter only on the trigger close, and put the stop under the pullback low."
+  },
+  "exercise": {
+    "prompt": "Which statements are true under the simplified rules? Pick all that apply.",
+    "situation": "A fictional daily chart (simulated). The EMA 50 is rising. The last higher low is 1.0820. Price pulls back to 1.0850. The pullback candle's low is 1.0850 and its high is 1.0885. The next candle has a high of 1.0880 and closes at 1.0875. The candle after that closes at 1.0890.",
+    "options": [
+      {
+        "id": "a",
+        "text": "The pullback held above the last higher low",
+        "correct": true,
+        "explanation": "Right: 1.0850 stayed above 1.0820."
+      },
+      {
+        "id": "b",
+        "text": "The entry trigger is the close at 1.0890",
+        "correct": true,
+        "explanation": "Right: it is the first close above the previous candle's high of 1.0880."
+      },
+      {
+        "id": "c",
+        "text": "The trend will continue because the low held",
+        "correct": false,
+        "explanation": "No: a held low is a condition for the set-up, not a forecast."
+      },
+      {
+        "id": "d",
+        "text": "A stop at 1.0845 risks 45 pips from an entry at 1.0890",
+        "correct": true,
+        "explanation": "Right: 1.0890 − 1.0845 = 0.0045, or 45 pips."
+      },
+      {
+        "id": "e",
+        "text": "The entry was the dip to 1.0850",
+        "correct": false,
+        "explanation": "No: the rules wait for a close above the previous candle's high, not the low."
+      }
+    ]
+  },
+  "failureAnalysis": [
+    "A pullback that keeps falling becomes a reversal, and the stop is hit.",
+    "Waiting for the trigger means entering higher than the low, so some winners are smaller.",
+    "In choppy trends, swing lows are unclear and the rules are hard to apply.",
+    "Sharp news moves can skip the stop."
+  ],
+  "limitations": [
+    "The EMA 50, the trigger and the 2R target are examples for learning, not tested values.",
+    "What counts as a swing low involves judgement unless it is defined exactly.",
+    "No claim is made that buying pullbacks makes money."
+  ],
+  "knowledgeCheck": [
+    {
+      "id": "pullback-in-trend-q1",
+      "prompt": "The pullback low is 1.3420 and the last higher low 1.3380. Entry is 1.3470 with a stop at 1.3415. What is the risk?",
+      "options": [
+        {
+          "id": "a",
+          "text": "55 pips",
+          "explanation": "Right: 1.3470 − 1.3415 = 0.0055."
+        },
+        {
+          "id": "b",
+          "text": "90 pips, to the higher low",
+          "explanation": "No: the stop is under the pullback low, not the higher low."
+        },
+        {
+          "id": "c",
+          "text": "50 pips, from the pullback low up to the entry price",
+          "explanation": "No: the stop is 5 pips below the pullback low, at 1.3415."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "intermediate",
+      "glossaryIds": [
+        "pullback",
+        "stop-loss"
+      ]
+    },
+    {
+      "id": "pullback-in-trend-q2",
+      "prompt": "At the moment it happens, how can you tell a pullback from the start of a reversal?",
+      "options": [
+        {
+          "id": "a",
+          "text": "By its size",
+          "explanation": "No: pullbacks and reversals both come in all sizes."
+        },
+        {
+          "id": "b",
+          "text": "You cannot tell for sure; later candles show it",
+          "explanation": "Right: they look the same at the time."
+        },
+        {
+          "id": "c",
+          "text": "A pullback always stops at a 50% retracement, a reversal goes further",
+          "explanation": "No: there is no fixed level where pullbacks stop."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "intermediate",
+      "glossaryIds": [
+        "pullback",
+        "reversal"
+      ]
+    },
+    {
+      "id": "pullback-in-trend-q3",
+      "prompt": "Why wait for a close above the prior candle's high instead of buying while price is still falling?",
+      "options": [
+        {
+          "id": "a",
+          "text": "It gets a lower price than buying during the dip",
+          "explanation": "No: it means buying at a higher price than the dip."
+        },
+        {
+          "id": "b",
+          "text": "It is a way to catch the exact low of the pullback",
+          "explanation": "No: it deliberately gives up the low."
+        },
+        {
+          "id": "c",
+          "text": "It wants a sign the dip has paused, and accepts a worse price in exchange",
+          "explanation": "Right: the trigger trades price for some evidence the pullback has stopped."
+        }
+      ],
+      "correctOptionIds": [
+        "c"
+      ],
+      "level": "intermediate",
+      "glossaryIds": [
+        "pullback"
+      ]
+    }
+  ],
+  "lessonIds": [
+    "ta-pullbacks-reversals",
+    "fx-trends",
+    "fx-market-structure"
+  ],
+  "glossaryIds": [
+    "pullback",
+    "reversal",
+    "market-structure",
+    "swing-low",
+    "trend"
+  ],
+  "sourceIds": [],
+  "review": null
+}

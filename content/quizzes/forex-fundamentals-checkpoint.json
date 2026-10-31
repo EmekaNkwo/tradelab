@@ -1,0 +1,75 @@
+{
+  "id": "forex-fundamentals-checkpoint",
+  "title": "Checkpoint: fundamentals and news",
+  "passMark": 0.8,
+  "questions": [
+    {
+      "id": "forex-fundamentals-checkpoint-q1",
+      "prompt": "Fictional jobs report: consensus +200,000 jobs, actual +260,000. What is the surprise?",
+      "options": [
+        { "id": "a", "text": "+60,000", "explanation": "Right: 260,000 − 200,000 = +60,000." },
+        { "id": "b", "text": "−60,000", "explanation": "No: surprise is actual minus expected, and actual is higher." },
+        { "id": "c", "text": "+260,000", "explanation": "No: that is the actual figure, not the gap." }
+      ],
+      "correctOptionIds": ["a"],
+      "level": "beginner",
+      "glossaryIds": ["surprise", "consensus-forecast", "employment-report"]
+    },
+    {
+      "id": "forex-fundamentals-checkpoint-q2",
+      "prompt": "A fictional country's inflation comes in above the consensus. What is the most accurate statement?",
+      "options": [
+        { "id": "a", "text": "Its currency will rise, because inflation above the consensus always makes the central bank raise rates at once", "explanation": "No: a rise is one possible reaction, not a certainty, and a central bank does not always respond at once." },
+        { "id": "b", "text": "The currency may rise as markets expect higher rates, but it may fall or not move if this was priced in", "explanation": "Right: the mechanism is a tendency, and the reaction is uncertain." }
+      ],
+      "correctOptionIds": ["b"],
+      "level": "beginner",
+      "glossaryIds": ["inflation", "interest-rate", "surprise"]
+    },
+    {
+      "id": "forex-fundamentals-checkpoint-q3",
+      "prompt": "A fictional central bank cuts rates by more than expected. What might happen to its currency?",
+      "options": [
+        { "id": "a", "text": "It may weaken, as rates are lower than expected, but the reaction is not certain", "explanation": "Right: a lower-than-expected rate is a negative surprise for the currency, as a tendency only." },
+        { "id": "b", "text": "Nothing, because a rate decision only matters once the next inflation figure is published", "explanation": "No: rate decisions and guidance can move currencies sharply, straight away." }
+      ],
+      "correctOptionIds": ["a"],
+      "level": "beginner",
+      "glossaryIds": ["central-bank", "interest-rate"]
+    },
+    {
+      "id": "forex-fundamentals-checkpoint-q4",
+      "prompt": "Buy 0.20 lot EUR/USD (pip value 2 USD), stop 25 pips. A release makes the stop fill 8 pips past its level. What is the loss?",
+      "options": [
+        { "id": "a", "text": "50 USD", "explanation": "No: that is the planned loss, 25 × 2." },
+        { "id": "b", "text": "66 USD", "explanation": "Right: (25 + 8) × 2 USD = 33 × 2 = 66 USD." },
+        { "id": "c", "text": "16 USD", "explanation": "No: that is only the slippage part, 8 × 2." }
+      ],
+      "correctOptionIds": ["b"],
+      "level": "beginner",
+      "glossaryIds": ["slippage", "stop-loss"]
+    },
+    {
+      "id": "forex-fundamentals-checkpoint-q5",
+      "prompt": "What often happens to spreads around a major economic release?",
+      "options": [
+        { "id": "a", "text": "They often widen", "explanation": "Right: liquidity can thin out and prices move fast, so trading costs often rise." },
+        { "id": "b", "text": "They narrow", "explanation": "No: spreads usually get wider, not narrower, around big news." }
+      ],
+      "correctOptionIds": ["a"],
+      "level": "beginner",
+      "glossaryIds": ["spread", "economic-calendar"]
+    },
+    {
+      "id": "forex-fundamentals-checkpoint-q6",
+      "prompt": "What does it mean that a release was 'priced in'?",
+      "options": [
+        { "id": "a", "text": "Traders had already acted on what they expected, so the price already reflected it", "explanation": "Right: that is why an expected number may cause little move." },
+        { "id": "b", "text": "The broker added a fee to the price during the release", "explanation": "No: it is about expectations already being in the price." }
+      ],
+      "correctOptionIds": ["a"],
+      "level": "beginner",
+      "glossaryIds": ["consensus-forecast"]
+    }
+  ]
+}

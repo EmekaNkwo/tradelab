@@ -1,0 +1,98 @@
+{
+  "id": "mt-export-statement",
+  "title": "Save your demo account history as a statement",
+  "summary": "Save your [[demo-account]] trade history from MetaTrader as an HTML report, then import it in the Journal. The export option and its name depend on your app version and platform.",
+  "level": "beginner",
+  "requiresDemo": true,
+  "steps": [
+    {
+      "text": "Check you are logged in to your demo account, not a real one. Only import demo statements."
+    },
+    {
+      "text": "On your phone, open the History tab and set the period so it covers your demo trades. Look for an option to save, share or export a report. It depends on your app version: many phone versions do not have one."
+    },
+    {
+      "text": "If your phone app cannot export the history, log in to the same demo account in the desktop MetaTrader terminal on a computer."
+    },
+    {
+      "text": "In the desktop terminal, open the history list in the bottom panel.",
+      "mt4": "Open the Terminal window and choose the Account History tab.",
+      "mt5": "Open the Toolbox window and choose the History tab."
+    },
+    {
+      "text": "Right-click inside the history list and choose a period that covers all your demo trades."
+    },
+    {
+      "text": "Right-click again and look for the report option. The exact name depends on your version.",
+      "mt4": "It is usually called \"Save as Report\" or \"Save as Detailed Report\".",
+      "mt5": "It is usually called \"Report\", with a choice of formats."
+    },
+    {
+      "text": "Choose HTML if you are offered a format. The Journal import reads HTML statements."
+    },
+    {
+      "text": "Save the file, then move it to your phone, for example by sending it to yourself. Keep it private: it shows your account number and history."
+    },
+    {
+      "text": "In TradeLab, open the Journal and choose the option to import an MT statement. Pick the file."
+    },
+    {
+      "text": "Check the preview: the number of closed trades and their prices should match your MetaTrader history. Trades already imported are skipped."
+    },
+    {
+      "text": "Confirm the import. Then open each imported trade, add a chart screenshot, and complete the review."
+    }
+  ],
+  "afterQuestions": [
+    {
+      "id": "mt-export-statement-q1",
+      "prompt": "Someone in a chat offers to export your statement for you if you send your MetaTrader login. What do you do?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Send it; it is only a demo account",
+          "explanation": "No: never share MetaTrader logins. It builds a habit scammers rely on."
+        },
+        {
+          "id": "b",
+          "text": "Refuse and export it yourself",
+          "explanation": "Right: never share your login, demo or real."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "account-manager-scam"
+      ]
+    },
+    {
+      "id": "mt-export-statement-q2",
+      "prompt": "Your phone app has no option to save a report. What can you do?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Export it from the desktop terminal, or add your trades by hand with screenshots",
+          "explanation": "Right: on some app versions the desktop terminal is the way to export."
+        },
+        {
+          "id": "b",
+          "text": "Give up on journaling these trades",
+          "explanation": "No: you can still log them by hand in the Journal."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "trading-journal"
+      ]
+    }
+  ],
+  "glossaryIds": [
+    "demo-account",
+    "trading-journal"
+  ]
+}

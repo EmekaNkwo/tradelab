@@ -1,0 +1,18 @@
+{
+  "id": "account-manager-scam",
+  "term": "Account manager scam",
+  "aliases": [
+    "account manager",
+    "managed account scam"
+  ],
+  "definition": {
+    "simple": "Someone who calls themselves your \"account manager\" and pushes you to deposit more, trade more, or hand over your login.",
+    "balanced": "They may be friendly, then urgent. They may ask for remote access to your phone or computer, or offer to trade for you. Never share your MetaTrader login or passwords, and never let anyone trade your account for you."
+  },
+  "related": [
+    "investment-scam"
+  ],
+  "markets": [],
+  "level": "beginner",
+  "sourceIds": []
+}

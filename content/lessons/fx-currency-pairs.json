@@ -1,0 +1,64 @@
+{
+  "id": "fx-currency-pairs",
+  "moduleId": "forex-basics",
+  "title": "Currency pairs: base and quote",
+  "level": "beginner",
+  "estimatedMinutes": 15,
+  "inOneLine": {
+    "simple": "A forex price tells you how much of one currency you need to buy one unit of another.",
+    "balanced": "Every forex quote is a [[currency-pair]]: the price of one unit of the [[base-currency]] expressed in the [[quote-currency]]."
+  },
+  "explain": {
+    "simple": "In forex you always swap one currency for another, so prices come in pairs, like EUR/USD. The first currency (EUR) is the base. The second (USD) is the quote. The number shows how many US dollars one euro costs. If you buy EUR/USD, you buy euros and pay with dollars. If you sell EUR/USD, you sell euros and receive dollars.",
+    "balanced": "A [[currency-pair]] such as EUR/USD is read as 'one unit of the [[base-currency]] costs this many units of the [[quote-currency]]'. Buying the pair means going long the base and short the quote; selling means the opposite. When the price rises, the base has strengthened against the quote.",
+    "advanced": "A forex quote is an exchange rate between two currencies. Long EUR/USD is economically long EUR and short USD. Profit and loss are first measured in the quote currency and must be converted into your account currency when the two differ."
+  },
+  "realNumbers": {
+    "assumptions": ["EUR/USD is quoted at 1.1000", "Ignore spread and costs for now"],
+    "steps": [
+      "1 EUR costs 1.1000 USD.",
+      "To buy 1,000 EUR you need 1,000 × 1.1000 = 1,100 USD.",
+      "If EUR/USD rises to 1.1100, those 1,000 EUR are worth 1,110 USD: the euro strengthened against the dollar."
+    ]
+  },
+  "anotherExample": {
+    "assumptions": ["USD/JPY is quoted at 150.00", "Ignore spread and costs"],
+    "steps": [
+      "Here USD is the base and JPY is the quote: 1 US dollar costs 150 Japanese yen.",
+      "If USD/JPY falls to 148.00, one dollar buys fewer yen: the dollar weakened against the yen."
+    ]
+  },
+  "explainSimpler": "EUR/USD = 1.1000 means: one euro costs 1.10 dollars. Buying the pair means buying euros.",
+  "commonMistake": "Reading the pair backwards. In EUR/USD the price is in dollars per euro, not euros per dollar. If you buy expecting the dollar to get stronger, you have the trade the wrong way round.",
+  "quickCheck": [
+    {
+      "id": "fx-currency-pairs-q1",
+      "prompt": "In GBP/USD, which currency is the base?",
+      "options": [
+        { "id": "a", "text": "GBP", "explanation": "Right: the first currency in the pair is the base." },
+        { "id": "b", "text": "USD", "explanation": "No: USD is second, so it is the quote currency the price is measured in." }
+      ],
+      "correctOptionIds": ["a"],
+      "level": "beginner",
+      "glossaryIds": ["base-currency"]
+    },
+    {
+      "id": "fx-currency-pairs-q2",
+      "prompt": "EUR/USD moves from 1.1000 to 1.0900. What happened?",
+      "options": [
+        { "id": "a", "text": "The euro weakened against the dollar", "explanation": "Right: one euro now buys fewer dollars." },
+        { "id": "b", "text": "The euro strengthened against the dollar", "explanation": "No: a lower price means one euro is worth fewer dollars." },
+        { "id": "c", "text": "Nothing changed for the euro", "explanation": "No: the price of a euro in dollars fell." }
+      ],
+      "correctOptionIds": ["a"],
+      "level": "beginner",
+      "glossaryIds": ["currency-pair"]
+    }
+  ],
+  "doItNow": {
+    "kind": "reflection",
+    "instructions": "Write down three currency pairs you have seen. For each one, name the base and the quote currency, and say what 'buying' that pair means."
+  },
+  "glossaryIds": ["currency-pair", "base-currency", "quote-currency"],
+  "sourceIds": []
+}

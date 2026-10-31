@@ -1,0 +1,197 @@
+{
+  "id": "breakout-volume-confirmation",
+  "skills": ["strategy_understanding", "technical_analysis", "chart_reading"],
+  "title": "Breakout with volume confirmation",
+  "category": "trading",
+  "family": "breakout",
+  "markets": [
+    "stocks"
+  ],
+  "level": "intermediate",
+  "horizon": "swing",
+  "style": "rules_based",
+  "analysis": "technical",
+  "attribution": "generic",
+  "traderIds": [],
+  "overview": {
+    "objective": "Join a breakout only when unusually heavy trading comes with it.",
+    "holdingPeriod": "Days to a few weeks.",
+    "context": "Daily charts of liquid shares, where volume is reported centrally. Not suited to thinly traded penny stocks."
+  },
+  "evidence": null,
+  "simple": {
+    "simple": "A close above recent highs counts only if [[volume]] that day is well above normal. If price closes back below the breakout level soon after, get out.",
+    "balanced": "Heavy volume shows that more shares changed hands, not who bought or why. It filters out some quiet breaks, but [[false-breakout|false breakouts]] still happen on high volume, and the filter also skips some breaks that would have worked. Volume in forex is broker-specific, so this version is for shares."
+  },
+  "reasoning": "If a break above resistance attracts much more trading than usual, more participants may have changed their view at that price, which could make the move more likely to hold than a quiet break. That is the reasoning; it is not evidence, and the effect, if any, varies by market and period.",
+  "rules": {
+    "label": "A simplified educational version, not any trader's system",
+    "rules": [
+      "Use a daily chart. The breakout level is the highest high of the previous 20 days.",
+      "Enter on a close above that level, but only if that day's volume is at least 1.5 × the 20-day average volume.",
+      "Place the stop 1 × ATR below the breakout level.",
+      "If price closes back below the breakout level within 3 days, exit.",
+      "Size the position so the loss at the stop is no more than 1% of the account."
+    ]
+  },
+  "demo": {
+    "scenario": "breakout",
+    "overlays": [
+      "channel20"
+    ],
+    "pane": "volume",
+    "lookFor": "Compare volume on the breakout candle with the candles before it. Then open the False breakout scenario and check whether the failed break also had high volume."
+  },
+  "replay": {
+    "scenario": "breakout",
+    "instructions": "Replay the Breakout scenario with the volume pane on. Before each entry, write down the 20-day average volume and the breakout day's volume, and skip any break below 1.5 ×."
+  },
+  "exercise": {
+    "prompt": "Which statements are true under the simplified rules? Pick all that apply.",
+    "situation": "A fictional share, daily chart (simulated). The previous 20 days' high is 48.20 and the 20-day average volume is 300,000 shares. Today closes at 48.90 on volume of 510,000 shares. ATR is 1.10.",
+    "options": [
+      {
+        "id": "a",
+        "text": "The volume filter passes",
+        "correct": true,
+        "explanation": "Right: 1.5 × 300,000 = 450,000, and 510,000 is above that."
+      },
+      {
+        "id": "b",
+        "text": "The close is above the breakout level",
+        "correct": true,
+        "explanation": "Right: 48.90 is above 48.20."
+      },
+      {
+        "id": "c",
+        "text": "The stop goes at 47.10",
+        "correct": true,
+        "explanation": "Right: 48.20 − 1.10 = 47.10."
+      },
+      {
+        "id": "d",
+        "text": "The breakout would also pass the filter on 420,000 shares",
+        "correct": false,
+        "explanation": "No: the filter needs at least 1.5 × 300,000 = 450,000 shares."
+      },
+      {
+        "id": "e",
+        "text": "The stop goes at 48.20, the breakout level",
+        "correct": false,
+        "explanation": "No: the rules put the stop one ATR below the breakout level."
+      }
+    ]
+  },
+  "failureAnalysis": [
+    "Breakouts on heavy volume still fail, sometimes sharply.",
+    "Volume often jumps on news days, when gaps make fills worse than the chart level.",
+    "The filter skips some quiet breaks that turn into long moves.",
+    "Exiting on a close back below the level means many quick small losses."
+  ],
+  "limitations": [
+    "The 1.5 × and 3-day settings are examples for learning, not tested values.",
+    "Volume shows how much traded, not who traded or why.",
+    "No claim is made that adding a volume filter improves results."
+  ],
+  "knowledgeCheck": [
+    {
+      "id": "breakout-volume-confirmation-q1",
+      "prompt": "The 20-day average volume is 400,000 shares. The breakout day trades 520,000. Does it pass the 1.5 × filter?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Yes, it is higher",
+          "explanation": "No: higher than average is not enough; it needs 1.5 times the average."
+        },
+        {
+          "id": "b",
+          "text": "Yes: 520,000 ÷ 400,000 = 1.5",
+          "explanation": "No: 520,000 ÷ 400,000 = 1.3."
+        },
+        {
+          "id": "c",
+          "text": "No: it needs 1.5 × 400,000 = 600,000, and 520,000 is below that",
+          "explanation": "Right: 520,000 is below 600,000."
+        }
+      ],
+      "correctOptionIds": [
+        "c"
+      ],
+      "level": "intermediate",
+      "glossaryIds": [
+        "volume"
+      ]
+    },
+    {
+      "id": "breakout-volume-confirmation-q2",
+      "prompt": "What does heavy volume on a breakout day show?",
+      "options": [
+        {
+          "id": "a",
+          "text": "More shares traded",
+          "explanation": "Right: that is all it measures."
+        },
+        {
+          "id": "b",
+          "text": "That large buyers are in and the move will continue",
+          "explanation": "No: volume does not show who traded or what comes next."
+        },
+        {
+          "id": "c",
+          "text": "That the break is confirmed, so a false breakout is no longer possible",
+          "explanation": "No: false breakouts happen on heavy volume too."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "intermediate",
+      "glossaryIds": [
+        "volume",
+        "false-breakout"
+      ]
+    },
+    {
+      "id": "breakout-volume-confirmation-q3",
+      "prompt": "Two days after entry, price closes back below the breakout level. What do the rules say?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Hold on",
+          "explanation": "No: the rules exit on a close back below the level within 3 days."
+        },
+        {
+          "id": "b",
+          "text": "Exit: the break has failed",
+          "explanation": "Right: a close back below the level within 3 days is the exit."
+        },
+        {
+          "id": "c",
+          "text": "Buy more, because the price is now lower than where you entered",
+          "explanation": "No: adding to a failed break increases the loss the rules are designed to cut."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "intermediate",
+      "glossaryIds": [
+        "breakout"
+      ]
+    }
+  ],
+  "lessonIds": [
+    "fx-breakouts",
+    "ta-volume-gaps",
+    "st-volume-liquidity"
+  ],
+  "glossaryIds": [
+    "breakout",
+    "volume",
+    "false-breakout",
+    "atr",
+    "resistance"
+  ],
+  "sourceIds": [],
+  "review": null
+}

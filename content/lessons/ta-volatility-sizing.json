@@ -1,0 +1,152 @@
+{
+  "id": "ta-volatility-sizing",
+  "skills": ["risk_management", "technical_analysis"],
+  "moduleId": "ta-advanced",
+  "title": "Volatility-adjusted position sizing",
+  "level": "advanced",
+  "estimatedMinutes": 20,
+  "inOneLine": {
+    "simple": "When a market moves more, your stop needs more room, so your size must be smaller. Then a loss at the stop costs the same money in calm and jumpy markets.",
+    "balanced": "[[volatility-adjusted-sizing|Volatility-adjusted sizing]]: set the stop from the market's movement, for example 2 × [[atr|ATR]], then size = money at risk ÷ (stop distance × value per unit of price). The money at risk stays fixed."
+  },
+  "explain": {
+    "simple": "In the position sizing lesson, the stop came first and the size followed. Here the stop distance comes from how much the market has been moving. One way is to use a multiple of ATR, such as 1.5 or 2 × ATR, so a calm market gets a tight stop and a jumpy market a wide one. Then you divide your money at risk by what that stop distance costs per share, per contract or per lot. A jumpy market ends up with a smaller position. The money lost at the stop is about the same.",
+    "balanced": "Check the ATR stop against the chart too: if it lands in the middle of a [[support]] zone, move it to where the idea is wrong and recompute the size. Round down to the size step. Some markets cannot be sized finely: one futures contract may already be more risk than your limit, and then the answer is to skip. ATR describes the past, so it can be low just before a jump. A [[gap]] or [[slippage]] can still push the loss past the stop. Costs add to the loss; the \"Position size with costs\" calculator includes them."
+  },
+  "realNumbers": {
+    "assumptions": [
+      "Fictional account: 20,000 USD. Example risk: 0.5% = 100 USD. A learning example, not a recommendation",
+      "Two fictional stocks, both priced at 40.00",
+      "Stock A: ATR 14 = 0.80. Stock B: ATR 14 = 2.00",
+      "Stop = 2 × ATR. Whole shares only; costs ignored"
+    ],
+    "steps": [
+      "A: stop distance = 2 × 0.80 = 1.60. Shares = 100 ÷ 1.60 = 62.5, round down to 62. Risk = 62 × 1.60 = 99.20 USD.",
+      "B: stop distance = 2 × 2.00 = 4.00. Shares = 100 ÷ 4.00 = 25. Risk = 25 × 4.00 = 100 USD.",
+      "Position value: A = 62 × 40 = 2,480 USD; B = 25 × 40 = 1,000 USD.",
+      "Same money at risk, very different position sizes. The jumpy stock gets the smaller position."
+    ]
+  },
+  "anotherExample": {
+    "assumptions": [
+      "Fictional futures contract: 1 point = 50 USD per contract. Fictional specification",
+      "Example risk limit: 1,000 USD. Stop = 1.5 × ATR",
+      "Week 1: ATR 14 = 12 points. Week 2: ATR 14 = 30 points"
+    ],
+    "steps": [
+      "Week 1: stop = 1.5 × 12 = 18 points. Risk per contract = 18 × 50 = 900 USD.",
+      "Contracts = 1,000 ÷ 900 ≈ 1.11, round down to 1. Actual risk = 900 USD.",
+      "Week 2: stop = 1.5 × 30 = 45 points. Risk per contract = 45 × 50 = 2,250 USD.",
+      "1,000 ÷ 2,250 ≈ 0.44, which rounds down to 0 contracts. You cannot trade less than one, so the plan says skip."
+    ]
+  },
+  "explainSimpler": "Big waves need a longer rope, and a longer rope means a smaller boat. The rope always costs the same.",
+  "commonMistake": "Keeping the same size when the stop gets wider, so the loss at the stop doubles. Or rounding up to \"make the trade possible\".",
+  "quickCheck": [
+    {
+      "id": "ta-volatility-sizing-q1",
+      "prompt": "EUR/USD ATR 14 = 15 pips. Stop = 2 × ATR. Risk 60 USD; pip value 10 USD per lot. What size?",
+      "options": [
+        {
+          "id": "a",
+          "text": "0.40 lot",
+          "explanation": "No: that uses a 15-pip stop. The stop is 2 × 15 = 30 pips."
+        },
+        {
+          "id": "b",
+          "text": "0.20 lot",
+          "explanation": "Right: 30 pips × 10 USD = 300 USD per lot, and 60 ÷ 300 = 0.20."
+        },
+        {
+          "id": "c",
+          "text": "2.00 lots",
+          "explanation": "No: check the units. 60 ÷ 300 = 0.20 lot."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "advanced",
+      "glossaryIds": [
+        "volatility-adjusted-sizing",
+        "atr",
+        "position-sizing"
+      ]
+    },
+    {
+      "id": "ta-volatility-sizing-q2",
+      "prompt": "ATR doubles and you keep the same 2 × ATR stop. To keep the same money at risk, what happens to size?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Size roughly halves",
+          "explanation": "Right: the stop doubles, so the size halves for the same money at risk."
+        },
+        {
+          "id": "b",
+          "text": "Size doubles too",
+          "explanation": "No: that would risk four times as much."
+        },
+        {
+          "id": "c",
+          "text": "Size stays the same",
+          "explanation": "No: the same size with twice the stop doubles the loss at the stop."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "advanced",
+      "glossaryIds": [
+        "volatility-adjusted-sizing",
+        "atr"
+      ]
+    },
+    {
+      "id": "ta-volatility-sizing-q3",
+      "prompt": "One futures contract would risk 1,800 USD at your stop. Your limit is 1,000 USD. What does the plan say?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Trade one contract anyway; it is the minimum",
+          "explanation": "No: that breaks the risk limit by 800 USD."
+        },
+        {
+          "id": "b",
+          "text": "Tighten the stop until one fits",
+          "explanation": "No: the stop belongs where the idea is wrong, not where the size fits."
+        },
+        {
+          "id": "c",
+          "text": "Skip it: even one contract breaks the limit",
+          "explanation": "Right: if the smallest size breaks the limit, the answer is no trade."
+        }
+      ],
+      "correctOptionIds": [
+        "c"
+      ],
+      "level": "advanced",
+      "glossaryIds": [
+        "position-sizing",
+        "risk-per-trade",
+        "contract-size"
+      ]
+    }
+  ],
+  "doItNow": {
+    "kind": "calculator",
+    "instructions": "In Chart Lab, open High volatility with ATR 14 below the chart. Read the last ATR value and turn it into pips (0.00100 = 10 pips), set a stop at 2 × ATR, and work out the size by hand for an example 10,000 USD account risking 1%. Check it in Learn → Calculators → Position size. Repeat on Low volatility and compare the two sizes. Then do 10 charts of the Size it drill in Practice."
+  },
+  "glossaryIds": [
+    "volatility-adjusted-sizing",
+    "atr",
+    "position-sizing",
+    "stop-loss",
+    "risk-per-trade",
+    "gap",
+    "slippage",
+    "contract-size",
+    "support"
+  ],
+  "sourceIds": []
+}

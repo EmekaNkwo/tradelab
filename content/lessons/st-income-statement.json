@@ -1,0 +1,142 @@
+{
+  "id": "st-income-statement",
+  "moduleId": "stocks-company-analysis",
+  "title": "The income statement: from revenue to EPS",
+  "level": "beginner",
+  "estimatedMinutes": 20,
+  "inOneLine": {
+    "simple": "The income statement starts with everything a company sold and subtracts costs step by step until only the owners' profit is left.",
+    "balanced": "[[income-statement|Income statement]]: [[revenue]] − cost of sales = gross profit; − operating expenses = operating profit; − interest − tax = net income ([[earnings]]); ÷ shares = [[eps]]. Each profit ÷ revenue gives a [[profit-margin]]."
+  },
+  "explain": {
+    "simple": "Read the income statement from top to bottom. Revenue is all the money from sales. Take away the cost of making what was sold (cost of sales) and you get gross profit. Take away the costs of running the company, such as wages, rent and marketing (operating expenses), and you get operating profit: what the business itself earned. Take away interest on debt and tax and you reach net income, the profit that belongs to the owners. Divide that by the number of shares and you get earnings per share, or EPS.",
+    "balanced": "Margins turn each profit line into a percentage of revenue, which makes companies of different sizes comparable. Gross margin shows pricing power and production cost; operating margin shows how efficiently the whole business runs; net margin shows what is left after lenders and tax. Watch the trend: revenue growing faster than profit means costs are growing faster too. Net income is an accounting figure, so the next step is to check it against cash flow."
+  },
+  "realNumbers": {
+    "assumptions": [
+      "Example Steadybrook Pantry Foods (fictional), Year 3, millions of USD",
+      "Revenue 1,040; cost of sales 624; operating expenses 260; interest 4; tax 38; 200 million shares"
+    ],
+    "steps": [
+      "Gross profit = 1,040 − 624 = 416. Gross margin = 416 ÷ 1,040 = 40%.",
+      "Operating profit = 416 − 260 = 156. Operating margin = 156 ÷ 1,040 = 15%.",
+      "Net income = 156 − 4 − 38 = 114. Net margin = 114 ÷ 1,040 = about 11%.",
+      "EPS = 114 million ÷ 200 million shares = 0.57 USD."
+    ]
+  },
+  "anotherExample": {
+    "assumptions": [
+      "Example Quickling Apps Co (fictional), millions of USD",
+      "Year 3: revenue 450; cost of sales 270; operating expenses 140; interest 16; tax 6; 100 million shares",
+      "Year 2: revenue 300; net income 15"
+    ],
+    "steps": [
+      "Gross profit = 450 − 270 = 180. Gross margin = 40%, the same as Steadybrook.",
+      "Operating profit = 180 − 140 = 40. Operating margin = 40 ÷ 450 = about 8.9%.",
+      "Net income = 40 − 16 − 6 = 18. Net margin = 18 ÷ 450 = 4%. EPS = 18 ÷ 100 = 0.18 USD.",
+      "Revenue grew 450 ÷ 300 − 1 = 50%, but net income grew only 18 ÷ 15 − 1 = 20%. Costs and interest are eating most of the growth."
+    ]
+  },
+  "explainSimpler": "Sales, minus costs, minus interest and tax, equals the owners' profit. Divide by shares for EPS.",
+  "commonMistake": "Looking only at revenue growth. A company can grow sales fast while its margins shrink, so profit grows slowly or not at all.",
+  "quickCheck": [
+    {
+      "id": "st-income-statement-q1",
+      "prompt": "Revenue 200, cost of sales 120, operating expenses 50 (fictional, millions USD). What is the operating profit?",
+      "options": [
+        {
+          "id": "a",
+          "text": "80",
+          "explanation": "No: that is gross profit; operating expenses still need to come off."
+        },
+        {
+          "id": "b",
+          "text": "30",
+          "explanation": "Right: 200 − 120 − 50 = 30."
+        },
+        {
+          "id": "c",
+          "text": "150",
+          "explanation": "No: that subtracts only the operating expenses."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "income-statement"
+      ]
+    },
+    {
+      "id": "st-income-statement-q2",
+      "prompt": "Net income 30 million USD and 60 million shares. What is EPS?",
+      "options": [
+        {
+          "id": "a",
+          "text": "0.50 USD",
+          "explanation": "Right: 30 ÷ 60 = 0.50 USD per share."
+        },
+        {
+          "id": "b",
+          "text": "2.00 USD",
+          "explanation": "No: that divides the shares by the profit."
+        },
+        {
+          "id": "c",
+          "text": "30 USD",
+          "explanation": "No: that ignores the number of shares."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "eps"
+      ]
+    },
+    {
+      "id": "st-income-statement-q3",
+      "prompt": "Revenue rose 40% but net income rose only 5%. What does that most likely mean?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The company is shrinking overall",
+          "explanation": "No: revenue grew a lot."
+        },
+        {
+          "id": "b",
+          "text": "Margins got wider",
+          "explanation": "No: wider margins would make profit grow faster than revenue."
+        },
+        {
+          "id": "c",
+          "text": "Costs grew faster than sales",
+          "explanation": "Right: margins shrank, so profit lagged revenue."
+        }
+      ],
+      "correctOptionIds": [
+        "c"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "profit-margin",
+        "revenue"
+      ]
+    }
+  ],
+  "doItNow": {
+    "kind": "fundamental",
+    "instructions": "Open the Fundamental Analysis Lab → Company analysis and choose Example Quickling Apps Co (fictional). Work out gross, operating and net profit for Year 3 by hand, then check them against the screen. Do the same for Example Steadybrook Pantry Foods (fictional) and compare the margins."
+  },
+  "homework": "For each of the four fictional companies, write down the Year 1 and Year 3 operating margin and say whether it rose or fell.",
+  "glossaryIds": [
+    "income-statement",
+    "revenue",
+    "earnings",
+    "eps",
+    "profit-margin"
+  ],
+  "sourceIds": []
+}

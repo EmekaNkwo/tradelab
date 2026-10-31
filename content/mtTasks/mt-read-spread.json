@@ -1,0 +1,82 @@
+{
+  "id": "mt-read-spread",
+  "title": "Read the bid, ask and spread",
+  "summary": "Find the [[bid]] and [[ask]] for EUR/USD in the Quotes tab and work out the [[spread]] in [[pip|pips]].",
+  "level": "beginner",
+  "requiresDemo": false,
+  "steps": [
+    {
+      "text": "Open MetaTrader and go to the Quotes tab."
+    },
+    {
+      "text": "Find EUR/USD in the list. Each symbol shows two prices."
+    },
+    {
+      "text": "The lower price is the bid: where you can sell. The higher price is the ask: where you can buy."
+    },
+    {
+      "text": "Write both prices down at the same moment."
+    },
+    {
+      "text": "Subtract the bid from the ask. Divide by 0.0001 to get the spread in pips."
+    },
+    {
+      "text": "Do the same for USD/JPY, but divide by 0.01, because yen pairs use a different pip size."
+    }
+  ],
+  "afterQuestions": [
+    {
+      "id": "mt-read-spread-q1",
+      "prompt": "You see EUR/USD at 1.08452 and 1.08467. What is the spread?",
+      "options": [
+        {
+          "id": "a",
+          "text": "1.5 pips",
+          "explanation": "Right: 1.08467 − 1.08452 = 0.00015, which is 1.5 pips."
+        },
+        {
+          "id": "b",
+          "text": "15 pips",
+          "explanation": "No: 0.00015 is 15 pipettes, which is 1.5 pips."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "spread",
+        "pipette"
+      ]
+    },
+    {
+      "id": "mt-read-spread-q2",
+      "prompt": "Which of the two prices you saw would you get if you bought at market?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The lower one, the bid",
+          "explanation": "No: the bid is where you sell."
+        },
+        {
+          "id": "b",
+          "text": "The higher one, the ask",
+          "explanation": "Right: buys fill at the ask."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "ask"
+      ]
+    }
+  ],
+  "glossaryIds": [
+    "bid",
+    "ask",
+    "spread",
+    "pip"
+  ]
+}

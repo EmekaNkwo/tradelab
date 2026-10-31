@@ -1,0 +1,20 @@
+{
+  "id": "cash-settlement",
+  "term": "Cash settlement",
+  "aliases": [
+    "cash-settled"
+  ],
+  "definition": {
+    "simple": "Ending a futures contract with a cash payment of the price difference, with nothing delivered.",
+    "balanced": "At [[expiry]], each position is settled against a final settlement price set by the contract's rules. Compare [[physical-settlement]]."
+  },
+  "related": [
+    "physical-settlement",
+    "expiry"
+  ],
+  "markets": [
+    "futures"
+  ],
+  "level": "beginner",
+  "sourceIds": []
+}

@@ -1,0 +1,16 @@
+{
+  "id": "fiscal-policy",
+  "term": "Fiscal policy",
+  "aliases": [],
+  "definition": {
+    "simple": "A government's decisions on spending and taxes.",
+    "balanced": "Spending more or taxing less can support growth but may add to [[government-debt]]. Fiscal policy is set by government, while [[monetary-policy]] is usually set by a [[central-bank]]. The two can pull in the same or opposite directions."
+  },
+  "related": [
+    "monetary-policy",
+    "government-debt"
+  ],
+  "markets": [],
+  "level": "beginner",
+  "sourceIds": []
+}

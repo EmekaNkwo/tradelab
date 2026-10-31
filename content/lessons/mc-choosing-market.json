@@ -1,0 +1,78 @@
+{
+  "id": "mc-choosing-market",
+  "moduleId": "markets-compared",
+  "title": "Beyond the labels: choosing what to study",
+  "level": "beginner",
+  "estimatedMinutes": 15,
+  "inOneLine": {
+    "simple": "Labels like 'forex is always liquid' or 'stocks are safe' are wrong. Every market changes with the time, the product and the conditions, so choose what to study by what fits you.",
+    "balanced": "[[liquidity|Liquidity]], [[spread|spreads]] and [[volatility]] change with the [[trading-session|session]], the instrument and the news. Choose a market by your schedule, your account size versus the smallest sensible position, the costs you can measure, and the data you can study."
+  },
+  "explain": {
+    "simple": "You will hear one-line labels: forex is always liquid, stocks are safe, futures are only for professionals, penny stocks are a cheap way to start. Each is wrong as a rule. A major currency pair can be busy at one hour and thin at another, and around news its spread can widen a lot. An ordinary share can fall sharply. A penny stock's low price says nothing about its risk; thin trading can make it expensive to get in and out. Instead of labels, test the conditions: when you would trade, what it would cost, and how big the smallest position would be for your account.",
+    "balanced": "A practical way to choose: (1) When can you study and practise? Match it to the market's active hours. (2) What is the smallest position, and does a normal stop on it fit your risk per trade? (3) What are the round-trip costs, measured on a demo or in the simulator at your chosen times? (4) What data do you need, and can you get it? (5) What can make price jump, and can you live with that? Write the answers down. Choosing a market to study is not a prediction of profit in it."
+  },
+  "realNumbers": {
+    "assumptions": [
+      "Illustrative spreads, not any broker's terms",
+      "A currency pair at a broker: spread 1.0 pip in busy hours, 4.0 pips in quiet hours",
+      "0.10 lot, so 1 pip = 1 USD",
+      "A fictional penny stock: bid 0.50 USD, ask 0.55 USD; buy 2,000 shares"
+    ],
+    "steps": [
+      "Forex, 10 trades in busy hours: spread cost = 10 × 1.0 × 1 USD = 10 USD.",
+      "The same 10 trades in quiet hours: 10 × 4.0 × 1 USD = 40 USD, four times as much. Same pair, different time.",
+      "Penny stock: buy at the ask, 2,000 × 0.55 = 1,100 USD. Selling straight away at the bid gives 2,000 × 0.50 = 1,000 USD.",
+      "That is a 100 USD loss before price moves at all: 100 ÷ 1,100 ≈ 9.1%. A low share price did not mean a low cost."
+    ]
+  },
+  "anotherExample": {
+    "assumptions": [
+      "Practice account 2,000 USD; risk 1% per trade = 20 USD",
+      "Example index future (fictional specs): 10 USD per point; planned stop 20 points",
+      "EUR/USD, 0.01 lot = 0.10 USD per pip, 0.10 lot = 1 USD per pip; planned stop 20 pips",
+      "Fictional share at 20.00 USD; planned stop 1.00 USD below entry"
+    ],
+    "steps": [
+      "Future: 1 contract × 20 points × 10 USD = 200 USD at risk, 10% of the account. The smallest position is too big for this account and this stop.",
+      "Forex: 0.10 lot × 20 pips = 20 pips × 1 USD = 20 USD, which is 1%. The size can be cut in steps of 0.01 lot.",
+      "Shares: 20 USD ÷ 1.00 USD per share = 20 shares, costing 20 × 20.00 = 400 USD, with 20 USD at risk.",
+      "So for this account, the fictional future does not fit a 1% rule, while the other two do. The answer changes with the account, the stop and the contract."
+    ]
+  },
+  "explainSimpler": "Do not trust slogans about markets. Check three things for yourself: when you can trade it, what it costs then, and whether the smallest trade fits your risk.",
+  "commonMistake": "Choosing a market because of a slogan, a low share price, or because it is popular online. Another mistake is studying several markets at once before you can explain the costs and risks of one.",
+  "quickCheck": [
+    {
+      "id": "mc-choosing-market-q1",
+      "prompt": "Why is 'forex is always liquid' a poor rule?",
+      "options": [
+        { "id": "a", "text": "Liquidity changes with the time, the pair and the news", "explanation": "Right: spreads can widen in quiet hours and around releases, even on major pairs." },
+        { "id": "b", "text": "Forex is never liquid at any time", "explanation": "No: that is just the opposite slogan. Liquidity varies." },
+        { "id": "c", "text": "Liquidity only matters in the stock market, not in forex trading", "explanation": "No: liquidity affects spreads and fills in every market." }
+      ],
+      "correctOptionIds": ["a"],
+      "level": "beginner",
+      "glossaryIds": ["liquidity", "spread", "trading-session"]
+    },
+    {
+      "id": "mc-choosing-market-q2",
+      "prompt": "Account 3,000 USD, risk 1% = 30 USD. A fictional future is worth 10 USD per point, and your stop would be 15 points. Does 1 contract fit the rule?",
+      "options": [
+        { "id": "a", "text": "Yes: 15 points is a small stop", "explanation": "No: a small number of points can still be a lot of money. Convert it first." },
+        { "id": "b", "text": "No: 150 USD at risk, which is 5%", "explanation": "Right: 15 × 10 = 150 USD, and 150 ÷ 3,000 = 5%, well above 30 USD." },
+        { "id": "c", "text": "Yes, if the margin is below 3,000 USD", "explanation": "No: margin tells you whether you can open it, not whether the risk fits your rule." }
+      ],
+      "correctOptionIds": ["b"],
+      "level": "beginner",
+      "glossaryIds": ["risk-per-trade", "position-sizing"]
+    }
+  ],
+  "doItNow": {
+    "kind": "fundamental",
+    "instructions": "In the Fundamental Analysis Lab, open the market comparison screen and read every row, including each caveat. Pick the market you are most drawn to and write down: the hours you could study it, the smallest position, what a normal stop on that position would risk for your practice account, and one way it could cost more than you expect."
+  },
+  "homework": "Write a one-page note: which market you will study first, why, and the three things you will check about the exact product before your first practice trade.",
+  "glossaryIds": ["liquidity", "spread", "volatility", "trading-session", "risk-per-trade", "position-sizing", "penny-stock"],
+  "sourceIds": []
+}

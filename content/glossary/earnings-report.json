@@ -1,0 +1,23 @@
+{
+  "id": "earnings-report",
+  "term": "Earnings report",
+  "aliases": [
+    "earnings release",
+    "financial results",
+    "earnings season"
+  ],
+  "definition": {
+    "simple": "A company's regular report of its revenue, profit and other figures for the latest period.",
+    "balanced": "Listed companies publish results on a regular schedule set by their market's rules. Prices often move sharply around a report, and they react to the figures compared with what was expected, not to whether the figures are good or bad. See [[surprise]]."
+  },
+  "related": [
+    "income-statement",
+    "surprise",
+    "gap"
+  ],
+  "markets": [
+    "stocks"
+  ],
+  "level": "beginner",
+  "sourceIds": []
+}

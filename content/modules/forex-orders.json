@@ -1,0 +1,12 @@
+{
+  "id": "forex-orders",
+  "skills": ["market_fundamentals", "execution_discipline"],
+  "title": "Orders, stops and fills",
+  "summary": "Market and pending orders, stop loss and take profit, and why fills, slippage and gaps mean a stop is not a guaranteed price.",
+  "markets": ["forex"],
+  "level": "beginner",
+  "lessonIds": ["fx-market-orders", "fx-pending-orders", "fx-sl-tp", "fx-fills-slippage-gaps"],
+  "checkpointQuizId": "forex-orders-checkpoint",
+  "practicalResult": "Place, edit, and close 5 demo trades in MetaTrader with stop loss and take profit.",
+  "minPracticeDays": 0
+}

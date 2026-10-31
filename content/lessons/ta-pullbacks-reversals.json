@@ -1,0 +1,146 @@
+{
+  "id": "ta-pullbacks-reversals",
+  "moduleId": "ta-patterns",
+  "title": "Pullbacks or reversals?",
+  "level": "intermediate",
+  "estimatedMinutes": 18,
+  "inOneLine": {
+    "simple": "A pullback is a move against the trend that leaves its structure intact. A reversal breaks the structure and starts a new one. At the time, they look the same.",
+    "balanced": "In an uptrend, a [[pullback]] falls but stays above the last higher low. A [[reversal]] breaks that low and then builds lower highs and lower lows. You only know which one it was after more candles."
+  },
+  "explain": {
+    "simple": "Trends do not move in straight lines. In an uptrend, price rises, dips, then rises again. The dip is a pullback, as long as it stays above the last swing low. If price falls below that swing low, the uptrend's structure is broken. If it then makes a lower high and a lower low, it has the shape of a downtrend. That is a reversal. The hard part: every reversal starts out looking like a pullback.",
+    "balanced": "Use [[market-structure]] to tell them apart, with a written rule, such as \"a close below the last higher low breaks the uptrend\". Measure how deep a pullback went as a share of the last swing up. A deep pullback is not automatically a reversal, and a shallow one can still turn into one. A broken structure can also repair itself: price closes below the low, then climbs back and makes a new high. On a higher [[timeframe]], a reversal on your chart may be just a pullback. None of these labels predicts the next move."
+  },
+  "realNumbers": {
+    "assumptions": [
+      "Illustrative index futures prices, in points",
+      "Uptrend: swing lows at 4,500 and 4,580, latest swing high at 4,700",
+      "Rule: a close below the last higher low (4,580) breaks the uptrend"
+    ],
+    "steps": [
+      "Price falls to 4,620. Depth = 4,700 − 4,620 = 80 points.",
+      "Last swing up = 4,700 − 4,580 = 120 points. Share given back = 80 ÷ 120 ≈ 67%.",
+      "4,620 is still above 4,580, so under the rule it is a pullback. The structure is intact.",
+      "Two thirds is a deep pullback. Depth alone does not make it a reversal, and staying above the low does not mean the trend resumes."
+    ]
+  },
+  "anotherExample": {
+    "assumptions": [
+      "Same chart, a different path",
+      "Price closes at 4,560, then rallies to 4,650, then closes at 4,540"
+    ],
+    "steps": [
+      "Close at 4,560 is below 4,580: the uptrend structure is broken.",
+      "The rally stops at 4,650, below the 4,700 high: a lower high.",
+      "The close at 4,540 is below 4,560: a lower low.",
+      "Now it has the shape of a downtrend, so you would call it a reversal. Even so, it can turn again."
+    ]
+  },
+  "explainSimpler": "A pullback is a step back on the same path. A reversal is a turn onto a new path. From the first step, you cannot tell which.",
+  "commonMistake": "Calling every pullback \"the reversal\" and trading against the trend, or calling a broken structure \"just a pullback\" because you are holding a trade.",
+  "quickCheck": [
+    {
+      "id": "ta-pullbacks-reversals-q1",
+      "prompt": "Swing low 1.2580, swing high 1.2700. Price drops to 1.2640. What share of the swing has it given back?",
+      "options": [
+        {
+          "id": "a",
+          "text": "50%",
+          "explanation": "Right: 1.2700 − 1.2640 = 60 pips, and 60 ÷ 120 = 50%."
+        },
+        {
+          "id": "b",
+          "text": "60%",
+          "explanation": "No: 60 is the pips given back. The swing is 120 pips, so 60 ÷ 120 = 50%."
+        },
+        {
+          "id": "c",
+          "text": "33%",
+          "explanation": "No: 1.2700 − 1.2580 = 120 pips; 60 ÷ 120 = 50%."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "intermediate",
+      "glossaryIds": [
+        "pullback",
+        "swing-high",
+        "swing-low"
+      ]
+    },
+    {
+      "id": "ta-pullbacks-reversals-q2",
+      "prompt": "In an uptrend, price closes below the last higher low. What has happened?",
+      "options": [
+        {
+          "id": "a",
+          "text": "A reversal is now certain",
+          "explanation": "No: the structure is broken, but price can still recover and make a new high."
+        },
+        {
+          "id": "b",
+          "text": "The uptrend structure is broken",
+          "explanation": "Right: it no longer fits the uptrend definition. What comes next is unknown."
+        },
+        {
+          "id": "c",
+          "text": "Nothing; it is just a deep pullback",
+          "explanation": "No: a pullback stays above the last higher low."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "intermediate",
+      "glossaryIds": [
+        "market-structure",
+        "reversal"
+      ]
+    },
+    {
+      "id": "ta-pullbacks-reversals-q3",
+      "prompt": "Why is it hard to tell a pullback from a reversal while it is happening?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Because pullbacks run deeper than reversals",
+          "explanation": "No: depth does not decide it. A shallow fall can become a reversal."
+        },
+        {
+          "id": "b",
+          "text": "Because indicators hide the difference",
+          "explanation": "No: the problem is that the future candles are not visible yet."
+        },
+        {
+          "id": "c",
+          "text": "Every reversal starts as a move against the trend",
+          "explanation": "Right: the first candles look the same. Only later structure shows which it was."
+        }
+      ],
+      "correctOptionIds": [
+        "c"
+      ],
+      "level": "intermediate",
+      "glossaryIds": [
+        "pullback",
+        "reversal"
+      ]
+    }
+  ],
+  "doItNow": {
+    "kind": "replay",
+    "instructions": "Start a replay on the Pullback scenario. Mark each swing low as it forms. When price falls, write \"pullback\" or \"reversal\" before revealing the next candle, with your reason. Then do the same on the Reversal scenario. Compare how often your first call was right."
+  },
+  "glossaryIds": [
+    "pullback",
+    "reversal",
+    "market-structure",
+    "trend",
+    "swing-high",
+    "swing-low",
+    "timeframe"
+  ],
+  "sourceIds": []
+}

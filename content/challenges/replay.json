@@ -1,0 +1,26 @@
+{
+  "id": "replay",
+  "type": "replay",
+  "title": "Replay Challenge",
+  "summary": "Trade simulated history candle by candle in different market conditions, with a stop from the start and risk inside your limit every time.",
+  "skills": [
+    "execution_discipline",
+    "risk_management"
+  ],
+  "criteria": [
+    {
+      "kind": "replays",
+      "count": 6,
+      "minProcessScore": 1,
+      "conditions": 3,
+      "label": "Finish 6 replays with every trade's stop and risk in your plan, across 3 different market conditions",
+      "dimension": "consistency"
+    },
+    {
+      "kind": "checkpoint_passed",
+      "moduleId": "forex-backtest-plan",
+      "label": "Pass the Backtesting my plan checkpoint",
+      "dimension": "understanding"
+    }
+  ]
+}

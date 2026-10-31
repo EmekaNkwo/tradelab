@@ -1,0 +1,17 @@
+{
+  "id": "cs-gas-supply-disruption",
+  "category": "commodity",
+  "title": "An outage at a gas field in winter (fictional)",
+  "setup": "Fernmoor Energy (fictional) runs the Kestrel Basin gas field (fictional), which supplies about 8% of a fictional region's natural gas. On a cold winter morning it announces an unplanned shutdown after equipment damage. Its first statement says repairs should take 'around two weeks'. All firms, places and figures are fictional.",
+  "release": null,
+  "pricedIn": "Gas in storage in the region is above its usual level for this time of year, after a mild autumn. Weather forecasts call for a normal winter, not an unusually cold one. The market was calm before the news.",
+  "question": "How might the simulated regional gas price react?",
+  "reactions": [
+    { "id": "a", "text": "A sharp jump on the news, then a partial fall back as storage is seen to cover the gap.", "plausible": true, "explanation": "Sudden supply losses often bring a first jump. Full storage and a short expected outage can cool it once traders do the sums." },
+    { "id": "b", "text": "A steady rise over several days as the repair is delayed and a cold spell arrives.", "plausible": true, "explanation": "If the outage lasts longer than first said and demand rises, the cushion shrinks. The size and length of a disruption matter as much as the headline." },
+    { "id": "c", "text": "Only a small move, because ample storage and normal weather make 8% manageable.", "plausible": true, "explanation": "With high stored stock, losing 8% of supply for two weeks may not change the picture much." },
+    { "id": "d", "text": "The price doubles and stays there until spring.", "plausible": false, "explanation": "Nothing in the setup supports a certain, extreme, lasting move. Storage is high and the outage is expected to be short. Treat certain-sounding calls with suspicion." }
+  ],
+  "takeaway": "A supply shock's effect depends on how big it is, how long it lasts, how much is in storage and what the weather does. The first jump is a reaction to uncertainty; what follows depends on new information. Think in scenarios, not certainties.",
+  "glossaryIds": ["supply-shock", "seasonality", "inventory-report", "volatility"]
+}

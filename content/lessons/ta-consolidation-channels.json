@@ -1,0 +1,148 @@
+{
+  "id": "ta-consolidation-channels",
+  "moduleId": "ta-patterns",
+  "title": "Consolidation and channels",
+  "level": "intermediate",
+  "estimatedMinutes": 18,
+  "inOneLine": {
+    "simple": "Consolidation is price going sideways in a box. A channel is price swinging between two sloping, roughly parallel lines.",
+    "balanced": "A [[consolidation]] is a pause where price stays inside a flat range. A [[channel]] is a [[trend]] whose swings stay between two parallel lines. Both are drawn by you, after the fact, so write down which swing points you used."
+  },
+  "explain": {
+    "simple": "After a move, price often goes sideways for a while. Highs stop rising and lows stop falling. That pause is called consolidation. You can draw a box around it: the top at the recent highs, the bottom at the recent lows. A channel is different. Price is still trending, but its swings stay between two lines with the same slope. In a rising channel, you draw one line under the higher lows and a parallel line over the higher highs.",
+    "balanced": "Both shapes depend on the points you choose. Pick different swing lows and the line moves. So write a rule, for example \"the lower line joins the last two swing lows; the upper line is parallel through the highest high between them\". Compare a box's height with [[atr|ATR]]: a box only about 2 ATR tall is narrow compared with recent movement. A consolidation can end with a [[breakout]] either way, or go on for a long time. A channel line is not a wall. Price can overshoot it, stop short of it, or the slope can change."
+  },
+  "realNumbers": {
+    "assumptions": [
+      "Illustrative commodity prices, in USD",
+      "For 30 candles, highs stayed between 82.20 and 82.40 and lows between 80.10 and 80.30",
+      "ATR 14 is 1.10"
+    ],
+    "steps": [
+      "Box top = 82.40, box bottom = 80.10.",
+      "Box height = 82.40 − 80.10 = 2.30.",
+      "In ATR terms: 2.30 ÷ 1.10 ≈ 2.1 ATR.",
+      "So the box is narrow compared with the usual candle-to-candle movement. That describes the pause. It does not say which way price leaves it, or when."
+    ]
+  },
+  "anotherExample": {
+    "assumptions": [
+      "Illustrative stock prices",
+      "Lower line joins swing lows at 100.0 (candle 10) and 104.0 (candle 30)",
+      "Upper line is parallel and passes through a swing high of 106.0 at candle 20",
+      "Your rule: the channel is broken by a close at least 0.5 beyond a line"
+    ],
+    "steps": [
+      "Slope = (104.0 − 100.0) ÷ (30 − 10) = 4.0 ÷ 20 = 0.2 per candle.",
+      "At candle 40, the lower line = 100.0 + 0.2 × (40 − 10) = 106.0.",
+      "The upper line = 106.0 + 0.2 × (40 − 20) = 110.0, so the channel is 4.0 wide.",
+      "Candle 40 closes at 105.2: that is 106.0 − 105.2 = 0.8 below the lower line, more than 0.5. Under your rule, the channel is broken. It says the old pattern stopped, not what comes next."
+    ]
+  },
+  "explainSimpler": "A box is a pause. A channel is a slope with two rails. You draw both, so draw them the same way every time.",
+  "commonMistake": "Moving your lines after each new candle so price always \"respects\" them. A line you keep redrawing is not telling you anything.",
+  "quickCheck": [
+    {
+      "id": "ta-consolidation-channels-q1",
+      "prompt": "A box runs from 45.20 to 46.70. ATR 14 is 0.50. How tall is the box in ATR?",
+      "options": [
+        {
+          "id": "a",
+          "text": "1.5 ATR",
+          "explanation": "No: 1.50 is the height in price. Divide by ATR: 1.50 ÷ 0.50 = 3."
+        },
+        {
+          "id": "b",
+          "text": "0.33 ATR",
+          "explanation": "No: that is ATR ÷ height. Height ÷ ATR = 3."
+        },
+        {
+          "id": "c",
+          "text": "3 ATR",
+          "explanation": "Right: 46.70 − 45.20 = 1.50, and 1.50 ÷ 0.50 = 3."
+        }
+      ],
+      "correctOptionIds": [
+        "c"
+      ],
+      "level": "intermediate",
+      "glossaryIds": [
+        "consolidation",
+        "atr"
+      ]
+    },
+    {
+      "id": "ta-consolidation-channels-q2",
+      "prompt": "What is the main difference between a consolidation and a channel?",
+      "options": [
+        {
+          "id": "a",
+          "text": "A channel slopes; a consolidation goes sideways",
+          "explanation": "Right: a channel is a trend with parallel rails, a consolidation is a flat pause."
+        },
+        {
+          "id": "b",
+          "text": "A channel is reliable; a consolidation is not",
+          "explanation": "No: both are shapes you draw. Neither is reliable on its own."
+        },
+        {
+          "id": "c",
+          "text": "A consolidation always ends with a breakout up",
+          "explanation": "No: it can break either way, or keep going sideways."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "intermediate",
+      "glossaryIds": [
+        "consolidation",
+        "channel"
+      ]
+    },
+    {
+      "id": "ta-consolidation-channels-q3",
+      "prompt": "Price closes 0.3 below your lower channel line. Your rule says a break needs 0.5. What do you do?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Call it broken, since price is below the line",
+          "explanation": "No: your written rule needs 0.5. Changing it after the fact is fitting the chart to your view."
+        },
+        {
+          "id": "b",
+          "text": "Redraw the line lower so price is back inside",
+          "explanation": "No: moving lines to fit each candle makes the channel meaningless."
+        },
+        {
+          "id": "c",
+          "text": "Not broken under your rule; keep watching",
+          "explanation": "Right: apply the rule you wrote, the same way each time."
+        }
+      ],
+      "correctOptionIds": [
+        "c"
+      ],
+      "level": "intermediate",
+      "glossaryIds": [
+        "channel"
+      ]
+    }
+  ],
+  "doItNow": {
+    "kind": "chart_lab",
+    "instructions": "In Chart Lab, open the Range scenario. Use the Zone tool to draw a box around the sideways stretch, then measure its height against ATR 14 in the lower pane. Next open Downtrend. Use the Trend line tool to join two swing highs, then draw a parallel line through the lowest low between them. Count how many times price closed outside your lines."
+  },
+  "glossaryIds": [
+    "consolidation",
+    "channel",
+    "trend",
+    "atr",
+    "breakout",
+    "swing-high",
+    "swing-low",
+    "support",
+    "resistance"
+  ],
+  "sourceIds": []
+}

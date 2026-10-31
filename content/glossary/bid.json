@@ -1,0 +1,14 @@
+{
+  "id": "bid",
+  "term": "Bid",
+  "aliases": ["bid price"],
+  "definition": {
+    "simple": "The price at which you can sell right now.",
+    "balanced": "The highest price buyers are currently offering. When you sell at market, you sell at the bid."
+  },
+  "example": "If EUR/USD shows 1.1000 / 1.1002, the bid is 1.1000.",
+  "related": ["ask", "spread"],
+  "markets": [],
+  "level": "beginner",
+  "sourceIds": []
+}

@@ -1,0 +1,26 @@
+{
+  "id": "storage-cost",
+  "term": "Storage cost",
+  "aliases": [
+    "cost of carry",
+    "carrying cost",
+    "storage costs"
+  ],
+  "definition": {
+    "simple": "What it costs to keep a physical commodity until later: warehouse or tank space, insurance and the money tied up.",
+    "balanced": "Because holding a physical commodity costs money, a price for delivery later is often higher than the price for delivery now. When storage space is scarce or costly, that gap can widen. When supply is tight right now, buyers may pay more for the near delivery instead, and the gap can turn the other way."
+  },
+  "example": "Fictional: storage, insurance and financing cost 0.40 USD per unit per month. A price for delivery in one month might sit about 0.40 above today's price.",
+  "related": [
+    "commodity",
+    "inventory-report",
+    "contango",
+    "backwardation"
+  ],
+  "markets": [
+    "commodities",
+    "futures"
+  ],
+  "level": "beginner",
+  "sourceIds": []
+}

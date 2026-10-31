@@ -1,0 +1,24 @@
+{
+  "id": "ta-patterns",
+  "skills": ["chart_reading", "technical_analysis"],
+  "title": "Chart patterns and context",
+  "summary": "Volume and gaps, consolidations and channels, pullbacks versus reversals, Fibonacci retracements as a convention, multi-timeframe analysis and relative strength, with when each one misleads.",
+  "markets": [
+    "forex",
+    "stocks",
+    "commodities",
+    "futures"
+  ],
+  "level": "intermediate",
+  "lessonIds": [
+    "ta-volume-gaps",
+    "ta-consolidation-channels",
+    "ta-pullbacks-reversals",
+    "ta-fibonacci",
+    "ta-multi-timeframe",
+    "ta-relative-strength"
+  ],
+  "checkpointQuizId": "ta-patterns-checkpoint",
+  "practicalResult": "In Chart Lab, mark a consolidation, a channel and a pullback with your own written rules, then show one place where each shape stopped working.",
+  "minPracticeDays": 0
+}

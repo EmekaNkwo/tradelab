@@ -1,0 +1,32 @@
+{
+  "id": "psych-greed",
+  "topic": "greed",
+  "title": "Just a little more",
+  "situation": "Your demo trade on USD/JPY is 45 pips in profit and close to your [[take-profit|take profit]] at 50 pips. It looks strong. You start imagining it running 150 pips and want to remove the target.",
+  "question": "What do you do next?",
+  "responses": [
+    {
+      "id": "a",
+      "text": "Remove the take profit and the [[stop-loss|stop loss]] so nothing gets in the way.",
+      "quality": "harmful",
+      "explanation": "With no stop, nothing limits how much of the gain, or more, you can give back."
+    },
+    {
+      "id": "b",
+      "text": "Leave the target where your plan put it. If you want to test a different exit, write it down and try it on future trades.",
+      "quality": "helpful",
+      "explanation": "Exits chosen before the trade are part of what you are testing. A new idea can be tested properly, not on a feeling mid-trade."
+    },
+    {
+      "id": "c",
+      "text": "Close half at your target and let the rest run with the stop moved to your entry price.",
+      "quality": "mixed",
+      "explanation": "A plan can include this kind of exit on purpose. Decided mid-trade on a feeling, though, it is not your plan, and you cannot tell if it helps."
+    }
+  ],
+  "takeaway": "Exits are decided before the trade, when you are calm. Change them in review, not in the moment.",
+  "glossaryIds": [
+    "take-profit",
+    "stop-loss"
+  ]
+}

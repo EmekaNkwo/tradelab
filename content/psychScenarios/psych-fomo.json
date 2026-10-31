@@ -1,0 +1,39 @@
+{
+  "id": "psych-fomo",
+  "topic": "fomo",
+  "title": "The move that left without you",
+  "situation": "You are practising on a [[demo-account|demo account]]. EUR/USD has risen 60 pips in the last hour without you. Your plan says to buy only on a pullback to a level you marked this morning, and price is nowhere near it. You feel you are missing out.",
+  "question": "What do you do next?",
+  "responses": [
+    {
+      "id": "a",
+      "text": "Buy now at market before it goes any higher.",
+      "quality": "harmful",
+      "explanation": "This trade comes from the feeling, not from your plan. Chasing a move often means a worse entry and no clear place for your stop."
+    },
+    {
+      "id": "b",
+      "text": "Stay out, write the move in your journal, and keep waiting for your planned level.",
+      "quality": "helpful",
+      "explanation": "Your plan did its job: it kept you out of a trade it did not cover. Noting the move lets you review it calmly later."
+    },
+    {
+      "id": "c",
+      "text": "Buy a small size now, just to be in the trade.",
+      "quality": "mixed",
+      "explanation": "Smaller size limits the damage, but it is still a trade outside your plan. It also trains the habit of acting on the urge."
+    },
+    {
+      "id": "d",
+      "text": "Place a [[pending-order|pending order]] at the level your plan marked, with your usual [[stop-loss|stop loss]].",
+      "quality": "helpful",
+      "explanation": "This turns the plan into an order. If price comes back, you are in on your terms. If not, you missed nothing your plan wanted."
+    }
+  ],
+  "takeaway": "A move you missed is not a loss. The next trade only counts if it fits your plan.",
+  "glossaryIds": [
+    "demo-account",
+    "pending-order",
+    "stop-loss"
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "id": "psych-revenge-trading",
+  "topic": "revenge-trading",
+  "title": "Winning it back",
+  "situation": "On your paper account, a GBP/USD trade just hit your [[stop-loss|stop loss]] for a loss of 40 USD. It was a planned trade with a planned stop. You feel angry and want to win the money back before the session ends.",
+  "question": "What do you do next?",
+  "responses": [
+    {
+      "id": "a",
+      "text": "Open a new trade straight away in the opposite direction.",
+      "quality": "harmful",
+      "explanation": "This trade is driven by wanting to undo the loss, not by a setup in your plan."
+    },
+    {
+      "id": "b",
+      "text": "Take the next trade at double the size, so one win covers the loss.",
+      "quality": "harmful",
+      "explanation": "Raising size to recover a loss adds risk at the moment your judgement is under the most pressure. A second loss would be twice as big."
+    },
+    {
+      "id": "c",
+      "text": "Step away for a set time, then log the trade and check whether you followed your plan.",
+      "quality": "helpful",
+      "explanation": "A pause breaks the link between the loss and the next decision. If you followed your plan, the loss was a cost you already accepted."
+    },
+    {
+      "id": "d",
+      "text": "Stay at the screen and watch closely for the next setup.",
+      "quality": "mixed",
+      "explanation": "Watching is not trading, but staying glued to the chart while upset makes a rushed entry more likely."
+    }
+  ],
+  "takeaway": "A planned loss is part of trading. The next trade should come from your plan, not from wanting to get even.",
+  "glossaryIds": [
+    "stop-loss"
+  ]
+}

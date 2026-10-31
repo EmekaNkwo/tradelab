@@ -1,0 +1,143 @@
+{
+  "id": "st-valuation",
+  "moduleId": "stocks-company-analysis",
+  "title": "Valuation: a good company at a high price",
+  "level": "intermediate",
+  "estimatedMinutes": 25,
+  "inOneLine": {
+    "simple": "Valuation compares the price with what you get for it. A great business can be a poor investment if you pay too much.",
+    "balanced": "[[pe-ratio|P/E]] = price ÷ [[eps]]. Earnings yield = EPS ÷ price. [[dividend-yield|Dividend yield]] = dividend per share ÷ price. [[payout-ratio|Payout ratio]] = dividends ÷ net income. [[valuation|Valuation]] tools compare price with profit; they never say what the price will do next."
+  },
+  "explain": {
+    "simple": "Knowing a company is good is only half the question. The other half is the price. The P/E ratio tells you how many years of today's profit you are paying for. A P/E of 12 means you pay 12 times one year's profit per share. Turn it upside down and you get the earnings yield: profit as a percentage of the price. The dividend yield and the payout ratio show how much of that profit comes back to you as cash.",
+    "balanced": "A high P/E means the price already assumes strong future growth. If the business does well but less well than assumed, the price can still fall. A low P/E means low expectations, which can be justified if profits are shrinking. P/E is meaningless when earnings are zero or negative, and it uses one year's profit, which may be unusual. These ratios are tools for asking questions, not signals to buy or sell."
+  },
+  "realNumbers": {
+    "assumptions": [
+      "Example Steadybrook Pantry Foods (fictional), Year 3",
+      "Price 6.80 USD; EPS 0.57 USD; dividends 87 and net income 114, millions of USD; 200 million shares"
+    ],
+    "steps": [
+      "P/E = 6.80 ÷ 0.57 = about 11.9.",
+      "Earnings yield = 0.57 ÷ 6.80 = about 8.4%.",
+      "Dividend per share = 87 ÷ 200 = 0.435 USD. Dividend yield = 0.435 ÷ 6.80 = about 6.4%.",
+      "Payout ratio = 87 ÷ 114 = about 76%."
+    ]
+  },
+  "anotherExample": {
+    "assumptions": [
+      "Same fictional company and the same business; illustrative scenario, not a forecast",
+      "Imagine the price rises to 22.80 USD with no change in the business",
+      "Profit then grows 2% a year for 5 years, and buyers later pay a P/E of 12 again"
+    ],
+    "steps": [
+      "P/E at 22.80 = 22.80 ÷ 0.57 = 40. Earnings yield = 0.57 ÷ 22.80 = 2.5%. Dividend yield = 0.435 ÷ 22.80 = about 1.9%.",
+      "EPS after 5 years = 0.57 × 1.02⁵ = about 0.629 USD.",
+      "Price at a P/E of 12 = 12 × 0.629 = about 7.55 USD.",
+      "That is about 67% below 22.80 USD. The business did fine; the price paid was the problem."
+    ]
+  },
+  "explainSimpler": "Good company and good price are two separate questions. P/E tells you how much you are paying for each dollar of today's profit.",
+  "commonMistake": "Assuming a great company is a great investment at any price. If the price already assumes more than the business later delivers, the investment can lose money while the company does well.",
+  "quickCheck": [
+    {
+      "id": "st-valuation-q1",
+      "prompt": "Price 15.00 USD, EPS 0.60 USD. What are the P/E and the earnings yield?",
+      "options": [
+        {
+          "id": "a",
+          "text": "P/E 9, earnings yield 11%",
+          "explanation": "No: 15 ÷ 0.60 is 25, not 9."
+        },
+        {
+          "id": "b",
+          "text": "P/E 25, earnings yield 4%",
+          "explanation": "Right: 15 ÷ 0.60 = 25, and 0.60 ÷ 15 = 4%."
+        },
+        {
+          "id": "c",
+          "text": "P/E 4, earnings yield 25%",
+          "explanation": "No: these are swapped."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "intermediate",
+      "glossaryIds": [
+        "pe-ratio",
+        "eps"
+      ]
+    },
+    {
+      "id": "st-valuation-q2",
+      "prompt": "Two fictional firms are equally good businesses. One has a P/E of 10, the other a P/E of 50. What follows?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The P/E 50 firm is the better business",
+          "explanation": "No: a high P/E reflects expectations, not proven quality."
+        },
+        {
+          "id": "b",
+          "text": "Both are equally good investments right now",
+          "explanation": "No: paying five times more for the same profit changes the outcome."
+        },
+        {
+          "id": "c",
+          "text": "The P/E 50 price assumes much more growth",
+          "explanation": "Right: if that growth does not arrive, the price has further to fall."
+        }
+      ],
+      "correctOptionIds": [
+        "c"
+      ],
+      "level": "intermediate",
+      "glossaryIds": [
+        "pe-ratio",
+        "valuation"
+      ]
+    },
+    {
+      "id": "st-valuation-q3",
+      "prompt": "A company made a loss this year. What is its P/E?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Not meaningful, as earnings are negative",
+          "explanation": "Right: P/E needs positive earnings; with a loss, it tells you nothing."
+        },
+        {
+          "id": "b",
+          "text": "Zero, so very cheap",
+          "explanation": "No: a P/E is not zero when there is a loss."
+        },
+        {
+          "id": "c",
+          "text": "Very high, so expensive",
+          "explanation": "No: there is no meaningful P/E without positive earnings."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "intermediate",
+      "glossaryIds": [
+        "pe-ratio"
+      ]
+    }
+  ],
+  "doItNow": {
+    "kind": "fundamental",
+    "instructions": "Open the Fundamental Analysis Lab → Company analysis. List the four fictional companies from lowest to highest P/E. Next to each, write one reason the market might be paying that price and one thing that would make that price look too high."
+  },
+  "glossaryIds": [
+    "pe-ratio",
+    "eps",
+    "valuation",
+    "dividend-yield",
+    "payout-ratio",
+    "dividend"
+  ],
+  "sourceIds": []
+}

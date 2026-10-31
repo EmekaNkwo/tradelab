@@ -1,0 +1,26 @@
+{
+  "id": "profit-margin",
+  "term": "Profit margin",
+  "aliases": [
+    "margin",
+    "margins",
+    "gross margin",
+    "operating margin",
+    "net margin"
+  ],
+  "definition": {
+    "simple": "How much of each dollar of revenue is left as profit.",
+    "balanced": "Gross margin = gross profit ÷ revenue. Operating margin = operating profit ÷ revenue. Net margin = net income ÷ revenue. A thin margin leaves little room: a small rise in costs can wipe out the profit."
+  },
+  "example": "Operating profit 40 on revenue 450: operating margin = 8.9% (fictional, millions USD).",
+  "related": [
+    "revenue",
+    "earnings",
+    "income-statement"
+  ],
+  "markets": [
+    "stocks"
+  ],
+  "level": "beginner",
+  "sourceIds": []
+}

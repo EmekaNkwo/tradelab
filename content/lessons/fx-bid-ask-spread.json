@@ -1,0 +1,111 @@
+{
+  "id": "fx-bid-ask-spread",
+  "moduleId": "forex-basics",
+  "title": "Bid, ask, and the spread",
+  "level": "beginner",
+  "estimatedMinutes": 15,
+  "inOneLine": {
+    "simple": "You buy at the higher price and sell at the lower one. The gap between them is a cost on every trade."
+  },
+  "explain": {
+    "simple": "Every quote shows two prices. The [[bid]] is the price you can sell at. The [[ask]] is the price you can buy at, and it is slightly higher. The gap is the [[spread]]. If you buy and then sell straight away, you lose the spread. So every trade starts a little behind.",
+    "balanced": "A buy order fills at the ask and is closed by selling at the bid. A sell order fills at the bid and is closed by buying at the ask. The spread is therefore paid on every round trip. It changes with [[liquidity]] and often widens around major news and when the market is quiet."
+  },
+  "realNumbers": {
+    "assumptions": [
+      "EUR/USD bid 1.10000, ask 1.10015 (5-digit quote)",
+      "Trade size 0.10 lot = 10,000 EUR",
+      "Account in USD; 1 pip on EUR/USD = 0.0001"
+    ],
+    "steps": [
+      "Spread = 1.10015 − 1.10000 = 0.00015 = 1.5 pips.",
+      "One pip on 10,000 EUR = 10,000 × 0.0001 = 1 USD.",
+      "Cost of the spread on this trade = 1.5 × 1 USD = 1.50 USD, paid even if price never moves."
+    ]
+  },
+  "anotherExample": {
+    "assumptions": [
+      "GBP/USD bid 1.25000, ask 1.25030",
+      "Trade size 1 standard lot = 100,000 GBP"
+    ],
+    "steps": [
+      "Spread = 0.00030 = 3 pips.",
+      "One pip on 100,000 GBP = 10 USD.",
+      "Spread cost = 3 × 10 = 30 USD for one round trip."
+    ]
+  },
+  "explainSimpler": "Buying costs a little more than selling. That little difference is a fee you pay on every trade.",
+  "commonMistake": "Placing a stop loss or target without allowing for the spread. A sell trade's stop is hit by the ask price, which can trigger it even when the chart's bid line never touched your level.",
+  "quickCheck": [
+    {
+      "id": "fx-bid-ask-spread-q1",
+      "prompt": "You want to buy EUR/USD at market. Which price do you get?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The ask",
+          "explanation": "Right: buys fill at the ask, the higher price."
+        },
+        {
+          "id": "b",
+          "text": "The bid",
+          "explanation": "No: the bid is the price you can sell at."
+        },
+        {
+          "id": "c",
+          "text": "The mid price, halfway between bid and ask",
+          "explanation": "No: market orders do not fill at the mid. Buys fill at the ask."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "ask"
+      ]
+    },
+    {
+      "id": "fx-bid-ask-spread-q2",
+      "prompt": "Bid 1.2000, ask 1.2003. What is the spread in pips?",
+      "options": [
+        {
+          "id": "a",
+          "text": "0.3 pips",
+          "explanation": "No: 0.0003 is three steps of 0.0001."
+        },
+        {
+          "id": "b",
+          "text": "3 pips",
+          "explanation": "Right: 1.2003 − 1.2000 = 0.0003 = 3 pips."
+        },
+        {
+          "id": "c",
+          "text": "30 pips",
+          "explanation": "No: 30 pips would be 0.0030."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "pip",
+        "spread"
+      ]
+    }
+  ],
+  "doItNow": {
+    "kind": "metatrader",
+    "instructions": "In MetaTrader on your demo account, tap EUR/USD in the quotes list. Read the bid and the ask, work out the spread in pips, and write it down.",
+    "mtTaskId": "mt-read-spread"
+  },
+  "homework": "Check the EUR/USD spread in MetaTrader around the London open and again late in the evening, and note both.",
+  "glossaryIds": [
+    "bid",
+    "ask",
+    "spread",
+    "pip"
+  ],
+  "sourceIds": []
+}

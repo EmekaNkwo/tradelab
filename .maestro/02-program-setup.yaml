@@ -1,0 +1,65 @@
+appId: com.tradelab.app
+name: 02 Program setup
+tags:
+  - e2e
+  - journey
+---
+# Spec §36 step 2: program setup. Needs: 01 (an active enrolment).
+# Screen: app/(tabs)/home/program.tsx (Stack title "Your program",
+# app/(tabs)/home/_layout.tsx). Changes the daily minutes and saves.
+- launchApp:
+    appId: com.tradelab.app
+- extendedWaitUntil:
+    visible:
+      id: "home-screen"
+    timeout: 30000
+# ProgramCard button: "Timeline and settings" when on track, "Catch up" when behind.
+- scrollUntilVisible:
+    element:
+      text: "(Timeline and settings|Catch up)"
+    direction: DOWN
+- tapOn: "(Timeline and settings|Catch up)"
+- extendedWaitUntil:
+    visible:
+      id: "program-screen"
+    timeout: 10000
+- assertVisible: "Practical Forex Trader"
+# testID program-status: "<On track | N classes behind | N classes ahead> · X of Y done"
+- assertVisible:
+    id: "program-status"
+- assertVisible: "Change your schedule"
+# ScheduleFields chips (components/learning/ScheduleFields.tsx); DAILY_MINUTE_OPTIONS in domain/learning/scheduler.ts
+- scrollUntilVisible:
+    element:
+      text: "20 min"
+    direction: DOWN
+- tapOn: "20 min"
+- scrollUntilVisible:
+    element:
+      text: "Save new schedule"
+    direction: DOWN
+- tapOn:
+    text: "Save new schedule"
+    enabled: true
+- scrollUntilVisible:
+    element:
+      text: "Schedule updated"
+    direction: DOWN
+    timeout: 10000
+- assertVisible: "Your upcoming classes have been rebuilt\\."
+# Reminders card
+- scrollUntilVisible:
+    element:
+      text: "Class time: 19:00 on study days\\."
+    direction: DOWN
+- assertVisible: "Class reminder"
+- scrollUntilVisible:
+    element:
+      text: "All classes"
+    direction: DOWN
+- takeScreenshot: 02-program-setup
+- back
+- extendedWaitUntil:
+    visible:
+      id: "home-screen"
+    timeout: 10000

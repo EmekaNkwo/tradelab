@@ -1,0 +1,20 @@
+{
+  "id": "stocks-company-analysis",
+  "skills": ["fundamental_analysis"],
+  "title": "Stocks: analysing a company",
+  "summary": "Reading the income statement, balance sheet and cash flow; margins and return on capital; valuation with P/E, earnings yield and dividends; and judging business quality, competition and risks, using fictional companies.",
+  "markets": [
+    "stocks"
+  ],
+  "level": "intermediate",
+  "lessonIds": [
+    "st-income-statement",
+    "st-balance-sheet",
+    "st-cash-flow",
+    "st-valuation",
+    "st-business-quality"
+  ],
+  "checkpointQuizId": "stocks-company-analysis-checkpoint",
+  "practicalResult": "In the Fundamental Analysis Lab, compare the four fictional companies on margins, net debt, cash flow and P/E, and write a short note on one company covering its business model, advantages, risks and what its price assumes.",
+  "minPracticeDays": 0
+}

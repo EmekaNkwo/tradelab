@@ -1,0 +1,88 @@
+{
+  "id": "mt-add-pairs",
+  "title": "Add 5 pairs to your quotes list",
+  "summary": "Use the Quotes tab to add 3 majors, 1 minor and 1 exotic [[currency-pair]], and note each one's [[spread]].",
+  "level": "beginner",
+  "requiresDemo": false,
+  "steps": [
+    {
+      "text": "Open MetaTrader and go to the Quotes tab."
+    },
+    {
+      "text": "Tap the button to add a symbol, usually shown as a plus sign at the top of the Quotes tab."
+    },
+    {
+      "text": "Search for or browse to a major pair such as EUR/USD, then tap it to add it. Some brokers add extra letters to symbol names, for example a suffix after EURUSD."
+    },
+    {
+      "text": "Add two more majors, such as USD/JPY and GBP/USD."
+    },
+    {
+      "text": "Add one minor (cross) pair, such as EUR/GBP."
+    },
+    {
+      "text": "Add one exotic pair, such as USD/ZAR, if your broker offers it."
+    },
+    {
+      "text": "Go back to the Quotes tab and check all 5 pairs are listed."
+    },
+    {
+      "text": "For each pair, write down the bid and ask and work out the spread in pips."
+    }
+  ],
+  "afterQuestions": [
+    {
+      "id": "mt-add-pairs-q1",
+      "prompt": "Of the pairs you added, which type usually shows the widest spread?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The exotic pair",
+          "explanation": "Right: exotics usually trade less, so their spreads tend to be wider."
+        },
+        {
+          "id": "b",
+          "text": "EUR/USD",
+          "explanation": "No: EUR/USD is among the most traded pairs and usually has one of the tightest spreads."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "spread",
+        "liquidity"
+      ]
+    },
+    {
+      "id": "mt-add-pairs-q2",
+      "prompt": "You search for EURUSD and see a name like EURUSD with extra letters on the end. What does that most likely mean?",
+      "options": [
+        {
+          "id": "a",
+          "text": "It is a different currency pair",
+          "explanation": "No: it is still euro against US dollar. Check the symbol's details if unsure."
+        },
+        {
+          "id": "b",
+          "text": "Your broker names its symbols with a suffix",
+          "explanation": "Right: brokers can add letters to symbol names, often for different account types."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "currency-pair"
+      ]
+    }
+  ],
+  "glossaryIds": [
+    "currency-pair",
+    "spread",
+    "bid",
+    "ask"
+  ]
+}

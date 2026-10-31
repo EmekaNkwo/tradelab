@@ -1,0 +1,22 @@
+{
+  "id": "atr",
+  "term": "ATR",
+  "aliases": [
+    "average true range",
+    "ATR 14",
+    "true range"
+  ],
+  "definition": {
+    "simple": "An indicator that shows how far price has typically moved per candle recently. It says nothing about direction.",
+    "balanced": "True range is the largest of: high minus low, the gap from the previous close to the high, and the gap from the previous close to the low. ATR averages true range over a set period, often 14. It is measured in price units, so on EUR/USD 0.00120 means 12 pips. It describes the past, so it is slow to show a sudden change in volatility."
+  },
+  "example": "Previous close 1.10000, high 1.10300, low 1.10050: the ranges are 25, 30 and 5 pips, so the true range is 30 pips.",
+  "related": [
+    "indicator",
+    "bollinger-bands",
+    "stop-loss"
+  ],
+  "markets": [],
+  "level": "intermediate",
+  "sourceIds": []
+}

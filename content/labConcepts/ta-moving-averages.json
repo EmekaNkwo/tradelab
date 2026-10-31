@@ -1,0 +1,28 @@
+{
+  "id": "ta-moving-averages",
+  "skills": ["technical_analysis"],
+  "lab": "technical",
+  "level": "intermediate",
+  "order": 1,
+  "title": "Moving averages",
+  "summary": "A moving average smooths recent closes into one line. Its slope summarises direction, and it always lags price.",
+  "unreliableWhen": "In sideways markets, price crosses a flat average again and again, so crossover rules flip back and forth. After sharp turns, the average reacts late.",
+  "goodExample": "Price stays above a rising EMA 50 through a trend, with the SMA 20 above it.",
+  "badExample": "Buying every time price crosses above the SMA 20 in a sideways market, and paying costs on each flip.",
+  "lessonIds": [
+    "fx-moving-averages"
+  ],
+  "chart": {
+    "scenario": "strong_uptrend",
+    "overlays": [
+      "sma20",
+      "ema50"
+    ],
+    "pane": "none",
+    "lookFor": "Watch the slope of both averages and how far behind price they turn. Then open Sideways and count how often price crosses the SMA 20."
+  },
+  "drillKind": "find_the_trend",
+  "scenarioIds": [],
+  "companyIds": [],
+  "redFlagCaseIds": []
+}

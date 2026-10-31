@@ -1,0 +1,24 @@
+{
+  "id": "calendar-spread",
+  "term": "Calendar spread",
+  "aliases": [
+    "inter-month spread",
+    "time spread"
+  ],
+  "definition": {
+    "simple": "The price difference between two contract months of the same futures market, or a position that buys one and sells the other.",
+    "balanced": "Calendar spread = later month − nearer month. [[rollover|Rolling]] a position trades this gap. Spread positions still carry risk, because the gap itself can move."
+  },
+  "example": "Fictional: next month 51.30 − near month 50.60 = 0.70 per unit.",
+  "related": [
+    "rollover",
+    "futures-curve",
+    "contango"
+  ],
+  "markets": [
+    "commodities",
+    "futures"
+  ],
+  "level": "intermediate",
+  "sourceIds": []
+}

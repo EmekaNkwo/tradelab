@@ -1,0 +1,19 @@
+{
+  "id": "pump-and-dump",
+  "term": "Pump and dump",
+  "aliases": [
+    "pump-and-dump scheme",
+    "pump"
+  ],
+  "definition": {
+    "simple": "A scheme where people hype a small, thinly traded asset to push its price up, then sell to the buyers they attracted.",
+    "balanced": "The promoters buy first, spread excited messages, and sell into the rising price. When they stop buying, the price can fall quickly and late buyers may not be able to sell at a good price. It is often seen with very small stocks and coins."
+  },
+  "related": [
+    "investment-scam",
+    "liquidity"
+  ],
+  "markets": [],
+  "level": "beginner",
+  "sourceIds": []
+}

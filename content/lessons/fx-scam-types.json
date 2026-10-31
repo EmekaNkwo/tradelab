@@ -1,0 +1,128 @@
+{
+  "id": "fx-scam-types",
+  "moduleId": "forex-scams-brokers",
+  "title": "Crypto \"forex\" schemes, fake brokers, pump-and-dumps and recovery scams",
+  "level": "beginner",
+  "estimatedMinutes": 15,
+  "inOneLine": {
+    "simple": "Fake brokers, crypto \"forex\" schemes, [[pump-and-dump|pump-and-dumps]] and [[recovery-scam|recovery scams]] all try to get your money in, then make it hard or impossible to get out.",
+    "balanced": "Warning signs include deposits only in crypto or to personal accounts, a platform you cannot find on any regulator's official register, sudden hype about a small asset, and anyone asking for a fee to \"recover\" lost money. Never pay to recover money."
+  },
+  "explain": {
+    "simple": "Some scams set up a fake broker. The website and app look real. Your balance seems to grow. But when you try to withdraw, there are new \"fees\", \"taxes\" or delays. Crypto \"forex\" schemes are similar: you deposit crypto into a platform that promises forex or \"AI trading\" profits, and the money is hard to trace once it is gone. In a pump-and-dump, people hype a small asset so its price jumps, then sell to the buyers they attracted, and the price can collapse. Finally, after a loss, someone may offer to \"recover\" your money for a fee. This is a second scam. Never pay anyone to recover money. All examples here are fictional.",
+    "balanced": "A fake broker may copy the look, the name or the details of a real firm, so check the exact name, website and contact details against a regulator's official register, reached on your own, not through a link they send. Hype messages often come with countdowns and screenshots. A [[recovery-scam]] may claim to be a lawyer, an investigator or an official, and may already know details of your loss, sometimes because it is run by the same people. If you have lost money to a scam, report it through official channels in your country, and do not send more money to anyone who promises to get it back."
+  },
+  "realNumbers": {
+    "assumptions": [
+      "Fictional platform \"Example Crypto Platform (fictional)\", all numbers made up",
+      "Learner deposits the equivalent of 500 USD in crypto",
+      "The dashboard shows the balance at 1,200 USD after a month"
+    ],
+    "steps": [
+      "The learner asks to withdraw 1,200 USD.",
+      "The platform asks for a \"release fee\" of 15%: 15% × 1,200 = 180 USD.",
+      "After paying, a new \"tax\" of 10% appears: 10% × 1,200 = 120 USD.",
+      "The 1,200 USD balance was a number on a screen. The learner has now sent 500 + 180 + 120 = 800 USD and received nothing. Each new fee is a red flag."
+    ]
+  },
+  "anotherExample": {
+    "assumptions": [
+      "Fictional story; all names made up",
+      "Weeks after the loss above, a \"Sample Recovery Service (fictional)\" calls"
+    ],
+    "steps": [
+      "The caller knows the platform name and the amount lost.",
+      "They promise to get the money back for an upfront fee of 300 USD.",
+      "This is a recovery scam. Paying would add to the loss.",
+      "The right move: do not pay, stop contact, and report the original loss through official channels."
+    ]
+  },
+  "explainSimpler": "If getting your money out costs more money, or getting it back costs a fee upfront, it is a scam.",
+  "commonMistake": "Paying a \"withdrawal fee\" or \"tax\" to release a balance. Each payment usually leads to another request.",
+  "quickCheck": [
+    {
+      "id": "fx-scam-types-q1",
+      "prompt": "A platform says you must pay a fee before you can withdraw your profits. What is the best reading?",
+      "options": [
+        {
+          "id": "a",
+          "text": "A normal withdrawal charge; pay it",
+          "explanation": "No: repeated surprise fees to release money are a classic fake-broker sign."
+        },
+        {
+          "id": "b",
+          "text": "A warning sign; stop paying and check the firm on an official register",
+          "explanation": "Right: this is how many fake platforms keep taking money."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "investment-scam"
+      ]
+    },
+    {
+      "id": "fx-scam-types-q2",
+      "prompt": "Someone offers to recover your scam losses for an upfront fee. What do you do?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Pay, if they already know the details of your case, since that shows they are real",
+          "explanation": "No: a scammer can know the details, for example from the first scam. Never pay upfront to recover money. This is a recovery scam."
+        },
+        {
+          "id": "b",
+          "text": "Refuse, and report the loss through official channels",
+          "explanation": "Right: upfront recovery fees are a second scam."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "recovery-scam"
+      ]
+    },
+    {
+      "id": "fx-scam-types-q3",
+      "prompt": "What is a pump-and-dump?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Hyping a small asset to push its price up, then selling to those who bought the hype",
+          "explanation": "Right: late buyers are often left with big losses."
+        },
+        {
+          "id": "b",
+          "text": "A normal method: buying a strongly rising asset early and selling once the rise slows down",
+          "explanation": "No: that describes ordinary trend trading. A pump-and-dump is price manipulation: hype first, then selling to late buyers."
+        },
+        {
+          "id": "c",
+          "text": "A type of order",
+          "explanation": "No: it is not an order type. It is price manipulation: hype first, then selling to late buyers."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "pump-and-dump"
+      ]
+    }
+  ],
+  "doItNow": {
+    "kind": "reflection",
+    "instructions": "Write a short note to your future self: \"If anyone asks me to pay a fee to withdraw, to recover money, or to join a hot tip, I will...\" Finish the sentence with the steps you will take: stop, do not pay, check the firm yourself, report through official channels."
+  },
+  "glossaryIds": [
+    "investment-scam",
+    "pump-and-dump",
+    "recovery-scam"
+  ],
+  "sourceIds": []
+}

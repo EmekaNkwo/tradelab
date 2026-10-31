@@ -1,0 +1,23 @@
+{
+  "id": "pullback",
+  "term": "Pullback",
+  "aliases": [
+    "pullbacks",
+    "retracement",
+    "dip"
+  ],
+  "definition": {
+    "simple": "A move against the trend that leaves the trend's structure intact.",
+    "balanced": "In an uptrend, a pullback falls but stays above the last higher low. At the time, a pullback and the start of a [[reversal]] look the same; only later candles show which it was."
+  },
+  "example": "Uptrend low 4,580, high 4,700. Price dips to 4,620, still above 4,580: a pullback so far.",
+  "related": [
+    "reversal",
+    "trend",
+    "market-structure",
+    "fibonacci-retracement"
+  ],
+  "markets": [],
+  "level": "beginner",
+  "sourceIds": []
+}

@@ -1,0 +1,187 @@
+{
+  "id": "dividend-index-investing",
+  "skills": ["strategy_understanding", "fundamental_analysis"],
+  "title": "Dividend and index investing",
+  "category": "investing",
+  "family": "income",
+  "markets": [
+    "stocks"
+  ],
+  "level": "beginner",
+  "horizon": "long_term",
+  "style": "rules_based",
+  "analysis": "fundamental",
+  "attribution": "generic",
+  "traderIds": [],
+  "overview": {
+    "objective": "Own a broad slice of the market for years, with low costs and reinvested dividends.",
+    "holdingPeriod": "Years to decades.",
+    "context": "Long-term saving in shares through low-cost funds. Not a short-term trading method."
+  },
+  "evidence": null,
+  "simple": {
+    "simple": "Instead of picking shares, buy an [[index-fund]] that holds many companies. Add a fixed amount on a schedule, reinvest the [[dividend|dividends]], keep fees low and hold for years.",
+    "balanced": "[[diversification|Diversification]] across many companies reduces the damage any one can do, but the fund still falls when the whole market falls, sometimes by a lot and for years. Fees are taken every year whatever the result, so small differences compound. [[dividend-yield|Dividend yield]] is income, not a forecast of price."
+  },
+  "reasoning": "Over long periods, the combined profits of many companies may grow, and owning a share of all of them avoids having to pick winners. That is the reasoning, not a promise; markets can fall and stay down for many years.",
+  "rules": {
+    "label": "A simplified educational version, not anyone's documented method",
+    "rules": [
+      "Invest a fixed amount on a fixed schedule into a broad, low-cost index fund.",
+      "Reinvest dividends.",
+      "Compare yearly fees before buying, and prefer the lower fee for the same index.",
+      "Rebalance once a year if you hold more than one fund.",
+      "Use only money you will not need for many years."
+    ]
+  },
+  "demo": null,
+  "replay": null,
+  "exercise": {
+    "prompt": "Which statements are true for this fictional plan? Pick all that apply.",
+    "situation": "A fictional fund. You invest 200 a month for 3 months, at prices of 50, 40 and 50 per unit. Ignore fees.",
+    "options": [
+      {
+        "id": "a",
+        "text": "You hold 13 units",
+        "correct": true,
+        "explanation": "Right: 200 ÷ 50 = 4, 200 ÷ 40 = 5, 200 ÷ 50 = 4; 4 + 5 + 4 = 13."
+      },
+      {
+        "id": "b",
+        "text": "Your average cost is about 46.15, below the simple average price of 46.67",
+        "correct": true,
+        "explanation": "Right: 600 ÷ 13 ≈ 46.15, and (50 + 40 + 50) ÷ 3 ≈ 46.67. A fixed amount buys more units when the price is low."
+      },
+      {
+        "id": "c",
+        "text": "Investing all 600 at the first price of 50 would have bought more units",
+        "correct": false,
+        "explanation": "No: 600 ÷ 50 = 12 units, one fewer than the 13 bought month by month."
+      },
+      {
+        "id": "d",
+        "text": "At a price of 50, the holding is worth 650",
+        "correct": true,
+        "explanation": "Right: 13 × 50 = 650."
+      },
+      {
+        "id": "e",
+        "text": "The dividend yield tells you the price will rise",
+        "correct": false,
+        "explanation": "No: yield is income relative to price, not a forecast."
+      }
+    ]
+  },
+  "failureAnalysis": [
+    "A broad market fall takes the whole fund down, sometimes for years.",
+    "Needing the money during a fall forces selling at a loss.",
+    "High fees quietly reduce results every year.",
+    "Dividends can be cut."
+  ],
+  "limitations": [
+    "Taxes and fees vary and are not included in the examples.",
+    "No claim is made about future market returns.",
+    "This page describes a principle, not advice for your situation."
+  ],
+  "knowledgeCheck": [
+    {
+      "id": "dividend-index-investing-q1",
+      "prompt": "A share costs 40 and pays a yearly dividend of 1.60. What is the dividend yield?",
+      "options": [
+        {
+          "id": "a",
+          "text": "4%",
+          "explanation": "Right: 1.60 ÷ 40 = 0.04, which is 4%."
+        },
+        {
+          "id": "b",
+          "text": "25%, price divided by dividend",
+          "explanation": "No: that is 40 ÷ 1.60. Yield is the dividend divided by the price."
+        },
+        {
+          "id": "c",
+          "text": "1.6%, since the yield is just the dividend amount written as a percent",
+          "explanation": "No: the dividend has to be divided by the price."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "dividend-yield"
+      ]
+    },
+    {
+      "id": "dividend-index-investing-q2",
+      "prompt": "What does a broad index fund not protect you from?",
+      "options": [
+        {
+          "id": "a",
+          "text": "One company failing",
+          "explanation": "No: one company is a small part of a broad fund."
+        },
+        {
+          "id": "b",
+          "text": "A fall in the whole market",
+          "explanation": "Right: if the market falls, the fund falls with it."
+        },
+        {
+          "id": "c",
+          "text": "One sector falling while the rest of the market rises",
+          "explanation": "No: a broad fund holds many sectors, so one sector falling does limited damage."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "index-fund",
+        "diversification"
+      ]
+    },
+    {
+      "id": "dividend-index-investing-q3",
+      "prompt": "Two funds track the same index. One charges 1.0% a year, the other 0.2%. Over many years…",
+      "options": [
+        {
+          "id": "a",
+          "text": "They end level, because they hold the same shares",
+          "explanation": "No: the fee gap is taken every year."
+        },
+        {
+          "id": "b",
+          "text": "The 1% fund ends ahead, because a higher fee buys better tracking",
+          "explanation": "No: a higher fee is not a sign of better results for the same index."
+        },
+        {
+          "id": "c",
+          "text": "The 0.8 point gap is lost each year and compounds, so the cheaper fund is likely to end ahead",
+          "explanation": "Right: same index, so the fee difference is most of the gap."
+        }
+      ],
+      "correctOptionIds": [
+        "c"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "index-fund"
+      ]
+    }
+  ],
+  "lessonIds": [
+    "st-dividends-earnings",
+    "st-styles-horizons",
+    "st-shares-ownership"
+  ],
+  "glossaryIds": [
+    "index-fund",
+    "diversification",
+    "dividend",
+    "dividend-yield",
+    "share"
+  ],
+  "sourceIds": [],
+  "review": null
+}

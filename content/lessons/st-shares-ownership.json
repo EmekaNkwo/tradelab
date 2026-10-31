@@ -1,0 +1,143 @@
+{
+  "id": "st-shares-ownership",
+  "moduleId": "stocks-basics",
+  "title": "Shares, exchanges and tickers",
+  "level": "beginner",
+  "estimatedMinutes": 15,
+  "inOneLine": {
+    "simple": "A share is a small piece of ownership in a company. Shares are bought and sold on an exchange, under a short code called a ticker.",
+    "balanced": "A [[share]] is a fractional claim on a company's profits and assets. Your stake = your shares ÷ shares outstanding. Shares trade on a [[stock-exchange]] under a [[ticker]], and the price is set by buyers and sellers, not by the company."
+  },
+  "explain": {
+    "simple": "Imagine a company split into 50 million equal pieces. Each piece is one share. If you own some of those pieces, you own a small part of the business. Shares are traded on a stock exchange, a market with rules about who can list and how orders are matched. Each company has a short code of letters, its ticker, so it fits on a quote screen. The price you see is simply the last price a buyer and a seller agreed on.",
+    "balanced": "Owning shares gives you a share of future profits if the company pays them out as [[dividend|dividends]], and usually a vote. It does not give you a fixed return: the price can fall as well as rise, and the company owes shareholders nothing back. If the company issues new shares, each existing share becomes a smaller slice. Tickers can look alike, so always check the full company name before you place even a simulated order."
+  },
+  "realNumbers": {
+    "assumptions": [
+      "Fictional company with 50 million shares outstanding",
+      "You buy 500 shares at 8.00 USD each; costs ignored",
+      "Illustrative dividend of 0.20 USD per share; a learning example, not a forecast"
+    ],
+    "steps": [
+      "Cost = 500 × 8.00 = 4,000 USD.",
+      "Your stake = 500 ÷ 50,000,000 = 0.00001, which is 0.001% of the company.",
+      "A dividend of 0.20 USD per share pays you 500 × 0.20 = 100 USD.",
+      "If the price falls to 6.00 USD, your shares are worth 500 × 6.00 = 3,000 USD: 1,000 USD less than you paid, a 25% fall."
+    ]
+  },
+  "anotherExample": {
+    "assumptions": [
+      "Same fictional company and your same 500 shares",
+      "The company issues 10 million new shares, so there are now 60 million"
+    ],
+    "steps": [
+      "Before: 500 ÷ 50,000,000 = 0.001%.",
+      "After: 500 ÷ 60,000,000 = 0.000833…%.",
+      "You own the same number of shares, but a smaller slice of the company.",
+      "Each share now has a claim on a smaller part of the profit, unless the new money helps profit grow enough to make up for it."
+    ]
+  },
+  "explainSimpler": "A share is a slice of a company. The exchange is where slices are swapped. The ticker is the slice's name tag.",
+  "commonMistake": "Thinking that a share price of 1 USD is \"cheap\" and 100 USD is \"expensive\". The price of one share means little without knowing how many shares there are and how much the company earns.",
+  "quickCheck": [
+    {
+      "id": "st-shares-ownership-q1",
+      "prompt": "A fictional company has 20 million shares. You own 2,000. What fraction of the company do you own?",
+      "options": [
+        {
+          "id": "a",
+          "text": "0.1%",
+          "explanation": "No: that would need 20,000 shares."
+        },
+        {
+          "id": "b",
+          "text": "0.01%",
+          "explanation": "Right: 2,000 ÷ 20,000,000 = 0.0001, which is 0.01%."
+        },
+        {
+          "id": "c",
+          "text": "1%",
+          "explanation": "No: that would need 200,000 shares."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "share"
+      ]
+    },
+    {
+      "id": "st-shares-ownership-q2",
+      "prompt": "Who sets the price of a share on an exchange?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The company, at its yearly meeting",
+          "explanation": "No: the company does not set its trading price."
+        },
+        {
+          "id": "b",
+          "text": "The exchange, using a fixed formula",
+          "explanation": "No: the exchange matches orders, it does not choose the price."
+        },
+        {
+          "id": "c",
+          "text": "Buyers and sellers trading",
+          "explanation": "Right: the price is where buyers and sellers last agreed."
+        }
+      ],
+      "correctOptionIds": [
+        "c"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "stock-exchange",
+        "share"
+      ]
+    },
+    {
+      "id": "st-shares-ownership-q3",
+      "prompt": "Two companies have tickers that differ by one letter. What should you do before a simulated order?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Check the full company name",
+          "explanation": "Right: similar tickers can belong to very different companies."
+        },
+        {
+          "id": "b",
+          "text": "Pick the one with the lower price",
+          "explanation": "No: a lower price per share says nothing about value."
+        },
+        {
+          "id": "c",
+          "text": "Assume they are the same firm",
+          "explanation": "No: similar codes can be unrelated companies."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "ticker"
+      ]
+    }
+  ],
+  "doItNow": {
+    "kind": "paper",
+    "instructions": "Open Practice → Paper trading and choose the \"Practice ordinary share\" instrument. Note the simulated bid and ask. Place a simulated buy of 10 shares and write down what it cost, then what you would get if you sold straight away at the bid."
+  },
+  "homework": "In one sentence each, explain to a friend what a share, an exchange and a ticker are.",
+  "glossaryIds": [
+    "share",
+    "stock-exchange",
+    "ticker",
+    "dividend",
+    "bid",
+    "ask"
+  ],
+  "sourceIds": []
+}

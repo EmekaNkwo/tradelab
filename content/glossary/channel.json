@@ -1,0 +1,24 @@
+{
+  "id": "channel",
+  "term": "Channel",
+  "aliases": [
+    "price channel",
+    "trend channel",
+    "rising channel",
+    "falling channel"
+  ],
+  "definition": {
+    "simple": "Two roughly parallel sloping lines that a trend's swings have stayed between.",
+    "balanced": "In a rising channel, one line joins the higher lows and a parallel line runs over the highs. The lines depend on which swing points you choose, so write the rule down. A close beyond a line, by an amount you set in advance, says the old pattern stopped. It does not say what comes next."
+  },
+  "example": "Lows at 100.0 and 104.0, 20 candles apart, give a slope of 0.2 per candle.",
+  "related": [
+    "trend",
+    "consolidation",
+    "swing-high",
+    "swing-low"
+  ],
+  "markets": [],
+  "level": "intermediate",
+  "sourceIds": []
+}

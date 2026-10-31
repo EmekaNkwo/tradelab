@@ -1,0 +1,25 @@
+{
+  "id": "futures-contract",
+  "term": "Futures contract",
+  "aliases": [
+    "future",
+    "futures"
+  ],
+  "definition": {
+    "simple": "An agreement, traded on an exchange, to buy or sell something at a set price on a set future date.",
+    "balanced": "A standardised contract whose rules are set in its specification: [[contract-size]] or [[multiplier]], [[tick-size]], [[contract-month|contract months]], [[expiry]] and settlement method. Buyers and sellers put down [[margin]], and gains and losses are settled daily through [[mark-to-market]]. Every contract has its own specification."
+  },
+  "example": "Example index future (fictional specs): multiplier 10 USD per point, tick size 0.25, cash-settled.",
+  "related": [
+    "multiplier",
+    "tick-size",
+    "expiry",
+    "initial-margin",
+    "mark-to-market"
+  ],
+  "markets": [
+    "futures"
+  ],
+  "level": "beginner",
+  "sourceIds": []
+}

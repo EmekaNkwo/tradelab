@@ -1,0 +1,12 @@
+{
+  "id": "forex-pips-lots-leverage",
+  "skills": ["market_fundamentals", "risk_management"],
+  "title": "Pips, lots, leverage and margin",
+  "summary": "Pips and pipettes, lot sizes, pip value in your account currency, leverage, margin, margin level, and overnight swaps.",
+  "markets": ["forex"],
+  "level": "beginner",
+  "lessonIds": ["fx-pips-pipettes", "fx-lot-sizes", "fx-pip-value", "fx-leverage-margin", "fx-margin-level", "fx-swaps"],
+  "checkpointQuizId": "forex-pips-lots-leverage-checkpoint",
+  "practicalResult": "Calculate pip value and margin for 10 trades.",
+  "minPracticeDays": 0
+}

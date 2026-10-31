@@ -1,0 +1,13 @@
+{
+  "id": "mc-main-risks",
+  "order": 10,
+  "dimension": "Main risks",
+  "cells": {
+    "forex": "Leverage, gaps around news and weekends, widening spreads, and broker-related risks.",
+    "stocks": "Company-specific falls, gaps on news, and the share losing most of its value.",
+    "penny_stocks": "Thin trading, wide spreads, dilution, promotions and manipulation, halts, and being unable to sell.",
+    "commodities": "Leverage, supply shocks, roll costs and sudden gaps.",
+    "futures": "Leverage, [[gap|gaps]], margin calls and forced liquidation; losses can exceed the margin."
+  },
+  "caveat": "Risks differ by product, broker and jurisdiction as well as by market. Every market can lose money, and past calm is not a guarantee."
+}

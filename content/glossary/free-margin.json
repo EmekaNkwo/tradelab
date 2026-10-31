@@ -1,0 +1,14 @@
+{
+  "id": "free-margin",
+  "term": "Free margin",
+  "aliases": [],
+  "definition": {
+    "simple": "The part of your equity that is not tied up as margin. It shrinks as open trades lose money.",
+    "balanced": "Free margin = [[equity]] − used [[margin]]. It is roughly what is left to absorb further losses or to open new trades. When it nears zero, a [[margin-call]] or [[stop-out]] gets close."
+  },
+  "example": "Equity 850 USD and used margin 200 USD: free margin is 650 USD.",
+  "related": ["equity", "margin", "margin-level"],
+  "markets": ["forex", "commodities", "futures"],
+  "level": "beginner",
+  "sourceIds": []
+}

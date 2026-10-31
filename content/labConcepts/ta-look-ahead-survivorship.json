@@ -1,0 +1,21 @@
+{
+  "id": "ta-look-ahead-survivorship",
+  "skills": ["backtesting_literacy", "statistical_reasoning"],
+  "lab": "technical",
+  "level": "advanced",
+  "order": 5,
+  "title": "Look-ahead and survivorship bias",
+  "summary": "Look-ahead bias uses information that was not available at the time. Survivorship bias studies only what survived, such as methods you heard worked.",
+  "unreliableWhen": "Both make a test look better than real trading could be, and both are easy to miss on a finished chart.",
+  "goodExample": "Deciding only on closed bars in Replay, and treating a method you heard about as an idea to test, not as proof.",
+  "badExample": "Drawing support with a low that formed after your planned entry, then counting the trade as a win.",
+  "lessonIds": [
+    "fx-backtest-biases",
+    "fx-backtest-basics"
+  ],
+  "chart": null,
+  "drillKind": null,
+  "scenarioIds": [],
+  "companyIds": [],
+  "redFlagCaseIds": []
+}

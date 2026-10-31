@@ -1,0 +1,21 @@
+{
+  "id": "practical-forex-trader",
+  "title": "Practical Forex Trader",
+  "summary": "The forex path from first principles to a tested plan, with practice in MetaTrader on a demo account.",
+  "moduleIds": [
+    "forex-basics",
+    "forex-pips-lots-leverage",
+    "forex-orders",
+    "forex-charts",
+    "forex-levels",
+    "forex-indicators",
+    "forex-risk",
+    "forex-fundamentals",
+    "forex-rules-based-strategies",
+    "forex-my-plan",
+    "forex-backtest-plan",
+    "forex-forward-test",
+    "forex-scams-brokers"
+  ],
+  "defaultWeeks": 12
+}

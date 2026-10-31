@@ -1,0 +1,133 @@
+{
+  "id": "fx-forward-test-demo",
+  "skills": ["execution_discipline"],
+  "moduleId": "forex-forward-test",
+  "title": "Forward testing your plan on a demo account",
+  "level": "intermediate",
+  "estimatedMinutes": 15,
+  "inOneLine": {
+    "simple": "A [[forward-test]] means following your plan in real time on a [[demo-account]], where you cannot skip ahead.",
+    "balanced": "Replay tests the past. A forward test adds what replay leaves out: waiting in real time, changing spreads, [[slippage]], and your own reactions. Demo money is pretend, so it still differs from real trading."
+  },
+  "explain": {
+    "simple": "After replay, the next step is to follow the same plan on your MetaTrader demo account, in real time. This is a forward test. It feels different. You have to wait for setups. Spreads widen and narrow. Orders can fill at a slightly different price. You may feel bored, impatient or tempted to break a rule. All of that is useful to learn. Before each demo trade, run the pre-trade checklist. Then place the trade exactly as your plan says, with a stop loss. The goal for this module is 20 or more demo trades, each logged in the Journal with a screenshot.",
+    "balanced": "Keep the plan version fixed during the forward test, so results are comparable. Compare demo fills with your planned prices: the gap between them shows real costs like the [[spread]] and slippage that replay may not show. Remember the limits. Demo trades use pretend money, so the fear of real loss is missing, and some brokers' demo fills may differ from live fills. And 20 trades is a small sample. The forward test is about whether you can follow your plan in real time, not about proving the plan makes money."
+  },
+  "realNumbers": {
+    "assumptions": [
+      "Fictional demo trade, illustrative prices, account currency USD",
+      "Plan: buy EUR/USD at 1.08500, stop 1.08300 (20 pips), 0.10 lot, pip value 1 USD",
+      "Actual fill: 1.08510 (1 pip worse, from slippage)"
+    ],
+    "steps": [
+      "Planned risk = 20 pips × 1 USD = 20 USD.",
+      "Actual stop distance = 1.08510 − 1.08300 = 21 pips.",
+      "Actual risk = 21 × 1 USD = 21 USD, 1 USD more than planned.",
+      "The learner records both numbers in the Journal. Small differences like this are normal in live conditions."
+    ]
+  },
+  "anotherExample": {
+    "assumptions": [
+      "Fictional learner, first week of forward testing",
+      "Plan allows 2 trades per day; 5 trading days"
+    ],
+    "steps": [
+      "Setups appeared on 3 of the 5 days. The learner took 5 trades in total.",
+      "On one quiet day, the learner felt bored and took a trade that was not in the plan.",
+      "The Journal flags that trade as a rule break.",
+      "Lesson learned: waiting is part of the plan. A day with no trades can be a day of perfect discipline."
+    ]
+  },
+  "explainSimpler": "Replay is practising with the answers hidden. Forward testing is practising in real time, at the speed of the real market.",
+  "commonMistake": "Changing the plan every few demo trades. Then no version gets enough trades to learn from.",
+  "quickCheck": [
+    {
+      "id": "fx-forward-test-demo-q1",
+      "prompt": "What does a forward test add that a replay test does not?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Real-time waiting, changing spreads, slippage and your live reactions",
+          "explanation": "Right: these only show up when you trade in real time."
+        },
+        {
+          "id": "b",
+          "text": "Proof that the plan works, because it now uses real-time prices",
+          "explanation": "No: real-time prices do not prove anything. No test can show that a plan will work in future."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "forward-test"
+      ]
+    },
+    {
+      "id": "fx-forward-test-demo-q2",
+      "prompt": "Planned stop 30 pips. Fill 2 pips worse than planned. Pip value 1 USD. What is the actual risk?",
+      "options": [
+        {
+          "id": "a",
+          "text": "30 USD, the planned risk",
+          "explanation": "No: the worse fill added 2 pips."
+        },
+        {
+          "id": "b",
+          "text": "32 USD",
+          "explanation": "Right: 32 pips × 1 USD = 32 USD."
+        },
+        {
+          "id": "c",
+          "text": "28 USD",
+          "explanation": "No: a worse fill increases the distance to the stop."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "slippage",
+        "pip-value"
+      ]
+    },
+    {
+      "id": "fx-forward-test-demo-q3",
+      "prompt": "Why can demo results differ from real trading?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Demo money is pretend, so emotions differ, and fills may differ too",
+          "explanation": "Right: demo is useful practice, not a copy of real trading."
+        },
+        {
+          "id": "b",
+          "text": "They cannot differ, since demo accounts use live prices",
+          "explanation": "No: prices may be similar, but fills, costs and feelings can differ."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "demo-account"
+      ]
+    }
+  ],
+  "doItNow": {
+    "kind": "metatrader",
+    "instructions": "Run the pre-trade checklist, then place one demo trade on MetaTrader exactly as your plan says, with a stop loss and take profit. Follow the task card if you need a reminder of the steps. Take a screenshot of the chart at entry.",
+    "mtTaskId": "mt-demo-trade-sl-tp"
+  },
+  "glossaryIds": [
+    "forward-test",
+    "demo-account",
+    "slippage",
+    "spread",
+    "pre-trade-checklist"
+  ],
+  "sourceIds": []
+}

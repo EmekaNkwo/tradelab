@@ -1,0 +1,176 @@
+{
+  "id": "forex-charts-checkpoint",
+  "title": "Checkpoint: charts, trends and structure",
+  "passMark": 0.8,
+  "questions": [
+    {
+      "id": "forex-charts-checkpoint-q1",
+      "prompt": "A EUR/USD candle: open 1.09200, high 1.09350, low 1.09150, close 1.09300. How big is its body?",
+      "options": [
+        {
+          "id": "a",
+          "text": "10 pips",
+          "explanation": "Right: 1.09300 − 1.09200 = 0.00100 = 10 pips."
+        },
+        {
+          "id": "b",
+          "text": "20 pips",
+          "explanation": "No: that is the range, high minus low."
+        },
+        {
+          "id": "c",
+          "text": "100 pips",
+          "explanation": "No: 0.00100 is 10 pips. On EUR/USD one pip is 0.00010."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "candlestick",
+        "ohlc"
+      ]
+    },
+    {
+      "id": "forex-charts-checkpoint-q2",
+      "prompt": "Four H1 candles have highs 1.2510, 1.2525, 1.2518 and 1.2505. What is the high of the H4 candle they make?",
+      "options": [
+        {
+          "id": "a",
+          "text": "1.2525",
+          "explanation": "Right: the H4 high is the highest of the four highs."
+        },
+        {
+          "id": "b",
+          "text": "1.2505",
+          "explanation": "No: that is the last candle's high."
+        },
+        {
+          "id": "c",
+          "text": "1.25145",
+          "explanation": "No: that is the average of the four highs. The H4 high is the highest one."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "timeframe",
+        "ohlc"
+      ]
+    },
+    {
+      "id": "forex-charts-checkpoint-q3",
+      "prompt": "Swing highs 1.3200, 1.3150, 1.3080. Swing lows 1.3100, 1.3020. What do the swings describe?",
+      "options": [
+        {
+          "id": "a",
+          "text": "A downtrend so far",
+          "explanation": "Right: lower highs and lower lows."
+        },
+        {
+          "id": "b",
+          "text": "An uptrend so far",
+          "explanation": "No: the highs and lows are both falling."
+        },
+        {
+          "id": "c",
+          "text": "A range between 1.3020 and 1.3200",
+          "explanation": "No: the swings step down rather than overlap."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "trend",
+        "swing-high",
+        "swing-low"
+      ]
+    },
+    {
+      "id": "forex-charts-checkpoint-q4",
+      "prompt": "Swing highs keep turning near 1.1100 and swing lows near 1.1020. What is this, and how high is it?",
+      "options": [
+        {
+          "id": "a",
+          "text": "A range about 80 pips high",
+          "explanation": "Right: 1.1100 − 1.1020 = 0.0080 = 80 pips."
+        },
+        {
+          "id": "b",
+          "text": "An uptrend about 80 pips high",
+          "explanation": "No: the swings are not rising."
+        },
+        {
+          "id": "c",
+          "text": "A range about 8 pips high",
+          "explanation": "No: 0.0080 is 80 pips."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "market-structure",
+        "pip"
+      ]
+    },
+    {
+      "id": "forex-charts-checkpoint-q5",
+      "prompt": "An uptrend's last higher low is 1.27400. A candle closes at 1.27350. What is the best description now?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Uptrend structure broken; direction unclear",
+          "explanation": "Right: a lower low breaks the pattern, but a downtrend also needs a lower high."
+        },
+        {
+          "id": "b",
+          "text": "A confirmed downtrend has started, so this is a signal to sell",
+          "explanation": "No: a break of structure changes the description. It is not a signal."
+        },
+        {
+          "id": "c",
+          "text": "The uptrend is still intact, since it was only a small dip",
+          "explanation": "No: price closed 5 pips below the last higher low, so the pattern of higher lows is broken."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "market-structure"
+      ]
+    },
+    {
+      "id": "forex-charts-checkpoint-q6",
+      "prompt": "The D1 chart shows an uptrend. The M15 chart shows the last 3 hours falling. What is true?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Both can be true at once",
+          "explanation": "Right: a short fall can sit inside a longer rise."
+        },
+        {
+          "id": "b",
+          "text": "One of the charts must be wrong",
+          "explanation": "No: they show the same prices over different windows of time."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "timeframe",
+        "trend"
+      ]
+    }
+  ]
+}

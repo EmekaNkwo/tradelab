@@ -1,0 +1,20 @@
+{
+  "id": "diversification",
+  "term": "Diversification",
+  "aliases": [
+    "diversify",
+    "diversified"
+  ],
+  "definition": {
+    "simple": "Spreading money across different investments so that one going wrong does less damage.",
+    "balanced": "It only helps if the holdings do not all move together. Positions that depend on the same currency, sector or commodity behave like one larger bet, and [[correlation|correlations]] tend to rise when markets are stressed."
+  },
+  "related": [
+    "correlation",
+    "position-sizing",
+    "risk-per-trade"
+  ],
+  "markets": [],
+  "level": "beginner",
+  "sourceIds": []
+}

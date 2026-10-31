@@ -1,0 +1,21 @@
+{
+  "id": "value-trap",
+  "term": "Value trap",
+  "aliases": [
+    "value traps"
+  ],
+  "definition": {
+    "simple": "A share that looks cheap on its figures but is cheap because the business is declining.",
+    "balanced": "A low [[pe-ratio]] can mean earnings are about to fall. Checking why the price is low, and whether cash flow supports the profits, is the defence."
+  },
+  "related": [
+    "value-investing",
+    "pe-ratio",
+    "valuation"
+  ],
+  "markets": [
+    "stocks"
+  ],
+  "level": "intermediate",
+  "sourceIds": []
+}

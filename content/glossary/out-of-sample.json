@@ -1,0 +1,24 @@
+{
+  "id": "out-of-sample",
+  "term": "Out-of-sample",
+  "aliases": [
+    "out-of-sample data",
+    "OOS",
+    "holdout data",
+    "test set"
+  ],
+  "definition": {
+    "simple": "Data kept aside and not used to build or tune a rule, then used once to test it.",
+    "balanced": "Out-of-sample results are usually weaker than [[in-sample]] ones, because tuning picks up some noise. Once you change a rule because of out-of-sample results, that data has become in-sample and you need fresh data."
+  },
+  "example": "Tune on candles 1–400, then test the finished rules once on candles 401–600.",
+  "related": [
+    "in-sample",
+    "walk-forward-testing",
+    "overfitting",
+    "backtest"
+  ],
+  "markets": [],
+  "level": "advanced",
+  "sourceIds": []
+}

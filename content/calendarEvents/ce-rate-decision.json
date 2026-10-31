@@ -1,0 +1,18 @@
+{
+  "id": "ce-rate-decision",
+  "kind": "rate_decision",
+  "title": "Interest rate decisions",
+  "measures": "The central bank's main policy interest rate: whether it is raised, cut or left where it is, and by how much.",
+  "whyItMatters": "The policy rate sets the base cost of borrowing and the return on holding a currency. A change, or a change in the expected path of rates, can move currencies, bond yields, stock valuations and the cost of carrying futures positions.",
+  "affectedMarkets": ["forex", "stocks", "commodities", "futures"],
+  "expectations": "Most decisions are widely expected. Forecasters publish a consensus, and futures and other markets show what traders think is likely. A decision that matches expectations may barely move prices because it was already priced in.",
+  "surprises": "A surprise is a decision that differs from what was priced in, or an expected decision that comes with an unexpected hint about the next ones. The hint often matters more than the decision. Traders may also wait for the press conference before deciding what the surprise means.",
+  "limits": "Higher rates do not always mean a stronger currency, and lower rates do not always mean higher stocks. What matters is the change compared with expectations, and other forces can outweigh it. Prices can gap and spreads can widen at the release.",
+  "keywords": ["rate decision", "interest rate", "rate hike", "rate cut", "raises rates", "cuts rates", "holds rates", "basis points", "policy rate", "rates unchanged"],
+  "glossaryIds": ["interest-rate", "central-bank", "consensus-forecast", "surprise", "priced-in", "carry-trade"],
+  "lessonIds": ["fx-rates-central-banks", "cm-inflation-rates-currency", "fx-expected-vs-actual", "fx-trading-around-news"],
+  "scenarioIds": ["macro-westmark-inflation-calm"],
+  "samples": [
+    { "id": "s1", "title": "Bank of Westmark rate decision (fictional)", "day": 3, "time": "12:00", "timeZone": "UTC", "where": "Westmark (fictional)", "details": "A sample decision on the fictional Westmark policy rate. Forecasters expect no change; the statement and press conference follow." }
+  ]
+}

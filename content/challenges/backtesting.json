@@ -1,0 +1,35 @@
+{
+  "id": "backtesting",
+  "type": "backtesting",
+  "title": "Backtesting Challenge",
+  "summary": "Explain look-ahead, survivorship and overfitting, and test your own rules on data they were not tuned on. The checkpoint step accepts the testing checkpoint from either program.",
+  "skills": [
+    "backtesting_literacy",
+    "statistical_reasoning"
+  ],
+  "criteria": [
+    {
+      "kind": "checkpoint_passed",
+      "moduleId": "forex-backtest-plan",
+      "orModuleIds": [
+        "ta-advanced"
+      ],
+      "label": "Pass your program's testing checkpoint: Backtesting my plan (Practical Forex Trader) or Regimes, sizing and honest testing (Trader Development)",
+      "dimension": "understanding"
+    },
+    {
+      "kind": "skill_questions",
+      "skill": "backtesting_literacy",
+      "count": 10,
+      "accuracy": 0.8,
+      "label": "Answer 10 backtesting questions at 80% or better (latest answer to each)",
+      "dimension": "reasoning"
+    },
+    {
+      "kind": "backtests_tested_out_of_sample",
+      "count": 2,
+      "label": "Save 2 backtests that keep an out-of-sample part or period blocks",
+      "dimension": "rule_use"
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+appId: com.tradelab.app
+name: 03 Daily class
+tags:
+  - e2e
+  - journey
+---
+# Spec §36 step 3: today's class, run to the end. Needs: 01 (a class due today).
+# Home TodayHero (components/home/TodayHero.tsx, on app/(tabs)/home/index.tsx):
+#   "Start today's class" / "Continue today's class" when a class is due,
+#   "Start the next class early" when today's class is already done.
+- launchApp:
+    appId: com.tradelab.app
+- extendedWaitUntil:
+    visible:
+      id: "home-screen"
+    timeout: 30000
+- runFlow:
+    when:
+      visible: "Start the next class early"
+    commands:
+      - tapOn: "Start the next class early"
+- extendedWaitUntil:
+    visible: "(Start|Continue) today's class"
+    timeout: 10000
+- tapOn: "(Start|Continue) today's class"
+# app/class/[id].tsx: Stack title "Class N"
+- extendedWaitUntil:
+    visible: "Class [0-9]+"
+    timeout: 20000
+- takeScreenshot: 03-class-start
+# Adds a note (NotesCard, testID note-input) so the class_note mission ticks.
+- scrollUntilVisible:
+    element:
+      id: "note-input"
+    direction: DOWN
+- tapOn:
+    id: "note-input"
+- inputText: "E2E note: base currency comes first."
+- hideKeyboard
+# The restyled note box is taller, so the button can sit below the fold.
+- scrollUntilVisible:
+    element:
+      text: "Save note"
+      enabled: true
+    direction: DOWN
+- tapOn:
+    text: "Save note"
+    enabled: true
+- assertVisible:
+    id: "class-note"
+- runFlow: subflows/run-class.yaml
+# Back on Home: today's class is done (TodayHero, at the top).
+- assertVisible: "(Today's class is done|Program complete)"
+# ProgramCard progress line, below the fold since the restyle.
+- scrollUntilVisible:
+    element:
+      text: "[1-9][0-9]* of [0-9]+ lessons and checkpoints done.*"
+    direction: DOWN
+- takeScreenshot: 03-home-after-class

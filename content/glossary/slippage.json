@@ -1,0 +1,13 @@
+{
+  "id": "slippage",
+  "term": "Slippage",
+  "aliases": [],
+  "definition": {
+    "simple": "The difference between the price you expected and the price you actually got.",
+    "balanced": "It happens when price moves between sending an order and filling it, or when there is not enough volume at the requested price. It can be against you or in your favour. It is more likely in fast markets, around news, and in thin [[liquidity]]."
+  },
+  "related": ["market-order", "stop-order", "gap", "liquidity"],
+  "markets": [],
+  "level": "beginner",
+  "sourceIds": []
+}

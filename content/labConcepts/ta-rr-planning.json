@@ -1,0 +1,26 @@
+{
+  "id": "ta-rr-planning",
+  "skills": ["risk_management"],
+  "lab": "technical",
+  "level": "intermediate",
+  "order": 11,
+  "title": "Risk-to-reward planning",
+  "summary": "Before entering, set the stop where the idea is wrong and a target, then compare the distances. A 2:1 plan risks 1 to aim for 2.",
+  "unreliableWhen": "A planned ratio says nothing about how often the target is reached. Targets placed far beyond any recent move, or stops squeezed to make the ratio look good, distort the plan.",
+  "goodExample": "Stop below the swing low 30 pips away, target at the next resistance 60 pips away: 2:1, decided before entry.",
+  "badExample": "Moving the stop closer to make a 3:1 ratio, inside normal candle movement.",
+  "lessonIds": [
+    "fx-sl-tp",
+    "fx-rr-expectancy"
+  ],
+  "chart": {
+    "scenario": "pullback",
+    "overlays": [],
+    "pane": "atr",
+    "lookFor": "Mark an entry after the pullback, a stop below the swing low and a target at the earlier high. Measure both distances and compare the stop with ATR 14."
+  },
+  "drillKind": "where_is_the_stop",
+  "scenarioIds": [],
+  "companyIds": [],
+  "redFlagCaseIds": []
+}

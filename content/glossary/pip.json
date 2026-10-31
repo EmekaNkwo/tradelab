@@ -1,0 +1,14 @@
+{
+  "id": "pip",
+  "term": "Pip",
+  "aliases": ["pips"],
+  "definition": {
+    "simple": "A standard small step in a currency price. For most pairs it is 0.0001.",
+    "balanced": "For most currency pairs a pip is a move in the fourth decimal place (0.0001). For pairs quoted in Japanese yen it is usually the second decimal place (0.01). Many brokers show one extra digit, called a pipette (a tenth of a pip)."
+  },
+  "example": "EUR/USD moving from 1.1000 to 1.1050 is a 50-pip move.",
+  "related": ["spread", "lot"],
+  "markets": ["forex"],
+  "level": "beginner",
+  "sourceIds": []
+}

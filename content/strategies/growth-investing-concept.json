@@ -1,0 +1,178 @@
+{
+  "id": "growth-investing-concept",
+  "skills": ["strategy_understanding", "fundamental_analysis"],
+  "title": "Growth investing (concept)",
+  "category": "investing",
+  "family": "growth",
+  "markets": [
+    "stocks"
+  ],
+  "level": "intermediate",
+  "horizon": "long_term",
+  "style": "discretionary",
+  "analysis": "fundamental",
+  "attribution": "generic",
+  "traderIds": [],
+  "overview": {
+    "objective": "Own companies whose sales and earnings are growing much faster than average.",
+    "holdingPeriod": "Years.",
+    "context": "A concept page. High expected growth is usually already in the price."
+  },
+  "evidence": null,
+  "simple": {
+    "simple": "[[growth-investing|Growth investing]] means buying companies whose [[revenue]] and [[earnings]] are growing fast, even if the share price looks expensive today.",
+    "balanced": "A high [[pe-ratio]] means the price already assumes strong growth. If growth merely slows, the share can fall sharply even while the business keeps growing. The [[peg-ratio]] compares price with growth, but only as well as the growth forecast. Issuing new shares ([[dilution]]) spreads earnings more thinly."
+  },
+  "reasoning": "If a company keeps growing its earnings faster than the market expects, its value could rise more than the high price implies. That is the reasoning; the hard part is that expectations are already high.",
+  "rules": null,
+  "demo": null,
+  "replay": null,
+  "exercise": {
+    "prompt": "Which statements are true for this fictional company? Pick all that apply.",
+    "situation": "A fictional company. Revenue grew from 100 million to 130 million last year. The P/E is 60, and analysts expect earnings to grow 30% a year. It is losing cash and issues about 10% more shares each year.",
+    "options": [
+      {
+        "id": "a",
+        "text": "The PEG ratio is 2.0",
+        "correct": true,
+        "explanation": "Right: 60 ÷ 30 = 2.0."
+      },
+      {
+        "id": "b",
+        "text": "Issuing 10% more shares a year dilutes each share's claim on earnings",
+        "correct": true,
+        "explanation": "Right: the same earnings are spread over more shares."
+      },
+      {
+        "id": "c",
+        "text": "30% growth will continue because it did last year",
+        "correct": false,
+        "explanation": "No: past growth is not a promise of future growth."
+      },
+      {
+        "id": "d",
+        "text": "A high P/E means the price already assumes strong growth",
+        "correct": true,
+        "explanation": "Right: buyers are paying for growth they expect."
+      },
+      {
+        "id": "e",
+        "text": "A P/E of 60 means the price is 60 times revenue per share",
+        "correct": false,
+        "explanation": "No: P/E compares the price with earnings per share, not revenue."
+      }
+    ]
+  },
+  "failureAnalysis": [
+    "Growth slows, and the share falls even though the business still grows.",
+    "Forecasts of growth turn out too high.",
+    "Cash losses force the company to issue shares, diluting holders.",
+    "Rising interest rates can hit highly valued shares hardest."
+  ],
+  "limitations": [
+    "This page explains the idea; it gives no rules to pick shares.",
+    "Growth forecasts are uncertain, and PEG inherits that uncertainty.",
+    "No claim is made that growth investing beats other approaches."
+  ],
+  "knowledgeCheck": [
+    {
+      "id": "growth-investing-concept-q1",
+      "prompt": "A share has a P/E of 40 and expected earnings growth of 20% a year. What is its PEG ratio?",
+      "options": [
+        {
+          "id": "a",
+          "text": "0.5",
+          "explanation": "No: that is 20 ÷ 40, the wrong way round."
+        },
+        {
+          "id": "b",
+          "text": "2.0: 40 ÷ 20",
+          "explanation": "Right: P/E divided by the growth rate."
+        },
+        {
+          "id": "c",
+          "text": "800, from multiplying the P/E by the growth rate",
+          "explanation": "No: PEG divides P/E by growth."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "intermediate",
+      "glossaryIds": [
+        "peg-ratio"
+      ]
+    },
+    {
+      "id": "growth-investing-concept-q2",
+      "prompt": "What tends to hurt a highly valued growth share most?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Growth slowing",
+          "explanation": "Right: the price assumed fast growth."
+        },
+        {
+          "id": "b",
+          "text": "A small dividend paid each year",
+          "explanation": "No: a small dividend is common and not a main risk."
+        },
+        {
+          "id": "c",
+          "text": "Its number of shares staying exactly the same from one year to the next",
+          "explanation": "No: a steady share count avoids dilution."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "intermediate",
+      "glossaryIds": [
+        "growth-investing"
+      ]
+    },
+    {
+      "id": "growth-investing-concept-q3",
+      "prompt": "Earnings per share are 2.00 and grow 25% a year. What are they after 2 years?",
+      "options": [
+        {
+          "id": "a",
+          "text": "3.00",
+          "explanation": "No: that adds 0.50 twice. Growth compounds on the new, larger figure."
+        },
+        {
+          "id": "b",
+          "text": "2.50",
+          "explanation": "No: that is after one year."
+        },
+        {
+          "id": "c",
+          "text": "About 3.13: 2.00 × 1.25 × 1.25",
+          "explanation": "Right: 2.00 × 1.25 = 2.50, and 2.50 × 1.25 = 3.125."
+        }
+      ],
+      "correctOptionIds": [
+        "c"
+      ],
+      "level": "intermediate",
+      "glossaryIds": [
+        "eps"
+      ]
+    }
+  ],
+  "lessonIds": [
+    "st-valuation",
+    "st-income-statement",
+    "st-styles-horizons"
+  ],
+  "glossaryIds": [
+    "growth-investing",
+    "peg-ratio",
+    "pe-ratio",
+    "dilution",
+    "revenue",
+    "earnings"
+  ],
+  "sourceIds": [],
+  "review": null
+}

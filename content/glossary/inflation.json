@@ -1,0 +1,21 @@
+{
+  "id": "inflation",
+  "term": "Inflation",
+  "aliases": [
+    "CPI",
+    "price growth"
+  ],
+  "definition": {
+    "simple": "How fast prices of everyday goods and services are rising.",
+    "balanced": "Inflation is usually reported as the percentage change in a price index over a year or a month. Central banks watch it closely. Higher-than-expected inflation can raise expectations of higher [[interest-rate|interest rates]], but the market reaction is never certain."
+  },
+  "example": "Hypothetical: a fictional country's prices rise from an index of 100 to 103 in a year, which is 3% inflation.",
+  "related": [
+    "interest-rate",
+    "central-bank",
+    "consensus-forecast"
+  ],
+  "markets": [],
+  "level": "beginner",
+  "sourceIds": []
+}

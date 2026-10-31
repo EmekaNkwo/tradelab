@@ -1,0 +1,13 @@
+{
+  "id": "stop-out",
+  "term": "Stop-out",
+  "aliases": ["stop out", "forced close"],
+  "definition": {
+    "simple": "When the broker closes your trades for you because your account cannot support them any more.",
+    "balanced": "If your [[margin-level]] falls to the broker's stop-out level, the broker starts closing open positions, often the biggest loser first. You do not choose the price. The level is set by each broker. In fast markets the account can lose more than expected before the close happens."
+  },
+  "related": ["margin-level", "margin-call", "margin"],
+  "markets": ["forex", "commodities", "futures"],
+  "level": "beginner",
+  "sourceIds": []
+}

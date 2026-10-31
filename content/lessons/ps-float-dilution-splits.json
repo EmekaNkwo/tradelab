@@ -1,0 +1,88 @@
+{
+  "id": "ps-float-dilution-splits",
+  "moduleId": "penny-stocks",
+  "title": "Low float, dilution and reverse splits",
+  "level": "beginner",
+  "estimatedMinutes": 20,
+  "inOneLine": {
+    "simple": "A small [[float]] makes prices jumpy. [[dilution|Dilution]] shrinks your slice of the company. A [[reverse-split|reverse split]] changes the share count, not the business.",
+    "balanced": "Check three things on any small share: how many shares can actually trade, how fast the share count has been growing, and whether reverse splits keep following that growth. Together they often tell you more than the price chart."
+  },
+  "explain": {
+    "simple": "The float is the number of shares the public can actually trade. If insiders hold most shares, the float is small, and a modest amount of buying or selling can move the price a long way, up or down. Dilution happens when a company creates new shares, usually to raise cash. You still own the same number of shares, but they are a smaller part of a bigger pile. A reverse split swaps several old shares for one new one. The price per share goes up, but your total value does not change on the day. All companies here are fictional.",
+    "balanced": "Small companies that lose money often pay their bills by selling new shares again and again. Each round dilutes existing holders, and the price per share tends to drift down. When it gets very low, the company may do a reverse split to lift the price, then keep issuing. A pattern of 'dilute, reverse split, dilute again' is a strong reason to look harder. One reverse split is not proof of anything bad on its own, but repeated ones deserve questions."
+  },
+  "realNumbers": {
+    "assumptions": [
+      "Fictional Cindervale Tech (fictional) has 20 million shares",
+      "You own 10,000 shares",
+      "The company issues 10 million new shares to raise cash"
+    ],
+    "steps": [
+      "Before: 10,000 ÷ 20,000,000 = 0.0005, so you own 0.05% of the company.",
+      "After: shares outstanding = 20 million + 10 million = 30 million.",
+      "Now: 10,000 ÷ 30,000,000 ≈ 0.000333, so you own about 0.033%.",
+      "Your slice fell by one third (from 1 share in every 2,000 to 1 in every 3,000), even though you did nothing."
+    ]
+  },
+  "anotherExample": {
+    "assumptions": [
+      "You own 10,000 shares of a fictional company at 0.12 USD",
+      "The company does a 1-for-10 reverse split",
+      "Separately: a fictional share with 50 million shares outstanding, 45 million held by insiders, average daily volume 100,000"
+    ],
+    "steps": [
+      "Before the split: 10,000 × 0.12 = 1,200 USD.",
+      "After: 10,000 ÷ 10 = 1,000 shares, at about 0.12 × 10 = 1.20 USD. Value = 1,000 × 1.20 = 1,200 USD. Nothing has changed.",
+      "If the price then drifts back to 0.60, your 1,000 shares are worth 600 USD.",
+      "The low-float share: float ≈ 50 million − 45 million = 5 million shares.",
+      "A 200,000-share buy order is 200,000 ÷ 100,000 = 2 days of normal volume, and 200,000 ÷ 5,000,000 = 4% of the float. Orders that size can move the price sharply."
+    ]
+  },
+  "explainSimpler": "Dilution is the pizza being cut into more slices: you keep your slices, but each one is smaller. A reverse split is glueing slices together: fewer, bigger slices, same pizza.",
+  "commonMistake": "Seeing a share 'jump' from 0.12 to 1.20 after a reverse split and thinking it went up tenfold. The share count fell by the same factor, so nothing was gained.",
+  "quickCheck": [
+    {
+      "id": "ps-float-dilution-splits-q1",
+      "prompt": "You hold 2,000 shares at 0.30 USD. The company does a 1-for-5 reverse split. What do you hold straight after?",
+      "options": [
+        { "id": "a", "text": "2,000 shares at 1.50 USD", "explanation": "No: the share count also falls. 2,000 at 1.50 would be 3,000 USD, more than you had." },
+        { "id": "b", "text": "400 shares at 0.30 USD", "explanation": "No: the price rises by the same factor the share count falls." },
+        { "id": "c", "text": "400 shares at about 1.50 USD", "explanation": "Right: 2,000 ÷ 5 = 400 shares; 0.30 × 5 = 1.50. Value 600 USD before and after." }
+      ],
+      "correctOptionIds": ["c"],
+      "level": "beginner",
+      "glossaryIds": ["reverse-split"]
+    },
+    {
+      "id": "ps-float-dilution-splits-q2",
+      "prompt": "A company goes from 100 million to 150 million shares. You own 50,000. What happened to your stake?",
+      "options": [
+        { "id": "a", "text": "It shrank from 0.05% to about 0.033%", "explanation": "Right: 50,000 ÷ 100 million = 0.05%; 50,000 ÷ 150 million ≈ 0.033%." },
+        { "id": "b", "text": "It stayed at 0.05%, as you still own 50,000", "explanation": "No: your share count is the same, but the total grew, so your percentage fell." },
+        { "id": "c", "text": "It fell by half, to 0.025%", "explanation": "No: 0.025% would need 200 million shares. 50,000 ÷ 150 million ≈ 0.033%." }
+      ],
+      "correctOptionIds": ["a"],
+      "level": "beginner",
+      "glossaryIds": ["dilution"]
+    },
+    {
+      "id": "ps-float-dilution-splits-q3",
+      "prompt": "Why can a low float make a share's price jumpy?",
+      "options": [
+        { "id": "a", "text": "Low float means the company is losing money", "explanation": "No: float is about who holds the shares, not about profit." },
+        { "id": "b", "text": "Few shares can trade, so small orders move price", "explanation": "Right: with few tradable shares, modest buying or selling can shift the price a lot." },
+        { "id": "c", "text": "Insiders sell their shares every day", "explanation": "No: float is about tradable shares. Insiders often hold, and nothing makes them sell daily." }
+      ],
+      "correctOptionIds": ["b"],
+      "level": "beginner",
+      "glossaryIds": ["float"]
+    }
+  ],
+  "doItNow": {
+    "kind": "reflection",
+    "instructions": "Work out by hand two checks on a fictional company. 1) It goes from 40 million to 64 million shares: work out your new percentage if you own 20,000 shares. 2) It then does a 1-for-8 reverse split: work out your new share count and the new price if the old price was 0.08. Confirm your total value is the same before and after the split."
+  },
+  "glossaryIds": ["float", "dilution", "reverse-split", "liquidity"],
+  "sourceIds": []
+}

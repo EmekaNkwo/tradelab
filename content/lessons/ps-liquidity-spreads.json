@@ -1,0 +1,148 @@
+{
+  "id": "ps-liquidity-spreads",
+  "moduleId": "penny-stocks",
+  "title": "Low volume, wide spreads and thin order books",
+  "level": "beginner",
+  "estimatedMinutes": 20,
+  "inOneLine": {
+    "simple": "With few buyers and sellers, you pay a big [[spread]] to get in, and you may not be able to get out at the price you see.",
+    "balanced": "Low daily volume, a wide spread and a thin [[order-book|order book]] mean the price shown is only good for a few shares. A larger order moves through several worse prices, so the real cost of trading can be far bigger than it looks."
+  },
+  "explain": {
+    "simple": "[[volume|Volume]] is the number of shares traded in a period. Many small shares trade only a few thousand times a day. With so few traders, the gap between the price buyers will pay (bid) and the price sellers want (ask) is often wide. If you buy at the ask and sell straight away at the bid, you lose the whole spread. On a big share that might be a tiny fraction of a percent. On a penny stock it can be several percent or more. All numbers here are fictional.",
+    "balanced": "The order book shows how many shares are waiting at each price. In a thin book, the best bid might be for only a few thousand shares. Sell more than that with a [[market-order|market order]] and you fill at the next bid down, then the next, which is a form of [[slippage]]. A [[limit-order|limit order]] protects your price but may only fill in part, or not at all. A useful habit: compare your order size with the average daily volume. If your order is a large share of a normal day's trading, you may struggle to exit."
+  },
+  "realNumbers": {
+    "assumptions": [
+      "Simulated practice penny stock: bid 0.40 USD, ask 0.44 USD",
+      "You buy 5,000 shares at the ask, then sell at once at the bid",
+      "No commission, to keep the arithmetic simple"
+    ],
+    "steps": [
+      "Spread = 0.44 − 0.40 = 0.04 USD per share.",
+      "Cost to buy: 5,000 × 0.44 = 2,200 USD.",
+      "Value if you sell at once: 5,000 × 0.40 = 2,000 USD.",
+      "Loss from the spread alone = 2,200 − 2,000 = 200 USD, about 9.1% of 2,200. The price had to rise 10% (0.40 to 0.44) just to get back to even.",
+      "Compare a simulated large share with bid 50.00 and ask 50.02: the spread is 0.02, about 0.04% of the ask."
+    ]
+  },
+  "anotherExample": {
+    "assumptions": [
+      "Simulated order book for the same share. Bids: 3,000 shares at 0.40, 2,000 at 0.38, 5,000 at 0.35",
+      "Average daily volume: 40,000 shares",
+      "You sell 10,000 shares with a market order"
+    ],
+    "steps": [
+      "First 3,000 fill at 0.40: 3,000 × 0.40 = 1,200 USD.",
+      "Next 2,000 fill at 0.38: 2,000 × 0.38 = 760 USD.",
+      "Last 5,000 fill at 0.35: 5,000 × 0.35 = 1,750 USD.",
+      "Total = 1,200 + 760 + 1,750 = 3,710 USD. Average price = 3,710 ÷ 10,000 = 0.371 USD.",
+      "At the 0.40 you saw on screen it would have been 4,000 USD. The thin book cost you 290 USD more.",
+      "Your order was 10,000 ÷ 40,000 = 25% of a normal day's volume. That is a warning that exiting will be hard."
+    ]
+  },
+  "explainSimpler": "If hardly anyone is trading, the price on the screen is only good for a small amount. Sell more and you get worse and worse prices.",
+  "commonMistake": "Looking only at the last traded price. The last trade might have been 200 shares an hour ago. What matters is the current bid, the size waiting at it, and how much trades on a normal day.",
+  "quickCheck": [
+    {
+      "id": "ps-liquidity-spreads-q1",
+      "prompt": "Simulated share: bid 0.90, ask 1.00. You buy 1,000 shares and sell at once. What do you lose to the spread?",
+      "options": [
+        {
+          "id": "a",
+          "text": "10 USD",
+          "explanation": "No: the spread is 0.10 per share, and 0.10 × 1,000 is 100, not 10."
+        },
+        {
+          "id": "b",
+          "text": "900 USD",
+          "explanation": "No: that is what you get back when you sell, 1,000 × 0.90."
+        },
+        {
+          "id": "c",
+          "text": "100 USD",
+          "explanation": "Right: (1.00 − 0.90) × 1,000 = 0.10 × 1,000 = 100 USD."
+        }
+      ],
+      "correctOptionIds": [
+        "c"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "spread"
+      ]
+    },
+    {
+      "id": "ps-liquidity-spreads-q2",
+      "prompt": "A share trades about 20,000 shares a day. You plan to buy 15,000. What is the main concern?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Your order is most of a normal day's volume, so getting out may be slow and costly",
+          "explanation": "Right: compared with daily volume, your order is huge, so exits can be hard."
+        },
+        {
+          "id": "b",
+          "text": "None, as long as you use a market order so that the whole order fills straight away",
+          "explanation": "No: a market order fills, but in a thin book it can fill at much worse prices."
+        },
+        {
+          "id": "c",
+          "text": "Only the spread, since 15,000 shares is a normal order size",
+          "explanation": "No: whether an order is normal depends on daily volume. 15,000 is three quarters of a day's trading."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "liquidity",
+        "order-book"
+      ]
+    },
+    {
+      "id": "ps-liquidity-spreads-q3",
+      "prompt": "What does a limit order do in a thin market?",
+      "options": [
+        {
+          "id": "a",
+          "text": "It guarantees the whole order fills at your price",
+          "explanation": "No: it protects the price, but it may fill only in part or not at all."
+        },
+        {
+          "id": "b",
+          "text": "Caps your price, but may fill only in part",
+          "explanation": "Right: you choose price protection and accept the risk of not filling."
+        },
+        {
+          "id": "c",
+          "text": "It makes the spread narrower for everyone",
+          "explanation": "No: one order may add a little depth, but it does not fix a thin market."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "limit-order",
+        "order-book"
+      ]
+    }
+  ],
+  "doItNow": {
+    "kind": "paper",
+    "instructions": "In Paper trading, open the Practice penny stock (prices are simulated). Write down the bid, the ask and the maximum order size. Work out the spread as a percentage of the ask. Then place a small practice buy with a limit order, and note how far the price must rise before you would break even after the spread."
+  },
+  "glossaryIds": [
+    "spread",
+    "order-book",
+    "liquidity",
+    "slippage",
+    "market-order",
+    "limit-order",
+    "volume"
+  ],
+  "sourceIds": []
+}

@@ -1,0 +1,102 @@
+{
+  "id": "mt-demo-trade-sl-tp",
+  "title": "Place, edit and close a demo trade with SL and TP",
+  "summary": "Open a demo [[market-order]] with a [[stop-loss]] and [[take-profit]], move the stop, then close the trade and find it in your history.",
+  "level": "beginner",
+  "requiresDemo": true,
+  "steps": [
+    {
+      "text": "Check you are on your demo account before you start."
+    },
+    {
+      "text": "Before opening the app's order screen, decide on paper: buy or sell, the stop loss price, and the take profit price."
+    },
+    {
+      "text": "Go to the Quotes tab, tap EUR/USD and choose the option to trade."
+    },
+    {
+      "text": "Make sure the order type is a market order, not a pending order."
+    },
+    {
+      "text": "Set the volume to 0.01."
+    },
+    {
+      "text": "Enter your stop loss and take profit prices. For a buy, the stop goes below the price and the target above. For a sell, the other way round."
+    },
+    {
+      "text": "Tap buy or sell to place the order."
+    },
+    {
+      "text": "Open the Trade tab. Check the position shows your stop loss and take profit."
+    },
+    {
+      "text": "Tap or press and hold the position (it depends on your app version), then choose the option to modify it. Move the stop loss closer to the entry price and save."
+    },
+    {
+      "text": "Check the Trade tab shows the new stop loss."
+    },
+    {
+      "text": "Tap or press and hold the position (it depends on your app version), then choose the option to close it."
+    },
+    {
+      "text": "Open the History tab and find the closed trade. Note the open price, close price and result."
+    }
+  ],
+  "afterQuestions": [
+    {
+      "id": "mt-demo-trade-sl-tp-q1",
+      "prompt": "If you placed a buy, which price on the Quotes tab would trigger your stop loss?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The bid",
+          "explanation": "Right: a buy is closed by selling at the bid, so the bid triggers its stop and target."
+        },
+        {
+          "id": "b",
+          "text": "The ask",
+          "explanation": "No: the ask triggers the stop on a sell trade."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "stop-loss",
+        "bid"
+      ]
+    },
+    {
+      "id": "mt-demo-trade-sl-tp-q2",
+      "prompt": "Right after the order filled, the trade showed a small loss. Why?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The stop loss was hit",
+          "explanation": "No: if the stop had been hit, the trade would have closed and moved to history."
+        },
+        {
+          "id": "b",
+          "text": "The spread",
+          "explanation": "Right: you opened at one side of the quote and would close at the other, so you start behind by the spread."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "spread"
+      ]
+    }
+  ],
+  "glossaryIds": [
+    "market-order",
+    "stop-loss",
+    "take-profit",
+    "demo-account",
+    "bid",
+    "ask"
+  ]
+}

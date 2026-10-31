@@ -1,0 +1,180 @@
+{
+  "id": "value-investing-concept",
+  "skills": ["strategy_understanding", "fundamental_analysis"],
+  "title": "Value investing (concept)",
+  "category": "investing",
+  "family": "value",
+  "markets": [
+    "stocks"
+  ],
+  "level": "intermediate",
+  "horizon": "long_term",
+  "style": "discretionary",
+  "analysis": "fundamental",
+  "attribution": "generic",
+  "traderIds": [],
+  "overview": {
+    "objective": "Buy shares for less than a careful estimate of what the business is worth.",
+    "holdingPeriod": "Years.",
+    "context": "A concept page. Value investing rests on estimates of a business's worth, and those estimates can be wrong."
+  },
+  "evidence": null,
+  "simple": {
+    "simple": "[[value-investing|Value investing]] means estimating what a company is worth, then buying only when the price is well below that estimate. The gap is the [[margin-of-safety]].",
+    "balanced": "The estimate depends on assumptions about future cash flows, so two careful people can disagree widely. A share can look cheap because the business is shrinking: a [[value-trap]]. Cheap shares can stay cheap for years, and checking [[free-cash-flow]] and debt is part of the work, not optional."
+  },
+  "reasoning": "If the market sometimes prices a business below what its future cash flows are worth, buying at a discount could leave room for error and for the price to recover. That is the reasoning; markets may have good reasons for the low price.",
+  "rules": null,
+  "demo": null,
+  "replay": null,
+  "exercise": {
+    "prompt": "Which statements are true for this fictional company? Pick all that apply.",
+    "situation": "A fictional company. The share price is 30 and earnings per share are 3. Free cash flow has been negative for 3 years and debt is rising. Your estimate of its worth is 45.",
+    "options": [
+      {
+        "id": "a",
+        "text": "The P/E ratio is 10",
+        "correct": true,
+        "explanation": "Right: 30 ÷ 3 = 10."
+      },
+      {
+        "id": "b",
+        "text": "The margin of safety on your estimate is about 33%",
+        "correct": true,
+        "explanation": "Right: (45 − 30) ÷ 45 = 15 ÷ 45 ≈ 33%."
+      },
+      {
+        "id": "c",
+        "text": "Negative free cash flow and rising debt are warning signs of a possible value trap",
+        "correct": true,
+        "explanation": "Right: profits that do not turn into cash deserve a closer look."
+      },
+      {
+        "id": "d",
+        "text": "The P/E of 10 is below the estimate's implied P/E of 12",
+        "correct": false,
+        "explanation": "No: the estimate implies 45 ÷ 3 = 15, not 12."
+      },
+      {
+        "id": "e",
+        "text": "The estimate of 45 is a fact",
+        "correct": false,
+        "explanation": "No: it is an estimate built on assumptions."
+      }
+    ]
+  },
+  "failureAnalysis": [
+    "The business keeps shrinking, so the cheap price was justified.",
+    "The estimate of worth was too optimistic.",
+    "The price stays low for years, tying up money.",
+    "Debt problems wipe out shareholders before any recovery."
+  ],
+  "limitations": [
+    "This page explains the idea; it gives no rules to pick shares.",
+    "Valuation needs assumptions, and small changes to them move the estimate a lot.",
+    "No claim is made that value investing beats other approaches."
+  ],
+  "knowledgeCheck": [
+    {
+      "id": "value-investing-concept-q1",
+      "prompt": "You estimate a business is worth 80 per share. It trades at 60. What is the margin of safety?",
+      "options": [
+        {
+          "id": "a",
+          "text": "33%, measured on the price",
+          "explanation": "No: the margin is measured against the estimated value, not the price."
+        },
+        {
+          "id": "b",
+          "text": "20",
+          "explanation": "No: 20 is the gap in money; the margin is usually given as a share of the estimate."
+        },
+        {
+          "id": "c",
+          "text": "25%: (80 − 60) ÷ 80 = 20 ÷ 80",
+          "explanation": "Right: the gap divided by the estimated value."
+        }
+      ],
+      "correctOptionIds": [
+        "c"
+      ],
+      "level": "intermediate",
+      "glossaryIds": [
+        "margin-of-safety"
+      ]
+    },
+    {
+      "id": "value-investing-concept-q2",
+      "prompt": "A share has a P/E of 5 while similar companies trade at 15. What should you check first?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Why it is cheap",
+          "explanation": "Right: a low P/E can mean earnings are about to fall."
+        },
+        {
+          "id": "b",
+          "text": "Whether the price rose this week",
+          "explanation": "No: last week's price says little about value."
+        },
+        {
+          "id": "c",
+          "text": "Nothing more, since a low P/E alone is enough to show it is good value",
+          "explanation": "No: that is how value traps catch people."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "intermediate",
+      "glossaryIds": [
+        "pe-ratio",
+        "value-trap"
+      ]
+    },
+    {
+      "id": "value-investing-concept-q3",
+      "prompt": "What does an estimate of a business's worth rely on?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The chart",
+          "explanation": "No: value estimates come from the business, not the chart."
+        },
+        {
+          "id": "b",
+          "text": "Assumptions about future cash flows",
+          "explanation": "Right: and different assumptions give different values."
+        },
+        {
+          "id": "c",
+          "text": "A fixed formula that gives the same answer whoever uses it and whatever they assume",
+          "explanation": "No: estimates change with the assumptions."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "intermediate",
+      "glossaryIds": [
+        "valuation",
+        "cash-flow"
+      ]
+    }
+  ],
+  "lessonIds": [
+    "st-valuation",
+    "st-cash-flow",
+    "st-business-quality"
+  ],
+  "glossaryIds": [
+    "value-investing",
+    "margin-of-safety",
+    "value-trap",
+    "pe-ratio",
+    "free-cash-flow",
+    "valuation"
+  ],
+  "sourceIds": [],
+  "review": null
+}

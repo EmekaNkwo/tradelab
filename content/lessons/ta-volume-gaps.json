@@ -1,0 +1,145 @@
+{
+  "id": "ta-volume-gaps",
+  "moduleId": "ta-patterns",
+  "title": "Volume and gaps: what they can and cannot confirm",
+  "level": "intermediate",
+  "estimatedMinutes": 18,
+  "inOneLine": {
+    "simple": "Volume shows how much traded during a candle. A gap is a jump between one candle and the next. Both describe what happened, not what happens next.",
+    "balanced": "[[volume|Volume]] measures participation, and a [[gap]] measures a jump in price. A move on heavy volume had more trading behind it than usual. That does not make it more likely to continue, and a gap does not have to \"fill\"."
+  },
+  "explain": {
+    "simple": "Volume is the amount traded in each candle: shares for a stock, contracts for a futures market. It usually shows as bars under the chart. Compare a bar with the recent average, not with zero. Forex has no single exchange, so a forex platform shows tick volume instead: how many times your broker's price changed. That is a rough stand-in, not the whole market. A gap is a jump in price with no trading in between. Stocks and futures can gap between one session's close and the next open. Forex mostly gaps when the market reopens after the weekend.",
+    "balanced": "Volume can tell you that a move happened with more or less trading than usual. It cannot tell you who was buying or selling, or whether the move will last. A [[breakout]] on heavy volume can still fail, and a quiet move can keep going. Volume also rises at the open, the close and around news, so compare with the same time of day where you can. A gap means orders resting inside it, including a [[stop-loss]], fill at the first price after the jump. People say gaps \"fill\", meaning price returns to the old close. Some do, some do not, and there is no rule that says when."
+  },
+  "realNumbers": {
+    "assumptions": [
+      "Fictional stock, illustrative numbers",
+      "20-day average volume: 400,000 shares",
+      "Today price closes above a resistance zone on 1,000,000 shares"
+    ],
+    "steps": [
+      "Relative volume = today ÷ average = 1,000,000 ÷ 400,000 = 2.5.",
+      "So about 2.5 times the usual amount traded today.",
+      "That says many more shares changed hands during the breakout than on a typical day.",
+      "It does not say the breakout will hold. Every share bought was also sold by someone."
+    ]
+  },
+  "anotherExample": {
+    "assumptions": [
+      "Fictional stock, illustrative prices",
+      "You sold short 200 shares at 52.00 with a stop at 53.00",
+      "It closes at 52.40, then opens the next morning at 54.10"
+    ],
+    "steps": [
+      "Planned loss = (53.00 − 52.00) × 200 = 200 USD.",
+      "Gap = 54.10 − 52.40 = 1.70, which is 1.70 ÷ 52.40 ≈ 3.2% of the close.",
+      "The open is already above the stop, so the stop fills near 54.10.",
+      "Actual loss ≈ (54.10 − 52.00) × 200 = 420 USD, more than twice the plan."
+    ]
+  },
+  "explainSimpler": "Volume is how loud the crowd was. A gap is a jump in the film. Neither tells you the ending.",
+  "commonMistake": "Treating a high-volume breakout as \"confirmed\", or expecting every gap to fill. On forex, reading tick volume as if it were the whole market's trading.",
+  "quickCheck": [
+    {
+      "id": "ta-volume-gaps-q1",
+      "prompt": "Average volume is 250,000 shares. Today 750,000 shares trade. What is the relative volume?",
+      "options": [
+        {
+          "id": "a",
+          "text": "One third of the average",
+          "explanation": "No: that is average ÷ today. Divide today by the average."
+        },
+        {
+          "id": "b",
+          "text": "3 times the average",
+          "explanation": "Right: 750,000 ÷ 250,000 = 3."
+        },
+        {
+          "id": "c",
+          "text": "500,000, so 2 times",
+          "explanation": "No: 500,000 is the difference. 750,000 ÷ 250,000 = 3."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "intermediate",
+      "glossaryIds": [
+        "volume"
+      ]
+    },
+    {
+      "id": "ta-volume-gaps-q2",
+      "prompt": "A breakout happens on 3 times the usual volume. What can you say?",
+      "options": [
+        {
+          "id": "a",
+          "text": "It is confirmed and should keep going",
+          "explanation": "No: heavy volume describes the past move. Breakouts on heavy volume can still fail."
+        },
+        {
+          "id": "b",
+          "text": "Volume tells you nothing at all here",
+          "explanation": "No: it tells you trading was heavier than usual during the move."
+        },
+        {
+          "id": "c",
+          "text": "Heavy trading, but it may still fail",
+          "explanation": "Right: volume describes participation, not what happens next."
+        }
+      ],
+      "correctOptionIds": [
+        "c"
+      ],
+      "level": "intermediate",
+      "glossaryIds": [
+        "volume",
+        "breakout",
+        "false-breakout"
+      ]
+    },
+    {
+      "id": "ta-volume-gaps-q3",
+      "prompt": "On a forex platform, what does the volume pane usually show?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Tick volume: how often the broker's price changed",
+          "explanation": "Right: forex has no single exchange, so platforms count price changes at their own feed."
+        },
+        {
+          "id": "b",
+          "text": "Every trade in that pair, across all banks and brokers",
+          "explanation": "No: no single platform sees all forex trading."
+        },
+        {
+          "id": "c",
+          "text": "Volume from the broker's own clients only",
+          "explanation": "No: it counts price changes in the broker's feed, not the shares or lots its clients traded."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "intermediate",
+      "glossaryIds": [
+        "volume"
+      ]
+    }
+  ],
+  "doItNow": {
+    "kind": "chart_lab",
+    "instructions": "In Chart Lab, choose the Breakout scenario and show Volume below the chart. Find the breakout candle and compare its volume bar with the 10 bars before it. Then open the False breakout scenario and check: did the failed move also have a tall volume bar? Finally, open News shock and look for a jump between one candle's close and the next open."
+  },
+  "glossaryIds": [
+    "volume",
+    "gap",
+    "breakout",
+    "false-breakout",
+    "stop-loss",
+    "slippage",
+    "liquidity"
+  ],
+  "sourceIds": []
+}

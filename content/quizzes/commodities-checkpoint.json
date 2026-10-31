@@ -1,0 +1,179 @@
+{
+  "id": "commodities-checkpoint",
+  "title": "Checkpoint: commodities",
+  "passMark": 0.8,
+  "questions": [
+    {
+      "id": "commodities-checkpoint-q1",
+      "prompt": "Fictional weekly report: consensus a draw of 2.0 million barrels, actual a draw of 0.5 million. What is the surprise?",
+      "options": [
+        {
+          "id": "a",
+          "text": "−1.5 million barrels, a bigger draw than expected",
+          "explanation": "No: the actual draw was smaller than expected, so the surprise is positive."
+        },
+        {
+          "id": "b",
+          "text": "+1.5 million barrels",
+          "explanation": "Right: −0.5 − (−2.0) = +1.5. Less was drawn than expected."
+        },
+        {
+          "id": "c",
+          "text": "−2.5 million barrels",
+          "explanation": "No: that adds the two draws together."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "inventory-report",
+        "surprise"
+      ]
+    },
+    {
+      "id": "commodities-checkpoint-q2",
+      "prompt": "A fictional mine that supplies a small share of a metal closes for a week while stored stocks are high. What is the most accurate view?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The price must rise sharply, since any supply loss lifts prices",
+          "explanation": "No: size, duration and stored stock all matter, and no reaction is certain."
+        },
+        {
+          "id": "b",
+          "text": "Any effect is likely to be small or brief, since stored stocks are high",
+          "explanation": "Right: the mine is small, the closure is short and stocks are high. The reaction is still a scenario, not a fact."
+        },
+        {
+          "id": "c",
+          "text": "It could cause a lasting shortage once stored stocks run down",
+          "explanation": "No: the closure lasts a week and stored stocks are high, so a lasting shortage is unlikely."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "supply-shock",
+        "inventory-report"
+      ]
+    },
+    {
+      "id": "commodities-checkpoint-q3",
+      "prompt": "Fictional crop: stock 40, harvest 90, use 110 (million tonnes). What is the stock-to-use ratio at year end?",
+      "options": [
+        {
+          "id": "a",
+          "text": "About 36%",
+          "explanation": "No: that is 40 ÷ 110, the starting stock only."
+        },
+        {
+          "id": "b",
+          "text": "About 18%",
+          "explanation": "Right: 40 + 90 − 110 = 20 left; 20 ÷ 110 ≈ 18%."
+        },
+        {
+          "id": "c",
+          "text": "About 22%",
+          "explanation": "No: that divides 20 by the harvest (90) instead of by use (110)."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "seasonality"
+      ]
+    },
+    {
+      "id": "commodities-checkpoint-q4",
+      "prompt": "Fictional commodity at 800 USD. The rate moves from 1 USD = 1.25 WMK to 1 USD = 1.50 WMK. What happens for a Westmark buyer?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Nothing changes, since the USD price is unchanged",
+          "explanation": "No: the buyer pays in WMK, and the exchange rate moved."
+        },
+        {
+          "id": "b",
+          "text": "It gets 200 WMK cheaper",
+          "explanation": "No: more WMK per USD makes it dearer for the Westmark buyer, not cheaper."
+        },
+        {
+          "id": "c",
+          "text": "It costs 200 WMK more: 1,200 instead of 1,000",
+          "explanation": "Right: 800 × 1.25 = 1,000 WMK; 800 × 1.50 = 1,200 WMK."
+        }
+      ],
+      "correctOptionIds": [
+        "c"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "commodity"
+      ]
+    },
+    {
+      "id": "commodities-checkpoint-q5",
+      "prompt": "Fictional curve: immediate 30.00, 1-month 29.40, 2-month 28.90. Which statement is right?",
+      "options": [
+        {
+          "id": "a",
+          "text": "It is in contango, so the market predicts a rise",
+          "explanation": "No: later months are cheaper, and a curve is not a forecast anyway."
+        },
+        {
+          "id": "b",
+          "text": "Backwardation, which often points to tight supply now",
+          "explanation": "Right: later dates are priced lower; near delivery is valued more today."
+        },
+        {
+          "id": "c",
+          "text": "It is in backwardation, so the price will soon fall to 28.90",
+          "explanation": "No: the shape is right, but a curve is not a forecast of the future price."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "storage-cost",
+        "supply-shock"
+      ]
+    },
+    {
+      "id": "commodities-checkpoint-q6",
+      "prompt": "A fictional harvest report shows a bigger crop than expected, yet the price rises. Which explanation fits best?",
+      "options": [
+        {
+          "id": "a",
+          "text": "It was already priced in, or other news dominated",
+          "explanation": "Right: if a big crop was already priced in, or weather news elsewhere mattered more, the price can rise anyway."
+        },
+        {
+          "id": "b",
+          "text": "The report must have been wrong, so traders ignored it",
+          "explanation": "No: the number does not need to be wrong for the price to rise."
+        },
+        {
+          "id": "c",
+          "text": "Bigger crops can raise prices, as more supply means more trading",
+          "explanation": "No: more supply tends to weigh on price. More trading does not lift it."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "surprise",
+        "seasonality"
+      ]
+    }
+  ]
+}

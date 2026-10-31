@@ -1,0 +1,13 @@
+{
+  "id": "liquidity",
+  "term": "Liquidity",
+  "aliases": ["liquid", "illiquid"],
+  "definition": {
+    "simple": "How easily you can buy or sell without moving the price much. More buyers and sellers usually means more liquidity.",
+    "balanced": "The depth of buying and selling interest. Lower liquidity usually means wider [[spread|spreads]], bigger jumps, and more difficulty getting out at the price you want. It varies by instrument, time of day, and market conditions."
+  },
+  "related": ["spread"],
+  "markets": [],
+  "level": "beginner",
+  "sourceIds": []
+}

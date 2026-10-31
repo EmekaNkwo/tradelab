@@ -1,0 +1,22 @@
+{
+  "id": "growth-investing",
+  "term": "Growth investing",
+  "aliases": [
+    "growth stocks",
+    "growth stock"
+  ],
+  "definition": {
+    "simple": "An approach that looks for companies whose revenue and profit may grow fast, often accepting a high price for them.",
+    "balanced": "Growth investors often accept a high [[pe-ratio|P/E]] and low or negative free cash flow today in exchange for expected future growth. The risk: if growth slows, the high price can fall a long way even while the business keeps growing."
+  },
+  "related": [
+    "value-investing",
+    "pe-ratio",
+    "valuation"
+  ],
+  "markets": [
+    "stocks"
+  ],
+  "level": "beginner",
+  "sourceIds": []
+}

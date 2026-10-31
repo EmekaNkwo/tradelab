@@ -1,0 +1,11 @@
+{
+  "id": "quote-currency",
+  "term": "Quote currency",
+  "aliases": ["counter currency"],
+  "definition": { "simple": "The second currency in a pair. The price is measured in this currency, and profit or loss first appears in it." },
+  "example": "In GBP/USD the quote currency is USD.",
+  "related": ["base-currency", "currency-pair"],
+  "markets": ["forex"],
+  "level": "beginner",
+  "sourceIds": []
+}

@@ -1,0 +1,23 @@
+{
+  "id": "rollover",
+  "term": "Rollover",
+  "aliases": [
+    "roll",
+    "rolling",
+    "roll over"
+  ],
+  "definition": {
+    "simple": "Closing a futures contract that is near expiry and opening the same position in a later month.",
+    "balanced": "Rolling is two trades, so it has costs, and the new month is bought or sold at its own price. The price gap between the months is a [[calendar-spread]]. Some brokers roll positions automatically, others do not, so check."
+  },
+  "related": [
+    "expiry",
+    "calendar-spread",
+    "futures-curve"
+  ],
+  "markets": [
+    "futures"
+  ],
+  "level": "beginner",
+  "sourceIds": []
+}

@@ -1,0 +1,56 @@
+{
+  "id": "macro-westmark-inflation-calm",
+  "category": "macro",
+  "title": "Westmark inflation (fictional) beats forecasts: a calm market",
+  "setup": "Fictional Westmark publishes its monthly [[inflation]] figure. The [[central-bank]] targets 2%. Over the past month WMK has moved sideways, and the economic calendar showed no other big release that day. All figures are made up; this is a practice scenario, not a forecast.",
+  "release": {
+    "name": "Westmark inflation (fictional)",
+    "unit": "% year on year",
+    "consensus": 3.0,
+    "actual": 3.4,
+    "previous": 3.1
+  },
+  "pricedIn": "Little. Most traders expected the central bank to hold its [[interest-rate]] at the next meeting, and few had bet on a high inflation number. WMK had been flat going into the release.",
+  "question": "Inflation comes in at 3.4% against a 3.0% consensus, a +0.4-point surprise. Which reactions are plausible?",
+  "reactions": [
+    {
+      "id": "a",
+      "text": "WMK rises and holds as traders start to expect a rate rise.",
+      "plausible": true,
+      "explanation": "Plausible: little was priced in, so a higher-than-expected number can shift rate expectations and the currency with them."
+    },
+    {
+      "id": "b",
+      "text": "WMK rises at first, then gives some back as traders read the rest of the report.",
+      "plausible": true,
+      "explanation": "Plausible: other parts of a report, such as which prices drove the rise, can soften the first reaction."
+    },
+    {
+      "id": "c",
+      "text": "WMK hardly moves because a bigger story elsewhere dominates the day.",
+      "plausible": true,
+      "explanation": "Plausible: a release can be outweighed by other news or by the general mood in markets."
+    },
+    {
+      "id": "d",
+      "text": "WMK is certain to rise by a fixed amount for every 0.1 points of surprise.",
+      "plausible": false,
+      "explanation": "Not plausible: there is no fixed exchange rate between surprise and price. Reactions vary from day to day."
+    },
+    {
+      "id": "e",
+      "text": "WMK cannot move until the central bank actually meets.",
+      "plausible": false,
+      "explanation": "Not plausible: prices move on what traders expect the bank to do, long before it meets."
+    }
+  ],
+  "takeaway": "With little priced in, a surprise has more room to move the price. But even then, several reactions are plausible. Compare this with the crowded version of the same release.",
+  "glossaryIds": [
+    "inflation",
+    "surprise",
+    "consensus-forecast",
+    "priced-in",
+    "central-bank",
+    "interest-rate"
+  ]
+}

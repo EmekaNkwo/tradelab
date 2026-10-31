@@ -1,0 +1,13 @@
+{
+  "id": "short-selling",
+  "term": "Short selling",
+  "aliases": ["shorting", "short sale", "going short", "short"],
+  "definition": {
+    "simple": "Selling something you have borrowed, hoping to buy it back cheaper later. If the price rises instead, you lose.",
+    "balanced": "With shares, a short seller borrows them, sells them, and must later buy them back to return them. The loss has no fixed limit because the price can keep rising. For small, thinly traded shares, borrowing may be impossible or expensive, brokers may not allow it, and sudden spikes can force short sellers to buy back at very bad prices."
+  },
+  "related": ["penny-stock", "liquidity", "gap"],
+  "markets": ["stocks", "penny_stocks"],
+  "level": "beginner",
+  "sourceIds": []
+}

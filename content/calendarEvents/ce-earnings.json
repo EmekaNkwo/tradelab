@@ -1,0 +1,19 @@
+{
+  "id": "ce-earnings",
+  "kind": "earnings",
+  "title": "Company earnings reports",
+  "measures": "A listed company's results for the last quarter or year: revenue, profit, earnings per share, cash flow, and often what management expects next (guidance).",
+  "whyItMatters": "Earnings show how a business is actually doing. A report can change what investors are willing to pay for the shares, and a large company's results can affect its sector or a whole index.",
+  "affectedMarkets": ["stocks", "penny_stocks"],
+  "expectations": "Analysts publish estimates for revenue and earnings per share. Investors also form views on guidance and on details such as margins, which are harder to summarise in one number.",
+  "surprises": "Beating or missing the estimates is only part of it. Weak guidance can outweigh a strong quarter, and a small miss can be ignored if the outlook improves. Shares can gap at the next open because reports often come out when the main market is closed.",
+  "limits": "Good results do not guarantee a rising share price, and poor results do not guarantee a fall. Small companies often have few or no analyst estimates and thin trading, so their moves can be large and unpredictable.",
+  "keywords": ["earnings", "quarterly results", "profit", "revenue", "guidance", "earnings per share", "eps", "beats estimates", "misses estimates", "results"],
+  "glossaryIds": ["earnings-report", "earnings", "eps", "revenue", "gap", "consensus-forecast"],
+  "lessonIds": ["st-dividends-earnings", "st-income-statement", "st-valuation"],
+  "scenarioIds": [],
+  "samples": [
+    { "id": "s1", "title": "Example Quickling Apps quarterly results (fictional)", "day": 2, "time": "21:00", "timeZone": "UTC", "where": "Example Quickling Apps Co (fictional company)", "details": "A sample after-hours earnings release with revenue, earnings per share and next-quarter guidance for a fictional company." },
+    { "id": "s2", "title": "Example Steadybrook Pantry Foods annual results (fictional)", "day": 4, "time": "07:00", "timeZone": "UTC", "where": "Example Steadybrook Pantry Foods (fictional company)", "details": "A sample before-the-open annual report, including the dividend the fictional company proposes." }
+  ]
+}

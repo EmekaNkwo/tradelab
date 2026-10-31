@@ -1,0 +1,66 @@
+{
+  "id": "forex-orders-checkpoint",
+  "title": "Checkpoint: orders, stops and fills",
+  "passMark": 0.8,
+  "questions": [
+    {
+      "id": "forex-orders-checkpoint-q1",
+      "prompt": "You sell GBP/USD at market. Bid 1.27000, ask 1.27015. Which price do you get, assuming no slippage?",
+      "options": [
+        { "id": "a", "text": "1.27000", "explanation": "Right: market sells fill at the bid." },
+        { "id": "b", "text": "1.27015", "explanation": "No: that is the ask, where buys fill." }
+      ],
+      "correctOptionIds": ["a"],
+      "level": "beginner",
+      "glossaryIds": ["market-order", "bid"]
+    },
+    {
+      "id": "forex-orders-checkpoint-q2",
+      "prompt": "EUR/USD bid is 1.08000. You want to sell if price rises to 1.08400. Which order?",
+      "options": [
+        { "id": "a", "text": "Sell stop at 1.08400, above the price", "explanation": "No: a sell stop goes below the current price. A sell order placed above the price is a sell limit." },
+        { "id": "b", "text": "Sell limit at 1.08400", "explanation": "Right: a sell limit sits above the current price." },
+        { "id": "c", "text": "Buy limit at 1.08400", "explanation": "No: that would open a buy, and a buy limit sits below the price." }
+      ],
+      "correctOptionIds": ["b"],
+      "level": "beginner",
+      "glossaryIds": ["limit-order", "pending-order"]
+    },
+    {
+      "id": "forex-orders-checkpoint-q3",
+      "prompt": "You hold a buy trade with a take profit at 1.10500. Which price must reach 1.10500 to close it?",
+      "options": [
+        { "id": "a", "text": "The bid", "explanation": "Right: a buy is closed by selling, at the bid." },
+        { "id": "b", "text": "The ask", "explanation": "No: the ask closes sell trades." },
+        { "id": "c", "text": "The mid price", "explanation": "No: trades close at the bid or the ask, not halfway between. A buy closes by selling, at the bid." }
+      ],
+      "correctOptionIds": ["a"],
+      "level": "beginner",
+      "glossaryIds": ["take-profit", "bid"]
+    },
+    {
+      "id": "forex-orders-checkpoint-q4",
+      "prompt": "Sell 0.10 lot EUR/USD (pip value 1 USD) at 1.10000, stop loss 1.10300. The market gaps and the stop fills at 1.10450. What is the loss?",
+      "options": [
+        { "id": "a", "text": "30 USD", "explanation": "No: that is the planned loss. The gap made the fill worse." },
+        { "id": "b", "text": "45 USD", "explanation": "Right: 1.10450 − 1.10000 = 0.00450 = 45 pips, and 45 × 1 USD = 45 USD." },
+        { "id": "c", "text": "4.50 USD", "explanation": "No: 0.00450 is 45 pips, not 4.5." }
+      ],
+      "correctOptionIds": ["b"],
+      "level": "beginner",
+      "glossaryIds": ["gap", "stop-loss", "slippage"]
+    },
+    {
+      "id": "forex-orders-checkpoint-q5",
+      "prompt": "Which kind of stop promises to close at exactly its level?",
+      "options": [
+        { "id": "a", "text": "Any stop loss, as long as it was set before entry", "explanation": "No: when to set it does not matter here. A normal stop becomes a market order and can slip, especially in gaps." },
+        { "id": "b", "text": "A guaranteed stop, if your broker offers one", "explanation": "Right: only a guaranteed stop promises the level, and it usually costs extra." },
+        { "id": "c", "text": "A stop placed far from the price", "explanation": "No: distance does not stop a gap from jumping past it." }
+      ],
+      "correctOptionIds": ["b"],
+      "level": "beginner",
+      "glossaryIds": ["stop-loss"]
+    }
+  ]
+}

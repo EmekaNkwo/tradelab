@@ -1,0 +1,22 @@
+{
+  "id": "reversal",
+  "term": "Reversal",
+  "aliases": [
+    "trend reversal",
+    "reversals",
+    "trend change"
+  ],
+  "definition": {
+    "simple": "A change in the direction of a trend: the old structure breaks and a new one forms.",
+    "balanced": "An uptrend reverses when price breaks below its last higher low and then makes lower highs and lower lows. You only know afterwards, and a new trend can turn again. Every reversal starts out looking like a [[pullback]]."
+  },
+  "example": "Uptrend low 4,580 breaks with a close at 4,560; then a lower high at 4,650 and a lower low at 4,540.",
+  "related": [
+    "pullback",
+    "market-structure",
+    "trend"
+  ],
+  "markets": [],
+  "level": "beginner",
+  "sourceIds": []
+}

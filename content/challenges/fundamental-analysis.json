@@ -1,0 +1,33 @@
+{
+  "id": "fundamental-analysis",
+  "type": "fundamental_analysis",
+  "title": "Fundamental Analysis Challenge",
+  "summary": "Read fictional company statements and macro releases, spot red flags, and judge plausible reactions without treating any as a forecast.",
+  "skills": [
+    "fundamental_analysis"
+  ],
+  "criteria": [
+    {
+      "kind": "checkpoint_passed",
+      "moduleId": "stocks-company-analysis",
+      "label": "Pass the Analysing a company checkpoint",
+      "dimension": "understanding"
+    },
+    {
+      "kind": "lab_cases",
+      "labKind": "red_flag",
+      "count": 3,
+      "minScore": 0.8,
+      "label": "Judge all 3 Red Flag Detector cases at 80% or better",
+      "dimension": "reasoning"
+    },
+    {
+      "kind": "lab_cases",
+      "labKind": "scenario",
+      "count": 4,
+      "minScore": 0.8,
+      "label": "Judge 4 What Could Happen? scenarios at 80% or better",
+      "dimension": "uncertainty"
+    }
+  ]
+}

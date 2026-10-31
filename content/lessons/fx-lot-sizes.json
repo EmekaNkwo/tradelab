@@ -1,0 +1,72 @@
+{
+  "id": "fx-lot-sizes",
+  "moduleId": "forex-pips-lots-leverage",
+  "title": "Lot sizes",
+  "level": "beginner",
+  "estimatedMinutes": 15,
+  "inOneLine": {
+    "simple": "A lot is the unit for trade size. Bigger lots mean each pip is worth more money.",
+    "balanced": "By common convention 1.00 [[lot]] is 100,000 units of the [[base-currency]], 0.10 is 10,000 and 0.01 is 1,000, but your broker's [[contract-size]] decides the real number."
+  },
+  "explain": {
+    "simple": "You choose your trade size in lots. Usually a standard lot is 100,000 units of the first currency in the pair. A mini lot (0.10) is 10,000 units. A micro lot (0.01) is 1,000 units. MetaTrader calls the size 'volume' and shows it in lots. Brokers can use a different contract size, so check it for each symbol before you trade.",
+    "balanced": "Size in units = lots × [[contract-size]]. With the common 100,000-unit contract, 0.25 lots is 25,000 units of the base currency. The size you pick sets how much each [[pip]] is worth and how much [[margin]] the trade needs. The smallest size and the size steps allowed also depend on the broker."
+  },
+  "realNumbers": {
+    "assumptions": [
+      "Contract size 100,000 units per lot (check your broker)",
+      "Trade on EUR/USD, so the units are euros"
+    ],
+    "steps": [
+      "1.00 lot = 1 × 100,000 = 100,000 EUR.",
+      "0.10 lot = 0.10 × 100,000 = 10,000 EUR.",
+      "0.01 lot = 0.01 × 100,000 = 1,000 EUR.",
+      "0.25 lot = 0.25 × 100,000 = 25,000 EUR."
+    ]
+  },
+  "anotherExample": {
+    "assumptions": [
+      "A made-up broker symbol whose contract specification says 10,000 units per lot",
+      "This is only to show why checking matters; it is not any real broker's setting"
+    ],
+    "steps": [
+      "1.00 lot = 1 × 10,000 = 10,000 units, not 100,000.",
+      "0.50 lot = 0.50 × 10,000 = 5,000 units.",
+      "The same 'lot' number gives a size ten times smaller than with a 100,000-unit contract, so pip value and margin are ten times smaller too."
+    ]
+  },
+  "explainSimpler": "Lots are like box sizes. A standard box holds 100,000, a mini box 10,000, and a micro box 1,000. Check the label on your broker's boxes.",
+  "commonMistake": "Thinking 1.00 lot is a small trade because the number looks small. With a 100,000-unit contract, 1.00 lot on EUR/USD moves about 10 USD per pip. Start practice with 0.01 lots and always check the contract size.",
+  "quickCheck": [
+    {
+      "id": "fx-lot-sizes-q1",
+      "prompt": "With a 100,000-unit contract, how many units is 0.05 lots?",
+      "options": [
+        { "id": "a", "text": "500", "explanation": "No: that would be 0.005 lots." },
+        { "id": "b", "text": "5,000", "explanation": "Right: 0.05 × 100,000 = 5,000 units." },
+        { "id": "c", "text": "50,000", "explanation": "No: that would be 0.50 lots." }
+      ],
+      "correctOptionIds": ["b"],
+      "level": "beginner",
+      "glossaryIds": ["lot", "contract-size"]
+    },
+    {
+      "id": "fx-lot-sizes-q2",
+      "prompt": "Where should you check how many units one lot is for a symbol?",
+      "options": [
+        { "id": "a", "text": "Your broker's contract specification for that symbol", "explanation": "Right: the broker sets the contract size, and it can differ between symbols." },
+        { "id": "b", "text": "Nowhere: one lot is always 100,000 units everywhere", "explanation": "No: 100,000 is a common convention, not a rule every broker follows." }
+      ],
+      "correctOptionIds": ["a"],
+      "level": "beginner",
+      "glossaryIds": ["contract-size"]
+    }
+  ],
+  "doItNow": {
+    "kind": "calculator",
+    "instructions": "Open the pip value calculator. Enter EUR/USD with 0.01, 0.10 and 1.00 lots and a 100,000-unit contract. Write down the pip value for each and notice how it grows with size."
+  },
+  "homework": "Find your demo broker's contract specification for EUR/USD (often on its website) and write down the contract size and the smallest volume allowed.",
+  "glossaryIds": ["lot", "contract-size", "base-currency"],
+  "sourceIds": []
+}

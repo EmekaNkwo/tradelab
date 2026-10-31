@@ -1,0 +1,21 @@
+{
+  "id": "maintenance-margin",
+  "term": "Maintenance margin",
+  "aliases": [
+    "variation margin threshold"
+  ],
+  "definition": {
+    "simple": "The lower level your account must stay above while you hold a futures position.",
+    "balanced": "If daily [[mark-to-market]] losses take the account below the maintenance margin, a [[margin-call]] follows. You must add money, often back up to the [[initial-margin]], or the broker can close the position. The rules differ between brokers and contracts."
+  },
+  "related": [
+    "initial-margin",
+    "margin-call",
+    "mark-to-market"
+  ],
+  "markets": [
+    "futures"
+  ],
+  "level": "beginner",
+  "sourceIds": []
+}

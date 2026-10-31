@@ -1,0 +1,56 @@
+{
+  "id": "macro-westmark-budget-deficit",
+  "category": "macro",
+  "title": "Westmark's budget (fictional): a bigger deficit than expected",
+  "setup": "The fictional Westmark government announces next year's budget, with higher spending and tax cuts. Its planned deficit is larger than forecasters expected. At the same time, the central bank is trying to bring 3.4% inflation back to its 2% target. All figures are made up; this is a practice scenario, not a forecast.",
+  "release": {
+    "name": "Westmark planned budget deficit (fictional)",
+    "unit": "% of GDP",
+    "consensus": 3.0,
+    "actual": 4.5,
+    "previous": 3.2
+  },
+  "pricedIn": "Partly. Some extra spending had been widely expected, so a deficit close to last year's was in prices. The size of the tax cuts was not expected.",
+  "question": "The planned deficit is 4.5% of GDP against a 3.0% consensus, a +1.5-point surprise. Which reactions are plausible?",
+  "reactions": [
+    {
+      "id": "a",
+      "text": "WMK rises, as traders expect the central bank to keep rates higher for longer to offset the extra spending.",
+      "plausible": true,
+      "explanation": "Plausible: [[fiscal-policy]] that adds to demand can push [[monetary-policy]] to stay tighter."
+    },
+    {
+      "id": "b",
+      "text": "WMK falls, as lenders worry about faster-rising debt and ask for more interest.",
+      "plausible": true,
+      "explanation": "Plausible: a sharp rise in [[government-debt]] can worry lenders and investors in the currency."
+    },
+    {
+      "id": "c",
+      "text": "WMK swings both ways during the day as traders weigh the two stories.",
+      "plausible": true,
+      "explanation": "Plausible: when two forces clash, the price can move back and forth before settling."
+    },
+    {
+      "id": "d",
+      "text": "Westmark shares and index futures rise on hopes that tax cuts boost growth.",
+      "plausible": true,
+      "explanation": "Plausible: tax cuts can lift growth hopes, though higher rates could weigh on them later."
+    },
+    {
+      "id": "e",
+      "text": "Nothing moves, because a budget only matters once the money is spent.",
+      "plausible": false,
+      "explanation": "Not plausible: markets react to plans and expectations, not only to money already spent."
+    }
+  ],
+  "takeaway": "Fiscal news can pull a currency two ways at once: through what the central bank may do, and through worries about debt. List both chains before deciding which you think matters more, and expect to be wrong sometimes.",
+  "glossaryIds": [
+    "fiscal-policy",
+    "monetary-policy",
+    "government-debt",
+    "surprise",
+    "consensus-forecast",
+    "central-bank"
+  ]
+}

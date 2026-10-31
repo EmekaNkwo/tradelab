@@ -1,0 +1,111 @@
+{
+  "id": "fx-breakouts",
+  "moduleId": "forex-levels",
+  "title": "Breakouts",
+  "level": "beginner",
+  "estimatedMinutes": 15,
+  "inOneLine": {
+    "simple": "A breakout is when price moves out through a support or resistance zone. Decide in advance what counts as one.",
+    "balanced": "Define a [[breakout]] with a written rule, for example \"a candle closes at least 5 pips beyond the zone\". Without a rule, every wick through a line looks like a breakout afterwards."
+  },
+  "explain": {
+    "simple": "Price can poke through a level and come straight back. So people use rules. A common one is to wait for a candle to close beyond the zone, not just touch it with a wick. Some add a small extra distance, called a filter. The rule is your choice. What matters is that you write it down before you look, and use it the same way every time.",
+    "balanced": "A wick-only move outside the zone that closes back inside does not meet a close-based rule. A bigger filter means fewer breakouts are counted, but you enter later and further from the level, so a [[stop-loss]] on the other side of the zone is wider. A breakout can continue, stall, or fail. Many fail, which is why the next lesson is about [[false-breakout|false breakouts]]. Breakouts around news can come with [[slippage]] and wider [[spread|spreads]]."
+  },
+  "realNumbers": {
+    "assumptions": [
+      "Illustrative EUR/USD H1 prices",
+      "Resistance zone 1.10450–1.10500",
+      "Your written rule: a breakout is a close at least 5 pips above the top of the zone, so at or above 1.10550"
+    ],
+    "steps": [
+      "Candle A: high 1.10560, close 1.10470. The wick went above 1.10550, but the close is inside the zone. Not a breakout under this rule.",
+      "Candle B: close 1.10580. That is 1.10580 − 1.10500 = 8 pips above the zone, which is at least 5. This counts as a breakout.",
+      "If you bought at 1.10580 with a stop just below the zone at 1.10430, the stop distance would be 1.10580 − 1.10430 = 15 pips.",
+      "Counting it as a breakout says nothing about whether price will keep rising."
+    ]
+  },
+  "anotherExample": {
+    "assumptions": [
+      "Illustrative USD/JPY H4 prices; 1 pip = 0.01",
+      "Support zone 149.80–149.90",
+      "Rule: a breakdown is a close at least 10 pips below the bottom of the zone, so at or below 149.70"
+    ],
+    "steps": [
+      "A candle closes at 149.75. That is 149.80 − 149.75 = 0.05 = 5 pips below the zone. Not enough under this rule.",
+      "The next candle closes at 149.62. That is 149.80 − 149.62 = 0.18 = 18 pips below. This counts.",
+      "With a 5-pip filter, the first candle would have counted. The rule you choose changes which moves you call breakouts."
+    ]
+  },
+  "explainSimpler": "A breakout is price leaving the box. Decide before you look what \"leaving\" means, for example a close outside it.",
+  "commonMistake": "Calling every wick through a line a breakout, or changing the rule after the fact so the chart fits. Another mistake is assuming a breakout will run far.",
+  "quickCheck": [
+    {
+      "id": "fx-breakouts-q1",
+      "prompt": "Resistance zone tops out at 1.25000. Your rule: a breakout is a close at least 5 pips above it. A candle has high 1.25080 and close 1.24980. Is it a breakout?",
+      "options": [
+        {
+          "id": "a",
+          "text": "No: it closed back inside the zone",
+          "explanation": "Right: only the wick went above. The close at 1.24980 is below 1.25000."
+        },
+        {
+          "id": "b",
+          "text": "Yes: the high went 8 pips above the zone, past the 5-pip filter",
+          "explanation": "No: your rule is about the close, not the wick. The close was below 1.25000."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "breakout",
+        "resistance"
+      ]
+    },
+    {
+      "id": "fx-breakouts-q2",
+      "prompt": "You make your breakout filter bigger, from 5 to 15 pips. What usually changes?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Fewer moves count as breakouts, and entries are later",
+          "explanation": "Right: a stricter rule waits for more distance, so it confirms less often and later."
+        },
+        {
+          "id": "b",
+          "text": "False breakouts stop happening, because the filter screens them all out",
+          "explanation": "No: a filter only changes which moves count. Some breakouts that pass it still fail."
+        },
+        {
+          "id": "c",
+          "text": "Nothing changes",
+          "explanation": "No: the filter changes which candles meet the rule."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "breakout",
+        "false-breakout"
+      ]
+    }
+  ],
+  "doItNow": {
+    "kind": "chart_lab",
+    "instructions": "Write a breakout rule in one sentence, for example \"a close at least 5 pips beyond the zone\". Then open the Breakout or fake? drill in Practice and apply that same rule to every chart."
+  },
+  "glossaryIds": [
+    "breakout",
+    "resistance",
+    "support",
+    "false-breakout",
+    "stop-loss",
+    "slippage",
+    "spread"
+  ],
+  "sourceIds": []
+}

@@ -1,0 +1,12 @@
+{
+  "id": "forex-risk",
+  "skills": ["risk_management", "statistical_reasoning"],
+  "title": "Risk: sizing, reward to risk and drawdown",
+  "summary": "Risk per trade as a configurable example, position sizing from the stop, reward to risk, expectancy, drawdowns, losing streaks and risk of ruin.",
+  "markets": ["forex"],
+  "level": "beginner",
+  "lessonIds": ["fx-risk-per-trade", "fx-position-sizing", "fx-rr-expectancy", "fx-drawdown-ruin"],
+  "checkpointQuizId": "forex-risk-checkpoint",
+  "practicalResult": "Size 20 trades in the Size it drill as close to your example 1% risk as the size step allows, without going over, then explore losing streaks in the losing-streak calculator.",
+  "minPracticeDays": 0
+}

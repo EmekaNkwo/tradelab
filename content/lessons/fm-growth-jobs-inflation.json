@@ -1,0 +1,79 @@
+{
+  "id": "fm-growth-jobs-inflation",
+  "moduleId": "fa-macro",
+  "title": "Growth, jobs and inflation as a set",
+  "level": "intermediate",
+  "estimatedMinutes": 20,
+  "inOneLine": {
+    "simple": "Growth, jobs and inflation are three views of the same economy. Read them together, not one at a time.",
+    "balanced": "[[gdp|GDP]] growth, the [[employment-report]] and [[inflation]] each tell part of the story. A central bank weighs them as a set, so markets do too. When they point the same way the picture is clearer; when they disagree, reactions are harder to read."
+  },
+  "explain": {
+    "simple": "GDP measures how much an economy produces; its change is called growth. The employment report shows how many people have jobs and how many are looking. Inflation shows how fast prices are rising. You met jobs and inflation in the forex lessons on [[interest-rate|interest rates]] and on expected vs. actual. Here the point is to read them as a group. Strong growth, falling unemployment and rising inflation can all push the same way: towards higher rates. Weak growth with high inflation pulls in two directions at once.",
+    "balanced": "Each release has quirks. GDP comes out less often than jobs data and is often revised. Job numbers can be noisy month to month. Inflation can be driven by a few volatile prices. So one figure rarely changes the picture alone; a run of figures that agree carries more weight. A useful habit is a three-line summary after each release: growth up, flat or down; jobs stronger or weaker; inflation above, near or below target. Then ask what a [[central-bank]] facing that mix might do, and treat the answer as a scenario, not a forecast. Westmark and WMK are fictional."
+  },
+  "realNumbers": {
+    "assumptions": [
+      "Fictional country: Westmark, currency WMK",
+      "Hypothetical output: 500.0 billion WMK last quarter, 503.0 billion WMK this quarter",
+      "Hypothetical unemployment: 4.8% last month, 4.5% this month",
+      "Hypothetical inflation 3.4%; central-bank target 2%"
+    ],
+    "steps": [
+      "Growth = (503.0 − 500.0) ÷ 500.0 = 3.0 ÷ 500.0 = 0.006 = 0.6% on the quarter.",
+      "Unemployment change = 4.5% − 4.8% = −0.3 points: fewer people looking for work.",
+      "Inflation gap = 3.4% − 2% = 1.4 points above target.",
+      "All three point the same way: a growing economy, a tight jobs market, prices rising fast.",
+      "Scenario: markets may expect rates to stay high or rise. If that was already expected, WMK may barely move. It is not a forecast."
+    ]
+  },
+  "anotherExample": {
+    "assumptions": [
+      "Fictional Westmark, the next quarter",
+      "Hypothetical output falls from 503.0 to 501.5 billion WMK",
+      "Hypothetical unemployment rises from 4.5% to 4.9%",
+      "Hypothetical inflation 3.8%; target 2%"
+    ],
+    "steps": [
+      "Growth = (501.5 − 503.0) ÷ 503.0 = −1.5 ÷ 503.0 ≈ −0.3%: the economy shrank.",
+      "Unemployment change = 4.9% − 4.5% = +0.4 points: the jobs market weakened.",
+      "Inflation is 3.8% − 2% = 1.8 points above target, higher than before.",
+      "The set now disagrees: weak growth and jobs argue for lower rates, high inflation for higher ones.",
+      "Possible reactions run both ways. Scenario thinking: list what would make each one more likely, such as what the central bank says next."
+    ]
+  },
+  "explainSimpler": "Ask three questions: is the economy growing, are jobs getting easier or harder to find, and are prices rising fast? If all three answers agree, the picture is clearer. If not, expect a messier reaction.",
+  "commonMistake": "Reacting to one release alone, such as a single strong GDP figure, without checking jobs and inflation, or without noticing that the figure may be revised later.",
+  "quickCheck": [
+    {
+      "id": "fm-growth-jobs-inflation-q1",
+      "prompt": "Hypothetical output rises from 800 to 806 billion WMK in a quarter. What is the growth rate?",
+      "options": [
+        { "id": "a", "text": "6%", "explanation": "No: 6 is the change in billions. Divide it by the starting level, 800." },
+        { "id": "b", "text": "0.75%", "explanation": "Right: (806 − 800) ÷ 800 = 6 ÷ 800 = 0.0075 = 0.75%." },
+        { "id": "c", "text": "0.6%", "explanation": "No: that is 6 ÷ 1,000. Divide by the starting level, 800." }
+      ],
+      "correctOptionIds": ["b"],
+      "level": "intermediate",
+      "glossaryIds": ["gdp"]
+    },
+    {
+      "id": "fm-growth-jobs-inflation-q2",
+      "prompt": "Fictional data: output shrinking, unemployment rising, inflation well above target. What is most accurate?",
+      "options": [
+        { "id": "a", "text": "The data clash: weak growth and jobs against high inflation", "explanation": "Right: weak growth and jobs pull one way, high inflation the other." },
+        { "id": "b", "text": "Rates must be cut, because growth is negative", "explanation": "No: high inflation argues against cuts, and nothing is certain." },
+        { "id": "c", "text": "Inflation may fall soon, so the bank can safely cut", "explanation": "No: nothing in the data says inflation will fall soon, so a cut is far from safe." }
+      ],
+      "correctOptionIds": ["a"],
+      "level": "intermediate",
+      "glossaryIds": ["gdp", "inflation", "employment-report"]
+    }
+  ],
+  "doItNow": {
+    "kind": "fundamental",
+    "instructions": "Open the Fundamental Analysis Lab and choose the Westmark growth scenario. Before reading the reactions, write the three-line summary: growth, jobs, inflation. Then pick the reactions you think are plausible and compare your reasons with the explanations."
+  },
+  "glossaryIds": ["gdp", "employment-report", "inflation", "central-bank", "interest-rate"],
+  "sourceIds": []
+}

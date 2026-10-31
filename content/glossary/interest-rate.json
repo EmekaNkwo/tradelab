@@ -1,0 +1,22 @@
+{
+  "id": "interest-rate",
+  "term": "Interest rate",
+  "aliases": [
+    "interest rates",
+    "policy rate",
+    "rates"
+  ],
+  "definition": {
+    "simple": "The price of borrowing money, shown as a percentage per year.",
+    "balanced": "A [[central-bank]] sets a short-term policy rate. Other rates follow it. In forex, the rate gap between two currencies affects [[swap]] costs and can shape demand for a currency. Expectations about future rates often matter as much as today's rate."
+  },
+  "example": "Hypothetical: a fictional central bank raises its policy rate from 3.00% to 3.25%.",
+  "related": [
+    "central-bank",
+    "inflation",
+    "swap"
+  ],
+  "markets": [],
+  "level": "beginner",
+  "sourceIds": []
+}

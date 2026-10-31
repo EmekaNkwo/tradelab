@@ -1,0 +1,179 @@
+{
+  "id": "stocks-basics-checkpoint",
+  "title": "Checkpoint: stock basics",
+  "passMark": 0.8,
+  "questions": [
+    {
+      "id": "stocks-basics-checkpoint-q1",
+      "prompt": "A fictional company has 80 million shares at 2.50 USD. What is its market cap?",
+      "options": [
+        {
+          "id": "a",
+          "text": "32 million USD",
+          "explanation": "No: that divides 80 by 2.50."
+        },
+        {
+          "id": "b",
+          "text": "200 million USD",
+          "explanation": "Right: 2.50 × 80 million = 200 million USD."
+        },
+        {
+          "id": "c",
+          "text": "82.5 million USD",
+          "explanation": "No: the price and shares are multiplied, not added."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "market-capitalisation"
+      ]
+    },
+    {
+      "id": "stocks-basics-checkpoint-q2",
+      "prompt": "You own 5,000 of a company's 10 million shares. Then it issues 10 million new shares. What is your stake now?",
+      "options": [
+        {
+          "id": "a",
+          "text": "0.05%, unchanged",
+          "explanation": "No: there are now 20 million shares, so your slice is smaller."
+        },
+        {
+          "id": "b",
+          "text": "0.1%, it doubled",
+          "explanation": "No: you have the same shares out of a larger total."
+        },
+        {
+          "id": "c",
+          "text": "0.025%, it halved",
+          "explanation": "Right: 5,000 ÷ 20,000,000 = 0.025%."
+        }
+      ],
+      "correctOptionIds": [
+        "c"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "share"
+      ]
+    },
+    {
+      "id": "stocks-basics-checkpoint-q3",
+      "prompt": "Share A trades 3 million shares a day; Share B trades 15,000. Which statement fits?",
+      "options": [
+        {
+          "id": "a",
+          "text": "A 10,000-share order is harder to fill in B",
+          "explanation": "Right: it is two thirds of B's daily volume but a tiny part of A's."
+        },
+        {
+          "id": "b",
+          "text": "B has more liquidity, because fewer people own it",
+          "explanation": "No: less trading usually means less liquidity."
+        },
+        {
+          "id": "c",
+          "text": "Volume makes no difference to filling orders",
+          "explanation": "No: thin volume can mean wider spreads and worse fills."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "volume",
+        "liquidity"
+      ]
+    },
+    {
+      "id": "stocks-basics-checkpoint-q4",
+      "prompt": "Dividend 0.60 USD per share, EPS 0.80 USD, price 12.00 USD. What are the yield and the payout ratio?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Yield 6.7%, payout 133%",
+          "explanation": "No: that uses EPS instead of the dividend for the yield (0.80 ÷ 12.00), and turns the payout ratio upside down (0.80 ÷ 0.60)."
+        },
+        {
+          "id": "b",
+          "text": "Yield 5%, payout 75%",
+          "explanation": "Right: 0.60 ÷ 12.00 = 5%, and 0.60 ÷ 0.80 = 75%."
+        },
+        {
+          "id": "c",
+          "text": "Yield 7.5%, payout 5%",
+          "explanation": "No: these mix up the two formulas."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "dividend-yield",
+        "payout-ratio"
+      ]
+    },
+    {
+      "id": "stocks-basics-checkpoint-q5",
+      "prompt": "A company reports profit up 8%. Buyers expected up 15%. Which is true?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The price must rise because profit grew",
+          "explanation": "No: the price reacts to results compared with expectations."
+        },
+        {
+          "id": "b",
+          "text": "The report has no effect on the price",
+          "explanation": "No: prices often move sharply around reports."
+        },
+        {
+          "id": "c",
+          "text": "The price may fall on the miss",
+          "explanation": "Right: a miss against expectations can push the price down."
+        }
+      ],
+      "correctOptionIds": [
+        "c"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "earnings-report",
+        "surprise"
+      ]
+    },
+    {
+      "id": "stocks-basics-checkpoint-q6",
+      "prompt": "Which pairing of style and main risk is right?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Value: the firm may be cheap for a reason",
+          "explanation": "Right: a low price can reflect a shrinking business."
+        },
+        {
+          "id": "b",
+          "text": "Growth: the dividend may turn out too high",
+          "explanation": "No: the main growth risk is that growth slows while the price assumes it will not."
+        },
+        {
+          "id": "c",
+          "text": "Long-term: no exit plan is needed at all",
+          "explanation": "No: long-term investors still need to know what would make them sell."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "value-investing",
+        "growth-investing"
+      ]
+    }
+  ]
+}

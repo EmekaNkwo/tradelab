@@ -1,0 +1,13 @@
+{
+  "id": "mc-common-strategies",
+  "order": 12,
+  "dimension": "Common strategies",
+  "cells": {
+    "forex": "Studied approaches include trend following, range trading and trading around news, each with its own risks.",
+    "stocks": "Long-term investing, swing trading and value or growth approaches are widely studied.",
+    "penny_stocks": "Often the best-tested decision is to stay out; strategies here face high costs and manipulation risk.",
+    "commodities": "Trend following, spread trading and supply-and-demand analysis are commonly studied.",
+    "futures": "Trend following, spread trading such as [[calendar-spread|calendar spreads]], and hedging are commonly studied."
+  },
+  "caveat": "These are approaches people study, not recommendations. No strategy works in every market or period; test any idea on simulated or historical data first."
+}

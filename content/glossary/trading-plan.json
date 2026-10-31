@@ -1,0 +1,21 @@
+{
+  "id": "trading-plan",
+  "term": "Trading plan",
+  "aliases": [
+    "plan",
+    "my plan"
+  ],
+  "definition": {
+    "simple": "A short written set of rules for how you trade: what, when, how you enter and exit, and how much you risk. You write it before you trade, while you are calm.",
+    "balanced": "It covers instruments, sessions, timeframe, entry, exit, [[stop-loss]] and [[take-profit]] rules, risk per trade, a daily loss limit, a maximum number of trades, and when to stop. Change it between sessions, not during a trade, and keep each version so you can compare them."
+  },
+  "example": "A plan might say: \"EUR/USD only, London session, 1-hour chart, stop on every trade, example risk 1% per trade, stop for the day after 2 losses.\"",
+  "related": [
+    "pre-trade-checklist",
+    "stop-loss",
+    "take-profit"
+  ],
+  "markets": [],
+  "level": "beginner",
+  "sourceIds": []
+}

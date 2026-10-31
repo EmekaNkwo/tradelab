@@ -1,0 +1,22 @@
+{
+  "id": "retest",
+  "term": "Retest",
+  "aliases": [
+    "retests",
+    "pullback to the level",
+    "throwback"
+  ],
+  "definition": {
+    "simple": "When price breaks a level, then comes back to touch it from the other side.",
+    "balanced": "After a breakout above resistance, price may return to that area. Sometimes the old resistance acts as support and price moves away again. Sometimes price falls straight back through it. A retest is something to watch, not a signal that works by itself."
+  },
+  "related": [
+    "breakout",
+    "false-breakout",
+    "support",
+    "resistance"
+  ],
+  "markets": [],
+  "level": "beginner",
+  "sourceIds": []
+}

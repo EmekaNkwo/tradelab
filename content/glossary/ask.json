@@ -1,0 +1,14 @@
+{
+  "id": "ask",
+  "term": "Ask",
+  "aliases": ["ask price", "offer"],
+  "definition": {
+    "simple": "The price at which you can buy right now.",
+    "balanced": "The lowest price sellers are currently accepting. When you buy at market, you buy at the ask."
+  },
+  "example": "If EUR/USD shows 1.1000 / 1.1002, the ask is 1.1002.",
+  "related": ["bid", "spread"],
+  "markets": [],
+  "level": "beginner",
+  "sourceIds": []
+}

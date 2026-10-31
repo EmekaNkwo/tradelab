@@ -1,0 +1,72 @@
+appId: com.tradelab.app
+name: 10a Backup - create the file in app storage
+tags:
+  - e2e
+  - journey
+  - backup
+---
+# Spec §36 step 10, part A (automated; used by full-run.yaml): create a backup
+# file and prove it was written. It does NOT rely on the share sheet.
+#
+# Screen: app/(tabs)/more/backup.tsx. Export (data/backup/backupFiles.ts
+# saveAndShare): writes <app documents>/backups/tradelab-backup-<YYYY-MM-DD-HH-MM-SS>.json
+# FIRST, then opens the Android share sheet (expo-sharing). The app shows
+# "Backup created" with "Saved N saved items. Keep the file somewhere safe."
+# only after the write succeeded and the share sheet was offered and closed
+# (features/backup/useBackup.ts phase 'exported', shared: true). So that text
+# is the proof the file exists in app storage. This flow closes the share sheet
+# with Back, so the file does NOT leave the app here.
+#
+# Taking the file out of the app (so it survives an uninstall) is
+# 10b-backup-export-drive.yaml, run by scripts/e2e-journey.sh. A release build
+# is not debuggable, so `adb run-as` cannot pull the file from app storage.
+- launchApp:
+    appId: com.tradelab.app
+- extendedWaitUntil:
+    visible:
+      id: "home-screen"
+    timeout: 30000
+- runFlow:
+    file: subflows/open-tab.yaml
+    env:
+      TAB: More
+- scrollUntilVisible:
+    element:
+      id: "more-backup"              # ListRow "Backup and restore" (app/(tabs)/more/index.tsx)
+    direction: DOWN
+- tapOn:
+    id: "more-backup"
+- extendedWaitUntil:
+    visible:
+      id: "backup-screen"
+    timeout: 10000
+- tapOn:
+    text: "Create backup file"
+    enabled: true
+# The system share sheet must open over TradeLab (the file has been written by now).
+- extendedWaitUntil:
+    notVisible:
+      id: "backup-screen"
+    timeout: 15000
+# The share sheet's title (dialogTitle in data/backup/backupFiles.ts).
+# Screenshot cropped to it: the rest of the sheet shows the phone owner's contacts.
+- extendedWaitUntil:
+    visible: "Save your TradeLab backup"
+    timeout: 10000
+- takeScreenshot:
+    path: 10a-share-sheet
+    cropOn: "Save your TradeLab backup"
+# Close it without sharing.
+- back
+- extendedWaitUntil:
+    visible: "Backup created"
+    timeout: 15000
+# The "shared" wording: the file was written and the share sheet was offered.
+# The other wording ("...in the app's files. Sharing is not available on this
+# device.") means no share sheet exists, which would block 10b, so it fails here.
+- assertVisible: "Saved [0-9]+ saved items?\\. Keep the file somewhere safe\\."
+- scrollUntilVisible:
+    element:
+      text: "Last backup: .*"
+    direction: UP
+- takeScreenshot: 10a-backup-created

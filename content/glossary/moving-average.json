@@ -1,0 +1,26 @@
+{
+  "id": "moving-average",
+  "term": "Moving average",
+  "aliases": [
+    "MA",
+    "SMA",
+    "EMA",
+    "simple moving average",
+    "exponential moving average",
+    "MA 20",
+    "EMA 50"
+  ],
+  "definition": {
+    "simple": "The average closing price over the last few candles, drawn as a line that updates with each new candle.",
+    "balanced": "A simple moving average (SMA) weights each close equally. An exponential moving average (EMA) gives more weight to recent closes, so it reacts faster. Both lag price. In sideways markets price crosses back and forth over the line many times."
+  },
+  "example": "A 20-period MA on an H1 chart averages the last 20 hourly closes.",
+  "related": [
+    "lagging-indicator",
+    "indicator",
+    "trend"
+  ],
+  "markets": [],
+  "level": "intermediate",
+  "sourceIds": []
+}

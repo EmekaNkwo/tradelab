@@ -1,0 +1,21 @@
+{
+  "id": "drawdown",
+  "term": "Drawdown",
+  "aliases": [
+    "drawdowns",
+    "peak-to-trough decline"
+  ],
+  "definition": {
+    "simple": "How far your account has fallen from its highest point.",
+    "balanced": "Drawdown = (peak − current) ÷ peak. After a drawdown d, you need a gain of d ÷ (1 − d) to get back to the peak. A 20% drawdown needs a 25% gain. A 50% drawdown needs 100%."
+  },
+  "example": "Peak 10,000 USD, now 8,000 USD: drawdown is 2,000 ÷ 10,000 = 20%.",
+  "related": [
+    "risk-of-ruin",
+    "losing-streak",
+    "risk-per-trade"
+  ],
+  "markets": [],
+  "level": "beginner",
+  "sourceIds": []
+}

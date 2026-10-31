@@ -1,0 +1,26 @@
+{
+  "id": "ta-test-statistics",
+  "skills": ["statistical_reasoning"],
+  "lab": "technical",
+  "level": "advanced",
+  "order": 3,
+  "title": "Return statistics, indicator correlation and parameter sensitivity",
+  "summary": "Describe a test by its whole spread of results, treat indicators built from the same prices as one input, and check that nearby settings give similar results.",
+  "unreliableWhen": "With few trades, every statistic is very uncertain. Low parameter sensitivity does not prove an edge; it only shows the result does not hinge on one number.",
+  "goodExample": "Reporting average +0.2R alongside a median of −1R, and noting that removing the best trade turns the total negative.",
+  "badExample": "Counting RSI and MACD agreeing as two confirmations, or publishing the one average length that worked best.",
+  "lessonIds": [
+    "ta-stats-correlation",
+    "fx-rr-expectancy"
+  ],
+  "chart": {
+    "scenario": "reversal",
+    "overlays": [],
+    "pane": "rsi",
+    "lookFor": "Note the candles where RSI 14 turns. Switch the lower pane to MACD and check whether it turns at about the same places."
+  },
+  "drillKind": null,
+  "scenarioIds": [],
+  "companyIds": [],
+  "redFlagCaseIds": []
+}

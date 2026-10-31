@@ -1,0 +1,187 @@
+{
+  "id": "penny-stocks-checkpoint",
+  "title": "Checkpoint: penny stocks and microcaps",
+  "passMark": 0.8,
+  "questions": [
+    {
+      "id": "penny-stocks-checkpoint-q1",
+      "prompt": "Fictional Company X: 0.05 USD a share, 1,000 million shares. Fictional Company Y: 20 USD a share, 2 million shares. Which is bigger by market value?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Company Y, because its share price is 400 times higher",
+          "explanation": "No: Y is 20 × 2 million = 40 million USD. Share price alone does not show size."
+        },
+        {
+          "id": "b",
+          "text": "Company X, at 50 million USD",
+          "explanation": "Right: 0.05 × 1,000 million = 50 million USD, against 40 million USD for Y."
+        },
+        {
+          "id": "c",
+          "text": "They are the same size by market value",
+          "explanation": "No: 50 million USD and 40 million USD are different."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "microcap",
+        "penny-stock"
+      ]
+    },
+    {
+      "id": "penny-stocks-checkpoint-q2",
+      "prompt": "Simulated penny stock: bid 0.18, ask 0.20. You buy 10,000 shares and sell at once. What do you lose to the spread?",
+      "options": [
+        {
+          "id": "a",
+          "text": "20 USD",
+          "explanation": "No: 0.02 × 10,000 is 200, not 20."
+        },
+        {
+          "id": "b",
+          "text": "1,800 USD",
+          "explanation": "No: that is what you get back when you sell, 10,000 × 0.18."
+        },
+        {
+          "id": "c",
+          "text": "2,000 USD",
+          "explanation": "No: that is what you paid, 10,000 × 0.20."
+        },
+        {
+          "id": "d",
+          "text": "200 USD",
+          "explanation": "Right: (0.20 − 0.18) × 10,000 = 0.02 × 10,000 = 200 USD, which is 10% of the 2,000 paid."
+        }
+      ],
+      "correctOptionIds": [
+        "d"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "spread",
+        "liquidity"
+      ]
+    },
+    {
+      "id": "penny-stocks-checkpoint-q3",
+      "prompt": "A fictional company went from 80 million to 200 million shares in two years, then did a 1-for-10 reverse split. What is the most reasonable reading?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Repeated dilution plus a reverse split: check cash and financing first",
+          "explanation": "Right: this pattern is a common warning sign that a company keeps funding itself by issuing shares."
+        },
+        {
+          "id": "b",
+          "text": "The reverse split made holders 10 times richer",
+          "explanation": "No: the share count fell by the same factor, so holders gained nothing from the split itself."
+        },
+        {
+          "id": "c",
+          "text": "Holders lost 90% of their value, as they now hold a tenth of the shares",
+          "explanation": "No: each share is now priced about 10 times higher, so the split itself leaves the value of the holding unchanged."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "dilution",
+        "reverse-split"
+      ]
+    },
+    {
+      "id": "penny-stocks-checkpoint-q4",
+      "prompt": "Which group of signs most strongly suggests a possible pump and dump?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Paid promotion, no revenue, and insiders selling during the hype",
+          "explanation": "Right: together these suggest the people behind the hype may be selling to new buyers."
+        },
+        {
+          "id": "b",
+          "text": "Steady small revenue, on-time reports and very little daily trading",
+          "explanation": "No: this describes a quiet, illiquid share. Liquidity is a risk, but this is not a pump pattern."
+        },
+        {
+          "id": "c",
+          "text": "A share that trades over the counter and has a website",
+          "explanation": "No: neither of these is a red flag on its own."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "pump-and-dump",
+        "stock-promotion"
+      ]
+    },
+    {
+      "id": "penny-stocks-checkpoint-q5",
+      "prompt": "You bought 3,000 shares at 0.50 with a stop at 0.45. The share is halted, then reopens at 0.30. Roughly what is the loss?",
+      "options": [
+        {
+          "id": "a",
+          "text": "150 USD, the planned loss",
+          "explanation": "No: (0.50 − 0.45) × 3,000 = 150 is the plan. The stop could not fill during the halt."
+        },
+        {
+          "id": "b",
+          "text": "About 600 USD, four times the plan",
+          "explanation": "Right: (0.50 − 0.30) × 3,000 = 0.20 × 3,000 = 600 USD, four times the plan, and possibly worse in a thin market."
+        },
+        {
+          "id": "c",
+          "text": "Nothing; a halt cancels trades",
+          "explanation": "No: a halt pauses trading. Your position stays open."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "trading-halt",
+        "gap",
+        "stop-loss"
+      ]
+    },
+    {
+      "id": "penny-stocks-checkpoint-q6",
+      "prompt": "A small, honest-looking company files on time and has steady revenue, but trades only 5,000 shares a day. You want to buy 20,000. What is the best approach?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Buy all 20,000 at market, since the business looks sound",
+          "explanation": "No: a sound business does not fix liquidity. Your order is 4 days of normal volume."
+        },
+        {
+          "id": "b",
+          "text": "Treat it as a likely scam and report it to the regulator",
+          "explanation": "No: nothing here suggests fraud. Not every small share is a scam."
+        },
+        {
+          "id": "c",
+          "text": "Go much smaller, use limit orders, or stay out",
+          "explanation": "Right: 20,000 ÷ 5,000 = 4 days of volume. Size down to what you could exit, or stay out."
+        }
+      ],
+      "correctOptionIds": [
+        "c"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "liquidity",
+        "limit-order"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "id": "ta-atr-bollinger",
+  "skills": ["technical_analysis"],
+  "lab": "technical",
+  "level": "intermediate",
+  "order": 4,
+  "title": "Volatility: ATR and Bollinger Bands",
+  "summary": "ATR shows how far price has typically moved per candle. Bollinger Bands widen when price has been jumpy and squeeze when it has been calm. Neither shows direction.",
+  "unreliableWhen": "Both describe the past, so they can be low just before a sudden news move. A band touch is not \"too high\", since price can ride a band in a trend. A squeeze can break either way, or not at all.",
+  "goodExample": "Seeing ATR 14 at 12 pips and widening a 5-pip stop, then reducing the size to keep the same money at risk.",
+  "badExample": "Selling every touch of the upper band in a strong uptrend.",
+  "lessonIds": [
+    "fx-atr-bollinger"
+  ],
+  "chart": {
+    "scenario": "high_volatility",
+    "overlays": [
+      "bollinger"
+    ],
+    "pane": "atr",
+    "lookFor": "Compare ATR 14 and the band width at the start and end of the chart. Then open Low volatility and look for a squeeze."
+  },
+  "drillKind": "where_is_the_stop",
+  "scenarioIds": [],
+  "companyIds": [],
+  "redFlagCaseIds": []
+}

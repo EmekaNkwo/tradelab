@@ -1,0 +1,77 @@
+{
+  "id": "fm-currency-commodities",
+  "moduleId": "fa-macro",
+  "title": "Currencies and commodities: how they link",
+  "level": "intermediate",
+  "estimatedMinutes": 20,
+  "inOneLine": {
+    "simple": "A currency's value is pulled by interest rates, trade and mood. Commodity prices are pulled by supply and demand, and by the currency they are priced in. Each can affect the other.",
+    "balanced": "Rate gaps between countries, trade flows and risk mood all feed currency valuation. For a [[commodity]], supply, demand and inventories matter, and a price set in one currency changes in local terms when exchange rates move. A country that exports a commodity can see its currency react to that commodity's price, as a tendency, not a rule."
+  },
+  "explain": {
+    "simple": "Why would anyone want a country's currency? To buy its goods, to earn its interest rates, or to invest there. If a country sells a lot of one commodity abroad, buyers need its currency to pay, or the sellers bring the money home and swap it into local currency. So when that commodity's price falls, fewer foreign earnings may flow in, and the currency may weaken. It works the other way too: a commodity priced in one currency gets more expensive for buyers whose own currency weakens, even if the price on the screen has not changed.",
+    "balanced": "None of these links is fixed. A currency can rise on a rate surprise while its main export falls in price. Commodity prices respond to production, inventories, demand and storage, and to the currency they are quoted in. When you study a link, write it as a chain and test each step: commodity price → export earnings → demand for the currency. Any step can break. For how rates feed into currencies, see the lesson on interest rates and central banks. Westmark, WMK and its export are fictional."
+  },
+  "realNumbers": {
+    "assumptions": [
+      "Fictional Westmark exports a fictional commodity, priced in USD",
+      "Hypothetical exports: 2 million units a year",
+      "Hypothetical price falls from 80 USD to 68 USD per unit",
+      "Volumes assumed unchanged to keep the steps clear"
+    ],
+    "steps": [
+      "Export earnings before = 2,000,000 × 80 = 160 million USD.",
+      "Export earnings after = 2,000,000 × 68 = 136 million USD.",
+      "Drop = 160 − 136 = 24 million USD, which is 24 ÷ 160 = 15%.",
+      "Fewer USD earnings to swap into WMK may mean less demand for WMK, so WMK may weaken.",
+      "It could also hold up, for example if Westmark's interest rates rise at the same time. Scenario, not forecast."
+    ]
+  },
+  "anotherExample": {
+    "assumptions": [
+      "A fictional commodity priced at 50 USD per unit, unchanged",
+      "Hypothetical exchange rate moves from 2.00 to 2.20 WMK per USD (WMK weakens)"
+    ],
+    "steps": [
+      "Cost in WMK before = 50 × 2.00 = 100 WMK.",
+      "Cost in WMK after = 50 × 2.20 = 110 WMK.",
+      "Change = (110 − 100) ÷ 100 = 10% more expensive for Westmark buyers, with no change in the USD price.",
+      "Higher local costs can feed into Westmark's inflation, which links back to central-bank policy."
+    ]
+  },
+  "explainSimpler": "If a country sells lots of one thing abroad, its money can follow that thing's price. And when a currency weakens, things priced in other currencies get dearer for its people.",
+  "commonMistake": "Treating a link as a law, for example 'commodity up, exporter's currency up' every time. Rates, risk mood and other news can easily outweigh it.",
+  "quickCheck": [
+    {
+      "id": "fm-currency-commodities-q1",
+      "prompt": "A fictional commodity costs 40 USD. The rate moves from 1.50 to 1.80 WMK per USD. How much more does it cost Westmark buyers?",
+      "options": [
+        { "id": "a", "text": "20% more", "explanation": "Right: 40 × 1.50 = 60 WMK, 40 × 1.80 = 72 WMK, and (72 − 60) ÷ 60 = 20%." },
+        { "id": "b", "text": "30% more", "explanation": "No: 0.30 is the change in the rate, not the percentage change in cost." },
+        { "id": "c", "text": "No change", "explanation": "No: the USD price is unchanged, but WMK buyers need more WMK to pay it." }
+      ],
+      "correctOptionIds": ["a"],
+      "level": "intermediate",
+      "glossaryIds": ["commodity"]
+    },
+    {
+      "id": "fm-currency-commodities-q2",
+      "prompt": "Fictional: Westmark's main export falls in price, but Westmark raises rates by more than expected the same week. What could happen to WMK?",
+      "options": [
+        { "id": "a", "text": "It must fall, because the export price fell", "explanation": "No: the rate surprise pulls the other way, so a fall is not certain." },
+        { "id": "b", "text": "The forces cancel out, so WMK may stay flat", "explanation": "No: the two forces need not be the same size, so nothing makes them cancel. Several reactions are plausible." },
+        { "id": "c", "text": "No clear call: the two forces pull opposite ways", "explanation": "Right: two forces pull in opposite directions, so several reactions are plausible." }
+      ],
+      "correctOptionIds": ["c"],
+      "level": "intermediate",
+      "glossaryIds": ["commodity", "interest-rate", "surprise"]
+    }
+  ],
+  "doItNow": {
+    "kind": "fundamental",
+    "instructions": "In the Fundamental Analysis Lab, open any Westmark macro scenario and write the chain of links from the release to WMK, one arrow at a time. Under each arrow, write one thing that could break that link."
+  },
+  "homework": "Make up a fictional country that exports one fictional commodity. Write two short scenarios: one where its currency follows the commodity price, and one where something else outweighs it.",
+  "glossaryIds": ["commodity", "interest-rate", "inflation", "central-bank"],
+  "sourceIds": []
+}

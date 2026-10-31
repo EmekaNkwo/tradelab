@@ -1,0 +1,19 @@
+{
+  "id": "forex-scams-brokers",
+  "skills": ["market_fundamentals"],
+  "title": "Scams, brokers, and your Practice Progress Review",
+  "summary": "Spot common trading scams using fictional examples, check a broker on a regulator's own register, and read your Practice Progress Review as a learning assessment, never a readiness verdict.",
+  "markets": [
+    "forex"
+  ],
+  "level": "beginner",
+  "lessonIds": [
+    "fx-scam-red-flags",
+    "fx-scam-types",
+    "fx-broker-check",
+    "fx-practice-progress-review"
+  ],
+  "checkpointQuizId": "forex-scams-brokers-checkpoint",
+  "practicalResult": "Scam quiz, broker check, practice progress review",
+  "minPracticeDays": 0
+}

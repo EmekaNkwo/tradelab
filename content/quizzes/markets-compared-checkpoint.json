@@ -1,0 +1,81 @@
+{
+  "id": "markets-compared-checkpoint",
+  "title": "Checkpoint: five markets compared",
+  "passMark": 0.8,
+  "questions": [
+    {
+      "id": "markets-compared-checkpoint-q1",
+      "prompt": "Bought with your own cash, which of these makes you a part-owner of a company?",
+      "options": [
+        { "id": "a", "text": "An ordinary share", "explanation": "Right: a share is a small piece of ownership in a company." },
+        { "id": "b", "text": "A forex position", "explanation": "No: a retail forex position is a contract on an exchange rate, not part of a company." },
+        { "id": "c", "text": "An index future", "explanation": "No: a future is a contract on a price, not ownership of any company." }
+      ],
+      "correctOptionIds": ["a"],
+      "level": "beginner",
+      "glossaryIds": ["share", "futures-contract"]
+    },
+    {
+      "id": "markets-compared-checkpoint-q2",
+      "prompt": "Illustrative: 0.10 lot EUR/USD (10,000 EUR) at 1.2000, account in USD, leverage 1:30. What does a 1% move against you cost?",
+      "options": [
+        { "id": "a", "text": "12 USD", "explanation": "No: that is 1% of 1,200, not of the 12,000 USD trade value." },
+        { "id": "b", "text": "400 USD", "explanation": "No: that is the margin, 12,000 ÷ 30, not the loss." },
+        { "id": "c", "text": "120 USD", "explanation": "Right: 10,000 × 1.2000 = 12,000 USD, and 1% of that is 120 USD, which is 30% of the 400 USD margin." },
+        { "id": "d", "text": "1,200 USD", "explanation": "No: that would be a 10% move." }
+      ],
+      "correctOptionIds": ["c"],
+      "level": "beginner",
+      "glossaryIds": ["leverage", "margin", "notional-value"]
+    },
+    {
+      "id": "markets-compared-checkpoint-q3",
+      "prompt": "Which statement about trading hours is most accurate?",
+      "options": [
+        { "id": "a", "text": "They depend on the venue, and activity varies within them", "explanation": "Right: hours are set by the exchange or broker, and liquidity rises and falls within them." },
+        { "id": "b", "text": "Every one of the five markets trades all day, every day", "explanation": "No: most have closures, and some have long breaks." },
+        { "id": "c", "text": "All five markets open and close at exactly the same times", "explanation": "No: hours differ between markets, exchanges and products." }
+      ],
+      "correctOptionIds": ["a"],
+      "level": "beginner",
+      "glossaryIds": ["trading-session", "liquidity"]
+    },
+    {
+      "id": "markets-compared-checkpoint-q4",
+      "prompt": "A fictional stock shows bid 1.00 USD and ask 1.04 USD. You buy 1,000 shares and sell straight away. Ignoring commission, what does the round trip cost?",
+      "options": [
+        { "id": "a", "text": "4 USD", "explanation": "No: the spread is 0.04 USD on each of 1,000 shares." },
+        { "id": "b", "text": "1,040 USD", "explanation": "No: that is what you paid, not what you lost." },
+        { "id": "c", "text": "0.04 USD", "explanation": "No: that is the spread on one share only." },
+        { "id": "d", "text": "40 USD", "explanation": "Right: (1.04 − 1.00) × 1,000 = 40 USD, before price moves at all." }
+      ],
+      "correctOptionIds": ["d"],
+      "level": "beginner",
+      "glossaryIds": ["spread", "bid", "ask"]
+    },
+    {
+      "id": "markets-compared-checkpoint-q5",
+      "prompt": "A friend says: 'Penny stocks are a cheap way to start.' What is the best reply?",
+      "options": [
+        { "id": "a", "text": "True: a low share price means low risk", "explanation": "No: price per share says nothing about risk." },
+        { "id": "b", "text": "Low price is never the same as low risk or cost", "explanation": "Right: thin trading and wide spreads can make them costly and hard to exit." },
+        { "id": "c", "text": "True, as long as you buy a lot of shares to spread it out", "explanation": "No: buying more of one thinly traded stock adds to the risk instead of spreading it." }
+      ],
+      "correctOptionIds": ["b"],
+      "level": "beginner",
+      "glossaryIds": ["penny-stock", "liquidity", "spread"]
+    },
+    {
+      "id": "markets-compared-checkpoint-q6",
+      "prompt": "Which is the best reason to choose a market to study first?",
+      "options": [
+        { "id": "a", "text": "It is the market most talked about online this month", "explanation": "No: popularity says nothing about whether it fits your time, account or risk." },
+        { "id": "b", "text": "A stranger posted a big profit from it online", "explanation": "No: one claimed result is not evidence, and may not be true." },
+        { "id": "c", "text": "Its hours and smallest trade size fit your time and risk", "explanation": "Right: fit with your schedule and your risk per trade is a sound starting point." }
+      ],
+      "correctOptionIds": ["c"],
+      "level": "beginner",
+      "glossaryIds": ["risk-per-trade", "position-sizing"]
+    }
+  ]
+}

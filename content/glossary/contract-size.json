@@ -1,0 +1,22 @@
+{
+  "id": "contract-size",
+  "term": "Contract size",
+  "aliases": [
+    "units per lot"
+  ],
+  "definition": {
+    "simple": "How much one lot or one futures contract represents.",
+    "balanced": "For forex, the units of the [[base-currency]] in 1.00 [[lot]]: often 100,000, but brokers can set it differently. For a futures contract, the quantity of the underlying in one contract, set in its specification (for example 100 units). Check the exact specification for each symbol or contract you trade."
+  },
+  "related": [
+    "lot",
+    "base-currency"
+  ],
+  "markets": [
+    "forex",
+    "commodities",
+    "futures"
+  ],
+  "level": "beginner",
+  "sourceIds": []
+}

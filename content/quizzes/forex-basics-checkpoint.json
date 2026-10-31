@@ -1,0 +1,65 @@
+{
+  "id": "forex-basics-checkpoint",
+  "title": "Checkpoint: forex basics",
+  "passMark": 0.8,
+  "questions": [
+    {
+      "id": "fxb-cp-1",
+      "prompt": "You buy USD/JPY. What are you doing?",
+      "options": [
+        { "id": "a", "text": "Buying dollars and paying with yen", "explanation": "Right: buying the pair means buying the base (USD) with the quote (JPY)." },
+        { "id": "b", "text": "Buying yen with dollars", "explanation": "No: that would be selling USD/JPY." }
+      ],
+      "correctOptionIds": ["a"],
+      "level": "beginner",
+      "glossaryIds": ["base-currency"]
+    },
+    {
+      "id": "fxb-cp-2",
+      "prompt": "Which of these is a major pair?",
+      "options": [
+        { "id": "a", "text": "AUD/USD", "explanation": "Right: the US dollar paired with a major currency." },
+        { "id": "b", "text": "EUR/JPY", "explanation": "No: there is no US dollar, so it is a cross." },
+        { "id": "c", "text": "USD/TRY", "explanation": "No: the Turkish lira makes it an exotic." }
+      ],
+      "correctOptionIds": ["a"],
+      "level": "beginner",
+      "glossaryIds": []
+    },
+    {
+      "id": "fxb-cp-3",
+      "prompt": "You sell EUR/USD at market. Which price do you get?",
+      "options": [
+        { "id": "a", "text": "The bid (the lower price)", "explanation": "Right: sells fill at the bid." },
+        { "id": "b", "text": "The ask (the higher price)", "explanation": "No: the ask is the price you can buy at." }
+      ],
+      "correctOptionIds": ["a"],
+      "level": "beginner",
+      "glossaryIds": ["bid"]
+    },
+    {
+      "id": "fxb-cp-4",
+      "prompt": "Bid 1.30000, ask 1.30020 on a 10,000-unit trade where 1 pip is worth 1 USD. What does the spread cost?",
+      "options": [
+        { "id": "a", "text": "0.20 USD", "explanation": "No: 0.00020 is 2 pips, not 0.2 pips." },
+        { "id": "b", "text": "2 USD", "explanation": "Right: 2 pips × 1 USD per pip = 2 USD." },
+        { "id": "c", "text": "20 USD", "explanation": "No: that would be 20 pips, or a 100,000-unit trade." }
+      ],
+      "correctOptionIds": ["b"],
+      "level": "beginner",
+      "glossaryIds": ["spread", "pip"]
+    },
+    {
+      "id": "fxb-cp-5",
+      "prompt": "Which statements about trading sessions are true? Choose all that apply.",
+      "options": [
+        { "id": "a", "text": "Spreads can widen in quiet hours", "explanation": "True: lower activity often means wider spreads." },
+        { "id": "b", "text": "Session times shift with daylight saving", "explanation": "True: London and New York change their clocks." },
+        { "id": "c", "text": "The market is busiest on Sunday afternoon", "explanation": "False: the main market is closed at the weekend." }
+      ],
+      "correctOptionIds": ["a", "b"],
+      "level": "beginner",
+      "glossaryIds": ["trading-session"]
+    }
+  ]
+}

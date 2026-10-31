@@ -1,0 +1,96 @@
+{
+  "id": "mt-mark-levels",
+  "title": "Mark support and resistance with horizontal lines",
+  "summary": "On a EUR/USD H4 chart, draw horizontal lines at two [[support]] and two [[resistance]] areas, then check how price reacts later.",
+  "level": "beginner",
+  "requiresDemo": true,
+  "steps": [
+    {
+      "text": "Check you are on your demo account before you start."
+    },
+    {
+      "text": "Open a EUR/USD candlestick chart and set the timeframe to H4."
+    },
+    {
+      "text": "Zoom out until you can see at least 100 candles. Look for places where price turned up more than once at about the same price (support) and turned down more than once (resistance)."
+    },
+    {
+      "text": "Open the drawing tools. They are usually called objects, often shown as a shapes icon at the top of the chart. It depends on your app version.",
+      "mt4": "In MT4, look for an objects or shapes icon on the chart toolbar, then the option to add an object.",
+      "mt5": "In MT5, look for an objects or shapes icon on the chart toolbar, then choose from the list of objects."
+    },
+    {
+      "text": "Choose the horizontal line. Place it at your first support area, then drag it to adjust. If the app places it in the middle of the screen, drag it into place."
+    },
+    {
+      "text": "Add a second support line and two resistance lines the same way. Four lines in total is enough."
+    },
+    {
+      "text": "For each line, write down its price and the dates of the turns it is based on."
+    },
+    {
+      "text": "Come back after a few days. For each line, note whether price reached it, and if so whether it turned, went sideways, or broke through."
+    },
+    {
+      "text": "To remove a line, tap or press and hold it (it depends on your app version), then choose delete. You can also delete objects from the objects list."
+    }
+  ],
+  "afterQuestions": [
+    {
+      "id": "mt-mark-levels-q1",
+      "prompt": "Price reached one of your support lines and went straight through. What does that show?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Levels describe the past and can break",
+          "explanation": "Right: support is a place to watch, not a wall."
+        },
+        {
+          "id": "b",
+          "text": "The line was drawn wrong, so it would have held otherwise",
+          "explanation": "No: even well-drawn levels break often."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "support",
+        "breakout"
+      ]
+    },
+    {
+      "id": "mt-mark-levels-q2",
+      "prompt": "Why is a zone often better than one exact line?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Price rarely turns at exactly the same price twice",
+          "explanation": "Right: wicks and the spread blur the edges, so a few pips of width is more honest."
+        },
+        {
+          "id": "b",
+          "text": "Zones always hold, lines do not",
+          "explanation": "No: zones can break too."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "support",
+        "resistance",
+        "spread"
+      ]
+    }
+  ],
+  "glossaryIds": [
+    "support",
+    "resistance",
+    "breakout",
+    "timeframe",
+    "demo-account"
+  ]
+}

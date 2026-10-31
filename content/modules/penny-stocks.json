@@ -1,0 +1,12 @@
+{
+  "id": "penny-stocks",
+  "skills": ["market_fundamentals", "fundamental_analysis", "risk_management"],
+  "title": "Penny stocks and microcaps: risks and red flags",
+  "summary": "What penny stocks and microcaps are, why thin trading makes them costly and hard to exit, how dilution, reverse splits and promotions work, and how to recognise pump-and-dump schemes and decide when to stay out.",
+  "markets": ["penny_stocks"],
+  "level": "beginner",
+  "lessonIds": ["ps-what-are-penny-stocks", "ps-liquidity-spreads", "ps-float-dilution-splits", "ps-promotions-pump-dump", "ps-gaps-halts-staying-out"],
+  "checkpointQuizId": "penny-stocks-checkpoint",
+  "practicalResult": "Work through all three fictional cases in the Penny Stock Red Flag Detector, then write your personal list of conditions under which you will stay out of a small share.",
+  "minPracticeDays": 0
+}

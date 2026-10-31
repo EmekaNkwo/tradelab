@@ -1,0 +1,28 @@
+{
+  "id": "ta-multi-timeframe",
+  "skills": ["chart_reading", "technical_analysis"],
+  "lab": "technical",
+  "level": "intermediate",
+  "order": 7,
+  "title": "Multi-timeframe analysis",
+  "summary": "Use a higher timeframe for the bigger picture and a lower one for detail. Choose them before you look.",
+  "unreliableWhen": "Timeframes often disagree, and flicking between them until one agrees is cherry-picking. Two timeframes agreeing are two views of the same prices, not two confirmations.",
+  "goodExample": "Daily uptrend, 1-hour dip: \"a pullback inside the daily uptrend so far\", with the stop distance taken from the timeframe written in the plan.",
+  "badExample": "Switching from 1h to 15m to 4h until a chart matches the trade you already wanted.",
+  "lessonIds": [
+    "ta-multi-timeframe",
+    "fx-timeframes"
+  ],
+  "chart": {
+    "scenario": "pullback",
+    "overlays": [
+      "ema50"
+    ],
+    "pane": "none",
+    "lookFor": "Zoom out to name the trend of the whole chart, then zoom in on the last 20 candles and name what they show. Write one sentence true of both."
+  },
+  "drillKind": "find_the_trend",
+  "scenarioIds": [],
+  "companyIds": [],
+  "redFlagCaseIds": []
+}

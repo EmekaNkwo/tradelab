@@ -1,0 +1,21 @@
+{
+  "id": "margin-of-safety",
+  "term": "Margin of safety",
+  "aliases": [
+    "safety margin"
+  ],
+  "definition": {
+    "simple": "The gap between your estimate of what something is worth and the price you pay, kept as room for the estimate to be wrong.",
+    "balanced": "Measured as (estimated value − price) ÷ estimated value. It protects only against errors in the estimate no larger than the gap, and the estimate itself rests on assumptions."
+  },
+  "example": "Estimated value 50, price 40: margin of safety = 10 ÷ 50 = 20%.",
+  "related": [
+    "valuation",
+    "value-investing"
+  ],
+  "markets": [
+    "stocks"
+  ],
+  "level": "intermediate",
+  "sourceIds": []
+}

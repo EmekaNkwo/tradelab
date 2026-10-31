@@ -1,0 +1,106 @@
+{
+  "id": "fx-psychology-demo",
+  "skills": ["psychology"],
+  "moduleId": "forex-forward-test",
+  "title": "Noticing your own patterns: psychology on demo",
+  "level": "beginner",
+  "estimatedMinutes": 15,
+  "inOneLine": {
+    "simple": "Your feelings change your decisions. Rate them in the Journal and practise in the Psychology Lab, so you can spot your own patterns.",
+    "balanced": "Self-ratings of confidence, stress, patience and emotion, tracked across many trades, show when you tend to break rules. The Psychology Lab (Journal → Psychology Lab) lets you practise responses to FOMO, revenge trading, moving stops and more."
+  },
+  "explain": {
+    "simple": "Even with pretend money, trading stirs feelings. After a loss, you may want to win it back. After a win, you may feel you cannot lose. When you see a big move without you, you may want to jump in late. These feelings are normal. The problem is acting on them. In the Journal, rate how you felt before and after each trade. Over 20 trades, you may see a pattern, like breaking rules after two losses in a row. Open Journal → Psychology Lab to practise what you would do in situations like these. This is a learning tool, not a mental-health assessment.",
+    "balanced": "Look for links between your ratings and your rule breaks. Common patterns include revenge trading after a loss, sizing up after losses, moving stops, and overtrading when bored. Your plan's \"when to stop\" rules and daily loss limit exist for these moments. When you hit the limit or have several losses in a row, the app may show a cool-down prompt. Treat it as part of your plan, not as a punishment. Demo trading lacks the fear of losing real money, so feelings with real money may well be stronger, not weaker."
+  },
+  "realNumbers": {
+    "assumptions": [
+      "Fictional demo day; plan: example daily loss limit 60 USD, risk 20 USD per trade",
+      "Losses equal planned risk (no slippage)"
+    ],
+    "steps": [
+      "Loss 1: −20 USD. Day total −20 USD. Stress rating: 2 out of 5.",
+      "Loss 2: −20 USD. Day total −40 USD. Stress rating: 4 out of 5. The learner wants to \"win it back\".",
+      "The checklist asks \"Am I calm?\" Answer: no. The learner stops for the day at −40 USD, before reaching the limit.",
+      "Journal note: \"After 2 losses my stress jumps. My plan now says to pause for 30 minutes after 2 losses.\""
+    ]
+  },
+  "anotherExample": {
+    "assumptions": [
+      "Fictional learner, 20 journaled demo trades",
+      "4 rule breaks in total"
+    ],
+    "steps": [
+      "The learner sorts the 4 rule breaks by the emotion rating before each trade.",
+      "3 of the 4 came right after a loss with a high stress rating.",
+      "1 came after 2 hours of waiting with a high boredom note.",
+      "The learner practises the revenge-trading and overtrading scenarios in the Psychology Lab, and adds a pause rule to the plan."
+    ]
+  },
+  "explainSimpler": "Feelings are weather. You cannot stop them, but your plan is the umbrella.",
+  "commonMistake": "Thinking \"I am disciplined, emotions do not affect me\" and skipping the ratings. The pattern only shows up if you record it.",
+  "quickCheck": [
+    {
+      "id": "fx-psychology-demo-q1",
+      "prompt": "You just had two losses and feel angry. What fits your plan best?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Double the size to win it back",
+          "explanation": "No: sizing up after losses is a classic emotional mistake."
+        },
+        {
+          "id": "b",
+          "text": "Pause, note the feeling in the Journal, and follow your stop rules",
+          "explanation": "Right: pausing is part of the plan."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "trading-plan"
+      ]
+    },
+    {
+      "id": "fx-psychology-demo-q2",
+      "prompt": "Why rate your emotions on every journaled trade?",
+      "options": [
+        {
+          "id": "a",
+          "text": "To find patterns between feelings and rule breaks over many trades",
+          "explanation": "Right: one trade shows little; many trades show patterns."
+        },
+        {
+          "id": "b",
+          "text": "To get a score that tells you whether you are emotionally fit to trade at all",
+          "explanation": "No: the ratings are for spotting patterns in your own journal. They are not a fitness test, and the Psychology Lab is not a mental-health assessment."
+        },
+        {
+          "id": "c",
+          "text": "To decide which trades to delete",
+          "explanation": "No: every trade stays in the journal. Ratings help you find patterns, not hide trades."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "trading-journal"
+      ]
+    }
+  ],
+  "doItNow": {
+    "kind": "reflection",
+    "instructions": "Open Journal → Psychology Lab and work through at least two scenarios, such as revenge trading and moving stops. Then, on your next 5 demo trades, rate your emotion before and after each trade in the Journal."
+  },
+  "homework": "After 20 demo trades, list your rule breaks next to your emotion ratings. Write down one pattern you see, if any.",
+  "glossaryIds": [
+    "trading-journal",
+    "trading-plan",
+    "stop-loss"
+  ],
+  "sourceIds": []
+}

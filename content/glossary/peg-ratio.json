@@ -1,0 +1,23 @@
+{
+  "id": "peg-ratio",
+  "term": "PEG ratio",
+  "aliases": [
+    "PEG",
+    "price/earnings-to-growth"
+  ],
+  "definition": {
+    "simple": "The P/E ratio divided by the expected yearly growth rate of earnings, in percent.",
+    "balanced": "A rough way to compare price with growth. It inherits all the uncertainty of the growth forecast, and it means little for companies with tiny or negative earnings."
+  },
+  "example": "P/E 30 and expected growth 15% a year: PEG = 30 ÷ 15 = 2.0.",
+  "related": [
+    "pe-ratio",
+    "growth-investing",
+    "eps"
+  ],
+  "markets": [
+    "stocks"
+  ],
+  "level": "intermediate",
+  "sourceIds": []
+}

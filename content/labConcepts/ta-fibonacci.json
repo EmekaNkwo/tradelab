@@ -1,0 +1,25 @@
+{
+  "id": "ta-fibonacci",
+  "skills": ["technical_analysis"],
+  "lab": "technical",
+  "level": "intermediate",
+  "order": 8,
+  "title": "Fibonacci retracements",
+  "summary": "Lines at 23.6%, 38.2%, 50%, 61.8% and 78.6% of a chosen swing. A convention some traders watch for describing how deep a pullback went.",
+  "unreliableWhen": "Always as a forecast: the levels depend on the anchor points chosen, and with five levels close together, many pullbacks end near one by chance. They show no predictive power on their own.",
+  "goodExample": "Writing the anchor rule first, drawing from the swing low to the swing high, and noting \"the pullback ended near the 50% line\" as a description.",
+  "badExample": "Redrawing on different swings until a level matches a turn, then calling it proof.",
+  "lessonIds": [
+    "ta-fibonacci"
+  ],
+  "chart": {
+    "scenario": "pullback",
+    "overlays": [],
+    "pane": "none",
+    "lookFor": "Use the Fibonacci tool from the low to the high of the last swing up. Note which level the pullback ended nearest, then redraw from a different low and see the lines move."
+  },
+  "drillKind": null,
+  "scenarioIds": [],
+  "companyIds": [],
+  "redFlagCaseIds": []
+}

@@ -1,0 +1,65 @@
+{
+  "title": "TradeLab marketComparison",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+    },
+    "order": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 9007199254740991
+    },
+    "dimension": {
+      "type": "string",
+      "minLength": 1
+    },
+    "cells": {
+      "type": "object",
+      "properties": {
+        "forex": {
+          "type": "string",
+          "minLength": 1
+        },
+        "stocks": {
+          "type": "string",
+          "minLength": 1
+        },
+        "penny_stocks": {
+          "type": "string",
+          "minLength": 1
+        },
+        "commodities": {
+          "type": "string",
+          "minLength": 1
+        },
+        "futures": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "forex",
+        "stocks",
+        "penny_stocks",
+        "commodities",
+        "futures"
+      ],
+      "additionalProperties": false
+    },
+    "caveat": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "required": [
+    "id",
+    "order",
+    "dimension",
+    "cells",
+    "caveat"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,23 @@
+{
+  "id": "multiplier",
+  "term": "Multiplier",
+  "aliases": [
+    "contract multiplier",
+    "point value"
+  ],
+  "definition": {
+    "simple": "The money value of a one-point move in a futures price, for one contract.",
+    "balanced": "[[notional-value|Notional value]] = price × multiplier. Some contracts give a [[contract-size]] in units instead; the idea is the same. Multipliers differ between contracts, so take the number from the exact contract's specification."
+  },
+  "example": "Fictional: multiplier 10 USD per point. A 15-point move = 15 × 10 = 150 USD per contract.",
+  "related": [
+    "notional-value",
+    "tick-value",
+    "contract-size"
+  ],
+  "markets": [
+    "futures"
+  ],
+  "level": "beginner",
+  "sourceIds": []
+}

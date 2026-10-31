@@ -1,0 +1,13 @@
+{
+  "id": "geopolitical-risk",
+  "term": "Geopolitical risk",
+  "aliases": ["geopolitics", "political risk"],
+  "definition": {
+    "simple": "The chance that conflicts, sanctions, trade rules or political changes disrupt how goods are produced, shipped or sold.",
+    "balanced": "Commodities are often produced in a few places and shipped along a few routes, so politics can affect supply or how it reaches buyers. Prices may rise on worry alone, before anything is actually lost, and fall back if the worry fades. Treat geopolitical stories as scenarios with several possible outcomes, never as certain price calls."
+  },
+  "related": ["supply-shock", "commodity", "volatility"],
+  "markets": ["commodities", "futures", "forex"],
+  "level": "beginner",
+  "sourceIds": []
+}

@@ -1,0 +1,177 @@
+appId: com.tradelab.app
+name: 06 Paper trade
+tags:
+  - e2e
+  - journey
+---
+# Spec §36 step 6: open a paper account, place a stopped market order that passes
+# the risk check and pre-trade checklist, let it fill, then close it.
+# Needs: 01. Screens: app/(tabs)/practice/paper/index.tsx and [id].tsx,
+# components/paper/PaperTicket.tsx, components/plan/PreTradeChecklist.tsx,
+# components/paper/PaperPositions.tsx.
+- launchApp:
+    appId: com.tradelab.app
+- extendedWaitUntil:
+    visible:
+      id: "home-screen"
+    timeout: 30000
+- runFlow:
+    file: subflows/open-tab.yaml
+    env:
+      TAB: Practice
+- extendedWaitUntil:
+    visible:
+      id: "practice-screen"
+    timeout: 10000
+- tapOn:
+    id: "practice-paper"             # QuickAction "Paper trading"
+
+# ---- New account ----
+- extendedWaitUntil:
+    visible:
+      id: "paper-accounts-screen"
+    timeout: 10000
+- assertVisible: "Paper trading — simulated"   # PAPER_LABEL, features/paper/paperSession.ts
+- tapOn:
+    id: "paper-name"
+- inputText: "E2E paper"
+- hideKeyboard
+# Market chip label is `${MARKET_LABELS[market]}: ${symbol}`; the first instrument
+# (sim-eurusd, domain/simulation/instruments.ts) is selected by default.
+- scrollUntilVisible:
+    element:
+      text: "Range"                  # Scenario chip (SCENARIO_LABELS)
+    direction: DOWN
+- tapOn: "Range"
+- scrollUntilVisible:
+    element:
+      text: "Start paper trading"
+    direction: DOWN
+- tapOn:
+    text: "Start paper trading"
+    enabled: true
+
+# ---- Account screen ----
+- extendedWaitUntil:
+    visible:
+      id: "paper-account-screen"
+    timeout: 15000
+- assertVisible: "E2E paper"
+- assertVisible:
+    id: "paper-equity"               # "Equity 10000.00 USD · Balance 10000.00 USD"
+- takeScreenshot: 06-paper-account
+# Order ticket. Stop = bid minus 0.3% (about 33 pips at a price near 1.10),
+# size 0.01 lot: a planned loss of a few USD on a 10,000 USD account, inside
+# the default risk-per-trade rule. The bid is read from the ticket text
+# "Bid X · Ask Y. Market orders fill at ..." (PaperTicket).
+- scrollUntilVisible:
+    element:
+      text: "New order"
+    direction: DOWN
+- copyTextFrom:
+    text: "Bid .* · Ask .*"
+- evalScript: ${output.paperStop = (parseFloat(maestro.copiedText.replace('Bid ', '')) * 0.997).toFixed(5)}
+- scrollUntilVisible:
+    element:
+      id: "paper-size"
+    direction: DOWN
+- tapOn:
+    id: "paper-size"
+- inputText: "0.01"
+- hideKeyboard
+- scrollUntilVisible:
+    element:
+      id: "paper-stop"
+    direction: DOWN
+- tapOn:
+    id: "paper-stop"
+- inputText: ${output.paperStop}
+- hideKeyboard
+- scrollUntilVisible:
+    element:
+      text: "Check against my risk rules"
+    direction: DOWN
+- tapOn: "Check against my risk rules"
+- scrollUntilVisible:
+    element:
+      id: "paper-check"
+    direction: DOWN
+- takeScreenshot: 06-paper-check
+# The order is sized to stay inside the default risk rules (a fresh profile
+# from 01 has not changed them), so the check must pass. "Within your rules"
+# (CheckResult) is required; a rule break here is a real failure.
+# The visible SegmentedControl labels (Side, Order type) push the result below
+# the fold on a 1080x2408 phone (device run 2026-10-30), so scroll to it first.
+- scrollUntilVisible:
+    element:
+      text: "(Within your rules|Breaks a rule: .*)"
+    direction: DOWN
+    timeout: 15000
+- assertVisible:
+    text: "Within your rules"
+
+# ---- Pre-trade checklist (domain/plan/checklist.ts CHECKLIST) ----
+# Five Yes / No / Not sure segment groups (components/plan/PreTradeChecklist.tsx).
+# Each segment has its own testID, checklist-<id>-<yes|no|unsure>, so each tap
+# hits that item's segment; the question is the group's visible label and is
+# asserted first. (Earlier runs scoped by `below:` the question text; on Android
+# the segments are not children of the checklist-<id> wrapper, so `childOf`
+# never matched, device run 2026-10-30.)
+# stop_set and risk_within are answered from the order and disabled.
+- scrollUntilVisible:
+    element:
+      id: "checklist-in_plan-yes"
+    direction: DOWN
+- assertVisible: "Is this trade in your trading plan\\?"
+- tapOn:
+    id: "checklist-in_plan-yes"
+- scrollUntilVisible:
+    element:
+      id: "checklist-news_soon-no"
+    direction: DOWN
+- assertVisible: "Is there important news due soon for this market\\?"
+- tapOn:
+    id: "checklist-news_soon-no"
+- scrollUntilVisible:
+    element:
+      id: "checklist-calm-yes"
+    direction: DOWN
+- assertVisible: "Are you calm, and not trying to win back a loss\\?"
+- tapOn:
+    id: "checklist-calm-yes"
+- assertNotVisible:
+    id: "checklist-unanswered"       # "N questions left to answer."
+- takeScreenshot: 06-paper-checklist
+# The button reads "Place anyway (recorded as a rule break)" when a risk rule
+# is broken. That must not happen in this flow, so it fails if it appears.
+- scrollUntilVisible:
+    element:
+      text: "Place buy market order"
+    direction: DOWN
+- assertNotVisible:
+    text: "Place anyway.*"
+- tapOn:
+    text: "Place buy market order"
+    enabled: true
+
+# ---- Fill and close ----
+- scrollUntilVisible:
+    element:
+      text: "Next candle"
+    direction: UP
+- tapOn: "Next candle"
+- scrollUntilVisible:
+    element:
+      text: "Close position .*"      # PaperPositions: `Close position ${p.id}`
+    direction: DOWN
+    timeout: 15000
+- takeScreenshot: 06-paper-position
+- tapOn: "Close position .*"
+- scrollUntilVisible:
+    element:
+      text: "History \\(1\\)"
+    direction: DOWN
+    timeout: 10000
+- assertVisible:
+    id: "paper-history-item"
+- takeScreenshot: 06-paper-closed

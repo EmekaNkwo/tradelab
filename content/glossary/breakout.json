@@ -1,0 +1,22 @@
+{
+  "id": "breakout",
+  "term": "Breakout",
+  "aliases": [
+    "breakouts",
+    "break out",
+    "breakdown"
+  ],
+  "definition": {
+    "simple": "When price moves out of a range or through a support or resistance area.",
+    "balanced": "There is no single definition. Many traders only count a breakout when a candle closes beyond the level, sometimes by a set distance. A move only by the wick, which then closes back inside, usually does not count. Many breakouts fail and turn into [[false-breakout|false breakouts]]."
+  },
+  "related": [
+    "false-breakout",
+    "retest",
+    "support",
+    "resistance"
+  ],
+  "markets": [],
+  "level": "beginner",
+  "sourceIds": []
+}

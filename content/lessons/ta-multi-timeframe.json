@@ -1,0 +1,147 @@
+{
+  "id": "ta-multi-timeframe",
+  "moduleId": "ta-patterns",
+  "title": "Multi-timeframe analysis",
+  "level": "intermediate",
+  "estimatedMinutes": 18,
+  "inOneLine": {
+    "simple": "Look at a higher timeframe for the bigger picture and a lower one for detail. They often disagree, and that is normal.",
+    "balanced": "[[multi-timeframe-analysis|Multi-timeframe analysis]] means choosing two or three [[timeframe|timeframes]] in advance: one for context, one for entries. The higher one may show an uptrend while the lower one shows a [[pullback]]. Agreement between them is not a forecast."
+  },
+  "explain": {
+    "simple": "Each timeframe shows the same price history in different-sized candles. A daily chart might show a clear uptrend. The 1-hour chart of the same days might show price falling for the last 20 hours. Both are true at once: the fall is a pullback inside the bigger uptrend. One approach is to use a higher timeframe to decide which direction you are interested in, and a lower one to plan the entry and [[stop-loss]].",
+    "balanced": "Pick your timeframes before you look, and keep them. Switching until one chart agrees with your idea is a form of cherry-picking. The timeframe you use for the stop decides its distance, and the distance decides the size: a stop under a daily swing low is usually far wider than one under an hourly low, so the [[position-sizing|position size]] must be smaller for the same money at risk. Indicators change meaning too: a 20-period average on a daily chart covers about four weeks of trading; on a 1-hour chart it covers less than a day. Higher and lower timeframes agreeing means two views of the same prices agree, not that the move will continue."
+  },
+  "realNumbers": {
+    "assumptions": [
+      "Illustrative EUR/USD prices; account in USD",
+      "Example risk limit: 50 USD per trade. A learning example, not a recommendation",
+      "Pip value 10 USD for 1.00 lot; size step 0.01 lot",
+      "Stop under the last 1-hour swing low: 20 pips away. Stop under the last daily swing low: 90 pips away"
+    ],
+    "steps": [
+      "1-hour stop: size = 50 ÷ (20 × 10) = 0.25 lot. Risk = 0.25 × 200 = 50 USD.",
+      "Daily stop: size = 50 ÷ (90 × 10) = 0.0555… lot, rounded down to 0.05 lot.",
+      "Actual risk at 0.05 lot = 0.05 × 900 = 45 USD.",
+      "Same idea, same money at risk, but the size differs by five times. The timeframe you base the stop on matters."
+    ]
+  },
+  "anotherExample": {
+    "assumptions": [
+      "A market that trades 24 hours a day, 5 days a week",
+      "You compare a daily (D1) chart with a 4-hour (H4) and a 1-hour (H1) chart"
+    ],
+    "steps": [
+      "One D1 candle = 24 ÷ 4 = 6 H4 candles = 24 H1 candles.",
+      "20 D1 candles = 20 × 6 = 120 H4 candles = 20 × 24 = 480 H1 candles.",
+      "So a 20-period moving average on H1 covers 20 hours, under one day of trading.",
+      "A \"trend\" on H1 can be a single wiggle on D1. Say which timeframe you mean whenever you name a trend."
+    ]
+  },
+  "explainSimpler": "Zoomed out, you see the road. Zoomed in, you see the bumps. Pick both zoom levels before you look.",
+  "commonMistake": "Flicking through timeframes until one agrees with what you wanted to do, or calling a 1-hour dip a \"trend change\" without checking the daily chart.",
+  "quickCheck": [
+    {
+      "id": "ta-multi-timeframe-q1",
+      "prompt": "The daily chart shows an uptrend. The 1-hour chart has fallen for 15 hours. What is the plainest description?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The daily trend has now reversed downward",
+          "explanation": "No: 15 hours is a small part of a daily chart. The daily structure may be intact."
+        },
+        {
+          "id": "b",
+          "text": "The 1-hour chart is giving a false reading",
+          "explanation": "No: both charts show the same prices, just in different candle sizes."
+        },
+        {
+          "id": "c",
+          "text": "A pullback in a daily uptrend, so far",
+          "explanation": "Right: both views can be true at once."
+        }
+      ],
+      "correctOptionIds": [
+        "c"
+      ],
+      "level": "intermediate",
+      "glossaryIds": [
+        "multi-timeframe-analysis",
+        "pullback",
+        "timeframe"
+      ]
+    },
+    {
+      "id": "ta-multi-timeframe-q2",
+      "prompt": "Same 50 USD risk, pip value 10 USD per lot. Stop A is 25 pips, stop B is 100 pips. What sizes?",
+      "options": [
+        {
+          "id": "a",
+          "text": "A 0.20 lot, B 0.05 lot",
+          "explanation": "Right: 50 ÷ 250 = 0.20 and 50 ÷ 1,000 = 0.05."
+        },
+        {
+          "id": "b",
+          "text": "A 0.05 lot, B 0.20 lot",
+          "explanation": "No: the wider stop needs the smaller size."
+        },
+        {
+          "id": "c",
+          "text": "Both 0.20 lot",
+          "explanation": "No: at 100 pips, 0.20 lot would risk 200 USD."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "intermediate",
+      "glossaryIds": [
+        "position-sizing",
+        "stop-loss"
+      ]
+    },
+    {
+      "id": "ta-multi-timeframe-q3",
+      "prompt": "You switch from H1 to M15 to H4 until one chart agrees with your trade idea. What is the problem?",
+      "options": [
+        {
+          "id": "a",
+          "text": "You pick the view that fits your idea",
+          "explanation": "Right: decide your timeframes first, then read them as they are."
+        },
+        {
+          "id": "b",
+          "text": "M15 charts are too short to show any trend",
+          "explanation": "No: any timeframe can show a trend on its own scale."
+        },
+        {
+          "id": "c",
+          "text": "M15 is more current than H4",
+          "explanation": "No: every timeframe shows the same latest price. The problem is choosing the one that agrees with you."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "intermediate",
+      "glossaryIds": [
+        "multi-timeframe-analysis",
+        "timeframe"
+      ]
+    }
+  ],
+  "doItNow": {
+    "kind": "chart_lab",
+    "instructions": "Write down two timeframes before you start, for example 1d for context and 1h for detail. In Chart Lab, open the Pullback scenario. Zoom out to see the whole chart and name the trend. Then zoom in on the last 20 candles and name what they show. Write one sentence that is true of both views. Then do the \"Find the trend\" drill in Practice and say which scale you judged each chart on."
+  },
+  "glossaryIds": [
+    "multi-timeframe-analysis",
+    "timeframe",
+    "pullback",
+    "trend",
+    "stop-loss",
+    "position-sizing",
+    "moving-average"
+  ],
+  "sourceIds": []
+}

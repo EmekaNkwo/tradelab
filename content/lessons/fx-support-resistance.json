@@ -1,0 +1,135 @@
+{
+  "id": "fx-support-resistance",
+  "moduleId": "forex-levels",
+  "title": "Support and resistance",
+  "level": "beginner",
+  "estimatedMinutes": 20,
+  "inOneLine": {
+    "simple": "Support is where falling price has turned up before. Resistance is where rising price has turned down before.",
+    "balanced": "Mark [[support]] and [[resistance]] from earlier [[swing-low|swing lows]] and [[swing-high|swing highs]], as zones rather than single lines. They show where price reacted in the past, not where it must react next time."
+  },
+  "explain": {
+    "simple": "Look back on the chart for places where price turned more than once at about the same price. Turning up from below makes a support area. Turning down from above makes a resistance area. Draw these as zones a few pips wide, because price rarely turns at exactly the same price twice. A level is a place to watch, not a wall. Price can go straight through it.",
+    "balanced": "Good zones come from clear swing points on your chosen [[timeframe]]. Levels from a longer timeframe usually stand out more on shorter ones. Use wicks or bodies, but be consistent. When price breaks through a zone, the old support sometimes acts as resistance later, and the other way round. Often it does not. The more you draw, the more likely price is near some line by chance, so keep only the clearest few."
+  },
+  "realNumbers": {
+    "assumptions": [
+      "Illustrative EUR/USD H4 prices",
+      "Three earlier swing lows at 1.08020, 1.07980 and 1.08050",
+      "Current bid 1.08400"
+    ],
+    "steps": [
+      "The lowest low is 1.07980 and the highest is 1.08050, so the zone runs from 1.07980 to 1.08050.",
+      "Zone width = 1.08050 − 1.07980 = 0.00070 = 7 pips.",
+      "Distance from the current bid to the top of the zone = 1.08400 − 1.08050 = 35 pips.",
+      "If price falls into the zone, it may turn up again, move sideways, or break through. The zone tells you where to pay attention, not what will happen."
+    ]
+  },
+  "anotherExample": {
+    "assumptions": [
+      "Illustrative GBP/USD H1 prices",
+      "Resistance zone 1.26450–1.26500 from two earlier swing highs",
+      "Price later closes at 1.26600, then falls back to 1.26480 and the next candle closes at 1.26550"
+    ],
+    "steps": [
+      "The close at 1.26600 is 10 pips above the top of the old resistance zone (1.26600 − 1.26500).",
+      "Price comes back into the old zone at 1.26480. This is a [[retest]].",
+      "The next close at 1.26550 is back above the zone. For now, the old resistance acted like support.",
+      "This is one outcome. On another chart, price could have closed back below 1.26450 and kept falling."
+    ]
+  },
+  "explainSimpler": "Support: a floor price has bounced from before. Resistance: a ceiling price has turned from before. Floors and ceilings in markets can break.",
+  "commonMistake": "Drawing a single thin line and expecting price to turn at that exact price. Another mistake is filling the chart with so many lines that price is always near one.",
+  "quickCheck": [
+    {
+      "id": "fx-support-resistance-q1",
+      "prompt": "Price has turned up three times near 1.0950. What is that area called?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Support",
+          "explanation": "Right: support is where falling price has turned up before."
+        },
+        {
+          "id": "b",
+          "text": "Resistance",
+          "explanation": "No: resistance is where rising price has turned down."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "support"
+      ]
+    },
+    {
+      "id": "fx-support-resistance-q2",
+      "prompt": "Swing highs at 1.27120, 1.27080 and 1.27150. How wide is the resistance zone they form?",
+      "options": [
+        {
+          "id": "a",
+          "text": "7 pips",
+          "explanation": "Right: 1.27150 − 1.27080 = 0.00070 = 7 pips."
+        },
+        {
+          "id": "b",
+          "text": "3 pips",
+          "explanation": "No: that is only the gap between 1.27150 and 1.27120. The zone runs from the lowest to the highest of the three."
+        },
+        {
+          "id": "c",
+          "text": "70 pips",
+          "explanation": "No: 0.00070 is 7 pips."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "resistance",
+        "pip"
+      ]
+    },
+    {
+      "id": "fx-support-resistance-q3",
+      "prompt": "Price reaches a strong support zone. What will it do?",
+      "options": [
+        {
+          "id": "a",
+          "text": "It must bounce",
+          "explanation": "No: support describes the past. It can break."
+        },
+        {
+          "id": "b",
+          "text": "It can bounce, move sideways or break through",
+          "explanation": "Right: the zone tells you where to watch, not the outcome."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "support"
+      ]
+    }
+  ],
+  "doItNow": {
+    "kind": "metatrader",
+    "instructions": "On your demo account, draw horizontal lines at two support and two resistance areas on a EUR/USD H4 chart. Follow the task card.",
+    "mtTaskId": "mt-mark-levels"
+  },
+  "glossaryIds": [
+    "support",
+    "resistance",
+    "swing-high",
+    "swing-low",
+    "retest",
+    "timeframe",
+    "pip"
+  ],
+  "sourceIds": []
+}

@@ -1,0 +1,13 @@
+{
+  "id": "otc-market",
+  "term": "Over-the-counter (OTC) market",
+  "aliases": ["OTC", "over-the-counter", "OTC market", "off-exchange"],
+  "definition": {
+    "simple": "Trading that happens through dealer networks rather than on a main stock exchange. Many very small companies trade this way.",
+    "balanced": "Rules on listing and reporting for OTC-traded shares are often lighter than on a main exchange, and they vary by market and by tier. That can mean less information, fewer buyers and sellers, and wider [[spread|spreads]]. Trading OTC is not a scam in itself, but it means you need to check more for yourself."
+  },
+  "related": ["penny-stock", "liquidity", "spread"],
+  "markets": ["penny_stocks", "stocks"],
+  "level": "beginner",
+  "sourceIds": []
+}

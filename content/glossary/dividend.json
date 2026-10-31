@@ -1,0 +1,23 @@
+{
+  "id": "dividend",
+  "term": "Dividend",
+  "aliases": [
+    "dividends",
+    "dividend payment"
+  ],
+  "definition": {
+    "simple": "Part of a company's profit paid out in cash to its shareholders.",
+    "balanced": "The company decides whether to pay a dividend and how much. It can raise, cut or stop it. A dividend paid from borrowing rather than from [[free-cash-flow]] may not last."
+  },
+  "example": "A company pays 87 million USD in dividends across 200 million shares: about 0.435 USD per share.",
+  "related": [
+    "dividend-yield",
+    "payout-ratio",
+    "share"
+  ],
+  "markets": [
+    "stocks"
+  ],
+  "level": "beginner",
+  "sourceIds": []
+}

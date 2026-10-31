@@ -1,0 +1,26 @@
+{
+  "id": "notional-value",
+  "term": "Notional value",
+  "aliases": [
+    "notional",
+    "contract value",
+    "exposure"
+  ],
+  "definition": {
+    "simple": "The full value of the position a contract controls.",
+    "balanced": "For a future, notional value = price × [[multiplier]] × contracts. Profit and loss come from the notional value, not from the [[margin]]. Notional ÷ margin shows the [[leverage]]."
+  },
+  "example": "Fictional: price 4,000 × multiplier 10 USD = 40,000 USD for 1 contract.",
+  "related": [
+    "multiplier",
+    "leverage",
+    "margin"
+  ],
+  "markets": [
+    "forex",
+    "commodities",
+    "futures"
+  ],
+  "level": "beginner",
+  "sourceIds": []
+}

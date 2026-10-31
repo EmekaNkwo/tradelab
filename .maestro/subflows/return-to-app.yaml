@@ -1,0 +1,10 @@
+appId: com.tradelab.app
+---
+# Brings TradeLab back to the foreground WITHOUT restarting it, so the screen
+# the learner left from (and its in-memory state) is still there.
+# stopApp: false is documented at https://docs.maestro.dev (launchApp).
+- launchApp:
+    appId: com.tradelab.app
+    stopApp: false
+- waitForAnimationToEnd:
+    timeout: 5000

@@ -1,0 +1,21 @@
+{
+  "id": "whipsaw",
+  "term": "Whipsaw",
+  "aliases": [
+    "whipsaws",
+    "whipsawed"
+  ],
+  "definition": {
+    "simple": "A quick move one way that triggers a trade, followed by a quick move back that stops it out.",
+    "balanced": "Common for trend and breakout rules in sideways markets: price crosses an average or a level, the rule enters, and price returns. A run of whipsaws produces many small losses."
+  },
+  "example": "Price closes above a rising average at 1.1020, the rule buys, and two candles later it closes back below at 1.1005: a whipsaw.",
+  "related": [
+    "false-breakout",
+    "moving-average",
+    "market-regime"
+  ],
+  "markets": [],
+  "level": "intermediate",
+  "sourceIds": []
+}

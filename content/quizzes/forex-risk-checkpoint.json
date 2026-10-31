@@ -1,0 +1,85 @@
+{
+  "id": "forex-risk-checkpoint",
+  "title": "Checkpoint: risk, sizing and drawdown",
+  "passMark": 0.8,
+  "questions": [
+    {
+      "id": "forex-risk-checkpoint-q1",
+      "prompt": "Example rule: risk 1% of the current balance. Your balance is 12,000 USD. How much do you risk?",
+      "skills": ["risk_management"],
+      "options": [
+        { "id": "a", "text": "120 USD", "explanation": "Right: 12,000 × 0.01 = 120 USD." },
+        { "id": "b", "text": "12 USD", "explanation": "No: that is 0.1%." },
+        { "id": "c", "text": "1,200 USD", "explanation": "No: that is 10%." }
+      ],
+      "correctOptionIds": ["a"],
+      "level": "beginner",
+      "glossaryIds": ["risk-per-trade"]
+    },
+    {
+      "id": "forex-risk-checkpoint-q2",
+      "prompt": "Example risk 120 USD. Stop 60 pips. Pip value 10 USD per 1.00 lot. What size keeps the risk at 120 USD?",
+      "skills": ["risk_management"],
+      "options": [
+        { "id": "a", "text": "0.20 lot", "explanation": "Right: risk per lot = 60 × 10 = 600 USD, and 120 ÷ 600 = 0.20 lot." },
+        { "id": "b", "text": "2.00 lots", "explanation": "No: that would risk 1,200 USD." },
+        { "id": "c", "text": "0.12 lot", "explanation": "No: that would risk 0.12 × 600 = 72 USD." }
+      ],
+      "correctOptionIds": ["a"],
+      "level": "beginner",
+      "glossaryIds": ["position-sizing", "pip-value"]
+    },
+    {
+      "id": "forex-risk-checkpoint-q3",
+      "prompt": "A plan uses 1.5:1 reward to risk. What win rate does it need to break even, before costs?",
+      "skills": ["statistical_reasoning"],
+      "options": [
+        { "id": "a", "text": "40%", "explanation": "Right: 1 ÷ (1 + 1.5) = 1 ÷ 2.5 = 0.40." },
+        { "id": "b", "text": "60%", "explanation": "No: that is the loss rate at break-even." },
+        { "id": "c", "text": "33.3%", "explanation": "No: that is the break-even win rate for 2:1." }
+      ],
+      "correctOptionIds": ["a"],
+      "level": "beginner",
+      "glossaryIds": ["risk-reward-ratio", "win-rate"]
+    },
+    {
+      "id": "forex-risk-checkpoint-q4",
+      "prompt": "Example inputs: win rate 35%, average win 2.5R, average loss 1R. What is the expectancy per trade?",
+      "skills": ["statistical_reasoning"],
+      "options": [
+        { "id": "a", "text": "+0.225R", "explanation": "Right: 0.35 × 2.5 − 0.65 × 1 = 0.875 − 0.65 = 0.225R. It is arithmetic on example inputs, not a promise." },
+        { "id": "b", "text": "+0.875R", "explanation": "No: you must subtract the losses, 0.65 × 1." },
+        { "id": "c", "text": "−0.225R", "explanation": "No: the wins outweigh the losses with these inputs." }
+      ],
+      "correctOptionIds": ["a"],
+      "level": "beginner",
+      "glossaryIds": ["expectancy", "r-multiple"]
+    },
+    {
+      "id": "forex-risk-checkpoint-q5",
+      "prompt": "Your example account is 25% below its peak. What gain gets it back to the peak?",
+      "skills": ["risk_management", "statistical_reasoning"],
+      "options": [
+        { "id": "a", "text": "25%, the same as the fall", "explanation": "No: the gain is measured on a smaller balance." },
+        { "id": "b", "text": "About 33.3%", "explanation": "Right: 0.25 ÷ (1 − 0.25) = 0.25 ÷ 0.75 = 0.333." },
+        { "id": "c", "text": "50%", "explanation": "No: 50% would be needed after a 33.3% drawdown." }
+      ],
+      "correctOptionIds": ["b"],
+      "level": "beginner",
+      "glossaryIds": ["drawdown"]
+    },
+    {
+      "id": "forex-risk-checkpoint-q6",
+      "prompt": "You followed your plan and lost 5 trades in a row. Which response fits sound risk management?",
+      "skills": ["risk_management", "execution_discipline"],
+      "options": [
+        { "id": "a", "text": "Raise the risk on the next few trades so one good win recovers the losses faster", "explanation": "No: bigger size after losses deepens drawdowns and raises the risk of ruin." },
+        { "id": "b", "text": "Keep or lower the risk, pause, and review the trades against the plan", "explanation": "Right: losing streaks are normal even for a sound plan." },
+        { "id": "c", "text": "Stop using stop losses until you win again", "explanation": "No: that removes the limit on each loss." }
+      ],
+      "correctOptionIds": ["b"],
+      "level": "beginner",
+      "glossaryIds": ["losing-streak", "risk-of-ruin"]
+    }
+  ]
+}

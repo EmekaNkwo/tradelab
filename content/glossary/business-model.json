@@ -1,0 +1,21 @@
+{
+  "id": "business-model",
+  "term": "Business model",
+  "aliases": [
+    "how a company makes money"
+  ],
+  "definition": {
+    "simple": "How a company makes money: what it sells, to whom, and how it covers its costs.",
+    "balanced": "Understanding the business model tells you what drives revenue and costs, and so what could go wrong. Ask: who pays, how often, what does it cost to serve them, and how easily could they switch?"
+  },
+  "example": "A fictional food maker sells packaged meals to shops; most of its cost is ingredients and factories.",
+  "related": [
+    "competitive-advantage",
+    "revenue"
+  ],
+  "markets": [
+    "stocks"
+  ],
+  "level": "beginner",
+  "sourceIds": []
+}

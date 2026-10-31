@@ -1,0 +1,31 @@
+{
+  "id": "strategy-research",
+  "type": "strategy_research",
+  "title": "Strategy Research Challenge",
+  "summary": "Study three strategy families properly: what they assume, when they fail, and what their limits are.",
+  "skills": [
+    "strategy_understanding"
+  ],
+  "criteria": [
+    {
+      "kind": "strategies_completed",
+      "count": 3,
+      "label": "Complete 3 strategy pages (knowledge check and guided exercise)",
+      "dimension": "understanding"
+    },
+    {
+      "kind": "skill_questions",
+      "skill": "strategy_understanding",
+      "count": 12,
+      "accuracy": 0.8,
+      "label": "Answer 12 strategy questions at 80% or better (latest answer to each)",
+      "dimension": "reasoning"
+    },
+    {
+      "kind": "checkpoint_passed",
+      "moduleId": "forex-rules-based-strategies",
+      "label": "Pass the Rules-based strategies checkpoint",
+      "dimension": "uncertainty"
+    }
+  ]
+}

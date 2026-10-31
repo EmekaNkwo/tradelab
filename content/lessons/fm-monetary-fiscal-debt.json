@@ -1,0 +1,77 @@
+{
+  "id": "fm-monetary-fiscal-debt",
+  "moduleId": "fa-macro",
+  "title": "Central banks vs governments: policy and debt",
+  "level": "intermediate",
+  "estimatedMinutes": 20,
+  "inOneLine": {
+    "simple": "The central bank steers interest rates; the government decides spending, taxes and borrowing. Both affect the economy, and they do not always pull the same way.",
+    "balanced": "[[monetary-policy|Monetary policy]] is set by the [[central-bank]], mainly through the policy [[interest-rate]]. [[fiscal-policy|Fiscal policy]] is the government's spending and taxes. Deficits add to [[government-debt]], and higher rates make that debt more costly to carry."
+  },
+  "explain": {
+    "simple": "A central bank usually tries to keep inflation steady by raising or cutting interest rates, as you saw in the lesson on rates and central banks. A government decides how much to spend and how much to tax. When it spends more than it collects, it borrows the difference, and the total borrowed is government debt. People often compare debt with the size of the economy, GDP. Higher interest rates mean the government pays more on new borrowing, which can squeeze its budget over time.",
+    "balanced": "The two policies can work together or against each other. A central bank raising rates to cool inflation while the government cuts taxes to boost spending is a tug of war; markets then have to guess which force wins. Large or fast-rising debt can make lenders ask for higher interest, which can affect the currency and other markets, but there is no fixed level at which debt becomes 'too much', and reactions differ between countries and times. Read debt and deficit news as one input among many. All figures here are hypothetical and Westmark is fictional."
+  },
+  "realNumbers": {
+    "assumptions": [
+      "Fictional Westmark, currency WMK",
+      "Hypothetical yearly GDP: 800 billion WMK",
+      "Hypothetical government debt: 480 billion WMK",
+      "Hypothetical yearly spending 340 billion WMK; tax and other revenue 310 billion WMK"
+    ],
+    "steps": [
+      "Debt ÷ GDP = 480 ÷ 800 = 0.60 = 60%.",
+      "Deficit = 340 − 310 = 30 billion WMK, which is 30 ÷ 800 = 3.75% of GDP.",
+      "The deficit is borrowed, so debt next year ≈ 480 + 30 = 510 billion WMK.",
+      "If GDP stays at 800: 510 ÷ 800 ≈ 63.8%. If GDP grows 4% to 832: 510 ÷ 832 ≈ 61.3%.",
+      "Growth in the economy can slow the rise in the debt ratio even while the debt itself grows."
+    ]
+  },
+  "anotherExample": {
+    "assumptions": [
+      "Same hypothetical debt of 480 billion WMK, GDP 800 billion WMK",
+      "Hypothetical average interest rate on the debt: 2%",
+      "Simplification: all debt is refinanced at a new rate of 3%. In reality debt is refinanced bit by bit over years"
+    ],
+    "steps": [
+      "Interest cost at 2% = 480 × 0.02 = 9.6 billion WMK a year.",
+      "Interest cost at 3% = 480 × 0.03 = 14.4 billion WMK a year.",
+      "Extra cost = 14.4 − 9.6 = 4.8 billion WMK, which is 4.8 ÷ 800 = 0.6% of GDP.",
+      "So a central-bank decision on rates feeds into the government's budget. That link is why traders watch both."
+    ]
+  },
+  "explainSimpler": "The central bank sets the price of borrowing. The government decides how much it spends and borrows. When rates go up, the government's borrowing costs more.",
+  "commonMistake": "Mixing up the two: thinking the government sets interest rates, or that a central bank decides taxes. Another mistake is treating one debt or deficit number as a sure sign of a crisis or of a currency move.",
+  "quickCheck": [
+    {
+      "id": "fm-monetary-fiscal-debt-q1",
+      "prompt": "Hypothetical: spending 220 billion, revenue 200 billion, GDP 500 billion. What is the deficit as a share of GDP?",
+      "options": [
+        { "id": "a", "text": "20%", "explanation": "No: 20 is the deficit in billions. Divide it by GDP, 500." },
+        { "id": "b", "text": "10%", "explanation": "No: that divides the deficit by revenue, 200. Divide by GDP." },
+        { "id": "c", "text": "4%", "explanation": "Right: 220 − 200 = 20, and 20 ÷ 500 = 0.04 = 4%." }
+      ],
+      "correctOptionIds": ["c"],
+      "level": "intermediate",
+      "glossaryIds": ["government-debt", "gdp"]
+    },
+    {
+      "id": "fm-monetary-fiscal-debt-q2",
+      "prompt": "Which of these is fiscal policy?",
+      "options": [
+        { "id": "a", "text": "The central bank raises its policy rate", "explanation": "No: that is monetary policy." },
+        { "id": "b", "text": "The government cuts income tax rates", "explanation": "Right: taxes and spending are fiscal policy." },
+        { "id": "c", "text": "A bank publishes its inflation target", "explanation": "No: an inflation target is part of monetary policy." }
+      ],
+      "correctOptionIds": ["b"],
+      "level": "intermediate",
+      "glossaryIds": ["fiscal-policy", "monetary-policy"]
+    }
+  ],
+  "doItNow": {
+    "kind": "fundamental",
+    "instructions": "Open the Fundamental Analysis Lab and choose the Westmark budget scenario. Work out the surprise in the deficit, read what was priced in, and mark which reactions are plausible. Write one sentence on how a central-bank rate rise and a bigger deficit could pull the currency in different directions."
+  },
+  "glossaryIds": ["monetary-policy", "fiscal-policy", "government-debt", "central-bank", "interest-rate", "gdp"],
+  "sourceIds": []
+}

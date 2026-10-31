@@ -1,0 +1,151 @@
+{
+  "id": "ta-stats-correlation",
+  "skills": ["statistical_reasoning"],
+  "moduleId": "ta-advanced",
+  "title": "Return statistics, indicator correlation and parameter sensitivity",
+  "level": "advanced",
+  "estimatedMinutes": 22,
+  "inOneLine": {
+    "simple": "Look at the whole spread of results, not just the average. Two indicators built from the same prices are not two confirmations. A result that vanishes when you nudge a setting is fragile.",
+    "balanced": "Describe a test by its [[return-distribution]]: average, median, spread and worst run. Check [[indicator-correlation]]: RSI and MACD both come from recent closes, so they often agree. Check [[parameter-sensitivity]]: neighbouring settings should give similar results."
+  },
+  "explain": {
+    "simple": "An average can hide a lot. Ten trades can average a small gain while most of them lose, if one or two big winners pull the average up. So also look at the median (the middle trade), the worst losing run and what happens if you remove the best trade. Next, indicators. RSI, MACD and moving averages are all calculated from recent closing prices. When they agree, that is partly because they are measuring the same thing. Counting them as separate votes overstates your evidence. Finally, settings. If a 20-candle average gives a great result but 18 and 22 give losses, the 20 result is probably luck.",
+    "balanced": "Good questions for any test: How many trades? What is the average in R ([[r-multiple|R-multiples]]), and the median? What share of the total came from the best one or two trades? What was the longest losing run and the deepest [[drawdown]]? For indicators: if two of them tend to turn on the same candles, treat them as one input; a second input should use different information, such as structure or volume. For settings: test a small grid of neighbours. A broad plateau of similar results is more believable than a single sharp peak, which is a sign of [[overfitting]]. None of this proves a method has an edge; it only tells you how fragile the result is."
+  },
+  "realNumbers": {
+    "assumptions": [
+      "Fictional 10 replay trades, results in R",
+      "Results: +3, −1, −1, −1, +2, −1, −1, +4, −1, −1"
+    ],
+    "steps": [
+      "Total = 3 + 2 + 4 − 7 × 1 = +2R. Average = 2 ÷ 10 = +0.2R.",
+      "Win rate = 3 ÷ 10 = 30%.",
+      "Sorted, the middle trades are both −1R, so the median is −1R. The typical trade lost.",
+      "Remove the single +4R trade: total = 2 − 4 = −2R. One trade decided the sign. With 10 trades, this says very little."
+    ]
+  },
+  "anotherExample": {
+    "assumptions": [
+      "Fictional backtests of a moving-average rule over the same data, net results in R",
+      "Plan A, average length 16, 18, 20, 22, 24: −4, −1, +12, −2, −5",
+      "Plan B, same lengths: +3, +4, +5, +4, +2"
+    ],
+    "steps": [
+      "Plan A at length 20 looks best of all: +12R.",
+      "But its neighbours lose. Average across the five settings = (−4 − 1 + 12 − 2 − 5) ÷ 5 = 0R.",
+      "Plan B never reaches +12R, but every setting is positive. Average = (3 + 4 + 5 + 4 + 2) ÷ 5 = 3.6R.",
+      "Plan A's peak is fragile: a small change wipes it out. Plan B is less sensitive. Neither result proves anything about the future."
+    ]
+  },
+  "explainSimpler": "An average is one number for a whole crowd. Two thermometers in the same room are not two weather reports. A recipe that only works at exactly 180 degrees is fussy.",
+  "commonMistake": "Reporting only the average, counting RSI and MACD agreeing as \"double confirmation\", or publishing the one setting that worked best.",
+  "quickCheck": [
+    {
+      "id": "ta-stats-correlation-q1",
+      "prompt": "Results in R: +5, −1, −1, −1, −1. What are the average and the median?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Average +0.2R, median −1R",
+          "explanation": "Right: total = 5 − 4 = +1R, ÷ 5 = +0.2R; the middle value sorted is −1R."
+        },
+        {
+          "id": "b",
+          "text": "Average +1R, median −1R",
+          "explanation": "No: +1R is the total. Divide by 5 trades."
+        },
+        {
+          "id": "c",
+          "text": "Average +0.2R, median +0.2R",
+          "explanation": "No: the median is the middle trade once sorted: −1R."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "advanced",
+      "glossaryIds": [
+        "return-distribution",
+        "r-multiple"
+      ]
+    },
+    {
+      "id": "ta-stats-correlation-q2",
+      "prompt": "RSI 14 and MACD both turn up on the same candle. How much evidence is that?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Two independent confirmations",
+          "explanation": "No: both are built from recent closes, so they often turn together."
+        },
+        {
+          "id": "b",
+          "text": "More like one reading of the same price moves",
+          "explanation": "Right: correlated indicators largely repeat each other."
+        },
+        {
+          "id": "c",
+          "text": "None at all, because indicators are useless",
+          "explanation": "No: they describe recent price behaviour. They just do not add up as separate votes."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "advanced",
+      "glossaryIds": [
+        "indicator-correlation",
+        "rsi",
+        "macd"
+      ]
+    },
+    {
+      "id": "ta-stats-correlation-q3",
+      "prompt": "Length 30 gives +15R; lengths 28 and 32 give −3R and −4R. What does that suggest?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Length 30 is the right setting to use",
+          "explanation": "No: a lone peak with losing neighbours is likely luck in this sample."
+        },
+        {
+          "id": "b",
+          "text": "The test needs a longer average",
+          "explanation": "No: the issue is how sensitive the result is, not the length itself."
+        },
+        {
+          "id": "c",
+          "text": "The +15R is fragile and may be luck",
+          "explanation": "Right: high parameter sensitivity is a sign of overfitting."
+        }
+      ],
+      "correctOptionIds": [
+        "c"
+      ],
+      "level": "advanced",
+      "glossaryIds": [
+        "parameter-sensitivity",
+        "overfitting"
+      ]
+    }
+  ],
+  "doItNow": {
+    "kind": "reflection",
+    "instructions": "Take your last 20 or more replay trades from the Journal. Write down the total, average and median in R, the win rate, the longest losing run, and the total without your single best trade. Then list the indicators in your plan and mark any two that are built from the same closing prices."
+  },
+  "glossaryIds": [
+    "return-distribution",
+    "indicator-correlation",
+    "parameter-sensitivity",
+    "overfitting",
+    "r-multiple",
+    "drawdown",
+    "win-rate",
+    "rsi",
+    "macd",
+    "moving-average",
+    "sample-size"
+  ],
+  "sourceIds": []
+}

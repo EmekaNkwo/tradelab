@@ -1,0 +1,22 @@
+{
+  "id": "return-on-equity",
+  "term": "Return on equity (ROE)",
+  "aliases": [
+    "ROE"
+  ],
+  "definition": {
+    "simple": "Profit as a percentage of the owners' money in the business.",
+    "balanced": "ROE = net income ÷ equity. It can look high simply because the company borrowed a lot and has little equity, so read it alongside debt and [[return-on-capital]]."
+  },
+  "example": "Net income 114 ÷ equity 654 = about 17.4% (fictional, millions USD).",
+  "related": [
+    "return-on-capital",
+    "balance-sheet",
+    "earnings"
+  ],
+  "markets": [
+    "stocks"
+  ],
+  "level": "intermediate",
+  "sourceIds": []
+}

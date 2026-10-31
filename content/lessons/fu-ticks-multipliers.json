@@ -1,0 +1,91 @@
+{
+  "id": "fu-ticks-multipliers",
+  "moduleId": "futures",
+  "title": "Tick size, tick value and multipliers",
+  "level": "beginner",
+  "estimatedMinutes": 15,
+  "inOneLine": {
+    "simple": "Futures prices move in fixed small steps called ticks, and each tick is worth a set amount of money per contract.",
+    "balanced": "[[tick-value|Tick value]] = [[tick-size]] × [[multiplier]] (or × [[contract-size]]). Profit or loss = number of ticks moved × tick value × number of contracts."
+  },
+  "explain": {
+    "simple": "A tick is the smallest step a futures price can move. The tick size is how big that step is, for example 0.25 of a point. The tick value is how much money one tick is worth for one contract. To find it, multiply the tick size by the multiplier, which is the money value of one whole point. Once you know the tick value, profit and loss is simple counting: how many ticks did price move, times the tick value, times how many contracts you hold.",
+    "balanced": "Two contracts can show prices that look alike yet be worth very different amounts per point. A 10-point move might be 100 USD on one contract and 500 USD on another. That is why the calculator asks you to enter the specification instead of assuming one. Some contracts quote a multiplier, others a contract size in units; both lead to the same idea of money per point. Exchanges can set different tick sizes for different contracts, and specifications can change, so check the exact contract each time. All specs in this lesson are fictional."
+  },
+  "realNumbers": {
+    "assumptions": [
+      "Example index future (fictional specs): multiplier 10 USD per point, tick size 0.25",
+      "Buy 2 contracts at 4,000.00",
+      "Sell to close at 4,012.50",
+      "Fees left out to keep the steps clear"
+    ],
+    "steps": [
+      "Tick value = 0.25 × 10 USD = 2.50 USD per tick, per contract.",
+      "Price move = 4,012.50 − 4,000.00 = 12.50 points.",
+      "Ticks moved = 12.50 ÷ 0.25 = 50 ticks.",
+      "Profit = 50 ticks × 2.50 USD × 2 contracts = 250 USD.",
+      "Check another way: 12.50 points × 10 USD × 2 contracts = 250 USD. Both methods agree."
+    ]
+  },
+  "anotherExample": {
+    "assumptions": [
+      "Example commodity future (fictional specs): contract size 100 units, tick size 0.01 USD per unit",
+      "Sell (go short) 3 contracts at 62.40",
+      "Price rises and you buy back to close at 62.85",
+      "Fees left out"
+    ],
+    "steps": [
+      "Tick value = 0.01 × 100 units = 1.00 USD per tick, per contract.",
+      "Price move = 62.85 − 62.40 = 0.45, against a short position.",
+      "Ticks moved = 0.45 ÷ 0.01 = 45 ticks against you.",
+      "Loss = 45 × 1.00 USD × 3 contracts = 135 USD.",
+      "Compare: a fictional contract with a multiplier of 50 USD per point would turn a 10-point move into 10 × 50 = 500 USD per contract, five times the 100 USD on the 10 USD contract."
+    ]
+  },
+  "explainSimpler": "Count the steps price moved, then multiply by what one step is worth, then by how many contracts you hold.",
+  "commonMistake": "Assuming every contract has the same tick value or multiplier, or using a number remembered from somewhere else. Always take tick size, tick value and multiplier from the specification of the exact contract you are looking at.",
+  "quickCheck": [
+    {
+      "id": "fu-ticks-multipliers-q1",
+      "prompt": "Fictional contract: tick size 0.5, multiplier 5 USD per point. What is the tick value?",
+      "options": [
+        { "id": "a", "text": "5.00 USD", "explanation": "No: that is the value of a whole point. One tick is only half a point here." },
+        { "id": "b", "text": "2.50 USD", "explanation": "Right: 0.5 × 5 USD = 2.50 USD per tick, per contract." },
+        { "id": "c", "text": "10.00 USD", "explanation": "No: that divides 5 by 0.5. Tick value = tick size × multiplier." }
+      ],
+      "correctOptionIds": ["b"],
+      "level": "beginner",
+      "glossaryIds": ["tick-value", "tick-size", "multiplier"]
+    },
+    {
+      "id": "fu-ticks-multipliers-q2",
+      "prompt": "Example index future (fictional specs: tick 0.25, tick value 2.50 USD). You buy 1 contract at 4,000.00 and sell at 3,995.00. What is the result?",
+      "options": [
+        { "id": "a", "text": "A 5 USD loss", "explanation": "No: that is the move in points, not in money." },
+        { "id": "b", "text": "A 50 USD gain", "explanation": "No: price fell after you bought, so this is a loss." },
+        { "id": "c", "text": "A 50 USD loss", "explanation": "Right: 5 points ÷ 0.25 = 20 ticks, and 20 × 2.50 USD = 50 USD lost." }
+      ],
+      "correctOptionIds": ["c"],
+      "level": "beginner",
+      "glossaryIds": ["tick-size", "tick-value"]
+    },
+    {
+      "id": "fu-ticks-multipliers-q3",
+      "prompt": "Two fictional contracts both move 10 points. Why might the money result differ?",
+      "options": [
+        { "id": "a", "text": "Each contract has its own multiplier", "explanation": "Right: money per point comes from each contract's own specification." },
+        { "id": "b", "text": "Points are always worth 1 USD", "explanation": "No: a point is worth whatever the specification says." },
+        { "id": "c", "text": "One may have a smaller tick size", "explanation": "No: tick size sets the smallest step, not the money per point. The multiplier decides what 10 points is worth." }
+      ],
+      "correctOptionIds": ["a"],
+      "level": "beginner",
+      "glossaryIds": ["multiplier"]
+    }
+  ],
+  "doItNow": {
+    "kind": "calculator",
+    "instructions": "Work out both examples in this lesson by hand first. Then open the futures contract calculator, enter the same fictional specs, entries and exits, and check your P/L and tick count. Finally, enter a made-up contract with a tick size of 0.1 and a tick value of 5 USD, and find how much a 3-point move is worth for 2 contracts."
+  },
+  "glossaryIds": ["tick-size", "tick-value", "multiplier", "contract-size"],
+  "sourceIds": []
+}

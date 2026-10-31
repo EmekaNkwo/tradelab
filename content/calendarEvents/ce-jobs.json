@@ -1,0 +1,18 @@
+{
+  "id": "ce-jobs",
+  "kind": "jobs",
+  "title": "Jobs reports",
+  "measures": "How many jobs were added or lost, the share of people looking for work who cannot find it (the unemployment rate), and often how fast wages are growing.",
+  "whyItMatters": "Jobs and wages show how strong an economy is and whether wage growth may push inflation up. Both shape expectations about interest rates, and through them currencies, stocks and commodities.",
+  "affectedMarkets": ["forex", "stocks", "commodities", "futures"],
+  "expectations": "A consensus forecast is published for the main figures. Earlier months are often revised, so traders look at the new figure, the revisions and the parts of the report together.",
+  "surprises": "A report can surprise on one figure and not another: many new jobs with slower wage growth, for example. Traders may react to the part they think the central bank will care about most, and the first move can reverse once the whole report has been read.",
+  "limits": "A strong jobs report is not automatically good or bad for any market. Its effect depends on expectations, on the other figures in the report and on everything else happening that day. Spreads can widen and prices can jump at the release.",
+  "keywords": ["jobs report", "payrolls", "unemployment", "jobless", "employment", "hiring", "wages", "labour market", "labor market", "job losses"],
+  "glossaryIds": ["employment-report", "consensus-forecast", "surprise", "inflation", "interest-rate"],
+  "lessonIds": ["fm-growth-jobs-inflation", "fx-expected-vs-actual", "fx-trading-around-news"],
+  "scenarioIds": [],
+  "samples": [
+    { "id": "s1", "title": "Westmark employment report (fictional)", "day": 5, "time": "12:30", "timeZone": "UTC", "where": "Westmark (fictional)", "details": "The fictional monthly report with jobs added, the unemployment rate and average wage growth, plus revisions to the two previous months." }
+  ]
+}

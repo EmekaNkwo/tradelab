@@ -1,0 +1,25 @@
+{
+  "id": "fa-balance-sheet-debt",
+  "skills": ["fundamental_analysis"],
+  "lab": "fundamental",
+  "level": "beginner",
+  "order": 2,
+  "title": "Balance sheet, debt and net debt",
+  "summary": "The balance sheet is a one-day snapshot of cash, debt and equity. Net debt = debt − cash. Compare debt with operating profit to see how heavy it is.",
+  "unreliableWhen": "When a single day's cash is unusually high or low, when debt is due soon but the balance sheet does not show when, or when you judge debt by its size without comparing it with profit.",
+  "goodExample": "A fictional food maker holds more cash than debt, so it has net cash and its operating profit covers interest many times.",
+  "badExample": "A fictional office-machine maker keeps the same debt while its operating profit halves, so interest takes twice the share of profit.",
+  "lessonIds": [
+    "st-balance-sheet"
+  ],
+  "chart": null,
+  "drillKind": null,
+  "scenarioIds": [],
+  "companyIds": [
+    "example-quickling-apps",
+    "example-steadybrook-foods",
+    "example-gadgetmoor-wholesale",
+    "example-faxworth-machines"
+  ],
+  "redFlagCaseIds": []
+}

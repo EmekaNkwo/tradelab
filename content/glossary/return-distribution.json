@@ -1,0 +1,23 @@
+{
+  "id": "return-distribution",
+  "term": "Return distribution",
+  "aliases": [
+    "distribution of returns",
+    "return statistics",
+    "trade distribution"
+  ],
+  "definition": {
+    "simple": "The full spread of trade results: not just the average, but the middle result, the range and the worst runs.",
+    "balanced": "An average can hide that most trades lost while a few big winners pulled it up. Look at the median, the share of the total from the best one or two trades, the longest losing run and the deepest [[drawdown]]. With few trades, all of these are very uncertain."
+  },
+  "example": "Results +3, −1, −1, −1, +2, −1, −1, +4, −1, −1 R: average +0.2R, but median −1R.",
+  "related": [
+    "r-multiple",
+    "drawdown",
+    "win-rate",
+    "sample-size"
+  ],
+  "markets": [],
+  "level": "advanced",
+  "sourceIds": []
+}

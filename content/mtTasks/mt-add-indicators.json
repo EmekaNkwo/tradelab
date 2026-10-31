@@ -1,0 +1,98 @@
+{
+  "id": "mt-add-indicators",
+  "title": "Add and remove indicators",
+  "summary": "Add a [[moving-average]], Bollinger Bands, RSI, MACD and ATR to a demo chart, check their settings, then remove them.",
+  "level": "intermediate",
+  "requiresDemo": true,
+  "steps": [
+    {
+      "text": "Check you are on your demo account before you start."
+    },
+    {
+      "text": "Open a EUR/USD candlestick chart on H1."
+    },
+    {
+      "text": "Open the indicators menu. It is often shown as an \"f\" icon at the top of the chart. It depends on your app version."
+    },
+    {
+      "text": "Choose to add an indicator to the main window, then pick Moving Average. Indicators are often grouped, for example under Trend. Set the period to 20 and the method to Simple, then add it."
+    },
+    {
+      "text": "Add Bollinger Bands to the main chart. Check the period is 20 and the deviation is 2."
+    },
+    {
+      "text": "Add RSI in a separate window below the chart. Check the period is 14. The app may let you show the 30 and 70 levels."
+    },
+    {
+      "text": "Add MACD in a separate window. Check the settings are 12, 26 and 9. Note how this app draws it: often the MACD line as bars and the signal as a line."
+    },
+    {
+      "text": "Add ATR in a separate window and check the period is 14. Read its value and convert it to pips: on EUR/USD, divide by 0.0001."
+    },
+    {
+      "text": "Scroll back through the chart. Find one place where the MA or MACD crossed late, after price had already moved a lot."
+    },
+    {
+      "text": "Remove each indicator. Open the indicators list, then tap or press and hold an indicator and choose delete (it depends on your app version)."
+    }
+  ],
+  "afterQuestions": [
+    {
+      "id": "mt-add-indicators-q1",
+      "prompt": "ATR 14 on your EUR/USD H1 chart shows 0.00110. What does that mean?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Price has moved about 11 pips per candle recently, in either direction",
+          "explanation": "Right: ATR measures the size of moves, not their direction."
+        },
+        {
+          "id": "b",
+          "text": "Price will rise 11 pips next hour",
+          "explanation": "No: ATR has no direction and does not forecast."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "intermediate",
+      "glossaryIds": [
+        "atr",
+        "pip"
+      ]
+    },
+    {
+      "id": "mt-add-indicators-q2",
+      "prompt": "Why did the moving average cross come after price had already moved?",
+      "options": [
+        {
+          "id": "a",
+          "text": "It is built from past closes, so it lags",
+          "explanation": "Right: every average runs behind price."
+        },
+        {
+          "id": "b",
+          "text": "Your app was slow to update",
+          "explanation": "No: the lag comes from the maths, not the app."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "intermediate",
+      "glossaryIds": [
+        "moving-average",
+        "lagging-indicator"
+      ]
+    }
+  ],
+  "glossaryIds": [
+    "moving-average",
+    "bollinger-bands",
+    "rsi",
+    "macd",
+    "atr",
+    "indicator",
+    "demo-account"
+  ]
+}

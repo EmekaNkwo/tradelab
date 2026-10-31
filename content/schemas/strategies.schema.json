@@ -1,0 +1,586 @@
+{
+  "title": "TradeLab strategies",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "trading",
+        "investing",
+        "risk_principle"
+      ]
+    },
+    "family": {
+      "type": "string",
+      "enum": [
+        "trend_following",
+        "breakout",
+        "pullback",
+        "mean_reversion",
+        "range",
+        "carry",
+        "seasonality",
+        "income",
+        "value",
+        "growth",
+        "risk_management"
+      ]
+    },
+    "markets": {
+      "minItems": 1,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "forex",
+          "stocks",
+          "penny_stocks",
+          "commodities",
+          "futures"
+        ]
+      }
+    },
+    "level": {
+      "type": "string",
+      "enum": [
+        "beginner",
+        "intermediate",
+        "advanced"
+      ]
+    },
+    "horizon": {
+      "type": "string",
+      "enum": [
+        "intraday",
+        "swing",
+        "position",
+        "long_term"
+      ]
+    },
+    "style": {
+      "type": "string",
+      "enum": [
+        "rules_based",
+        "discretionary"
+      ]
+    },
+    "analysis": {
+      "type": "string",
+      "enum": [
+        "technical",
+        "fundamental",
+        "quantitative",
+        "mixed"
+      ]
+    },
+    "attribution": {
+      "type": "string",
+      "enum": [
+        "generic",
+        "documented"
+      ]
+    },
+    "traderIds": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+      }
+    },
+    "overview": {
+      "type": "object",
+      "properties": {
+        "objective": {
+          "type": "string",
+          "minLength": 1
+        },
+        "holdingPeriod": {
+          "type": "string",
+          "minLength": 1
+        },
+        "context": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "objective",
+        "holdingPeriod",
+        "context"
+      ],
+      "additionalProperties": false
+    },
+    "evidence": {
+      "anyOf": [
+        {
+          "type": "object",
+          "properties": {
+            "level": {
+              "type": "string",
+              "enum": [
+                "primary",
+                "strong_secondary",
+                "limited_or_disputed"
+              ]
+            },
+            "summary": {
+              "type": "string",
+              "minLength": 1
+            },
+            "sourceIds": {
+              "minItems": 1,
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+              }
+            }
+          },
+          "required": [
+            "level",
+            "summary",
+            "sourceIds"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "simple": {
+      "type": "object",
+      "properties": {
+        "simple": {
+          "type": "string",
+          "minLength": 1
+        },
+        "balanced": {
+          "type": "string",
+          "minLength": 1
+        },
+        "advanced": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "simple"
+      ],
+      "additionalProperties": false
+    },
+    "reasoning": {
+      "type": "string",
+      "minLength": 1
+    },
+    "rules": {
+      "anyOf": [
+        {
+          "type": "object",
+          "properties": {
+            "label": {
+              "type": "string",
+              "minLength": 1
+            },
+            "rules": {
+              "minItems": 1,
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          },
+          "required": [
+            "label",
+            "rules"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "demo": {
+      "anyOf": [
+        {
+          "type": "object",
+          "properties": {
+            "scenario": {
+              "type": "string",
+              "enum": [
+                "strong_uptrend",
+                "downtrend",
+                "range",
+                "breakout",
+                "false_breakout",
+                "pullback",
+                "reversal",
+                "high_volatility",
+                "low_volatility",
+                "news_shock",
+                "crash",
+                "recovery",
+                "sideways"
+              ]
+            },
+            "overlays": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "enum": [
+                  "sma20",
+                  "ema50",
+                  "bollinger",
+                  "channel20"
+                ]
+              }
+            },
+            "pane": {
+              "type": "string",
+              "enum": [
+                "none",
+                "volume",
+                "rsi",
+                "macd",
+                "atr"
+              ]
+            },
+            "lookFor": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "scenario",
+            "overlays",
+            "pane",
+            "lookFor"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "replay": {
+      "anyOf": [
+        {
+          "type": "object",
+          "properties": {
+            "scenario": {
+              "type": "string",
+              "enum": [
+                "strong_uptrend",
+                "downtrend",
+                "range",
+                "breakout",
+                "false_breakout",
+                "pullback",
+                "reversal",
+                "high_volatility",
+                "low_volatility",
+                "news_shock",
+                "crash",
+                "recovery",
+                "sideways"
+              ]
+            },
+            "instructions": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "scenario",
+            "instructions"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "exercise": {
+      "anyOf": [
+        {
+          "type": "object",
+          "properties": {
+            "prompt": {
+              "type": "string",
+              "minLength": 1
+            },
+            "situation": {
+              "type": "string",
+              "minLength": 1
+            },
+            "options": {
+              "minItems": 3,
+              "maxItems": 8,
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "pattern": "^[a-z]$"
+                  },
+                  "text": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "correct": {
+                    "type": "boolean"
+                  },
+                  "explanation": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                },
+                "required": [
+                  "id",
+                  "text",
+                  "correct",
+                  "explanation"
+                ],
+                "additionalProperties": false
+              }
+            }
+          },
+          "required": [
+            "prompt",
+            "situation",
+            "options"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "failureAnalysis": {
+      "minItems": 1,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "limitations": {
+      "minItems": 1,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "knowledgeCheck": {
+      "minItems": 3,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+          },
+          "prompt": {
+            "type": "string",
+            "minLength": 1
+          },
+          "options": {
+            "minItems": 2,
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+                },
+                "text": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "explanation": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "id",
+                "text",
+                "explanation"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "correctOptionIds": {
+            "minItems": 1,
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+            }
+          },
+          "level": {
+            "type": "string",
+            "enum": [
+              "beginner",
+              "intermediate",
+              "advanced"
+            ]
+          },
+          "glossaryIds": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+            }
+          },
+          "skills": {
+            "minItems": 1,
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "market_fundamentals",
+                "chart_reading",
+                "technical_analysis",
+                "fundamental_analysis",
+                "risk_management",
+                "strategy_understanding",
+                "execution_discipline",
+                "psychology",
+                "backtesting_literacy",
+                "statistical_reasoning"
+              ]
+            }
+          }
+        },
+        "required": [
+          "id",
+          "prompt",
+          "options",
+          "correctOptionIds",
+          "level",
+          "glossaryIds"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "lessonIds": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+      }
+    },
+    "glossaryIds": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+      }
+    },
+    "sourceIds": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+      }
+    },
+    "review": {
+      "anyOf": [
+        {
+          "type": "object",
+          "properties": {
+            "status": {
+              "type": "string",
+              "const": "human_reviewed"
+            },
+            "reviewer": {
+              "type": "string",
+              "minLength": 1
+            },
+            "reviewedAt": {
+              "type": "string",
+              "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+            }
+          },
+          "required": [
+            "status",
+            "reviewer",
+            "reviewedAt"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "skills": {
+      "minItems": 1,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "market_fundamentals",
+          "chart_reading",
+          "technical_analysis",
+          "fundamental_analysis",
+          "risk_management",
+          "strategy_understanding",
+          "execution_discipline",
+          "psychology",
+          "backtesting_literacy",
+          "statistical_reasoning"
+        ]
+      }
+    }
+  },
+  "required": [
+    "id",
+    "title",
+    "category",
+    "family",
+    "markets",
+    "level",
+    "horizon",
+    "style",
+    "analysis",
+    "attribution",
+    "traderIds",
+    "overview",
+    "evidence",
+    "simple",
+    "reasoning",
+    "rules",
+    "demo",
+    "replay",
+    "exercise",
+    "failureAnalysis",
+    "limitations",
+    "knowledgeCheck",
+    "lessonIds",
+    "glossaryIds",
+    "sourceIds",
+    "review",
+    "skills"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,23 @@
+{
+  "id": "tick-size",
+  "term": "Tick size",
+  "aliases": [
+    "tick",
+    "minimum price move",
+    "minimum fluctuation"
+  ],
+  "definition": {
+    "simple": "The smallest step a futures price can move.",
+    "balanced": "Prices move in whole ticks. The tick size is set in the contract specification, and differs between contracts. Together with the [[multiplier]] it sets the [[tick-value]]."
+  },
+  "example": "Fictional contract with a tick size of 0.25: price can move from 4,000.00 to 4,000.25, but not to 4,000.10.",
+  "related": [
+    "tick-value",
+    "multiplier"
+  ],
+  "markets": [
+    "futures"
+  ],
+  "level": "beginner",
+  "sourceIds": []
+}

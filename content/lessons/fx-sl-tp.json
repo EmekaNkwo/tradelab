@@ -1,0 +1,91 @@
+{
+  "id": "fx-sl-tp",
+  "moduleId": "forex-orders",
+  "title": "Stop loss and take profit",
+  "level": "beginner",
+  "estimatedMinutes": 15,
+  "inOneLine": {
+    "simple": "A stop loss closes a losing trade at a level you chose. A take profit closes a winning trade at a level you chose.",
+    "balanced": "A buy closes at the [[bid]], so its [[stop-loss]] and [[take-profit]] trigger on the bid. A sell closes at the [[ask]], so its levels trigger on the ask."
+  },
+  "explain": {
+    "simple": "Before you open a trade, decide two prices. The stop loss is where your idea is wrong, so you get out. The take profit is where you are happy to bank the gain. For a buy, the stop loss goes below your entry and the take profit above. For a sell, it is the other way round. A buy is closed by selling, at the bid. A sell is closed by buying, at the ask. So a sell's stop can trigger when the ask touches it, even if the chart's bid line has not.",
+    "balanced": "Risk in money = stop distance in pips × [[pip-value]]. Set the stop first from your analysis, then choose a size that keeps that risk acceptable. A stop loss becomes a market order when triggered, so the fill can be worse than the level. A take profit normally fills at its level or better. Many brokers enforce a minimum distance from the current price. You can move a stop after entry, but moving it further away to avoid a loss defeats its purpose."
+  },
+  "realNumbers": {
+    "assumptions": [
+      "Illustrative prices",
+      "Account currency USD",
+      "Buy 0.10 lot EUR/USD at ask 1.10012; pip value 1 USD",
+      "Stop loss 1.09512 (50 pips below); take profit 1.11012 (100 pips above)",
+      "No slippage in this example"
+    ],
+    "steps": [
+      "The buy closes at the bid, so the stop triggers when the bid falls to 1.09512.",
+      "Planned loss = 50 × 1 USD = 50 USD.",
+      "The take profit triggers when the bid rises to 1.11012.",
+      "Planned gain = 100 × 1 USD = 100 USD. Neither result is guaranteed: price may hit either level first, or neither."
+    ]
+  },
+  "anotherExample": {
+    "assumptions": [
+      "Illustrative prices",
+      "Sell 0.10 lot GBP/USD at bid 1.25000; pip value 1 USD",
+      "Spread 2 pips",
+      "Stop loss 1.25300 (30 pips above); take profit 1.24400 (60 pips below)"
+    ],
+    "steps": [
+      "The sell closes at the ask, so the stop triggers when the ask rises to 1.25300.",
+      "With a 2-pip spread, that happens when the bid is about 1.25280, 2 pips below the stop on a bid chart.",
+      "Planned loss = 30 × 1 USD = 30 USD.",
+      "The take profit triggers when the ask falls to 1.24400. Planned gain = 60 × 1 USD = 60 USD."
+    ]
+  },
+  "explainSimpler": "Stop loss: 'get me out if I'm wrong.' Take profit: 'get me out when I've got enough.' Buys watch the bid. Sells watch the ask.",
+  "commonMistake": "Placing a sell's stop exactly at a level seen on the bid chart. Because the sell closes at the ask, the spread can trigger it early. Another mistake is moving the stop further away when price gets close.",
+  "quickCheck": [
+    {
+      "id": "fx-sl-tp-q1",
+      "prompt": "You hold a sell trade. Which price triggers its stop loss?",
+      "options": [
+        { "id": "a", "text": "The ask", "explanation": "Right: a sell is closed by buying, and buys happen at the ask." },
+        { "id": "b", "text": "The bid, the price you sold at", "explanation": "No: the bid closes buy trades, not sell trades." }
+      ],
+      "correctOptionIds": ["a"],
+      "level": "beginner",
+      "glossaryIds": ["stop-loss", "ask"]
+    },
+    {
+      "id": "fx-sl-tp-q2",
+      "prompt": "Buy 0.10 lot EUR/USD (pip value 1 USD) with a 40-pip stop. What is the planned loss if the stop fills at its level?",
+      "options": [
+        { "id": "a", "text": "4 USD", "explanation": "No: that would be a 4-pip stop." },
+        { "id": "b", "text": "40 USD", "explanation": "Right: 40 pips × 1 USD = 40 USD." },
+        { "id": "c", "text": "400 USD", "explanation": "No: that would need a pip value of 10 USD, which is 1.00 lot." }
+      ],
+      "correctOptionIds": ["b"],
+      "level": "beginner",
+      "glossaryIds": ["stop-loss", "pip-value"]
+    },
+    {
+      "id": "fx-sl-tp-q3",
+      "prompt": "For a buy trade, where do the stop loss and take profit go?",
+      "options": [
+        { "id": "a", "text": "Stop loss below entry, take profit above", "explanation": "Right: a buy loses if price falls and gains if it rises." },
+        { "id": "b", "text": "Stop loss above entry, take profit below it", "explanation": "No: that is the layout for a sell trade." },
+        { "id": "c", "text": "Both below entry", "explanation": "No: a take profit below entry would close a buy at a loss." }
+      ],
+      "correctOptionIds": ["a"],
+      "level": "beginner",
+      "glossaryIds": ["stop-loss", "take-profit"]
+    }
+  ],
+  "doItNow": {
+    "kind": "metatrader",
+    "instructions": "On your demo account, place a 0.01 lot market order with a stop loss and take profit, move the stop, then close the trade. Follow the task card. Repeat until you have done 5 demo trades.",
+    "mtTaskId": "mt-demo-trade-sl-tp"
+  },
+  "homework": "For each of your 5 demo trades, write down the entry, stop loss, take profit, planned loss in money, and how the trade closed.",
+  "glossaryIds": ["stop-loss", "take-profit", "bid", "ask", "spread", "pip-value"],
+  "sourceIds": []
+}

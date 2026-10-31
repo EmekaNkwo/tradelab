@@ -1,0 +1,137 @@
+appId: com.tradelab.app
+name: 10c Restore from the backup file
+tags:
+  - e2e
+  - journey
+  - backup
+  - device-specific
+# BACKUP_ROOT: the DocumentsUI root that holds the backup. 10b exports to Google
+# Drive, whose root is listed as "Drive" (the default). Override with
+# -e BACKUP_ROOT="Downloads" if the file was put in Downloads another way
+# (docs/e2e.md, "Backup target"). Not declared under `env:`: with Maestro 2.12.0
+# a flow's own env value overrides the CLI -e value, so the default is set in JS.
+---
+# Spec §36 step 10, part C: on a fresh install (after the real uninstall +
+# install in scripts/e2e-journey.sh), restore the file 10b exported to Drive
+# and check the progress came back.
+#
+# A new phone restores from the first onboarding screen: "Restore from a
+# backup" (testID onboarding-restore, components/backup/OnboardingRestore.tsx),
+# which uses the same restore as More > Backup and goes straight to Home after
+# a successful restore. The picker is expo-document-picker
+# (Intent.ACTION_OPEN_DOCUMENT) -> the system DocumentsUI picker
+# (com.google.android.documentsui on this phone).
+#
+# The picker steps are required. The file name pattern comes from
+# data/backup/export.ts: tradelab-backup-YYYY-MM-DD-HH-MM-SS.json
+- evalScript: "${output.backupRoot = (typeof BACKUP_ROOT !== 'undefined' && BACKUP_ROOT) ? BACKUP_ROOT : 'Drive'}"
+- evalScript: "${output.backupAccount = (typeof BACKUP_ACCOUNT !== 'undefined' && BACKUP_ACCOUNT) ? BACKUP_ACCOUNT.replace(/[.+]/g, function (c) { return '\\\\' + c; }) : ''}"
+- launchApp:
+    appId: com.tradelab.app
+    permissions:
+      notifications: allow
+# A fresh install must open on onboarding, not Home.
+- extendedWaitUntil:
+    visible:
+      id: "onboarding-screen"
+    timeout: 30000
+- scrollUntilVisible:
+    element:
+      id: "onboarding-restore"
+    direction: DOWN
+- tapOn:
+    id: "onboarding-restore"
+    enabled: true
+
+# ---- System file picker (DocumentsUI) ----
+# The file must be visible in the picker BEFORE anything else happens; if it
+# isn't, the flow fails here (no waiting for a person).
+- extendedWaitUntil:
+    visible: "Show roots"            # DocumentsUI's drawer button (content description)
+    timeout: 15000
+# No screenshot of the opened picker: it lists the owner's recent files.
+- tapOn: "Show roots"
+- waitForAnimationToEnd:
+    timeout: 3000
+# With several Google accounts on the phone, DocumentsUI lists one "Drive" root
+# per account, each with the account as its subtitle (2026-10-30: four "Drive"
+# roots on the test phone). Pass -e BACKUP_ACCOUNT=<the account 10b uploaded
+# to> to open that account's root; the account is not stored in this file.
+# Without it, the single root named BACKUP_ROOT is tapped.
+- runFlow:
+    when:
+      true: ${output.backupAccount !== ''}
+    commands:
+      # Scoped to the drawer's roots list: the "Recent" screen behind it also
+      # shows each account in its "Browse files in other apps" strip.
+      - tapOn:
+          text: ${output.backupAccount}
+          childOf:
+            id: "com.google.android.documentsui:id/roots_list"
+- runFlow:
+    when:
+      true: ${output.backupAccount === ''}
+    commands:
+      - tapOn: "${output.backupRoot}"
+# A Drive root opens on its folders ("My Drive", ...), and a large Drive does
+# not list the backup near the top (2026-10-30: not found by scrolling), so the
+# picker's own search is used to find it inside the chosen root.
+- waitForAnimationToEnd:
+    timeout: 5000
+- tapOn: "Search"
+- inputText: "tradelab-backup"
+- pressKey: Enter
+- extendedWaitUntil:
+    visible: "tradelab-backup-.*\\.json"
+    timeout: 30000                   # Drive lists its files over the network
+# Cropped to the backup file: the rest of the picker shows the owner's other
+# Drive files and account.
+- takeScreenshot:
+    path: 10c-picker-file
+    cropOn: "tradelab-backup-.*\\.json"
+- assertVisible: "tradelab-backup-.*\\.json"
+# DocumentsUI sorts by modified date (newest first) by default, so index 0 is
+# the newest backup. Check the screenshot if several are present.
+- tapOn:
+    text: "tradelab-backup-.*\\.json"
+    index: 0
+
+# ---- Preview and confirm (components/backup/RestorePreview.tsx) ----
+- extendedWaitUntil:
+    visible: "Restore this backup\\?"
+    timeout: 30000
+- assertVisible: "Contains [0-9]+ saved items?\\."
+# The backup from 10b holds a learner profile, so this warning must not show.
+- assertNotVisible:
+    id: "restore-no-profile"
+- takeScreenshot: 10c-restore-preview
+- scrollUntilVisible:
+    element:
+      text: "Replace my data"
+    direction: DOWN
+- tapOn: "Replace my data"
+# After a successful restore, onboarding either goes straight to Home or,
+# when there is something to report, shows a result with "Go to Home"
+# (onboarding-restore-home). Notes it can show: restore-reminders-permission,
+# restore-step-notice-off (components/backup/RestoreResult.tsx). The wait
+# decides the branch;
+# Home is then required.
+- extendedWaitUntil:
+    visible:
+      id: "onboarding-restore-home"
+    timeout: 20000
+    optional: true
+- runFlow:
+    when:
+      visible:
+        id: "onboarding-restore-home"
+    commands:
+      - takeScreenshot: 10c-restore-result
+      - tapOn:
+          id: "onboarding-restore-home"
+- extendedWaitUntil:
+    visible:
+      id: "home-screen"
+    timeout: 60000
+- takeScreenshot: 10c-restored
+- runFlow: subflows/assert-progress.yaml

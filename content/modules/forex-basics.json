@@ -1,0 +1,12 @@
+{
+  "id": "forex-basics",
+  "skills": ["market_fundamentals"],
+  "title": "Forex basics",
+  "summary": "Currency pairs, base and quote, majors, minors and exotics, bid, ask, spread, and trading sessions.",
+  "markets": ["forex"],
+  "level": "beginner",
+  "lessonIds": ["fx-currency-pairs", "fx-pair-types", "fx-bid-ask-spread", "fx-sessions"],
+  "checkpointQuizId": "forex-basics-checkpoint",
+  "practicalResult": "Add 5 pairs in MetaTrader and log their spreads at two times of day.",
+  "minPracticeDays": 0
+}

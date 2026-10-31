@@ -1,0 +1,174 @@
+{
+  "id": "forex-indicators-checkpoint",
+  "title": "Checkpoint: indicators and their limits",
+  "passMark": 0.8,
+  "questions": [
+    {
+      "id": "forex-indicators-checkpoint-q1",
+      "prompt": "A 3-period SMA uses closes 1.3000, 1.3030 and 1.3060. What is it?",
+      "options": [
+        {
+          "id": "a",
+          "text": "1.3030",
+          "explanation": "Right: (1.3000 + 1.3030 + 1.3060) ÷ 3 = 3.9090 ÷ 3 = 1.3030."
+        },
+        {
+          "id": "b",
+          "text": "1.3060",
+          "explanation": "No: that is the last close."
+        },
+        {
+          "id": "c",
+          "text": "3.9090",
+          "explanation": "No: that is the sum. Divide by 3."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "intermediate",
+      "glossaryIds": [
+        "moving-average"
+      ]
+    },
+    {
+      "id": "forex-indicators-checkpoint-q2",
+      "prompt": "Using the simplified formula, average gain 9 pips and average loss 3 pips give what RSI?",
+      "options": [
+        {
+          "id": "a",
+          "text": "75",
+          "explanation": "Right: RS = 9 ÷ 3 = 3, and RSI = 100 − 100 ÷ 4 = 75."
+        },
+        {
+          "id": "b",
+          "text": "25",
+          "explanation": "No: that would be the result if gains and losses were swapped."
+        },
+        {
+          "id": "c",
+          "text": "100",
+          "explanation": "No: RSI reaches 100 only when there are no losses at all. Here the average loss is 3 pips. RS = 9 ÷ 3 = 3, and RSI = 100 − 100 ÷ (1 + 3) = 75."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "intermediate",
+      "glossaryIds": [
+        "rsi"
+      ]
+    },
+    {
+      "id": "forex-indicators-checkpoint-q3",
+      "prompt": "RSI 14 has been above 70 for 15 candles in a strong uptrend. What should you conclude?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Recent up moves have been much bigger than down moves",
+          "explanation": "Right: that is what RSI measures. It does not say when the move ends."
+        },
+        {
+          "id": "b",
+          "text": "Price is overbought, so it must fall soon",
+          "explanation": "No: overbought readings can last while price keeps rising."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "intermediate",
+      "glossaryIds": [
+        "rsi",
+        "overbought-oversold"
+      ]
+    },
+    {
+      "id": "forex-indicators-checkpoint-q4",
+      "prompt": "EMA 12 = 1.08420 and EMA 26 = 1.08300. The signal line is 0.00150. What is the MACD histogram?",
+      "options": [
+        {
+          "id": "a",
+          "text": "−0.00030",
+          "explanation": "Right: MACD line = 0.00120, and 0.00120 − 0.00150 = −0.00030."
+        },
+        {
+          "id": "b",
+          "text": "+0.00120",
+          "explanation": "No: that is the MACD line. The histogram is MACD line minus signal line."
+        },
+        {
+          "id": "c",
+          "text": "+0.00030",
+          "explanation": "No: check the sign. The MACD line is below the signal line."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "intermediate",
+      "glossaryIds": [
+        "macd"
+      ]
+    },
+    {
+      "id": "forex-indicators-checkpoint-q5",
+      "prompt": "Previous close 1.15000. Candle high 1.15400, low 1.15200. What is the true range?",
+      "options": [
+        {
+          "id": "a",
+          "text": "40 pips",
+          "explanation": "Right: high − previous close = 40 pips, larger than high − low (20) and low − previous close (20)."
+        },
+        {
+          "id": "b",
+          "text": "20 pips",
+          "explanation": "No: high − low misses the gap up from the previous close."
+        },
+        {
+          "id": "c",
+          "text": "0.4 pips",
+          "explanation": "No: 1.15400 − 1.15000 = 0.00400, which is 40 pips, not 0.4."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "intermediate",
+      "glossaryIds": [
+        "atr"
+      ]
+    },
+    {
+      "id": "forex-indicators-checkpoint-q6",
+      "prompt": "Each option pairs a tool with a condition where it often misleads. Which pairs are right? Select all that apply.",
+      "options": [
+        {
+          "id": "a",
+          "text": "Moving-average crosses: a sideways range",
+          "explanation": "Right: price crosses a flat average again and again."
+        },
+        {
+          "id": "b",
+          "text": "Bollinger Band touch as a reversal signal: a strong trend",
+          "explanation": "Right: price can ride one band for many candles."
+        },
+        {
+          "id": "c",
+          "text": "ATR: it is never misleading",
+          "explanation": "No: ATR describes the past, so it can be far too low just before a sudden news move."
+        }
+      ],
+      "correctOptionIds": [
+        "a",
+        "b"
+      ],
+      "level": "intermediate",
+      "glossaryIds": [
+        "moving-average",
+        "bollinger-bands",
+        "atr"
+      ]
+    }
+  ]
+}

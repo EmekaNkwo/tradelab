@@ -1,0 +1,13 @@
+{
+  "id": "stop-loss",
+  "term": "Stop loss",
+  "aliases": ["stop", "SL"],
+  "definition": {
+    "simple": "An order that closes your trade if price moves against you to a level you chose in advance. It limits how much you planned to lose.",
+    "balanced": "A pending order placed at the price where your trade idea is proven wrong. It becomes a market order when reached, so in fast markets or gaps it can fill at a worse price than the stop level."
+  },
+  "related": ["pip"],
+  "markets": [],
+  "level": "beginner",
+  "sourceIds": []
+}

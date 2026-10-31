@@ -1,0 +1,22 @@
+{
+  "id": "government-debt",
+  "term": "Government debt",
+  "aliases": [
+    "public debt",
+    "national debt",
+    "sovereign debt"
+  ],
+  "definition": {
+    "simple": "The total amount a government has borrowed and not yet repaid.",
+    "balanced": "Often compared with [[gdp]] as debt ÷ GDP. A yearly deficit (spending above revenue) adds to the debt. Higher [[interest-rate|interest rates]] raise the cost of carrying it as old debt is refinanced. How much debt is 'too much' is debated, not a fixed line."
+  },
+  "example": "Hypothetical: debt 480 billion WMK, GDP 800 billion WMK. Debt ÷ GDP = 60%.",
+  "related": [
+    "fiscal-policy",
+    "gdp",
+    "interest-rate"
+  ],
+  "markets": [],
+  "level": "beginner",
+  "sourceIds": []
+}

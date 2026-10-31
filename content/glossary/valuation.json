@@ -1,0 +1,21 @@
+{
+  "id": "valuation",
+  "term": "Valuation",
+  "aliases": [
+    "valuing a company"
+  ],
+  "definition": {
+    "simple": "Judging what a company might be worth compared with the price you would pay for it.",
+    "balanced": "Simple valuation tools compare the price with profit, cash or dividends: [[pe-ratio|P/E]], earnings yield (EPS ÷ price) and [[dividend-yield]]. A good business can be a poor investment if the price already assumes more than it later delivers. Every valuation rests on guesses about the future."
+  },
+  "related": [
+    "pe-ratio",
+    "market-capitalisation",
+    "dividend-yield"
+  ],
+  "markets": [
+    "stocks"
+  ],
+  "level": "intermediate",
+  "sourceIds": []
+}

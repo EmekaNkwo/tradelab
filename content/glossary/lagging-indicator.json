@@ -1,0 +1,20 @@
+{
+  "id": "lagging-indicator",
+  "term": "Lagging indicator",
+  "aliases": [
+    "lag",
+    "lagging"
+  ],
+  "definition": {
+    "simple": "An indicator that reacts only after price has already moved, because it is built from past prices.",
+    "balanced": "All averages lag. A longer period gives a smoother line but more lag. A shorter period reacts faster but changes direction more often for no lasting reason, which gives more false signals."
+  },
+  "example": "A 5-period average of closes at 1.1010, 1.1020, 1.1030, 1.1040 and 1.1100 is 1.1040, which is 60 pips below the last close.",
+  "related": [
+    "indicator",
+    "moving-average"
+  ],
+  "markets": [],
+  "level": "intermediate",
+  "sourceIds": []
+}

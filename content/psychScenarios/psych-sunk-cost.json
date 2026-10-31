@@ -1,0 +1,37 @@
+{
+  "id": "psych-sunk-cost",
+  "topic": "sunk-cost",
+  "title": "Too much work to stop now",
+  "situation": "You spent two weekends building a strategy and testing it on simulated practice charts. Over 100 simulated trades it lost money after costs like the [[spread]], and you cannot find a rule that clearly fixes it. You do not want to give up because of all the time you put in.",
+  "question": "What do you do next?",
+  "responses": [
+    {
+      "id": "a",
+      "text": "Start trading it on your demo account anyway. You have invested too much to stop.",
+      "quality": "harmful",
+      "explanation": "The time you spent is gone whichever way you choose. Continuing because of it is called the sunk cost trap."
+    },
+    {
+      "id": "b",
+      "text": "Keep changing rules until the backtest shows a profit.",
+      "quality": "harmful",
+      "explanation": "Changing rules until past results look good can produce a strategy that only fits that one set of data."
+    },
+    {
+      "id": "c",
+      "text": "Write down what you learned from the test, set the strategy aside, and start from a fresh idea.",
+      "quality": "helpful",
+      "explanation": "The test gave you a clear answer, which is useful. Your notes keep the lessons even though the strategy did not work."
+    },
+    {
+      "id": "d",
+      "text": "Leave it for a month and look at it again then.",
+      "quality": "mixed",
+      "explanation": "Some distance can help you think clearly, but it does not change what the test showed."
+    }
+  ],
+  "takeaway": "Time already spent is gone either way. Decide based on what the evidence shows now.",
+  "glossaryIds": [
+    "spread"
+  ]
+}

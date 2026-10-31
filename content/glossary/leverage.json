@@ -1,0 +1,13 @@
+{
+  "id": "leverage",
+  "term": "Leverage",
+  "aliases": [],
+  "definition": {
+    "simple": "Borrowed buying power that lets a small deposit control a bigger position. It makes both gains and losses bigger.",
+    "balanced": "The ratio between the size of a position and the [[margin]] needed to open it. At 1:100 leverage, 1 unit of margin controls 100 units of position, so a 1% price move changes the position's value by an amount equal to the whole margin."
+  },
+  "related": ["margin"],
+  "markets": ["forex", "commodities", "futures"],
+  "level": "beginner",
+  "sourceIds": []
+}

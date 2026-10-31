@@ -1,0 +1,27 @@
+{
+  "id": "ta-levels-consolidation",
+  "skills": ["chart_reading", "technical_analysis"],
+  "lab": "technical",
+  "level": "beginner",
+  "order": 3,
+  "title": "Support, resistance and consolidation",
+  "summary": "Support and resistance are zones where price has turned before. A consolidation is a sideways box between them, often after a bigger move.",
+  "unreliableWhen": "Levels are zones, not exact lines, and every chart shows some level if you look hard enough. A box drawn after the fact always looks neat. Price can leave a consolidation either way.",
+  "goodExample": "Drawing a zone through three earlier turns at 1.0848–1.0855 and noting the box is about 2 ATR tall.",
+  "badExample": "Drawing a new line at every wick until the chart is full of lines, or expecting a level to hold because it held before.",
+  "lessonIds": [
+    "fx-support-resistance",
+    "ta-consolidation-channels",
+    "fx-market-structure"
+  ],
+  "chart": {
+    "scenario": "range",
+    "overlays": [],
+    "pane": "atr",
+    "lookFor": "Use the Zone tool to mark the top and bottom of the range where price turned at least twice. Compare the box height with ATR 14 in the lower pane."
+  },
+  "drillKind": "find_the_trend",
+  "scenarioIds": [],
+  "companyIds": [],
+  "redFlagCaseIds": []
+}

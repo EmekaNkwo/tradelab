@@ -1,0 +1,21 @@
+appId: com.tradelab.app
+---
+# Ticks a multiple-choice chip (components/ui/ChoiceChips.tsx) only if it is not
+# already ticked. A ticked chip's visible text gains a "✓ " prefix while its
+# accessibilityLabel stays the plain label, so the plain label regex in LABEL
+# still finds it; the `checked: false` guard stops us un-ticking it.
+# A resumed MetaTrader task draft (features/metatrader/useMtTask.ts saves drafts)
+# can start with steps already ticked, which is why this guard exists.
+- scrollUntilVisible:
+    element:
+      text: ${LABEL}
+    direction: DOWN
+    timeout: 20000
+- runFlow:
+    when:
+      visible:
+        text: ${LABEL}
+        checked: false
+    commands:
+      - tapOn:
+          text: ${LABEL}

@@ -1,0 +1,146 @@
+{
+  "id": "ps-gaps-halts-staying-out",
+  "moduleId": "penny-stocks",
+  "title": "Gaps, halts, short-selling limits, and when to stay out",
+  "level": "beginner",
+  "estimatedMinutes": 20,
+  "inOneLine": {
+    "simple": "In small shares, the hard part is often getting out. Overnight [[gap|gaps]] and [[trading-halt|trading halts]] can skip right past your stop, so sometimes the best trade is no trade.",
+    "balanced": "A [[stop-loss]] cannot fill while trading is halted and fills at the next available price after a gap. [[short-selling|Short selling]] small shares is often impossible, costly, or open to unlimited losses. Before any trade, ask: if this goes wrong, can I get out, and at what cost?"
+  },
+  "explain": {
+    "simple": "News about small companies often comes out when the market is closed, such as a new share sale or a failed product. The next day, the price can open far away from where it closed. Your stop-loss then fills at that new price, not at your level. A trading halt is a pause in trading. While it lasts, you cannot sell at all. When trading restarts, the price may be much lower. Some traders try to profit from falls by short selling, but small shares can be hard or impossible to borrow, and a sudden spike can cause losses with no upper limit. All examples here are fictional.",
+    "balanced": "Put together, these risks mean your planned loss and your real loss can be very different. A good test before entering: 'What is the worst realistic exit?' If the answer is 'I might not be able to sell for days' or 'a gap could cost three times my planned risk', the position must be much smaller, or skipped. Staying out is a real decision with real value: no setup is worth it when you cannot get enough information, the spread eats most of the expected move, the share is being heavily promoted, or your order would be a large part of daily volume."
+  },
+  "realNumbers": {
+    "assumptions": [
+      "Fictional share bought: 2,000 shares at 0.80 USD, stop-loss at 0.70 USD",
+      "After the close, the company announces a large new share sale",
+      "Next morning the first trade is at 0.45 USD"
+    ],
+    "steps": [
+      "Planned loss = (0.80 − 0.70) × 2,000 = 0.10 × 2,000 = 200 USD.",
+      "The stop triggers at the open and fills near 0.45, the first available price.",
+      "Real loss = (0.80 − 0.45) × 2,000 = 0.35 × 2,000 = 700 USD.",
+      "700 ÷ 200 = 3.5. The real loss was 3.5 times the plan, and in a thin market the fill could be even lower."
+    ]
+  },
+  "anotherExample": {
+    "assumptions": [
+      "Fictional short sale: 2,000 shares sold short at 0.50 USD",
+      "A promotion pushes the price to 1.50 USD before the trader buys back",
+      "Borrowing costs left out to keep it simple"
+    ],
+    "steps": [
+      "Money received from the short sale: 2,000 × 0.50 = 1,000 USD.",
+      "Cost to buy back: 2,000 × 1.50 = 3,000 USD.",
+      "Loss = 3,000 − 1,000 = 2,000 USD, twice the 1,000 USD the trader took in.",
+      "A share cannot fall below zero, but it can rise without a fixed limit. That is why short losses have no fixed cap.",
+      "Many small shares cannot be borrowed at all, so a broker may simply refuse the short."
+    ]
+  },
+  "explainSimpler": "Before you go in, picture the worst way out. If the door might be locked (a halt) or might open somewhere far away (a gap), stay out or go very small.",
+  "commonMistake": "Believing a stop-loss sets your maximum loss. It is an order, not a guarantee. Gaps and halts can make the real loss several times the planned one.",
+  "quickCheck": [
+    {
+      "id": "ps-gaps-halts-staying-out-q1",
+      "prompt": "Bought 1,000 shares at 1.20, stop at 1.00. The share opens at 0.60 after bad news. Roughly what is the loss?",
+      "options": [
+        {
+          "id": "a",
+          "text": "200 USD, as the stop limits it",
+          "explanation": "No: 200 USD is the planned loss. A gap fills the stop at the first available price."
+        },
+        {
+          "id": "b",
+          "text": "1,200 USD, the whole amount",
+          "explanation": "No: the shares still have a price of about 0.60, so not everything is lost."
+        },
+        {
+          "id": "c",
+          "text": "About 600 USD, three times the plan",
+          "explanation": "Right: (1.20 − 0.60) × 1,000 = 600 USD, three times the planned 200."
+        }
+      ],
+      "correctOptionIds": [
+        "c"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "gap",
+        "stop-loss"
+      ]
+    },
+    {
+      "id": "ps-gaps-halts-staying-out-q2",
+      "prompt": "What happens to your stop-loss during a trading halt?",
+      "options": [
+        {
+          "id": "a",
+          "text": "It cannot fill until trading starts again",
+          "explanation": "Right: no trading means no fills. When trading restarts, the price may have moved far past your stop."
+        },
+        {
+          "id": "b",
+          "text": "It fills at your stop during the halt",
+          "explanation": "No: nothing trades during a halt, and there is no guarantee of your price afterwards."
+        },
+        {
+          "id": "c",
+          "text": "It may fill at the last price before the halt",
+          "explanation": "No: nothing trades during a halt, so nothing fills at that price. The first fill comes when trading resumes, often far away."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "trading-halt",
+        "stop-loss"
+      ]
+    },
+    {
+      "id": "ps-gaps-halts-staying-out-q3",
+      "prompt": "Which situation is the clearest case for staying out?",
+      "options": [
+        {
+          "id": "a",
+          "text": "A small share with on-time reports and a 1% spread",
+          "explanation": "No: this may still carry risk, but it is not the clearest case here."
+        },
+        {
+          "id": "b",
+          "text": "Your order is 5% of a normal day's volume",
+          "explanation": "No: that needs care with size and orders, but it is not the clearest case."
+        },
+        {
+          "id": "c",
+          "text": "Heavily promoted, no recent filings, bids for few shares",
+          "explanation": "Right: several red flags plus a hard exit. Staying out is the best decision."
+        }
+      ],
+      "correctOptionIds": [
+        "c"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "stock-promotion",
+        "liquidity"
+      ]
+    }
+  ],
+  "doItNow": {
+    "kind": "chart_lab",
+    "instructions": "In Chart Lab, load the News shock scenario and then the Crash scenario, both with the Volume pane on. For each, mark where a stop-loss 10% below the entry would have been and where it would really have filled. Then write your personal 'stay out' list: three conditions under which you will not trade a small share at all."
+  },
+  "glossaryIds": [
+    "gap",
+    "trading-halt",
+    "stop-loss",
+    "short-selling",
+    "liquidity",
+    "stock-promotion"
+  ],
+  "sourceIds": []
+}

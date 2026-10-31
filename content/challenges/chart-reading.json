@@ -1,0 +1,42 @@
+{
+  "id": "chart-reading",
+  "type": "chart_reading",
+  "title": "Chart Reading Challenge",
+  "summary": "Read trend and structure on unseen simulated charts, and tell real breakouts from failed ones more often than not.",
+  "skills": [
+    "chart_reading",
+    "technical_analysis"
+  ],
+  "criteria": [
+    {
+      "kind": "checkpoint_passed",
+      "moduleId": "forex-charts",
+      "label": "Pass the Charts, trends and structure checkpoint",
+      "dimension": "understanding"
+    },
+    {
+      "kind": "drill",
+      "drillKind": "find_the_trend",
+      "count": 20,
+      "accuracy": 0.8,
+      "label": "Find the Trend: 16 or more of your last 20 right",
+      "dimension": "consistency"
+    },
+    {
+      "kind": "drill",
+      "drillKind": "breakout_or_fake",
+      "count": 10,
+      "accuracy": 0.7,
+      "label": "Breakout or Fake: 7 or more of your last 10 right",
+      "dimension": "uncertainty"
+    },
+    {
+      "kind": "drill",
+      "drillKind": "where_is_the_stop",
+      "count": 10,
+      "accuracy": 0.8,
+      "label": "Where Is the Stop: 8 or more of your last 10 right",
+      "dimension": "risk_control"
+    }
+  ]
+}

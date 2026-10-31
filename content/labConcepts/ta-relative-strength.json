@@ -1,0 +1,20 @@
+{
+  "id": "ta-relative-strength",
+  "skills": ["technical_analysis"],
+  "lab": "technical",
+  "level": "intermediate",
+  "order": 5,
+  "title": "Relative strength",
+  "summary": "Relative strength compares one market with another, or with an index, as a ratio of prices. A rising ratio means the first did better over that window.",
+  "unreliableWhen": "Results depend on the start date chosen, leadership changes without warning, and markets with very different volatility are hard to compare. The first market can fall while showing relative strength.",
+  "goodExample": "Stock A up 10% while its index is up 5%: the ratio rose about 4.8% over that window.",
+  "badExample": "Reading a rising ratio as \"A is going up\", or confusing relative strength with RSI.",
+  "lessonIds": [
+    "ta-relative-strength"
+  ],
+  "chart": null,
+  "drillKind": null,
+  "scenarioIds": [],
+  "companyIds": [],
+  "redFlagCaseIds": []
+}

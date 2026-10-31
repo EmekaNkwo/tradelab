@@ -1,0 +1,18 @@
+{
+  "id": "fa-penny-red-flags",
+  "skills": ["fundamental_analysis", "risk_management"],
+  "lab": "fundamental",
+  "level": "beginner",
+  "order": 30,
+  "title": "Penny stock red flags",
+  "summary": "Read a fictional small-company profile (price, volume, spread, revenue, share count, filings, promotion, insider selling) and sort the warning signs from the signs that are not. Then decide what to investigate, and whether staying out is the best decision.",
+  "unreliableWhen": "A checklist cannot prove fraud or prove honesty. Information on small companies can be thin, late or wrong, and a share with few red flags can still be very hard to sell. When you cannot get enough reliable information to check, treat that itself as a reason to stay out.",
+  "goodExample": "Noticing that a share up 675% in three weeks has no revenue, a paid promotion and a director selling during the hype, and deciding to stay out and check the official filings and regulator alerts first.",
+  "badExample": "Deciding a share is safe because it has a professional website and an exciting story, without checking revenue, share count, filings or who is paying for the promotion.",
+  "lessonIds": ["ps-promotions-pump-dump", "ps-float-dilution-splits", "ps-liquidity-spreads", "ps-gaps-halts-staying-out"],
+  "chart": null,
+  "drillKind": null,
+  "scenarioIds": [],
+  "companyIds": [],
+  "redFlagCaseIds": ["rf-promoted-no-revenue", "rf-dilution-reverse-splits", "rf-small-honest-illiquid"]
+}

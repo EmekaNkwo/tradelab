@@ -1,0 +1,130 @@
+{
+  "id": "fx-backtest-basics",
+  "moduleId": "forex-backtest-plan",
+  "title": "Backtesting with Replay, and why sample size matters",
+  "level": "intermediate",
+  "estimatedMinutes": 15,
+  "inOneLine": {
+    "simple": "A [[backtest]] tests your plan on past charts. A small [[sample-size|sample]] says little, so you need many trades before you judge.",
+    "balanced": "Replay shows past charts one bar at a time and hides the future, so you can follow your plan as if it were live. Each trade is one data point. With few trades, luck dominates the result."
+  },
+  "explain": {
+    "simple": "Before you practise a plan on a demo account, test it on the past. Go to Practice → Replay. Replay shows an old chart one candle at a time. You cannot see what comes next. Follow your plan exactly: same entry rule, same stop, same target, same size. Record every trade in the Journal. Then look at what happened. But be careful. A handful of trades tells you almost nothing. Five wins in a row can be luck. Five losses in a row can be bad luck. That is why this module asks for 50 replay trades, not 5.",
+    "balanced": "Each trade is one result, a bit like one coin toss. With 10 trades, changing one result (a win that becomes a loss) moves the win rate by 10 percentage points, and adding one more trade moves it by up to about 9. With 50 trades, changing one result moves it by 2 points, and adding one moves it by up to about 2. A larger sample gives a steadier picture, but 50 trades is still a small sample. It is enough to learn how your rules behave and how well you follow them. It is not enough to know that the rules have an edge, and nothing from the past promises the future."
+  },
+  "realNumbers": {
+    "assumptions": [
+      "Fictional replay results, illustrative only",
+      "After 10 trades: 6 wins, 4 losses",
+      "After 11 trades: one more loss"
+    ],
+    "steps": [
+      "Win rate after 10 trades = 6 ÷ 10 = 60%.",
+      "Win rate after 11 trades = 6 ÷ 11 ≈ 54.5%.",
+      "One trade moved the win rate by about 5.5 percentage points.",
+      "The \"60%\" was never a stable number. It was 10 coin tosses."
+    ]
+  },
+  "anotherExample": {
+    "assumptions": [
+      "Fictional replay results, illustrative only",
+      "After 50 trades: 25 wins, 25 losses",
+      "After 51 trades: one more loss"
+    ],
+    "steps": [
+      "Win rate after 50 trades = 25 ÷ 50 = 50%.",
+      "Win rate after 51 trades = 25 ÷ 51 ≈ 49.0%.",
+      "One trade moved the win rate by about 1 percentage point.",
+      "Steadier, but still a small sample. Use it to learn about your rules and your discipline, not to predict future results."
+    ]
+  },
+  "explainSimpler": "Ten trades is a rumour. Fifty trades is a first draft. Neither is a promise.",
+  "commonMistake": "Judging a plan after a few trades: giving up after 3 losses, or getting excited after 4 wins. Both are reacting to noise.",
+  "quickCheck": [
+    {
+      "id": "fx-backtest-basics-q1",
+      "prompt": "You won 4 of your first 5 replay trades. What does this tell you?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The plan works: 80% is a strong win rate",
+          "explanation": "No: 5 trades is far too few. Luck can easily explain 4 wins out of 5."
+        },
+        {
+          "id": "b",
+          "text": "Very little yet; keep following the plan and collecting trades",
+          "explanation": "Right: a small sample says little."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "sample-size"
+      ]
+    },
+    {
+      "id": "fx-backtest-basics-q2",
+      "prompt": "How does Replay help you test fairly?",
+      "options": [
+        {
+          "id": "a",
+          "text": "It hides future bars, so you decide without knowing what comes next",
+          "explanation": "Right: you trade the chart as it was at the time."
+        },
+        {
+          "id": "b",
+          "text": "It shows the whole finished chart at once, so you can spot the best entries",
+          "explanation": "No: that is the opposite. Seeing the whole finished chart leads to look-ahead bias. Replay hides future bars."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "backtest"
+      ]
+    },
+    {
+      "id": "fx-backtest-basics-q3",
+      "prompt": "With 20 trades, roughly how much does one extra trade move the win rate?",
+      "options": [
+        {
+          "id": "a",
+          "text": "About 1 percentage point",
+          "explanation": "No: that is closer to 100 trades."
+        },
+        {
+          "id": "b",
+          "text": "About 5 percentage points",
+          "explanation": "Right: one result out of 20 is worth 1 ÷ 20 = 5 points. Adding a 21st trade moves it by a little less."
+        },
+        {
+          "id": "c",
+          "text": "About 20 percentage points",
+          "explanation": "No: that would be about 5 trades."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "sample-size"
+      ]
+    }
+  ],
+  "doItNow": {
+    "kind": "replay",
+    "instructions": "Open Practice → Replay. Take 10 replay trades following your saved plan exactly: same entry, stop, target and size rules. Log each one in the Journal. Do not change any rule yet."
+  },
+  "glossaryIds": [
+    "backtest",
+    "sample-size",
+    "trading-plan",
+    "trading-journal"
+  ],
+  "sourceIds": []
+}

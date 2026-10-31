@@ -1,0 +1,120 @@
+{
+  "id": "fx-market-orders",
+  "moduleId": "forex-orders",
+  "title": "Market orders",
+  "level": "beginner",
+  "estimatedMinutes": 15,
+  "inOneLine": {
+    "simple": "A market order opens a trade now, at the best price available. You buy at the ask and sell at the bid.",
+    "balanced": "A [[market-order]] trades immediately: buys fill near the [[ask]], sells near the [[bid]]. Speed is certain; the exact price is not."
+  },
+  "explain": {
+    "simple": "A market order says: open my trade now. A buy fills at the ask, the higher price. A sell fills at the bid, the lower price. To close, you do the opposite: a buy is closed by selling at the bid, and a sell is closed by buying at the ask. That is why a new trade shows a small loss straight away. It is the spread.",
+    "balanced": "Market orders favour speed over price. The fill can differ from the price on screen if the market moves while the order travels, which is called [[slippage]]. Profit or loss on a buy = (closing bid − opening ask) in pips × [[pip-value]]. On a sell = (opening bid − closing ask) in pips × pip value."
+  },
+  "realNumbers": {
+    "assumptions": [
+      "Illustrative prices, not live data",
+      "Account currency USD",
+      "EUR/USD bid 1.10000, ask 1.10012",
+      "Buy 0.10 lot = 10,000 EUR; pip value 1 USD",
+      "No slippage in this example"
+    ],
+    "steps": [
+      "The buy fills at the ask: 1.10012.",
+      "To close now you would sell at the bid: 1.10000.",
+      "Difference = 1.10000 − 1.10012 = −0.00012 = −1.2 pips.",
+      "Open result right away = −1.2 × 1 USD = −1.20 USD. That is the spread cost."
+    ]
+  },
+  "anotherExample": {
+    "assumptions": [
+      "Illustrative prices",
+      "Account currency USD",
+      "Sell 0.10 lot GBP/USD = 10,000 GBP; pip value 1 USD",
+      "Open: bid 1.25000, ask 1.25020",
+      "Later: bid 1.24800, ask 1.24820"
+    ],
+    "steps": [
+      "The sell fills at the bid: 1.25000.",
+      "To close, you buy at the ask: 1.24820.",
+      "Difference = 1.25000 − 1.24820 = 0.00180 = 18 pips.",
+      "Profit = 18 × 1 USD = 18 USD."
+    ]
+  },
+  "explainSimpler": "A market order is like saying 'I'll take it at whatever the price is now.' You get in fast, but you start a little behind because of the spread.",
+  "commonMistake": "Working out a sell trade's result from the bid on the chart. A sell closes at the ask, which is higher than the bid by the spread, so the real result is a bit worse than the chart line suggests.",
+  "quickCheck": [
+    {
+      "id": "fx-market-orders-q1",
+      "prompt": "You have an open buy trade. At which price will it close?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The bid",
+          "explanation": "Right: closing a buy means selling, and sells happen at the bid."
+        },
+        {
+          "id": "b",
+          "text": "The ask",
+          "explanation": "No: the ask is where a buy opens, not where it closes."
+        },
+        {
+          "id": "c",
+          "text": "The price where you opened the trade",
+          "explanation": "No: the price has moved since then. A buy closes at the current bid."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "bid",
+        "market-order"
+      ]
+    },
+    {
+      "id": "fx-market-orders-q2",
+      "prompt": "Buy 0.10 lot EUR/USD (pip value 1 USD) at ask 1.10050. You close at bid 1.10350. What is the result?",
+      "options": [
+        {
+          "id": "a",
+          "text": "+30 USD",
+          "explanation": "Right: 1.10350 − 1.10050 = 0.00300 = 30 pips, and 30 × 1 USD = 30 USD."
+        },
+        {
+          "id": "b",
+          "text": "+300 USD",
+          "explanation": "No: 0.00300 is 30 pips, and 30 × 1 USD = 30 USD. 300 USD would need a pip value of 10 USD (1 lot)."
+        },
+        {
+          "id": "c",
+          "text": "−30 USD",
+          "explanation": "No: you bought and the price rose, so this is a profit."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "pip-value"
+      ]
+    }
+  ],
+  "doItNow": {
+    "kind": "calculator",
+    "instructions": "Open the P/L calculator. Enter the GBP/USD sell from the second example and check you get the same answer. Then try a buy that loses 25 pips at 0.10 lot."
+  },
+  "homework": "On your demo account, open a 0.01 lot market buy on EUR/USD and note the price it filled at and the result shown straight away. Close it and note the closing price.",
+  "glossaryIds": [
+    "market-order",
+    "bid",
+    "ask",
+    "spread",
+    "slippage",
+    "pip-value"
+  ],
+  "sourceIds": []
+}

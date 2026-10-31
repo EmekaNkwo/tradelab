@@ -1,0 +1,20 @@
+{
+  "id": "overfitting",
+  "term": "Overfitting",
+  "aliases": [
+    "curve fitting",
+    "over-optimising"
+  ],
+  "definition": {
+    "simple": "Adding or tuning rules until they fit past data very well, so they explain the past but may fail on new data.",
+    "balanced": "Each extra filter that removes a few past losers makes old results look better. But those filters were chosen after seeing the answers. The fix is to keep rules simple and test any changed rule on new data you have not seen."
+  },
+  "example": "After 30 trades you add four new filters that would have avoided 8 past losers. The new rules have been tested on zero new trades.",
+  "related": [
+    "backtest",
+    "sample-size"
+  ],
+  "markets": [],
+  "level": "intermediate",
+  "sourceIds": []
+}

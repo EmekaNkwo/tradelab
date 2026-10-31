@@ -1,0 +1,92 @@
+appId: com.tradelab.app
+name: 10b Backup - export the file to Google Drive
+tags:
+  - e2e
+  - journey
+  - backup
+  - needs-google-account
+# Overridable with -e SHARE_TARGET=... / -e DRIVE_SAVE=... (defaults: "Drive",
+# "(?i)(save|upload)"). Not declared under `env:`: with Maestro 2.12.0 a flow's
+# own env value overrides the CLI -e value, so the defaults are set in JS below.
+---
+# Spec §36 step 10, part B: create a backup and send it OUT of the app to an
+# explicit target, Google Drive, so it survives the uninstall in
+# scripts/e2e-journey.sh. Not part of full-run.yaml.
+#
+# Why Drive: on the test phone (Xiaomi 22071219CG) the only ACTION_SEND
+# targets for application/json that store a file somewhere the system file
+# picker can open later are Google Drive (com.google.android.apps.docs,
+# UploadMenuActivity). The others are messengers, Bluetooth and nearby-share
+# apps (checked with
+#   adb shell cmd package query-activities --brief -a android.intent.action.SEND -t application/json).
+# Needs: a Google account signed in to Drive on the phone.
+#
+# Every step is required: if the share sheet has no "Drive", or Drive's upload
+# screen does not appear, the flow FAILS instead of passing without a file.
+# Drive's own labels can change between Drive versions: if "Save" is not
+# found, check the screenshot 10b-drive-upload and update DRIVE_SAVE.
+- evalScript: "${output.shareTarget = (typeof SHARE_TARGET !== 'undefined' && SHARE_TARGET) ? SHARE_TARGET : 'Drive'}"
+- evalScript: "${output.driveSave = (typeof DRIVE_SAVE !== 'undefined' && DRIVE_SAVE) ? DRIVE_SAVE : '(?i)(save|upload)'}"
+- launchApp:
+    appId: com.tradelab.app
+- extendedWaitUntil:
+    visible:
+      id: "home-screen"
+    timeout: 30000
+- runFlow:
+    file: subflows/open-tab.yaml
+    env:
+      TAB: More
+- scrollUntilVisible:
+    element:
+      id: "more-backup"
+    direction: DOWN
+- tapOn:
+    id: "more-backup"
+- extendedWaitUntil:
+    visible:
+      id: "backup-screen"
+    timeout: 10000
+- tapOn:
+    text: "Create backup file"
+    enabled: true
+# Share sheet: the target must be listed. On the Xiaomi (HyperOS) the sheet
+# ("Save your TradeLab backup") shows direct-share contacts first, then one
+# horizontal row of apps; Drive is off-screen in that row, so the row is swiped
+# left (at most 8 times) until the target shows. The sheet title is the proof
+# the share sheet is open before any swipe.
+- extendedWaitUntil:
+    visible: "Save your TradeLab backup"
+    timeout: 15000
+- repeat:
+    while:
+      notVisible: "${output.shareTarget}"
+    times: 8
+    commands:
+      - swipe:
+          start: 85%, 81%
+          end: 15%, 81%
+          duration: 500
+- extendedWaitUntil:
+    visible: "${output.shareTarget}"
+    timeout: 5000
+# Cropped to the target: the rest of the sheet shows the phone owner's contacts.
+- takeScreenshot:
+    path: 10b-share-sheet
+    cropOn: "${output.shareTarget}"
+- tapOn: "${output.shareTarget}"
+# Drive's upload screen: it must appear, and its save button must be pressed.
+- extendedWaitUntil:
+    visible: "${output.driveSave}"
+    timeout: 30000
+# Cropped to Drive's dialog title: the full screen shows the Google account.
+- takeScreenshot:
+    path: 10b-drive-upload
+    cropOn: "Upload to Drive"
+- tapOn: "${output.driveSave}"
+# Back in TradeLab once Drive hands control back.
+- extendedWaitUntil:
+    visible: "Backup created"
+    timeout: 60000
+- assertVisible: "Saved [0-9]+ saved items?\\. Keep the file somewhere safe\\."
+- takeScreenshot: 10b-backup-exported

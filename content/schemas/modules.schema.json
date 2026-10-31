@@ -1,0 +1,100 @@
+{
+  "title": "TradeLab modules",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "summary": {
+      "type": "string",
+      "minLength": 1
+    },
+    "markets": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "forex",
+          "stocks",
+          "penny_stocks",
+          "commodities",
+          "futures"
+        ]
+      }
+    },
+    "level": {
+      "type": "string",
+      "enum": [
+        "beginner",
+        "intermediate",
+        "advanced"
+      ]
+    },
+    "lessonIds": {
+      "minItems": 1,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+      }
+    },
+    "checkpointQuizId": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+    },
+    "practicalResult": {
+      "type": "string",
+      "minLength": 1
+    },
+    "minPracticeDays": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 9007199254740991
+    },
+    "skills": {
+      "minItems": 1,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "market_fundamentals",
+          "chart_reading",
+          "technical_analysis",
+          "fundamental_analysis",
+          "risk_management",
+          "strategy_understanding",
+          "execution_discipline",
+          "psychology",
+          "backtesting_literacy",
+          "statistical_reasoning"
+        ]
+      }
+    },
+    "traderIds": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+      }
+    }
+  },
+  "required": [
+    "id",
+    "title",
+    "summary",
+    "markets",
+    "level",
+    "lessonIds",
+    "checkpointQuizId",
+    "practicalResult",
+    "minPracticeDays",
+    "skills"
+  ],
+  "additionalProperties": false
+}

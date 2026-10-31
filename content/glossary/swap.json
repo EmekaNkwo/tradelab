@@ -1,0 +1,13 @@
+{
+  "id": "swap",
+  "term": "Swap",
+  "aliases": ["swaps", "rollover", "overnight financing", "overnight fee"],
+  "definition": {
+    "simple": "A charge or credit for keeping a trade open overnight.",
+    "balanced": "A daily adjustment for holding a leveraged position past the broker's daily cut-off time. It can be negative or positive, and it differs for buys and sells, between symbols and between brokers. Some brokers apply several days' worth on one night of the week. Check your broker's contract specification."
+  },
+  "related": ["leverage", "contract-size"],
+  "markets": ["forex", "commodities"],
+  "level": "beginner",
+  "sourceIds": []
+}

@@ -1,0 +1,21 @@
+{
+  "id": "resistance",
+  "term": "Resistance",
+  "aliases": [
+    "resistance level",
+    "resistance zone",
+    "ceiling"
+  ],
+  "definition": {
+    "simple": "A price area where rising price has stopped and turned down before.",
+    "balanced": "Like support, resistance is a zone drawn from past turning points. It shows where sellers outweighed buyers before. It is not a wall, and price can push through it."
+  },
+  "related": [
+    "support",
+    "breakout",
+    "swing-high"
+  ],
+  "markets": [],
+  "level": "beginner",
+  "sourceIds": []
+}

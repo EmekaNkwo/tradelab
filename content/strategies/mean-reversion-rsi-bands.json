@@ -1,0 +1,200 @@
+{
+  "id": "mean-reversion-rsi-bands",
+  "skills": ["strategy_understanding", "technical_analysis"],
+  "title": "Mean reversion with RSI and bands",
+  "category": "trading",
+  "family": "mean_reversion",
+  "markets": [
+    "forex",
+    "stocks"
+  ],
+  "level": "intermediate",
+  "horizon": "swing",
+  "style": "rules_based",
+  "analysis": "technical",
+  "attribution": "generic",
+  "traderIds": [],
+  "overview": {
+    "objective": "Buy a stretched move back towards the average in a sideways market.",
+    "holdingPeriod": "A few days.",
+    "context": "Quiet, sideways markets only. In a trend the same signals keep appearing while price keeps going."
+  },
+  "evidence": null,
+  "simple": {
+    "simple": "When price closes below the lower [[bollinger-bands|Bollinger band]] and [[rsi]] is low, in a market that has been going sideways, buy and aim for the middle band.",
+    "balanced": "[[mean-reversion|Mean reversion]] describes quiet ranges better than trends. A filter for the [[market-regime]] is the core of the rules: without it, buying every low reading in a falling market produces repeated losses. Win rates can look high while a few large losses decide the result."
+  },
+  "reasoning": "In a sideways market, sharp moves away from the average may be overreactions that fade. A rule that buys the stretch and takes profit at the average could then win more often than it loses. That is the reasoning only, and it breaks down when the market starts to trend.",
+  "rules": {
+    "label": "A simplified educational version, not any trader's system",
+    "rules": [
+      "Regime filter: price has crossed the MA 20 at least 4 times in the last 40 candles.",
+      "Go long when a candle closes below the lower Bollinger band and RSI is below 30.",
+      "Place the stop 1 × ATR below the entry.",
+      "Take profit at the middle band (the MA 20).",
+      "No trade if the regime filter fails. Size for no more than 1% risk."
+    ]
+  },
+  "demo": {
+    "scenario": "range",
+    "overlays": [
+      "bollinger",
+      "sma20"
+    ],
+    "pane": "rsi",
+    "lookFor": "Find closes below the lower band with RSI under 30, and see how often price returned to the middle band. Then try Downtrend and count the same signals."
+  },
+  "replay": {
+    "scenario": "range",
+    "instructions": "Replay the Range scenario with Bollinger bands, MA 20 and RSI on. Check the regime filter before each trade. Then replay a Downtrend with the same rules and see how the filter changes things."
+  },
+  "exercise": {
+    "prompt": "Which statements are true under the simplified rules? Pick all that apply.",
+    "situation": "A fictional EUR/GBP chart (simulated), sideways between 0.8500 and 0.8600. The MA 20 is flat at 0.8550 and price crossed it 6 times in the last 40 candles. The latest close is 0.8495, the lower band is 0.8502, RSI is 27 and ATR is 0.0030.",
+    "options": [
+      {
+        "id": "a",
+        "text": "The regime filter passes",
+        "correct": true,
+        "explanation": "Right: 6 crosses in 40 candles is at least 4."
+      },
+      {
+        "id": "b",
+        "text": "The entry conditions are met",
+        "correct": true,
+        "explanation": "Right: the close is below the lower band and RSI is under 30."
+      },
+      {
+        "id": "c",
+        "text": "The stop goes at 0.8465",
+        "correct": true,
+        "explanation": "Right: 0.8495 − 0.0030 = 0.8465."
+      },
+      {
+        "id": "d",
+        "text": "The target is 0.8600, the top of the range",
+        "correct": false,
+        "explanation": "No: the target is the middle band, 0.8550."
+      },
+      {
+        "id": "e",
+        "text": "An RSI of 27 means price has to bounce",
+        "correct": false,
+        "explanation": "No: RSI can stay low while price keeps falling."
+      }
+    ]
+  },
+  "failureAnalysis": [
+    "When a range turns into a trend, the signals keep appearing and each one loses.",
+    "Small, frequent wins can be wiped out by one large loss.",
+    "Gaps on news can skip the stop.",
+    "The regime filter only looks backwards and changes late."
+  ],
+  "limitations": [
+    "The band, RSI and filter settings are examples for learning, not tested values.",
+    "A high win rate here says little about the total result.",
+    "No claim is made that these rules make money."
+  ],
+  "knowledgeCheck": [
+    {
+      "id": "mean-reversion-rsi-bands-q1",
+      "prompt": "RSI is 25 and price closes below the lower band, in a strong downtrend that has not crossed the MA 20 for weeks. What do the rules say?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Buy",
+          "explanation": "No: the regime filter fails."
+        },
+        {
+          "id": "b",
+          "text": "No trade: the regime filter fails",
+          "explanation": "Right: the rules need at least 4 crosses of the MA 20 in 40 candles."
+        },
+        {
+          "id": "c",
+          "text": "Buy double the normal size, as the market is extremely oversold",
+          "explanation": "No: the rules forbid the trade, and size never depends on how stretched price looks."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "intermediate",
+      "glossaryIds": [
+        "market-regime",
+        "rsi"
+      ]
+    },
+    {
+      "id": "mean-reversion-rsi-bands-q2",
+      "prompt": "Why is the target the middle band rather than the upper band?",
+      "options": [
+        {
+          "id": "a",
+          "text": "A bigger target would win more on each trade",
+          "explanation": "No: a farther target is reached less often, and the idea is only a return to the mean."
+        },
+        {
+          "id": "b",
+          "text": "The upper band moves too fast to use as a target",
+          "explanation": "No: the bands move with price, but that is not why the target is the middle."
+        },
+        {
+          "id": "c",
+          "text": "The idea is a return towards the average, not a swing to the other extreme",
+          "explanation": "Right: the rules aim only for the move back to the mean."
+        }
+      ],
+      "correctOptionIds": [
+        "c"
+      ],
+      "level": "intermediate",
+      "glossaryIds": [
+        "mean-reversion",
+        "bollinger-bands"
+      ]
+    },
+    {
+      "id": "mean-reversion-rsi-bands-q3",
+      "prompt": "Using the simplified formula, average gain is 2 pips and average loss is 8 pips. What is RSI?",
+      "options": [
+        {
+          "id": "a",
+          "text": "20",
+          "explanation": "Right: RS = 2 ÷ 8 = 0.25; RSI = 100 − 100 ÷ 1.25 = 100 − 80 = 20."
+        },
+        {
+          "id": "b",
+          "text": "25, the ratio of gain to loss",
+          "explanation": "No: 0.25 is the ratio; it still has to go into the formula."
+        },
+        {
+          "id": "c",
+          "text": "80, since losses are four times the size of gains",
+          "explanation": "No: 80 is the 100 ÷ (1 + RS) part. RSI is 100 − 80."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "intermediate",
+      "glossaryIds": [
+        "rsi"
+      ]
+    }
+  ],
+  "lessonIds": [
+    "fx-rsi",
+    "fx-atr-bollinger",
+    "ta-market-regimes"
+  ],
+  "glossaryIds": [
+    "mean-reversion",
+    "rsi",
+    "bollinger-bands",
+    "market-regime",
+    "overbought-oversold"
+  ],
+  "sourceIds": [],
+  "review": null
+}

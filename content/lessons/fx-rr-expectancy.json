@@ -1,0 +1,89 @@
+{
+  "id": "fx-rr-expectancy",
+  "skills": ["risk_management", "statistical_reasoning"],
+  "moduleId": "forex-risk",
+  "title": "Reward to risk, win rate and expectancy",
+  "level": "beginner",
+  "estimatedMinutes": 20,
+  "inOneLine": {
+    "simple": "How often you win and how much you win compared with how much you lose must be looked at together.",
+    "balanced": "Break-even [[win-rate]] = 1 ÷ (1 + reward to risk). [[expectancy|Expectancy]] = win rate × average win − loss rate × average loss, often measured in [[r-multiple|R]]."
+  },
+  "explain": {
+    "simple": "R is the amount you risk on a trade. A full stop-out loses 1R. If your target is twice as far as your stop, a win makes 2R. That is a 2:1 [[risk-reward-ratio|reward to risk]]. With 2:1 you only need to win 1 trade in 3 to break even, before costs. But a far target may be hit less often. A high win rate is not enough either: if wins are small and losses big, you can still lose money.",
+    "balanced": "Break-even win rate = 1 ÷ (1 + R:R), before costs. At 1:1 it is 50%. At 2:1 it is 33.3%. At 0.5:1 it is 66.7%. Expectancy in R = W × average win − (1 − W) × average loss. A positive figure means the inputs would make money on average over many trades. It is only arithmetic on your inputs. Real win rates drift, costs reduce results, and no method guarantees a positive expectancy."
+  },
+  "realNumbers": {
+    "assumptions": [
+      "Example plan: stop 25 pips, target 50 pips",
+      "Example win rate: 40%; every loss is exactly −1R and every win exactly +2R",
+      "Example risk: 1R = 100 USD",
+      "Costs and slippage ignored"
+    ],
+    "steps": [
+      "Reward to risk = 50 ÷ 25 = 2, written 2:1.",
+      "Break-even win rate = 1 ÷ (1 + 2) = 33.3%.",
+      "Expectancy = 0.40 × 2 − 0.60 × 1 = 0.80 − 0.60 = +0.2R per trade.",
+      "At 100 USD per R, that is 20 USD per trade on average over many trades. Any single trade still wins 200 USD or loses 100 USD, and short runs can be far from the average."
+    ]
+  },
+  "anotherExample": {
+    "assumptions": [
+      "Example plan with a tight target: average win 0.4R, average loss 1R",
+      "Example win rate: 70%",
+      "Costs and slippage ignored"
+    ],
+    "steps": [
+      "Break-even win rate = 1 ÷ (1 + 0.4) = 1 ÷ 1.4 = 71.4%.",
+      "Expectancy = 0.70 × 0.4 − 0.30 × 1 = 0.28 − 0.30 = −0.02R per trade.",
+      "Even winning 7 trades in 10, this example loses money on average.",
+      "A high win rate on its own tells you little. Look at it next to the size of wins and losses."
+    ]
+  },
+  "explainSimpler": "If you win big and lose small, you can be wrong often and still be fine. If you win small and lose big, you must be right very often. Check both numbers together.",
+  "commonMistake": "Chasing a high win rate while letting losses run bigger than wins. Another mistake is treating a positive expectancy from a few trades, or from a backtest, as a guarantee for the future.",
+  "quickCheck": [
+    {
+      "id": "fx-rr-expectancy-q1",
+      "prompt": "A plan uses 3:1 reward to risk. What win rate does it need to break even, before costs?",
+      "options": [
+        { "id": "a", "text": "25%", "explanation": "Right: 1 ÷ (1 + 3) = 0.25." },
+        { "id": "b", "text": "33.3%", "explanation": "No: that is the break-even win rate for 2:1." },
+        { "id": "c", "text": "75%", "explanation": "No: that would be the break-even win rate for a 1:3 plan, risking 3 to make 1." }
+      ],
+      "correctOptionIds": ["a"],
+      "level": "beginner",
+      "glossaryIds": ["risk-reward-ratio", "win-rate"]
+    },
+    {
+      "id": "fx-rr-expectancy-q2",
+      "prompt": "Example inputs: win rate 50%, average win 1.5R, average loss 1R. What is the expectancy?",
+      "options": [
+        { "id": "a", "text": "+0.25R", "explanation": "Right: 0.50 × 1.5 − 0.50 × 1 = 0.75 − 0.50 = 0.25R." },
+        { "id": "b", "text": "+0.5R", "explanation": "No: you must subtract the losing half, 0.50 × 1." },
+        { "id": "c", "text": "+1.5R", "explanation": "No: that is the average win, not the average per trade." }
+      ],
+      "correctOptionIds": ["a"],
+      "level": "beginner",
+      "glossaryIds": ["expectancy", "r-multiple"]
+    },
+    {
+      "id": "fx-rr-expectancy-q3",
+      "prompt": "Which statement is true?",
+      "options": [
+        { "id": "a", "text": "A 2:1 reward to risk makes a plan profitable over time, whatever its win rate", "explanation": "No: if you win less than a third of the time, it still loses, and costs push the bar higher." },
+        { "id": "b", "text": "A positive expectancy on your inputs does not promise future results", "explanation": "Right: real win rates and averages change, and costs reduce results." },
+        { "id": "c", "text": "Expectancy only matters for large accounts", "explanation": "No: expectancy is arithmetic per trade, in R. It does not depend on account size." }
+      ],
+      "correctOptionIds": ["b"],
+      "level": "beginner",
+      "glossaryIds": ["expectancy", "risk-reward-ratio"]
+    }
+  ],
+  "doItNow": {
+    "kind": "calculator",
+    "instructions": "Open Learn → Calculators. In Break-even win rate, try reward to risk of 0.5, 1, 2 and 3. Then in Expected value per trade, find a win rate where an example 1.5:1 plan has an expectancy near zero. Check one answer by hand."
+  },
+  "glossaryIds": ["risk-reward-ratio", "win-rate", "expectancy", "r-multiple"],
+  "sourceIds": []
+}

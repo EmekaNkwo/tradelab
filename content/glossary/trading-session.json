@@ -1,0 +1,10 @@
+{
+  "id": "trading-session",
+  "term": "Trading session",
+  "aliases": ["session", "sessions"],
+  "definition": { "simple": "The part of the day when a major financial centre, such as London or New York, is open and active. Session times are conventions and shift with daylight saving." },
+  "related": ["liquidity"],
+  "markets": ["forex"],
+  "level": "beginner",
+  "sourceIds": []
+}

@@ -1,0 +1,26 @@
+{
+  "id": "ta-candlesticks-timeframes",
+  "skills": ["chart_reading", "technical_analysis"],
+  "lab": "technical",
+  "level": "beginner",
+  "order": 1,
+  "title": "Candlesticks, OHLC and timeframes",
+  "summary": "Each candle shows the open, high, low and close of one period. The timeframe sets how long that period is, from minutes to a day.",
+  "unreliableWhen": "A single candle's shape says little on its own. Very short timeframes are full of noise, and a candle that has not closed yet can still change completely.",
+  "goodExample": "Reading a candle as \"opened at 1.1000, dipped to 1.0980, closed near its high at 1.1030\" and saying which timeframe it is on.",
+  "badExample": "Calling one long green candle a buy signal, or judging a candle before it has closed.",
+  "lessonIds": [
+    "fx-candlesticks",
+    "fx-timeframes"
+  ],
+  "chart": {
+    "scenario": "strong_uptrend",
+    "overlays": [],
+    "pane": "none",
+    "lookFor": "Long-press a few candles to read their open, high, low and close. Find one with a long lower wick and say what happened inside that period. Then switch timeframe and notice that each candle now covers a different length of time."
+  },
+  "drillKind": null,
+  "scenarioIds": [],
+  "companyIds": [],
+  "redFlagCaseIds": []
+}

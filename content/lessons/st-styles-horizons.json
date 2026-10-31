@@ -1,0 +1,147 @@
+{
+  "id": "st-styles-horizons",
+  "moduleId": "stocks-basics",
+  "title": "Growth vs value, swing trading vs investing",
+  "level": "beginner",
+  "estimatedMinutes": 20,
+  "inOneLine": {
+    "simple": "Growth investors pay up for companies they hope will grow fast; value investors look for low prices compared with profit. Swing traders hold for days or weeks; long-term investors hold for years.",
+    "balanced": "[[growth-investing|Growth]] and [[value-investing|value]] are about what you pay for, and swing trading and long-term investing are about how long you hold. Each has its own risks: growth can disappoint, cheap can be cheap for a reason, swings need a [[stop-loss]], and long holds need the ability to sit through large falls."
+  },
+  "explain": {
+    "simple": "A growth approach looks for companies whose revenue and profit may rise quickly, and often accepts a high price compared with today's profit. A value approach looks for companies whose price seems low compared with what they earn. Neither is \"right\": both can lose money. Separately, you need to decide how long you plan to hold. A swing trader aims to catch a price move over days or weeks, using the chart, a stop and a target. A long-term investor holds for years and focuses on the business itself.",
+    "balanced": "The style decides which questions matter. A growth buyer must ask what happens if growth slows, because a high [[pe-ratio|P/E]] can fall a long way. A value buyer must ask why the price is low: some businesses are shrinking. A swing trader needs a [[trading-plan]], position sizing and a stop, and pays the [[spread]] more often. A long-term investor still needs a plan: what would prove the idea wrong, and can they afford to hold through a big fall? Mixing the two, for example turning a failed swing trade into a \"long-term investment\" to avoid taking the loss, is a common trap."
+  },
+  "realNumbers": {
+    "assumptions": [
+      "Fictional companies from the Fundamental Analysis Lab, Year 3",
+      "Example Quickling Apps Co (fictional): price 14.40 USD, EPS 0.18 USD",
+      "Illustrative scenarios only, not forecasts"
+    ],
+    "steps": [
+      "P/E today = 14.40 ÷ 0.18 = 80.",
+      "If EPS grows 50% a year for two years: 0.18 × 1.5 × 1.5 = 0.405 USD. P/E at the same price = 14.40 ÷ 0.405 = about 35.6. Still high.",
+      "If growth stops instead and buyers will only pay a P/E of 20: price = 20 × 0.18 = 3.60 USD.",
+      "That is (14.40 − 3.60) ÷ 14.40 = 75% below today's price, with the same profit as today."
+    ]
+  },
+  "anotherExample": {
+    "assumptions": [
+      "A fictional share at 20.00 USD; 200 shares; costs ignored",
+      "Swing trader: stop at 19.00 USD, target 22.00 USD, plans to hold days to weeks",
+      "Long-term investor: no tight stop, plans to hold years"
+    ],
+    "steps": [
+      "Swing trader's risk = (20.00 − 19.00) × 200 = 200 USD. Reward at target = (22.00 − 20.00) × 200 = 400 USD. That is 2:1.",
+      "Long-term investor: if the price falls 30% to 14.00 USD, the paper loss is (20.00 − 14.00) × 200 = 1,200 USD.",
+      "The investor must be able to sit through that without being forced to sell, and must know what business change would make them sell.",
+      "Same share, same price, very different risks and plans."
+    ]
+  },
+  "explainSimpler": "Growth: paying up for hoped-for growth. Value: looking for a low price, and asking why it is low. Swing: days to weeks with a stop. Long-term: years, judged on the business.",
+  "commonMistake": "Turning a losing swing trade into a long-term investment so you do not have to take the loss. The original plan had a stop for a reason.",
+  "quickCheck": [
+    {
+      "id": "st-styles-horizons-q1",
+      "prompt": "A share's P/E is 60 because buyers expect fast growth. What is the main risk?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Growth slows and the P/E falls",
+          "explanation": "Right: if growth disappoints, the price can drop sharply even if profit holds."
+        },
+        {
+          "id": "b",
+          "text": "Dividend is too high",
+          "explanation": "No: high-P/E growth firms often pay little or no dividend."
+        },
+        {
+          "id": "c",
+          "text": "There is no risk if the firm is good",
+          "explanation": "No: a good business at a very high price can still be a poor investment."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "growth-investing",
+        "pe-ratio"
+      ]
+    },
+    {
+      "id": "st-styles-horizons-q2",
+      "prompt": "Your swing trade hits its stop. What fits the plan?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Hold it as a long-term investment instead",
+          "explanation": "No: that changes the plan to avoid taking the planned loss."
+        },
+        {
+          "id": "b",
+          "text": "Buy more to lower your average price",
+          "explanation": "No: that adds risk to an idea the stop said was wrong."
+        },
+        {
+          "id": "c",
+          "text": "Exit as planned and review the trade",
+          "explanation": "Right: the stop marks where the idea was wrong."
+        }
+      ],
+      "correctOptionIds": [
+        "c"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "stop-loss",
+        "trading-plan"
+      ]
+    },
+    {
+      "id": "st-styles-horizons-q3",
+      "prompt": "A share has a P/E of 4. What should a value-minded learner ask first?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Why is the price this low?",
+          "explanation": "Right: some companies are cheap because their business is shrinking."
+        },
+        {
+          "id": "b",
+          "text": "How quickly can I buy some shares?",
+          "explanation": "No: a low P/E alone is not a reason to act."
+        },
+        {
+          "id": "c",
+          "text": "Is the ticker short?",
+          "explanation": "No: the ticker says nothing about value."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "value-investing",
+        "pe-ratio"
+      ]
+    }
+  ],
+  "doItNow": {
+    "kind": "paper",
+    "instructions": "Before your next simulated trade on the \"Practice ordinary share\", write three lines: your style (swing or long-term), how long you plan to hold, and exactly what would make you exit. Then place the simulated trade and keep the note in your journal."
+  },
+  "homework": "After the simulated trade closes, write whether you followed the exit you planned.",
+  "glossaryIds": [
+    "growth-investing",
+    "value-investing",
+    "pe-ratio",
+    "stop-loss",
+    "trading-plan",
+    "spread",
+    "eps"
+  ],
+  "sourceIds": []
+}

@@ -1,0 +1,23 @@
+{
+  "id": "bollinger-bands",
+  "term": "Bollinger Bands",
+  "aliases": [
+    "Bollinger",
+    "BB",
+    "bands",
+    "Bollinger (20,2)"
+  ],
+  "definition": {
+    "simple": "Three lines around price: a moving average in the middle, and bands above and below that widen when price has been jumpy and narrow when it has been calm.",
+    "balanced": "With the common (20, 2) settings, the middle line is a 20-period simple moving average. The bands sit 2 standard deviations of the last 20 closes above and below it. A touch of a band is not a signal by itself. In a strong trend price can ride along one band for many candles. Narrow bands show that recent movement was small, not which way the next move will go."
+  },
+  "example": "Middle 1.10000 and standard deviation 0.00150: upper band 1.10300, lower band 1.09700.",
+  "related": [
+    "moving-average",
+    "atr",
+    "indicator"
+  ],
+  "markets": [],
+  "level": "intermediate",
+  "sourceIds": []
+}

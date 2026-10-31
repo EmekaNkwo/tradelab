@@ -1,0 +1,25 @@
+{
+  "id": "share",
+  "term": "Share",
+  "aliases": [
+    "shares",
+    "stock",
+    "stocks",
+    "equity share"
+  ],
+  "definition": {
+    "simple": "A small piece of ownership in a company. Own one share and you own a tiny part of the business.",
+    "balanced": "Each share gives a claim on part of the company's profits and assets, and usually a vote. Your fraction of the company = your shares ÷ all the shares outstanding. The price of a share is set by buyers and sellers on a [[stock-exchange]], not by the company."
+  },
+  "example": "A fictional company has 100 million shares. Owning 1,000 of them means owning 1,000 ÷ 100,000,000 = 0.001% of it.",
+  "related": [
+    "stock-exchange",
+    "market-capitalisation",
+    "dividend"
+  ],
+  "markets": [
+    "stocks"
+  ],
+  "level": "beginner",
+  "sourceIds": []
+}

@@ -1,0 +1,19 @@
+{
+  "id": "dividend-yield",
+  "term": "Dividend yield",
+  "aliases": [],
+  "definition": {
+    "simple": "The yearly dividend per share as a percentage of the share price.",
+    "balanced": "Dividend yield = dividend per share ÷ share price. It rises when the price falls, so a very high yield can be a sign that buyers expect the dividend to be cut. It is based on past payments, which are not promised."
+  },
+  "example": "Dividend 0.435 USD per share ÷ price 6.80 USD = about 6.4%.",
+  "related": [
+    "dividend",
+    "payout-ratio"
+  ],
+  "markets": [
+    "stocks"
+  ],
+  "level": "beginner",
+  "sourceIds": []
+}

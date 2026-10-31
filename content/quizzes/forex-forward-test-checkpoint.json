@@ -1,0 +1,156 @@
+{
+  "id": "forex-forward-test-checkpoint",
+  "title": "Checkpoint: forward testing, journaling and psychology",
+  "passMark": 0.8,
+  "questions": [
+    {
+      "id": "forex-forward-test-checkpoint-q1",
+      "prompt": "What is the main goal of forward testing on demo?",
+      "options": [
+        {
+          "id": "a",
+          "text": "To prove the plan makes money, so you know it is safe to move to a real account",
+          "explanation": "No: 20 demo trades is a small sample and proves nothing about future profit. No demo result shows that you are ready to trade real money."
+        },
+        {
+          "id": "b",
+          "text": "To see if you can follow your plan live, and learn real costs and reactions",
+          "explanation": "Right: it is about execution and learning."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "forward-test"
+      ]
+    },
+    {
+      "id": "forex-forward-test-checkpoint-q2",
+      "prompt": "Which trade earns the higher process score?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Won 50 USD after moving the stop further away to give the trade room",
+          "explanation": "No: moving the stop away is a rule break, and profit never counts."
+        },
+        {
+          "id": "b",
+          "text": "Lost the planned 20 USD with every rule followed",
+          "explanation": "Right: process is scored, not profit."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "process-score"
+      ]
+    },
+    {
+      "id": "forex-forward-test-checkpoint-q3",
+      "prompt": "Put the review steps in order. Which comes right after \"rules followed?\"",
+      "options": [
+        {
+          "id": "a",
+          "text": "The one lesson you will carry into your next session",
+          "explanation": "No: the result comes first, kept separate from decision quality."
+        },
+        {
+          "id": "b",
+          "text": "Result, kept separate from decision quality",
+          "explanation": "Right: thesis → plan vs. actual → rules followed? → result → one lesson → next goal."
+        },
+        {
+          "id": "c",
+          "text": "Thesis",
+          "explanation": "No: the thesis is the first step."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "trading-journal"
+      ]
+    },
+    {
+      "id": "forex-forward-test-checkpoint-q4",
+      "prompt": "Planned stop 25 pips, fill 3 pips worse, pip value 2 USD. Actual risk?",
+      "options": [
+        {
+          "id": "a",
+          "text": "50 USD",
+          "explanation": "No: that is the planned risk."
+        },
+        {
+          "id": "b",
+          "text": "56 USD",
+          "explanation": "Right: 28 pips × 2 USD = 56 USD."
+        },
+        {
+          "id": "c",
+          "text": "44 USD",
+          "explanation": "No: a worse fill adds pips, it does not remove them."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "slippage",
+        "pip-value"
+      ]
+    },
+    {
+      "id": "forex-forward-test-checkpoint-q5",
+      "prompt": "After three losses, you feel the urge to win it back. Which response fits a good plan?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Take a bigger trade now",
+          "explanation": "No: that is revenge trading and sizing up after losses."
+        },
+        {
+          "id": "b",
+          "text": "Stop or pause as your plan says, and note the feeling",
+          "explanation": "Right: the plan is there for this moment."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "trading-plan"
+      ]
+    },
+    {
+      "id": "forex-forward-test-checkpoint-q6",
+      "prompt": "Why are imported MT demo trades kept separate from replay and paper trades?",
+      "options": [
+        {
+          "id": "a",
+          "text": "So different sources never mix in your results",
+          "explanation": "Right: each source has different conditions."
+        },
+        {
+          "id": "b",
+          "text": "Because imported trades do not count toward your progress at all",
+          "explanation": "No: they count, they are just labelled by source."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "trading-journal"
+      ]
+    }
+  ]
+}

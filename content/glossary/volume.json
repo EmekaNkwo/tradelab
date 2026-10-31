@@ -1,0 +1,22 @@
+{
+  "id": "volume",
+  "term": "Volume",
+  "aliases": [
+    "trading volume",
+    "tick volume",
+    "relative volume"
+  ],
+  "definition": {
+    "simple": "How much was traded during a candle, such as the number of shares or contracts.",
+    "balanced": "Stocks and futures report volume from their exchange. Forex has no single exchange, so platforms usually show tick volume: how many times the broker's price changed. Compare a bar with its recent average. Heavy volume shows more participation; it does not show direction or what happens next."
+  },
+  "example": "Average volume 400,000 shares; today 1,000,000 shares, so relative volume is 2.5.",
+  "related": [
+    "breakout",
+    "liquidity",
+    "gap"
+  ],
+  "markets": [],
+  "level": "beginner",
+  "sourceIds": []
+}

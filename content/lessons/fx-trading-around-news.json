@@ -1,0 +1,88 @@
+{
+  "id": "fx-trading-around-news",
+  "moduleId": "forex-fundamentals",
+  "title": "Planning around news releases",
+  "level": "beginner",
+  "estimatedMinutes": 20,
+  "inOneLine": {
+    "simple": "Check the economic calendar before you trade, and decide in advance what you will do around big releases.",
+    "balanced": "Around major releases, [[spread|spreads]] often widen, [[volatility]] jumps and stops can suffer [[slippage]]. Plan with the [[economic-calendar]]: stay out, close before, or trade smaller with a wider stop."
+  },
+  "explain": {
+    "simple": "An economic calendar lists upcoming releases, their time, the forecast and the last figure. Around big ones, prices can jump in seconds. The spread, which is the gap between buy and sell prices, can get much wider. A stop loss can fill well past its level. So many learners make a simple rule: no new trades shortly before a big release for the currencies they trade. Whatever you choose, decide it before the event, not during it.",
+    "balanced": "Choices before a high-importance release: (1) no trade, (2) close or reduce open trades beforehand, (3) trade with a wider stop and a smaller size so the money at risk stays the same. Even option 3 does not cap the loss: a [[gap]] or fast move can fill a stop far past its level. Always check the calendar's time zone, and note that the actual figure may be revised later. These are planning habits, not ways to predict the move."
+  },
+  "realNumbers": {
+    "assumptions": [
+      "Illustrative prices and hypothetical spreads",
+      "Buy 0.10 lot EUR/USD; pip value 1 USD",
+      "Stop loss 20 pips below entry, so the planned loss is 20 USD = 1R",
+      "Normal spread 1 pip; during a release the spread widens to 8 pips",
+      "The release makes price jump, and the stop fills 10 pips past its level"
+    ],
+    "steps": [
+      "Planned loss = 20 × 1 USD = 20 USD.",
+      "Actual loss = (20 + 10) × 1 USD = 30 USD. That is 1.5R, not 1R.",
+      "A new trade opened during the release would also pay the wider spread: 8 pips × 1 USD = 8 USD, instead of 1 USD.",
+      "Nothing about the trade idea changed. The timing alone made the loss bigger."
+    ]
+  },
+  "anotherExample": {
+    "assumptions": [
+      "Example risk: 50 USD per trade, a learning example",
+      "EUR/USD, pip value 10 USD for 1.00 lot",
+      "Normal stop 25 pips; the learner wants a 50-pip stop around a release"
+    ],
+    "steps": [
+      "Normal day: size = 50 ÷ (25 × 10) = 0.20 lot.",
+      "Around the release: size = 50 ÷ (50 × 10) = 0.10 lot.",
+      "Planned risk stays at 50 USD, with a smaller size and a wider stop.",
+      "Slippage can still make the loss bigger than 50 USD. Skipping the trade is also a valid plan."
+    ]
+  },
+  "explainSimpler": "Big news can make prices jump and costs spike. Look at the calendar first. Decide before the news: sit out, close, or go smaller.",
+  "commonMistake": "Trading straight into a big release without checking the calendar, then being surprised by a wide spread or a stop filled far away. Another mistake is reading the calendar in the wrong time zone.",
+  "quickCheck": [
+    {
+      "id": "fx-trading-around-news-q1",
+      "prompt": "Buy 0.10 lot (pip value 1 USD), stop 15 pips. A release makes the stop fill 5 pips past its level. What is the loss?",
+      "options": [
+        { "id": "a", "text": "15 USD", "explanation": "No: that is the planned loss. The fill was 5 pips worse." },
+        { "id": "b", "text": "20 USD", "explanation": "Right: (15 + 5) × 1 USD = 20 USD." },
+        { "id": "c", "text": "5 USD", "explanation": "No: that is only the slippage part." }
+      ],
+      "correctOptionIds": ["b"],
+      "level": "beginner",
+      "glossaryIds": ["slippage", "stop-loss"]
+    },
+    {
+      "id": "fx-trading-around-news-q2",
+      "prompt": "You keep the same money at risk but double your stop distance for a news day. What should happen to the size?",
+      "options": [
+        { "id": "a", "text": "Halve it", "explanation": "Right: twice the pips at risk needs half the size for the same money." },
+        { "id": "b", "text": "Keep it the same", "explanation": "No: that doubles the money at risk." }
+      ],
+      "correctOptionIds": ["a"],
+      "level": "beginner",
+      "glossaryIds": ["position-sizing", "volatility"]
+    },
+    {
+      "id": "fx-trading-around-news-q3",
+      "prompt": "What is the main reason to check an economic calendar before a trade?",
+      "options": [
+        { "id": "a", "text": "To know which way price will move", "explanation": "No: the calendar shows when events happen, not what the market will do." },
+        { "id": "b", "text": "To know when spreads, volatility and slippage may jump, and plan for it", "explanation": "Right: it is a timing and risk tool, not a prediction tool." }
+      ],
+      "correctOptionIds": ["b"],
+      "level": "beginner",
+      "glossaryIds": ["economic-calendar", "spread"]
+    }
+  ],
+  "doItNow": {
+    "kind": "reflection",
+    "instructions": "Open any economic calendar you trust and find 3 upcoming high-importance events for the currencies you practise. For each, write: the time in your local time, the consensus and the previous figure, one way price could react to a higher number and one to a lower number, and your plan (no trade, close before, or smaller size with a wider stop). After the events, write what actually happened and how well your plan held up."
+  },
+  "homework": "After each of your 3 events, note how wide the spread got on your demo or paper account, if you were watching.",
+  "glossaryIds": ["economic-calendar", "spread", "volatility", "slippage", "gap", "position-sizing", "consensus-forecast"],
+  "sourceIds": []
+}

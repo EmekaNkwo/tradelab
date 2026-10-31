@@ -1,0 +1,14 @@
+{
+  "id": "margin-level",
+  "term": "Margin level",
+  "aliases": [],
+  "definition": {
+    "simple": "Your equity compared with the margin in use, shown as a percentage. Lower means closer to trouble.",
+    "balanced": "Margin level = [[equity]] ÷ used [[margin]] × 100%. Brokers use it to decide when to warn you ([[margin-call]]) and when to close trades ([[stop-out]]). The exact levels are set by each broker."
+  },
+  "example": "Equity 850 USD, used margin 200 USD: margin level = 850 ÷ 200 × 100% = 425%.",
+  "related": ["equity", "margin", "margin-call", "stop-out"],
+  "markets": ["forex", "commodities", "futures"],
+  "level": "beginner",
+  "sourceIds": []
+}

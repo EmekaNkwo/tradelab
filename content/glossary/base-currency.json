@@ -1,0 +1,11 @@
+{
+  "id": "base-currency",
+  "term": "Base currency",
+  "aliases": [],
+  "definition": { "simple": "The first currency in a pair. Buying the pair means buying this currency." },
+  "example": "In GBP/USD the base currency is GBP.",
+  "related": ["quote-currency", "currency-pair"],
+  "markets": ["forex"],
+  "level": "beginner",
+  "sourceIds": []
+}

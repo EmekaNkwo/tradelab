@@ -1,0 +1,36 @@
+{
+  "id": "rf-promoted-no-revenue",
+  "title": "The hot tip with no business behind it",
+  "company": "Glimmerpeak Lithium Dreams (fictional)",
+  "facts": [
+    { "label": "Price", "value": "0.62 USD, up from 0.08 USD three weeks ago (simulated)" },
+    { "label": "Average daily volume", "value": "About 9 million shares in the last two weeks, up from about 50,000 before" },
+    { "label": "Spread", "value": "Bid 0.58 / ask 0.62" },
+    { "label": "Revenue trend", "value": "No revenue in any of the last three reported years" },
+    { "label": "Shares outstanding", "value": "300 million → 420 million over the last year" },
+    { "label": "Where it trades", "value": "Over the counter" },
+    { "label": "Filings and disclosures", "value": "Latest annual report is two months late; no official filing about any new deal" },
+    { "label": "Promotion activity", "value": "Newsletters and social posts calling it 'the next big lithium play' with a 10x target. Small print: writers were paid by a shareholder" },
+    { "label": "Insider selling", "value": "A director has filed to sell 15 million shares during the last two weeks" }
+  ],
+  "question": "Which of these are warning signs?",
+  "signs": [
+    { "id": "a", "text": "The price rose about 675% in three weeks with no official company news.", "isRedFlag": true, "explanation": "(0.62 − 0.08) ÷ 0.08 = 6.75, so +675%. A move that size with no filing to explain it often means buying is being driven by hype, not by the business." },
+    { "id": "b", "text": "The promotion was paid for by a shareholder.", "isRedFlag": true, "explanation": "Someone who owns shares and pays for hype may want to sell into the buying it creates. That is the classic pump-and-dump setup." },
+    { "id": "c", "text": "The company has no revenue but is promoted as 'the next big' play.", "isRedFlag": true, "explanation": "Big claims with no business results behind them are a warning sign. Promises are not revenue." },
+    { "id": "d", "text": "A director is selling a large block during the promotion.", "isRedFlag": true, "explanation": "Insiders selling while outsiders are being urged to buy is one of the strongest warning signs." },
+    { "id": "e", "text": "The annual report is late and there is no filing about the 'deal'.", "isRedFlag": true, "explanation": "Missing or late official information means the claims cannot be checked, and the excitement rests on rumours." },
+    { "id": "f", "text": "The share trades over the counter.", "isRedFlag": false, "explanation": "Not a red flag on its own: many OTC shares are not scams. It does mean reporting may be lighter, so you have to check more for yourself." },
+    { "id": "g", "text": "The company has a professional website and a CEO interview video.", "isRedFlag": false, "explanation": "Not a warning sign, but not evidence of anything good either. A polished website costs little and proves nothing about the business." },
+    { "id": "h", "text": "The spread is about 6% of the ask (0.04 ÷ 0.62).", "isRedFlag": false, "explanation": "Wide, and a real cost, but not unusual for a small share and not a sign of fraud. It matters more for whether you could trade at a sensible cost." }
+  ],
+  "investigate": [
+    "Read the company's official filings: is there any record of the deal, any revenue, and how much cash is left?",
+    "Check your regulator's investor alerts and any trading suspensions for this company.",
+    "Find out who paid for the promotion and how much, from the disclosure in the small print.",
+    "Look at insider and large-holder filings: who has been selling, and when?",
+    "Compare the share count over time: 300 million to 420 million is a 40% increase in one year."
+  ],
+  "verdict": "Several strong red flags together: an unexplained spike, paid promotion, no revenue, insider selling during the hype, and late filings. This is the pattern of a possible pump and dump. Staying out is the best decision here. There is nothing to analyse that could justify the price, and late buyers in this pattern often find the bid disappears when the promotion stops.",
+  "glossaryIds": ["pump-and-dump", "stock-promotion", "otc-market", "dilution", "spread", "penny-stock"]
+}

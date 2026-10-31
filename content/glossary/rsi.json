@@ -1,0 +1,21 @@
+{
+  "id": "rsi",
+  "term": "RSI",
+  "aliases": [
+    "relative strength index",
+    "RSI 14"
+  ],
+  "definition": {
+    "simple": "An indicator from 0 to 100 that compares the size of recent up moves with recent down moves.",
+    "balanced": "RSI = 100 − 100 ÷ (1 + RS), where RS is the average gain divided by the average loss over a set period, often 14. Readings above 70 or below 30 are often labelled [[overbought-oversold|overbought or oversold]]. In a strong trend RSI can stay at those levels for a long time while price keeps going."
+  },
+  "example": "Average gain 6 pips, average loss 2 pips: RS = 3, so RSI = 100 − 100 ÷ 4 = 75.",
+  "related": [
+    "overbought-oversold",
+    "indicator",
+    "macd"
+  ],
+  "markets": [],
+  "level": "intermediate",
+  "sourceIds": []
+}

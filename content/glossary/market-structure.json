@@ -1,0 +1,21 @@
+{
+  "id": "market-structure",
+  "term": "Market structure",
+  "aliases": [
+    "structure",
+    "price structure",
+    "break of structure"
+  ],
+  "definition": {
+    "simple": "The pattern of swing highs and swing lows on a chart, used to describe whether price is trending or moving sideways.",
+    "balanced": "Higher highs and higher lows describe an uptrend. Lower highs and lower lows describe a downtrend. Overlapping swings describe a range. When an uptrend makes a new low below its last higher low, people say the structure is broken. That is a change in description, not a promise that price will now fall."
+  },
+  "related": [
+    "trend",
+    "swing-high",
+    "swing-low"
+  ],
+  "markets": [],
+  "level": "beginner",
+  "sourceIds": []
+}

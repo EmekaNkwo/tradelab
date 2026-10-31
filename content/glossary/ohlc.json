@@ -1,0 +1,22 @@
+{
+  "id": "ohlc",
+  "term": "OHLC",
+  "aliases": [
+    "open, high, low, close",
+    "OHLC bar",
+    "bar chart"
+  ],
+  "definition": {
+    "simple": "Short for open, high, low and close: the four prices that describe one period on a chart.",
+    "balanced": "Open is the first price in the period, close is the last, high is the highest and low is the lowest. Candlesticks and OHLC bars show the same four numbers in different shapes. MetaTrader charts usually show bid prices, so a buy fills at the ask, a little above what the chart shows."
+  },
+  "example": "A 1-hour period that opens at 1.25400, reaches 1.25450, falls to 1.25000 and ends at 1.25100 has O 1.25400, H 1.25450, L 1.25000, C 1.25100.",
+  "related": [
+    "candlestick",
+    "bid",
+    "spread"
+  ],
+  "markets": [],
+  "level": "beginner",
+  "sourceIds": []
+}

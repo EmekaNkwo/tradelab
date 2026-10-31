@@ -1,0 +1,18 @@
+{
+  "id": "forex-levels",
+  "skills": ["chart_reading", "technical_analysis"],
+  "title": "Support, resistance and breakouts",
+  "summary": "Mark support and resistance as zones, define a breakout with a clear rule, and see why many breakouts fail.",
+  "markets": [
+    "forex"
+  ],
+  "level": "beginner",
+  "lessonIds": [
+    "fx-support-resistance",
+    "fx-breakouts",
+    "fx-false-breakouts"
+  ],
+  "checkpointQuizId": "forex-levels-checkpoint",
+  "practicalResult": "Draw support and resistance lines on a demo chart in MetaTrader, then sort breakouts from false breakouts in the Breakout or fake? drill.",
+  "minPracticeDays": 0
+}

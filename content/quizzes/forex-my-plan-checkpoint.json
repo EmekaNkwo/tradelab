@@ -1,0 +1,156 @@
+{
+  "id": "forex-my-plan-checkpoint",
+  "title": "Checkpoint: my trading plan",
+  "passMark": 0.8,
+  "questions": [
+    {
+      "id": "forex-my-plan-checkpoint-q1",
+      "prompt": "What is the main job of a trading plan?",
+      "options": [
+        {
+          "id": "a",
+          "text": "To guarantee profits",
+          "explanation": "No: nothing can guarantee profits."
+        },
+        {
+          "id": "b",
+          "text": "To make decisions in advance, so your trading is consistent and reviewable",
+          "explanation": "Right: rules made while calm, then followed and checked."
+        },
+        {
+          "id": "c",
+          "text": "To list every market situation you might meet, and exactly what to do in each",
+          "explanation": "No: no plan can list everything. A plan should be short enough to follow."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "trading-plan"
+      ]
+    },
+    {
+      "id": "forex-my-plan-checkpoint-q2",
+      "prompt": "A demo balance is 8,000 USD. The example daily loss limit is 2%. Risk per trade is 80 USD. After how many full losses do you stop?",
+      "options": [
+        {
+          "id": "a",
+          "text": "1",
+          "explanation": "No: one loss is 80 USD, and the limit is 160 USD."
+        },
+        {
+          "id": "b",
+          "text": "2",
+          "explanation": "Right: 2% × 8,000 = 160 USD, and 160 ÷ 80 = 2 losses."
+        },
+        {
+          "id": "c",
+          "text": "4",
+          "explanation": "No: 4 losses would be 320 USD, double the limit."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "trading-plan"
+      ]
+    },
+    {
+      "id": "forex-my-plan-checkpoint-q3",
+      "prompt": "Which rule is clear enough to test?",
+      "options": [
+        {
+          "id": "a",
+          "text": "\"Sell when it feels toppy\"",
+          "explanation": "No: this cannot be checked on a chart."
+        },
+        {
+          "id": "b",
+          "text": "\"Sell when a 1-hour candle closes below the last swing low\"",
+          "explanation": "Right: anyone can check this at the time."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "trading-plan"
+      ]
+    },
+    {
+      "id": "forex-my-plan-checkpoint-q4",
+      "prompt": "Stop distance 25 pips, pip value 2 USD, risk limit 40 USD. Does the trade fit?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Yes: the stop is only 25 pips, which is well inside a 40-pip limit",
+          "explanation": "No: the limit is 40 USD of risk, not 40 pips. 25 × 2 = 50 USD, which is over the limit."
+        },
+        {
+          "id": "b",
+          "text": "No: 25 × 2 = 50 USD is over the 40 USD limit, so reduce size or skip",
+          "explanation": "Right: the money at risk breaks the limit."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "pip-value",
+        "stop-loss"
+      ]
+    },
+    {
+      "id": "forex-my-plan-checkpoint-q5",
+      "prompt": "You are angry after a loss. Your checklist asks \"Am I calm?\" What do you do?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Answer yes, since the setup matches your plan anyway",
+          "explanation": "No: the checklist only works if you answer honestly, even when the setup looks good."
+        },
+        {
+          "id": "b",
+          "text": "Answer no, and wait or skip for now",
+          "explanation": "Right: not being calm raises a caution, so you wait or skip that trade."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "pre-trade-checklist"
+      ]
+    },
+    {
+      "id": "forex-my-plan-checkpoint-q6",
+      "prompt": "Why is the plan versioned?",
+      "options": [
+        {
+          "id": "a",
+          "text": "So you can go back to an older version whenever a new one has a losing week or two",
+          "explanation": "No: judging a version by a week or two of results is chasing outcomes. Changes belong between sessions, recorded so you can compare how each version was followed."
+        },
+        {
+          "id": "b",
+          "text": "So each change is recorded and you can compare how each version was followed",
+          "explanation": "Right: versions let you learn from changes instead of drifting."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "trading-plan"
+      ]
+    }
+  ]
+}

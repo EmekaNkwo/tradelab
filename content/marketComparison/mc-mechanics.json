@@ -1,0 +1,13 @@
+{
+  "id": "mc-mechanics",
+  "order": 9,
+  "dimension": "How a trade works",
+  "cells": {
+    "forex": "Buy or sell a pair in [[lot|lots]]; profit or loss is counted in [[pip|pips]] times [[pip-value]].",
+    "stocks": "Buy shares and later sell them; short selling, where allowed, has its own rules and costs.",
+    "penny_stocks": "Like shares, but orders can fill slowly or only in part, and the price you see may not be available in size.",
+    "commodities": "Usually through a futures contract or broker contract, with that product's own sizing and rules.",
+    "futures": "Buy or sell whole contracts; profit or loss is ticks moved × [[tick-value]] × contracts, settled daily."
+  },
+  "caveat": "Order types, sizes, fills and settlement depend on the venue and broker. Learn the exact product's rules before practising."
+}

@@ -1,0 +1,13 @@
+{
+  "id": "limit-order",
+  "term": "Limit order",
+  "aliases": ["buy limit", "sell limit"],
+  "definition": {
+    "simple": "An order to buy at a lower price than now, or sell at a higher price than now.",
+    "balanced": "A buy limit sits below the current [[ask]]; a sell limit sits above the current [[bid]]. It aims to fill at your price or better. If price does not reach it, it does not fill."
+  },
+  "related": ["pending-order", "stop-order"],
+  "markets": [],
+  "level": "beginner",
+  "sourceIds": []
+}

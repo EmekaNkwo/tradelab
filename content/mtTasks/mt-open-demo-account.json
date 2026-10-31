@@ -1,0 +1,83 @@
+{
+  "id": "mt-open-demo-account",
+  "title": "Open a demo account",
+  "summary": "Install MetaTrader, open a [[demo-account]], and learn to tell a demo account from a real one before you practise.",
+  "level": "beginner",
+  "requiresDemo": false,
+  "steps": [
+    {
+      "text": "Install the MetaTrader app from the Play Store. Use whichever version your chosen broker supports.",
+      "mt4": "Search the Play Store for MetaTrader 4.",
+      "mt5": "Search the Play Store for MetaTrader 5."
+    },
+    {
+      "text": "Open the app and go to its accounts screen. Choose the option to open a new demo account."
+    },
+    {
+      "text": "Pick a broker's demo server. If you are not sure which one, choose a broker you have checked is regulated where you live."
+    },
+    {
+      "text": "Fill in the demo form. A demo account never needs a deposit or card details. If you are asked for payment, stop: you are not opening a demo."
+    },
+    {
+      "text": "Write down the login number and password the app shows, and keep them private."
+    },
+    {
+      "text": "On the accounts screen, look for a label or server name that says the account is a demo. If you cannot tell, do not place any trades until you are sure."
+    },
+    {
+      "text": "Open the Quotes tab and check that prices are showing. Your demo account is ready."
+    }
+  ],
+  "afterQuestions": [
+    {
+      "id": "mt-open-demo-account-q1",
+      "prompt": "How much money did you need to deposit to open the demo account?",
+      "options": [
+        {
+          "id": "a",
+          "text": "None",
+          "explanation": "Right: a demo account uses pretend money, so no deposit is ever needed."
+        },
+        {
+          "id": "b",
+          "text": "A small deposit to activate it",
+          "explanation": "No: if a demo asks for a deposit, it is not a demo. Stop and check what you are signing up for."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "demo-account"
+      ]
+    },
+    {
+      "id": "mt-open-demo-account-q2",
+      "prompt": "You open MetaTrader and are not sure whether the account is demo or real. What should you do?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Place a small trade and see what happens",
+          "explanation": "No: on a real account even a small trade risks real money."
+        },
+        {
+          "id": "b",
+          "text": "Check the accounts screen for the demo label before trading",
+          "explanation": "Right: always confirm you are on demo before any practice trade."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "demo-account"
+      ]
+    }
+  ],
+  "glossaryIds": [
+    "demo-account"
+  ]
+}

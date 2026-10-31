@@ -1,0 +1,26 @@
+{
+  "id": "ta-false-breakouts",
+  "skills": ["chart_reading", "technical_analysis"],
+  "lab": "technical",
+  "level": "intermediate",
+  "order": 10,
+  "title": "Failed breakouts",
+  "summary": "A failed breakout moves through a level, then comes back inside. You only know it failed afterwards.",
+  "unreliableWhen": "Waiting for more confirmation avoids some failures but enters later, at a worse price, and still gets caught by some. Judging after the fact makes failures look obvious.",
+  "goodExample": "Committing to \"real\", \"fake\" or \"wait\" before seeing more candles, then recording how each call turned out.",
+  "badExample": "Deciding a breakout was \"obviously fake\" only after seeing what happened next.",
+  "lessonIds": [
+    "fx-false-breakouts",
+    "fx-breakouts"
+  ],
+  "chart": {
+    "scenario": "false_breakout",
+    "overlays": [],
+    "pane": "none",
+    "lookFor": "Mark the range, find the candle that closed outside it, and note how many candles passed before price was back inside."
+  },
+  "drillKind": "breakout_or_fake",
+  "scenarioIds": [],
+  "companyIds": [],
+  "redFlagCaseIds": []
+}

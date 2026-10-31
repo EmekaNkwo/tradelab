@@ -1,0 +1,102 @@
+{
+  "id": "rf-small-honest-illiquid",
+  "title": "Small and honest-looking, but hard to sell",
+  "company": "Hollowford Valve Works (fictional)",
+  "facts": [
+    {
+      "label": "Price",
+      "value": "1.80 USD (simulated)"
+    },
+    {
+      "label": "Average daily volume",
+      "value": "About 6,000 shares, roughly 10,800 USD a day"
+    },
+    {
+      "label": "Spread",
+      "value": "Bid 1.70 / ask 1.90"
+    },
+    {
+      "label": "Revenue trend",
+      "value": "8.0 → 8.6 → 9.1 million USD over three years; small profit each year"
+    },
+    {
+      "label": "Shares outstanding",
+      "value": "12 million, unchanged for three years"
+    },
+    {
+      "label": "Recent reverse split",
+      "value": "None"
+    },
+    {
+      "label": "Ownership",
+      "value": "Founding family and directors hold about 60%"
+    },
+    {
+      "label": "Filings and disclosures",
+      "value": "Audited reports filed on time"
+    },
+    {
+      "label": "Promotion activity",
+      "value": "None found"
+    },
+    {
+      "label": "Insider selling",
+      "value": "None in the last year"
+    }
+  ],
+  "question": "You are thinking of buying 20,000 shares. Which of these are warning signs?",
+  "signs": [
+    {
+      "id": "a",
+      "text": "Revenue has grown slowly and the company makes a small profit.",
+      "isRedFlag": false,
+      "explanation": "A steady, profitable business is not a warning sign. 8.0 to 8.6 is +7.5%, and 8.6 to 9.1 is about +5.8%."
+    },
+    {
+      "id": "b",
+      "text": "The share count has not changed in three years.",
+      "isRedFlag": false,
+      "explanation": "No dilution: a good sign. Your slice of the company is not being shrunk."
+    },
+    {
+      "id": "c",
+      "text": "Audited reports are filed on time and there is no promotion.",
+      "isRedFlag": false,
+      "explanation": "Good signs of an honest business. Not every small share is a scam."
+    },
+    {
+      "id": "d",
+      "text": "Your 20,000-share order is more than 3 days of normal volume.",
+      "isRedFlag": true,
+      "explanation": "20,000 ÷ 6,000 ≈ 3.3 days. Buying and later selling that much could move the price against you and take days. This is a liquidity warning, not a fraud warning."
+    },
+    {
+      "id": "e",
+      "text": "The spread is about 10.5% of the ask (0.20 ÷ 1.90).",
+      "isRedFlag": true,
+      "explanation": "You start roughly 10% behind. The share must rise from 1.70 to 1.90 bid just to break even on a round trip."
+    },
+    {
+      "id": "f",
+      "text": "Insiders hold about 60%, so the float is only about 4.8 million shares.",
+      "isRedFlag": true,
+      "explanation": "12 million × 40% = 4.8 million tradable shares. A small float can make the price jumpy. It is a risk to manage, not evidence of wrongdoing."
+    }
+  ],
+  "investigate": [
+    "Look at the order book: how many shares are bid near the price, not just the best price?",
+    "Work out a size you could sell within a day or two at normal volume.",
+    "Read the audited reports: cash, debt and whether profits turn into cash.",
+    "Check whether the family's holding is locked up or could come to market, and how that might affect the price."
+  ],
+  "verdict": "Not every small stock is a scam, and nothing here suggests fraud. The real risk is liquidity: a wide spread, low daily volume and a small float. The question is not 'is this honest?' but 'can I get out?'. A 20,000-share position is too big for this market. Staying out is sensible if you cannot accept a slow, costly exit. If you still want exposure, go much smaller, use limit orders, and plan your exit before you enter.",
+  "glossaryIds": [
+    "liquidity",
+    "spread",
+    "float",
+    "order-book",
+    "limit-order",
+    "microcap",
+    "volume"
+  ]
+}

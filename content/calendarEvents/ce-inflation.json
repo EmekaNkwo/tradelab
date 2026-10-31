@@ -1,0 +1,18 @@
+{
+  "id": "ce-inflation",
+  "kind": "inflation",
+  "title": "Inflation reports",
+  "measures": "How fast prices of a basket of goods and services are rising, usually compared with a month earlier and a year earlier. Many reports also show a 'core' figure that leaves out the most changeable items, such as food and energy.",
+  "whyItMatters": "Central banks try to keep inflation near a target, so inflation figures shape expectations about interest rates. Those expectations feed into currencies, bond yields, stock valuations and commodities.",
+  "affectedMarkets": ["forex", "stocks", "commodities", "futures"],
+  "expectations": "Forecasters publish a consensus figure before the release. Traders compare the actual number with that consensus, and with the previous figure, which is sometimes revised.",
+  "surprises": "A figure above or below the consensus may change what traders expect the central bank to do. The headline and core figures can point different ways, and a revision to last month can matter as much as the new number. The first move can fade if the surprise was small or already expected by many traders.",
+  "limits": "An inflation surprise does not set a price direction. A higher figure can strengthen a currency in one situation and weaken it in another, depending on what was priced in and how the central bank is expected to respond.",
+  "keywords": ["inflation", "consumer prices", "cpi", "price index", "core inflation", "prices rose", "cost of living", "producer prices"],
+  "glossaryIds": ["inflation", "consensus-forecast", "surprise", "priced-in", "central-bank"],
+  "lessonIds": ["cm-inflation-rates-currency", "fm-growth-jobs-inflation", "fx-expected-vs-actual"],
+  "scenarioIds": ["macro-westmark-inflation-calm", "macro-westmark-inflation-crowded"],
+  "samples": [
+    { "id": "s1", "title": "Westmark consumer price index (fictional)", "day": 2, "time": "08:30", "timeZone": "UTC", "where": "Westmark (fictional)", "details": "The fictional Westmark statistics office publishes the monthly consumer price figures, with headline and core measures." }
+  ]
+}

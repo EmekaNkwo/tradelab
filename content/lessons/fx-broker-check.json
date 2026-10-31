@@ -1,0 +1,124 @@
+{
+  "id": "fx-broker-check",
+  "moduleId": "forex-scams-brokers",
+  "title": "How to check a broker",
+  "level": "beginner",
+  "estimatedMinutes": 15,
+  "inOneLine": {
+    "simple": "Check a broker on the [[regulator]]'s own official register, found by you, not through a link the broker gives you. Then check the rules where you live.",
+    "balanced": "Examples of regulators include the FCA, ASIC and CySEC. Search the register for the firm's exact name, and make sure the website, address and contact details match. Firms can copy a real firm's name, so details matter. Being regulated does not mean trading is safe or profitable."
+  },
+  "explain": {
+    "simple": "Before you ever think about a broker, check who they are. A broker should be authorised by a financial regulator. Examples of regulators include the FCA, ASIC and CySEC. Each country has its own. Find the regulator's official website yourself, for example by typing the regulator's name into a search engine and checking you are on the official site. Do not use a link from the broker or from a chat. On the register, search for the broker's exact name. Check that the website address and contact details match what the broker uses. Then check the rules for traders where you live, because they differ between countries.",
+    "balanced": "Things to note from the register: the exact legal name, the status (for example authorised, or not), the website addresses listed, and any warnings. If the name matches but the website or phone number does not, treat it as a possible clone of a real firm. Some regulators also publish warning lists of unauthorised firms. A clean register entry is only a first check. It does not mean the broker suits you, and it says nothing about whether trading will make money. This app does not recommend any broker."
+  },
+  "realNumbers": {
+    "assumptions": [
+      "Fictional broker \"Example Broker A (fictional)\", all details made up",
+      "Its website is example-broker-a.invalid (a made-up address) and its phone number starts +00 111",
+      "The learner finds the regulator's official site on their own"
+    ],
+    "steps": [
+      "The register shows a firm called \"Example Broker A Ltd (fictional)\" with status \"authorised\".",
+      "The website listed on the register is different from the one the learner was sent.",
+      "The phone number on the register is also different.",
+      "Same name, different details: this could be a clone. The learner uses only the contact details on the register, or walks away."
+    ]
+  },
+  "anotherExample": {
+    "assumptions": [
+      "Fictional broker \"Example Broker B (fictional)\", all details made up",
+      "The learner searches two regulators' official registers"
+    ],
+    "steps": [
+      "No firm with that name appears on either register.",
+      "The broker's website says it is \"fully regulated\" but gives no regulator or number.",
+      "The learner cannot confirm the claim on any official register.",
+      "Result of the check: unverified. The learner does not use it, and notes the name in their journal."
+    ]
+  },
+  "explainSimpler": "Check the ID yourself, at the official office, not with a card the stranger hands you.",
+  "commonMistake": "Trusting a regulator logo or licence number on the broker's own website. Anyone can copy a logo. Check on the regulator's own site.",
+  "quickCheck": [
+    {
+      "id": "fx-broker-check-q1",
+      "prompt": "Where should you check whether a broker is regulated?",
+      "options": [
+        {
+          "id": "a",
+          "text": "On the broker's own website",
+          "explanation": "No: logos and numbers can be copied."
+        },
+        {
+          "id": "b",
+          "text": "On the regulator's own official register, found by you",
+          "explanation": "Right: the official source is the check that counts."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "regulator"
+      ]
+    },
+    {
+      "id": "fx-broker-check-q2",
+      "prompt": "The register shows a firm with the right name but a different website and phone number. What does this suggest?",
+      "options": [
+        {
+          "id": "a",
+          "text": "It is fine; the name matches, and websites often change",
+          "explanation": "No: scammers can copy a real firm's name. The website and phone number must match the register too."
+        },
+        {
+          "id": "b",
+          "text": "It could be a clone; use only the details on the register or walk away",
+          "explanation": "Right: every detail should match."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "regulator",
+        "investment-scam"
+      ]
+    },
+    {
+      "id": "fx-broker-check-q3",
+      "prompt": "A broker passes your register check. What does that show?",
+      "options": [
+        {
+          "id": "a",
+          "text": "That it is safe and recommended, so you can deposit without more checks",
+          "explanation": "No: being on a register is a first check, not a recommendation. You still check local rules and costs, and it says nothing about whether trading makes money."
+        },
+        {
+          "id": "b",
+          "text": "That it appears on an official register; you still check local rules and costs",
+          "explanation": "Right: it is a first check, not a recommendation."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "regulator"
+      ]
+    }
+  ],
+  "doItNow": {
+    "kind": "reflection",
+    "instructions": "Do a broker check on the broker behind your MetaTrader demo account. Find the relevant regulator's official website yourself, search its register for the broker's exact name, and note whether the name, website and contact details match. Then look up the rules for traders where you live. Write down what you found and anything you could not confirm."
+  },
+  "glossaryIds": [
+    "regulator",
+    "investment-scam",
+    "demo-account"
+  ],
+  "sourceIds": []
+}

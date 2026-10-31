@@ -1,0 +1,11 @@
+{
+  "id": "penny-stocks-risk",
+  "version": 1,
+  "title": "Penny stocks: thin trading and manipulation risk",
+  "body": [
+    "Penny stocks and microcaps can be illiquid: few buyers and sellers, wide [[spread|spreads]], and prices that jump sharply. It can be hard to sell when you want to.",
+    "They are a common target for promotions and pump-and-dump schemes. Often the best decision is to stay out."
+  ],
+  "triggers": ["penny_stocks"],
+  "statistics": []
+}

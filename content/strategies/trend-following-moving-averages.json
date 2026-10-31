@@ -1,0 +1,203 @@
+{
+  "id": "trend-following-moving-averages",
+  "skills": ["strategy_understanding", "technical_analysis"],
+  "title": "Trend following with moving averages",
+  "category": "trading",
+  "family": "trend_following",
+  "markets": [
+    "forex",
+    "stocks",
+    "commodities",
+    "futures"
+  ],
+  "level": "intermediate",
+  "horizon": "position",
+  "style": "rules_based",
+  "analysis": "technical",
+  "attribution": "generic",
+  "traderIds": [],
+  "overview": {
+    "objective": "Stay in a market while it trends, and step aside when it stops.",
+    "holdingPeriod": "Weeks to months; trades in sideways markets are often closed within days.",
+    "context": "Daily charts of liquid markets. Works on the idea of long moves, so it needs patience through many small losses."
+  },
+  "evidence": null,
+  "simple": {
+    "simple": "Hold a position while price stays on the right side of a [[moving-average]] that points the same way. Get out when price closes back across it.",
+    "balanced": "The rule only reacts to moves that have already happened, so it enters late and exits late. In ranges it is whipsawed into many small losses ([[whipsaw]]); it relies on occasional long [[trend|trends]] to pay for them. The period is a setting, not a discovery: testing many periods on the same data and keeping the best invites [[overfitting]]."
+  },
+  "reasoning": "If markets sometimes move in one direction for a long time, a rule that stays aboard those moves and cuts the rest early could, on balance, come out ahead. That is the reasoning only; whether it holds in a given market, period and cost level has to be tested, and it can fail for long stretches.",
+  "rules": {
+    "label": "A simplified educational version, not any trader's system",
+    "rules": [
+      "Use a daily chart and a 50-period exponential moving average (EMA 50).",
+      "Long only when a candle closes above the average and the average is higher than it was 10 candles ago. Short is the mirror image.",
+      "Place the stop 2 × ATR from the entry price.",
+      "Size the position so the loss at the stop is no more than 1% of the account.",
+      "Exit when a candle closes back across the average, or at the stop, whichever comes first."
+    ]
+  },
+  "demo": {
+    "scenario": "strong_uptrend",
+    "overlays": [
+      "ema50"
+    ],
+    "pane": "atr",
+    "lookFor": "Find the first close above the rising EMA 50 and the first close back below it. Note how much of the move came before the entry and how much was given back before the exit."
+  },
+  "replay": {
+    "scenario": "strong_uptrend",
+    "instructions": "Replay a Strong uptrend with EMA 50 on. Apply the rules exactly: enter only on a close above a rising average, set a 2 × ATR stop, and exit on a close back below. Then try the Range scenario with the same rules and compare."
+  },
+  "exercise": {
+    "prompt": "Which statements are true under the simplified rules? Pick all that apply.",
+    "situation": "A fictional daily chart (simulated). The 50-period average rose from 1.2200 to 1.2260 over the last 10 candles. The latest close is 1.2290 and ATR is 0.0040. The simulated account is 5,000 USD, and 1 pip is worth 1 USD per 10,000 units.",
+    "options": [
+      {
+        "id": "a",
+        "text": "A long is allowed now",
+        "correct": true,
+        "explanation": "Right: the close (1.2290) is above the average (1.2260), and the average is higher than 10 candles ago."
+      },
+      {
+        "id": "b",
+        "text": "The stop for a long filled at 1.2290 is 1.2210",
+        "correct": true,
+        "explanation": "Right: 2 × 0.0040 = 0.0080, and 1.2290 − 0.0080 = 1.2210."
+      },
+      {
+        "id": "c",
+        "text": "The most the trade may lose at the stop is 100 USD",
+        "correct": false,
+        "explanation": "No: 1% of 5,000 USD is 50 USD."
+      },
+      {
+        "id": "d",
+        "text": "A size of 6,000 units keeps the loss at the stop within the limit",
+        "correct": true,
+        "explanation": "Right: 50 USD ÷ 80 pips = 0.625 USD per pip, or 6,250 units. Rounding down to 6,000 units risks 0.60 × 80 = 48 USD."
+      },
+      {
+        "id": "e",
+        "text": "A size of 7,000 units also keeps the loss at the stop within the limit",
+        "correct": false,
+        "explanation": "No: 7,000 units is 0.70 USD per pip, and 0.70 × 80 = 56 USD, above the 50 USD limit."
+      }
+    ]
+  },
+  "failureAnalysis": [
+    "In sideways markets price crosses the average again and again, and each cross is a small loss.",
+    "Sharp reversals hit before the average turns, so a large part of a gain can be given back before the exit.",
+    "Gaps can jump past the stop, so a loss can be bigger than planned.",
+    "Long losing streaks are normal. People often abandon the rules just before the next trend."
+  ],
+  "limitations": [
+    "The settings (50 periods, 2 × ATR, 10 candles) are examples for learning, not tested values.",
+    "No performance claim is made here: whether the rules made or lost money depends on the market, period and costs.",
+    "Costs such as spread, swaps and slippage reduce results, and they matter more when there are many trades."
+  ],
+  "knowledgeCheck": [
+    {
+      "id": "trend-following-moving-averages-q1",
+      "prompt": "The average is 1.1500 now and was 1.1440 ten candles ago. The latest close is 1.1530. What do the rules allow?",
+      "options": [
+        {
+          "id": "a",
+          "text": "A long: close above a rising average",
+          "explanation": "Right: 1.1530 is above 1.1500, and the average rose from 1.1440."
+        },
+        {
+          "id": "b",
+          "text": "Nothing, because the average must be falling before any trade is allowed",
+          "explanation": "No: a rising average is what allows a long."
+        },
+        {
+          "id": "c",
+          "text": "Nothing yet: the close has to be a full ATR above the average first",
+          "explanation": "No: the rules have no such distance condition."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "intermediate",
+      "glossaryIds": [
+        "moving-average"
+      ]
+    },
+    {
+      "id": "trend-following-moving-averages-q2",
+      "prompt": "Which market condition gives this rule the most losing trades?",
+      "options": [
+        {
+          "id": "a",
+          "text": "A long steady trend",
+          "explanation": "No: steady trends give few crosses."
+        },
+        {
+          "id": "b",
+          "text": "A sideways range with a flat average",
+          "explanation": "Right: price crosses a flat average often, and most crosses reverse."
+        },
+        {
+          "id": "c",
+          "text": "A trend with small pullbacks that stay above the average",
+          "explanation": "No: if pullbacks stay above the average, the rule stays in."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "intermediate",
+      "glossaryIds": [
+        "whipsaw",
+        "market-regime"
+      ]
+    },
+    {
+      "id": "trend-following-moving-averages-q3",
+      "prompt": "In a simulated test, the rules lost 6 trades in a row. What is the most reasonable reading?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Stop using the rules",
+          "explanation": "No: 6 trades are far too few to judge."
+        },
+        {
+          "id": "b",
+          "text": "Shorten the average to 5 so it reacts faster",
+          "explanation": "No: changing the settings after a few losses is curve fitting, and a shorter average whipsaws more."
+        },
+        {
+          "id": "c",
+          "text": "Streaks like this are normal for trend rules; judge them on many more trades",
+          "explanation": "Right: trend rules usually lose often and depend on a few large winners, so short streaks say little."
+        }
+      ],
+      "correctOptionIds": [
+        "c"
+      ],
+      "level": "intermediate",
+      "glossaryIds": [
+        "losing-streak",
+        "sample-size"
+      ]
+    }
+  ],
+  "lessonIds": [
+    "fx-moving-averages",
+    "fx-trends",
+    "fx-ma-trend-following",
+    "fx-drawdown-ruin"
+  ],
+  "glossaryIds": [
+    "moving-average",
+    "trend",
+    "whipsaw",
+    "atr",
+    "overfitting",
+    "losing-streak"
+  ],
+  "sourceIds": [],
+  "review": null
+}

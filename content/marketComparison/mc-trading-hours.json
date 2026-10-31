@@ -1,0 +1,13 @@
+{
+  "id": "mc-trading-hours",
+  "order": 3,
+  "dimension": "Trading hours",
+  "cells": {
+    "forex": "Many brokers offer near round-the-clock trading on weekdays, but activity rises and falls with each [[trading-session]].",
+    "stocks": "Set by each exchange, often a fixed day session; some offer limited trading before and after it.",
+    "penny_stocks": "Follow the venue they trade on; trading in an individual stock can also be halted.",
+    "commodities": "Depends on the product; futures hours are set by the exchange, broker contracts by the broker.",
+    "futures": "Set by the exchange for each contract, often with daily breaks; activity often shifts to the next month near expiry."
+  },
+  "caveat": "Hours differ by exchange, broker, product and time zone, and change around holidays. Check the exact schedule; a market can be open yet thin."
+}

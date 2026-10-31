@@ -1,0 +1,25 @@
+{
+  "id": "timeframe",
+  "term": "Timeframe",
+  "aliases": [
+    "time frame",
+    "period",
+    "chart period",
+    "M15",
+    "H1",
+    "H4",
+    "D1"
+  ],
+  "definition": {
+    "simple": "How much time each candle on a chart covers, for example 15 minutes, 1 hour or 1 day.",
+    "balanced": "Common labels: M1, M5, M15, M30 (minutes), H1, H4 (hours), D1 (day), W1 (week). Four H1 candles together cover the same time as one H4 candle. The same market can look like it is rising on one timeframe and falling on another, because each looks at a different stretch of time."
+  },
+  "example": "On a forex weekday there are 24 H1 candles, so 100 H1 candles cover about 4 days.",
+  "related": [
+    "candlestick",
+    "trend"
+  ],
+  "markets": [],
+  "level": "beginner",
+  "sourceIds": []
+}

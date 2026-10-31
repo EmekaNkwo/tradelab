@@ -1,0 +1,13 @@
+{
+  "id": "mc-liquidity",
+  "order": 4,
+  "dimension": "Liquidity",
+  "cells": {
+    "forex": "Major pairs are often heavily traded, but [[liquidity]] can thin out in quiet hours, on holidays and around big news.",
+    "stocks": "Large, well-known companies are often heavily traded; smaller ones can be thin.",
+    "penny_stocks": "Often thin: little trading one day, a sudden rush the next, and it can be hard to sell.",
+    "commodities": "Varies widely between commodities, products and times of day.",
+    "futures": "Often concentrated in one or two contract months; far-dated months can be thin."
+  },
+  "caveat": "No market is always liquid. Liquidity depends on the instrument, the time, the venue and current conditions, and it can vanish in a fast market."
+}

@@ -1,0 +1,105 @@
+{
+  "id": "fx-journal-review",
+  "skills": ["execution_discipline"],
+  "moduleId": "forex-forward-test",
+  "title": "Journaling and reviewing demo trades",
+  "level": "beginner",
+  "estimatedMinutes": 15,
+  "inOneLine": {
+    "simple": "Log every demo trade in your [[trading-journal]] with a screenshot, then review it. The [[process-score]] judges how you followed your plan, never the profit.",
+    "balanced": "Add demo trades by hand with a screenshot, or import your MetaTrader statement. Each review goes: thesis → plan vs. actual → rules followed? → result (kept separate from decision quality) → one lesson → next learning goal."
+  },
+  "explain": {
+    "simple": "A trade you do not write down is a trade you cannot learn from. In the Journal, add each MetaTrader demo trade: pair, direction, entry, stop, target, size, exit, and a screenshot of the chart. You can also export your demo history from MetaTrader and import it in the Journal. Then review each trade in six steps. What was my idea? Did I do what I planned? Did I follow my rules? What was the result? What is one lesson? What will I work on next? The app gives a process score. It never uses profit. A winning trade that broke your rules scores lower than a losing trade that followed them.",
+    "balanced": "Separating result from decision quality is the core skill here. Over a few trades, a bad decision can win and a good decision can lose. If you judge by result, you learn the wrong lessons. The process score looks at things like: was the stop set before entry, was risk within the limit, did the entry match the rules, and was the review done. Imported trades are marked \"Imported from MT statement\" and kept separate from replay and paper trades, so sources never mix."
+  },
+  "realNumbers": {
+    "assumptions": [
+      "Fictional demo trade A: in plan, stop set, risk 20 USD (within limit)",
+      "Stop hit; result −20 USD",
+      "Fictional demo trade B: not in plan, stop moved further away during the trade",
+      "Price came back; result +15 USD"
+    ],
+    "steps": [
+      "Trade A: followed every rule. Result was a loss. Process: good.",
+      "Trade B: broke two rules. Result was a gain. Process: poor.",
+      "The process score rates A above B.",
+      "Lesson from B: moving the stop happened to work this time, but it removes the limit on the loss. The habit matters more than this one result."
+    ]
+  },
+  "anotherExample": {
+    "assumptions": [
+      "Fictional review of one demo trade, filled in by the learner"
+    ],
+    "steps": [
+      "Thesis: \"Price broke above the session high on the 1-hour chart.\"",
+      "Plan vs. actual: entry planned 1.27200, filled 1.27215. Stop and size as planned.",
+      "Rules followed? Yes, all of them.",
+      "Result: −1R. Decision quality: good, the setup matched the plan.",
+      "One lesson: \"I entered 2 minutes before a news release; my plan should say how long to wait.\"",
+      "Next learning goal: add a news timing rule as a new plan version."
+    ]
+  },
+  "explainSimpler": "Judge the cook by whether they followed the recipe, not by whether one dinner guest liked it.",
+  "commonMistake": "Only journaling the losing trades, or only the winners. Every trade goes in, or the review is skewed.",
+  "quickCheck": [
+    {
+      "id": "fx-journal-review-q1",
+      "prompt": "Which trade gets the better process score?",
+      "options": [
+        {
+          "id": "a",
+          "text": "A rule-breaking trade that made money",
+          "explanation": "No: profit is never part of the process score."
+        },
+        {
+          "id": "b",
+          "text": "A planned trade with a stop that lost its planned amount",
+          "explanation": "Right: following the plan is what scores, whatever the result."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "process-score"
+      ]
+    },
+    {
+      "id": "fx-journal-review-q2",
+      "prompt": "In the review flow, why is \"result\" separate from decision quality?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Because good decisions can lose and bad ones can win over a few trades",
+          "explanation": "Right: judging by result teaches the wrong lessons."
+        },
+        {
+          "id": "b",
+          "text": "Because results do not matter, so the journal does not record them",
+          "explanation": "No: results are recorded; they are just not the measure of a good decision."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "trading-journal"
+      ]
+    }
+  ],
+  "doItNow": {
+    "kind": "metatrader",
+    "instructions": "Export your demo account history from MetaTrader by following the task card, then import it in Journal. Open each imported trade, add a screenshot, and complete the six-step review. If your app version cannot export, add your demo trades by hand with screenshots instead.",
+    "mtTaskId": "mt-export-statement"
+  },
+  "homework": "Keep going until you have 20 or more demo trades logged with screenshots and reviewed.",
+  "glossaryIds": [
+    "trading-journal",
+    "process-score",
+    "demo-account"
+  ],
+  "sourceIds": []
+}

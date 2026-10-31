@@ -1,0 +1,25 @@
+{
+  "id": "ta-channels",
+  "skills": ["chart_reading", "technical_analysis"],
+  "lab": "technical",
+  "level": "intermediate",
+  "order": 6,
+  "title": "Channels",
+  "summary": "A channel is a trend whose swings have stayed between two roughly parallel sloping lines.",
+  "unreliableWhen": "The lines depend on which swing points you pick, and are easy to redraw to fit. Price can overshoot or fall short of a line, and the slope can change.",
+  "goodExample": "Joining two swing highs in a downtrend, drawing a parallel line through the low between them, and writing a rule for what counts as a break.",
+  "badExample": "Redrawing the channel after every candle so price always \"respects\" it.",
+  "lessonIds": [
+    "ta-consolidation-channels"
+  ],
+  "chart": {
+    "scenario": "downtrend",
+    "overlays": [],
+    "pane": "none",
+    "lookFor": "Use the Trend line tool to join two swing highs, then draw a parallel line through the lowest low between them. Count the closes outside your lines."
+  },
+  "drillKind": null,
+  "scenarioIds": [],
+  "companyIds": [],
+  "redFlagCaseIds": []
+}

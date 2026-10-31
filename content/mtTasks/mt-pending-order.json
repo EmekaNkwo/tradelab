@@ -1,0 +1,95 @@
+{
+  "id": "mt-pending-order",
+  "title": "Place and delete a pending order",
+  "summary": "Place a buy [[limit-order|limit]] below the current price with a stop loss and take profit, find it in the Trade tab, then delete it.",
+  "level": "beginner",
+  "requiresDemo": true,
+  "steps": [
+    {
+      "text": "Check you are on your demo account before you start."
+    },
+    {
+      "text": "In the Quotes tab, note the current ask for EUR/USD."
+    },
+    {
+      "text": "Tap EUR/USD and choose the option to trade."
+    },
+    {
+      "text": "Change the order type from market to buy limit."
+    },
+    {
+      "text": "Set the volume to 0.01."
+    },
+    {
+      "text": "Enter a price about 50 pips below the current ask. If the app rejects it, check that the price is below the ask and not too close to it."
+    },
+    {
+      "text": "Enter a stop loss below your limit price and a take profit above it."
+    },
+    {
+      "text": "Place the order. Open the Trade tab and find it in the list of pending orders, separate from open positions."
+    },
+    {
+      "text": "Tap or press and hold the pending order (it depends on your app version), then choose the option to delete or cancel it."
+    },
+    {
+      "text": "Check the order has gone from the Trade tab."
+    }
+  ],
+  "afterQuestions": [
+    {
+      "id": "mt-pending-order-q1",
+      "prompt": "Why did your buy limit need a price below the current ask?",
+      "options": [
+        {
+          "id": "a",
+          "text": "A buy limit aims to buy cheaper than now",
+          "explanation": "Right: buy limits sit below the price; buy stops sit above it."
+        },
+        {
+          "id": "b",
+          "text": "All pending orders must be below the price",
+          "explanation": "No: sell limits and buy stops sit above the current price."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "limit-order",
+        "pending-order"
+      ]
+    },
+    {
+      "id": "mt-pending-order-q2",
+      "prompt": "While your pending order waited, did it show a profit or loss as an open trade?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Yes, it counted as an open trade",
+          "explanation": "No: until it triggers there is no position, so there is no profit or loss yet."
+        },
+        {
+          "id": "b",
+          "text": "No, nothing is open until it triggers",
+          "explanation": "Right: a pending order only becomes a position if price reaches its level, so it has no profit or loss until then. Margin for pending orders is usually zero, but some brokers reserve some; check your broker's contract specification."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "pending-order"
+      ]
+    }
+  ],
+  "glossaryIds": [
+    "pending-order",
+    "limit-order",
+    "stop-loss",
+    "take-profit",
+    "demo-account"
+  ]
+}

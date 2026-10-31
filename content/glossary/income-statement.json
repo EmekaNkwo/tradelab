@@ -1,0 +1,24 @@
+{
+  "id": "income-statement",
+  "term": "Income statement",
+  "aliases": [
+    "profit and loss",
+    "P&L",
+    "profit and loss statement"
+  ],
+  "definition": {
+    "simple": "The report that shows revenue, costs and profit over a period.",
+    "balanced": "It runs from the top line to the bottom line: [[revenue]] − cost of sales = gross profit; − operating expenses = operating profit; − interest − tax = net income ([[earnings]]). Divide net income by the number of shares to get [[eps]]."
+  },
+  "related": [
+    "revenue",
+    "earnings",
+    "eps",
+    "profit-margin"
+  ],
+  "markets": [
+    "stocks"
+  ],
+  "level": "beginner",
+  "sourceIds": []
+}

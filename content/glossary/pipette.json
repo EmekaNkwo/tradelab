@@ -1,0 +1,21 @@
+{
+  "id": "pipette",
+  "term": "Pipette",
+  "aliases": [
+    "pipettes",
+    "fractional pip"
+  ],
+  "definition": {
+    "simple": "One tenth of a pip. It is the extra last digit many platforms show.",
+    "balanced": "Many brokers quote most pairs to 5 decimal places and yen pairs to 3. The last digit is a pipette, worth one tenth of a [[pip]]. A move of 10 pipettes is a move of 1 pip."
+  },
+  "example": "EUR/USD moving from 1.10000 to 1.10007 is a move of 7 pipettes, or 0.7 pips.",
+  "related": [
+    "pip"
+  ],
+  "markets": [
+    "forex"
+  ],
+  "level": "beginner",
+  "sourceIds": []
+}

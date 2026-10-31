@@ -1,0 +1,13 @@
+{
+  "id": "seasonality",
+  "term": "Seasonality",
+  "aliases": ["seasonal", "seasonal pattern", "seasonal demand"],
+  "definition": {
+    "simple": "Patterns that tend to repeat at certain times of year, such as crops arriving at harvest or more fuel used for heating in winter.",
+    "balanced": "Seasons change supply (planting, harvest) and demand (heating, cooling, travel). Markets usually know the calendar, so normal seasonal changes are often already priced in. What moves prices is a season that turns out different from what was expected. A seasonal tendency is never a guarantee."
+  },
+  "related": ["commodity", "supply-shock", "inventory-report"],
+  "markets": ["commodities", "futures"],
+  "level": "beginner",
+  "sourceIds": []
+}

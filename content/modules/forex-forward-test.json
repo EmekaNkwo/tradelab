@@ -1,0 +1,18 @@
+{
+  "id": "forex-forward-test",
+  "skills": ["execution_discipline", "psychology"],
+  "title": "Forward testing on demo, journaling, psychology",
+  "summary": "Follow your plan in real time on a MetaTrader demo account, log and review each trade in the Journal, and notice how your feelings affect your decisions.",
+  "markets": [
+    "forex"
+  ],
+  "level": "beginner",
+  "lessonIds": [
+    "fx-forward-test-demo",
+    "fx-journal-review",
+    "fx-psychology-demo"
+  ],
+  "checkpointQuizId": "forex-forward-test-checkpoint",
+  "practicalResult": "20+ MT demo trades logged with screenshots",
+  "minPracticeDays": 0
+}

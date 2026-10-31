@@ -1,0 +1,14 @@
+{
+  "id": "dilution",
+  "term": "Dilution",
+  "aliases": ["share dilution", "diluted", "dilutive"],
+  "definition": {
+    "simple": "When a company creates and sells new shares, each existing share becomes a smaller slice of the company.",
+    "balanced": "Companies issue new shares to raise cash, pay debts, or pay staff and lenders. Your number of shares stays the same, but your percentage of the company falls. Repeated dilution is common in small companies that keep running short of cash, and it can push the share price down over time."
+  },
+  "example": "Fictional: you own 10,000 of 20 million shares (0.05%). The company issues 10 million more. You now own 10,000 of 30 million (about 0.033%).",
+  "related": ["float", "reverse-split", "penny-stock"],
+  "markets": ["stocks", "penny_stocks"],
+  "level": "beginner",
+  "sourceIds": []
+}

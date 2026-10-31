@@ -1,0 +1,12 @@
+{
+  "id": "markets-compared",
+  "skills": ["market_fundamentals"],
+  "title": "Five markets compared",
+  "summary": "How forex, ordinary stocks, penny stocks, commodities and futures differ in what you hold, trading hours, costs, leverage and margin, why one-line labels about a market mislead, and how to choose which market to study first.",
+  "markets": ["forex", "stocks", "penny_stocks", "commodities", "futures"],
+  "level": "beginner",
+  "lessonIds": ["mc-five-markets", "mc-choosing-market"],
+  "checkpointQuizId": "markets-compared-checkpoint",
+  "practicalResult": "Work through every row of the market comparison screen, then write a one-page note on which market you will study first, why, and what you will check about it before practising.",
+  "minPracticeDays": 0
+}

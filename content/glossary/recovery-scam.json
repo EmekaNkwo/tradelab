@@ -1,0 +1,17 @@
+{
+  "id": "recovery-scam",
+  "term": "Recovery scam",
+  "aliases": [
+    "fund recovery scam"
+  ],
+  "definition": {
+    "simple": "A second scam aimed at people who already lost money: someone offers to \"recover\" the money for an upfront fee.",
+    "balanced": "They may claim to be lawyers, investigators or officials, and may know details of your first loss. Never pay anyone upfront to get money back. Report the loss through official channels in your country instead."
+  },
+  "related": [
+    "investment-scam"
+  ],
+  "markets": [],
+  "level": "beginner",
+  "sourceIds": []
+}

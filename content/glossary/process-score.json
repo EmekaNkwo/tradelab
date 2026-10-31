@@ -1,0 +1,19 @@
+{
+  "id": "process-score",
+  "term": "Process score",
+  "aliases": [
+    "discipline score"
+  ],
+  "definition": {
+    "simple": "A score for how well you followed your plan on a trade. It never uses profit or loss.",
+    "balanced": "It rewards a stop set before entry, risk within your limit, an entry that matched your rules, and a completed review. A winning trade that broke rules does not score well. A losing trade that followed the plan can score well."
+  },
+  "example": "A trade where you moved your stop and still won scores lower than a planned trade that hit its stop.",
+  "related": [
+    "trading-journal",
+    "trading-plan"
+  ],
+  "markets": [],
+  "level": "beginner",
+  "sourceIds": []
+}

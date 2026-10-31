@@ -1,0 +1,23 @@
+{
+  "id": "index-fund",
+  "term": "Index fund",
+  "aliases": [
+    "index funds",
+    "tracker fund",
+    "index tracker"
+  ],
+  "definition": {
+    "simple": "A fund that holds the companies in a market index, so one purchase spreads money across many of them.",
+    "balanced": "It aims to follow the index, not to beat it. It still falls when the whole market falls, and its yearly fee is taken whatever the result."
+  },
+  "related": [
+    "diversification",
+    "dividend",
+    "share"
+  ],
+  "markets": [
+    "stocks"
+  ],
+  "level": "beginner",
+  "sourceIds": []
+}

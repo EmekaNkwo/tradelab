@@ -1,0 +1,13 @@
+{
+  "id": "mc-what-is-traded",
+  "order": 1,
+  "dimension": "What's traded",
+  "cells": {
+    "forex": "Exchange rates between two currencies, quoted as a [[currency-pair]].",
+    "stocks": "[[share|Shares]] in companies, usually listed on a stock exchange.",
+    "penny_stocks": "Shares in very small companies with a low price per share, often thinly traded, sometimes outside the main exchanges.",
+    "commodities": "Raw materials such as metals, energy and farm goods, reached through futures, broker contracts or funds.",
+    "futures": "Standardised contracts on an underlying such as an index, a currency, a rate or a [[commodity]], each with its own specification."
+  },
+  "caveat": "What exactly you can trade depends on the broker, the exchange and where you live. The same market name can cover very different products."
+}

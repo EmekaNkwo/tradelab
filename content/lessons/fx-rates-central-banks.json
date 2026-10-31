@@ -1,0 +1,75 @@
+{
+  "id": "fx-rates-central-banks",
+  "moduleId": "forex-fundamentals",
+  "title": "Interest rates, inflation and central banks",
+  "level": "beginner",
+  "estimatedMinutes": 15,
+  "inOneLine": {
+    "simple": "A country's interest rate, and what people expect it to be next, is one of the big forces behind its currency.",
+    "balanced": "[[central-bank|Central banks]] set the policy [[interest-rate]], mostly in response to [[inflation]]. Markets trade on expected future rates, so a change that was already expected may move a currency very little."
+  },
+  "explain": {
+    "simple": "Inflation is how fast prices rise. A central bank's main job is usually to keep it steady. If prices rise too fast, it may raise interest rates. If the economy is weak, it may cut them. Higher rates can make a currency more attractive to hold, because savers earn more. But this is a tendency, not a law. Traders try to guess the next move in advance, so prices often change before the decision, not on it.",
+    "balanced": "A common chain of reasoning is: higher-than-expected inflation → markets expect higher rates → demand for the currency may rise. Each link can fail. Growth worries, risk mood, the other currency in the pair, or the bank's statement about the future can all matter more. The rate gap between two currencies also feeds the [[swap]] you pay or receive overnight. Treat every link as a hypothesis to test, not a sure thing. All examples here are fictional."
+  },
+  "realNumbers": {
+    "assumptions": [
+      "Fictional country: Westmark, currency WMK",
+      "Hypothetical price index: 200.0 a year ago, 207.0 today",
+      "Hypothetical central-bank inflation target: 2%",
+      "Hypothetical policy rate today: 3.00%"
+    ],
+    "steps": [
+      "Inflation = (207.0 − 200.0) ÷ 200.0 = 7 ÷ 200 = 0.035 = 3.5%.",
+      "That is 1.5 percentage points above the 2% target.",
+      "Traders may expect the bank to raise rates, or to keep them high for longer.",
+      "If that expectation is already in the price, WMK may not rise on the inflation release. It is a scenario, not a forecast."
+    ]
+  },
+  "anotherExample": {
+    "assumptions": [
+      "Fictional Westmark central bank, policy rate 3.00%",
+      "Hypothetical market expectation before the meeting: a rise of 0.25 points to 3.25%",
+      "Two possible outcomes, both made up for practice"
+    ],
+    "steps": [
+      "Outcome A: the bank raises to 3.25%, as expected. The surprise is zero. WMK may barely move, or move on what the bank says about the future.",
+      "Outcome B: the bank holds at 3.00%. That is 0.25 points below the expected 3.25%.",
+      "In Outcome B, WMK may weaken because rates are lower than expected. It could also rise if the bank signals more rises later.",
+      "Same decision type, different reaction: what was expected matters as much as what happened."
+    ]
+  },
+  "explainSimpler": "Prices rising fast → the central bank may raise rates → the currency may get stronger. But traders guess early, so by the time it happens, the move may already be over.",
+  "commonMistake": "Thinking 'rates up means currency up' every time. The reaction depends on what was expected, what the bank says next, and what is happening to the other currency in the pair.",
+  "quickCheck": [
+    {
+      "id": "fx-rates-central-banks-q1",
+      "prompt": "A fictional price index rises from 150 to 153 in a year. What is the inflation rate?",
+      "options": [
+        { "id": "a", "text": "2%", "explanation": "Right: (153 − 150) ÷ 150 = 3 ÷ 150 = 0.02 = 2%." },
+        { "id": "b", "text": "3%", "explanation": "No: 3 is the change in points. Divide it by the starting level, 150." },
+        { "id": "c", "text": "153%", "explanation": "No: that is the new level, not the change." }
+      ],
+      "correctOptionIds": ["a"],
+      "level": "beginner",
+      "glossaryIds": ["inflation"]
+    },
+    {
+      "id": "fx-rates-central-banks-q2",
+      "prompt": "A fictional central bank raises rates by exactly as much as everyone expected. What is most accurate?",
+      "options": [
+        { "id": "a", "text": "Its currency must rise sharply", "explanation": "No: an expected move may already be in the price." },
+        { "id": "b", "text": "The reaction may be small, or driven by what the bank says about the future", "explanation": "Right: with no surprise, guidance about later moves often matters more." }
+      ],
+      "correctOptionIds": ["b"],
+      "level": "beginner",
+      "glossaryIds": ["central-bank", "interest-rate", "surprise"]
+    }
+  ],
+  "doItNow": {
+    "kind": "reflection",
+    "instructions": "Pick one currency pair you practise. For each of its two currencies, find the central bank's name and its stated inflation goal on the bank's own website. Write one sentence for each on what could make it raise or cut rates."
+  },
+  "glossaryIds": ["interest-rate", "inflation", "central-bank", "swap", "surprise"],
+  "sourceIds": []
+}

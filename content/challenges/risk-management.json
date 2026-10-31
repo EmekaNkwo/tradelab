@@ -1,0 +1,38 @@
+{
+  "id": "risk-management",
+  "type": "risk_management",
+  "title": "Risk Management Challenge",
+  "summary": "Size trades from your stop and follow your own risk rules on 10 simulated or demo trades in a row. The result of the trades does not count; only how you managed the risk.",
+  "skills": [
+    "risk_management",
+    "execution_discipline"
+  ],
+  "criteria": [
+    {
+      "kind": "checkpoint_passed",
+      "moduleId": "forex-risk",
+      "label": "Pass the Risk checkpoint",
+      "dimension": "understanding"
+    },
+    {
+      "kind": "drill",
+      "drillKind": "size_it",
+      "count": 10,
+      "accuracy": 0.8,
+      "label": "Size It drill: 8 or more of your last 10 right",
+      "dimension": "risk_control"
+    },
+    {
+      "kind": "clean_trades",
+      "count": 10,
+      "label": "Your last 10 rule-checked trades: a stop on each and no rule broken",
+      "dimension": "rule_use"
+    },
+    {
+      "kind": "reviewed_trades",
+      "count": 5,
+      "label": "Write a journal review for 5 rule-checked trades",
+      "dimension": "reasoning"
+    }
+  ]
+}

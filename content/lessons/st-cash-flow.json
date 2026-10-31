@@ -1,0 +1,143 @@
+{
+  "id": "st-cash-flow",
+  "moduleId": "stocks-company-analysis",
+  "title": "Cash flow: does profit turn into cash?",
+  "level": "beginner",
+  "estimatedMinutes": 20,
+  "inOneLine": {
+    "simple": "Profit is an accounting figure; cash flow is money actually received. When profit keeps rising but cash does not, find out why.",
+    "balanced": "Operating [[cash-flow]] from the [[cash-flow-statement]] shows cash the business really collected. [[free-cash-flow|Free cash flow]] = operating cash flow − capital expenditure. Profit that does not become cash over time is a warning sign worth investigating."
+  },
+  "explain": {
+    "simple": "A company records a sale as revenue when it makes the sale, even if the customer will pay months later. So profit can rise while the bank account does not. The cash flow statement shows the money actually coming in and going out. Operating cash flow is the cash from day-to-day business. Free cash flow is what is left after the company spends on equipment, buildings and software (capital expenditure). That is the cash it can use to repay debt, pay dividends or save.",
+    "balanced": "For most steady businesses, operating cash flow is close to or above net income over several years. When it falls far below, ask why. Possible reasons include customers paying more slowly, unsold stock building up, or accounting choices that record profit early. These are hypotheses: the figures alone do not tell you which. Negative free cash flow is not always bad; a growing company may be investing heavily. The question is how it is paying for it, and for how long."
+  },
+  "realNumbers": {
+    "assumptions": [
+      "Example Gadgetmoor Wholesale Co (fictional), millions of USD",
+      "Net income: Year 1 39, Year 2 45, Year 3 52.5",
+      "Operating cash flow: 38, 18, 2. Capital expenditure: 10, 12, 15"
+    ],
+    "steps": [
+      "Cash compared with profit: Year 1 = 38 ÷ 39 = about 0.97; Year 2 = 18 ÷ 45 = 0.40; Year 3 = 2 ÷ 52.5 = about 0.04.",
+      "Free cash flow: Year 1 = 38 − 10 = 28; Year 2 = 18 − 12 = 6; Year 3 = 2 − 15 = −13.",
+      "Profit rose every year, but by Year 3 almost none of it arrived as cash.",
+      "Debt rose from 60 to 75 in Year 3 to cover the gap. This needs investigating before trusting the profit figure."
+    ]
+  },
+  "anotherExample": {
+    "assumptions": [
+      "Example Quickling Apps Co (fictional), Year 3, millions of USD",
+      "Net income 18; operating cash flow 20; capital expenditure 45",
+      "Debt: Year 2 110, Year 3 160"
+    ],
+    "steps": [
+      "Operating cash flow is a little above net income: 20 ÷ 18 = about 1.11. Profit is turning into cash.",
+      "Free cash flow = 20 − 45 = −25. The company spends more than it brings in.",
+      "Debt rose by 160 − 110 = 50 to pay for the spending.",
+      "Different problem from Gadgetmoor: here cash follows profit, but the investment is funded by borrowing. Ask whether that spending is likely to pay off before the debt becomes a burden."
+    ]
+  },
+  "explainSimpler": "Profit is what the accounts say you earned. Cash is what actually arrived. Over time, the two should roughly match.",
+  "commonMistake": "Trusting rising profit without checking operating cash flow. Profit that never turns into cash can be a sign of trouble the income statement does not show.",
+  "quickCheck": [
+    {
+      "id": "st-cash-flow-q1",
+      "prompt": "Operating cash flow 90, capital expenditure 35 (fictional, millions USD). What is free cash flow?",
+      "options": [
+        {
+          "id": "a",
+          "text": "125",
+          "explanation": "No: capital expenditure is subtracted, not added."
+        },
+        {
+          "id": "b",
+          "text": "55",
+          "explanation": "Right: 90 − 35 = 55."
+        },
+        {
+          "id": "c",
+          "text": "35",
+          "explanation": "No: that is the capital expenditure itself."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "free-cash-flow"
+      ]
+    },
+    {
+      "id": "st-cash-flow-q2",
+      "prompt": "Net income rises three years in a row while operating cash flow falls each year. What is a sensible next step?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Find out why cash is lagging",
+          "explanation": "Right: profit that does not become cash is a warning sign to investigate."
+        },
+        {
+          "id": "b",
+          "text": "Ignore it, since profit is rising",
+          "explanation": "No: profit is an accounting figure; cash shows what was collected."
+        },
+        {
+          "id": "c",
+          "text": "Treat it as proof of fraud",
+          "explanation": "No: there are several possible reasons; the figures alone do not prove any one."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "cash-flow",
+        "earnings"
+      ]
+    },
+    {
+      "id": "st-cash-flow-q3",
+      "prompt": "A growing company has negative free cash flow because it spends heavily on new equipment. Which question matters most?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Is its ticker short and easy to remember?",
+          "explanation": "No: that has nothing to do with cash."
+        },
+        {
+          "id": "b",
+          "text": "Is the dividend yield high?",
+          "explanation": "No: a firm with negative free cash flow often pays no dividend."
+        },
+        {
+          "id": "c",
+          "text": "How is it paying, and for how long?",
+          "explanation": "Right: spending funded by rising debt or new shares cannot go on for ever."
+        }
+      ],
+      "correctOptionIds": [
+        "c"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "free-cash-flow",
+        "net-debt"
+      ]
+    }
+  ],
+  "doItNow": {
+    "kind": "fundamental",
+    "instructions": "Open the Fundamental Analysis Lab → Company analysis. For each fictional company, compare Year 3 net income with operating cash flow, and work out free cash flow. Which company's profit is least backed by cash? Write two questions you would want its managers to answer."
+  },
+  "glossaryIds": [
+    "cash-flow",
+    "cash-flow-statement",
+    "free-cash-flow",
+    "earnings",
+    "net-debt"
+  ],
+  "sourceIds": []
+}

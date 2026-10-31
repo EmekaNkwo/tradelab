@@ -1,0 +1,22 @@
+{
+  "id": "risk-reward-ratio",
+  "term": "Risk:reward ratio",
+  "aliases": [
+    "R:R",
+    "reward to risk",
+    "risk-reward"
+  ],
+  "definition": {
+    "simple": "How much you plan to gain compared with how much you plan to lose on a trade.",
+    "balanced": "Reward to risk = distance to [[take-profit]] ÷ distance to [[stop-loss]]. A 2:1 trade aims to make twice what it risks. A bigger ratio needs a lower [[win-rate]] to break even, but price may reach the target less often."
+  },
+  "example": "Stop 30 pips away, target 60 pips away: reward to risk is 60 ÷ 30 = 2, written 2:1.",
+  "related": [
+    "r-multiple",
+    "win-rate",
+    "expectancy"
+  ],
+  "markets": [],
+  "level": "beginner",
+  "sourceIds": []
+}

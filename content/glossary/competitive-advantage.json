@@ -1,0 +1,21 @@
+{
+  "id": "competitive-advantage",
+  "term": "Competitive advantage",
+  "aliases": [
+    "moat",
+    "economic moat"
+  ],
+  "definition": {
+    "simple": "Something that lets a company keep earning good profits even when rivals try to compete.",
+    "balanced": "Examples of possible advantages: lower costs, a trusted brand, customers who find it hard to switch. Advantages can fade, so they are judgements, not facts. High margins and [[return-on-capital]] held for many years are one clue, not proof."
+  },
+  "related": [
+    "business-model",
+    "return-on-capital"
+  ],
+  "markets": [
+    "stocks"
+  ],
+  "level": "intermediate",
+  "sourceIds": []
+}

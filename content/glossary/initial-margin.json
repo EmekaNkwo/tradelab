@@ -1,0 +1,21 @@
+{
+  "id": "initial-margin",
+  "term": "Initial margin",
+  "aliases": [
+    "opening margin"
+  ],
+  "definition": {
+    "simple": "The deposit needed for each contract to open a futures position.",
+    "balanced": "A good-faith deposit, not the price of the contract and not the most you can lose. Exchanges set minimums and brokers may ask for more; both can raise it, sometimes at short notice. See also [[maintenance-margin]]."
+  },
+  "related": [
+    "maintenance-margin",
+    "margin",
+    "margin-call"
+  ],
+  "markets": [
+    "futures"
+  ],
+  "level": "beginner",
+  "sourceIds": []
+}

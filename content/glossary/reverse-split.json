@@ -1,0 +1,14 @@
+{
+  "id": "reverse-split",
+  "term": "Reverse split",
+  "aliases": ["reverse stock split", "share consolidation", "consolidation"],
+  "definition": {
+    "simple": "A company swaps several old shares for one new share. You have fewer shares at a higher price, and your total value is unchanged on the day.",
+    "balanced": "In a 1-for-10 reverse split, every 10 shares become 1 and the price is multiplied by about 10. Nothing about the business changes. Companies sometimes do it to lift a falling share price above a level they need. Repeated reverse splits alongside repeated [[dilution]] are a warning sign worth investigating."
+  },
+  "example": "Fictional: 10,000 shares at 0.12 USD (1,200 USD) become 1,000 shares at 1.20 USD (still 1,200 USD).",
+  "related": ["dilution", "penny-stock"],
+  "markets": ["stocks", "penny_stocks"],
+  "level": "beginner",
+  "sourceIds": []
+}

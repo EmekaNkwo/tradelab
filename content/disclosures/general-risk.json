@@ -1,0 +1,13 @@
+{
+  "id": "general-risk",
+  "version": 1,
+  "title": "Before you start: simulation and education only",
+  "body": [
+    "TradeLab is a learning app. It is not a broker, a signal service, or financial advice for your situation.",
+    "Everything you trade here is simulated or on a demo account. TradeLab never places real trades, never asks for broker logins, and never handles money.",
+    "Trading strategies can lose money. Past performance does not guarantee future results.",
+    "Scores and certificates in TradeLab measure learning and discipline. They are not licences and they do not show that you are likely to make money."
+  ],
+  "triggers": ["first_launch", "always"],
+  "statistics": []
+}

@@ -1,0 +1,139 @@
+{
+  "id": "fx-candlesticks",
+  "moduleId": "forex-charts",
+  "title": "Candlesticks and OHLC",
+  "level": "beginner",
+  "estimatedMinutes": 15,
+  "inOneLine": {
+    "simple": "Each candle shows four prices for one period: where it opened, how high and low it went, and where it closed.",
+    "balanced": "A [[candlestick]] draws the [[ohlc]] prices: the body runs from open to close, and the wicks reach to the high and low."
+  },
+  "explain": {
+    "simple": "Pick one candle on a chart. It covers one stretch of time, such as one hour. The thick body runs from the opening price to the closing price. If the close is above the open, price rose during that hour and the candle is an up candle. If the close is below the open, it is a down candle. The thin lines above and below the body are wicks. They show the highest and lowest prices reached. Colours depend on your app, so check which colour means up.",
+    "balanced": "Body size = |close − open|. Range = high − low. Upper wick = high − the higher of open and close. Lower wick = the lower of open and close − low. Body plus both wicks equals the range. A long wick shows price went somewhere and came back within the period, but not why or what happens next. MetaTrader charts usually show bid prices, so a buy fills at the ask, which sits one [[spread]] above the chart."
+  },
+  "realNumbers": {
+    "assumptions": [
+      "Illustrative prices",
+      "One 1-hour EUR/USD candle: open 1.10000, high 1.10250, low 1.09900, close 1.10180",
+      "1 pip = 0.00010"
+    ],
+    "steps": [
+      "The close (1.10180) is above the open (1.10000), so this is an up candle.",
+      "Body = 1.10180 − 1.10000 = 0.00180 = 18 pips.",
+      "Upper wick = 1.10250 − 1.10180 = 0.00070 = 7 pips.",
+      "Lower wick = 1.10000 − 1.09900 = 0.00100 = 10 pips.",
+      "Range = 1.10250 − 1.09900 = 0.00350 = 35 pips. Check: 18 + 7 + 10 = 35."
+    ]
+  },
+  "anotherExample": {
+    "assumptions": [
+      "Illustrative prices",
+      "One 1-hour GBP/USD candle: open 1.25400, high 1.25450, low 1.25000, close 1.25100"
+    ],
+    "steps": [
+      "The close (1.25100) is below the open (1.25400), so this is a down candle.",
+      "Body = 1.25400 − 1.25100 = 0.00300 = 30 pips.",
+      "Upper wick = 1.25450 − 1.25400 = 5 pips. Lower wick = 1.25100 − 1.25000 = 10 pips.",
+      "Range = 1.25450 − 1.25000 = 45 pips. Check: 30 + 5 + 10 = 45.",
+      "The 10-pip lower wick shows price dipped to 1.25000 and came back up a little before the hour ended. It does not tell you what the next candle will do."
+    ]
+  },
+  "explainSimpler": "A candle is a tiny summary of one time period: start price, end price, top and bottom.",
+  "commonMistake": "Reading a single candle as a prediction, for example \"a long lower wick means price will rise\". One candle only describes what already happened in one period.",
+  "quickCheck": [
+    {
+      "id": "fx-candlesticks-q1",
+      "prompt": "A candle opens at 1.08500 and closes at 1.08350. What kind of candle is it?",
+      "options": [
+        {
+          "id": "a",
+          "text": "A down candle",
+          "explanation": "Right: the close is below the open, so price fell over the period."
+        },
+        {
+          "id": "b",
+          "text": "An up candle",
+          "explanation": "No: it opened at 1.08500 and closed lower, at 1.08350. An up candle closes above its open."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "candlestick",
+        "ohlc"
+      ]
+    },
+    {
+      "id": "fx-candlesticks-q2",
+      "prompt": "A EUR/USD candle has high 1.10400 and low 1.10120. What is its range?",
+      "options": [
+        {
+          "id": "a",
+          "text": "28 pips",
+          "explanation": "Right: 1.10400 − 1.10120 = 0.00280 = 28 pips."
+        },
+        {
+          "id": "b",
+          "text": "2.8 pips",
+          "explanation": "No: 0.00280 is 28 pips, because 1 pip is 0.00010."
+        },
+        {
+          "id": "c",
+          "text": "280 pips",
+          "explanation": "No: that would be a range of 0.02800."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "ohlc",
+        "pip"
+      ]
+    },
+    {
+      "id": "fx-candlesticks-q3",
+      "prompt": "What do the wicks of a candle show?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The highest and lowest prices in the period",
+          "explanation": "Right: the wicks run from the body out to the high and the low."
+        },
+        {
+          "id": "b",
+          "text": "The opening and closing prices of the period",
+          "explanation": "No: the open and close are the two ends of the body."
+        },
+        {
+          "id": "c",
+          "text": "Where price will go next",
+          "explanation": "No: a candle only describes the past period."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "candlestick"
+      ]
+    }
+  ],
+  "doItNow": {
+    "kind": "chart_lab",
+    "instructions": "Open Chart Lab on a candlestick chart. Long-press on 5 different candles to read their open, high, low and close. For each one, say whether it is an up or down candle and work out its range in pips."
+  },
+  "glossaryIds": [
+    "candlestick",
+    "ohlc",
+    "pip",
+    "spread",
+    "bid"
+  ],
+  "sourceIds": []
+}

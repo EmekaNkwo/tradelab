@@ -1,0 +1,13 @@
+{
+  "id": "margin",
+  "term": "Margin",
+  "aliases": [],
+  "definition": {
+    "simple": "Money your broker sets aside from your account while a leveraged trade is open. It is a deposit, not the most you can lose.",
+    "balanced": "The collateral required to open and hold a leveraged position. If losses reduce your equity too far, the broker may ask for more money (a margin call) or close positions. Losses can be larger than the margin."
+  },
+  "related": ["leverage"],
+  "markets": ["forex", "commodities", "futures"],
+  "level": "beginner",
+  "sourceIds": []
+}

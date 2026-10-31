@@ -1,0 +1,22 @@
+{
+  "id": "ta-advanced",
+  "skills": ["technical_analysis", "statistical_reasoning", "backtesting_literacy"],
+  "title": "Regimes, sizing and honest testing",
+  "summary": "Market regimes, volatility-adjusted position sizing, return statistics, indicator correlation, parameter sensitivity, and out-of-sample and walk-forward testing.",
+  "markets": [
+    "forex",
+    "stocks",
+    "commodities",
+    "futures"
+  ],
+  "level": "advanced",
+  "lessonIds": [
+    "ta-market-regimes",
+    "ta-volatility-sizing",
+    "ta-stats-correlation",
+    "ta-walk-forward"
+  ],
+  "checkpointQuizId": "ta-advanced-checkpoint",
+  "practicalResult": "Size 10 trades from ATR-based stops, label each replay period by regime, and run a two-part replay test: tune on the first half, then test unchanged on the second.",
+  "minPracticeDays": 0
+}

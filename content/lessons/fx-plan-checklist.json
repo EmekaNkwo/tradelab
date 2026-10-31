@@ -1,0 +1,134 @@
+{
+  "id": "fx-plan-checklist",
+  "moduleId": "forex-my-plan",
+  "title": "Limits, when to stop, and the pre-trade checklist",
+  "level": "beginner",
+  "estimatedMinutes": 15,
+  "inOneLine": {
+    "simple": "Your plan also says how much you can lose in a day, how many trades you take, and when you stop. A [[pre-trade-checklist]] checks each trade against it.",
+    "balanced": "A daily loss limit and a maximum trade count cap the damage from a bad day or a bad mood. The pre-trade checklist asks five questions before every trade: in my plan? stop set? risk within limit? important news due soon? calm, and not trying to win back a loss?"
+  },
+  "explain": {
+    "simple": "Even good rules lose sometimes. Bad days happen. Your plan should say when to stop. A daily loss limit stops you after you lose a set amount. A maximum number of trades stops you from trading too much. Add plain stop rules too, such as \"stop if I feel angry\" or \"stop before a big news release\". Then, before each trade, the app shows a short checklist. Is this trade in my plan? Is a stop loss set? Is the risk within my limit? Is there important news due soon for this market? Am I calm, and not trying to win back a loss? If an answer raises a caution (for example no stop, risk over your limit, news due soon, not calm, or not sure), wait or skip that trade. The app lists the cautions; the decision to wait is yours.",
+    "balanced": "Limits work best as numbers you can check, not feelings. Write them as an amount of money or a count of trades. The pre-trade checklist sits before you go to MetaTrader or place a paper trade. It is short on purpose, so you use it every time. When you want to change a limit, do it after the session, save a new plan version, and note why. Then you can compare versions in your journal instead of drifting without noticing."
+  },
+  "realNumbers": {
+    "assumptions": [
+      "Fictional demo account, balance 2,000 USD",
+      "Example risk per trade: 1% = 20 USD (example only)",
+      "Example daily loss limit: 3% = 60 USD",
+      "Example maximum: 4 trades per day",
+      "Losses equal the planned risk (no slippage)"
+    ],
+    "steps": [
+      "Trade 1: stop hit, −20 USD. Day total −20 USD.",
+      "Trade 2: target hit, +40 USD. Day total +20 USD.",
+      "Trade 3: stop hit, −20 USD. Day total 0 USD.",
+      "Trade 4: stop hit, −20 USD. Day total −20 USD. That is 4 trades, the maximum, so the learner stops for the day even though the loss limit was not reached."
+    ]
+  },
+  "anotherExample": {
+    "assumptions": [
+      "Fictional paper trade idea on GBP/USD",
+      "A major news release is due in 15 minutes",
+      "The learner's plan says: no new trades from 30 minutes before major news"
+    ],
+    "steps": [
+      "In my plan? Yes, the setup matches the entry rule.",
+      "Stop set? Yes.",
+      "Risk within limit? Yes.",
+      "Important news due soon? Yes, within 30 minutes. That raises a caution, and the plan says no new trades now.",
+      "One caution is enough. The learner skips the trade and writes down why."
+    ]
+  },
+  "explainSimpler": "Limits are the brakes. The checklist is checking the mirrors before you pull out.",
+  "commonMistake": "Raising the daily loss limit in the middle of a losing day \"just this once\". That turns the limit into a suggestion.",
+  "quickCheck": [
+    {
+      "id": "fx-plan-checklist-q1",
+      "prompt": "Which of these is NOT one of the five pre-trade checklist questions?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Is a stop loss set?",
+          "explanation": "No: this is one of the five questions."
+        },
+        {
+          "id": "b",
+          "text": "Will this trade win?",
+          "explanation": "Right: nobody can know that. The checklist checks your process, not the outcome."
+        },
+        {
+          "id": "c",
+          "text": "Am I calm, and not trying to win back a loss?",
+          "explanation": "No: this is one of the five questions."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "pre-trade-checklist"
+      ]
+    },
+    {
+      "id": "fx-plan-checklist-q2",
+      "prompt": "The setup is in your plan, the stop is set, risk is within your limit and you are calm. A major release is due in 10 minutes, and your plan says no new trades within 30 minutes of major news. What do you do?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Take it: four out of five is good enough",
+          "explanation": "No: the checklist is not a score. One answer that raises a caution means you wait or skip that trade."
+        },
+        {
+          "id": "b",
+          "text": "Skip it and note why",
+          "explanation": "Right: the news rule says no, so you wait."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "pre-trade-checklist",
+        "trading-plan"
+      ]
+    },
+    {
+      "id": "fx-plan-checklist-q3",
+      "prompt": "When is the right time to change your daily loss limit?",
+      "options": [
+        {
+          "id": "a",
+          "text": "After the session, saved as a new plan version",
+          "explanation": "Right: calm changes, recorded, so you can compare versions."
+        },
+        {
+          "id": "b",
+          "text": "When you hit it and want one more trade",
+          "explanation": "No: that is exactly when the limit is meant to stop you."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "trading-plan"
+      ]
+    }
+  ],
+  "doItNow": {
+    "kind": "reflection",
+    "instructions": "In More → Tools → Trading plan, set your risk per trade, daily loss limit, maximum trades per day, and your \"when to stop\" rules. Save the plan. Then open the pre-trade checklist and run it on one paper trade idea, even if you do not take the trade."
+  },
+  "homework": "Read your saved plan out loud. It should fit on one page. Anything you would not follow on a bad day, simplify.",
+  "glossaryIds": [
+    "trading-plan",
+    "pre-trade-checklist",
+    "stop-loss"
+  ],
+  "sourceIds": []
+}

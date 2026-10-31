@@ -1,0 +1,91 @@
+{
+  "id": "mt-change-timeframe",
+  "title": "Open a chart and change its timeframe",
+  "summary": "Open a EUR/USD [[candlestick]] chart and switch between M15, H1, H4 and D1 to see how the same prices look on each [[timeframe]].",
+  "level": "beginner",
+  "requiresDemo": true,
+  "steps": [
+    {
+      "text": "Check you are on your demo account before you start."
+    },
+    {
+      "text": "In the Quotes tab, tap EUR/USD and choose the option to open its chart. You can also open the Chart tab and pick the symbol there."
+    },
+    {
+      "text": "If the chart shows bars or a line, switch it to candlesticks. The chart type is usually in the chart settings or in a menu at the top of the chart. It depends on your app version."
+    },
+    {
+      "text": "Find the timeframe control. It is usually a label such as H1 at the top of the chart, or a round menu that appears when you tap the chart. It depends on your app version.",
+      "mt4": "In MT4, tapping the chart often shows a round menu with the timeframes around it.",
+      "mt5": "In MT5, the timeframe is often shown as a label or button at the top of the chart."
+    },
+    {
+      "text": "Choose M15. Note roughly how many hours of price the screen shows."
+    },
+    {
+      "text": "Switch to H1, then H4, then D1. Each time, note whether the last part of the chart looks like it is rising, falling or moving sideways."
+    },
+    {
+      "text": "Pinch to zoom out on D1 to see more candles, then switch back to H1."
+    },
+    {
+      "text": "Write down one sentence for each timeframe describing what you saw."
+    }
+  ],
+  "afterQuestions": [
+    {
+      "id": "mt-change-timeframe-q1",
+      "prompt": "The last price was the same on every timeframe. Why did the charts look different?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Each candle covers a different length of time",
+          "explanation": "Right: the same prices are grouped into bigger or smaller candles."
+        },
+        {
+          "id": "b",
+          "text": "Each timeframe uses different prices",
+          "explanation": "No: it is the same market, grouped differently."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "timeframe",
+        "candlestick"
+      ]
+    },
+    {
+      "id": "mt-change-timeframe-q2",
+      "prompt": "H4 looked like it was rising and M15 looked like it was falling. Which is right?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Both: they cover different windows of time",
+          "explanation": "Right: a short fall can sit inside a longer rise."
+        },
+        {
+          "id": "b",
+          "text": "H4, because it is longer",
+          "explanation": "No: neither timeframe is the true one."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "timeframe",
+        "trend"
+      ]
+    }
+  ],
+  "glossaryIds": [
+    "timeframe",
+    "candlestick",
+    "trend",
+    "demo-account"
+  ]
+}

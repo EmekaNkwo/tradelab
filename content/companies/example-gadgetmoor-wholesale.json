@@ -1,0 +1,67 @@
+{
+  "id": "example-gadgetmoor-wholesale",
+  "name": "Example Gadgetmoor Wholesale Co (fictional)",
+  "sector": "Electronics wholesale (fictional)",
+  "summary": "A fictional wholesaler whose reported profit rises every year, while the cash coming in from operations shrinks almost to zero. Profit and cash are telling different stories.",
+  "assumptions": "All figures are fictional and in millions of USD, except the share price. The same tax rate (25% of pre-tax profit), tax rules and accounting apply to every company. No one-off items, share issues or buybacks. Ratios use Year 3 and the current share price. Simulated for learning; not a real firm.",
+  "currency": "USD",
+  "sharePrice": 11.6,
+  "sharesOutstanding": 100,
+  "years": [
+    {
+      "label": "Year 1",
+      "revenue": 400,
+      "costOfSales": 280,
+      "operatingExpenses": 64,
+      "interest": 4,
+      "tax": 13.0,
+      "operatingCashFlow": 38,
+      "capitalExpenditure": 10,
+      "dividendsPaid": 0,
+      "cash": 40,
+      "debt": 60,
+      "equity": 300
+    },
+    {
+      "label": "Year 2",
+      "revenue": 480,
+      "costOfSales": 336,
+      "operatingExpenses": 77,
+      "interest": 7,
+      "tax": 15.0,
+      "operatingCashFlow": 18,
+      "capitalExpenditure": 12,
+      "dividendsPaid": 0,
+      "cash": 46,
+      "debt": 60,
+      "equity": 345.0
+    },
+    {
+      "label": "Year 3",
+      "revenue": 580,
+      "costOfSales": 406,
+      "operatingExpenses": 93,
+      "interest": 11,
+      "tax": 17.5,
+      "operatingCashFlow": 2,
+      "capitalExpenditure": 15,
+      "dividendsPaid": 0,
+      "cash": 48,
+      "debt": 75,
+      "equity": 397.5
+    }
+  ],
+  "notes": [
+    "Net income grew from 39 to 52.5 million, but operating cash flow fell from 38 to 2 million. Profit that does not turn into cash is a warning sign worth investigating.",
+    "Possible reasons, as hypotheses only: customers taking longer to pay, unsold stock piling up, or generous accounting choices. The figures alone do not say which.",
+    "Free cash flow turned negative in Year 3 and debt rose to cover the gap.",
+    "Questions for management: why is cash lagging profit, and when do they expect it to catch up?"
+  ],
+  "glossaryIds": [
+    "earnings",
+    "cash-flow",
+    "cash-flow-statement",
+    "free-cash-flow",
+    "net-debt"
+  ]
+}

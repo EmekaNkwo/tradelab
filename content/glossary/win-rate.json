@@ -1,0 +1,20 @@
+{
+  "id": "win-rate",
+  "term": "Win rate",
+  "aliases": [
+    "hit rate",
+    "strike rate"
+  ],
+  "definition": {
+    "simple": "The share of your trades that make money.",
+    "balanced": "Win rate = winning trades ÷ all trades. On its own it says little: a high win rate with small wins and big losses can still lose money. Break-even win rate = 1 ÷ (1 + reward to risk), before costs."
+  },
+  "example": "6 winners out of 20 trades is a 30% win rate.",
+  "related": [
+    "expectancy",
+    "risk-reward-ratio"
+  ],
+  "markets": [],
+  "level": "beginner",
+  "sourceIds": []
+}

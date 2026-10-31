@@ -1,0 +1,18 @@
+{
+  "id": "forex-rules-based-strategies",
+  "skills": ["strategy_understanding", "technical_analysis"],
+  "title": "Rules-based strategies: trend following and channel breakouts",
+  "summary": "Two families of rules-based strategies, taught as simplified educational versions: moving-average trend following and channel breakouts. Practised in Chart Lab and Replay on simulated charts. Named historical versions of these systems are added to TradeLab only after a person has checked them against reliable sources.",
+  "markets": [
+    "forex"
+  ],
+  "level": "intermediate",
+  "lessonIds": [
+    "fx-rules-based-strategies",
+    "fx-ma-trend-following",
+    "fx-channel-breakouts"
+  ],
+  "checkpointQuizId": "forex-rules-based-strategies-checkpoint",
+  "practicalResult": "Apply the moving-average and channel-breakout rules in Replay on simulated charts, with entry, exit, stop and size written down before each trade.",
+  "minPracticeDays": 0
+}

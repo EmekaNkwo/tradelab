@@ -1,0 +1,80 @@
+{
+  "id": "fa-macro-checkpoint",
+  "title": "Checkpoint: macro analysis",
+  "passMark": 0.8,
+  "questions": [
+    {
+      "id": "fa-macro-checkpoint-q1",
+      "prompt": "Fictional GDP release: consensus +0.4% on the quarter, actual +0.1%. What is the surprise?",
+      "options": [
+        { "id": "a", "text": "+0.3 points", "explanation": "No: surprise is actual minus consensus, and the actual is lower." },
+        { "id": "b", "text": "+0.1 points", "explanation": "No: that is the actual figure, not the gap." },
+        { "id": "c", "text": "−0.3 points", "explanation": "Right: 0.1 − 0.4 = −0.3 points, weaker than expected." }
+      ],
+      "correctOptionIds": ["c"],
+      "level": "intermediate",
+      "glossaryIds": ["gdp", "surprise", "consensus-forecast"]
+    },
+    {
+      "id": "fa-macro-checkpoint-q2",
+      "prompt": "In most countries, who sets the policy interest rate?",
+      "options": [
+        { "id": "a", "text": "The finance ministry", "explanation": "No: the government sets taxes and spending, which is fiscal policy." },
+        { "id": "b", "text": "The country's central bank", "explanation": "Right: the policy rate is the central bank's main monetary-policy tool." },
+        { "id": "c", "text": "The statistics office", "explanation": "No: statistics offices publish data such as GDP and inflation; they do not set rates." }
+      ],
+      "correctOptionIds": ["b"],
+      "level": "intermediate",
+      "glossaryIds": ["monetary-policy", "fiscal-policy", "central-bank"]
+    },
+    {
+      "id": "fa-macro-checkpoint-q3",
+      "prompt": "Hypothetical: government debt 300 billion WMK, yearly GDP 600 billion WMK. What is debt as a share of GDP?",
+      "options": [
+        { "id": "a", "text": "200%", "explanation": "No: that divides GDP by debt. Divide debt by GDP." },
+        { "id": "b", "text": "30%", "explanation": "No: check the division. 300 ÷ 600 = 0.5." },
+        { "id": "c", "text": "300%", "explanation": "No: that is the debt in billions, read as a percentage." },
+        { "id": "d", "text": "50%", "explanation": "Right: 300 ÷ 600 = 0.50 = 50%." }
+      ],
+      "correctOptionIds": ["d"],
+      "level": "intermediate",
+      "glossaryIds": ["government-debt", "gdp"]
+    },
+    {
+      "id": "fa-macro-checkpoint-q4",
+      "prompt": "Suppose traders' bets imply a 90% chance of a 0.25-point rate rise. The fictional central bank holds rates instead. Measured against what was priced in, what is the surprise?",
+      "options": [
+        { "id": "a", "text": "−0.225 points", "explanation": "Right: priced in = 0.90 × 0.25 = 0.225 points, and 0 − 0.225 = −0.225." },
+        { "id": "b", "text": "0 points, as rates did not move", "explanation": "No: the market expected a rise, so no change is itself a surprise." },
+        { "id": "c", "text": "−0.25 points", "explanation": "No: that assumes the rise was certain. It was priced at 90%." }
+      ],
+      "correctOptionIds": ["a"],
+      "level": "intermediate",
+      "glossaryIds": ["priced-in", "surprise", "interest-rate"]
+    },
+    {
+      "id": "fa-macro-checkpoint-q5",
+      "prompt": "The price of fictional Westmark's main export falls 15%. What is most accurate about WMK?",
+      "options": [
+        { "id": "a", "text": "WMK must fall 15% too, matching its export", "explanation": "No: there is no one-to-one link, and other forces can outweigh it." },
+        { "id": "b", "text": "It tends to weigh on WMK; other forces also matter", "explanation": "Right: lower export earnings can reduce demand for WMK, as a tendency, not a rule." },
+        { "id": "c", "text": "Buyers abroad now need less WMK, which may push it up", "explanation": "No: needing less WMK means less demand for it, which tends to weigh on it, not lift it." }
+      ],
+      "correctOptionIds": ["b"],
+      "level": "intermediate",
+      "glossaryIds": ["commodity"]
+    },
+    {
+      "id": "fa-macro-checkpoint-q6",
+      "prompt": "Two fictional inflation releases show the same consensus and actual. After one, the currency rises and holds; after the other, it spikes and falls back. What best explains the difference?",
+      "options": [
+        { "id": "a", "text": "One release must have been reported wrongly", "explanation": "No: both numbers can be correct. The setup before them differed." },
+        { "id": "b", "text": "One release may have had a bigger surprise than the other", "explanation": "No: the same consensus and actual means the same surprise. The setup before them differed." },
+        { "id": "c", "text": "More was priced in before the second, so traders took profit", "explanation": "Right: when many traders bought early, good news can be when they take profit." }
+      ],
+      "correctOptionIds": ["c"],
+      "level": "intermediate",
+      "glossaryIds": ["priced-in", "surprise", "inflation"]
+    }
+  ]
+}

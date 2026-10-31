@@ -1,0 +1,21 @@
+{
+  "id": "relative-strength",
+  "term": "Relative strength",
+  "aliases": [
+    "relative performance",
+    "RS line",
+    "ratio chart"
+  ],
+  "definition": {
+    "simple": "A comparison of one market with another, or with an index, usually as a ratio of their prices.",
+    "balanced": "A rising ratio means the first market did better over that window, even if both fell. The result depends on the window chosen and can change at any time. It is not [[rsi|RSI]], which looks at one market on its own."
+  },
+  "example": "A goes from 50 to 47 (−6%); the index goes from 4,000 to 3,600 (−10%). A shows relative strength, but still fell.",
+  "related": [
+    "rsi",
+    "correlation"
+  ],
+  "markets": [],
+  "level": "intermediate",
+  "sourceIds": []
+}

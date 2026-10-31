@@ -1,0 +1,15 @@
+{
+  "title": "TradeLab manifest",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "version": {
+      "type": "string",
+      "pattern": "^\\d{4}\\.\\d{1,2}\\.\\d+$"
+    }
+  },
+  "required": [
+    "version"
+  ],
+  "additionalProperties": false
+}

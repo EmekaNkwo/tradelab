@@ -1,0 +1,25 @@
+{
+  "id": "earnings",
+  "term": "Earnings",
+  "aliases": [
+    "net income",
+    "net profit",
+    "bottom line"
+  ],
+  "definition": {
+    "simple": "The profit left for the owners after every cost, interest and tax has been paid.",
+    "balanced": "Earnings (net income) = revenue − cost of sales − operating expenses − interest − tax. It is the last line of the [[income-statement]]. Earnings are an accounting figure: they can differ a lot from the cash the business actually collected, so compare them with [[cash-flow]]."
+  },
+  "example": "Revenue 1,040, all costs, interest and tax 926: earnings = 114 (fictional, millions USD).",
+  "related": [
+    "revenue",
+    "eps",
+    "income-statement",
+    "cash-flow"
+  ],
+  "markets": [
+    "stocks"
+  ],
+  "level": "beginner",
+  "sourceIds": []
+}

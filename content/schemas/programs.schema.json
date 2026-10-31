@@ -1,0 +1,40 @@
+{
+  "title": "TradeLab programs",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "summary": {
+      "type": "string",
+      "minLength": 1
+    },
+    "moduleIds": {
+      "minItems": 1,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+      }
+    },
+    "defaultWeeks": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 104
+    }
+  },
+  "required": [
+    "id",
+    "title",
+    "summary",
+    "moduleIds",
+    "defaultWeeks"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,21 @@
+{
+  "id": "cash-flow-statement",
+  "term": "Cash flow statement",
+  "aliases": [
+    "statement of cash flows"
+  ],
+  "definition": {
+    "simple": "The report that shows the actual cash coming in and going out over a period.",
+    "balanced": "It splits cash into operating (the day-to-day business), investing (such as capital expenditure) and financing (borrowing, repaying, dividends). Comparing operating [[cash-flow]] with [[earnings]] shows whether profit is turning into cash."
+  },
+  "related": [
+    "cash-flow",
+    "free-cash-flow",
+    "earnings"
+  ],
+  "markets": [
+    "stocks"
+  ],
+  "level": "beginner",
+  "sourceIds": []
+}

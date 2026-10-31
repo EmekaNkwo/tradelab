@@ -1,0 +1,19 @@
+{
+  "id": "ce-central-bank-meeting",
+  "kind": "central_bank_meeting",
+  "title": "Central bank meetings and statements",
+  "measures": "Nothing is measured. A central bank's policy committee meets, discusses the economy and publishes a statement, and often holds a press conference or later releases the minutes of the discussion.",
+  "whyItMatters": "The wording of a statement can change what traders expect about future interest rates, even when rates themselves are left alone. Expectations about rates feed into currencies, bond yields, stock valuations and the cost of holding commodities.",
+  "affectedMarkets": ["forex", "stocks", "commodities", "futures"],
+  "expectations": "Before a meeting, analysts and traders form a view of what the bank will say, based on recent data and earlier speeches. Much of that view is already in prices before the meeting starts.",
+  "surprises": "A surprise here is usually about tone: a statement that sounds more worried about inflation, or more worried about growth, than expected. Traders may reprice future rate paths, but they can also disagree about what the words mean, so the first move is often reversed or extended as the press conference goes on.",
+  "limits": "A meeting does not tell you which way any price will go. The same statement can be read in different ways, and other news can matter more on the day. Spreads can widen and prices can jump around the release time.",
+  "keywords": ["central bank", "policy meeting", "policy committee", "minutes", "press conference", "governor", "hawkish", "dovish", "forward guidance", "monetary policy"],
+  "glossaryIds": ["central-bank", "monetary-policy", "interest-rate", "priced-in", "economic-calendar"],
+  "lessonIds": ["fx-rates-central-banks", "fm-monetary-fiscal-debt", "fm-priced-in"],
+  "scenarioIds": [],
+  "samples": [
+    { "id": "s1", "title": "Bank of Westmark policy statement (fictional)", "day": 3, "time": "12:00", "timeZone": "UTC", "where": "Westmark (fictional)", "details": "The fictional Bank of Westmark publishes its statement after a two-day meeting, followed by a press conference half an hour later." },
+    { "id": "s2", "title": "Bank of Westmark meeting minutes (fictional)", "day": 4, "time": "14:00", "timeZone": "UTC", "where": "Westmark (fictional)", "details": "Minutes of an earlier fictional meeting, showing how the committee members' views differed." }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "id": "forward-test",
+  "term": "Forward test",
+  "aliases": [
+    "forward testing",
+    "paper trading the plan"
+  ],
+  "definition": {
+    "simple": "Following your trading plan in real time on a demo or paper account, where you cannot see the future.",
+    "balanced": "A forward test comes after a [[backtest]]. It adds things a backtest misses: waiting in real time, changing spreads, slippage, and your own emotions. On a [[demo-account]] the money is pretend, so fills and feelings can still differ from real trading."
+  },
+  "related": [
+    "backtest",
+    "demo-account",
+    "trading-journal"
+  ],
+  "markets": [],
+  "level": "intermediate",
+  "sourceIds": []
+}

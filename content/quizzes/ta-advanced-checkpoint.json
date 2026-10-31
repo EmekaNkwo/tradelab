@@ -1,0 +1,189 @@
+{
+  "id": "ta-advanced-checkpoint",
+  "title": "Checkpoint: regimes, sizing and honest testing",
+  "passMark": 0.8,
+  "questions": [
+    {
+      "id": "ta-advanced-checkpoint-q1",
+      "prompt": "Stock at 30.00, ATR 14 = 0.75, stop = 2 × ATR. You risk 150 USD. How many shares?",
+      "skills": ["risk_management"],
+      "options": [
+        {
+          "id": "a",
+          "text": "200 shares",
+          "explanation": "No: that uses a 1 × ATR stop of 0.75. The stop is 1.50."
+        },
+        {
+          "id": "b",
+          "text": "100 shares",
+          "explanation": "Right: stop = 1.50, and 150 ÷ 1.50 = 100."
+        },
+        {
+          "id": "c",
+          "text": "50 shares",
+          "explanation": "No: that would need a 3.00 stop, which is 4 × ATR."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "advanced",
+      "glossaryIds": [
+        "volatility-adjusted-sizing",
+        "atr"
+      ]
+    },
+    {
+      "id": "ta-advanced-checkpoint-q2",
+      "prompt": "Rule: trending if net move over 20 candles ≥ 3 × ATR; low volatility if ATR ≤ 0.75 × its 100-candle average. Net move 40 pips, ATR 20 pips, average ATR 30 pips. Label?",
+      "skills": ["technical_analysis"],
+      "options": [
+        {
+          "id": "a",
+          "text": "Trending, low volatility",
+          "explanation": "No: 40 ÷ 20 = 2 ATR, below the 3 ATR needed for a trend."
+        },
+        {
+          "id": "b",
+          "text": "Ranging, normal volatility",
+          "explanation": "No: 20 ÷ 30 ≈ 0.67, which is 0.75 or less, so low volatility."
+        },
+        {
+          "id": "c",
+          "text": "Ranging, low volatility",
+          "explanation": "Right: 2 ATR is below 3, and 20 ÷ 30 ≈ 0.67 is at most 0.75."
+        }
+      ],
+      "correctOptionIds": [
+        "c"
+      ],
+      "level": "advanced",
+      "glossaryIds": [
+        "market-regime",
+        "atr"
+      ]
+    },
+    {
+      "id": "ta-advanced-checkpoint-q3",
+      "prompt": "10 trades: one of +6R and nine of −1R. What is the average result per trade?",
+      "skills": ["statistical_reasoning"],
+      "options": [
+        {
+          "id": "a",
+          "text": "−0.3R",
+          "explanation": "Right: 6 − 9 = −3R in total, and −3R ÷ 10 = −0.3R."
+        },
+        {
+          "id": "b",
+          "text": "+0.6R",
+          "explanation": "No: that leaves out the nine losses."
+        },
+        {
+          "id": "c",
+          "text": "−1R",
+          "explanation": "No: −1R is the median, the middle trade. The average is −3R ÷ 10."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "advanced",
+      "glossaryIds": [
+        "return-distribution",
+        "r-multiple"
+      ]
+    },
+    {
+      "id": "ta-advanced-checkpoint-q4",
+      "prompt": "A plan needs RSI above 50, MACD above zero and price above SMA 20. What is a fair description?",
+      "skills": ["technical_analysis", "statistical_reasoning"],
+      "options": [
+        {
+          "id": "a",
+          "text": "Three separate confirmations that add up",
+          "explanation": "No: all three come from recent closes, so they often agree for the same reason."
+        },
+        {
+          "id": "b",
+          "text": "Closely linked readings of recent direction",
+          "explanation": "Right: correlated indicators largely repeat one message."
+        },
+        {
+          "id": "c",
+          "text": "A filter set that removes false signals",
+          "explanation": "No: no combination of indicators removes false signals."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "advanced",
+      "glossaryIds": [
+        "indicator-correlation",
+        "rsi",
+        "macd",
+        "moving-average"
+      ]
+    },
+    {
+      "id": "ta-advanced-checkpoint-q5",
+      "prompt": "In a walk-forward test, why judge only the joined test blocks?",
+      "skills": ["backtesting_literacy"],
+      "options": [
+        {
+          "id": "a",
+          "text": "They contain more trades than tuning blocks",
+          "explanation": "No: they often contain fewer. The point is what the rules had seen."
+        },
+        {
+          "id": "b",
+          "text": "They remove the need for a demo forward test",
+          "explanation": "No: a forward test on a demo account is still the next step."
+        },
+        {
+          "id": "c",
+          "text": "The rules never saw those candles in tuning",
+          "explanation": "Right: the rules had not seen those candles when they were set."
+        }
+      ],
+      "correctOptionIds": [
+        "c"
+      ],
+      "level": "advanced",
+      "glossaryIds": [
+        "walk-forward-testing",
+        "out-of-sample"
+      ]
+    },
+    {
+      "id": "ta-advanced-checkpoint-q6",
+      "prompt": "Which set of results is least likely to be fragile?",
+      "skills": ["backtesting_literacy", "statistical_reasoning"],
+      "options": [
+        {
+          "id": "a",
+          "text": "+4R, +5R, +4R at average lengths 18, 20, 22",
+          "explanation": "Right: neighbouring settings agree, so the result does not hinge on one number."
+        },
+        {
+          "id": "b",
+          "text": "−3R, +14R, −2R at average lengths 18, 20, 22",
+          "explanation": "No: a lone peak with losing neighbours is a sign of overfitting."
+        },
+        {
+          "id": "c",
+          "text": "+14R at length 20, nothing else tested",
+          "explanation": "No: without neighbours you cannot see how sensitive it is."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "advanced",
+      "glossaryIds": [
+        "parameter-sensitivity",
+        "overfitting"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,194 @@
+{
+  "id": "channel-breakout",
+  "skills": ["strategy_understanding", "technical_analysis"],
+  "title": "Channel breakout",
+  "category": "trading",
+  "family": "breakout",
+  "markets": [
+    "forex",
+    "commodities",
+    "futures"
+  ],
+  "level": "intermediate",
+  "horizon": "position",
+  "style": "rules_based",
+  "analysis": "technical",
+  "attribution": "generic",
+  "traderIds": [],
+  "overview": {
+    "objective": "Enter when price closes beyond its recent range, and ride the move if it becomes a trend.",
+    "holdingPeriod": "Weeks to months for winners; failed breaks are usually closed within days.",
+    "context": "Daily charts of liquid markets. Needs room for many small losses, because most breaks fall back."
+  },
+  "evidence": null,
+  "simple": {
+    "simple": "Mark the highest high and lowest low of the last 20 candles. A close above the top is a long signal; a close below a shorter 15-candle channel is the exit.",
+    "balanced": "Most [[breakout|breakouts]] fail and fall back inside the [[channel]], so the rule relies on the occasional break that becomes a long move. A shorter lookback gives more, earlier signals and more [[false-breakout|false breakouts]]. The exit channel always gives back part of a gain before it triggers."
+  },
+  "reasoning": "When price escapes a range it has held for weeks, something may have changed in supply and demand. A rule that joins every such escape, and leaves quickly when it fails, could catch the few that run far. This is the reasoning, not evidence; results depend on the market, the lookback and costs.",
+  "rules": {
+    "label": "A simplified educational version; not presented as any trader's documented rules",
+    "rules": [
+      "Use a daily chart. The entry channel is the highest high and lowest low of the previous 20 candles, not counting the current one.",
+      "Go long on a close above the 20-candle high; go short on a close below the 20-candle low.",
+      "Exit a long on a close below the previous 15-candle low (a short on a close above the 15-candle high). That level is also the initial stop.",
+      "The order fills at the next candle's open, because the signal is only known once the candle has closed.",
+      "Size the position so the loss at the stop is no more than 1% of the account."
+    ]
+  },
+  "demo": {
+    "scenario": "breakout",
+    "overlays": [
+      "channel20"
+    ],
+    "pane": "none",
+    "lookFor": "Turn on Channel 20 and mark each close beyond the channel. Then switch to the False breakout scenario and count how many breaks fell back inside within 5 candles."
+  },
+  "replay": {
+    "scenario": "false_breakout",
+    "instructions": "Replay the False breakout scenario with Channel 20 on. Enter only on closes beyond the channel and exit on the 15-candle channel. Record each trade in R, including the ones that fail quickly."
+  },
+  "exercise": {
+    "prompt": "Which statements are true under the simplified rules? Pick all that apply.",
+    "situation": "A fictional commodity priced in USD, daily chart (simulated). The previous 20 candles have a high of 152.40 and a low of 148.10. The previous 15 candles' low is 150.20. Today closes at 152.65, and tomorrow opens at 152.70.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Today's close is a long signal",
+        "correct": true,
+        "explanation": "Right: 152.65 is a close above the 20-candle high of 152.40."
+      },
+      {
+        "id": "b",
+        "text": "From a fill at 152.70, the stop at the 15-candle low is 2.50 away",
+        "correct": true,
+        "explanation": "Right: 152.70 − 150.20 = 2.50."
+      },
+      {
+        "id": "c",
+        "text": "A candle that reached 152.50 but closed at 152.30 would also have been a signal",
+        "correct": false,
+        "explanation": "No: the rules use closes. A close at 152.30 is inside the channel."
+      },
+      {
+        "id": "d",
+        "text": "If tomorrow opened at 152.90 instead, the stop would still be 2.50 away",
+        "correct": false,
+        "explanation": "No: the stop stays at 150.20, so from a fill at 152.90 it is 2.70 away."
+      }
+    ]
+  },
+  "failureAnalysis": [
+    "Most breaks fall back inside the channel, giving a run of small losses.",
+    "Gaps through the channel or the exit level give worse fills than the line suggests.",
+    "The exit channel gives back part of every winning move before it triggers.",
+    "Choosing the lookback that did best on past data usually flatters the result."
+  ],
+  "limitations": [
+    "The 20 and 15 candle settings are examples for learning, not tested values.",
+    "No claim is made that these rules make money; that depends on the market, period and costs.",
+    "Simulated charts in TradeLab show behaviour, not the history of any real market."
+  ],
+  "knowledgeCheck": [
+    {
+      "id": "channel-breakout-q1",
+      "prompt": "The previous 20 candles' high is 1.0950. A candle reaches 1.0965 but closes at 1.0948. What do the rules say?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Long: the high broke out",
+          "explanation": "No: the rules use closes, not highs."
+        },
+        {
+          "id": "b",
+          "text": "No signal: the close is inside the channel",
+          "explanation": "Right: 1.0948 is below 1.0950."
+        },
+        {
+          "id": "c",
+          "text": "Long, because any trade above the channel high counts as a breakout signal",
+          "explanation": "No: only a close above the channel high counts."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "intermediate",
+      "glossaryIds": [
+        "channel",
+        "breakout"
+      ]
+    },
+    {
+      "id": "channel-breakout-q2",
+      "prompt": "Why does the exit use a shorter channel than the entry?",
+      "options": [
+        {
+          "id": "a",
+          "text": "To win more often",
+          "explanation": "No: the aim is a faster exit, not a higher win rate."
+        },
+        {
+          "id": "b",
+          "text": "Shorter channels never give false signals",
+          "explanation": "No: shorter channels give more false signals, not fewer."
+        },
+        {
+          "id": "c",
+          "text": "It gets out sooner when a move turns, at the cost of being shaken out of some trends by ordinary dips",
+          "explanation": "Right: a shorter-lookback low sits closer to price, so the exit gives back less, but normal pullbacks reach it more often."
+        }
+      ],
+      "correctOptionIds": [
+        "c"
+      ],
+      "level": "intermediate",
+      "glossaryIds": [
+        "channel"
+      ]
+    },
+    {
+      "id": "channel-breakout-q3",
+      "prompt": "Compared with a long lookback, a short lookback usually gives…",
+      "options": [
+        {
+          "id": "a",
+          "text": "More signals and more false breaks",
+          "explanation": "Right: a narrower channel is broken more often, and more of those breaks fail."
+        },
+        {
+          "id": "b",
+          "text": "Fewer signals, all of them later and more reliable",
+          "explanation": "No: that describes a longer lookback, and later does not mean more reliable."
+        },
+        {
+          "id": "c",
+          "text": "The same trades, only shown on a lower timeframe with smaller stops",
+          "explanation": "No: the trades change completely with the lookback."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "intermediate",
+      "glossaryIds": [
+        "false-breakout"
+      ]
+    }
+  ],
+  "lessonIds": [
+    "fx-breakouts",
+    "fx-false-breakouts",
+    "fx-channel-breakouts",
+    "ta-consolidation-channels"
+  ],
+  "glossaryIds": [
+    "channel",
+    "breakout",
+    "false-breakout",
+    "gap",
+    "overfitting"
+  ],
+  "sourceIds": [],
+  "review": null
+}

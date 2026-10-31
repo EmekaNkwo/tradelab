@@ -1,0 +1,22 @@
+{
+  "id": "payout-ratio",
+  "term": "Payout ratio",
+  "aliases": [
+    "dividend payout ratio"
+  ],
+  "definition": {
+    "simple": "The share of profit a company pays out as dividends.",
+    "balanced": "Payout ratio = dividends ÷ net income. A ratio near or above 100% leaves little profit to reinvest, pay debt or absorb a bad year, so the dividend may be at risk."
+  },
+  "example": "Dividends 87 ÷ net income 114 = about 76% (fictional, millions USD).",
+  "related": [
+    "dividend",
+    "dividend-yield",
+    "earnings"
+  ],
+  "markets": [
+    "stocks"
+  ],
+  "level": "beginner",
+  "sourceIds": []
+}

@@ -1,0 +1,18 @@
+{
+  "id": "cs-crude-inventory-draw",
+  "category": "commodity",
+  "title": "A bigger crude draw than expected (fictional)",
+  "setup": "Fictional Northland publishes a weekly report on crude oil held in storage. This week forecasters expected a small draw. The report shows a much bigger draw. In the same report, stocks of refined fuel rose more than expected. All countries, reports and figures are fictional.",
+  "release": { "name": "Northland weekly crude inventory change (fictional)", "unit": "million barrels", "consensus": -1.5, "actual": -4.2, "previous": 0.8 },
+  "pricedIn": "Over the three days before the report, the simulated crude price had already risen, as several private estimates pointed to a large draw. Many traders were already positioned for a tight number.",
+  "question": "Surprise = −4.2 − (−1.5) = −2.7 million barrels, a much bigger draw than expected. Which reactions are plausible?",
+  "reactions": [
+    { "id": "a", "text": "Price rises and holds for the rest of the day.", "plausible": true, "explanation": "A big draw hints at tighter supply. If traders weigh that most, the rise can hold." },
+    { "id": "b", "text": "Price jumps, then gives back the move within the hour.", "plausible": true, "explanation": "Much of the draw was expected by private estimates and priced in. Traders who bought early may sell into the jump, and the rise in fuel stocks points the other way." },
+    { "id": "c", "text": "Price barely moves because the fuel build offsets the crude draw.", "plausible": true, "explanation": "Reports have several parts. If traders focus on the fuel build as a sign of weaker fuel demand, the two can cancel out." },
+    { "id": "d", "text": "Price must rise all week, because a bigger draw always means higher prices.", "plausible": false, "explanation": "No reaction is certain. A draw is a tendency towards higher prices, not a rule, and later news can take over." },
+    { "id": "e", "text": "Price falls because a draw shows nobody wants oil.", "plausible": false, "explanation": "This reasoning is wrong: a draw means more was used than added. Price could still fall, but for other reasons, such as it being priced in, not because of this one." }
+  ],
+  "takeaway": "The same big draw can lead to a lasting rise, a quick reversal or almost nothing, depending on what was priced in and on the other parts of the report. Work out the surprise, then list the scenarios. Never treat one as certain.",
+  "glossaryIds": ["inventory-report", "surprise", "consensus-forecast", "commodity"]
+}

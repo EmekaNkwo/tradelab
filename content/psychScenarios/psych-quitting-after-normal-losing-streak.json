@@ -1,0 +1,37 @@
+{
+  "id": "psych-quitting-after-normal-losing-streak",
+  "topic": "quitting-after-normal-losing-streak",
+  "title": "Five losses in a row",
+  "situation": "You have followed a written plan on your [[demo-account|demo account]] for six weeks. You followed your rules on every trade, but the last five were losses. When you backtested the plan earlier, it also had losing runs of five or more. You feel like quitting the plan.",
+  "question": "What do you do?",
+  "responses": [
+    {
+      "id": "a",
+      "text": "Quit the plan and look for a new one.",
+      "quality": "harmful",
+      "explanation": "Any method has losing runs. Switching every time one happens means you never find out whether a plan works."
+    },
+    {
+      "id": "b",
+      "text": "Change several rules at once to stop the losses.",
+      "quality": "harmful",
+      "explanation": "With several changes at once, you cannot tell which one helped or hurt. Your earlier testing no longer applies."
+    },
+    {
+      "id": "c",
+      "text": "Compare this run with the losing runs in your backtest and journal. If it is within what you saw before and you followed your rules, carry on.",
+      "quality": "helpful",
+      "explanation": "This judges the plan on evidence, not on how the last five trades felt. You already saw runs like this when you tested it."
+    },
+    {
+      "id": "d",
+      "text": "Carry on, but cut your size in half for a while.",
+      "quality": "mixed",
+      "explanation": "Lowering risk is not dangerous, and a plan can include it on purpose. If yours does not, write it down as a rule first so it is not just a reaction."
+    }
+  ],
+  "takeaway": "A losing run your plan has shown before is normal. Judge the plan on many trades and on how well you followed it.",
+  "glossaryIds": [
+    "demo-account"
+  ]
+}

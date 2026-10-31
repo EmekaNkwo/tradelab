@@ -1,0 +1,25 @@
+{
+  "id": "ta-rsi",
+  "skills": ["technical_analysis"],
+  "lab": "technical",
+  "level": "intermediate",
+  "order": 2,
+  "title": "RSI",
+  "summary": "RSI scores recent up moves against recent down moves on a 0 to 100 scale. High readings mean recent up moves were bigger, not that a fall is due.",
+  "unreliableWhen": "In strong trends, RSI can stay above 70 or below 30 for many candles while price keeps going. Divergence can last a long time.",
+  "goodExample": "Reading RSI 75 as \"up moves have been about three times the down moves lately\".",
+  "badExample": "Selling because RSI is above 70 during a strong uptrend.",
+  "lessonIds": [
+    "fx-rsi"
+  ],
+  "chart": {
+    "scenario": "strong_uptrend",
+    "overlays": [],
+    "pane": "rsi",
+    "lookFor": "Find a stretch where RSI 14 stays above 70 while price keeps rising, and count the candles. Then try Crash for the same below 30."
+  },
+  "drillKind": null,
+  "scenarioIds": [],
+  "companyIds": [],
+  "redFlagCaseIds": []
+}

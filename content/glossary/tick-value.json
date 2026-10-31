@@ -1,0 +1,22 @@
+{
+  "id": "tick-value",
+  "term": "Tick value",
+  "aliases": [
+    "value per tick"
+  ],
+  "definition": {
+    "simple": "How much money one tick of price movement is worth for one contract.",
+    "balanced": "Tick value = [[tick-size]] × [[multiplier]] (or × [[contract-size]]). Profit or loss = ticks moved × tick value × contracts. Never assume two contracts share a tick value."
+  },
+  "example": "Fictional: tick size 0.25 × multiplier 10 USD = 2.50 USD per tick, per contract.",
+  "related": [
+    "tick-size",
+    "multiplier",
+    "contract-size"
+  ],
+  "markets": [
+    "futures"
+  ],
+  "level": "beginner",
+  "sourceIds": []
+}

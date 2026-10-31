@@ -1,0 +1,23 @@
+{
+  "id": "investment-scam",
+  "term": "Investment scam",
+  "aliases": [
+    "trading scam",
+    "fraud",
+    "scam"
+  ],
+  "definition": {
+    "simple": "A scheme that pretends to be an investment or trading opportunity in order to take your money or account details.",
+    "balanced": "Common signs: promised or \"guaranteed\" returns, pressure to act fast, requests for your login or passwords, payment to unusual accounts or in crypto, and firms you cannot find on a [[regulator]]'s official register."
+  },
+  "related": [
+    "signal-group",
+    "pump-and-dump",
+    "recovery-scam",
+    "account-manager-scam",
+    "regulator"
+  ],
+  "markets": [],
+  "level": "beginner",
+  "sourceIds": []
+}

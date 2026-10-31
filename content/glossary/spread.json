@@ -1,0 +1,14 @@
+{
+  "id": "spread",
+  "term": "Spread",
+  "aliases": ["bid-ask spread"],
+  "definition": {
+    "simple": "The gap between the [[ask]] price and the [[bid]] price. It is a cost you pay every time you trade.",
+    "balanced": "Ask minus bid. A trade opened and closed immediately at market loses the spread. Spreads change with liquidity and can widen around news and outside busy hours."
+  },
+  "example": "Bid 1.1000, ask 1.1002: the spread is 0.0002, which is 2 pips.",
+  "related": ["bid", "ask", "pip"],
+  "markets": [],
+  "level": "beginner",
+  "sourceIds": []
+}

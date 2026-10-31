@@ -1,0 +1,126 @@
+appId: com.tradelab.app
+name: 08 Strategy page and backtest
+tags:
+  - e2e
+  - journey
+---
+# Spec §36 step 8: open a strategy page, then run its builder version as a backtest.
+# Needs: 01 only. Strategy: "Trend following with moving averages"
+# (content/strategies/trend-following-moving-averages.json; builder template in
+# domain/backtest/templates.ts). Screens: app/(tabs)/strategies/index.tsx,
+# app/strategy/[id].tsx, app/backtest/builder.tsx, app/backtest/strategy/[id].tsx,
+# app/backtest/run.tsx, app/backtest/result/[id].tsx.
+- launchApp:
+    appId: com.tradelab.app
+- extendedWaitUntil:
+    visible:
+      id: "home-screen"
+    timeout: 30000
+- runFlow:
+    file: subflows/open-tab.yaml
+    env:
+      TAB: Strategies
+- assertVisible: "Education, not signals"
+- scrollUntilVisible:
+    element:
+      id: "strategy-search"
+    direction: DOWN
+- tapOn:
+    id: "strategy-search"
+- inputText: "Trend following"
+- hideKeyboard
+- scrollUntilVisible:
+    element:
+      id: "strategy-trend-following-moving-averages"
+    direction: DOWN
+- tapOn:
+    id: "strategy-trend-following-moving-averages"
+
+# ---- Strategy page (StrategySection titles) ----
+- extendedWaitUntil:
+    visible:
+      id: "strategy-screen"
+    timeout: 10000
+- assertVisible: "Trend following with moving averages"
+- assertVisible: "Overview"
+- takeScreenshot: 08-strategy-page
+- scrollUntilVisible:
+    element:
+      text: "How it fails"
+    direction: DOWN
+    timeout: 30000
+- scrollUntilVisible:
+    element:
+      text: "Run this as a backtest"
+    direction: DOWN
+    timeout: 30000
+- tapOn: "Run this as a backtest"
+
+# ---- Builder: name prefilled as `My ${template.name}` ----
+- extendedWaitUntil:
+    visible:
+      id: "builder-screen"
+    timeout: 10000
+- assertVisible: "Your own copy"
+# Each swipe on the builder takes about 7 s under Maestro (large hierarchy), and
+# the visible group labels made the page longer: 30 s allowed only 5 swipes
+# (device run 2026-10-30).
+- scrollUntilVisible:
+    element:
+      text: "Save strategy"
+    direction: DOWN
+    timeout: 90000
+- tapOn:
+    text: "Save strategy"
+    enabled: true
+
+# ---- Your strategy ----
+- extendedWaitUntil:
+    visible:
+      id: "my-strategy-screen"
+    timeout: 10000
+- tapOn: "Run a backtest"
+
+# ---- Run (simulated data, default seed, costs) ----
+- extendedWaitUntil:
+    visible:
+      id: "run-screen"
+    timeout: 10000
+- scrollUntilVisible:
+    element:
+      text: "Run backtest"
+    direction: DOWN
+    timeout: 90000                   # long pages, ~7 s per swipe (see the builder scroll)
+- tapOn:
+    text: "Run backtest"
+    enabled: true
+# Runs off the UI thread; "Running… N%" (testID run-progress), then replaces
+# the screen with the report.
+- extendedWaitUntil:
+    visible:
+      id: "result-screen"
+    timeout: 120000
+# Restyle stage 5a: the Results card opens with four headline tiles, so the first metric row can sit below the fold.
+- scrollUntilVisible:
+    element:
+      text: "Results"
+    direction: DOWN
+- assertVisible: "Results"
+- scrollUntilVisible:
+    element:
+      id: "metric-.*"
+    direction: DOWN
+- assertVisible:
+    id: "metric-.*"
+- takeScreenshot: 08-backtest-report
+- scrollUntilVisible:
+    element:
+      text: "Conventions used"
+    direction: DOWN
+    timeout: 90000                   # long pages, ~7 s per swipe (see the builder scroll)
+# The conventions are listed open on every report (spec §16.3), survivorship included.
+- scrollUntilVisible:
+    element:
+      text: ".*Survivorship bias.*"
+    direction: DOWN
+    timeout: 30000

@@ -1,0 +1,135 @@
+{
+  "id": "fx-moving-averages",
+  "moduleId": "forex-indicators",
+  "title": "Moving averages and lag",
+  "level": "intermediate",
+  "estimatedMinutes": 20,
+  "inOneLine": {
+    "simple": "A moving average is the average of the last few closing prices. It smooths the chart, but it always runs behind price.",
+    "balanced": "A [[moving-average]] is a [[lagging-indicator]]: it only moves after price has moved. The longer the period, the smoother the line and the bigger the lag."
+  },
+  "explain": {
+    "simple": "An MA 20 on an H1 chart adds up the last 20 hourly closes and divides by 20. Each new candle adds one close and drops the oldest. Plotted as a line, it shows the general direction more calmly than the candles. When price is above a rising average, people often describe the trend as up. But because it is built from old prices, it turns late. In a sideways market price crosses it again and again, and each cross means very little.",
+    "balanced": "Simple MA (SMA): every close counts equally. Exponential MA (EMA): recent closes count more, so it reacts faster but also flips more often. Chart Lab shows MA 20 and EMA 50. Crosses of price and an average, or of two averages, are common [[indicator]] readings. Every cross is late by design, and in a range most of them reverse soon after. The period is a setting you choose. Change it and the crosses move."
+  },
+  "realNumbers": {
+    "assumptions": [
+      "Illustrative EUR/USD H1 closes",
+      "A 5-period simple moving average, kept short so the sums are easy to check",
+      "Last 5 closes: 1.1000, 1.1010, 1.1020, 1.1030, 1.1040"
+    ],
+    "steps": [
+      "Sum = 1.1000 + 1.1010 + 1.1020 + 1.1030 + 1.1040 = 5.5100. MA = 5.5100 ÷ 5 = 1.1020.",
+      "The next candle jumps and closes at 1.1100. The oldest close (1.1000) drops out.",
+      "New sum = 1.1010 + 1.1020 + 1.1030 + 1.1040 + 1.1100 = 5.5200. New MA = 1.1040.",
+      "Price is at 1.1100 but the MA is 1.1040: 60 pips behind. The average only moved 20 pips (1.1040 − 1.1020) while price moved 60 (1.1100 − 1.1040)."
+    ]
+  },
+  "anotherExample": {
+    "assumptions": [
+      "Illustrative sideways GBP/USD chart between 1.2600 and 1.2700",
+      "An MA 20 that runs flat near 1.2650"
+    ],
+    "steps": [
+      "Price swings up to near 1.2700, down to near 1.2600, and back, crossing the flat MA each time.",
+      "Each cross above the MA looks like the start of an uptrend. Each cross below looks like a downtrend.",
+      "Over 4 full swings, that is 8 crosses, and none of them led to a lasting move.",
+      "This is where moving averages mislead most: in ranges, where they whipsaw."
+    ]
+  },
+  "explainSimpler": "A moving average is like the average speed over the last few minutes of a drive. It tells you roughly how you have been going, not what the road ahead looks like.",
+  "commonMistake": "Treating a moving-average cross as a signal that a trend is starting. In a range, crosses happen often and usually reverse. In a sharp turn, the cross comes late, after much of the move is over.",
+  "quickCheck": [
+    {
+      "id": "fx-moving-averages-q1",
+      "prompt": "A 4-period SMA uses closes 1.2000, 1.2010, 1.2020 and 1.2050. What is it?",
+      "options": [
+        {
+          "id": "a",
+          "text": "1.2020",
+          "explanation": "Right: the sum is 4.8080, and 4.8080 ÷ 4 = 1.2020."
+        },
+        {
+          "id": "b",
+          "text": "1.2050",
+          "explanation": "No: that is the last close, not the average."
+        },
+        {
+          "id": "c",
+          "text": "1.2025",
+          "explanation": "No: check the sum again. It is 4.8080, not 4.8100."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "intermediate",
+      "glossaryIds": [
+        "moving-average"
+      ]
+    },
+    {
+      "id": "fx-moving-averages-q2",
+      "prompt": "Where does a moving average usually give the most misleading crosses?",
+      "options": [
+        {
+          "id": "a",
+          "text": "In a sideways range",
+          "explanation": "Right: price keeps crossing the flat average without any lasting move."
+        },
+        {
+          "id": "b",
+          "text": "In a steady trend",
+          "explanation": "No: steady trends produce fewer crosses, although the average still lags."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "intermediate",
+      "glossaryIds": [
+        "moving-average",
+        "lagging-indicator"
+      ]
+    },
+    {
+      "id": "fx-moving-averages-q3",
+      "prompt": "Compared with an SMA of the same period, an EMA usually…",
+      "options": [
+        {
+          "id": "a",
+          "text": "Reacts faster but flips direction more often",
+          "explanation": "Right: it weights recent closes more, so it has less lag and more false turns."
+        },
+        {
+          "id": "b",
+          "text": "Has no lag at all, because it only uses the latest close",
+          "explanation": "No: an EMA still uses past closes, and every average built from past prices lags."
+        },
+        {
+          "id": "c",
+          "text": "Predicts the next close",
+          "explanation": "No: it only summarises past closes."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "intermediate",
+      "glossaryIds": [
+        "moving-average"
+      ]
+    }
+  ],
+  "doItNow": {
+    "kind": "chart_lab",
+    "instructions": "In Chart Lab, turn on MA 20 and EMA 50. Choose the Range scenario and count how many times price crosses MA 20. Then choose the Strong uptrend scenario and note how far price had already risen before it crossed above MA 20."
+  },
+  "glossaryIds": [
+    "moving-average",
+    "lagging-indicator",
+    "indicator",
+    "trend"
+  ],
+  "sourceIds": []
+}

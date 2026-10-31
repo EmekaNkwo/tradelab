@@ -1,0 +1,72 @@
+{
+  "id": "forex-pips-lots-leverage-checkpoint",
+  "title": "Checkpoint: pips, lots, leverage and margin",
+  "passMark": 0.8,
+  "questions": [
+    {
+      "id": "forex-pips-lots-leverage-checkpoint-q1",
+      "prompt": "USD/JPY moves from 151.30 to 150.80. How many pips is that?",
+      "skills": ["market_fundamentals"],
+      "options": [
+        { "id": "a", "text": "50 pips", "explanation": "Right: the move is 0.50, and on a yen pair 0.50 ÷ 0.01 = 50 pips." },
+        { "id": "b", "text": "5 pips", "explanation": "No: 5 pips on a yen pair would be 0.05." },
+        { "id": "c", "text": "5,000 pips", "explanation": "No: that uses 0.0001 as the pip, which is wrong for yen pairs." }
+      ],
+      "correctOptionIds": ["a"],
+      "level": "beginner",
+      "glossaryIds": ["pip"]
+    },
+    {
+      "id": "forex-pips-lots-leverage-checkpoint-q2",
+      "prompt": "EUR/USD, 0.30 lot with a 100,000-unit contract, account in USD. What is one pip worth?",
+      "skills": ["market_fundamentals"],
+      "options": [
+        { "id": "a", "text": "0.30 USD", "explanation": "No: that would be 3,000 units, which is 0.03 lot." },
+        { "id": "b", "text": "3 USD", "explanation": "Right: 0.30 × 100,000 = 30,000 units, and 30,000 × 0.0001 = 3 USD." },
+        { "id": "c", "text": "30 USD", "explanation": "No: that would be 3.00 lots." }
+      ],
+      "correctOptionIds": ["b"],
+      "level": "beginner",
+      "glossaryIds": ["pip-value", "lot"]
+    },
+    {
+      "id": "forex-pips-lots-leverage-checkpoint-q3",
+      "prompt": "EUR/USD at 1.2000, 0.10 lot (10,000 EUR), leverage 1:30, account in USD. What margin is required?",
+      "skills": ["market_fundamentals", "risk_management"],
+      "options": [
+        { "id": "a", "text": "333.33 USD", "explanation": "No: that forgets to convert 10,000 EUR into USD first." },
+        { "id": "b", "text": "400 USD", "explanation": "Right: 10,000 × 1.2000 = 12,000 USD, and 12,000 ÷ 30 = 400 USD." },
+        { "id": "c", "text": "12,000 USD", "explanation": "No: that is the full trade value, before leverage." }
+      ],
+      "correctOptionIds": ["b"],
+      "level": "beginner",
+      "glossaryIds": ["margin", "leverage"]
+    },
+    {
+      "id": "forex-pips-lots-leverage-checkpoint-q4",
+      "prompt": "Balance 1,500 USD, open loss 300 USD, used margin 600 USD. What is the margin level?",
+      "skills": ["market_fundamentals", "risk_management"],
+      "options": [
+        { "id": "a", "text": "250%", "explanation": "No: that uses the balance. Margin level uses equity, which includes the open loss." },
+        { "id": "b", "text": "200%", "explanation": "Right: equity = 1,500 − 300 = 1,200, and 1,200 ÷ 600 × 100% = 200%." },
+        { "id": "c", "text": "50%", "explanation": "No: that divides margin by equity, which is the wrong way round." }
+      ],
+      "correctOptionIds": ["b"],
+      "level": "beginner",
+      "glossaryIds": ["margin-level", "equity"]
+    },
+    {
+      "id": "forex-pips-lots-leverage-checkpoint-q5",
+      "prompt": "Which statements are true? Choose all that apply.",
+      "skills": ["market_fundamentals", "risk_management"],
+      "options": [
+        { "id": "a", "text": "Leverage magnifies losses as well as gains", "explanation": "True: profit and loss come from the full trade size." },
+        { "id": "b", "text": "Swaps can be positive or negative and vary by broker", "explanation": "True: check your broker's contract specification." },
+        { "id": "c", "text": "Stop-out levels are the same at every broker", "explanation": "False: each broker sets its own margin call and stop-out levels." }
+      ],
+      "correctOptionIds": ["a", "b"],
+      "level": "beginner",
+      "glossaryIds": ["leverage", "swap", "stop-out"]
+    }
+  ]
+}

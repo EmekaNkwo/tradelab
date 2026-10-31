@@ -1,0 +1,19 @@
+{
+  "id": "look-ahead-bias",
+  "term": "Look-ahead bias",
+  "aliases": [
+    "hindsight bias in testing",
+    "peeking"
+  ],
+  "definition": {
+    "simple": "Using information in a test that you could not have known at the time of the trade.",
+    "balanced": "Examples: drawing a level using a candle that formed after your entry, or reading a bar's close before that bar has finished. It makes a [[backtest]] look better than real trading could be. Replay helps by hiding future bars."
+  },
+  "example": "You mark a \"clear\" support line on a chart, but the bounce that made it clear happened after your planned entry.",
+  "related": [
+    "backtest"
+  ],
+  "markets": [],
+  "level": "intermediate",
+  "sourceIds": []
+}

@@ -1,0 +1,138 @@
+{
+  "id": "cm-inflation-rates-currency",
+  "moduleId": "commodities",
+  "title": "Inflation, interest rates and currency effects",
+  "level": "beginner",
+  "estimatedMinutes": 20,
+  "inOneLine": {
+    "simple": "A commodity's price can change because of the money it is priced in, not just because of the commodity itself.",
+    "balanced": "When a commodity is quoted in one currency, a change in that currency changes the cost for buyers who use other currencies. Higher [[interest-rate|interest rates]] raise the cost of holding something that pays no interest, like a metal in a vault. [[inflation|Inflation]] links are often talked about but are not reliable rules."
+  },
+  "explain": {
+    "simple": "Many international commodity prices are quoted in a single currency. If that currency gets weaker, buyers who pay with another currency need less of their own money to buy the same amount, so demand from them may rise. If it gets stronger, the commodity costs them more. Interest rates matter too. Gold and silver pay no interest. If savings accounts pay more, holding metal means giving up more interest, which some traders see as a reason to hold less. All countries, currencies and numbers here are fictional.",
+    "balanced": "Traders often describe gold as a hedge against inflation or as a place people go in uncertain times. Treat these as possible tendencies, not rules: there can be long stretches when the link does not hold, and other forces such as rates, currency moves and positioning can dominate. Inflation can also push up commodity prices directly, because commodities are part of what goes into the inflation number. The direction of cause and effect is often unclear. Read every link here as a hypothesis to test, not a certainty."
+  },
+  "realNumbers": {
+    "assumptions": [
+      "A fictional commodity quoted at 2,000 USD per unit, unchanged in USD",
+      "A buyer in fictional Westmark pays in WMK",
+      "Exchange rate moves from 1 USD = 1.50 WMK to 1 USD = 1.35 WMK"
+    ],
+    "steps": [
+      "Before: 2,000 × 1.50 = 3,000 WMK per unit.",
+      "After: 2,000 × 1.35 = 2,700 WMK per unit.",
+      "The USD price did not move, but the Westmark buyer now pays 300 WMK less, 10% cheaper.",
+      "Cheaper for buyers in other currencies can mean more demand, which is one reason a weaker quoting currency is sometimes linked to higher commodity prices. A tendency only."
+    ]
+  },
+  "anotherExample": {
+    "assumptions": [
+      "You hold 10,000 USD of a fictional metal that pays no interest",
+      "A fictional savings rate rises from 1% to 5% a year"
+    ],
+    "steps": [
+      "At 1%: interest given up by holding metal = 10,000 × 0.01 = 100 USD a year.",
+      "At 5%: interest given up = 10,000 × 0.05 = 500 USD a year.",
+      "The cost of holding the metal instead of cash rose by 400 USD a year.",
+      "Some holders may switch to cash, which can weigh on the price. Others may hold for different reasons, so the effect is not certain."
+    ]
+  },
+  "explainSimpler": "Sometimes the commodity has not changed; the money has. And when cash pays more interest, holding a metal that pays nothing costs more.",
+  "commonMistake": "Treating 'gold rises with inflation' or 'commodities rise when the dollar falls' as rules. They are tendencies that often fail, especially over shorter periods.",
+  "quickCheck": [
+    {
+      "id": "cm-inflation-rates-currency-q1",
+      "prompt": "Fictional commodity: 50 USD per unit. The rate moves from 1 USD = 2.00 WMK to 1 USD = 2.20 WMK. What is the new WMK price?",
+      "options": [
+        {
+          "id": "a",
+          "text": "100 WMK",
+          "explanation": "No: that is the old price, 50 × 2.00."
+        },
+        {
+          "id": "b",
+          "text": "110 WMK",
+          "explanation": "Right: 50 × 2.20 = 110 WMK, so it costs Westmark buyers 10% more."
+        },
+        {
+          "id": "c",
+          "text": "52.20 WMK",
+          "explanation": "No: you multiply by the exchange rate, not add it."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "commodity"
+      ]
+    },
+    {
+      "id": "cm-inflation-rates-currency-q2",
+      "prompt": "Why might higher interest rates weigh on a metal that pays no interest?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Holding it means giving up more interest than before",
+          "explanation": "Right: the opportunity cost of holding it rises. A tendency, not a rule."
+        },
+        {
+          "id": "b",
+          "text": "Higher rates raise the metal's storage cost",
+          "explanation": "No: rates do not change what a vault or insurance costs. The main effect is the interest you give up by holding the metal."
+        },
+        {
+          "id": "c",
+          "text": "Holders pay interest on the metal they own",
+          "explanation": "No: nobody charges interest for owning it. The cost is the interest you give up by not holding cash or bonds instead."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "interest-rate"
+      ]
+    },
+    {
+      "id": "cm-inflation-rates-currency-q3",
+      "prompt": "Which statement about inflation and commodities is most accurate?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Gold always rises whenever inflation goes up, without exception",
+          "explanation": "No: the link is a tendency that can fail for long periods."
+        },
+        {
+          "id": "b",
+          "text": "Inflation has no link to commodities",
+          "explanation": "No: commodities feed into inflation and can be affected by it."
+        },
+        {
+          "id": "c",
+          "text": "Links exist, but they are not reliable rules",
+          "explanation": "Right: treat each link as a hypothesis, not a certainty."
+        }
+      ],
+      "correctOptionIds": [
+        "c"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "inflation"
+      ]
+    }
+  ],
+  "doItNow": {
+    "kind": "reflection",
+    "instructions": "Work out by hand: take a fictional commodity at 1,500 USD per unit and work out its price in WMK at three exchange rates: 1.20, 1.40 and 1.60 WMK per USD. Then work out the yearly interest given up by holding 5,000 USD of a non-interest-paying metal at rates of 2% and 4%."
+  },
+  "glossaryIds": [
+    "inflation",
+    "interest-rate",
+    "commodity"
+  ],
+  "sourceIds": []
+}

@@ -1,0 +1,12 @@
+{
+  "id": "forex-fundamentals",
+  "skills": ["fundamental_analysis"],
+  "title": "Fundamentals: rates, inflation, jobs and news",
+  "summary": "How interest rates, inflation, jobs data and central banks can affect currencies, why expected vs. actual matters, and how to plan around news releases.",
+  "markets": ["forex"],
+  "level": "beginner",
+  "lessonIds": ["fx-rates-central-banks", "fx-expected-vs-actual", "fx-trading-around-news"],
+  "checkpointQuizId": "forex-fundamentals-checkpoint",
+  "practicalResult": "Work through three fictional news scenarios, then use an economic calendar to write a plan for 3 upcoming events.",
+  "minPracticeDays": 0
+}

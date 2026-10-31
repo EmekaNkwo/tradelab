@@ -1,0 +1,152 @@
+{
+  "id": "ta-walk-forward",
+  "skills": ["backtesting_literacy", "statistical_reasoning"],
+  "moduleId": "ta-advanced",
+  "title": "Out-of-sample and walk-forward testing",
+  "level": "advanced",
+  "estimatedMinutes": 22,
+  "inOneLine": {
+    "simple": "Choose your rules on one stretch of data, then test them unchanged on data you did not use. Walk-forward testing repeats this step by step through time.",
+    "balanced": "Tune on [[in-sample]] data, then judge on [[out-of-sample]] data you kept aside. [[walk-forward-testing|Walk-forward testing]] rolls the window: tune on one block, test on the next, move on, and judge only the joined test blocks."
+  },
+  "explain": {
+    "simple": "The earlier backtest lessons showed how a test can fool you: small samples, bias and overfitting. Here is a way to keep part of the data honest. Split your history in two. Use the first part to build and tune the rules. Then run the finished rules, without any change, on the second part. That second part is out-of-sample. If the results fall apart there, the tuning probably fitted noise. Walk-forward testing does this many times: tune on a block, test on the next block, slide forward, repeat.",
+    "balanced": "Decide the split before you look. Once you have seen the out-of-sample results and changed a rule because of them, that data has become in-sample; you need fresh data to test again. Expect out-of-sample results to be weaker than in-sample, because tuning always picks up some noise. Joined walk-forward test blocks give a fairer picture than one lucky split, and show how the rules cope as [[market-regime|regimes]] change. But the test blocks are still the past, still a limited [[sample-size|sample]], and still open to [[look-ahead-bias]] if anything from the future leaks in. A [[forward-test]] on a demo account is the next step after this, not a replacement."
+  },
+  "realNumbers": {
+    "assumptions": [
+      "Fictional history of 600 candles",
+      "Walk-forward set-up: tune on 200 candles, test on the next 100, then slide forward by 100"
+    ],
+    "steps": [
+      "Round 1: tune on candles 1–200, test on 201–300.",
+      "Round 2: tune on 101–300, test on 301–400. Round 3: tune on 201–400, test on 401–500.",
+      "Round 4: tune on 301–500, test on 501–600.",
+      "Joined test blocks: 4 × 100 = 400 candles, each tested with rules tuned only on earlier candles. Compare with a single split: tune on 1–400, test once on 401–600, only 200 test candles."
+    ]
+  },
+  "anotherExample": {
+    "assumptions": [
+      "Fictional results, in R",
+      "In-sample: +18R over 60 trades",
+      "Out-of-sample, rules unchanged: +2R over 25 trades"
+    ],
+    "steps": [
+      "In-sample average = 18 ÷ 60 = +0.3R per trade.",
+      "Out-of-sample average = 2 ÷ 25 = +0.08R per trade.",
+      "The average fell by more than two thirds. Some of the in-sample result was probably tuning to noise.",
+      "25 trades is a small sample, so even +0.08R is very uncertain. The honest reading: no strong evidence either way yet."
+    ]
+  },
+  "explainSimpler": "In-sample is the practice exam you studied from. Out-of-sample is a paper you have never seen. Walk-forward is sitting a new paper each term.",
+  "commonMistake": "Peeking at the out-of-sample results, tweaking the rules, and testing again on the same data. After the first look, it is no longer out-of-sample.",
+  "quickCheck": [
+    {
+      "id": "ta-walk-forward-q1",
+      "prompt": "Tune on 300 candles, test on the next 100, slide by 100. With 700 candles, how many test rounds?",
+      "options": [
+        {
+          "id": "a",
+          "text": "3",
+          "explanation": "No: count the test blocks: 301–400, 401–500, 501–600, 601–700."
+        },
+        {
+          "id": "b",
+          "text": "7",
+          "explanation": "No: the first 300 candles are only used for tuning."
+        },
+        {
+          "id": "c",
+          "text": "4",
+          "explanation": "Right: test blocks 301–400, 401–500, 501–600 and 601–700."
+        }
+      ],
+      "correctOptionIds": [
+        "c"
+      ],
+      "level": "advanced",
+      "glossaryIds": [
+        "walk-forward-testing",
+        "out-of-sample"
+      ]
+    },
+    {
+      "id": "ta-walk-forward-q2",
+      "prompt": "Out-of-sample results are poor. You change one rule and test again on the same data. What is that data now?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Still out-of-sample, as before",
+          "explanation": "No: the change was made after seeing it, so it has shaped the rules."
+        },
+        {
+          "id": "b",
+          "text": "In-sample; get fresh data",
+          "explanation": "Right: once results guide a change, that data is used up for testing."
+        },
+        {
+          "id": "c",
+          "text": "Part of a walk-forward test",
+          "explanation": "No: walk-forward tests each block once with rules tuned on earlier data."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "advanced",
+      "glossaryIds": [
+        "in-sample",
+        "out-of-sample",
+        "overfitting"
+      ]
+    },
+    {
+      "id": "ta-walk-forward-q3",
+      "prompt": "In-sample: +0.4R per trade. Out-of-sample: +0.1R per trade. What is the most reasonable reading?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Some of the in-sample result was likely fitted to noise",
+          "explanation": "Right: a drop is expected after tuning. The test shows how much."
+        },
+        {
+          "id": "b",
+          "text": "The out-of-sample period was unlucky; trust in-sample",
+          "explanation": "No: in-sample was used to choose the rules, so it flatters them."
+        },
+        {
+          "id": "c",
+          "text": "The rules may need retuning on the out-of-sample data",
+          "explanation": "No: tuning on the test data uses it up. You would then need fresh data to test again."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "advanced",
+      "glossaryIds": [
+        "in-sample",
+        "out-of-sample",
+        "overfitting"
+      ]
+    }
+  ],
+  "doItNow": {
+    "kind": "replay",
+    "instructions": "Before opening Replay, write down 6 periods across different regimes and number them. Take 5 replay trades on each of periods 1–3 and adjust at most one rule. Save that plan version. Then take 5 trades on each of periods 4–6 with no changes at all. Compare the average R of the two halves in the Journal."
+  },
+  "homework": "Write three sentences: what changed between your in-sample and out-of-sample halves, what might explain it, and why 15 trades per half still cannot settle the question.",
+  "glossaryIds": [
+    "walk-forward-testing",
+    "out-of-sample",
+    "in-sample",
+    "overfitting",
+    "backtest",
+    "look-ahead-bias",
+    "forward-test",
+    "sample-size",
+    "market-regime",
+    "r-multiple"
+  ],
+  "sourceIds": []
+}

@@ -1,0 +1,12 @@
+{
+  "id": "fa-macro",
+  "skills": ["fundamental_analysis", "market_fundamentals"],
+  "title": "Macro analysis: growth, policy, debt and expectations",
+  "summary": "How growth, jobs and inflation fit together, how central-bank policy differs from government spending, taxes and debt, how currencies and commodities link to the wider economy, and why the same number can bring different reactions depending on what was priced in.",
+  "markets": ["forex", "stocks", "commodities", "futures"],
+  "level": "intermediate",
+  "lessonIds": ["fm-growth-jobs-inflation", "fm-monetary-fiscal-debt", "fm-currency-commodities", "fm-priced-in"],
+  "checkpointQuizId": "fa-macro-checkpoint",
+  "practicalResult": "Work through all four Westmark macro scenarios in the Fundamental Analysis Lab, and for each write the surprise, what was priced in, and at least two plausible reactions with a reason for each.",
+  "minPracticeDays": 0
+}

@@ -1,0 +1,115 @@
+{
+  "id": "cm-what-are-commodities",
+  "moduleId": "commodities",
+  "title": "What commodities are: metals, energy and crops",
+  "level": "beginner",
+  "estimatedMinutes": 15,
+  "inOneLine": {
+    "simple": "A [[commodity]] is a basic raw material, such as gold, silver, crude oil, natural gas or wheat. Each one has its own drivers, units and risks.",
+    "balanced": "Commodities fall into broad groups: metals, energy and agriculture. They are priced per unit (an ounce, a barrel, a bushel and so on), and traders usually get exposure through [[futures-contract|futures contracts]], funds or CFDs rather than owning the physical goods."
+  },
+  "explain": {
+    "simple": "Precious metals like gold and silver are used in jewellery and industry, and some people hold them as a store of value. Energy commodities like crude oil and natural gas power transport, industry and heating. Agricultural commodities like wheat, corn, coffee and sugar depend on growing seasons and weather. Because one barrel of oil is much like another, prices are driven mainly by how much is produced and how much is wanted. Each commodity is quoted in its own unit, and the size of a contract varies, so always check the unit before working out money. All prices in this lesson are simulated or fictional.",
+    "balanced": "Different commodities respond to different things. Energy prices are sensitive to production decisions, [[inventory-report|inventories]], [[seasonality|seasonal]] demand and [[geopolitical-risk|geopolitics]]. Crops respond to planting, weather and harvests. Precious metals are often linked by traders to [[interest-rate|interest rates]], [[inflation]] and currency moves. These links are tendencies, not rules. Commodities can be very [[volatility|volatile]], and the way you trade them matters: a futures contract has an expiry date, and a fund or CFD may have costs that ordinary shares do not. The futures module goes deeper into contracts."
+  },
+  "realNumbers": {
+    "assumptions": [
+      "Simulated Practice commodity priced at 50.00 USD per unit",
+      "You buy 100 units in paper trading",
+      "Price later moves to 52.50 USD"
+    ],
+    "steps": [
+      "Price change = 52.50 − 50.00 = +2.50 USD per unit.",
+      "Profit = 2.50 × 100 = 250 USD (before costs).",
+      "If price had fallen 2.50 instead, the loss would be 2.50 × 100 = 250 USD.",
+      "The money result depends on the unit and the position size, so check both before every trade."
+    ]
+  },
+  "anotherExample": {
+    "assumptions": [
+      "Same simulated Practice commodity: bid 49.95, ask 50.05",
+      "You buy 200 units and sell straight away"
+    ],
+    "steps": [
+      "Spread = 50.05 − 49.95 = 0.10 USD per unit.",
+      "Cost of the round trip = 0.10 × 200 = 20 USD.",
+      "The price must rise 0.10 before this trade breaks even.",
+      "Spreads in some commodities can widen around reports and when trading is quiet, so this cost is not fixed."
+    ]
+  },
+  "explainSimpler": "Commodities are the raw stuff the world runs on. Their prices mostly move on how much there is and how much people need.",
+  "commonMistake": "Treating all commodities as one market. Gold, natural gas and coffee have very different drivers, units, seasons and volatility.",
+  "quickCheck": [
+    {
+      "id": "cm-what-are-commodities-q1",
+      "prompt": "Simulated commodity: you buy 40 units at 120.00. It falls to 117.50. What is the result before costs?",
+      "options": [
+        {
+          "id": "a",
+          "text": "−100 USD",
+          "explanation": "Right: (117.50 − 120.00) × 40 = −2.50 × 40 = −100 USD."
+        },
+        {
+          "id": "b",
+          "text": "−2.50 USD",
+          "explanation": "No: that is the change per unit. Multiply by the 40 units."
+        },
+        {
+          "id": "c",
+          "text": "+100 USD",
+          "explanation": "No: the price fell, so a buyer loses."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "commodity"
+      ]
+    },
+    {
+      "id": "cm-what-are-commodities-q2",
+      "prompt": "Which pair belongs to the energy group?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Gold and silver",
+          "explanation": "No: these are precious metals."
+        },
+        {
+          "id": "b",
+          "text": "Wheat, corn and coffee beans",
+          "explanation": "No: these are agricultural commodities."
+        },
+        {
+          "id": "c",
+          "text": "Crude oil and natural gas",
+          "explanation": "Right: both are energy commodities."
+        }
+      ],
+      "correctOptionIds": [
+        "c"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "commodity"
+      ]
+    }
+  ],
+  "doItNow": {
+    "kind": "paper",
+    "instructions": "In Paper trading, open the Practice commodity (prices are simulated). Write down its unit, bid, ask and spread. Work out what a 1.00 move would mean in money for a 50-unit position. Then place a small practice trade with a stop-loss and record why you chose that size."
+  },
+  "glossaryIds": [
+    "commodity",
+    "inventory-report",
+    "seasonality",
+    "geopolitical-risk",
+    "interest-rate",
+    "inflation",
+    "volatility",
+    "futures-contract"
+  ],
+  "sourceIds": []
+}

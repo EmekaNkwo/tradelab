@@ -1,0 +1,24 @@
+{
+  "id": "return-on-capital",
+  "term": "Return on capital",
+  "aliases": [
+    "ROC",
+    "return on capital employed",
+    "ROCE"
+  ],
+  "definition": {
+    "simple": "How much operating profit a company earns on all the money tied up in it, from lenders and owners.",
+    "balanced": "In this app: return on capital = operating profit ÷ (debt + equity). Other sources define it slightly differently. A business that earns a high return on capital for years may have a [[competitive-advantage]], but past returns are not promised."
+  },
+  "example": "Operating profit 156 ÷ (debt 100 + equity 654) = about 20.7% (fictional, millions USD).",
+  "related": [
+    "return-on-equity",
+    "balance-sheet",
+    "competitive-advantage"
+  ],
+  "markets": [
+    "stocks"
+  ],
+  "level": "intermediate",
+  "sourceIds": []
+}

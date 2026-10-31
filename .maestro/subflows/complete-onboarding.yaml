@@ -1,0 +1,194 @@
+appId: com.tradelab.app
+---
+# Walks the 8 onboarding steps with fixed choices.
+# Screen: app/onboarding.tsx (steps from ONBOARDING_STEPS in
+# features/learning/useOnboarding.ts: risk, experience, markets, goals, level,
+# metatrader, program, placement). Buttons are components/ui/Button.tsx, whose
+# accessibilityLabel equals the visible label. Chips are components/ui/ChoiceChips.tsx
+# and segments components/ui/SegmentedControl.tsx (accessibilityLabel = option label).
+#
+# Choices made here, relied on by later flows:
+#   - MetaTrader: MT5, "Not installed" (default) -> MT task uses MT5 package
+#   - Program: Practical Forex Trader (content/programs/practical-forex-trader.json)
+#   - Study days: Mon-Fri (default) + Sat + Sun, so a class is due TODAY whatever the weekday
+#   - 15 min/day, 12 weeks, class time 19:00, reminder on (triggers the notification prompt)
+
+# --- Step 1: risk (RiskStep) ---
+- extendedWaitUntil:
+    visible: "Simulation and demo only"
+    timeout: 30000
+- assertVisible: "Step 1 of 8"
+- scrollUntilVisible:
+    element:
+      text: 'I understand: TradeLab is for learning with simulations and demo accounts only'
+    direction: DOWN
+    timeout: 20000
+- tapOn: 'I understand: TradeLab is for learning with simulations and demo accounts only'
+- scrollUntilVisible:
+    element:
+      text: "Continue"
+    direction: DOWN
+- tapOn:
+    text: "Continue"
+    enabled: true
+
+# --- Step 2: experience (EXPERIENCE) ---
+- extendedWaitUntil:
+    visible: "What is your experience\\?"
+    timeout: 5000
+- tapOn: "Complete beginner"
+- scrollUntilVisible:
+    element:
+      text: "Continue"
+    direction: DOWN
+- tapOn:
+    text: "Continue"
+    enabled: true
+
+# --- Step 3: markets (MARKETS) ---
+- extendedWaitUntil:
+    visible: "Which markets interest you\\?"
+    timeout: 5000
+# Scoped below the question: "Forex" also appears in later onboarding text.
+- tapOn:
+    text: "Forex"
+    below: "Which markets interest you\\?"
+- scrollUntilVisible:
+    element:
+      text: "Continue"
+    direction: DOWN
+- tapOn:
+    text: "Continue"
+    enabled: true
+
+# --- Step 4: goals (GOALS) ---
+- extendedWaitUntil:
+    visible: "What do you want to learn\\?"
+    timeout: 5000
+- scrollUntilVisible:
+    element:
+      text: "Risk management"
+    direction: DOWN
+- tapOn: "Risk management"
+- scrollUntilVisible:
+    element:
+      text: "Continue"
+    direction: DOWN
+- tapOn:
+    text: "Continue"
+    enabled: true
+
+# --- Step 5: explanation level (LEVELS) ---
+- extendedWaitUntil:
+    visible: "How should we explain things\\?"
+    timeout: 5000
+- tapOn:
+    text: "Simple"
+    below: "How should we explain things\\?"
+- tapOn:
+    text: "Continue"
+    enabled: true
+
+# --- Step 6: MetaTrader (MetaTraderStep) ---
+# Title is just "MetaTrader"; the hint text is unique, so assert on that.
+- extendedWaitUntil:
+    visible: "Forex practice uses a free MetaTrader demo account\\. You can set this up later\\."
+    timeout: 5000
+- tapOn:
+    text: "MT5"
+    below: "Forex practice uses a free MetaTrader demo account\\. You can set this up later\\."
+- tapOn:
+    text: "Not installed"
+    below: "MT5"
+# Shown only when "Not installed" is selected. Not tapped: it would leave the app.
+- assertVisible: "Get MT5 on Google Play"
+- scrollUntilVisible:
+    element:
+      text: "Continue"
+    direction: DOWN
+- tapOn:
+    text: "Continue"
+    enabled: true
+
+# --- Step 7: program and timeline (ProgramStep + components/learning/ScheduleFields.tsx) ---
+- extendedWaitUntil:
+    visible: "Choose your program"
+    timeout: 5000
+- tapOn: "Practical Forex Trader"
+- scrollUntilVisible:
+    element:
+      text: "12 weeks"
+    direction: DOWN
+- tapOn: "12 weeks"
+# Day chips use WEEKDAY_LABELS (domain/learning/dates.ts). Mon-Fri are on by default.
+- scrollUntilVisible:
+    element:
+      text: "Sat"
+    direction: DOWN
+- tapOn: "Sat"
+- tapOn: "Sun"
+- scrollUntilVisible:
+    element:
+      text: "15 min"
+    direction: DOWN
+- tapOn: "15 min"
+- scrollUntilVisible:
+    element:
+      text: "19:00"
+    direction: DOWN
+- tapOn: "19:00"
+- scrollUntilVisible:
+    element:
+      text: "Remind me at class time"
+    direction: DOWN
+- tapOn: "Remind me at class time"
+# components/learning/PlanPreviewCard.tsx
+- scrollUntilVisible:
+    element:
+      text: "Your plan"
+    direction: DOWN
+- takeScreenshot: onboarding-plan-preview
+- scrollUntilVisible:
+    element:
+      text: "Continue"
+    direction: DOWN
+- tapOn:
+    text: "Continue"
+    enabled: true
+
+# --- Step 8: placement (PlacementStep) - skipped ---
+# Since the onboarding scroll fix each step opens at the top; older builds kept
+# the previous step's offset (heading off the top). Wait for either the step
+# caption or the step's own button, then scroll UP to the heading and caption
+# (a no-op when already at the top) before asserting them.
+- extendedWaitUntil:
+    visible: "(Step 8 of 8|Start learning)"
+    timeout: 5000
+- scrollUntilVisible:
+    element:
+      text: "Already know some of this\\?"
+    direction: UP
+    timeout: 20000
+- scrollUntilVisible:
+    element:
+      text: "Step 8 of 8"
+    direction: UP
+    timeout: 10000
+- assertVisible: "Already know some of this\\?"
+- assertVisible: "Step 8 of 8"
+- scrollUntilVisible:
+    element:
+      text: "Start learning"
+    direction: DOWN
+- tapOn:
+    text: "Start learning"
+    enabled: true
+
+# Finishing schedules reminders and may raise the POST_NOTIFICATIONS prompt.
+- runFlow: allow-notifications.yaml
+
+# Home (app/(tabs)/home/index.tsx): the screen's testID (Home has no "Today" title since the restyle).
+- extendedWaitUntil:
+    visible:
+      id: "home-screen"
+    timeout: 20000

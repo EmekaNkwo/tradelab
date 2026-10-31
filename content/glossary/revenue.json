@@ -1,0 +1,24 @@
+{
+  "id": "revenue",
+  "term": "Revenue",
+  "aliases": [
+    "sales",
+    "turnover",
+    "top line"
+  ],
+  "definition": {
+    "simple": "All the money a company brings in from selling its products or services, before any costs.",
+    "balanced": "Revenue is the first line of the [[income-statement]]. Growing revenue is not the same as growing profit: if costs grow faster, profit can fall while revenue rises."
+  },
+  "example": "A shop sells 10,000 items at 5 USD each: revenue is 50,000 USD.",
+  "related": [
+    "income-statement",
+    "earnings",
+    "profit-margin"
+  ],
+  "markets": [
+    "stocks"
+  ],
+  "level": "beginner",
+  "sourceIds": []
+}

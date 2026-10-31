@@ -1,0 +1,25 @@
+{
+  "id": "pe-ratio",
+  "term": "Price-to-earnings ratio (P/E)",
+  "aliases": [
+    "P/E",
+    "PE",
+    "P/E ratio",
+    "price/earnings"
+  ],
+  "definition": {
+    "simple": "How many years of today's profit you pay for in the share price. Price ÷ earnings per share.",
+    "balanced": "P/E = share price ÷ [[eps]]. A high P/E means buyers expect profits to grow; a low P/E can mean low expectations, or a business in trouble. P/E says nothing on its own about whether a company is good, and it is meaningless when earnings are zero or negative."
+  },
+  "example": "Price 6.80 USD ÷ EPS 0.57 USD = a P/E of about 11.9.",
+  "related": [
+    "eps",
+    "valuation",
+    "market-capitalisation"
+  ],
+  "markets": [
+    "stocks"
+  ],
+  "level": "beginner",
+  "sourceIds": []
+}

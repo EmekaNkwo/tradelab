@@ -1,0 +1,25 @@
+{
+  "id": "ta-volume",
+  "skills": ["technical_analysis"],
+  "lab": "technical",
+  "level": "beginner",
+  "order": 4,
+  "title": "Volume",
+  "summary": "Volume shows how much traded in each candle. Compare each bar with its recent average to see whether a move had more or less participation than usual.",
+  "unreliableWhen": "Heavy volume does not show direction or what happens next. Volume jumps at opens, closes and news. On forex, platforms show tick volume from one broker, not the whole market.",
+  "goodExample": "Noting that a breakout candle traded about 2.5 times the 20-candle average, and still treating the breakout as unproven.",
+  "badExample": "Calling a breakout \"confirmed\" because volume was high, or reading forex tick volume as total market trading.",
+  "lessonIds": [
+    "ta-volume-gaps"
+  ],
+  "chart": {
+    "scenario": "breakout",
+    "overlays": [],
+    "pane": "volume",
+    "lookFor": "Find the breakout candle and compare its volume bar with the 10 bars before it. Then open False breakout: did the failed move also have a tall bar?"
+  },
+  "drillKind": null,
+  "scenarioIds": [],
+  "companyIds": [],
+  "redFlagCaseIds": []
+}

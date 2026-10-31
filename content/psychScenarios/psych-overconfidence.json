@@ -1,0 +1,31 @@
+{
+  "id": "psych-overconfidence",
+  "topic": "overconfidence",
+  "title": "Six wins in a row",
+  "situation": "You have won 6 [[demo-account|demo]] trades in a row. You feel you have figured the market out. You are thinking of skipping your pre-trade checklist and risking three times your usual amount on the next trade.",
+  "question": "What do you do next?",
+  "responses": [
+    {
+      "id": "a",
+      "text": "Go ahead. Six wins show the method works.",
+      "quality": "harmful",
+      "explanation": "Six trades is a very small sample, and a run of wins can happen by chance. Tripling risk makes the next loss three times as big."
+    },
+    {
+      "id": "b",
+      "text": "Use the bigger size, but still do the checklist.",
+      "quality": "mixed",
+      "explanation": "Keeping the checklist is good. Changing size because of a streak, rather than a planned rule, is still a reaction."
+    },
+    {
+      "id": "c",
+      "text": "Keep your usual size and checklist, and review the 6 trades to see whether each one followed your rules.",
+      "quality": "helpful",
+      "explanation": "This checks whether the wins came from your process or from luck. Your risk stays where you set it when calm."
+    }
+  ],
+  "takeaway": "A winning streak is a reason to check your process, not to loosen it.",
+  "glossaryIds": [
+    "demo-account"
+  ]
+}

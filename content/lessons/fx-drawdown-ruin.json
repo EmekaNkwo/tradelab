@@ -1,0 +1,88 @@
+{
+  "id": "fx-drawdown-ruin",
+  "skills": ["risk_management", "statistical_reasoning"],
+  "moduleId": "forex-risk",
+  "title": "Drawdowns, losing streaks and risk of ruin",
+  "level": "beginner",
+  "estimatedMinutes": 20,
+  "inOneLine": {
+    "simple": "Losing runs happen to every trader. Deep falls are much harder to climb back from, so keep each loss small.",
+    "balanced": "After a [[drawdown]] d, you need a gain of d ÷ (1 − d) to get back. [[losing-streak|Losing streaks]] are normal, and [[risk-of-ruin|risk of ruin]] rises fast as risk per trade grows."
+  },
+  "explain": {
+    "simple": "A drawdown is how far your account has fallen from its highest point. Losses and gains are not equal: lose 50% and you need 100% just to get back. Losing streaks are normal, even for a plan that works over time. If you trade long enough, you will see one. Small risk per trade keeps a streak from becoming a disaster. Never raise size to win it back.",
+    "balanced": "Recovery needed = d ÷ (1 − d): 10% needs 11.1%, 20% needs 25%, 50% needs 100%. If each trade loses with chance L, independently, the chance that the next N trades all lose is L^N. The chance of seeing such a run somewhere in many trades is much higher. Risk of ruin is the chance of falling to a level where you must stop. It depends on win rate, reward to risk, risk per trade and your ruin level, and is best explored by simulation. Watch [[correlation]] too: two trades on pairs that move together can lose together, like one bigger trade."
+  },
+  "realNumbers": {
+    "assumptions": [
+      "Example account with a peak of 10,000 USD",
+      "Drawdowns of 10%, 20% and 50% from that peak",
+      "No deposits or withdrawals"
+    ],
+    "steps": [
+      "10% drawdown: account at 9,000 USD. Gain needed = 0.10 ÷ 0.90 = 11.1%.",
+      "20% drawdown: account at 8,000 USD. Gain needed = 2,000 ÷ 8,000 = 0.20 ÷ 0.80 = 25%.",
+      "50% drawdown: account at 5,000 USD. Gain needed = 0.50 ÷ 0.50 = 100%.",
+      "The deeper the fall, the faster the climb back grows. Small losses keep you in the shallow part."
+    ]
+  },
+  "anotherExample": {
+    "assumptions": [
+      "Example loss chance per trade: 50%, and each trade is independent of the last",
+      "Example rule: 1% of current balance risked per trade, on a 10,000 USD account",
+      "Stops fill at their level, no costs"
+    ],
+    "steps": [
+      "Chance the next 5 trades all lose = 0.5^5 = 0.03125, about 3.1%.",
+      "Chance of at least one run of 5 losses somewhere in 100 trades is about 81%. Over many trades, a streak is likely.",
+      "5 losses at 1% each: 10,000 × 0.99^5 = 9,509.90 USD, a drawdown of about 4.9%.",
+      "That streak is unpleasant but survivable. The same streak at a much bigger risk per trade would be far deeper."
+    ]
+  },
+  "explainSimpler": "Falling down a hole is quick. Climbing out takes longer the deeper it is. Expect losing runs, and keep each loss small so you never fall too far.",
+  "commonMistake": "Thinking a losing streak means the plan is broken, or that a win is now 'due'. Each trade is a new event. The other big mistake is raising size to recover losses, which makes ruin more likely.",
+  "quickCheck": [
+    {
+      "id": "fx-drawdown-ruin-q1",
+      "prompt": "Your example account falls 30% from its peak. What gain do you need to get back?",
+      "options": [
+        { "id": "a", "text": "30%, the same as the loss", "explanation": "No: the gain is measured on a smaller balance, so it must be bigger." },
+        { "id": "b", "text": "About 42.9%", "explanation": "Right: 0.30 ÷ 0.70 = 0.4286, about 42.9%." },
+        { "id": "c", "text": "60%", "explanation": "No: 0.30 ÷ (1 − 0.30) is about 42.9%, not double the drawdown." }
+      ],
+      "correctOptionIds": ["b"],
+      "level": "beginner",
+      "glossaryIds": ["drawdown"]
+    },
+    {
+      "id": "fx-drawdown-ruin-q2",
+      "prompt": "You have had 6 losses in a row while following your plan. What is a sound response?",
+      "options": [
+        { "id": "a", "text": "Double the size, because a win is due", "explanation": "No: a win is not due, and bigger size after losses deepens the drawdown." },
+        { "id": "b", "text": "Keep or cut the risk, pause, and review the trades against the plan", "explanation": "Right: streaks are normal. Review whether the rules were followed before changing anything." },
+        { "id": "c", "text": "Delete the losing journal entries so they do not drag down your statistics", "explanation": "No: losing trades are part of the honest record." }
+      ],
+      "correctOptionIds": ["b"],
+      "level": "beginner",
+      "glossaryIds": ["losing-streak", "risk-per-trade"]
+    },
+    {
+      "id": "fx-drawdown-ruin-q3",
+      "prompt": "You buy EUR/USD and GBP/USD, each risking your example 1%. Why might your real risk be higher than 1%?",
+      "options": [
+        { "id": "a", "text": "The pairs may move together, so both can lose at once", "explanation": "Right: correlated trades can act like one bigger trade, here up to about 2%." },
+        { "id": "b", "text": "It cannot: each trade is only 1%", "explanation": "No: two trades that each risk 1% can lose about 2% together." }
+      ],
+      "correctOptionIds": ["a"],
+      "level": "beginner",
+      "glossaryIds": ["correlation", "risk-per-trade"]
+    }
+  ],
+  "doItNow": {
+    "kind": "calculator",
+    "instructions": "Open Learn → Calculators. In Losing streak chance, keep 100 trades and a 50% example loss chance, and try streaks of 5, 8 and 10. Then in Risk of ruin (simulated), compare risk per trade of 1%, 2% and 5% with the other inputs unchanged. Write down what you notice."
+  },
+  "homework": "Write one rule for what you will do after a losing streak, for example pause and review after a set number of losses. Add it in More → Risk rules.",
+  "glossaryIds": ["drawdown", "losing-streak", "risk-of-ruin", "correlation", "risk-per-trade"],
+  "sourceIds": []
+}

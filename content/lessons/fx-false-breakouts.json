@@ -1,0 +1,135 @@
+{
+  "id": "fx-false-breakouts",
+  "moduleId": "forex-levels",
+  "title": "False breakouts and retests",
+  "level": "beginner",
+  "estimatedMinutes": 20,
+  "inOneLine": {
+    "simple": "A false breakout goes through a level, then comes back inside. You only know it was false afterwards.",
+    "balanced": "A [[false-breakout]] meets your breakout rule, then fails. Waiting for more confirmation, such as a [[retest]], avoids some false breakouts but costs a later, worse entry and still catches some."
+  },
+  "explain": {
+    "simple": "Imagine price closes above resistance, so it looks like a breakout. Then the next candles fall back into the old range. That was a false breakout. Anyone who bought on the first close may hit their stop loss. There is no way to tell for certain at the moment of the breakout which kind it will be. What you can control is your plan: where your stop goes, how much you risk, and what would show you were wrong.",
+    "balanced": "Ways people try to filter false breakouts include waiting for a second close beyond the level, waiting for a retest that holds, or only taking breakouts in the direction of the longer-timeframe [[trend]]. Each one trades fewer false signals for later entries and missed moves. None removes false breakouts. In ranges, false breakouts at the edges are common. Practise judging them in replay, where future candles stay hidden."
+  },
+  "realNumbers": {
+    "assumptions": [
+      "Illustrative GBP/USD H1 range: support 1.25000, resistance 1.25600 (60 pips high)",
+      "Breakout rule: close at least 5 pips above 1.25600",
+      "Buy 0.10 lot at the breakout close 1.25680; pip value 1 USD; stop loss 1.25480",
+      "No slippage, and the spread is ignored to keep the numbers simple"
+    ],
+    "steps": [
+      "The breakout close at 1.25680 is 8 pips above 1.25600, so it meets the rule.",
+      "Stop distance = 1.25680 − 1.25480 = 20 pips. Planned loss = 20 × 1 USD = 20 USD.",
+      "The next two candles close at 1.25550 and 1.25400, back inside the range. The stop at 1.25480 is hit on the way down.",
+      "Loss = 20 USD. Looking back, this was a false breakout. At the time of entry, it looked the same as a breakout that works."
+    ]
+  },
+  "anotherExample": {
+    "assumptions": [
+      "Same illustrative resistance at 1.25600 on a different day",
+      "Rule B: wait for a second H1 close above 1.25650 before buying"
+    ],
+    "steps": [
+      "First close above: 1.25680. Under rule A you would have bought here.",
+      "Second close: 1.25740. Under rule B you buy here, 1.25740 − 1.25680 = 6 pips higher.",
+      "If the second candle had closed back inside, rule B would have skipped a false breakout that rule A took.",
+      "But when the move continues, rule B always pays a later price, and if price fails after the second close, rule B loses too. Neither rule is safe."
+    ]
+  },
+  "explainSimpler": "A false breakout is a door that opens and slams shut. You cannot tell which doors will stay open, so plan for both.",
+  "commonMistake": "Thinking false breakouts mean someone is \"hunting stops\" every time, or that a special trick can always spot them. Most of the time you cannot tell in advance. Size your trade so the loss is acceptable if it fails.",
+  "quickCheck": [
+    {
+      "id": "fx-false-breakouts-q1",
+      "prompt": "Resistance is 1.30000. A candle closes at 1.30080, then the next two close at 1.29950 and 1.29800. What was it?",
+      "options": [
+        {
+          "id": "a",
+          "text": "A false breakout",
+          "explanation": "Right: it closed above, then fell back below the level."
+        },
+        {
+          "id": "b",
+          "text": "A successful breakout",
+          "explanation": "No: price did not stay above the level."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "false-breakout"
+      ]
+    },
+    {
+      "id": "fx-false-breakouts-q2",
+      "prompt": "Buy 0.10 lot (pip value 1 USD) at 1.10580 with a stop at 1.10430. It turns into a false breakout and the stop fills at its level. What is the loss?",
+      "options": [
+        {
+          "id": "a",
+          "text": "15 USD",
+          "explanation": "Right: 1.10580 − 1.10430 = 15 pips, and 15 × 1 USD = 15 USD."
+        },
+        {
+          "id": "b",
+          "text": "1.50 USD",
+          "explanation": "No: 0.00150 is 15 pips, not 1.5."
+        },
+        {
+          "id": "c",
+          "text": "150 USD",
+          "explanation": "No: that would need a pip value of 10 USD."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "false-breakout",
+        "stop-loss",
+        "pip-value"
+      ]
+    },
+    {
+      "id": "fx-false-breakouts-q3",
+      "prompt": "What is the trade-off of waiting for a retest before entering?",
+      "options": [
+        {
+          "id": "a",
+          "text": "It can skip some false breakouts, but you may miss moves or enter later",
+          "explanation": "Right: every filter costs something."
+        },
+        {
+          "id": "b",
+          "text": "It removes false breakouts completely",
+          "explanation": "No: a retest can hold and then fail as well."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "retest",
+        "false-breakout"
+      ]
+    }
+  ],
+  "doItNow": {
+    "kind": "replay",
+    "instructions": "Start a replay on the false breakout scenario. Before each new candle, decide: breakout, false breakout, or not sure yet. Write down your call, then reveal the next candle. Repeat on the breakout scenario and compare."
+  },
+  "glossaryIds": [
+    "false-breakout",
+    "retest",
+    "breakout",
+    "trend",
+    "stop-loss",
+    "pip-value"
+  ],
+  "sourceIds": []
+}

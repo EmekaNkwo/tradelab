@@ -1,0 +1,181 @@
+{
+  "id": "stocks-company-analysis-checkpoint",
+  "title": "Checkpoint: analysing a company",
+  "passMark": 0.8,
+  "questions": [
+    {
+      "id": "stocks-company-analysis-checkpoint-q1",
+      "prompt": "Revenue 500, cost of sales 300, operating expenses 120, interest 10, tax 20 (fictional, millions USD). What is net income?",
+      "options": [
+        {
+          "id": "a",
+          "text": "80",
+          "explanation": "No: that is operating profit, before interest and tax."
+        },
+        {
+          "id": "b",
+          "text": "200",
+          "explanation": "No: that is gross profit."
+        },
+        {
+          "id": "c",
+          "text": "50",
+          "explanation": "Right: 500 − 300 − 120 − 10 − 20 = 50."
+        }
+      ],
+      "correctOptionIds": [
+        "c"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "income-statement",
+        "earnings"
+      ]
+    },
+    {
+      "id": "stocks-company-analysis-checkpoint-q2",
+      "prompt": "Net income 50 million USD, 25 million shares, price 30 USD. What is the P/E?",
+      "options": [
+        {
+          "id": "a",
+          "text": "15",
+          "explanation": "Right: EPS = 50 ÷ 25 = 2.00 USD, and 30 ÷ 2.00 = 15."
+        },
+        {
+          "id": "b",
+          "text": "0.6",
+          "explanation": "No: that divides the price by total profit, not by EPS."
+        },
+        {
+          "id": "c",
+          "text": "60",
+          "explanation": "No: that multiplies instead of dividing."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "intermediate",
+      "glossaryIds": [
+        "eps",
+        "pe-ratio"
+      ]
+    },
+    {
+      "id": "stocks-company-analysis-checkpoint-q3",
+      "prompt": "Debt 300, cash 80, operating profit 50, equity 200 (fictional). What are net debt and return on capital?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Net debt 380; return on capital 25%",
+          "explanation": "No: net debt subtracts cash, and return on capital uses debt plus equity."
+        },
+        {
+          "id": "b",
+          "text": "Net debt 220; return on capital 10%",
+          "explanation": "Right: 300 − 80 = 220, and 50 ÷ (300 + 200) = 10%."
+        },
+        {
+          "id": "c",
+          "text": "Net debt 220; return on capital 17%",
+          "explanation": "No: return on capital uses debt plus equity, 500, not debt alone."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "intermediate",
+      "glossaryIds": [
+        "net-debt",
+        "return-on-capital"
+      ]
+    },
+    {
+      "id": "stocks-company-analysis-checkpoint-q4",
+      "prompt": "Net income has grown for three years, while operating cash flow fell close to zero. Which is the best reading?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Profit is not becoming cash; find out why",
+          "explanation": "Right: this is a warning sign to investigate, with several possible causes."
+        },
+        {
+          "id": "b",
+          "text": "Cash flow does not matter if profit grows",
+          "explanation": "No: profit is an accounting figure; cash is what was collected."
+        },
+        {
+          "id": "c",
+          "text": "The company is certain to fail soon",
+          "explanation": "No: the figures raise questions; they do not prove an outcome."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "cash-flow",
+        "earnings"
+      ]
+    },
+    {
+      "id": "stocks-company-analysis-checkpoint-q5",
+      "prompt": "A fictional firm has steady margins and a high return on capital, but trades on a P/E of 70. Which is true?",
+      "options": [
+        {
+          "id": "a",
+          "text": "A strong business is a good buy at any price",
+          "explanation": "No: the price can assume more than the business delivers."
+        },
+        {
+          "id": "b",
+          "text": "A high P/E proves the business is weak",
+          "explanation": "No: a high P/E reflects expectations, not weakness."
+        },
+        {
+          "id": "c",
+          "text": "The price assumes a lot of future growth",
+          "explanation": "Right: if growth falls short, the price can drop while the business stays strong."
+        }
+      ],
+      "correctOptionIds": [
+        "c"
+      ],
+      "level": "intermediate",
+      "glossaryIds": [
+        "valuation",
+        "pe-ratio"
+      ]
+    },
+    {
+      "id": "stocks-company-analysis-checkpoint-q6",
+      "prompt": "A fictional firm has a P/E of 4 and a dividend yield of 15%. Revenue has fallen for three years and the dividend was just cut. What fits?",
+      "options": [
+        {
+          "id": "a",
+          "text": "It is clearly a bargain at this price",
+          "explanation": "No: low ratios can reflect a shrinking business; it may be cheap for a reason."
+        },
+        {
+          "id": "b",
+          "text": "It may be cheap for a reason",
+          "explanation": "Right: falling revenue and a dividend cut explain why buyers pay so little."
+        },
+        {
+          "id": "c",
+          "text": "The 15% yield will be paid",
+          "explanation": "No: the yield uses past payments, and this dividend was just cut."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "intermediate",
+      "glossaryIds": [
+        "value-investing",
+        "dividend-yield"
+      ]
+    }
+  ]
+}

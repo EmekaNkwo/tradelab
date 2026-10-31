@@ -1,0 +1,13 @@
+{
+  "id": "take-profit",
+  "term": "Take profit",
+  "aliases": ["TP", "profit target"],
+  "definition": {
+    "simple": "An order that closes your trade when price reaches the profit level you chose.",
+    "balanced": "A level attached to an open trade. A buy is closed at the [[bid]], so its take profit triggers when the bid reaches the level. A sell is closed at the [[ask]], so its take profit triggers when the ask reaches it. It is the partner of the [[stop-loss]]."
+  },
+  "related": ["stop-loss", "bid", "ask"],
+  "markets": [],
+  "level": "beginner",
+  "sourceIds": []
+}

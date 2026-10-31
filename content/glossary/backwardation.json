@@ -1,0 +1,20 @@
+{
+  "id": "backwardation",
+  "term": "Backwardation",
+  "aliases": [],
+  "definition": {
+    "simple": "When later futures months are priced lower than nearer ones.",
+    "balanced": "The [[futures-curve]] slopes down. The shape can change at any time and is not a forecast. Compare [[contango]]."
+  },
+  "example": "Fictional: near month 48.00, next month 47.20.",
+  "related": [
+    "contango",
+    "futures-curve"
+  ],
+  "markets": [
+    "commodities",
+    "futures"
+  ],
+  "level": "intermediate",
+  "sourceIds": []
+}

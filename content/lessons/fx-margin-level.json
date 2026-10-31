@@ -1,0 +1,90 @@
+{
+  "id": "fx-margin-level",
+  "moduleId": "forex-pips-lots-leverage",
+  "title": "Equity, free margin and margin level",
+  "level": "beginner",
+  "estimatedMinutes": 15,
+  "inOneLine": {
+    "simple": "As open trades lose money, your free margin and margin level fall. Too low, and the broker can close your trades.",
+    "balanced": "[[equity|Equity]] = [[balance]] ± open profit or loss; [[free-margin|free margin]] = equity − used margin; [[margin-level|margin level]] = equity ÷ used margin × 100%."
+  },
+  "explain": {
+    "simple": "Your balance is the money in the account before open trades. Equity is the balance plus or minus what your open trades are making or losing right now. Free margin is the equity left after the margin your trades use. Margin level compares equity with used margin as a percentage. If margin level drops to a level set by your broker, you get a margin call: a warning. If it drops further, to the stop-out level, the broker closes trades for you. Each broker sets its own levels.",
+    "balanced": "These numbers move with every price change. A [[margin-call]] usually means you cannot open new trades and should act. A [[stop-out]] means the broker starts closing positions at market prices, often the largest loser first, without asking. The margin call and stop-out levels are broker-specific and can differ by account type, so read your broker's terms. In a fast market or a [[gap]], the closing price can be worse than the stop-out level suggests."
+  },
+  "realNumbers": {
+    "assumptions": [
+      "Illustrative numbers only",
+      "Account currency USD",
+      "Balance 1,000 USD",
+      "One open trade using 200 USD of margin",
+      "The trade currently shows a loss of 150 USD"
+    ],
+    "steps": [
+      "Equity = 1,000 − 150 = 850 USD.",
+      "Free margin = 850 − 200 = 650 USD.",
+      "Margin level = 850 ÷ 200 × 100% = 425%.",
+      "The balance is still 1,000 USD, because the trade is not closed yet."
+    ]
+  },
+  "anotherExample": {
+    "assumptions": [
+      "Same account: balance 1,000 USD, used margin 200 USD",
+      "A made-up broker with a margin call at 100% and a stop-out at 50%; real levels differ by broker"
+    ],
+    "steps": [
+      "Margin call at 100% means equity = 200 × 100% = 200 USD.",
+      "That happens when the open loss reaches 1,000 − 200 = 800 USD.",
+      "Stop-out at 50% means equity = 200 × 50% = 100 USD.",
+      "That happens when the open loss reaches 1,000 − 100 = 900 USD.",
+      "At that point most of the account is already gone. A stop-out is not protection; it is the last step."
+    ]
+  },
+  "explainSimpler": "Margin level is a fuel gauge. When it gets low, the broker warns you. When it gets very low, the broker switches the engine off by closing your trades.",
+  "commonMistake": "Watching only the balance. The balance does not change until a trade closes, while equity and margin level can fall fast. Another mistake is waiting for a margin call to act. By then, much of the account may be lost.",
+  "quickCheck": [
+    {
+      "id": "fx-margin-level-q1",
+      "prompt": "Equity is 500 USD and used margin is 250 USD. What is the margin level?",
+      "options": [
+        { "id": "a", "text": "50%", "explanation": "No: that divides margin by equity. Margin level is equity ÷ margin." },
+        { "id": "b", "text": "200%", "explanation": "Right: 500 ÷ 250 × 100% = 200%." },
+        { "id": "c", "text": "250 USD", "explanation": "No: 250 is the margin in dollars, not the margin level." }
+      ],
+      "correctOptionIds": ["b"],
+      "level": "beginner",
+      "glossaryIds": ["margin-level"]
+    },
+    {
+      "id": "fx-margin-level-q2",
+      "prompt": "Balance 2,000 USD, open loss 300 USD, used margin 400 USD. What is the free margin?",
+      "options": [
+        { "id": "a", "text": "1,300 USD", "explanation": "Right: equity = 2,000 − 300 = 1,700, and 1,700 − 400 = 1,300 USD." },
+        { "id": "b", "text": "1,600 USD, because 2,000 − 400 = 1,600", "explanation": "No: that uses the balance, not the equity, so the open loss is missed." },
+        { "id": "c", "text": "1,700 USD", "explanation": "No: that is the equity. Free margin also subtracts the used margin." }
+      ],
+      "correctOptionIds": ["a"],
+      "level": "beginner",
+      "glossaryIds": ["free-margin", "equity"]
+    },
+    {
+      "id": "fx-margin-level-q3",
+      "prompt": "Who sets the margin call and stop-out levels?",
+      "options": [
+        { "id": "a", "text": "Each broker, and they can differ", "explanation": "Right: check your own broker's terms for the exact levels." },
+        { "id": "b", "text": "One rule for every broker", "explanation": "No: there is no single universal level." }
+      ],
+      "correctOptionIds": ["a"],
+      "level": "beginner",
+      "glossaryIds": ["margin-call", "stop-out"]
+    }
+  ],
+  "doItNow": {
+    "kind": "metatrader",
+    "instructions": "On your demo account in MetaTrader, open the Trade tab. Read your balance, equity, margin, free margin and margin level. Then follow the task card to see how they change with one small demo trade.",
+    "mtTaskId": "mt-check-margin"
+  },
+  "homework": "Find your demo broker's margin call and stop-out levels in its terms or account information, and write them down.",
+  "glossaryIds": ["balance", "equity", "free-margin", "margin-level", "margin-call", "stop-out", "margin"],
+  "sourceIds": []
+}

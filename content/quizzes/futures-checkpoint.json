@@ -1,0 +1,81 @@
+{
+  "id": "futures-checkpoint",
+  "title": "Checkpoint: futures contracts, margin and expiry",
+  "passMark": 0.8,
+  "questions": [
+    {
+      "id": "futures-checkpoint-q1",
+      "prompt": "Fictional contract: tick size 0.1, tick value 1 USD. You sell 2 contracts at 250.0 and buy them back at 248.5. What is the result?",
+      "options": [
+        { "id": "a", "text": "A 15 USD gain", "explanation": "No: that is 15 ticks × 1 USD for one contract. You hold 2." },
+        { "id": "b", "text": "A 30 USD gain", "explanation": "Right: 1.5 ÷ 0.1 = 15 ticks in your favour, and 15 × 1 USD × 2 = 30 USD." },
+        { "id": "c", "text": "A 30 USD loss", "explanation": "No: you sold first and price fell, so the move was in your favour." },
+        { "id": "d", "text": "A 3 USD gain", "explanation": "No: that multiplies the 1.5-point move by 2 contracts without converting to ticks and money." }
+      ],
+      "correctOptionIds": ["b"],
+      "level": "beginner",
+      "glossaryIds": ["tick-size", "tick-value"]
+    },
+    {
+      "id": "futures-checkpoint-q2",
+      "prompt": "Fictional contract: 25 USD per point, maintenance margin 2,500 USD. Balance 4,000 USD. You sell 1 contract at 1,200.0. At what price does a margin call start?",
+      "options": [
+        { "id": "a", "text": "1,140.0", "explanation": "No: a short loses when price rises, so the margin-call price is above the entry." },
+        { "id": "b", "text": "1,300.0", "explanation": "No: that uses the maintenance margin alone, 2,500 ÷ 25 = 100 points. Use the balance above maintenance." },
+        { "id": "c", "text": "1,360.0", "explanation": "No: that is where the whole 4,000 USD balance is gone, 4,000 ÷ 25 = 160 points." },
+        { "id": "d", "text": "1,260.0", "explanation": "Right: (4,000 − 2,500) ÷ 25 = 60 points, and 1,200 + 60 = 1,260.0." }
+      ],
+      "correctOptionIds": ["d"],
+      "level": "beginner",
+      "glossaryIds": ["maintenance-margin", "margin-call"]
+    },
+    {
+      "id": "futures-checkpoint-q3",
+      "prompt": "Fictional contract: multiplier 50 USD per point, price 2,000, initial margin 5,000 USD. What leverage does 1 contract carry?",
+      "options": [
+        { "id": "a", "text": "20 times", "explanation": "Right: notional = 2,000 × 50 = 100,000 USD, and 100,000 ÷ 5,000 = 20." },
+        { "id": "b", "text": "50 times", "explanation": "No: 50 is the multiplier, not the leverage." },
+        { "id": "c", "text": "2.5 times", "explanation": "No: that divides the margin by the price. Leverage = notional ÷ initial margin." }
+      ],
+      "correctOptionIds": ["a"],
+      "level": "beginner",
+      "glossaryIds": ["leverage", "notional-value", "initial-margin"]
+    },
+    {
+      "id": "futures-checkpoint-q4",
+      "prompt": "A fictional futures curve is in backwardation. What does that mean?",
+      "options": [
+        { "id": "a", "text": "Later months are priced higher than nearer ones", "explanation": "No: that is contango." },
+        { "id": "b", "text": "Spot prices may fall to meet the later months", "explanation": "No: the curve's shape is not a forecast of spot prices." },
+        { "id": "c", "text": "Later months are priced lower than nearer ones", "explanation": "Right: in backwardation the curve slopes down into later months." }
+      ],
+      "correctOptionIds": ["c"],
+      "level": "intermediate",
+      "glossaryIds": ["backwardation", "contango", "futures-curve"]
+    },
+    {
+      "id": "futures-checkpoint-q5",
+      "prompt": "You hold a bought contract that is physically settled (fictional), and you only want price exposure. What should your plan include?",
+      "options": [
+        { "id": "a", "text": "Hold to expiry, since every future settles in cash", "explanation": "No: settlement differs by contract. This one is physically settled." },
+        { "id": "b", "text": "You must close or roll before the last day in the spec", "explanation": "Right: the specification sets the dates, and acting before them avoids the delivery process." },
+        { "id": "c", "text": "Nothing, since delivery rules only affect sellers", "explanation": "No: with physical settlement, a buyer who holds on can be required to take delivery." }
+      ],
+      "correctOptionIds": ["b"],
+      "level": "beginner",
+      "glossaryIds": ["physical-settlement", "rollover", "expiry"]
+    },
+    {
+      "id": "futures-checkpoint-q6",
+      "prompt": "A fictional contract needs 3,000 USD initial margin. What is the most you could lose on 1 bought contract?",
+      "options": [
+        { "id": "a", "text": "There is no fixed limit, and it can exceed 3,000 USD", "explanation": "Right: the loss depends on how far price moves against the full notional value, and can exceed the margin and the account." },
+        { "id": "b", "text": "Exactly 3,000 USD, since margin caps the loss", "explanation": "No: margin is a deposit, not a limit on losses." },
+        { "id": "c", "text": "Only the gap between initial and maintenance margin", "explanation": "No: falling below maintenance brings a margin call, but losses can keep growing." }
+      ],
+      "correctOptionIds": ["a"],
+      "level": "beginner",
+      "glossaryIds": ["margin", "initial-margin", "maintenance-margin"]
+    }
+  ]
+}
