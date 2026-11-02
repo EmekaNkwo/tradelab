@@ -21,7 +21,8 @@ export default function ChallengesScreen() {
               iconTone={p.completed ? 'brand' : 'neutral'}
               key={p.challenge.id}
               testID={`challenge-${p.challenge.id}`}
-              title={`${p.completed ? '✓ ' : ''}${p.challenge.title}`}
+              title={p.challenge.title}
+              status={p.completed ? 'Completed' : undefined}
               subtitle={`${p.completedAt ? `Completed on ${awardDate(state.data, p.completedAt)}` : `${p.criteria.filter((c) => c.met).length} of ${p.criteria.length} steps done`} · ${p.challenge.summary}`}
               onPress={() => router.push({ pathname: '/progress/challenge/[id]', params: { id: p.challenge.id } })}
             />

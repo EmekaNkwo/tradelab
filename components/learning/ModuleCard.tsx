@@ -10,7 +10,7 @@ import { BookOpen, CircleCheck, GraduationCap } from '../ui/icons';
 import { ListRow } from '../ui/ListRow';
 
 /**
- * One module (brief §5.2): icon well, title, a progress bar of lessons ticked, "Checkpoint passed ✓" in words with
+ * One module (brief §5.2): icon well, title, a progress bar of lessons ticked, "Checkpoint passed" in words with
  * a calm check, and its lessons. Modules are never locked in TradeLab (any lesson can be read again), so there is
  * no lock state to show.
  */
@@ -49,7 +49,7 @@ export function ModuleCard({ module, number }: { readonly module: ModuleOverview
         >
           <Icon icon={CircleCheck} size={18} color="brand" />
           <AppText variant="label" color="brand">
-            Checkpoint passed ✓
+            Checkpoint passed
           </AppText>
         </View>
       ) : null}
@@ -60,7 +60,8 @@ export function ModuleCard({ module, number }: { readonly module: ModuleOverview
             testID={`lesson-${l.id}`}
             icon={l.done ? CircleCheck : BookOpen}
             iconTone={l.done ? 'brand' : 'neutral'}
-            title={`${l.done ? '✓ ' : ''}${l.title}`}
+            title={l.title}
+            status={l.done ? 'Done' : undefined}
             subtitle={l.inOneLine}
             onPress={() => router.push({ pathname: '/lesson/[id]', params: { id: l.id } })}
           />

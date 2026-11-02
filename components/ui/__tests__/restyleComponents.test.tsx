@@ -244,7 +244,9 @@ describe('Card, HeroCard, IconWell, InstrumentIcon', () => {
         {null}
       </Card>,
     );
-    expect(flat(screen.getByTestId('c'))).toMatchObject({ backgroundColor: lightTheme.colors.surfaceMuted, borderLeftWidth: 4 });
+    // An accent is a soft outline all round, never a side stripe.
+    expect(flat(screen.getByTestId('c'))).toMatchObject({ backgroundColor: lightTheme.colors.surfaceMuted, borderWidth: 1.5, borderColor: `${lightTheme.colors.modePaper}80` });
+    expect(flat(screen.getByTestId('c')).borderLeftWidth).toBeUndefined();
   });
 
   it('hero card draws the gradient, the optional pill and its children', async () => {

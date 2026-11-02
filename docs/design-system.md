@@ -87,6 +87,46 @@ Home's "This week" tiles come from `features/progress/weekCompare.ts` (this week
 records; a rate change only when both weeks have data). Home reads the dashboard through `useHomeProgress`, which never
 latches awards. Paper figures are formatted by `features/paper/paperFigures.ts` (R only from a trade's planned risk).
 
+## Brand mark, icon and splash
+
+- **The mark:** a lab flask whose liquid level is a rising price line. It is defined once in `theme/brandMark.ts`: paths in a 100 × 100 box, with fixed colours that are the same in light and dark. The line is ≥4.5:1 on both the glass and the liquid.
+- **Asset generator:** `npx tsx scripts/generate-brand-assets.ts` draws the mark with CanvasKit, which comes with Skia, into `assets/`:
+  - `icon.png` is RGB with no alpha, because stores reject alpha;
+  - the Android adaptive foreground and background;
+  - a white monochrome silhouette for themed icons;
+  - `splash-icon.png`: the mark in a green circle inside the centre 2/3, which survives Android 12's round splash mask;
+  - `favicon.png`.
+
+  Then run `npx expo prebuild --clean`. The adaptive-icon background colour is `#145C39`.
+- **Boot screen:** `components/brand/BootScreen.tsx` shows the same mark (`BrandMark`, react-native-svg) at the splash's size and background, with the name and one spoken status line. There is no spinner and no motion, so the hand-over from the native splash doesn't show.
+
+## Notices, accents and option rows
+
+- **No side stripes anywhere.** A `Notice` is a tinted rounded box with a tone icon beside the title:
+  - info: `infoText` on `infoTint`;
+  - warning: `warning` on `warningTint`;
+  - success: `brand` on `brandTint`.
+
+  The icon is decoration and hidden from screen readers.
+- **Card `accent`:** a 1.5 px outline all round in the accent colour at 50 % alpha. Every colour token is six-digit hex, which a test checks.
+- **`ChoiceChips`:**
+  - Short options are pills, with vertical padding.
+  - An option longer than `LONG_CHOICE_LABEL` (40 characters) is a full-width row: radius 16, text left, room to wrap. Short options next to it stay pills.
+  - Quiz answers (`size="pill"`) are always rows.
+
+## Screens without a header (Home)
+
+- **What `Screen topInset` does:** the scroll area starts below the status bar, and a solid band in the background colour covers the status bar area.
+- **Clipping and elevation:** the scroll area clips, so scrolled cards never show under the clock. The band sits above card elevation.
+- **Inset source:** the top inset is the largest of the safe-area context, the initial window metrics and, on Android, the status bar height. On a MIUI phone the first two reported 0.
+
+## Ticks
+
+- **One tick per row.** When an icon already shows done (a check icon), the text has no extra "✓". The row's spoken label says "Done" or "Completed" instead (`ListRow` `status`).
+- **Exceptions:**
+  - text-only lines keep their ✓ / ✗;
+  - the MetaTrader task rows keep the "✓ " prefix, because the Maestro flows match it.
+
 ## Component gallery
 
 `/dev/gallery` (`app/dev/gallery.tsx`, `components/gallery/`) shows every shared component in light and dark side by

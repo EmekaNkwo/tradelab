@@ -71,7 +71,9 @@ describe('Journal list', () => {
     expect(rows).toHaveLength(4);
     expect(screen.getByTestId('journal-day-2026-10-29')).toBeTruthy();
     expect(within(screen.getByTestId('journal-day-2026-10-28')).getAllByTestId('journal-row')).toHaveLength(2);
-    expect(screen.getByText('Followed plan ✓')).toBeTruthy();
+    expect(screen.getByText('Followed plan')).toBeTruthy();
+    // The chip's icon shows the tick, so the words don't repeat it.
+    expect(screen.queryByText(/Followed plan ✓/)).toBeNull();
     expect(screen.getByText('Broke 1 rule')).toBeTruthy();
     expect(screen.getByText('Result not recorded')).toBeTruthy();
     expect(screen.getAllByText('Demo (MT)')).toHaveLength(2);
@@ -234,13 +236,13 @@ describe('Learn', () => {
       checkpointPassed: true,
     };
     await renderWith(<ModuleCard module={module} number={2} />);
-    expect(screen.getByTestId('module-checkpoint-m', { includeHiddenElements: true })).toHaveTextContent('Checkpoint passed ✓');
+    expect(screen.getByTestId('module-checkpoint-m', { includeHiddenElements: true })).toHaveTextContent('Checkpoint passed');
     expect(screen.getByTestId('module-progress-m')).toHaveTextContent('1 of 2 lessons · checkpoint passed');
     expect(StyleSheet.flatten(screen.getByTestId('module-bar-m', { includeHiddenElements: true }).props.children.props.style)).toMatchObject({ width: '50%' });
-    expect(screen.getByRole('button', { name: /^✓ Market orders/ })).toBeTruthy();
-    // Said once: the caption is read; the visible "Checkpoint passed ✓" line is hidden from screen readers.
-    expect(screen.queryByText('Checkpoint passed ✓')).toBeNull();
-    expect(screen.getByText('Checkpoint passed ✓', { includeHiddenElements: true })).toBeTruthy();
+    expect(screen.getByRole('button', { name: /^Market orders\. Done\./ })).toBeTruthy();
+    // Said once: the caption is read; the visible "Checkpoint passed" line is hidden from screen readers.
+    expect(screen.queryByText('Checkpoint passed')).toBeNull();
+    expect(screen.getByText('Checkpoint passed', { includeHiddenElements: true })).toBeTruthy();
     checkScreen(0);
   });
 

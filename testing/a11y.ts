@@ -96,7 +96,8 @@ function targetSize(n: HostNode): { readonly ok: boolean; readonly detail: strin
   const slop = slopOf(n);
   const h = Number(own.minHeight ?? own.height ?? 0) + slop.h;
   const w = Number(own.minWidth ?? own.width ?? 0) + slop.w;
-  const widthOk = w >= touchTarget || (own.width === undefined && (stretchesAcross(n, own) || growsInRow(own)));
+  // A full-width element ('100%', e.g. a long ChoiceChips option row) is as wide as its parent.
+  const widthOk = w >= touchTarget || own.width === '100%' || (own.width === undefined && (stretchesAcross(n, own) || growsInRow(own)));
   // Native switches size themselves to the platform minimum.
   if (/Switch/.test(n.type)) return { ok: true, detail: '' };
   return { ok: h >= touchTarget && widthOk, detail: `height ${h}, width ${w}${widthOk ? '' : ' (not stretched)'}` };

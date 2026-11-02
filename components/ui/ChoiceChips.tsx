@@ -5,6 +5,8 @@ import { ChoiceLabel } from './ChoiceLabel';
 
 /** Quiz answer pills are taller than the 44pt minimum so long answers read comfortably. */
 const PILL_HEIGHT = 52;
+/** An option with a label longer than this is a full-width row: long text in a stadium pill cramps. */
+export const LONG_CHOICE_LABEL = 40;
 
 interface ChoiceOption<T extends string | number> {
   readonly value: T;
@@ -23,8 +25,8 @@ interface ChoiceChipsProps<T extends string | number> {
   /** Keep the label for screen readers only. Use it only when equivalent text is already shown (e.g. as the heading above). */
   readonly hideLabel?: boolean;
   /**
-   * `chip` (default): wrapping chips. `pill`: large full-width rounded pills stacked one per line, for quiz answers
-   * (brief §5.2). Same roles, labels, states and testIDs either way.
+   * `chip` (default): wrapping pills; an option with a long label (LONG_CHOICE_LABEL) is a full-width row. `pill`:
+   * every option a full-width row, for quiz answers (brief §5.2). Same roles, labels, states and testIDs either way.
    */
   readonly size?: 'chip' | 'pill';
 }
@@ -40,16 +42,19 @@ interface ChoiceChipsProps<T extends string | number> {
  */
 export function ChoiceChips<T extends string | number>({ label, options, selected, onChange, single = false, testIDPrefix, hideLabel = false, size = 'chip' }: ChoiceChipsProps<T>) {
   const { colors, radii, spacing } = useTheme();
-  const pill = size === 'pill';
+  // Quiz answers, and any long option, are full-width rows (rounded rectangle, text left, room to wrap). Short
+  // options next to them stay pills, so a mixed group doesn't turn into a tall stack.
+  const quiz = size === 'pill';
   const toggle = (value: T) => {
     if (single) return onChange([value]);
     onChange(selected.includes(value) ? selected.filter((v) => v !== value) : [...selected, value]);
   };
   return (
     <ChoiceLabel label={label} hidden={hideLabel}>
-      <View accessibilityRole={single ? 'radiogroup' : undefined} accessibilityLabel={label} style={[pill ? styles.stack : styles.wrap, { gap: spacing.sm }]}>
+      <View accessibilityRole={single ? 'radiogroup' : undefined} accessibilityLabel={label} style={[quiz ? styles.stack : styles.wrap, { gap: spacing.sm }]}>
         {options.map((o) => {
           const on = selected.includes(o.value);
+          const rows = quiz || o.label.length > LONG_CHOICE_LABEL;
           return (
             <Pressable
               key={String(o.value)}
@@ -60,17 +65,17 @@ export function ChoiceChips<T extends string | number>({ label, options, selecte
               accessibilityState={single ? { selected: on } : { checked: on }}
               onPress={() => toggle(o.value)}
               style={[
-                pill ? styles.pill : styles.chip,
+                rows ? styles.row : styles.chip,
                 {
-                  borderRadius: radii.pill,
-                  paddingHorizontal: pill ? spacing.lg : spacing.md,
-                  paddingVertical: pill ? spacing.md : 0,
+                  borderRadius: rows ? radii.lg : radii.pill,
+                  paddingHorizontal: spacing.lg,
+                  paddingVertical: rows ? spacing.md : spacing.xs,
                   borderColor: on ? colors.brand : colors.border,
                   backgroundColor: on ? colors.brand : colors.surface,
                 },
               ]}
             >
-              <AppText variant={pill ? 'body' : 'label'} style={{ color: on ? colors.onBrand : colors.textPrimary, fontWeight: pill ? '500' : undefined }}>
+              <AppText variant={rows ? 'body' : 'label'} style={{ color: on ? colors.onBrand : colors.textPrimary, fontWeight: rows ? '500' : undefined }}>
                 {on ? `✓ ${o.label}` : o.label}
               </AppText>
             </Pressable>
@@ -84,6 +89,6 @@ export function ChoiceChips<T extends string | number>({ label, options, selecte
 const styles = StyleSheet.create({
   wrap: { flexDirection: 'row', flexWrap: 'wrap' },
   stack: { flexDirection: 'column' },
-  pill: { minHeight: PILL_HEIGHT, alignSelf: 'stretch', justifyContent: 'center', borderWidth: 1 },
+  row: { minHeight: PILL_HEIGHT, alignSelf: 'stretch', width: '100%', justifyContent: 'center', borderWidth: 1 },
   chip: { minHeight: touchTarget, minWidth: touchTarget, alignItems: 'center', justifyContent: 'center', borderWidth: 1 },
 });

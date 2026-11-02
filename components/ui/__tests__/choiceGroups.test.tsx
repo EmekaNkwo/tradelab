@@ -1,4 +1,5 @@
 import { fireEvent, render, screen } from '@testing-library/react-native';
+import { StyleSheet, type StyleProp, type ViewStyle } from 'react-native';
 import { ChoiceChips } from '../ChoiceChips';
 import { SegmentedControl } from '../SegmentedControl';
 import { EmotionPicker } from '../../journal/EmotionPicker';
@@ -54,4 +55,34 @@ it('keeps the option testIDs and still reports changes', async () => {
 it('names the three 1–5 rating rows on screen (device test: they had no names)', async () => {
   await renderUi(<EmotionPicker value={null} onChange={() => undefined} />);
   for (const name of ['Confidence', 'Stress', 'Patience']) expect(screen.getByText(`${name} (1 low, 5 high)`)).toBeTruthy();
+});
+
+describe('ChoiceChips layout', () => {
+  const flat = (node: { props: { style?: unknown } }) => StyleSheet.flatten(node.props.style as StyleProp<ViewStyle>) ?? {};
+
+  it('keeps short options as pills and makes a long option a full-width rounded row with room to wrap', async () => {
+    await render(
+      <ThemeProvider preference="light">
+        <ChoiceChips
+          label="Market"
+          single
+          options={[
+            { value: 'fx', label: 'Forex' },
+            { value: 'long', label: 'I understand this is simulated practice only' },
+          ]}
+          selected={['fx']}
+          onChange={() => undefined}
+          testIDPrefix="m"
+        />
+      </ThemeProvider>,
+    );
+    const short = flat(screen.getByTestId('m-fx'));
+    const long = flat(screen.getByTestId('m-long'));
+    expect(short.borderRadius).toBe(999);
+    expect(short.paddingVertical).toBeGreaterThan(0);
+    expect(long.borderRadius).toBe(16);
+    expect(long.width).toBe('100%');
+    expect(long.paddingVertical).toBeGreaterThanOrEqual(12);
+    expect(screen.getByText('✓ Forex')).toBeTruthy();
+  });
 });

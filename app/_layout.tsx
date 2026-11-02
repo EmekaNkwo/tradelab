@@ -4,7 +4,8 @@ import { useCallback, useEffect, useRef, useState, type ReactNode } from 'react'
 import { StyleSheet, View } from 'react-native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
-import { ErrorState, LoadingState } from '../components/ui';
+import { BootScreen } from '../components/brand/BootScreen';
+import { ErrorState } from '../components/ui';
 import { bootstrap } from '../di/bootstrap';
 import { ContainerProvider, type Container } from '../features/app';
 import { useSettings } from '../features/settings';
@@ -56,9 +57,13 @@ export default function RootLayout() {
           </ContainerProvider>
         ) : (
           <ThemeProvider preference="system">
-            <Centered>
-              {boot.status === 'loading' ? <LoadingState label="Opening TradeLab…" /> : <ErrorState error={boot.error} onRetry={retry} />}
-            </Centered>
+            {boot.status === 'loading' ? (
+              <BootScreen />
+            ) : (
+              <Centered>
+                <ErrorState error={boot.error} onRetry={retry} />
+              </Centered>
+            )}
           </ThemeProvider>
         )}
       </SafeAreaProvider>
