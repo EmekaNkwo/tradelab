@@ -27,6 +27,25 @@ describe('Notice live region', () => {
   });
 });
 
+describe('Notice look', () => {
+  it.each(['info', 'warning', 'success'] as const)('is a tinted box with a tone icon and no side stripe (%s)', async (tone) => {
+    await inTheme(
+      <Notice title="Heads up" tone={tone}>
+        Body
+      </Notice>,
+    );
+    const box = roleView(tone === 'warning' ? 'alert' : 'summary');
+    const style = Array.isArray(box.props.style) ? Object.assign({}, ...box.props.style) : box.props.style;
+    expect(style.borderLeftWidth).toBeUndefined();
+    expect(style.borderWidth).toBeUndefined();
+    expect(style.flexDirection).toBe('row');
+    // The icon is decoration: hidden from screen readers, so the title is still read first.
+    const icons = screen.container.queryAll((n) => n.props.importantForAccessibility === 'no-hide-descendants');
+    expect(icons.length).toBeGreaterThan(0);
+    expect(screen.getByText('Heads up')).toBeTruthy();
+  });
+});
+
 describe('Button disabled reason', () => {
   it('shows the reason once, as visible text a screen reader reaches next to the button, not repeated as a hint', async () => {
     await inTheme(<Button label="Save" onPress={() => undefined} disabled disabledReason="Write a note first." />);

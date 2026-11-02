@@ -66,9 +66,10 @@ function MissionsCard({ home }: { readonly home: LearningHome }) {
         {list.missions.map((m, i) => {
           const met = m.progress >= m.target;
           return (
-            <View key={m.kind} style={{ flexDirection: 'row', alignItems: 'center', gap: spacing.sm }}>
+            // The tick or circle icon shows done / not done by shape; the row's label says it in words.
+            <View key={m.kind} accessible accessibilityLabel={`${i + 1}. ${m.title}${m.target > 1 ? ` (${m.progress} of ${m.target})` : ''}, ${met ? 'done' : 'not done yet'}`} style={{ flexDirection: 'row', alignItems: 'center', gap: spacing.sm }}>
               <Icon icon={met ? Check : Circle} size={18} color={met ? 'brand' : 'textSecondary'} />
-              <AppText style={{ flexShrink: 1 }} tabular>{`${i + 1}. ${m.title}${m.target > 1 ? ` (${m.progress}/${m.target})` : ''} ${met ? '✓' : ''}`}</AppText>
+              <AppText style={{ flexShrink: 1 }} tabular>{`${i + 1}. ${m.title}${m.target > 1 ? ` (${m.progress}/${m.target})` : ''}`}</AppText>
             </View>
           );
         })}

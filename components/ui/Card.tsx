@@ -5,7 +5,7 @@ import { CARD_MARKER, marker } from './simulated';
 
 interface CardProps {
   readonly children: ReactNode;
-  /** Optional accent stripe, e.g. a mode colour so learning/replay/paper/MT look distinct. */
+  /** Optional accent outline, e.g. a mode colour so learning/replay/paper/MT look distinct. */
   readonly accent?: keyof ColorTokens;
   readonly style?: StyleProp<ViewStyle>;
   /** Screen readers announce changes to this card (e.g. a calculator result). */
@@ -43,7 +43,9 @@ export function Card({ children, accent, style, liveRegion = false, variant = 'c
       style={[
         cardSurface(theme, variant),
         { padding: spacing.lg, gap: spacing.sm },
-        accent ? { borderLeftWidth: 4, borderLeftColor: colors[accent] } : null,
+        // An accent outlines the whole card softly; no side stripe. `80` is 50% alpha appended to a #RRGGBB token
+        // (every palette colour is six-digit hex; theme/__tests__/contrast.test.ts checks it).
+        accent ? { borderWidth: 1.5, borderColor: `${colors[accent]}80` } : null,
         style,
       ]}
     >

@@ -24,6 +24,8 @@ interface ListRowBase {
   readonly value?: string;
   /** The value is (simulated) money: marked for testing/simulatedFigures.ts, its minus sign spoken in words. */
   readonly valueIsMoney?: boolean;
+  /** Status the icon shows (e.g. "Done" for a tick icon), spoken after the title; the icon itself is hidden. */
+  readonly status?: string;
 }
 
 /**
@@ -47,11 +49,11 @@ export function rowLabel(parts: readonly (string | undefined)[]): string {
 }
 
 /** Rows show plain text: `[[term]]` markup from content is never shown raw. */
-export function ListRow({ title: rawTitle, subtitle: rawSubtitle, onPress, testID, icon, iconTone, leading, value, valueIsMoney = false, trailing, trailingLabel }: ListRowProps) {
+export function ListRow({ title: rawTitle, subtitle: rawSubtitle, onPress, testID, icon, iconTone, leading, value, valueIsMoney = false, status, trailing, trailingLabel }: ListRowProps) {
   const title = plainText(rawTitle);
   const subtitle = rawSubtitle === undefined ? undefined : plainText(rawSubtitle);
   const { colors, spacing, radii } = useTheme();
-  const label = rowLabel([title, subtitle, value && valueIsMoney ? spokenAmount(value) : value, trailingLabel]);
+  const label = rowLabel([title, status, subtitle, value && valueIsMoney ? spokenAmount(value) : value, trailingLabel]);
   const content = (
     <>
       {leading ?? (icon ? <IconWell icon={icon} tone={iconTone} size={40} /> : null)}

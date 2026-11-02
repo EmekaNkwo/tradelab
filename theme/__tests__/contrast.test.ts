@@ -174,6 +174,12 @@ describe.each([
     expect(contrast(c.brand, c.surface)).toBeGreaterThanOrEqual(AA);
   });
 
+  it('every colour token is six-digit hex, so an alpha suffix (Card accent outline) is valid', () => {
+    for (const [name, value] of Object.entries(c)) {
+      expect(`${name}=${value}`).toMatch(/=#[0-9A-F]{6}$/i);
+    }
+  });
+
   it('the legacy alias names are gone', () => {
     for (const k of ['background', 'surfaceRaised', 'text', 'textMuted', 'textInverse', 'primary', 'primaryPressed', 'positive', 'negative', 'danger', 'warningSurface']) {
       expect(c).not.toHaveProperty(k);

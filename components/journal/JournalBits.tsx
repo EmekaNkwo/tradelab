@@ -18,7 +18,7 @@ const CHIP_STYLE: Readonly<Record<ProcessChip['kind'], { readonly icon: LucideIc
   not_followed: { icon: CircleAlert, fg: 'warning', bg: 'warningTint' },
 };
 
-/** What a screen reader says for the chip: the words, without the tick. */
+/** The chip's words without the tick: the icon already shows it, so neither the screen nor a screen reader repeats it. */
 export function spokenChip(chip: ProcessChip): string {
   return chip.text.replace(/\s*✓$/, '');
 }
@@ -35,7 +35,7 @@ export function ProcessChipView({ chip, testID }: { readonly chip: ProcessChip; 
     >
       <Icon icon={style.icon} size={14} color={style.fg} />
       <AppText variant="caption" color={style.fg} style={{ fontWeight: '600' }}>
-        {chip.text}
+        {spokenChip(chip)}
       </AppText>
     </View>
   );
