@@ -7,8 +7,8 @@
     "last trading day"
   ],
   "definition": {
-    "simple": "The date a futures contract stops trading and is settled.",
-    "balanced": "After expiry the contract no longer exists. Before it, a holder can close the position, [[rollover|roll]] it to a later month, or let it go to [[physical-settlement|physical]] or [[cash-settlement|cash]] settlement. The dates are set in each contract's specification and differ between contracts."
+    "simple": "The date a futures contract or an option stops trading and is settled.",
+    "balanced": "After expiry the contract no longer exists. Before it, a holder can close the position, [[rollover|roll]] it to a later month, or let it go to [[physical-settlement|physical]] or [[cash-settlement|cash]] settlement. The dates are set in each contract's specification and differ between contracts. Depending on the contract and the broker, an option that is in the money at expiry may be exercised automatically, so check the rules. An option that is out of the money then expires worthless."
   },
   "related": [
     "contract-month",
@@ -17,7 +17,8 @@
     "cash-settlement"
   ],
   "markets": [
-    "futures"
+    "futures",
+    "options"
   ],
   "level": "beginner",
   "sourceIds": []

@@ -82,7 +82,7 @@ export function QuestionCard({ question, grade, onFirstAttempt, onMastered, cont
           <View style={{ flexDirection: 'row', alignItems: 'center', gap: spacing.xs }}>
             <Icon icon={verdict.correct ? CircleCheck : CircleAlert} size={18} color={verdict.correct ? 'brand' : 'warning'} />
             <AppText variant="label" color={verdict.correct ? 'brand' : 'warning'}>
-              {verdict.correct ? '✓ Correct' : '✗ Not quite'}
+              {verdict.correct ? 'Correct' : 'Not quite'}
             </AppText>
           </View>
           {showWhy ? verdict.feedback.map((f) => <AppText key={f}>{stripGlossaryLinks(f)}</AppText>) : null}

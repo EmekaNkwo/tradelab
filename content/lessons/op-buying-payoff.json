@@ -1,0 +1,149 @@
+{
+  "id": "op-buying-payoff",
+  "moduleId": "options",
+  "title": "Buying calls and puts: value at expiry, breakeven and the most you can lose",
+  "level": "beginner",
+  "estimatedMinutes": 20,
+  "inOneLine": {
+    "simple": "When you buy an option, the most you can lose is the premium you paid. To make money at expiry, the price must move past the strike by more than that premium.",
+    "balanced": "At expiry a call is worth max(price − strike, 0) per unit and a put max(strike − price, 0). Buyer P/L = (value − premium) × units per contract × contracts. [[breakeven|Breakeven]]: call = strike + premium, put = strike − premium. An [[out-of-the-money]] option expires worthless."
+  },
+  "explain": {
+    "simple": "A call buyer wants the price to rise above the strike. A put buyer wants it to fall below the strike. At expiry, work out what the option is worth: for a call, the price minus the strike; for a put, the strike minus the price. If that comes out below zero, the option is worth nothing. Then take away the premium you paid. The price where you exactly get your premium back is the breakeven. Below it (for a call) or above it (for a put), you lose money even if the price moved your way. If the option is worth nothing at expiry, you lose the whole premium.",
+    "balanced": "A bought option has a known worst case: the premium paid, plus fees. That makes it different from a futures contract or a short sale. But a known loss is not a small risk. An option can expire worthless, and the whole premium is lost; holding many contracts means losing many premiums. A bought call's gain has no fixed ceiling, because the price can keep rising. A bought put's gain is largest if the underlying falls to zero: (strike − premium) × units. One exception to check: depending on the contract and the broker, an option that is in the money at expiry may be exercised automatically, and for a contract that settles by delivery the buyer of a call would then have to pay strike × units for the underlying. These sums are for expiry only. Before expiry the option's price also includes [[time-value]], which the next lessons cover."
+  },
+  "realNumbers": {
+    "assumptions": [
+      "Example option (fictional specs): one contract covers 100 units",
+      "Buy 1 call, strike 50.00, premium 2.00 USD per unit",
+      "Held to expiry; fees left out"
+    ],
+    "steps": [
+      "Premium paid = 2.00 × 100 = 200 USD. That is the most this position can lose.",
+      "Breakeven at expiry = 50.00 + 2.00 = 52.00.",
+      "Price at expiry 56.00: value = 56.00 − 50.00 = 6.00 per unit. P/L = (6.00 − 2.00) × 100 = 400 USD gain.",
+      "Price at expiry 51.00: value = 1.00 per unit. P/L = (1.00 − 2.00) × 100 = 100 USD loss. The price rose above the strike, but not past the breakeven.",
+      "Price at expiry 48.00: value = 0. The call expires worthless. P/L = (0 − 2.00) × 100 = 200 USD loss, the whole premium."
+    ]
+  },
+  "anotherExample": {
+    "assumptions": [
+      "Same fictional contract size: 100 units per contract",
+      "Buy 2 puts, strike 40.00, premium 1.50 USD per unit",
+      "Held to expiry; fees left out"
+    ],
+    "steps": [
+      "Premium paid = 1.50 × 100 × 2 = 300 USD. That is the most this position can lose.",
+      "Breakeven at expiry = 40.00 − 1.50 = 38.50.",
+      "Price at expiry 35.00: value = 40.00 − 35.00 = 5.00 per unit. P/L = (5.00 − 1.50) × 100 × 2 = 700 USD gain.",
+      "Price at expiry 42.00: value = 0. Both puts expire worthless: a 300 USD loss.",
+      "Largest possible gain, only if the price fell to 0: (40.00 − 1.50) × 100 × 2 = 7,700 USD. This is a limit, not a likely outcome."
+    ]
+  },
+  "explainSimpler": "Work out what the option is worth at expiry, never less than zero. Take away what you paid. If it is worth nothing, you lose everything you paid, and no more.",
+  "commonMistake": "Thinking you are in profit as soon as the price passes the strike. You must also cover the premium: a call only breaks even at strike + premium. Another mistake is treating 'I can only lose the premium' as 'this is safe': the whole premium is lost often enough that each trade must be sized as if it could go to zero.",
+  "quickCheck": [
+    {
+      "id": "op-buying-payoff-q1",
+      "prompt": "Fictional: you buy 1 call, strike 30.00, premium 1.20 USD per unit, 100 units per contract. At expiry the price is 33.00. What is your profit or loss?",
+      "options": [
+        {
+          "id": "a",
+          "text": "A 300 USD gain",
+          "explanation": "No: that is the value at expiry, 3.00 × 100. Take away the 120 USD premium."
+        },
+        {
+          "id": "b",
+          "text": "A 180 USD gain",
+          "explanation": "Right: value 33.00 − 30.00 = 3.00, and (3.00 − 1.20) × 100 = 180 USD."
+        },
+        {
+          "id": "c",
+          "text": "A 120 USD loss",
+          "explanation": "No: that would be the result if the call expired worthless. Here it is in the money."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "call-option",
+        "intrinsic-value"
+      ]
+    },
+    {
+      "id": "op-buying-payoff-q2",
+      "prompt": "Fictional: you buy a put, strike 60.00, premium 2.50 USD per unit. What is the breakeven price at expiry?",
+      "options": [
+        {
+          "id": "a",
+          "text": "62.50",
+          "explanation": "No: that is the call formula, strike + premium. A put needs the price to fall."
+        },
+        {
+          "id": "b",
+          "text": "60.00",
+          "explanation": "No: at 60.00 the put is worth nothing and the whole premium is lost."
+        },
+        {
+          "id": "c",
+          "text": "57.50",
+          "explanation": "Right: put breakeven = strike − premium = 60.00 − 2.50 = 57.50."
+        }
+      ],
+      "correctOptionIds": [
+        "c"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "breakeven",
+        "put-option"
+      ]
+    },
+    {
+      "id": "op-buying-payoff-q3",
+      "prompt": "You bought 1 call. What is the most you can lose if you hold it to expiry (fees aside)?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The premium you paid",
+          "explanation": "Right: if the call expires worthless you lose the premium, and nothing more."
+        },
+        {
+          "id": "b",
+          "text": "There is no fixed limit",
+          "explanation": "No: that is true for a seller of an uncovered call, not for a buyer."
+        },
+        {
+          "id": "c",
+          "text": "The strike × units",
+          "explanation": "No: a buyer never has to use the right, so the strike is not at risk."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "option-premium",
+        "call-option"
+      ]
+    }
+  ],
+  "doItNow": {
+    "kind": "calculator",
+    "instructions": "Work out this lesson's call example by hand first. Then open the option-at-expiry calculator and enter Call, Buy (hold), Contracts 1, Units per contract 100, Strike price 50, Premium per unit 2. Try Price of the underlying at expiry 56, 51 and 48, and check the profit or loss shows +400.00, −100.00 and −200.00, with a breakeven of 52.00. Then switch to Put, Contracts 2, Strike price 40, Premium per unit 1.50, try 35 and 42, and check +700.00 and −300.00."
+  },
+  "homework": "Draw a simple payoff line for the fictional call in this lesson: price at expiry along the bottom from 44 to 60, profit or loss up the side. Mark the strike, the breakeven and the most you could lose.",
+  "glossaryIds": [
+    "call-option",
+    "put-option",
+    "breakeven",
+    "option-premium",
+    "intrinsic-value",
+    "out-of-the-money",
+    "expiry"
+  ],
+  "sourceIds": []
+}

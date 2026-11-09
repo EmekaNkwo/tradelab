@@ -1,0 +1,153 @@
+{
+  "id": "op-premium-value",
+  "moduleId": "options",
+  "title": "What is in a premium: intrinsic value, time value and volatility",
+  "level": "intermediate",
+  "estimatedMinutes": 20,
+  "inOneLine": {
+    "simple": "Before expiry, an option's price has two parts: what it would be worth right now, and extra for the time left. The extra part melts away as expiry gets closer.",
+    "balanced": "Premium = [[intrinsic-value]] + [[time-value]]. Whether an option is [[in-the-money|in]], [[at-the-money|at]] or [[out-of-the-money|out of]] the money decides its intrinsic value. Time value shrinks as expiry nears ([[time-decay]]) and is usually higher when [[implied-volatility]] is higher."
+  },
+  "explain": {
+    "simple": "Intrinsic value is what the option would be worth if it expired right now. A call with the price above the strike has some; so does a put with the price below the strike. That option is 'in the money'. An option with no intrinsic value is 'out of the money', or 'at the money' if the strike equals the price. Anything a buyer pays above intrinsic value is time value: paying for the chance that the price moves further before expiry. As expiry gets closer, there is less time for that move, so time value tends to shrink. At expiry it is zero. That is why an option can lose value even when the price moves your way, if the move is small or slow.",
+    "balanced": "Time value depends on time left and on how big the market expects future swings to be. Implied volatility is that expectation, worked backwards from option prices. When it is high, premiums are usually higher, because a large move looks more likely; when it falls, premiums can drop even if the underlying price does not move. Time value is usually largest for options near the money and smaller for options far in or far out of the money. Professional pricing models exist, but this module does not use them: the numbers in this lesson are made-up quotes to show the parts of a premium, and the app's calculator only works out value at expiry."
+  },
+  "realNumbers": {
+    "assumptions": [
+      "Example options (fictional specs and fictional quotes): one contract covers 100 units",
+      "Share price 55.00 USD, some weeks before expiry",
+      "Calls quoted at: strike 50.00 for 6.50, strike 55.00 for 2.40, strike 60.00 for 0.90 USD per unit"
+    ],
+    "steps": [
+      "Strike 50 call is in the money. Intrinsic = 55.00 − 50.00 = 5.00. Time value = 6.50 − 5.00 = 1.50.",
+      "Strike 55 call is at the money. Intrinsic = 0. Time value = all of it, 2.40.",
+      "Strike 60 call is out of the money. Intrinsic = 0. Time value = 0.90.",
+      "If the share is still 55.00 at expiry, all time value is gone: the 50 call is worth 5.00, the 55 and 60 calls are worth 0.",
+      "So a buyer of the 50 call at 6.50 would lose (5.00 − 6.50) × 100 = 150 USD at expiry, even though the price did not move at all."
+    ]
+  },
+  "anotherExample": {
+    "assumptions": [
+      "Same fictional contract size: 100 units per contract",
+      "Buy 1 call, strike 60.00, for 0.90 USD per unit (90 USD) with the share at 55.00",
+      "Some days later the share is 57.00 and the call's fictional quote is 0.60"
+    ],
+    "steps": [
+      "The share moved your way, from 55.00 to 57.00.",
+      "The call is still out of the money, so it is all time value, and there is less time left.",
+      "Its value fell from 0.90 to 0.60: (0.60 − 0.90) × 100 = 30 USD down.",
+      "If the share is still 57.00 at expiry, the call is worth 0 and the whole 90 USD is lost.",
+      "If expected swings had also calmed down (lower implied volatility), the quote could have fallen further. This is a made-up case to show the mechanism, not a prediction."
+    ]
+  },
+  "explainSimpler": "Premium = what it is worth now + extra for time left. The extra fades as the date gets closer and is gone at expiry. Only the 'worth now' part is left.",
+  "commonMistake": "Thinking you only need to be right about direction. With a bought option you also need the move to be big enough and soon enough to beat the time value you paid. Another mistake is calling an option 'cheap' because its premium is small: an out-of-the-money option is all time value, and it can easily expire worthless.",
+  "quickCheck": [
+    {
+      "id": "op-premium-value-q1",
+      "prompt": "Fictional: share at 47.00. A put with strike 50.00 is quoted at 4.20 USD per unit. What are its intrinsic value and time value?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Intrinsic 0, time value 4.20",
+          "explanation": "No: that treats it like a call. A put has intrinsic value when the price is below the strike."
+        },
+        {
+          "id": "b",
+          "text": "Intrinsic 3.00, time value 1.20",
+          "explanation": "Right: 50.00 − 47.00 = 3.00 intrinsic, and 4.20 − 3.00 = 1.20 time value."
+        },
+        {
+          "id": "c",
+          "text": "Intrinsic 3.00, time value 7.20",
+          "explanation": "No: time value is premium minus intrinsic, not premium plus intrinsic."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "intermediate",
+      "glossaryIds": [
+        "intrinsic-value",
+        "time-value",
+        "put-option"
+      ]
+    },
+    {
+      "id": "op-premium-value-q2",
+      "prompt": "Fictional: share at 80.00. Which option is out of the money?",
+      "options": [
+        {
+          "id": "a",
+          "text": "A call with strike 75.00",
+          "explanation": "No: the right to buy at 75.00 when the price is 80.00 is worth 5.00, so it is in the money."
+        },
+        {
+          "id": "b",
+          "text": "A put with strike 70.00",
+          "explanation": "Right: the right to sell at 70.00 when the price is 80.00 is worth nothing now."
+        },
+        {
+          "id": "c",
+          "text": "A call with strike 80.00",
+          "explanation": "No: a strike equal to the price is at the money."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "intermediate",
+      "glossaryIds": [
+        "out-of-the-money",
+        "in-the-money",
+        "at-the-money"
+      ]
+    },
+    {
+      "id": "op-premium-value-q3",
+      "prompt": "You bought an out-of-the-money call. The share rises slowly but stays below the strike, and the call's price falls. What is the most likely reason?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Time decay: the time value is shrinking",
+          "explanation": "Right: with less time left and no intrinsic value, the premium tends to fall."
+        },
+        {
+          "id": "b",
+          "text": "The quote must be wrong",
+          "explanation": "No: an option can lose value while the price moves your way, if the move is small or slow."
+        },
+        {
+          "id": "c",
+          "text": "Calls lose value whenever the price rises",
+          "explanation": "No: a rising price helps a call. Here time decay outweighed a small move."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "intermediate",
+      "glossaryIds": [
+        "time-decay",
+        "time-value"
+      ]
+    }
+  ],
+  "doItNow": {
+    "kind": "calculator",
+    "instructions": "Use the option-at-expiry calculator to see that only intrinsic value is left at expiry. Enter Call, Buy (hold), Contracts 1, Units per contract 100, Strike price 50, Premium per unit 6.50 and Price of the underlying at expiry 55. Check that Value per unit at expiry is 5.00 and the profit or loss is −150.00: the 1.50 of time value paid is gone. Then enter Strike price 60, Premium per unit 0.90, price at expiry 57, and check −90.00. Remember the calculator cannot price an option before expiry."
+  },
+  "homework": "For a fictional share at 40.00, write down two calls and two puts, one in the money and one out of the money each, with made-up premiums. For each, split the premium into intrinsic value and time value.",
+  "glossaryIds": [
+    "intrinsic-value",
+    "time-value",
+    "time-decay",
+    "implied-volatility",
+    "in-the-money",
+    "at-the-money",
+    "out-of-the-money",
+    "volatility",
+    "option-premium"
+  ],
+  "sourceIds": []
+}

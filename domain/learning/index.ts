@@ -6,3 +6,4 @@ export * from './progress';
 export * from './scheduler';
 export * from './spacedRepetition';
 export * from './optionOrder';
+export * from './preferenceMatch';

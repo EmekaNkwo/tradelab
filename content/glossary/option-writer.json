@@ -1,0 +1,25 @@
+{
+  "id": "option-writer",
+  "term": "Option writer",
+  "aliases": [
+    "writer",
+    "option seller",
+    "writing an option",
+    "selling an option"
+  ],
+  "definition": {
+    "simple": "The person who sells an option. They receive the premium and take on the duty to buy or sell if assigned.",
+    "balanced": "The premium is the most a writer can make. A writer of an [[uncovered-option|uncovered]] call has no fixed limit on loss; a writer of a put can lose up to (strike − premium) × units if the price falls to zero. Brokers usually require approval and [[margin]] before you can write options."
+  },
+  "related": [
+    "assignment",
+    "uncovered-option",
+    "covered-call",
+    "margin"
+  ],
+  "markets": [
+    "options"
+  ],
+  "level": "intermediate",
+  "sourceIds": []
+}

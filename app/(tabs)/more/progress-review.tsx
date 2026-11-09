@@ -102,7 +102,7 @@ function Gaps({ gaps, verdict }: { readonly gaps: readonly KnowledgeGap[]; reado
             />
           ) : null}
           {g.drillKind && canOpen('/practice/drill') ? (
-            <Button label="Practise the drill" variant="secondary" onPress={() => router.push({ pathname: '/practice/drill', params: { kind: g.drillKind ?? '' } })} />
+            <Button label="Practise the drill" variant="secondary" onPress={() => router.push({ pathname: '/practice/drill', params: { kind: g.drillKind ?? '' } }, { withAnchor: true })} />
           ) : null}
         </Card>
       ))}

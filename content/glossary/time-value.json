@@ -1,0 +1,21 @@
+{
+  "id": "time-value",
+  "term": "Time value",
+  "aliases": [
+    "extrinsic value"
+  ],
+  "definition": {
+    "simple": "The part of an option's premium above its intrinsic value. It is what buyers pay for the chance the price moves further before expiry.",
+    "balanced": "Time value = premium − intrinsic value. It tends to be larger with more time left and with higher [[implied-volatility]]. It shrinks as expiry nears ([[time-decay]]) and is zero at expiry."
+  },
+  "related": [
+    "intrinsic-value",
+    "time-decay",
+    "implied-volatility"
+  ],
+  "markets": [
+    "options"
+  ],
+  "level": "intermediate",
+  "sourceIds": []
+}

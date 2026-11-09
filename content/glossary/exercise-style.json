@@ -1,0 +1,24 @@
+{
+  "id": "exercise-style",
+  "term": "Exercise style",
+  "aliases": [
+    "American style",
+    "European style",
+    "American-style",
+    "European-style"
+  ],
+  "definition": {
+    "simple": "The rule for when an option can be exercised, set in the contract's specification.",
+    "balanced": "American style allows exercise on any trading day up to expiry. European style allows it only at expiry. The names do not tell you where a contract trades, so read the specification of the exact contract."
+  },
+  "related": [
+    "exercise",
+    "assignment",
+    "expiry"
+  ],
+  "markets": [
+    "options"
+  ],
+  "level": "intermediate",
+  "sourceIds": []
+}

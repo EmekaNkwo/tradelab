@@ -2,7 +2,7 @@ import type { ContentRepository } from '../../data';
 import type { Disclosure, DisclosureTrigger } from '../../domain/models/content';
 
 /** Markets whose lessons carry their own risk disclosure (spec §3, §10.3, §10.5). */
-const MARKET_TRIGGERS: Readonly<Partial<Record<string, DisclosureTrigger>>> = { futures: 'futures', penny_stocks: 'penny_stocks' };
+const MARKET_TRIGGERS: Readonly<Partial<Record<string, DisclosureTrigger>>> = { futures: 'futures', penny_stocks: 'penny_stocks', options: 'options' };
 
 /**
  * The risk disclosures shown with a lesson: those for a module about one of

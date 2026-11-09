@@ -1,0 +1,22 @@
+{
+  "id": "strike-price",
+  "term": "Strike price",
+  "aliases": [
+    "strike",
+    "exercise price"
+  ],
+  "definition": {
+    "simple": "The fixed price at which an option lets its holder buy (call) or sell (put) the underlying.",
+    "balanced": "Options on the same underlying and expiry are listed at several strikes, and each is a separate contract with its own premium. Where the strike sits against the current price decides whether an option is [[in-the-money|in]], [[at-the-money|at]] or [[out-of-the-money|out of]] the money."
+  },
+  "related": [
+    "option",
+    "in-the-money",
+    "out-of-the-money"
+  ],
+  "markets": [
+    "options"
+  ],
+  "level": "beginner",
+  "sourceIds": []
+}

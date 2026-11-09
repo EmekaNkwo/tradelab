@@ -17,6 +17,7 @@ import type { AppError } from '../../shared/errors';
 import { ok, type Result } from '../../shared/result';
 import { toUtcIso } from '../../shared/time';
 import { useContainer, useLiveQuery, type QueryState } from '../app';
+import { filterDimensionsFor, type FilterDimension } from './labels';
 
 /** Strategy Library search (spec §16.1). */
 export function useStrategyLibrary(): {
@@ -26,6 +27,8 @@ export function useStrategyLibrary(): {
   readonly setFilters: (f: LibraryFilters) => void;
   readonly groups: readonly LibraryGroup[];
   readonly total: number;
+  /** Filters to show: market choices no strategy covers are left out. */
+  readonly dimensions: readonly FilterDimension[];
 } {
   const { content } = useContainer();
   const [query, setQuery] = useState('');
@@ -34,7 +37,8 @@ export function useStrategyLibrary(): {
     () => searchLibrary(content.strategies(), query, filters, (id) => content.trader(id)?.name ?? null),
     [content, query, filters],
   );
-  return { query, setQuery, filters, setFilters, groups, total: content.strategies().length };
+  const dimensions = useMemo(() => filterDimensionsFor(content.strategies()), [content]);
+  return { query, setQuery, filters, setFilters, groups, total: content.strategies().length, dimensions };
 }
 
 /** Read-only strategy, trader and source content. Unreviewed attributed content never gets this far (spec §15.1). */

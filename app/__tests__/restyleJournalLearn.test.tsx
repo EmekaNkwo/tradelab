@@ -264,7 +264,7 @@ describe('Learn', () => {
     await fireEvent.press(screen.getByTestId('option-q-a'));
     expect(screen.getByRole('radio', { name: 'A' })).toBeSelected();
     await fireEvent.press(screen.getByRole('button', { name: 'Check answer' }));
-    expect(screen.getByText('✓ Correct')).toBeTruthy();
+    expect(screen.getByText('Correct')).toBeTruthy();
     checkScreen(0);
   });
 });

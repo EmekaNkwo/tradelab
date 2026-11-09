@@ -1,6 +1,6 @@
 {
   "version": "2026.10.7",
-  "hash": "79a71748",
+  "hash": "2ff3d82a",
   "glossary": [
     {
       "id": "account-manager-scam",
@@ -38,6 +38,49 @@
       ],
       "markets": [],
       "level": "beginner",
+      "sourceIds": []
+    },
+    {
+      "id": "assignment",
+      "term": "Assignment",
+      "aliases": [
+        "assigned",
+        "assignment notice"
+      ],
+      "definition": {
+        "simple": "When an option holder exercises, a seller of that option is chosen to carry out the deal. That seller has been assigned.",
+        "balanced": "An assigned call seller must sell the underlying at the strike; an assigned put seller must buy it at the strike. With an American-style option, assignment can come before expiry. The seller does not choose when."
+      },
+      "related": [
+        "exercise",
+        "option-writer",
+        "exercise-style"
+      ],
+      "markets": [
+        "options"
+      ],
+      "level": "intermediate",
+      "sourceIds": []
+    },
+    {
+      "id": "at-the-money",
+      "term": "At the money",
+      "aliases": [
+        "ATM"
+      ],
+      "definition": {
+        "simple": "An option whose strike price is equal, or very close, to the current price of the underlying.",
+        "balanced": "It has no [[intrinsic-value]], so its premium is all [[time-value]]. At expiry an option exactly at the money is worth nothing."
+      },
+      "related": [
+        "in-the-money",
+        "out-of-the-money",
+        "time-value"
+      ],
+      "markets": [
+        "options"
+      ],
+      "level": "intermediate",
       "sourceIds": []
     },
     {
@@ -226,6 +269,27 @@
       "sourceIds": []
     },
     {
+      "id": "breakeven",
+      "term": "Breakeven",
+      "aliases": [
+        "break-even",
+        "breakeven price"
+      ],
+      "definition": {
+        "simple": "The price where a position neither gains nor loses.",
+        "balanced": "For an option held to expiry: call breakeven = strike + premium; put breakeven = strike − premium. Fees move it further away."
+      },
+      "related": [
+        "option-premium",
+        "strike-price"
+      ],
+      "markets": [
+        "options"
+      ],
+      "level": "beginner",
+      "sourceIds": []
+    },
+    {
       "id": "breakout",
       "term": "Breakout",
       "aliases": [
@@ -290,6 +354,29 @@
         "futures"
       ],
       "level": "intermediate",
+      "sourceIds": []
+    },
+    {
+      "id": "call-option",
+      "term": "Call option",
+      "aliases": [
+        "call",
+        "calls"
+      ],
+      "definition": {
+        "simple": "A right to buy the underlying at the strike price. The buyer pays a premium for it.",
+        "balanced": "At expiry a call is worth price − strike per unit if the price is above the strike, and nothing otherwise. A call buyer can lose at most the premium paid. A call seller receives the premium and must sell at the strike if [[assignment|assigned]]; an [[uncovered-option|uncovered]] sold call has no fixed limit on loss."
+      },
+      "related": [
+        "option",
+        "put-option",
+        "strike-price",
+        "option-premium"
+      ],
+      "markets": [
+        "options"
+      ],
+      "level": "beginner",
       "sourceIds": []
     },
     {
@@ -378,6 +465,25 @@
         "stocks"
       ],
       "level": "beginner",
+      "sourceIds": []
+    },
+    {
+      "id": "cash-secured-put",
+      "term": "Cash-secured put",
+      "aliases": [],
+      "definition": {
+        "simple": "Selling a put option while setting aside enough cash to buy the underlying at the strike if assigned.",
+        "balanced": "The cash set aside is strike × units per contract × contracts. It means the purchase can be paid for; it does not reduce the loss. If the price falls far below the strike, the seller still buys at the strike."
+      },
+      "related": [
+        "put-option",
+        "option-writer",
+        "assignment"
+      ],
+      "markets": [
+        "options"
+      ],
+      "level": "intermediate",
       "sourceIds": []
     },
     {
@@ -619,6 +725,25 @@
         "currency-pair"
       ],
       "markets": [],
+      "level": "intermediate",
+      "sourceIds": []
+    },
+    {
+      "id": "covered-call",
+      "term": "Covered call",
+      "aliases": [],
+      "definition": {
+        "simple": "Selling a call option on units of the underlying you already own.",
+        "balanced": "If the call is exercised, the owned units are delivered at the strike, so the loss on the call is offset by the units. In return for the premium, the seller gives up gains above the strike and still carries nearly all the risk of the underlying falling; the premium cushions a fall only slightly."
+      },
+      "related": [
+        "uncovered-option",
+        "option-writer",
+        "call-option"
+      ],
+      "markets": [
+        "options"
+      ],
       "level": "intermediate",
       "sourceIds": []
     },
@@ -899,6 +1024,52 @@
       "sourceIds": []
     },
     {
+      "id": "exercise-style",
+      "term": "Exercise style",
+      "aliases": [
+        "American style",
+        "European style",
+        "American-style",
+        "European-style"
+      ],
+      "definition": {
+        "simple": "The rule for when an option can be exercised, set in the contract's specification.",
+        "balanced": "American style allows exercise on any trading day up to expiry. European style allows it only at expiry. The names do not tell you where a contract trades, so read the specification of the exact contract."
+      },
+      "related": [
+        "exercise",
+        "assignment",
+        "expiry"
+      ],
+      "markets": [
+        "options"
+      ],
+      "level": "intermediate",
+      "sourceIds": []
+    },
+    {
+      "id": "exercise",
+      "term": "Exercise",
+      "aliases": [
+        "exercised",
+        "exercising"
+      ],
+      "definition": {
+        "simple": "Using the right an option gives: buying the underlying at the strike (call) or selling it at the strike (put).",
+        "balanced": "Only the holder decides whether to exercise. When it happens, a seller is given the obligation through [[assignment]]. When exercise is allowed is set by the [[exercise-style]], and some contracts settle in cash instead of delivering the underlying. Check the exact contract."
+      },
+      "related": [
+        "assignment",
+        "exercise-style",
+        "option"
+      ],
+      "markets": [
+        "options"
+      ],
+      "level": "beginner",
+      "sourceIds": []
+    },
+    {
       "id": "expectancy",
       "term": "Expectancy",
       "aliases": [
@@ -929,8 +1100,8 @@
         "last trading day"
       ],
       "definition": {
-        "simple": "The date a futures contract stops trading and is settled.",
-        "balanced": "After expiry the contract no longer exists. Before it, a holder can close the position, [[rollover|roll]] it to a later month, or let it go to [[physical-settlement|physical]] or [[cash-settlement|cash]] settlement. The dates are set in each contract's specification and differ between contracts."
+        "simple": "The date a futures contract or an option stops trading and is settled.",
+        "balanced": "After expiry the contract no longer exists. Before it, a holder can close the position, [[rollover|roll]] it to a later month, or let it go to [[physical-settlement|physical]] or [[cash-settlement|cash]] settlement. The dates are set in each contract's specification and differ between contracts. Depending on the contract and the broker, an option that is in the money at expiry may be exercised automatically, so check the rules. An option that is out of the money then expires worthless."
       },
       "related": [
         "contract-month",
@@ -939,7 +1110,8 @@
         "cash-settlement"
       ],
       "markets": [
-        "futures"
+        "futures",
+        "options"
       ],
       "level": "beginner",
       "sourceIds": []
@@ -1254,6 +1426,27 @@
       "sourceIds": []
     },
     {
+      "id": "implied-volatility",
+      "term": "Implied volatility",
+      "aliases": [
+        "IV"
+      ],
+      "definition": {
+        "simple": "How big future price swings are expected to be, worked backwards from option prices.",
+        "balanced": "Higher implied volatility usually goes with higher premiums, because bigger swings make a large move more likely. It is an estimate drawn from prices, not a forecast that will come true, and it can fall quickly, lowering premiums even when the underlying price does not move."
+      },
+      "related": [
+        "volatility",
+        "time-value",
+        "option-premium"
+      ],
+      "markets": [
+        "options"
+      ],
+      "level": "intermediate",
+      "sourceIds": []
+    },
+    {
       "id": "in-sample",
       "term": "In-sample",
       "aliases": [
@@ -1273,6 +1466,27 @@
       ],
       "markets": [],
       "level": "advanced",
+      "sourceIds": []
+    },
+    {
+      "id": "in-the-money",
+      "term": "In the money",
+      "aliases": [
+        "ITM"
+      ],
+      "definition": {
+        "simple": "An option that would be worth something if it expired now: a call with the price above the strike, or a put with the price below it.",
+        "balanced": "The amount it is in the money per unit is its [[intrinsic-value]]. Being in the money does not mean the buyer is in profit: the premium paid has to be covered first."
+      },
+      "related": [
+        "at-the-money",
+        "out-of-the-money",
+        "intrinsic-value"
+      ],
+      "markets": [
+        "options"
+      ],
+      "level": "intermediate",
       "sourceIds": []
     },
     {
@@ -1428,6 +1642,25 @@
       ],
       "markets": [],
       "level": "beginner",
+      "sourceIds": []
+    },
+    {
+      "id": "intrinsic-value",
+      "term": "Intrinsic value",
+      "aliases": [],
+      "definition": {
+        "simple": "What an option would be worth if it expired right now. It is never below zero.",
+        "balanced": "Call: price − strike, or 0 if that is negative. Put: strike − price, or 0 if that is negative. At expiry an option is worth only its intrinsic value."
+      },
+      "related": [
+        "time-value",
+        "option-premium",
+        "in-the-money"
+      ],
+      "markets": [
+        "options"
+      ],
+      "level": "intermediate",
       "sourceIds": []
     },
     {
@@ -2061,6 +2294,79 @@
       "sourceIds": []
     },
     {
+      "id": "option-premium",
+      "term": "Option premium",
+      "aliases": [
+        "premium",
+        "option price"
+      ],
+      "definition": {
+        "simple": "The price of an option. The buyer pays it and the seller receives it.",
+        "balanced": "It is usually quoted per unit of the [[underlying]], so the money for one contract is premium × units per contract. Before expiry the premium is [[intrinsic-value]] plus [[time-value]]. For a buyer it is the most that can be lost; for a seller it is the most that can be made."
+      },
+      "related": [
+        "option",
+        "intrinsic-value",
+        "time-value",
+        "breakeven"
+      ],
+      "markets": [
+        "options"
+      ],
+      "level": "beginner",
+      "sourceIds": []
+    },
+    {
+      "id": "option-writer",
+      "term": "Option writer",
+      "aliases": [
+        "writer",
+        "option seller",
+        "writing an option",
+        "selling an option"
+      ],
+      "definition": {
+        "simple": "The person who sells an option. They receive the premium and take on the duty to buy or sell if assigned.",
+        "balanced": "The premium is the most a writer can make. A writer of an [[uncovered-option|uncovered]] call has no fixed limit on loss; a writer of a put can lose up to (strike − premium) × units if the price falls to zero. Brokers usually require approval and [[margin]] before you can write options."
+      },
+      "related": [
+        "assignment",
+        "uncovered-option",
+        "covered-call",
+        "margin"
+      ],
+      "markets": [
+        "options"
+      ],
+      "level": "intermediate",
+      "sourceIds": []
+    },
+    {
+      "id": "option",
+      "term": "Option",
+      "aliases": [
+        "options",
+        "option contract"
+      ],
+      "definition": {
+        "simple": "A contract that gives its buyer a right, but not a duty, to buy or sell something at a set price by or on a set date. The seller takes on the duty.",
+        "balanced": "The buyer pays a [[option-premium|premium]] for the right. A [[call-option]] is a right to buy; a [[put-option]] is a right to sell, at the [[strike-price]], until or at [[expiry]]. The seller, or [[option-writer|writer]], must deliver, or pay the cash difference, if the buyer [[exercise|exercises]]. Each contract's specification sets the [[underlying]], how many units it covers, the [[exercise-style]] and how it settles."
+      },
+      "related": [
+        "call-option",
+        "put-option",
+        "strike-price",
+        "option-premium",
+        "expiry",
+        "option-writer"
+      ],
+      "markets": [
+        "options"
+      ],
+      "level": "beginner",
+      "sourceIds": []
+    },
+    {
       "id": "order-book",
       "term": "Order book",
       "aliases": [
@@ -2131,6 +2437,27 @@
       ],
       "markets": [],
       "level": "advanced",
+      "sourceIds": []
+    },
+    {
+      "id": "out-of-the-money",
+      "term": "Out of the money",
+      "aliases": [
+        "OTM"
+      ],
+      "definition": {
+        "simple": "An option that would be worth nothing if it expired now: a call with the price below the strike, or a put with the price above it.",
+        "balanced": "Its premium is all [[time-value]]. If it is still out of the money at expiry it expires worthless and the buyer loses the whole premium."
+      },
+      "related": [
+        "in-the-money",
+        "at-the-money",
+        "time-value"
+      ],
+      "markets": [
+        "options"
+      ],
+      "level": "intermediate",
       "sourceIds": []
     },
     {
@@ -2541,6 +2868,29 @@
         "liquidity"
       ],
       "markets": [],
+      "level": "beginner",
+      "sourceIds": []
+    },
+    {
+      "id": "put-option",
+      "term": "Put option",
+      "aliases": [
+        "put",
+        "puts"
+      ],
+      "definition": {
+        "simple": "A right to sell the underlying at the strike price. The buyer pays a premium for it.",
+        "balanced": "At expiry a put is worth strike − price per unit if the price is below the strike, and nothing otherwise. A put buyer can lose at most the premium paid. A put seller receives the premium and must buy at the strike if [[assignment|assigned]], so the seller's largest loss comes if the price falls to zero."
+      },
+      "related": [
+        "option",
+        "call-option",
+        "strike-price",
+        "cash-secured-put"
+      ],
+      "markets": [
+        "options"
+      ],
       "level": "beginner",
       "sourceIds": []
     },
@@ -3221,6 +3571,28 @@
       "sourceIds": []
     },
     {
+      "id": "strike-price",
+      "term": "Strike price",
+      "aliases": [
+        "strike",
+        "exercise price"
+      ],
+      "definition": {
+        "simple": "The fixed price at which an option lets its holder buy (call) or sell (put) the underlying.",
+        "balanced": "Options on the same underlying and expiry are listed at several strikes, and each is a separate contract with its own premium. Where the strike sits against the current price decides whether an option is [[in-the-money|in]], [[at-the-money|at]] or [[out-of-the-money|out of]] the money."
+      },
+      "related": [
+        "option",
+        "in-the-money",
+        "out-of-the-money"
+      ],
+      "markets": [
+        "options"
+      ],
+      "level": "beginner",
+      "sourceIds": []
+    },
+    {
       "id": "supply-shock",
       "term": "Supply shock",
       "aliases": [
@@ -3460,6 +3832,45 @@
       "sourceIds": []
     },
     {
+      "id": "time-decay",
+      "term": "Time decay",
+      "aliases": [],
+      "definition": {
+        "simple": "The way an option's time value tends to shrink as expiry gets closer, if nothing else changes.",
+        "balanced": "It works against option buyers and for option sellers. It is why an option can lose value even when the underlying moves the right way, if the move is too small or too slow. At expiry, time value is gone."
+      },
+      "related": [
+        "time-value",
+        "expiry"
+      ],
+      "markets": [
+        "options"
+      ],
+      "level": "intermediate",
+      "sourceIds": []
+    },
+    {
+      "id": "time-value",
+      "term": "Time value",
+      "aliases": [
+        "extrinsic value"
+      ],
+      "definition": {
+        "simple": "The part of an option's premium above its intrinsic value. It is what buyers pay for the chance the price moves further before expiry.",
+        "balanced": "Time value = premium − intrinsic value. It tends to be larger with more time left and with higher [[implied-volatility]]. It shrinks as expiry nears ([[time-decay]]) and is zero at expiry."
+      },
+      "related": [
+        "intrinsic-value",
+        "time-decay",
+        "implied-volatility"
+      ],
+      "markets": [
+        "options"
+      ],
+      "level": "intermediate",
+      "sourceIds": []
+    },
+    {
       "id": "timeframe",
       "term": "Timeframe",
       "aliases": [
@@ -3591,6 +4002,50 @@
         "timeframe"
       ],
       "markets": [],
+      "level": "beginner",
+      "sourceIds": []
+    },
+    {
+      "id": "uncovered-option",
+      "term": "Uncovered option",
+      "aliases": [
+        "naked option",
+        "naked call",
+        "uncovered call"
+      ],
+      "definition": {
+        "simple": "A sold option without the holding or cash that would cover the obligation if assigned.",
+        "balanced": "An uncovered sold call has no fixed limit on loss, because the price of the underlying can keep rising. Losses can be many times the premium received. Brokers usually require special approval and margin for it."
+      },
+      "related": [
+        "covered-call",
+        "option-writer",
+        "margin"
+      ],
+      "markets": [
+        "options"
+      ],
+      "level": "intermediate",
+      "sourceIds": []
+    },
+    {
+      "id": "underlying",
+      "term": "Underlying",
+      "aliases": [
+        "underlying asset",
+        "underlying instrument"
+      ],
+      "definition": {
+        "simple": "The thing an option or other derivative is based on, such as a share, an index or a futures contract.",
+        "balanced": "An option's value at expiry depends only on the underlying's price against the [[strike-price]]. The contract specification names the underlying and how many units of it one contract covers."
+      },
+      "related": [
+        "option",
+        "strike-price"
+      ],
+      "markets": [
+        "options"
+      ],
       "level": "beginner",
       "sourceIds": []
     },
@@ -3828,6 +4283,19 @@
       ],
       "triggers": [
         "leverage"
+      ],
+      "statistics": []
+    },
+    {
+      "id": "options-risk",
+      "version": 1,
+      "title": "Options can lose the whole premium, or far more",
+      "body": [
+        "A bought [[option]] can expire worthless, and the whole [[option-premium|premium]] paid is lost. A sold option can lose far more than the premium received, and an [[uncovered-option|uncovered]] sold call has no fixed limit on loss.",
+        "Options are complex, and contract specifications differ. Always check the specification of the exact contract. In this app, options are for study in simulation only."
+      ],
+      "triggers": [
+        "options"
       ],
       "statistics": []
     },
@@ -6745,6 +7213,313 @@
           "glossaryIds": [
             "risk-per-trade",
             "position-sizing"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "options-checkpoint",
+      "title": "Checkpoint: options, premium and expiry",
+      "passMark": 0.8,
+      "questions": [
+        {
+          "id": "options-checkpoint-q1",
+          "prompt": "What does the buyer of a call option hold?",
+          "options": [
+            {
+              "id": "a",
+              "text": "The duty to buy the underlying at the strike",
+              "explanation": "No: the buyer has a right, not a duty. The seller carries the obligation."
+            },
+            {
+              "id": "b",
+              "text": "The right to buy the underlying at the strike, until or at expiry",
+              "explanation": "Right: a call is a right to buy at the strike; the buyer can choose not to use it."
+            },
+            {
+              "id": "c",
+              "text": "The right to sell the underlying at the strike",
+              "explanation": "No: that is a put."
+            }
+          ],
+          "correctOptionIds": [
+            "b"
+          ],
+          "level": "beginner",
+          "glossaryIds": [
+            "call-option",
+            "strike-price"
+          ]
+        },
+        {
+          "id": "options-checkpoint-q2",
+          "prompt": "Fictional: you buy 2 puts, strike 25.00, premium 1.00 USD per unit, 100 units per contract. At expiry the price is 22.00. What is your profit or loss?",
+          "options": [
+            {
+              "id": "a",
+              "text": "A 600 USD gain",
+              "explanation": "No: that is the value at expiry, 3.00 × 100 × 2. Take away the 200 USD premium paid."
+            },
+            {
+              "id": "b",
+              "text": "A 200 USD gain",
+              "explanation": "No: that is the result for one contract. You bought 2."
+            },
+            {
+              "id": "c",
+              "text": "A 400 USD gain",
+              "explanation": "Right: value 25.00 − 22.00 = 3.00, and (3.00 − 1.00) × 100 × 2 = 400 USD."
+            },
+            {
+              "id": "d",
+              "text": "A 400 USD loss",
+              "explanation": "No: the price fell below the strike, which helps a put buyer."
+            }
+          ],
+          "correctOptionIds": [
+            "c"
+          ],
+          "level": "beginner",
+          "glossaryIds": [
+            "put-option",
+            "intrinsic-value"
+          ]
+        },
+        {
+          "id": "options-checkpoint-q3",
+          "prompt": "Fictional: you buy a call, strike 80.00, premium 3.50 USD per unit. What is the breakeven price at expiry?",
+          "options": [
+            {
+              "id": "a",
+              "text": "83.50",
+              "explanation": "Right: call breakeven = strike + premium = 80.00 + 3.50."
+            },
+            {
+              "id": "b",
+              "text": "76.50",
+              "explanation": "No: that is the put formula, strike − premium."
+            },
+            {
+              "id": "c",
+              "text": "80.00",
+              "explanation": "No: at the strike the call is worth nothing and the premium is lost."
+            }
+          ],
+          "correctOptionIds": [
+            "a"
+          ],
+          "level": "beginner",
+          "glossaryIds": [
+            "breakeven"
+          ]
+        },
+        {
+          "id": "options-checkpoint-q4",
+          "prompt": "Fictional: you buy 3 calls at a premium of 0.70 USD per unit, 100 units per contract. What is the most you can lose, fees aside?",
+          "options": [
+            {
+              "id": "a",
+              "text": "70 USD",
+              "explanation": "No: that is the premium for one contract. You bought 3."
+            },
+            {
+              "id": "b",
+              "text": "210 USD",
+              "explanation": "Right: 0.70 × 100 × 3 = 210 USD, the whole premium paid."
+            },
+            {
+              "id": "c",
+              "text": "There is no fixed limit",
+              "explanation": "No: a bought option can lose at most its premium."
+            }
+          ],
+          "correctOptionIds": [
+            "b"
+          ],
+          "level": "beginner",
+          "glossaryIds": [
+            "option-premium"
+          ]
+        },
+        {
+          "id": "options-checkpoint-q5",
+          "prompt": "You sell a call without owning the units it covers. Which statement is true?",
+          "options": [
+            {
+              "id": "a",
+              "text": "The most you can lose is the premium received",
+              "explanation": "No: the premium is the most you can make."
+            },
+            {
+              "id": "b",
+              "text": "The loss is capped at the strike × units",
+              "explanation": "No: that is close to a sold put's worst case, not a sold call's."
+            },
+            {
+              "id": "c",
+              "text": "The loss has no fixed limit, because the price can keep rising",
+              "explanation": "Right: an uncovered sold call loses more for every rise above strike + premium."
+            }
+          ],
+          "correctOptionIds": [
+            "c"
+          ],
+          "level": "intermediate",
+          "glossaryIds": [
+            "uncovered-option",
+            "option-writer"
+          ]
+        },
+        {
+          "id": "options-checkpoint-q6",
+          "prompt": "Fictional: you sell 1 put, strike 45.00, premium 2.00 USD per unit, 100 units per contract. At expiry the price is 41.00. What is your profit or loss?",
+          "options": [
+            {
+              "id": "a",
+              "text": "A 200 USD gain",
+              "explanation": "No: you keep the premium only if the put expires worthless. It ended 4.00 in the money."
+            },
+            {
+              "id": "b",
+              "text": "A 400 USD loss",
+              "explanation": "No: that forgets the 200 USD premium you received."
+            },
+            {
+              "id": "c",
+              "text": "A 4,300 USD loss",
+              "explanation": "No: that is the worst case if the price fell to 0, (45.00 − 2.00) × 100."
+            },
+            {
+              "id": "d",
+              "text": "A 200 USD loss",
+              "explanation": "Right: the put is worth 4.00, so −(4.00 − 2.00) × 100 = −200 USD."
+            }
+          ],
+          "correctOptionIds": [
+            "d"
+          ],
+          "level": "intermediate",
+          "glossaryIds": [
+            "put-option",
+            "assignment"
+          ]
+        },
+        {
+          "id": "options-checkpoint-q7",
+          "prompt": "Fictional: share at 62.00. A call with strike 60.00 is quoted at 3.10 USD per unit. What are its intrinsic value and time value?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Intrinsic 2.00, time value 1.10",
+              "explanation": "Right: 62.00 − 60.00 = 2.00, and 3.10 − 2.00 = 1.10."
+            },
+            {
+              "id": "b",
+              "text": "Intrinsic 3.10, time value 0",
+              "explanation": "No: the whole premium is intrinsic only at expiry."
+            },
+            {
+              "id": "c",
+              "text": "Intrinsic 0, time value 3.10",
+              "explanation": "No: the price is above the strike, so the call is in the money."
+            }
+          ],
+          "correctOptionIds": [
+            "a"
+          ],
+          "level": "intermediate",
+          "glossaryIds": [
+            "intrinsic-value",
+            "time-value",
+            "in-the-money"
+          ]
+        },
+        {
+          "id": "options-checkpoint-q8",
+          "prompt": "If nothing else changes, what tends to happen to an option's time value as expiry gets closer?",
+          "options": [
+            {
+              "id": "a",
+              "text": "It grows",
+              "explanation": "No: less time left means less chance of a further move."
+            },
+            {
+              "id": "b",
+              "text": "It shrinks, and is zero at expiry",
+              "explanation": "Right: that is time decay. At expiry only intrinsic value remains."
+            },
+            {
+              "id": "c",
+              "text": "It stays the same until the last day",
+              "explanation": "No: time value tends to shrink over the option's life, not all at once."
+            }
+          ],
+          "correctOptionIds": [
+            "b"
+          ],
+          "level": "intermediate",
+          "glossaryIds": [
+            "time-decay",
+            "time-value"
+          ]
+        },
+        {
+          "id": "options-checkpoint-q9",
+          "prompt": "Implied volatility for an option rises while the underlying price stays the same. What usually happens to the premium?",
+          "options": [
+            {
+              "id": "a",
+              "text": "It usually rises",
+              "explanation": "Right: bigger expected swings make a large move more likely, so premiums are usually higher."
+            },
+            {
+              "id": "b",
+              "text": "It falls to its intrinsic value",
+              "explanation": "No: only expiry removes all time value."
+            },
+            {
+              "id": "c",
+              "text": "Nothing: only the underlying price matters",
+              "explanation": "No: before expiry, expected volatility and time left also affect the premium."
+            }
+          ],
+          "correctOptionIds": [
+            "a"
+          ],
+          "level": "intermediate",
+          "glossaryIds": [
+            "implied-volatility",
+            "option-premium"
+          ]
+        },
+        {
+          "id": "options-checkpoint-q10",
+          "prompt": "Before studying a real option, which set of items should you read in its specification?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Last month's return and the most popular strike",
+              "explanation": "No: neither is part of the contract's specification."
+            },
+            {
+              "id": "b",
+              "text": "The premium only",
+              "explanation": "No: the premium alone does not tell you what the contract covers or how it ends."
+            },
+            {
+              "id": "c",
+              "text": "Underlying, units per contract, call or put, strike, expiry date, exercise style and settlement",
+              "explanation": "Right: these define what one contract is and how it ends. Check the exact contract each time."
+            }
+          ],
+          "correctOptionIds": [
+            "c"
+          ],
+          "level": "beginner",
+          "glossaryIds": [
+            "exercise-style",
+            "underlying",
+            "expiry"
           ]
         }
       ]
@@ -15865,6 +16640,764 @@
         "calendar-spread",
         "penny-stock",
         "commodity"
+      ],
+      "sourceIds": []
+    },
+    {
+      "id": "op-buying-payoff",
+      "moduleId": "options",
+      "title": "Buying calls and puts: value at expiry, breakeven and the most you can lose",
+      "level": "beginner",
+      "estimatedMinutes": 20,
+      "inOneLine": {
+        "simple": "When you buy an option, the most you can lose is the premium you paid. To make money at expiry, the price must move past the strike by more than that premium.",
+        "balanced": "At expiry a call is worth max(price − strike, 0) per unit and a put max(strike − price, 0). Buyer P/L = (value − premium) × units per contract × contracts. [[breakeven|Breakeven]]: call = strike + premium, put = strike − premium. An [[out-of-the-money]] option expires worthless."
+      },
+      "explain": {
+        "simple": "A call buyer wants the price to rise above the strike. A put buyer wants it to fall below the strike. At expiry, work out what the option is worth: for a call, the price minus the strike; for a put, the strike minus the price. If that comes out below zero, the option is worth nothing. Then take away the premium you paid. The price where you exactly get your premium back is the breakeven. Below it (for a call) or above it (for a put), you lose money even if the price moved your way. If the option is worth nothing at expiry, you lose the whole premium.",
+        "balanced": "A bought option has a known worst case: the premium paid, plus fees. That makes it different from a futures contract or a short sale. But a known loss is not a small risk. An option can expire worthless, and the whole premium is lost; holding many contracts means losing many premiums. A bought call's gain has no fixed ceiling, because the price can keep rising. A bought put's gain is largest if the underlying falls to zero: (strike − premium) × units. One exception to check: depending on the contract and the broker, an option that is in the money at expiry may be exercised automatically, and for a contract that settles by delivery the buyer of a call would then have to pay strike × units for the underlying. These sums are for expiry only. Before expiry the option's price also includes [[time-value]], which the next lessons cover."
+      },
+      "realNumbers": {
+        "assumptions": [
+          "Example option (fictional specs): one contract covers 100 units",
+          "Buy 1 call, strike 50.00, premium 2.00 USD per unit",
+          "Held to expiry; fees left out"
+        ],
+        "steps": [
+          "Premium paid = 2.00 × 100 = 200 USD. That is the most this position can lose.",
+          "Breakeven at expiry = 50.00 + 2.00 = 52.00.",
+          "Price at expiry 56.00: value = 56.00 − 50.00 = 6.00 per unit. P/L = (6.00 − 2.00) × 100 = 400 USD gain.",
+          "Price at expiry 51.00: value = 1.00 per unit. P/L = (1.00 − 2.00) × 100 = 100 USD loss. The price rose above the strike, but not past the breakeven.",
+          "Price at expiry 48.00: value = 0. The call expires worthless. P/L = (0 − 2.00) × 100 = 200 USD loss, the whole premium."
+        ]
+      },
+      "anotherExample": {
+        "assumptions": [
+          "Same fictional contract size: 100 units per contract",
+          "Buy 2 puts, strike 40.00, premium 1.50 USD per unit",
+          "Held to expiry; fees left out"
+        ],
+        "steps": [
+          "Premium paid = 1.50 × 100 × 2 = 300 USD. That is the most this position can lose.",
+          "Breakeven at expiry = 40.00 − 1.50 = 38.50.",
+          "Price at expiry 35.00: value = 40.00 − 35.00 = 5.00 per unit. P/L = (5.00 − 1.50) × 100 × 2 = 700 USD gain.",
+          "Price at expiry 42.00: value = 0. Both puts expire worthless: a 300 USD loss.",
+          "Largest possible gain, only if the price fell to 0: (40.00 − 1.50) × 100 × 2 = 7,700 USD. This is a limit, not a likely outcome."
+        ]
+      },
+      "explainSimpler": "Work out what the option is worth at expiry, never less than zero. Take away what you paid. If it is worth nothing, you lose everything you paid, and no more.",
+      "commonMistake": "Thinking you are in profit as soon as the price passes the strike. You must also cover the premium: a call only breaks even at strike + premium. Another mistake is treating 'I can only lose the premium' as 'this is safe': the whole premium is lost often enough that each trade must be sized as if it could go to zero.",
+      "quickCheck": [
+        {
+          "id": "op-buying-payoff-q1",
+          "prompt": "Fictional: you buy 1 call, strike 30.00, premium 1.20 USD per unit, 100 units per contract. At expiry the price is 33.00. What is your profit or loss?",
+          "options": [
+            {
+              "id": "a",
+              "text": "A 300 USD gain",
+              "explanation": "No: that is the value at expiry, 3.00 × 100. Take away the 120 USD premium."
+            },
+            {
+              "id": "b",
+              "text": "A 180 USD gain",
+              "explanation": "Right: value 33.00 − 30.00 = 3.00, and (3.00 − 1.20) × 100 = 180 USD."
+            },
+            {
+              "id": "c",
+              "text": "A 120 USD loss",
+              "explanation": "No: that would be the result if the call expired worthless. Here it is in the money."
+            }
+          ],
+          "correctOptionIds": [
+            "b"
+          ],
+          "level": "beginner",
+          "glossaryIds": [
+            "call-option",
+            "intrinsic-value"
+          ]
+        },
+        {
+          "id": "op-buying-payoff-q2",
+          "prompt": "Fictional: you buy a put, strike 60.00, premium 2.50 USD per unit. What is the breakeven price at expiry?",
+          "options": [
+            {
+              "id": "a",
+              "text": "62.50",
+              "explanation": "No: that is the call formula, strike + premium. A put needs the price to fall."
+            },
+            {
+              "id": "b",
+              "text": "60.00",
+              "explanation": "No: at 60.00 the put is worth nothing and the whole premium is lost."
+            },
+            {
+              "id": "c",
+              "text": "57.50",
+              "explanation": "Right: put breakeven = strike − premium = 60.00 − 2.50 = 57.50."
+            }
+          ],
+          "correctOptionIds": [
+            "c"
+          ],
+          "level": "beginner",
+          "glossaryIds": [
+            "breakeven",
+            "put-option"
+          ]
+        },
+        {
+          "id": "op-buying-payoff-q3",
+          "prompt": "You bought 1 call. What is the most you can lose if you hold it to expiry (fees aside)?",
+          "options": [
+            {
+              "id": "a",
+              "text": "The premium you paid",
+              "explanation": "Right: if the call expires worthless you lose the premium, and nothing more."
+            },
+            {
+              "id": "b",
+              "text": "There is no fixed limit",
+              "explanation": "No: that is true for a seller of an uncovered call, not for a buyer."
+            },
+            {
+              "id": "c",
+              "text": "The strike × units",
+              "explanation": "No: a buyer never has to use the right, so the strike is not at risk."
+            }
+          ],
+          "correctOptionIds": [
+            "a"
+          ],
+          "level": "beginner",
+          "glossaryIds": [
+            "option-premium",
+            "call-option"
+          ]
+        }
+      ],
+      "doItNow": {
+        "kind": "calculator",
+        "instructions": "Work out this lesson's call example by hand first. Then open the option-at-expiry calculator and enter Call, Buy (hold), Contracts 1, Units per contract 100, Strike price 50, Premium per unit 2. Try Price of the underlying at expiry 56, 51 and 48, and check the profit or loss shows +400.00, −100.00 and −200.00, with a breakeven of 52.00. Then switch to Put, Contracts 2, Strike price 40, Premium per unit 1.50, try 35 and 42, and check +700.00 and −300.00."
+      },
+      "homework": "Draw a simple payoff line for the fictional call in this lesson: price at expiry along the bottom from 44 to 60, profit or loss up the side. Mark the strike, the breakeven and the most you could lose.",
+      "glossaryIds": [
+        "call-option",
+        "put-option",
+        "breakeven",
+        "option-premium",
+        "intrinsic-value",
+        "out-of-the-money",
+        "expiry"
+      ],
+      "sourceIds": []
+    },
+    {
+      "id": "op-calls-puts-basics",
+      "moduleId": "options",
+      "title": "What an option is: calls, puts, strike, premium and expiry",
+      "level": "beginner",
+      "estimatedMinutes": 15,
+      "inOneLine": {
+        "simple": "An option gives its buyer the right, but not the duty, to buy or sell something at a set price before or on a set date. The buyer pays a price for that right.",
+        "balanced": "A [[call-option|call]] is a right to buy and a [[put-option|put]] is a right to sell the [[underlying]] at the [[strike-price]], until or at [[expiry]]. The buyer pays the [[option-premium|premium]]; the seller, or [[option-writer|writer]], receives it and takes on the obligation."
+      },
+      "explain": {
+        "simple": "An option is a contract between two sides. The buyer pays a price, called the premium, and gets a choice. With a call, the choice is to buy the underlying (the share or other thing the option is based on) at a fixed price, called the strike. With a put, the choice is to sell at the strike. The choice lasts until a set date, called expiry. The buyer never has to use it. The seller is different: the seller keeps the premium but must carry out the deal if the buyer uses the right. Using the right is called exercise. When that happens, a seller is picked to fulfil it, which is called assignment.",
+        "balanced": "Exchange-listed options are standardised contracts, and each one has a specification. It names the underlying, how many units one contract covers, the strikes and expiry dates on offer, the [[exercise-style]] and how the contract settles. American style can be [[exercise|exercised]] on any trading day up to expiry; European style only at expiry. Some options end with the underlying changing hands, others settle in cash. The premium is usually quoted per unit of the underlying, so the money for one contract is premium × units per contract. In this module one contract covers 100 units, but only because the examples are fictional. Never assume a contract size: check the exact contract's specification."
+      },
+      "realNumbers": {
+        "assumptions": [
+          "Example option (fictional specs): one contract covers 100 units of a fictional share",
+          "Share price today 50.00 USD",
+          "Call option: strike 52.00, premium 1.50 USD per unit",
+          "Fees left out"
+        ],
+        "steps": [
+          "Premium for 1 contract = 1.50 × 100 = 150 USD. The buyer pays it; the seller receives it.",
+          "The buyer now holds the right to buy 100 units at 52.00. The seller has the duty to sell 100 units at 52.00 if assigned.",
+          "If the share is at 55.00 at expiry, the right to buy at 52.00 is worth 55.00 − 52.00 = 3.00 per unit, or 3.00 × 100 = 300 USD for the contract.",
+          "If the share is at 49.00 at expiry, nobody would pay 52.00 for something worth 49.00. The call expires worthless, and the buyer has lost the 150 USD premium.",
+          "The next lesson works out profit and loss, which also counts the premium paid."
+        ]
+      },
+      "anotherExample": {
+        "assumptions": [
+          "Same fictional contract size: 100 units per contract",
+          "Fictional share price today 40.00 USD",
+          "Put option: strike 38.00, premium 1.20 USD per unit"
+        ],
+        "steps": [
+          "Premium for 1 contract = 1.20 × 100 = 120 USD.",
+          "The buyer holds the right to sell 100 units at 38.00. The seller must buy them at 38.00 if assigned.",
+          "If the share is at 35.00 at expiry, the right to sell at 38.00 is worth 38.00 − 35.00 = 3.00 per unit, or 300 USD for the contract.",
+          "If the share is at 41.00 at expiry, selling at 38.00 makes no sense. The put expires worthless and the 120 USD premium is gone."
+        ]
+      },
+      "explainSimpler": "A call is a paid ticket to buy at a fixed price. A put is a paid ticket to sell at a fixed price. The ticket runs out on a set date. The buyer can use it or not; the seller must go along if it is used.",
+      "commonMistake": "Mixing up the two sides. The buyer has a right and a known cost; the seller has an obligation. Another mistake is forgetting the contract size: a premium of 1.50 is per unit, so one contract costs 1.50 × the units it covers, which you must read from the specification.",
+      "quickCheck": [
+        {
+          "id": "op-calls-puts-basics-q1",
+          "prompt": "Which option gives its holder the right to sell the underlying at the strike price?",
+          "options": [
+            {
+              "id": "a",
+              "text": "A call",
+              "explanation": "No: a call is a right to buy at the strike."
+            },
+            {
+              "id": "b",
+              "text": "A put",
+              "explanation": "Right: a put is a right to sell at the strike, until or at expiry."
+            },
+            {
+              "id": "c",
+              "text": "Any option, after expiry",
+              "explanation": "No: after expiry the option no longer exists, so there is no right left."
+            }
+          ],
+          "correctOptionIds": [
+            "b"
+          ],
+          "level": "beginner",
+          "glossaryIds": [
+            "put-option",
+            "call-option"
+          ]
+        },
+        {
+          "id": "op-calls-puts-basics-q2",
+          "prompt": "Fictional option: premium 0.80 USD per unit, one contract covers 100 units (fictional). You buy 2 contracts. What premium do you pay?",
+          "options": [
+            {
+              "id": "a",
+              "text": "80 USD",
+              "explanation": "No: that is the premium for one contract. You bought 2."
+            },
+            {
+              "id": "b",
+              "text": "160 USD",
+              "explanation": "Right: 0.80 × 100 × 2 = 160 USD."
+            },
+            {
+              "id": "c",
+              "text": "1.60 USD",
+              "explanation": "No: that leaves out the 100 units each contract covers."
+            }
+          ],
+          "correctOptionIds": [
+            "b"
+          ],
+          "level": "beginner",
+          "glossaryIds": [
+            "option-premium"
+          ]
+        },
+        {
+          "id": "op-calls-puts-basics-q3",
+          "prompt": "You sold (wrote) a call option. The buyer exercises it. What happens to you?",
+          "options": [
+            {
+              "id": "a",
+              "text": "You are assigned and must sell at the strike",
+              "explanation": "Right: the writer has the obligation, and assignment makes it due."
+            },
+            {
+              "id": "b",
+              "text": "You can choose to refuse",
+              "explanation": "No: only the buyer has a choice. The seller must carry out the deal."
+            },
+            {
+              "id": "c",
+              "text": "You must buy at the strike",
+              "explanation": "No: that is what an assigned put seller must do."
+            }
+          ],
+          "correctOptionIds": [
+            "a"
+          ],
+          "level": "beginner",
+          "glossaryIds": [
+            "assignment",
+            "option-writer",
+            "exercise"
+          ]
+        }
+      ],
+      "doItNow": {
+        "kind": "calculator",
+        "instructions": "Open the option-at-expiry calculator. Set Option type to Call, Position to Buy (hold), Contracts 1, Units per contract 100, Strike price 52, Premium per unit 1.50 and Price of the underlying at expiry 55. Check that Value per unit at expiry shows 3.00 and Premium paid shows 150.00. Change the price at expiry to 49 and see it expire worthless. Then write, one line each, the seven things you would read in a real option's specification: underlying, units per contract, call or put, strike, expiry date, exercise style and settlement."
+      },
+      "homework": "Write a one-page 'option spec card' with blank fields for underlying, call or put, units per contract, strike, expiry date, exercise style, settlement and premium per unit. Fill it in for the two fictional options in this lesson.",
+      "glossaryIds": [
+        "option",
+        "call-option",
+        "put-option",
+        "underlying",
+        "strike-price",
+        "option-premium",
+        "expiry",
+        "exercise",
+        "assignment",
+        "exercise-style",
+        "option-writer"
+      ],
+      "sourceIds": []
+    },
+    {
+      "id": "op-premium-value",
+      "moduleId": "options",
+      "title": "What is in a premium: intrinsic value, time value and volatility",
+      "level": "intermediate",
+      "estimatedMinutes": 20,
+      "inOneLine": {
+        "simple": "Before expiry, an option's price has two parts: what it would be worth right now, and extra for the time left. The extra part melts away as expiry gets closer.",
+        "balanced": "Premium = [[intrinsic-value]] + [[time-value]]. Whether an option is [[in-the-money|in]], [[at-the-money|at]] or [[out-of-the-money|out of]] the money decides its intrinsic value. Time value shrinks as expiry nears ([[time-decay]]) and is usually higher when [[implied-volatility]] is higher."
+      },
+      "explain": {
+        "simple": "Intrinsic value is what the option would be worth if it expired right now. A call with the price above the strike has some; so does a put with the price below the strike. That option is 'in the money'. An option with no intrinsic value is 'out of the money', or 'at the money' if the strike equals the price. Anything a buyer pays above intrinsic value is time value: paying for the chance that the price moves further before expiry. As expiry gets closer, there is less time for that move, so time value tends to shrink. At expiry it is zero. That is why an option can lose value even when the price moves your way, if the move is small or slow.",
+        "balanced": "Time value depends on time left and on how big the market expects future swings to be. Implied volatility is that expectation, worked backwards from option prices. When it is high, premiums are usually higher, because a large move looks more likely; when it falls, premiums can drop even if the underlying price does not move. Time value is usually largest for options near the money and smaller for options far in or far out of the money. Professional pricing models exist, but this module does not use them: the numbers in this lesson are made-up quotes to show the parts of a premium, and the app's calculator only works out value at expiry."
+      },
+      "realNumbers": {
+        "assumptions": [
+          "Example options (fictional specs and fictional quotes): one contract covers 100 units",
+          "Share price 55.00 USD, some weeks before expiry",
+          "Calls quoted at: strike 50.00 for 6.50, strike 55.00 for 2.40, strike 60.00 for 0.90 USD per unit"
+        ],
+        "steps": [
+          "Strike 50 call is in the money. Intrinsic = 55.00 − 50.00 = 5.00. Time value = 6.50 − 5.00 = 1.50.",
+          "Strike 55 call is at the money. Intrinsic = 0. Time value = all of it, 2.40.",
+          "Strike 60 call is out of the money. Intrinsic = 0. Time value = 0.90.",
+          "If the share is still 55.00 at expiry, all time value is gone: the 50 call is worth 5.00, the 55 and 60 calls are worth 0.",
+          "So a buyer of the 50 call at 6.50 would lose (5.00 − 6.50) × 100 = 150 USD at expiry, even though the price did not move at all."
+        ]
+      },
+      "anotherExample": {
+        "assumptions": [
+          "Same fictional contract size: 100 units per contract",
+          "Buy 1 call, strike 60.00, for 0.90 USD per unit (90 USD) with the share at 55.00",
+          "Some days later the share is 57.00 and the call's fictional quote is 0.60"
+        ],
+        "steps": [
+          "The share moved your way, from 55.00 to 57.00.",
+          "The call is still out of the money, so it is all time value, and there is less time left.",
+          "Its value fell from 0.90 to 0.60: (0.60 − 0.90) × 100 = 30 USD down.",
+          "If the share is still 57.00 at expiry, the call is worth 0 and the whole 90 USD is lost.",
+          "If expected swings had also calmed down (lower implied volatility), the quote could have fallen further. This is a made-up case to show the mechanism, not a prediction."
+        ]
+      },
+      "explainSimpler": "Premium = what it is worth now + extra for time left. The extra fades as the date gets closer and is gone at expiry. Only the 'worth now' part is left.",
+      "commonMistake": "Thinking you only need to be right about direction. With a bought option you also need the move to be big enough and soon enough to beat the time value you paid. Another mistake is calling an option 'cheap' because its premium is small: an out-of-the-money option is all time value, and it can easily expire worthless.",
+      "quickCheck": [
+        {
+          "id": "op-premium-value-q1",
+          "prompt": "Fictional: share at 47.00. A put with strike 50.00 is quoted at 4.20 USD per unit. What are its intrinsic value and time value?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Intrinsic 0, time value 4.20",
+              "explanation": "No: that treats it like a call. A put has intrinsic value when the price is below the strike."
+            },
+            {
+              "id": "b",
+              "text": "Intrinsic 3.00, time value 1.20",
+              "explanation": "Right: 50.00 − 47.00 = 3.00 intrinsic, and 4.20 − 3.00 = 1.20 time value."
+            },
+            {
+              "id": "c",
+              "text": "Intrinsic 3.00, time value 7.20",
+              "explanation": "No: time value is premium minus intrinsic, not premium plus intrinsic."
+            }
+          ],
+          "correctOptionIds": [
+            "b"
+          ],
+          "level": "intermediate",
+          "glossaryIds": [
+            "intrinsic-value",
+            "time-value",
+            "put-option"
+          ]
+        },
+        {
+          "id": "op-premium-value-q2",
+          "prompt": "Fictional: share at 80.00. Which option is out of the money?",
+          "options": [
+            {
+              "id": "a",
+              "text": "A call with strike 75.00",
+              "explanation": "No: the right to buy at 75.00 when the price is 80.00 is worth 5.00, so it is in the money."
+            },
+            {
+              "id": "b",
+              "text": "A put with strike 70.00",
+              "explanation": "Right: the right to sell at 70.00 when the price is 80.00 is worth nothing now."
+            },
+            {
+              "id": "c",
+              "text": "A call with strike 80.00",
+              "explanation": "No: a strike equal to the price is at the money."
+            }
+          ],
+          "correctOptionIds": [
+            "b"
+          ],
+          "level": "intermediate",
+          "glossaryIds": [
+            "out-of-the-money",
+            "in-the-money",
+            "at-the-money"
+          ]
+        },
+        {
+          "id": "op-premium-value-q3",
+          "prompt": "You bought an out-of-the-money call. The share rises slowly but stays below the strike, and the call's price falls. What is the most likely reason?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Time decay: the time value is shrinking",
+              "explanation": "Right: with less time left and no intrinsic value, the premium tends to fall."
+            },
+            {
+              "id": "b",
+              "text": "The quote must be wrong",
+              "explanation": "No: an option can lose value while the price moves your way, if the move is small or slow."
+            },
+            {
+              "id": "c",
+              "text": "Calls lose value whenever the price rises",
+              "explanation": "No: a rising price helps a call. Here time decay outweighed a small move."
+            }
+          ],
+          "correctOptionIds": [
+            "a"
+          ],
+          "level": "intermediate",
+          "glossaryIds": [
+            "time-decay",
+            "time-value"
+          ]
+        }
+      ],
+      "doItNow": {
+        "kind": "calculator",
+        "instructions": "Use the option-at-expiry calculator to see that only intrinsic value is left at expiry. Enter Call, Buy (hold), Contracts 1, Units per contract 100, Strike price 50, Premium per unit 6.50 and Price of the underlying at expiry 55. Check that Value per unit at expiry is 5.00 and the profit or loss is −150.00: the 1.50 of time value paid is gone. Then enter Strike price 60, Premium per unit 0.90, price at expiry 57, and check −90.00. Remember the calculator cannot price an option before expiry."
+      },
+      "homework": "For a fictional share at 40.00, write down two calls and two puts, one in the money and one out of the money each, with made-up premiums. For each, split the premium into intrinsic value and time value.",
+      "glossaryIds": [
+        "intrinsic-value",
+        "time-value",
+        "time-decay",
+        "implied-volatility",
+        "in-the-money",
+        "at-the-money",
+        "out-of-the-money",
+        "volatility",
+        "option-premium"
+      ],
+      "sourceIds": []
+    },
+    {
+      "id": "op-risk-practice",
+      "moduleId": "options",
+      "title": "Options risk: leverage, spreads, specifications and a practice plan",
+      "level": "beginner",
+      "estimatedMinutes": 20,
+      "inOneLine": {
+        "simple": "A small premium controls a lot of units, so options can win or lose fast. Read the contract, watch the spread, and keep it in simulation.",
+        "balanced": "Options carry [[leverage]]: a premium far smaller than the units' value controls them, so the whole premium can be lost on a small or slow move. Some options trade thinly, with wide [[spread|bid-ask spreads]]. Check the full specification before any study trade, and set plan rules in advance."
+      },
+      "explain": {
+        "simple": "With an option, a small amount of money is tied to a much bigger amount of the underlying. If the price moves a lot your way, the gain can be large compared with what you paid. If it does not, you can lose everything you paid, quickly. That is leverage. Options can also be costly to trade. Some have few buyers and sellers, so the gap between the price to buy (ask) and the price to sell (bid) can be wide. Buying and selling straight back can lose money even if nothing moves. Before studying any option, read its specification, and keep all practice in a simulator.",
+        "balanced": "Leverage makes position size matter more, not less. Spending the same money on options as on the underlying is a much bigger bet. [[liquidity|Liquidity]] differs a lot between strikes and expiry dates; strikes far from the price and far-off expiries can trade rarely, and spreads can widen in fast markets. Your specification checklist: the [[underlying]], units per contract, call or put, [[strike-price]], [[expiry]] date, [[exercise-style]], and settlement (delivery or cash). Simple plan rules for study: buy only, never sell uncovered; set a fixed most-premium-at-risk per trade; write the reason, the breakeven and the exit before entering; and review each case afterwards."
+      },
+      "realNumbers": {
+        "assumptions": [
+          "Fictional share price 50.00 USD; one option contract covers 100 units (fictional specs)",
+          "Choice A: buy 100 units of the share for 5,000 USD",
+          "Choice B: buy 1 call, strike 50.00, premium 2.00 USD per unit, for 200 USD",
+          "Held to expiry; fees left out"
+        ],
+        "steps": [
+          "Price at expiry 56.00: A gains 6.00 × 100 = 600 USD, which is 600 ÷ 5,000 = 12% of the money spent. B gains (6.00 − 2.00) × 100 = 400 USD, which is 400 ÷ 200 = 200% of the money spent.",
+          "Price at expiry 50.00: A gains or loses nothing. B loses the whole 200 USD, which is 100% of the money spent.",
+          "Price at expiry 48.00: A loses 2.00 × 100 = 200 USD, or 4%. B also loses 200 USD, but that is 100% of what it cost.",
+          "Spending the full 5,000 USD on calls instead buys 5,000 ÷ 200 = 25 contracts. At 50.00 or below at expiry, all 5,000 USD is lost.",
+          "The same money in options is a far bigger bet. This is a made-up case to show the mechanism."
+        ]
+      },
+      "anotherExample": {
+        "assumptions": [
+          "Fictional option quoted bid 1.80, ask 2.20 USD per unit; 100 units per contract",
+          "Fictional share quoted bid 49.99, ask 50.01"
+        ],
+        "steps": [
+          "Buy 1 option at the ask: 2.20 × 100 = 220 USD.",
+          "Sell it straight back at the bid: 1.80 × 100 = 180 USD.",
+          "Loss = 220 − 180 = 40 USD before the price has moved at all.",
+          "Buying and selling 100 units of the share straight back costs (50.01 − 49.99) × 100 = 2 USD.",
+          "A wide spread means the price must move further in your favour just to get back to even."
+        ]
+      },
+      "explainSimpler": "A small payment controls a lot, so it can grow or vanish fast. Buying and selling can cost a lot if few people trade that option. Read the rules first and practise only in a simulator.",
+      "commonMistake": "Buying many cheap options because each one costs little. Size by the total premium you could lose, assuming it all goes to zero. Another mistake is ignoring the spread and the specification: units per contract, exercise style and settlement all change what a trade means.",
+      "quickCheck": [
+        {
+          "id": "op-risk-practice-q1",
+          "prompt": "Which item belongs on your option specification checklist?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Settlement: delivery or cash",
+              "explanation": "Right: settlement is part of the contract's specification, along with units per contract, strike, expiry and exercise style."
+            },
+            {
+              "id": "b",
+              "text": "What a forum expects the price to do",
+              "explanation": "No: opinions are not part of a contract's specification."
+            },
+            {
+              "id": "c",
+              "text": "How much the option rose last week",
+              "explanation": "No: past price moves are not part of the specification."
+            }
+          ],
+          "correctOptionIds": [
+            "a"
+          ],
+          "level": "beginner",
+          "glossaryIds": [
+            "exercise-style",
+            "expiry"
+          ]
+        },
+        {
+          "id": "op-risk-practice-q2",
+          "prompt": "Fictional option: bid 0.90, ask 1.10 USD per unit, 100 units per contract. You buy 2 contracts and sell them straight back. What do you lose?",
+          "options": [
+            {
+              "id": "a",
+              "text": "20 USD",
+              "explanation": "No: that is the spread cost for one contract. You traded 2."
+            },
+            {
+              "id": "b",
+              "text": "40 USD",
+              "explanation": "Right: (1.10 − 0.90) × 100 × 2 = 40 USD."
+            },
+            {
+              "id": "c",
+              "text": "0.20 USD",
+              "explanation": "No: that is the spread per unit. Multiply by units and contracts."
+            }
+          ],
+          "correctOptionIds": [
+            "b"
+          ],
+          "level": "beginner",
+          "glossaryIds": [
+            "spread",
+            "liquidity"
+          ]
+        },
+        {
+          "id": "op-risk-practice-q3",
+          "prompt": "Fictional: you buy 4 calls at a premium of 2.50 USD per unit, 100 units each. All four expire out of the money. What is lost?",
+          "options": [
+            {
+              "id": "a",
+              "text": "250 USD",
+              "explanation": "No: that is the premium for one contract. You bought 4."
+            },
+            {
+              "id": "b",
+              "text": "10 USD",
+              "explanation": "No: that leaves out the 100 units each contract covers."
+            },
+            {
+              "id": "c",
+              "text": "1,000 USD",
+              "explanation": "Right: 2.50 × 100 × 4 = 1,000 USD, the whole premium paid."
+            }
+          ],
+          "correctOptionIds": [
+            "c"
+          ],
+          "level": "beginner",
+          "glossaryIds": [
+            "option-premium",
+            "out-of-the-money"
+          ]
+        }
+      ],
+      "doItNow": {
+        "kind": "reflection",
+        "instructions": "Write your options study rules on one page. Include: you will study options only in simulation and the calculator; the most premium you would put at risk on one fictional trade; that you will not sell uncovered options; the seven items you check in a specification; and the three things you write before any study trade (reason, breakeven, exit). Then work through 5 fictional option cases by hand and check each in the option-at-expiry calculator."
+      },
+      "homework": "Pick one fictional option from this module. Write its full specification card, its breakeven, its largest possible loss, and the spread cost of buying and selling one contract at the quotes you make up.",
+      "glossaryIds": [
+        "leverage",
+        "spread",
+        "liquidity",
+        "underlying",
+        "strike-price",
+        "expiry",
+        "exercise-style",
+        "option-premium",
+        "breakeven"
+      ],
+      "sourceIds": []
+    },
+    {
+      "id": "op-selling-obligation",
+      "moduleId": "options",
+      "title": "Selling (writing) options: premium, assignment and uncovered risk",
+      "level": "intermediate",
+      "estimatedMinutes": 20,
+      "inOneLine": {
+        "simple": "An option seller collects the premium up front, but takes on a duty. The premium is the most the seller can make, and the loss can be far bigger.",
+        "balanced": "An [[option-writer]] receives the [[option-premium|premium]] and can be [[assignment|assigned]]. Seller P/L is the buyer's P/L with the sign flipped. An [[uncovered-option|uncovered]] sold call has no fixed limit on loss; a sold put can lose up to (strike − premium) × units if the price falls to zero."
+      },
+      "explain": {
+        "simple": "Every option has a buyer and a seller. The seller, also called the writer, is paid the premium at the start. If the option expires worthless, the seller keeps it all. That is the best case, and it is also the limit: the seller can never make more than the premium. If the option ends in the money, the seller must carry out the deal. A call seller must sell at the strike, even if the price has shot up. A put seller must buy at the strike, even if the price has collapsed. The seller's loss is the buyer's gain, so it can be many times the premium received.",
+        "balanced": "Selling a call while owning the units it covers is a [[covered-call]]: if assigned, you deliver units you hold, so the call's loss is offset, but you give up gains above the strike and keep nearly all the risk of the units falling (the premium cushions a fall only slightly). Selling a call without owning them is [[uncovered-option|uncovered]], or naked: the price can keep rising, so there is no fixed limit on the loss. Selling a put while setting cash aside to buy at the strike is a [[cash-secured-put]]; the cash makes the purchase possible but does not shrink the loss. With American-style options, assignment can come at any time before expiry. Brokers usually require approval and [[margin]] before you can write options, and margin can be raised. In this app, selling options is something to study in the calculator, not to do."
+      },
+      "realNumbers": {
+        "assumptions": [
+          "Example option (fictional specs): one contract covers 100 units",
+          "Sell (write) 1 call, strike 50.00, premium 2.00 USD per unit, without owning the units (uncovered)",
+          "Held to expiry; fees and margin left out"
+        ],
+        "steps": [
+          "Premium received = 2.00 × 100 = 200 USD. That is the most this position can make.",
+          "Price at expiry 49.00: the call expires worthless. The seller keeps the 200 USD.",
+          "Price at expiry 56.00: the call is worth 6.00 per unit. Seller P/L = −(6.00 − 2.00) × 100 = 400 USD loss.",
+          "Price at expiry 70.00: the call is worth 20.00 per unit. Seller P/L = −(20.00 − 2.00) × 100 = 1,800 USD loss, nine times the premium received.",
+          "There is no price where this stops: every 1.00 rise beyond that adds another 100 USD of loss.",
+          "Covered version: if the seller already owned 100 units bought at 50.00, at 70.00 the units gain (70.00 − 50.00) × 100 = 2,000 USD and the call loses 1,800 USD, a total of 200 USD gain. Everything above the strike was given up."
+        ]
+      },
+      "anotherExample": {
+        "assumptions": [
+          "Same fictional contract size: 100 units per contract",
+          "Sell (write) 1 put, strike 40.00, premium 1.50 USD per unit",
+          "Held to expiry; fees and margin left out"
+        ],
+        "steps": [
+          "Premium received = 1.50 × 100 = 150 USD.",
+          "Price at expiry 42.00: the put expires worthless. The seller keeps 150 USD.",
+          "Price at expiry 35.00: the seller is assigned and must buy 100 units at 40.00 that are worth 35.00. P/L = −(5.00 − 1.50) × 100 = 350 USD loss.",
+          "Worst case, price falls to 0: loss = (40.00 − 1.50) × 100 = 3,850 USD.",
+          "Cash-secured: setting aside 40.00 × 100 = 4,000 USD means the purchase could be paid for. It does not make the 3,850 USD worst case any smaller."
+        ]
+      },
+      "explainSimpler": "The seller is paid first and hopes nothing happens. If something does happen, the seller pays the buyer's gain, and that can be far more than was collected.",
+      "commonMistake": "Seeing a small premium that is usually kept and thinking it is easy money. Many small wins can be wiped out by one large loss, and with an uncovered call that loss has no ceiling. Another mistake is thinking a covered call has no risk: the units you own can still fall a long way.",
+      "quickCheck": [
+        {
+          "id": "op-selling-obligation-q1",
+          "prompt": "Fictional: you sell 1 uncovered call, strike 20.00, premium 1.00 USD per unit, 100 units per contract. At expiry the price is 26.00. What is your profit or loss?",
+          "options": [
+            {
+              "id": "a",
+              "text": "A 100 USD gain",
+              "explanation": "No: you would keep the 100 USD only if the call expired worthless. It ended 6.00 in the money."
+            },
+            {
+              "id": "b",
+              "text": "A 500 USD loss",
+              "explanation": "Right: the call is worth 6.00, so −(6.00 − 1.00) × 100 = −500 USD."
+            },
+            {
+              "id": "c",
+              "text": "A 600 USD loss",
+              "explanation": "No: that forgets the 100 USD premium you received."
+            }
+          ],
+          "correctOptionIds": [
+            "b"
+          ],
+          "level": "intermediate",
+          "glossaryIds": [
+            "option-writer",
+            "uncovered-option"
+          ]
+        },
+        {
+          "id": "op-selling-obligation-q2",
+          "prompt": "What is the most an option seller can make on one trade held to expiry?",
+          "options": [
+            {
+              "id": "a",
+              "text": "There is no fixed limit",
+              "explanation": "No: that describes the loss on an uncovered sold call, not the gain."
+            },
+            {
+              "id": "b",
+              "text": "Strike × units per contract",
+              "explanation": "No: the seller never receives the strike as profit."
+            },
+            {
+              "id": "c",
+              "text": "The premium received",
+              "explanation": "Right: the best case is the option expiring worthless and the seller keeping the premium."
+            }
+          ],
+          "correctOptionIds": [
+            "c"
+          ],
+          "level": "intermediate",
+          "glossaryIds": [
+            "option-writer",
+            "option-premium"
+          ]
+        },
+        {
+          "id": "op-selling-obligation-q3",
+          "prompt": "Fictional: you sell 1 put, strike 30.00, premium 2.00 USD per unit, 100 units per contract. What is the largest possible loss at expiry?",
+          "options": [
+            {
+              "id": "a",
+              "text": "200 USD",
+              "explanation": "No: that is the premium received, which is the most you can make."
+            },
+            {
+              "id": "b",
+              "text": "2,800 USD",
+              "explanation": "Right: if the price falls to 0, the loss is (30.00 − 2.00) × 100 = 2,800 USD."
+            },
+            {
+              "id": "c",
+              "text": "3,000 USD",
+              "explanation": "No: that forgets the 200 USD premium received."
+            }
+          ],
+          "correctOptionIds": [
+            "b"
+          ],
+          "level": "intermediate",
+          "glossaryIds": [
+            "put-option",
+            "cash-secured-put"
+          ]
+        }
+      ],
+      "doItNow": {
+        "kind": "calculator",
+        "instructions": "Open the option-at-expiry calculator and set Position to Sell (write). Enter Call, Contracts 1, Units per contract 100, Strike price 50, Premium per unit 2. Try Price of the underlying at expiry 49, 56 and 70, and check +200.00, −400.00 and −1800.00. Read the Largest possible loss line: it has no fixed limit. Then switch to Put, Strike price 40, Premium per unit 1.50, and check that the largest possible loss is 3850.00. Write one sentence on why a buyer and a seller of the same option end up with opposite results."
+      },
+      "homework": "Make a table for the fictional uncovered call in this lesson with prices at expiry of 45, 50, 52, 55, 60, 70 and 80. For each, write the seller's profit or loss. Mark where the losses pass the premium received, then pass 5 times it.",
+      "glossaryIds": [
+        "option-writer",
+        "assignment",
+        "covered-call",
+        "uncovered-option",
+        "cash-secured-put",
+        "margin",
+        "option-premium",
+        "call-option",
+        "put-option"
       ],
       "sourceIds": []
     },
@@ -26372,6 +27905,29 @@
       ]
     },
     {
+      "id": "options",
+      "title": "Options: calls, puts, premium and expiry",
+      "summary": "What calls and puts are, how strike, premium, expiry and contract size work, what buyers and sellers can gain or lose at expiry, why sold options can lose far more than the premium, how intrinsic value, time value and volatility shape a premium, and how to check a specification before any study trade.",
+      "markets": [
+        "options"
+      ],
+      "level": "intermediate",
+      "lessonIds": [
+        "op-calls-puts-basics",
+        "op-buying-payoff",
+        "op-selling-obligation",
+        "op-premium-value",
+        "op-risk-practice"
+      ],
+      "checkpointQuizId": "options-checkpoint",
+      "practicalResult": "Work out value at expiry, profit or loss, breakeven and largest possible loss for 5 fictional option cases (bought and sold calls and puts), doing each by hand first, then check every one in the option-at-expiry calculator and write your options study rules.",
+      "minPracticeDays": 0,
+      "skills": [
+        "market_fundamentals",
+        "risk_management"
+      ]
+    },
+    {
       "id": "penny-stocks",
       "title": "Penny stocks and microcaps: risks and red flags",
       "summary": "What penny stocks and microcaps are, why thin trading makes them costly and hard to exit, how dilution, reverse splits and promotions work, and how to recognise pump-and-dump schemes and decide when to stay out.",
@@ -26518,7 +28074,7 @@
     {
       "id": "trader-development",
       "title": "Trader Development",
-      "summary": "All five markets compared, then stocks, penny stocks, commodities and futures, followed by technical analysis patterns, advanced testing ideas and macro fundamentals. Practice is simulated or on a demo account.",
+      "summary": "All five markets compared, then stocks, penny stocks, commodities, futures and options, followed by technical analysis patterns, advanced testing ideas and macro fundamentals. Practice is simulated or on a demo account.",
       "moduleIds": [
         "markets-compared",
         "stocks-basics",
@@ -26526,6 +28082,7 @@
         "penny-stocks",
         "commodities",
         "futures",
+        "options",
         "ta-patterns",
         "ta-advanced",
         "fa-macro"

@@ -1,0 +1,151 @@
+{
+  "id": "op-risk-practice",
+  "moduleId": "options",
+  "title": "Options risk: leverage, spreads, specifications and a practice plan",
+  "level": "beginner",
+  "estimatedMinutes": 20,
+  "inOneLine": {
+    "simple": "A small premium controls a lot of units, so options can win or lose fast. Read the contract, watch the spread, and keep it in simulation.",
+    "balanced": "Options carry [[leverage]]: a premium far smaller than the units' value controls them, so the whole premium can be lost on a small or slow move. Some options trade thinly, with wide [[spread|bid-ask spreads]]. Check the full specification before any study trade, and set plan rules in advance."
+  },
+  "explain": {
+    "simple": "With an option, a small amount of money is tied to a much bigger amount of the underlying. If the price moves a lot your way, the gain can be large compared with what you paid. If it does not, you can lose everything you paid, quickly. That is leverage. Options can also be costly to trade. Some have few buyers and sellers, so the gap between the price to buy (ask) and the price to sell (bid) can be wide. Buying and selling straight back can lose money even if nothing moves. Before studying any option, read its specification, and keep all practice in a simulator.",
+    "balanced": "Leverage makes position size matter more, not less. Spending the same money on options as on the underlying is a much bigger bet. [[liquidity|Liquidity]] differs a lot between strikes and expiry dates; strikes far from the price and far-off expiries can trade rarely, and spreads can widen in fast markets. Your specification checklist: the [[underlying]], units per contract, call or put, [[strike-price]], [[expiry]] date, [[exercise-style]], and settlement (delivery or cash). Simple plan rules for study: buy only, never sell uncovered; set a fixed most-premium-at-risk per trade; write the reason, the breakeven and the exit before entering; and review each case afterwards."
+  },
+  "realNumbers": {
+    "assumptions": [
+      "Fictional share price 50.00 USD; one option contract covers 100 units (fictional specs)",
+      "Choice A: buy 100 units of the share for 5,000 USD",
+      "Choice B: buy 1 call, strike 50.00, premium 2.00 USD per unit, for 200 USD",
+      "Held to expiry; fees left out"
+    ],
+    "steps": [
+      "Price at expiry 56.00: A gains 6.00 × 100 = 600 USD, which is 600 ÷ 5,000 = 12% of the money spent. B gains (6.00 − 2.00) × 100 = 400 USD, which is 400 ÷ 200 = 200% of the money spent.",
+      "Price at expiry 50.00: A gains or loses nothing. B loses the whole 200 USD, which is 100% of the money spent.",
+      "Price at expiry 48.00: A loses 2.00 × 100 = 200 USD, or 4%. B also loses 200 USD, but that is 100% of what it cost.",
+      "Spending the full 5,000 USD on calls instead buys 5,000 ÷ 200 = 25 contracts. At 50.00 or below at expiry, all 5,000 USD is lost.",
+      "The same money in options is a far bigger bet. This is a made-up case to show the mechanism."
+    ]
+  },
+  "anotherExample": {
+    "assumptions": [
+      "Fictional option quoted bid 1.80, ask 2.20 USD per unit; 100 units per contract",
+      "Fictional share quoted bid 49.99, ask 50.01"
+    ],
+    "steps": [
+      "Buy 1 option at the ask: 2.20 × 100 = 220 USD.",
+      "Sell it straight back at the bid: 1.80 × 100 = 180 USD.",
+      "Loss = 220 − 180 = 40 USD before the price has moved at all.",
+      "Buying and selling 100 units of the share straight back costs (50.01 − 49.99) × 100 = 2 USD.",
+      "A wide spread means the price must move further in your favour just to get back to even."
+    ]
+  },
+  "explainSimpler": "A small payment controls a lot, so it can grow or vanish fast. Buying and selling can cost a lot if few people trade that option. Read the rules first and practise only in a simulator.",
+  "commonMistake": "Buying many cheap options because each one costs little. Size by the total premium you could lose, assuming it all goes to zero. Another mistake is ignoring the spread and the specification: units per contract, exercise style and settlement all change what a trade means.",
+  "quickCheck": [
+    {
+      "id": "op-risk-practice-q1",
+      "prompt": "Which item belongs on your option specification checklist?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Settlement: delivery or cash",
+          "explanation": "Right: settlement is part of the contract's specification, along with units per contract, strike, expiry and exercise style."
+        },
+        {
+          "id": "b",
+          "text": "What a forum expects the price to do",
+          "explanation": "No: opinions are not part of a contract's specification."
+        },
+        {
+          "id": "c",
+          "text": "How much the option rose last week",
+          "explanation": "No: past price moves are not part of the specification."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "exercise-style",
+        "expiry"
+      ]
+    },
+    {
+      "id": "op-risk-practice-q2",
+      "prompt": "Fictional option: bid 0.90, ask 1.10 USD per unit, 100 units per contract. You buy 2 contracts and sell them straight back. What do you lose?",
+      "options": [
+        {
+          "id": "a",
+          "text": "20 USD",
+          "explanation": "No: that is the spread cost for one contract. You traded 2."
+        },
+        {
+          "id": "b",
+          "text": "40 USD",
+          "explanation": "Right: (1.10 − 0.90) × 100 × 2 = 40 USD."
+        },
+        {
+          "id": "c",
+          "text": "0.20 USD",
+          "explanation": "No: that is the spread per unit. Multiply by units and contracts."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "spread",
+        "liquidity"
+      ]
+    },
+    {
+      "id": "op-risk-practice-q3",
+      "prompt": "Fictional: you buy 4 calls at a premium of 2.50 USD per unit, 100 units each. All four expire out of the money. What is lost?",
+      "options": [
+        {
+          "id": "a",
+          "text": "250 USD",
+          "explanation": "No: that is the premium for one contract. You bought 4."
+        },
+        {
+          "id": "b",
+          "text": "10 USD",
+          "explanation": "No: that leaves out the 100 units each contract covers."
+        },
+        {
+          "id": "c",
+          "text": "1,000 USD",
+          "explanation": "Right: 2.50 × 100 × 4 = 1,000 USD, the whole premium paid."
+        }
+      ],
+      "correctOptionIds": [
+        "c"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "option-premium",
+        "out-of-the-money"
+      ]
+    }
+  ],
+  "doItNow": {
+    "kind": "reflection",
+    "instructions": "Write your options study rules on one page. Include: you will study options only in simulation and the calculator; the most premium you would put at risk on one fictional trade; that you will not sell uncovered options; the seven items you check in a specification; and the three things you write before any study trade (reason, breakeven, exit). Then work through 5 fictional option cases by hand and check each in the option-at-expiry calculator."
+  },
+  "homework": "Pick one fictional option from this module. Write its full specification card, its breakeven, its largest possible loss, and the spread cost of buying and selling one contract at the quotes you make up.",
+  "glossaryIds": [
+    "leverage",
+    "spread",
+    "liquidity",
+    "underlying",
+    "strike-price",
+    "expiry",
+    "exercise-style",
+    "option-premium",
+    "breakeven"
+  ],
+  "sourceIds": []
+}

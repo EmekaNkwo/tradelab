@@ -28,7 +28,7 @@ import { createId } from '../../shared/ids';
 import { logger } from '../../shared/logger';
 import { err, ok, type Result } from '../../shared/result';
 import { isValidTimeZone, toUtcIso, type UtcIso } from '../../shared/time';
-import type { ExplanationLevel, MarketKind } from '../../shared/types';
+import type { ExplanationLevel, StudyMarket } from '../../shared/types';
 import type { ReminderPlan, ReminderSyncOptions, ReminderSyncOutcome } from '../../data';
 import type { Container } from '../app';
 import { previewProgram, programModules, todayIn, todaysClass, unscheduledUnits } from './plan';
@@ -83,7 +83,7 @@ export async function resyncReminders(deps: ReminderDeps, options: ReminderSyncO
 export interface OnboardingInput {
   readonly riskAcknowledged: boolean;
   readonly experience: ExperienceLevel;
-  readonly markets: readonly MarketKind[];
+  readonly markets: readonly StudyMarket[];
   readonly goals: readonly LearningGoal[];
   readonly explanationLevel: ExplanationLevel;
   readonly metaTrader: { readonly version: MetaTraderVersion; readonly installed: boolean } | null;

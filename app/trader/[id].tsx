@@ -3,7 +3,7 @@ import { GlossaryText } from '../../components/lesson/GlossaryText';
 import { StrategySection } from '../../components/strategies/Section';
 import { AppText, EmptyState, ListRow, Screen } from '../../components/ui';
 import { useStrategyContent, type Source, type Trader } from '../../features/strategies';
-import { MARKET_LABELS } from '../../shared/types';
+import { STUDY_MARKET_LABELS } from '../../shared/types';
 import { canOpen } from '../../shared/routeAccess';
 
 /** A famous-trader page (spec §15.2): documented, interpreted, and unverified kept apart, each with its sources. */
@@ -33,7 +33,7 @@ function TraderView({ trader }: { readonly trader: Trader }) {
     <Screen testID="trader-screen">
       <Stack.Screen options={{ title: trader.name }} />
       <AppText variant="title">{trader.name}</AppText>
-      <AppText variant="caption" color="textSecondary">{`${trader.knownFor} · ${trader.markets.map((m) => MARKET_LABELS[m]).join(', ')}`}</AppText>
+      <AppText variant="caption" color="textSecondary">{`${trader.knownFor} · ${trader.markets.map((m) => STUDY_MARKET_LABELS[m]).join(', ')}`}</AppText>
       <GlossaryText>{trader.summary}</GlossaryText>
       <StrategySection title="What the sources document" testID="trader-documented">
         {trader.documented.map((d) => (

@@ -1,0 +1,13 @@
+{
+  "id": "options-risk",
+  "version": 1,
+  "title": "Options can lose the whole premium, or far more",
+  "body": [
+    "A bought [[option]] can expire worthless, and the whole [[option-premium|premium]] paid is lost. A sold option can lose far more than the premium received, and an [[uncovered-option|uncovered]] sold call has no fixed limit on loss.",
+    "Options are complex, and contract specifications differ. Always check the specification of the exact contract. In this app, options are for study in simulation only."
+  ],
+  "triggers": [
+    "options"
+  ],
+  "statistics": []
+}

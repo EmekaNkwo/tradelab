@@ -8,36 +8,12 @@ import { QuestionCard } from '../components/learning/QuestionCard';
 import { ScheduleFields } from '../components/learning/ScheduleFields';
 import { AppText, Button, Card, ChoiceChips, ErrorState, Notice, Screen, SegmentedControl } from '../components/ui';
 import { useDisclosures } from '../features/content';
-import { describeSuggestion, describeWarning, formatLocalDate, useLearningActions, useModuleTitles, useOnboarding, usePrograms, questionView } from '../features/learning';
+import { describeSuggestion, EXPERIENCE_CHOICES, GOAL_CHOICES, MARKET_CHOICES, describeWarning, formatLocalDate, useLearningActions, useModuleTitles, useOnboarding, usePrograms, questionView } from '../features/learning';
 import { useTheme } from '../theme';
 
-const EXPERIENCE = [
-  { value: 'complete_beginner', label: 'Complete beginner' },
-  { value: 'know_basic_terms', label: 'I know basic terms' },
-  { value: 'used_simulated_trading', label: 'I have used simulated trading' },
-  { value: 'have_traded', label: 'I have traded before' },
-  { value: 'quant_research', label: 'Interested in quantitative research' },
-] as const;
-
-const MARKETS = [
-  { value: 'forex', label: 'Forex' },
-  { value: 'stocks', label: 'Ordinary stocks' },
-  { value: 'penny_stocks', label: 'Penny stocks' },
-  { value: 'commodities', label: 'Commodities' },
-  { value: 'futures', label: 'Futures' },
-] as const;
-
-const GOALS = [
-  { value: 'understand_markets', label: 'Understand markets' },
-  { value: 'technical_analysis', label: 'Technical analysis' },
-  { value: 'fundamental_analysis', label: 'Fundamental analysis' },
-  { value: 'famous_traders', label: 'Study famous traders' },
-  { value: 'develop_strategies', label: 'Develop strategies' },
-  { value: 'risk_management', label: 'Risk management' },
-  { value: 'chart_practice', label: 'Chart practice' },
-  { value: 'quant_backtesting', label: 'Quantitative backtesting' },
-  { value: 'long_term_investing', label: 'Long-term investing' },
-] as const;
+const EXPERIENCE = EXPERIENCE_CHOICES;
+const MARKETS = MARKET_CHOICES;
+const GOALS = GOAL_CHOICES;
 
 const LEVELS = [
   { value: 'simple', label: 'Simple' },
@@ -211,9 +187,13 @@ function ProgramStep({ o }: { readonly o: Onboarding }) {
   const moduleTitle = useModuleTitles();
   const plan = o.preview;
   const selected = programs.find((p) => p.id === o.draft.programId);
+  const suggested = programs.find((p) => p.id === o.suggestedProgramId);
   return (
     <>
       <Question title="Choose your program">
+        {suggested ? (
+          <AppText color="textSecondary" testID="onboarding-suggested-program">{`Suggested from your answers: ${suggested.title}. You can pick another.`}</AppText>
+        ) : null}
         <ChoiceChips label="Program" hideLabel single options={programs.map((p) => ({ value: p.id, label: p.title }))} selected={o.draft.programId ? [o.draft.programId] : []} onChange={(v) => o.update({ programId: v[0] ?? null })} />
         {selected ? <AppText color="textSecondary">{selected.summary}</AppText> : null}
       </Question>

@@ -28,7 +28,7 @@ import {
   useStrategyProgress,
   type Strategy,
 } from '../../features/strategies';
-import { MARKET_LABELS } from '../../shared/types';
+import { STUDY_MARKET_LABELS } from '../../shared/types';
 import { useTheme } from '../../theme';
 import { canOpen } from '../../shared/routeAccess';
 
@@ -69,7 +69,7 @@ function StrategyView({ strategy: s }: { readonly strategy: Strategy }) {
       <Stack.Screen options={{ title: CATEGORY_LABELS[s.category] }} />
       <StrategyHero
         strategy={s}
-        caption={[FAMILY_LABELS[s.family], LEVEL_NAMES[s.level], s.markets.map((m) => MARKET_LABELS[m]).join(', ')].join(' · ')}
+        caption={[FAMILY_LABELS[s.family], LEVEL_NAMES[s.level], s.markets.map((m) => STUDY_MARKET_LABELS[m]).join(', ')].join(' · ')}
         sourceQuality={s.evidence ? SOURCE_QUALITY_LABELS[s.evidence.level] : null}
       />
       <SaveButtons strategyId={s.id} />

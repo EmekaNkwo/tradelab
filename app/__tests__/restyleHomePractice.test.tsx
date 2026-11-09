@@ -114,7 +114,7 @@ describe('Home', () => {
     await fireEvent.press(await screen.findByTestId('home-action-class'));
     expect(routerMock.push).toHaveBeenLastCalledWith(expect.stringMatching(/^\/class\//));
     await fireEvent.press(screen.getByTestId('home-action-chart-lab'));
-    expect(routerMock.push).toHaveBeenLastCalledWith('/practice/chart-lab');
+    expect(routerMock.push).toHaveBeenLastCalledWith('/practice/chart-lab', { withAnchor: true });
     await screen.unmount();
 
     turnFeaturesOff('practice', 'learn');

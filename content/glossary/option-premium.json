@@ -1,0 +1,23 @@
+{
+  "id": "option-premium",
+  "term": "Option premium",
+  "aliases": [
+    "premium",
+    "option price"
+  ],
+  "definition": {
+    "simple": "The price of an option. The buyer pays it and the seller receives it.",
+    "balanced": "It is usually quoted per unit of the [[underlying]], so the money for one contract is premium × units per contract. Before expiry the premium is [[intrinsic-value]] plus [[time-value]]. For a buyer it is the most that can be lost; for a seller it is the most that can be made."
+  },
+  "related": [
+    "option",
+    "intrinsic-value",
+    "time-value",
+    "breakeven"
+  ],
+  "markets": [
+    "options"
+  ],
+  "level": "beginner",
+  "sourceIds": []
+}

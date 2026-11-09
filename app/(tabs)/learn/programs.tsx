@@ -3,7 +3,7 @@ import { useRef, useState } from 'react';
 import { Alert } from 'react-native';
 import { AppText, Button, Card, CardHeader, ErrorState, Notice, Screen, SkeletonState } from '../../../components/ui';
 import { CircleCheck, GraduationCap } from '../../../components/ui/icons';
-import { useLearningActions, useModuleTitles, useProgramList, type ProgramListItem, type ProgramState } from '../../../features/learning';
+import { useLearningActions, useModuleTitles, usePreferenceMatcher, useProgramList, type ProgramListItem, type ProgramState } from '../../../features/learning';
 import { errorText, type AppError } from '../../../shared/errors';
 import type { Result } from '../../../shared/result';
 
@@ -19,6 +19,7 @@ const STATE_LABELS: Readonly<Record<ProgramState, string>> = {
 export default function ProgramsScreen() {
   const list = useProgramList();
   const actions = useLearningActions();
+  const { suggestedProgramId } = usePreferenceMatcher();
   const [message, setMessage] = useState<string | null>(null);
   const busy = useRef(false);
 
@@ -52,18 +53,20 @@ export default function ProgramsScreen() {
       {message ? <Notice live title="Programs">{message}</Notice> : null}
       {list.status === 'loading' ? <SkeletonState rows={2} /> : null}
       {list.status === 'error' ? <ErrorState error={list.error} onRetry={list.reload} /> : null}
-      {list.status === 'success' ? list.data.map((item) => <ProgramCard key={item.program.id} item={item} onAdd={() => add(item)} onStart={() => start(item)} />) : null}
+      {list.status === 'success' ? list.data.map((item) => <ProgramCard key={item.program.id} item={item} suggested={item.program.id === suggestedProgramId} onAdd={() => add(item)} onStart={() => start(item)} />) : null}
     </Screen>
   );
 }
 
 interface ProgramCardProps {
   readonly item: ProgramListItem;
+  /** Best fit for the learner's saved choices (Settings → What I want to learn). */
+  readonly suggested: boolean;
   readonly onAdd: () => void;
   readonly onStart: () => void;
 }
 
-function ProgramCard({ item, onAdd, onStart }: ProgramCardProps) {
+function ProgramCard({ item, suggested, onAdd, onStart }: ProgramCardProps) {
   const titleOf = useModuleTitles();
   const { program, state, queuePlace } = item;
   return (
@@ -72,6 +75,11 @@ function ProgramCard({ item, onAdd, onStart }: ProgramCardProps) {
       <AppText variant="caption" color="textSecondary" testID={`program-state-${program.id}`}>
         {queuePlace ? `${STATE_LABELS[state]} (number ${queuePlace})` : STATE_LABELS[state]}
       </AppText>
+      {suggested ? (
+        <AppText variant="caption" color="brand" testID={`program-suggested-${program.id}`}>
+          Suggested for you, from your saved choices
+        </AppText>
+      ) : null}
       <AppText>{program.summary}</AppText>
       <AppText variant="caption" color="textSecondary">{`${program.moduleIds.length} modules · suggested length ${program.defaultWeeks} weeks: ${program.moduleIds.map(titleOf).join(' · ')}`}</AppText>
       {state === 'not_added' || state === 'completed' ? (

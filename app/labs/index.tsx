@@ -66,14 +66,14 @@ export default function LabsScreen() {
           subtitle="Forex, stocks, penny stocks, commodities and futures"
           onPress={() => router.push("/labs/markets")}
         />
-        {isFeatureEnabled("futuresCalculator") && canOpen("/learn/calculators") ? (
+        {isFeatureEnabled("futuresCalculator") && canOpen("/tools/calculator") ? (
           <ListRow
             testID="labs-futures-calculator"
             title="Futures contract calculator"
             subtitle="Ticks, P/L, notional value, leverage and margin calls"
             onPress={() =>
               router.push({
-                pathname: "/learn/calculators",
+                pathname: "/tools/calculator",
                 params: { calc: "futures_contract" },
               })
             }

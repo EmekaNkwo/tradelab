@@ -1,0 +1,25 @@
+{
+  "id": "option",
+  "term": "Option",
+  "aliases": [
+    "options",
+    "option contract"
+  ],
+  "definition": {
+    "simple": "A contract that gives its buyer a right, but not a duty, to buy or sell something at a set price by or on a set date. The seller takes on the duty.",
+    "balanced": "The buyer pays a [[option-premium|premium]] for the right. A [[call-option]] is a right to buy; a [[put-option]] is a right to sell, at the [[strike-price]], until or at [[expiry]]. The seller, or [[option-writer|writer]], must deliver, or pay the cash difference, if the buyer [[exercise|exercises]]. Each contract's specification sets the [[underlying]], how many units it covers, the [[exercise-style]] and how it settles."
+  },
+  "related": [
+    "call-option",
+    "put-option",
+    "strike-price",
+    "option-premium",
+    "expiry",
+    "option-writer"
+  ],
+  "markets": [
+    "options"
+  ],
+  "level": "beginner",
+  "sourceIds": []
+}

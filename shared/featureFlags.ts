@@ -27,6 +27,8 @@ export const featureFlags = {
   programs: true,
   analysisLabs: true,
   futuresCalculator: true,
+  // Options module: option payoff at expiry
+  optionsCalculator: true,
   // Phase 8 — strategy library, strategy pages, research library, famous traders
   strategies: true,
   researchLibrary: true,

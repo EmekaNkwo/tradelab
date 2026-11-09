@@ -1,4 +1,4 @@
-import type { MarketKind } from '../../shared/types';
+import type { StudyMarket } from '../../shared/types';
 import type { ContentLevel, LevelledText, Question, SourceQuality } from './content';
 import type { SkillId } from './progress';
 
@@ -110,7 +110,7 @@ export interface Strategy {
   readonly title: string;
   readonly category: StrategyCategory;
   readonly family: StrategyFamily;
-  readonly markets: readonly MarketKind[];
+  readonly markets: readonly StudyMarket[];
   readonly level: ContentLevel;
   readonly horizon: StrategyHorizon;
   readonly style: StrategyStyle;
@@ -149,7 +149,7 @@ export interface SourcedStatement {
 export interface Trader {
   readonly id: string;
   readonly name: string;
-  readonly markets: readonly MarketKind[];
+  readonly markets: readonly StudyMarket[];
   readonly knownFor: string;
   readonly summary: string;
   /** What the sources document. */

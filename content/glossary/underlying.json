@@ -1,0 +1,21 @@
+{
+  "id": "underlying",
+  "term": "Underlying",
+  "aliases": [
+    "underlying asset",
+    "underlying instrument"
+  ],
+  "definition": {
+    "simple": "The thing an option or other derivative is based on, such as a share, an index or a futures contract.",
+    "balanced": "An option's value at expiry depends only on the underlying's price against the [[strike-price]]. The contract specification names the underlying and how many units of it one contract covers."
+  },
+  "related": [
+    "option",
+    "strike-price"
+  ],
+  "markets": [
+    "options"
+  ],
+  "level": "beginner",
+  "sourceIds": []
+}

@@ -12,6 +12,7 @@ import { isFeatureEnabled } from '../../shared/featureFlags';
 import { dec, toFixedString, type Decimal } from '../../shared/decimal';
 import { ok, type Result } from '../../shared/result';
 import { FUTURES_CALCULATOR } from './futuresCalculator';
+import { OPTIONS_CALCULATOR } from './optionsCalculator';
 import { RISK_CALCULATORS } from './riskCalculators';
 
 /**
@@ -34,10 +35,11 @@ export type CalculatorId =
   | 'losing_streak'
   | 'risk_of_ruin'
   | 'compounding'
-  | 'futures_contract';
+  | 'futures_contract'
+  | 'option_payoff';
 
 /** `signed` numbers may be negative (the decimal pad has no minus key, so they get a full keyboard). */
-export type FieldKind = 'number' | 'signed' | 'pair' | 'currency' | 'side';
+export type FieldKind = 'number' | 'signed' | 'pair' | 'currency' | 'side' | 'choice';
 
 export interface CalculatorField {
   readonly name: string;
@@ -45,6 +47,8 @@ export interface CalculatorField {
   readonly kind: FieldKind;
   readonly defaultValue: string;
   readonly help?: string;
+  /** The options of a `choice` field. */
+  readonly choices?: readonly { readonly value: string; readonly label: string }[];
   /** Shown only when this returns true for the current values. */
   readonly when?: (values: CalculatorValues) => boolean;
 }
@@ -222,12 +226,14 @@ const FOREX_CALCULATORS: readonly CalculatorDefinition[] = [
   },
 ];
 
-/** Forex calculators (Phase 3), risk calculators (Phase 5), then the futures contract calculator (Phase 7). */
-export const CALCULATORS: readonly CalculatorDefinition[] = [...FOREX_CALCULATORS, ...RISK_CALCULATORS, FUTURES_CALCULATOR];
+/** Forex calculators (Phase 3), risk calculators (Phase 5), the futures contract calculator (Phase 7), then option payoff. */
+export const CALCULATORS: readonly CalculatorDefinition[] = [...FOREX_CALCULATORS, ...RISK_CALCULATORS, FUTURES_CALCULATOR, OPTIONS_CALCULATOR];
 
 /** The calculators whose feature is on (read on each call, so a flag change is seen). */
 export function availableCalculators(): readonly CalculatorDefinition[] {
-  return CALCULATORS.filter((c) => c !== FUTURES_CALCULATOR || isFeatureEnabled('futuresCalculator'));
+  return CALCULATORS.filter(
+    (c) => (c !== FUTURES_CALCULATOR || isFeatureEnabled('futuresCalculator')) && (c !== OPTIONS_CALCULATOR || isFeatureEnabled('optionsCalculator')),
+  );
 }
 
 export function calculator(id: string): CalculatorDefinition | null {

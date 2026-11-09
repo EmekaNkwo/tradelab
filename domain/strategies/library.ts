@@ -1,4 +1,4 @@
-import type { MarketKind } from '../../shared/types';
+import type { StudyMarket } from '../../shared/types';
 import type { ContentLevel } from '../models/content';
 import type { AnalysisKind, Strategy, StrategyCategory, StrategyFamily, StrategyHorizon, StrategyStyle } from '../models/strategies';
 
@@ -14,7 +14,7 @@ export type TraderAssociation = 'with_trader' | 'generic';
 export const TRADER_ASSOCIATIONS: readonly TraderAssociation[] = ['with_trader', 'generic'];
 
 export interface LibraryFilters {
-  readonly markets: readonly MarketKind[];
+  readonly markets: readonly StudyMarket[];
   readonly categories: readonly StrategyCategory[];
   readonly families: readonly StrategyFamily[];
   readonly levels: readonly ContentLevel[];

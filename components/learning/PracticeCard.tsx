@@ -20,12 +20,15 @@ interface PracticeCardProps {
 }
 
 /** Modules whose calculator tasks need a calculator other than the first one. */
-const MODULE_CALCULATORS: Readonly<Record<string, string>> = { futures: 'futures_contract' };
+const MODULE_CALCULATORS: Readonly<Record<string, string>> = { futures: 'futures_contract', options: 'option_payoff' };
 
-/** The screen each practice kind opens. */
-/** Where each practice task kind opens. Exported so the route test can check every value is a real route. */
-export const TOOL_ROUTES: Readonly<Record<string, '/learn/calculators' | '/practice/chart-lab' | '/practice/replay' | '/practice/paper' | '/labs'>> = {
-  calculator: '/learn/calculators',
+/**
+ * Where each practice task kind opens. Exported so the route test can check every value is a real route. The
+ * calculator opens on top of the lesson (Back returns to it); the others open inside the Practice or Learn tab with
+ * that tab's first screen underneath, so the tab is never left stuck on the tool.
+ */
+export const TOOL_ROUTES: Readonly<Record<string, '/tools/calculator' | '/practice/chart-lab' | '/practice/replay' | '/practice/paper' | '/labs'>> = {
+  calculator: '/tools/calculator',
   chart_lab: '/practice/chart-lab',
   replay: '/practice/replay',
   paper: '/practice/paper',
@@ -35,8 +38,14 @@ export const TOOL_ROUTES: Readonly<Record<string, '/learn/calculators' | '/pract
 function openTool(kind: string, moduleId: string | undefined): void {
   const route = TOOL_ROUTES[kind];
   if (!route) return;
-  const calc = kind === 'calculator' && moduleId ? MODULE_CALCULATORS[moduleId] : undefined;
-  router.push(calc ? { pathname: '/learn/calculators', params: { calc } } : route);
+  if (kind === 'calculator') {
+    const calc = moduleId ? MODULE_CALCULATORS[moduleId] : undefined;
+    router.push(calc ? { pathname: '/tools/calculator', params: { calc } } : '/tools/calculator');
+    return;
+  }
+  // Labs is a stack screen above the tabs; the practice tools live inside the Practice tab.
+  if (route === '/labs') router.push(route);
+  else router.push(route, { withAnchor: true });
 }
 
 const TOOL_LABELS: Readonly<Record<string, string>> = {

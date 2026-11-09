@@ -1,4 +1,4 @@
-import type { ExplanationLevel, MarketKind } from '../../shared/types';
+import type { ExplanationLevel, StudyMarket } from '../../shared/types';
 import type { SkillId } from './progress';
 
 /**
@@ -23,12 +23,12 @@ export interface GlossaryEntry {
   readonly definition: LevelledText;
   readonly example?: string;
   readonly related: readonly string[];
-  readonly markets: readonly MarketKind[];
+  readonly markets: readonly StudyMarket[];
   readonly level: ContentLevel;
   readonly sourceIds: readonly string[];
 }
 
-export type DisclosureTrigger = 'first_launch' | 'futures' | 'penny_stocks' | 'leverage' | 'final_module' | 'always';
+export type DisclosureTrigger = 'first_launch' | 'futures' | 'penny_stocks' | 'options' | 'leverage' | 'final_module' | 'always';
 
 /**
  * A statistic may only appear with full provenance (spec §3 rule 2).
@@ -176,7 +176,7 @@ export interface Module {
   readonly id: string;
   readonly title: string;
   readonly summary: string;
-  readonly markets: readonly MarketKind[];
+  readonly markets: readonly StudyMarket[];
   readonly level: ContentLevel;
   readonly lessonIds: readonly string[];
   readonly checkpointQuizId: string;

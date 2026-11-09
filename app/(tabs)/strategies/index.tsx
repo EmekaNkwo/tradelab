@@ -10,7 +10,6 @@ import {
   activeFilterCount,
   CATEGORY_LABELS,
   FAMILY_LABELS,
-  FILTER_DIMENSIONS,
   HORIZON_LABELS,
   NO_FILTERS,
   useSavedStrategies,
@@ -22,15 +21,18 @@ import {
   type Strategy,
   type StrategyCompletion,
 } from '../../../features/strategies';
+import { isPreferenceMatch, usePreferenceMatcher } from '../../../features/learning';
 import { useTheme } from '../../../theme';
 import { canOpen } from '../../../shared/routeAccess';
+import { STUDY_MARKETS } from '../../../shared/types';
 
 const open = (id: string) => router.push({ pathname: '/strategy/[id]', params: { id } });
 
 const subtitle = (s: Strategy) => [FAMILY_LABELS[s.family], HORIZON_LABELS[s.horizon]].join(' · ');
 
-const chipsFor = (s: Strategy, completion: StrategyCompletion | undefined) =>
+const chipsFor = (s: Strategy, completion: StrategyCompletion | undefined, forYou: boolean) =>
   strategyChips(s, {
+    forYou,
     replay: s.replay !== null && canOpen('/practice/replay'),
     backtest: labLinkFor(s)?.kind === 'template' && canOpen('/backtest/builder'),
     completed: completion?.complete === true,
@@ -44,6 +46,14 @@ export default function StrategiesScreen() {
   const saved = useSavedStrategies();
   const progress = useStrategyProgress();
   const actions = useStrategyActions();
+  const matcher = usePreferenceMatcher();
+  // With every market chosen the chip would be on every card and say nothing, so it is left off.
+  const everyMarket = (matcher.prefs?.markets.length ?? 0) >= STUDY_MARKETS.length;
+  const forYou = (s: Strategy) => {
+    if (everyMarket) return false;
+    const m = matcher.forStrategy(s);
+    return m !== null && isPreferenceMatch(m);
+  };
   const [showFilters, setShowFilters] = useState(false);
   const [moveError, setMoveError] = useState<string | null>(null);
   const completion = (id: string) => (progress.status === 'success' ? progress.data.get(id) : undefined);
@@ -105,7 +115,7 @@ export default function StrategiesScreen() {
           {traders.length > 0 && canOpen('/traders') ? (
             <ListRow testID="strategies-traders" title="Trader pages" subtitle="Documented methods, each checked against its sources by a person" onPress={() => router.push('/traders')} />
           ) : null}
-          {program && canOpen('/learn/programs') ? <ListRow testID="strategies-great-traders" title={program.title} subtitle={program.summary} onPress={() => router.push('/learn/programs')} /> : null}
+          {program && canOpen('/learn/programs') ? <ListRow testID="strategies-great-traders" title={program.title} subtitle={program.summary} onPress={() => router.push('/learn/programs', { withAnchor: true })} /> : null}
         </Card>
       ) : null}
       {canOpen('/backtest') || canOpen('/portfolio') ? (
@@ -124,7 +134,7 @@ export default function StrategiesScreen() {
       {showFilters ? (
         <View testID="strategy-filters">
           <Card>
-            {FILTER_DIMENSIONS.map((d) => (
+            {library.dimensions.map((d) => (
               <View key={d.key} style={{ gap: spacing.xs }}>
                 <AppText variant="label">{d.label}</AppText>
                 <ChoiceChips label={d.label} hideLabel options={d.options} selected={library.filters[d.key] as readonly string[]} onChange={(v) => setDimension(d.key, v)} />
@@ -155,7 +165,7 @@ export default function StrategiesScreen() {
               strategy={s}
               subtitle={subtitle(s)}
               traders={s.traderIds.flatMap((t) => content.trader(t)?.name ?? [])}
-              chips={chipsFor(s, completion(s.id))}
+              chips={chipsFor(s, completion(s.id), forYou(s))}
               onPress={() => open(s.id)}
             />
           ))}

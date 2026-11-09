@@ -1,9 +1,9 @@
 import { useCallback, useMemo, useState } from 'react';
-import { buildUnits, gradeQuestion, gradeQuiz, type Answers, type QuizResult, type ScheduleSettings, type Weekday } from '../../domain/learning';
+import { buildUnits, gradeQuestion, gradeQuiz, suggestedProgramId, type Answers, type QuizResult, type ScheduleSettings, type Weekday } from '../../domain/learning';
 import type { ExperienceLevel, LearningGoal, MetaTraderVersion } from '../../domain/models/learner';
 import type { AppError } from '../../shared/errors';
 import { deviceTimeZone } from '../../shared/time';
-import type { ExplanationLevel, MarketKind } from '../../shared/types';
+import type { ExplanationLevel, StudyMarket } from '../../shared/types';
 import { useContainer } from '../app';
 import { previewProgram, programModules, todayIn } from './plan';
 import { scheduleFieldProps, type TimelineChoice } from './scheduleEditor';
@@ -17,7 +17,7 @@ export type OnboardingStep = (typeof ONBOARDING_STEPS)[number];
 export interface OnboardingDraft {
   readonly riskAcknowledged: boolean;
   readonly experience: ExperienceLevel | null;
-  readonly markets: readonly MarketKind[];
+  readonly markets: readonly StudyMarket[];
   readonly goals: readonly LearningGoal[];
   readonly explanationLevel: ExplanationLevel;
   readonly metaTraderVersion: MetaTraderVersion | 'none';
@@ -78,8 +78,22 @@ export function useOnboarding() {
   const [error, setError] = useState<AppError | null>(null);
   const [busy, setBusy] = useState(false);
 
+  /** Once the learner picks a program themselves, their answers no longer move the pick. */
+  const [programChosen, setProgramChosen] = useState(false);
+
   const step = ONBOARDING_STEPS[stepIndex] ?? 'risk';
-  const update = useCallback((patch: Partial<OnboardingDraft>) => setDraft((d) => ({ ...d, ...patch })), []);
+  const update = useCallback((patch: Partial<OnboardingDraft>) => {
+    if (patch.programId !== undefined) setProgramChosen(true);
+    setDraft((d) => ({ ...d, ...patch }));
+  }, []);
+
+  const suggestedProgram = useMemo(
+    () =>
+      draft.experience
+        ? suggestedProgramId(c.content.programs(), (id) => c.content.module(id), { experience: draft.experience, markets: draft.markets, goals: draft.goals })
+        : null,
+    [c.content, draft.experience, draft.goals, draft.markets],
+  );
 
   const settings: ScheduleSettings = useMemo(
     () => ({ startDate: today, timeline: draft.timeline, studyDays: draft.studyDays, dailyMinutes: draft.dailyMinutes }),
@@ -160,8 +174,16 @@ export function useOnboarding() {
     draft,
     update,
     canContinue: canContinue(step, draft),
-    next: () => setStepIndex((i) => Math.min(i + 1, ONBOARDING_STEPS.length - 1)),
+    next: () => {
+      const nextIndex = Math.min(stepIndex + 1, ONBOARDING_STEPS.length - 1);
+      // Arriving at the program step: start from the program that fits the answers so far, unless one was picked.
+      if (ONBOARDING_STEPS[nextIndex] === 'program' && !programChosen && suggestedProgram && suggestedProgram !== draft.programId) {
+        setDraft((d) => ({ ...d, programId: suggestedProgram, placementPassedModuleIds: [], placementAttempts: {} }));
+      }
+      setStepIndex(nextIndex);
+    },
     back: () => setStepIndex((i) => Math.max(i - 1, 0)),
+    suggestedProgramId: suggestedProgram,
     today,
     scheduleFields: scheduleFieldProps(draft, update, today),
     preview,

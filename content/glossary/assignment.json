@@ -1,0 +1,22 @@
+{
+  "id": "assignment",
+  "term": "Assignment",
+  "aliases": [
+    "assigned",
+    "assignment notice"
+  ],
+  "definition": {
+    "simple": "When an option holder exercises, a seller of that option is chosen to carry out the deal. That seller has been assigned.",
+    "balanced": "An assigned call seller must sell the underlying at the strike; an assigned put seller must buy it at the strike. With an American-style option, assignment can come before expiry. The seller does not choose when."
+  },
+  "related": [
+    "exercise",
+    "option-writer",
+    "exercise-style"
+  ],
+  "markets": [
+    "options"
+  ],
+  "level": "intermediate",
+  "sourceIds": []
+}

@@ -4,7 +4,7 @@ import { ModuleCard } from '../../../components/learning/ModuleCard';
 import { ProgramHero } from '../../../components/learning/ProgramHero';
 import { Card, ChoiceChips, ErrorState, ListRow, Screen, SectionHeader, SkeletonState } from '../../../components/ui';
 import { BookOpen, Calculator, FlaskConical, GraduationCap, MonitorSmartphone } from '../../../components/ui/icons';
-import { programHeroView, useLearnOverview, useLearningHome, usePrograms, type CurrentProgram } from '../../../features/learning';
+import { describeMatch, programHeroView, useLearnOverview, useLearningHome, usePreferenceMatcher, usePrograms, type CurrentProgram } from '../../../features/learning';
 import { canOpen } from '../../../shared/routeAccess';
 
 export default function LearnScreen() {
@@ -12,6 +12,11 @@ export default function LearnScreen() {
   const [programId, setProgramId] = useState<string | null>(null);
   const overview = useLearnOverview(programId);
   const home = useLearningHome();
+  const matcher = usePreferenceMatcher();
+  const matchText = (moduleId: string) => {
+    const m = matcher.forModuleId(moduleId);
+    return m ? describeMatch(m) : null;
+  };
   const e = home.status === 'success' ? home.data.enrolment : null;
   const current: CurrentProgram | null = e && home.status === 'success' ? { programId: e.programId, status: e.status, finishDate: home.data.finishDate, today: home.data.today } : null;
   return (
@@ -40,7 +45,7 @@ export default function LearnScreen() {
           />
           <SectionHeader title="Modules" />
           {overview.data.modules.map((m, i) => (
-            <ModuleCard key={m.id} module={m} number={i + 1} />
+            <ModuleCard key={m.id} module={m} number={i + 1} match={matchText(m.id)} />
           ))}
         </>
       ) : null}
@@ -53,7 +58,7 @@ export default function LearnScreen() {
           <ListRow testID="learn-labs" icon={FlaskConical} title="Analysis labs" subtitle="Technical and fundamental analysis, market comparison" onPress={() => router.push('/labs')} />
         ) : null}
         <ListRow testID="learn-glossary" icon={BookOpen} title="Glossary" subtitle="Every term, explained at your level" onPress={() => router.push('/learn/glossary')} />
-        <ListRow testID="learn-calculators" icon={Calculator} title="Calculators" subtitle="Pip value, position size, margin, risk and futures contracts" onPress={() => router.push('/learn/calculators')} />
+        <ListRow testID="learn-calculators" icon={Calculator} title="Calculators" subtitle="Pip value, position size, margin, risk, futures contracts and options at expiry" onPress={() => router.push('/learn/calculators')} />
         <ListRow testID="learn-metatrader" icon={MonitorSmartphone} title="MetaTrader practice" subtitle="Guided tasks on a demo account" onPress={() => router.push('/learn/metatrader')} />
       </Card>
     </Screen>

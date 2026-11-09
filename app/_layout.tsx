@@ -98,6 +98,7 @@ function AppStack() {
         <Stack.Screen name="review" options={{ title: 'Review' }} />
         <Stack.Screen name="lesson/[id]" options={{ title: 'Lesson' }} />
         <Stack.Screen name="glossary/[id]" options={{ title: 'Glossary' }} />
+        <Stack.Screen name="tools/calculator" options={{ title: 'Calculator' }} />
         <Stack.Screen name="mt-task/[id]" options={{ title: 'MetaTrader task' }} />
         <Stack.Screen name="labs/index" options={{ title: 'Analysis labs' }} />
         <Stack.Screen name="labs/concepts/[lab]" options={{ title: 'Lab' }} />

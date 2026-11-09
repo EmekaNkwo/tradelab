@@ -139,7 +139,7 @@ function BackupCard() {
           {settings.data.lastBackupAt ? `Last backup: ${formatInTimeZone(settings.data.lastBackupAt, settings.data.timeZone)}` : 'You have not made a backup yet.'}
         </AppText>
       ) : null}
-      {canOpen('/more/backup') ? <Button label="Back up or restore" variant="secondary" onPress={() => router.push('/more/backup')} /> : null}
+      {canOpen('/more/backup') ? <Button label="Back up or restore" variant="secondary" onPress={() => router.push('/more/backup', { withAnchor: true })} /> : null}
     </Card>
   );
 }

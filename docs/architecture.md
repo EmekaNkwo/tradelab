@@ -122,6 +122,13 @@ Every integration is optional, off by default and offline-safe; the app works fu
 - **Errors.** `shownError(kind, message)` marks a message written for the learner (for example a plan limit), which `errorText` shows instead of the generic text for that kind.
 - **Settings.** `integrations` (provider on/off, coach mode, cloud model, consent per data type), all off by default. Screens: `app/(tabs)/more/services.tsx`, `app/data/*`, `app/calendar/*`, `app/news.tsx`, `app/coach.tsx`.
 
+## After Phase 12: learning preferences and options
+
+- **Learning preferences** (`domain/learning/preferenceMatch.ts`, `features/learning/preferences.ts`). The onboarding answers (experience, markets, goals) can be changed in Settings → What I want to learn (`app/(tabs)/more/preferences.tsx`) without touching the program, schedule or progress. They drive suggestions only: the best-fit program (Programs, and preselected in onboarding), "For you" on Learn modules and on Strategies cards. Goals map to module skills through `GOAL_SKILLS`; markets weigh more than goals.
+- **Study markets vs simulated markets** (`shared/types.ts`). `StudyMarket` = `MarketKind` + `options`. Content tags, the learner profile, onboarding and strategy filters use `StudyMarket`; price data, the simulator, paper trading, the journal and the market-data tables keep `MarketKind`, because there is no options price data.
+- **Options module** (`content/modules/options.json`, lessons `op-*`, disclosure trigger `options`), part of Trader Development after Futures. The option-at-expiry calculator (`domain/calculators/options.ts`, flag `optionsCalculator`) values options at expiry only.
+- **Navigation between tabs.** Every tab stack sets `unstable_settings.initialRouteName = 'index'`, and a push from one tab into a screen of another passes `{ withAnchor: true }`, so the target tab keeps its first screen underneath. A lesson or class opens calculators at `/tools/calculator` (root stack), so Back returns to the lesson.
+
 ## Adding things in later phases
 
 - **New table** → new migration file appended to `MIGRATIONS`; if it holds learner data, append it to `BACKUP_TABLES` (parents first) and, if it changes an existing learner table, add a step to `backupMigrations.ts`.
