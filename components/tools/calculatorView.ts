@@ -17,6 +17,7 @@ export const HEADLINE: Readonly<Record<CalculatorId, string>> = {
   risk_of_ruin: 'Simulated runs that hit the ruin level',
   compounding: 'Ending amount',
   futures_contract: 'Profit or loss',
+  option_payoff: 'Profit or loss at expiry',
 };
 
 /** A line written as a sentence (a note, a warning) rather than a figure. */
@@ -59,7 +60,7 @@ export function fieldUnit(field: CalculatorField, values: CalculatorValues): str
 }
 
 /** Headlines that are a profit or loss: shown with a sign and an arrow, and spoken as a gain or loss (brief §1). */
-const RESULT_HEADLINES: ReadonlySet<CalculatorId> = new Set<CalculatorId>(['profit_loss', 'futures_contract']);
+const RESULT_HEADLINES: ReadonlySet<CalculatorId> = new Set<CalculatorId>(['profit_loss', 'futures_contract', 'option_payoff']);
 
 export interface SignedHeadline {
   readonly direction: Direction;

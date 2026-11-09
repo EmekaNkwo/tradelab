@@ -1,0 +1,23 @@
+{
+  "id": "options",
+  "skills": [
+    "market_fundamentals",
+    "risk_management"
+  ],
+  "title": "Options: calls, puts, premium and expiry",
+  "summary": "What calls and puts are, how strike, premium, expiry and contract size work, what buyers and sellers can gain or lose at expiry, why sold options can lose far more than the premium, how intrinsic value, time value and volatility shape a premium, and how to check a specification before any study trade.",
+  "markets": [
+    "options"
+  ],
+  "level": "intermediate",
+  "lessonIds": [
+    "op-calls-puts-basics",
+    "op-buying-payoff",
+    "op-selling-obligation",
+    "op-premium-value",
+    "op-risk-practice"
+  ],
+  "checkpointQuizId": "options-checkpoint",
+  "practicalResult": "Work out value at expiry, profit or loss, breakeven and largest possible loss for 5 fictional option cases (bought and sold calls and puts), doing each by hand first, then check every one in the option-at-expiry calculator and write your options study rules.",
+  "minPracticeDays": 0
+}

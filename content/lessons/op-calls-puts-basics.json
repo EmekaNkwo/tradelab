@@ -1,0 +1,153 @@
+{
+  "id": "op-calls-puts-basics",
+  "moduleId": "options",
+  "title": "What an option is: calls, puts, strike, premium and expiry",
+  "level": "beginner",
+  "estimatedMinutes": 15,
+  "inOneLine": {
+    "simple": "An option gives its buyer the right, but not the duty, to buy or sell something at a set price before or on a set date. The buyer pays a price for that right.",
+    "balanced": "A [[call-option|call]] is a right to buy and a [[put-option|put]] is a right to sell the [[underlying]] at the [[strike-price]], until or at [[expiry]]. The buyer pays the [[option-premium|premium]]; the seller, or [[option-writer|writer]], receives it and takes on the obligation."
+  },
+  "explain": {
+    "simple": "An option is a contract between two sides. The buyer pays a price, called the premium, and gets a choice. With a call, the choice is to buy the underlying (the share or other thing the option is based on) at a fixed price, called the strike. With a put, the choice is to sell at the strike. The choice lasts until a set date, called expiry. The buyer never has to use it. The seller is different: the seller keeps the premium but must carry out the deal if the buyer uses the right. Using the right is called exercise. When that happens, a seller is picked to fulfil it, which is called assignment.",
+    "balanced": "Exchange-listed options are standardised contracts, and each one has a specification. It names the underlying, how many units one contract covers, the strikes and expiry dates on offer, the [[exercise-style]] and how the contract settles. American style can be [[exercise|exercised]] on any trading day up to expiry; European style only at expiry. Some options end with the underlying changing hands, others settle in cash. The premium is usually quoted per unit of the underlying, so the money for one contract is premium × units per contract. In this module one contract covers 100 units, but only because the examples are fictional. Never assume a contract size: check the exact contract's specification."
+  },
+  "realNumbers": {
+    "assumptions": [
+      "Example option (fictional specs): one contract covers 100 units of a fictional share",
+      "Share price today 50.00 USD",
+      "Call option: strike 52.00, premium 1.50 USD per unit",
+      "Fees left out"
+    ],
+    "steps": [
+      "Premium for 1 contract = 1.50 × 100 = 150 USD. The buyer pays it; the seller receives it.",
+      "The buyer now holds the right to buy 100 units at 52.00. The seller has the duty to sell 100 units at 52.00 if assigned.",
+      "If the share is at 55.00 at expiry, the right to buy at 52.00 is worth 55.00 − 52.00 = 3.00 per unit, or 3.00 × 100 = 300 USD for the contract.",
+      "If the share is at 49.00 at expiry, nobody would pay 52.00 for something worth 49.00. The call expires worthless, and the buyer has lost the 150 USD premium.",
+      "The next lesson works out profit and loss, which also counts the premium paid."
+    ]
+  },
+  "anotherExample": {
+    "assumptions": [
+      "Same fictional contract size: 100 units per contract",
+      "Fictional share price today 40.00 USD",
+      "Put option: strike 38.00, premium 1.20 USD per unit"
+    ],
+    "steps": [
+      "Premium for 1 contract = 1.20 × 100 = 120 USD.",
+      "The buyer holds the right to sell 100 units at 38.00. The seller must buy them at 38.00 if assigned.",
+      "If the share is at 35.00 at expiry, the right to sell at 38.00 is worth 38.00 − 35.00 = 3.00 per unit, or 300 USD for the contract.",
+      "If the share is at 41.00 at expiry, selling at 38.00 makes no sense. The put expires worthless and the 120 USD premium is gone."
+    ]
+  },
+  "explainSimpler": "A call is a paid ticket to buy at a fixed price. A put is a paid ticket to sell at a fixed price. The ticket runs out on a set date. The buyer can use it or not; the seller must go along if it is used.",
+  "commonMistake": "Mixing up the two sides. The buyer has a right and a known cost; the seller has an obligation. Another mistake is forgetting the contract size: a premium of 1.50 is per unit, so one contract costs 1.50 × the units it covers, which you must read from the specification.",
+  "quickCheck": [
+    {
+      "id": "op-calls-puts-basics-q1",
+      "prompt": "Which option gives its holder the right to sell the underlying at the strike price?",
+      "options": [
+        {
+          "id": "a",
+          "text": "A call",
+          "explanation": "No: a call is a right to buy at the strike."
+        },
+        {
+          "id": "b",
+          "text": "A put",
+          "explanation": "Right: a put is a right to sell at the strike, until or at expiry."
+        },
+        {
+          "id": "c",
+          "text": "Any option, after expiry",
+          "explanation": "No: after expiry the option no longer exists, so there is no right left."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "put-option",
+        "call-option"
+      ]
+    },
+    {
+      "id": "op-calls-puts-basics-q2",
+      "prompt": "Fictional option: premium 0.80 USD per unit, one contract covers 100 units (fictional). You buy 2 contracts. What premium do you pay?",
+      "options": [
+        {
+          "id": "a",
+          "text": "80 USD",
+          "explanation": "No: that is the premium for one contract. You bought 2."
+        },
+        {
+          "id": "b",
+          "text": "160 USD",
+          "explanation": "Right: 0.80 × 100 × 2 = 160 USD."
+        },
+        {
+          "id": "c",
+          "text": "1.60 USD",
+          "explanation": "No: that leaves out the 100 units each contract covers."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "option-premium"
+      ]
+    },
+    {
+      "id": "op-calls-puts-basics-q3",
+      "prompt": "You sold (wrote) a call option. The buyer exercises it. What happens to you?",
+      "options": [
+        {
+          "id": "a",
+          "text": "You are assigned and must sell at the strike",
+          "explanation": "Right: the writer has the obligation, and assignment makes it due."
+        },
+        {
+          "id": "b",
+          "text": "You can choose to refuse",
+          "explanation": "No: only the buyer has a choice. The seller must carry out the deal."
+        },
+        {
+          "id": "c",
+          "text": "You must buy at the strike",
+          "explanation": "No: that is what an assigned put seller must do."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "assignment",
+        "option-writer",
+        "exercise"
+      ]
+    }
+  ],
+  "doItNow": {
+    "kind": "calculator",
+    "instructions": "Open the option-at-expiry calculator. Set Option type to Call, Position to Buy (hold), Contracts 1, Units per contract 100, Strike price 52, Premium per unit 1.50 and Price of the underlying at expiry 55. Check that Value per unit at expiry shows 3.00 and Premium paid shows 150.00. Change the price at expiry to 49 and see it expire worthless. Then write, one line each, the seven things you would read in a real option's specification: underlying, units per contract, call or put, strike, expiry date, exercise style and settlement."
+  },
+  "homework": "Write a one-page 'option spec card' with blank fields for underlying, call or put, units per contract, strike, expiry date, exercise style, settlement and premium per unit. Fill it in for the two fictional options in this lesson.",
+  "glossaryIds": [
+    "option",
+    "call-option",
+    "put-option",
+    "underlying",
+    "strike-price",
+    "option-premium",
+    "expiry",
+    "exercise",
+    "assignment",
+    "exercise-style",
+    "option-writer"
+  ],
+  "sourceIds": []
+}

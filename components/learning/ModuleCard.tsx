@@ -14,7 +14,7 @@ import { ListRow } from '../ui/ListRow';
  * a calm check, and its lessons. Modules are never locked in TradeLab (any lesson can be read again), so there is
  * no lock state to show.
  */
-export function ModuleCard({ module, number }: { readonly module: ModuleOverview; readonly number: number }) {
+export function ModuleCard({ module, number, match }: { readonly module: ModuleOverview; readonly number: number; readonly match?: string | null }) {
   const { colors, radii, spacing } = useTheme();
   const done = module.lessons.filter((l) => l.done).length;
   const percent = modulePercent(module);
@@ -28,6 +28,9 @@ export function ModuleCard({ module, number }: { readonly module: ModuleOverview
           <AppText variant="caption" color="textSecondary" tabular testID={`module-progress-${module.id}`}>
             {`${done} of ${module.lessons.length} lessons · checkpoint ${module.checkpointPassed ? 'passed' : 'not passed yet'}`}
           </AppText>
+          {match ? (
+            <AppText variant="caption" color="brand" testID={`module-match-${module.id}`}>{`For you · ${match}`}</AppText>
+          ) : null}
         </View>
       </View>
       {/* The caption above says the same in words, so the bar is decoration for screen readers. */}

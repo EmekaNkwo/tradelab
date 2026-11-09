@@ -1,5 +1,5 @@
 import type { RiskRules } from '../risk/rules';
-import type { ExplanationLevel, MarketKind, ThemePreference } from '../../shared/types';
+import type { ExplanationLevel, StudyMarket, ThemePreference } from '../../shared/types';
 import type { UtcIso } from '../../shared/time';
 
 export type ExperienceLevel =
@@ -25,7 +25,7 @@ export type MetaTraderVersion = 'mt4' | 'mt5';
 export interface UserProfile {
   readonly id: string;
   readonly experience: ExperienceLevel;
-  readonly markets: readonly MarketKind[];
+  readonly markets: readonly StudyMarket[];
   readonly goals: readonly LearningGoal[];
   readonly explanationLevel: ExplanationLevel;
   readonly metaTrader: { readonly version: MetaTraderVersion; readonly installed: boolean } | null;

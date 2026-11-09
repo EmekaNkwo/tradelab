@@ -1,0 +1,22 @@
+{
+  "id": "exercise",
+  "term": "Exercise",
+  "aliases": [
+    "exercised",
+    "exercising"
+  ],
+  "definition": {
+    "simple": "Using the right an option gives: buying the underlying at the strike (call) or selling it at the strike (put).",
+    "balanced": "Only the holder decides whether to exercise. When it happens, a seller is given the obligation through [[assignment]]. When exercise is allowed is set by the [[exercise-style]], and some contracts settle in cash instead of delivering the underlying. Check the exact contract."
+  },
+  "related": [
+    "assignment",
+    "exercise-style",
+    "option"
+  ],
+  "markets": [
+    "options"
+  ],
+  "level": "beginner",
+  "sourceIds": []
+}

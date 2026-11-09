@@ -31,7 +31,7 @@ export const contentId = z.string().regex(/^[a-z0-9]+(-[a-z0-9]+)*$/, 'ids are l
 const isoDate = z.string().regex(/^\d{4}-\d{2}-\d{2}$/, 'dates are YYYY-MM-DD');
 const text = z.string().trim().min(1);
 const level = z.enum(['beginner', 'intermediate', 'advanced']);
-const market = z.enum(['forex', 'stocks', 'penny_stocks', 'commodities', 'futures']);
+const market = z.enum(['forex', 'stocks', 'penny_stocks', 'commodities', 'futures', 'options']);
 /** Skill tags (spec §23): at least one, no repeats. */
 const skillTags = z
   .array(z.enum(SKILL_IDS))
@@ -60,7 +60,7 @@ export const disclosureSchema = z
     version: z.number().int().positive(),
     title: text,
     body: z.array(text).min(1),
-    triggers: z.array(z.enum(['first_launch', 'futures', 'penny_stocks', 'leverage', 'final_module', 'always'])).min(1),
+    triggers: z.array(z.enum(['first_launch', 'futures', 'penny_stocks', 'options', 'leverage', 'final_module', 'always'])).min(1),
     statistics: z.array(
       z
         .object({

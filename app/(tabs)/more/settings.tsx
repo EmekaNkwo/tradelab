@@ -1,7 +1,8 @@
+import { router } from 'expo-router';
 import { useState } from 'react';
 import { View } from 'react-native';
-import { AppText, Card, CardHeader, ErrorState, LoadingState, Screen, SegmentedControl } from '../../../components/ui';
-import { Award, BellRing, BookOpen, ClipboardCheck, Globe, SunMoon } from '../../../components/ui/icons';
+import { AppText, Card, CardHeader, ErrorState, ListRow, LoadingState, Screen, SegmentedControl } from '../../../components/ui';
+import { Award, BellRing, BookOpen, ClipboardCheck, Globe, GraduationCap, SunMoon } from '../../../components/ui/icons';
 import { useSettings, useUpdateSettings } from '../../../features/settings';
 import type { AppError } from '../../../shared/errors';
 import type { AppSettings, LearningReminderSettings } from '../../../features/settings';
@@ -56,6 +57,15 @@ export default function SettingsScreen() {
         <CardHeader icon={SunMoon} tone="brand" title="Appearance" />
         <SegmentedControl label="Theme" options={THEME_OPTIONS} value={settings.data.theme} onChange={(theme) => save('theme', { theme })} disabled={saving} />
         {errorFor('theme')}
+      </Card>
+      <Card>
+        <ListRow
+          testID="settings-preferences"
+          icon={GraduationCap}
+          title="What I want to learn"
+          subtitle="Change your experience, markets and goals. Your progress is kept."
+          onPress={() => router.push('/more/preferences')}
+        />
       </Card>
       <Card>
         <CardHeader icon={BookOpen} tone="brand" title="Explanations" />

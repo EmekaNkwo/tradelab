@@ -1,0 +1,21 @@
+{
+  "id": "implied-volatility",
+  "term": "Implied volatility",
+  "aliases": [
+    "IV"
+  ],
+  "definition": {
+    "simple": "How big future price swings are expected to be, worked backwards from option prices.",
+    "balanced": "Higher implied volatility usually goes with higher premiums, because bigger swings make a large move more likely. It is an estimate drawn from prices, not a forecast that will come true, and it can fall quickly, lowering premiums even when the underlying price does not move."
+  },
+  "related": [
+    "volatility",
+    "time-value",
+    "option-premium"
+  ],
+  "markets": [
+    "options"
+  ],
+  "level": "intermediate",
+  "sourceIds": []
+}

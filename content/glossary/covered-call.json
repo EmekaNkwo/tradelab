@@ -1,0 +1,19 @@
+{
+  "id": "covered-call",
+  "term": "Covered call",
+  "aliases": [],
+  "definition": {
+    "simple": "Selling a call option on units of the underlying you already own.",
+    "balanced": "If the call is exercised, the owned units are delivered at the strike, so the loss on the call is offset by the units. In return for the premium, the seller gives up gains above the strike and still carries nearly all the risk of the underlying falling; the premium cushions a fall only slightly."
+  },
+  "related": [
+    "uncovered-option",
+    "option-writer",
+    "call-option"
+  ],
+  "markets": [
+    "options"
+  ],
+  "level": "intermediate",
+  "sourceIds": []
+}

@@ -13,7 +13,7 @@ export interface ProfileRepository {
 }
 
 const utcIso = z.string().refine(isUtcIso) as unknown as z.ZodType<UtcIso>;
-const market = z.enum(['forex', 'stocks', 'penny_stocks', 'commodities', 'futures']);
+const market = z.enum(['forex', 'stocks', 'penny_stocks', 'commodities', 'futures', 'options']);
 
 export const profileSchema = z
   .object({

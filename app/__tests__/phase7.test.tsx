@@ -98,7 +98,7 @@ describe('Analysis labs', () => {
     await fireEvent.press(screen.getByTestId('labs-technical'));
     expect(router.push).toHaveBeenCalledWith({ pathname: '/labs/concepts/[lab]', params: { lab: 'technical' } });
     await fireEvent.press(screen.getByTestId('labs-futures-calculator'));
-    expect(router.push).toHaveBeenCalledWith({ pathname: '/learn/calculators', params: { calc: 'futures_contract' } });
+    expect(router.push).toHaveBeenCalledWith({ pathname: '/tools/calculator', params: { calc: 'futures_contract' } });
     for (const id of ['labs-fundamental', 'labs-companies', 'labs-red-flags', 'labs-scenarios', 'labs-markets']) expect(screen.getByTestId(id)).toBeTruthy();
   });
 
@@ -243,7 +243,7 @@ describe('Futures and penny-stock lessons', () => {
     await renderWith(<LessonScreen />);
     expect(await screen.findByText('Futures losses can exceed margin')).toBeTruthy();
     await press('Open the calculators');
-    expect(router.push).toHaveBeenCalledWith({ pathname: '/learn/calculators', params: { calc: 'futures_contract' } });
+    expect(router.push).toHaveBeenCalledWith({ pathname: '/tools/calculator', params: { calc: 'futures_contract' } });
   });
 
   it('a fundamental-lab task opens the labs', async () => {

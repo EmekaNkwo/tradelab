@@ -1,0 +1,21 @@
+{
+  "id": "in-the-money",
+  "term": "In the money",
+  "aliases": [
+    "ITM"
+  ],
+  "definition": {
+    "simple": "An option that would be worth something if it expired now: a call with the price above the strike, or a put with the price below it.",
+    "balanced": "The amount it is in the money per unit is its [[intrinsic-value]]. Being in the money does not mean the buyer is in profit: the premium paid has to be covered first."
+  },
+  "related": [
+    "at-the-money",
+    "out-of-the-money",
+    "intrinsic-value"
+  ],
+  "markets": [
+    "options"
+  ],
+  "level": "intermediate",
+  "sourceIds": []
+}

@@ -1,0 +1,23 @@
+{
+  "id": "call-option",
+  "term": "Call option",
+  "aliases": [
+    "call",
+    "calls"
+  ],
+  "definition": {
+    "simple": "A right to buy the underlying at the strike price. The buyer pays a premium for it.",
+    "balanced": "At expiry a call is worth price − strike per unit if the price is above the strike, and nothing otherwise. A call buyer can lose at most the premium paid. A call seller receives the premium and must sell at the strike if [[assignment|assigned]]; an [[uncovered-option|uncovered]] sold call has no fixed limit on loss."
+  },
+  "related": [
+    "option",
+    "put-option",
+    "strike-price",
+    "option-premium"
+  ],
+  "markets": [
+    "options"
+  ],
+  "level": "beginner",
+  "sourceIds": []
+}

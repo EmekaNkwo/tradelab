@@ -1,0 +1,23 @@
+{
+  "id": "uncovered-option",
+  "term": "Uncovered option",
+  "aliases": [
+    "naked option",
+    "naked call",
+    "uncovered call"
+  ],
+  "definition": {
+    "simple": "A sold option without the holding or cash that would cover the obligation if assigned.",
+    "balanced": "An uncovered sold call has no fixed limit on loss, because the price of the underlying can keep rising. Losses can be many times the premium received. Brokers usually require special approval and margin for it."
+  },
+  "related": [
+    "covered-call",
+    "option-writer",
+    "margin"
+  ],
+  "markets": [
+    "options"
+  ],
+  "level": "intermediate",
+  "sourceIds": []
+}

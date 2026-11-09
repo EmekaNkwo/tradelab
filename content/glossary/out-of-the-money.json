@@ -1,0 +1,21 @@
+{
+  "id": "out-of-the-money",
+  "term": "Out of the money",
+  "aliases": [
+    "OTM"
+  ],
+  "definition": {
+    "simple": "An option that would be worth nothing if it expired now: a call with the price below the strike, or a put with the price above it.",
+    "balanced": "Its premium is all [[time-value]]. If it is still out of the money at expiry it expires worthless and the buyer loses the whole premium."
+  },
+  "related": [
+    "in-the-money",
+    "at-the-money",
+    "time-value"
+  ],
+  "markets": [
+    "options"
+  ],
+  "level": "intermediate",
+  "sourceIds": []
+}

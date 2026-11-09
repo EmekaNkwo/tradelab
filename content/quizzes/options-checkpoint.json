@@ -1,0 +1,307 @@
+{
+  "id": "options-checkpoint",
+  "title": "Checkpoint: options, premium and expiry",
+  "passMark": 0.8,
+  "questions": [
+    {
+      "id": "options-checkpoint-q1",
+      "prompt": "What does the buyer of a call option hold?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The duty to buy the underlying at the strike",
+          "explanation": "No: the buyer has a right, not a duty. The seller carries the obligation."
+        },
+        {
+          "id": "b",
+          "text": "The right to buy the underlying at the strike, until or at expiry",
+          "explanation": "Right: a call is a right to buy at the strike; the buyer can choose not to use it."
+        },
+        {
+          "id": "c",
+          "text": "The right to sell the underlying at the strike",
+          "explanation": "No: that is a put."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "call-option",
+        "strike-price"
+      ]
+    },
+    {
+      "id": "options-checkpoint-q2",
+      "prompt": "Fictional: you buy 2 puts, strike 25.00, premium 1.00 USD per unit, 100 units per contract. At expiry the price is 22.00. What is your profit or loss?",
+      "options": [
+        {
+          "id": "a",
+          "text": "A 600 USD gain",
+          "explanation": "No: that is the value at expiry, 3.00 × 100 × 2. Take away the 200 USD premium paid."
+        },
+        {
+          "id": "b",
+          "text": "A 200 USD gain",
+          "explanation": "No: that is the result for one contract. You bought 2."
+        },
+        {
+          "id": "c",
+          "text": "A 400 USD gain",
+          "explanation": "Right: value 25.00 − 22.00 = 3.00, and (3.00 − 1.00) × 100 × 2 = 400 USD."
+        },
+        {
+          "id": "d",
+          "text": "A 400 USD loss",
+          "explanation": "No: the price fell below the strike, which helps a put buyer."
+        }
+      ],
+      "correctOptionIds": [
+        "c"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "put-option",
+        "intrinsic-value"
+      ]
+    },
+    {
+      "id": "options-checkpoint-q3",
+      "prompt": "Fictional: you buy a call, strike 80.00, premium 3.50 USD per unit. What is the breakeven price at expiry?",
+      "options": [
+        {
+          "id": "a",
+          "text": "83.50",
+          "explanation": "Right: call breakeven = strike + premium = 80.00 + 3.50."
+        },
+        {
+          "id": "b",
+          "text": "76.50",
+          "explanation": "No: that is the put formula, strike − premium."
+        },
+        {
+          "id": "c",
+          "text": "80.00",
+          "explanation": "No: at the strike the call is worth nothing and the premium is lost."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "breakeven"
+      ]
+    },
+    {
+      "id": "options-checkpoint-q4",
+      "prompt": "Fictional: you buy 3 calls at a premium of 0.70 USD per unit, 100 units per contract. What is the most you can lose, fees aside?",
+      "options": [
+        {
+          "id": "a",
+          "text": "70 USD",
+          "explanation": "No: that is the premium for one contract. You bought 3."
+        },
+        {
+          "id": "b",
+          "text": "210 USD",
+          "explanation": "Right: 0.70 × 100 × 3 = 210 USD, the whole premium paid."
+        },
+        {
+          "id": "c",
+          "text": "There is no fixed limit",
+          "explanation": "No: a bought option can lose at most its premium."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "option-premium"
+      ]
+    },
+    {
+      "id": "options-checkpoint-q5",
+      "prompt": "You sell a call without owning the units it covers. Which statement is true?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The most you can lose is the premium received",
+          "explanation": "No: the premium is the most you can make."
+        },
+        {
+          "id": "b",
+          "text": "The loss is capped at the strike × units",
+          "explanation": "No: that is close to a sold put's worst case, not a sold call's."
+        },
+        {
+          "id": "c",
+          "text": "The loss has no fixed limit, because the price can keep rising",
+          "explanation": "Right: an uncovered sold call loses more for every rise above strike + premium."
+        }
+      ],
+      "correctOptionIds": [
+        "c"
+      ],
+      "level": "intermediate",
+      "glossaryIds": [
+        "uncovered-option",
+        "option-writer"
+      ]
+    },
+    {
+      "id": "options-checkpoint-q6",
+      "prompt": "Fictional: you sell 1 put, strike 45.00, premium 2.00 USD per unit, 100 units per contract. At expiry the price is 41.00. What is your profit or loss?",
+      "options": [
+        {
+          "id": "a",
+          "text": "A 200 USD gain",
+          "explanation": "No: you keep the premium only if the put expires worthless. It ended 4.00 in the money."
+        },
+        {
+          "id": "b",
+          "text": "A 400 USD loss",
+          "explanation": "No: that forgets the 200 USD premium you received."
+        },
+        {
+          "id": "c",
+          "text": "A 4,300 USD loss",
+          "explanation": "No: that is the worst case if the price fell to 0, (45.00 − 2.00) × 100."
+        },
+        {
+          "id": "d",
+          "text": "A 200 USD loss",
+          "explanation": "Right: the put is worth 4.00, so −(4.00 − 2.00) × 100 = −200 USD."
+        }
+      ],
+      "correctOptionIds": [
+        "d"
+      ],
+      "level": "intermediate",
+      "glossaryIds": [
+        "put-option",
+        "assignment"
+      ]
+    },
+    {
+      "id": "options-checkpoint-q7",
+      "prompt": "Fictional: share at 62.00. A call with strike 60.00 is quoted at 3.10 USD per unit. What are its intrinsic value and time value?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Intrinsic 2.00, time value 1.10",
+          "explanation": "Right: 62.00 − 60.00 = 2.00, and 3.10 − 2.00 = 1.10."
+        },
+        {
+          "id": "b",
+          "text": "Intrinsic 3.10, time value 0",
+          "explanation": "No: the whole premium is intrinsic only at expiry."
+        },
+        {
+          "id": "c",
+          "text": "Intrinsic 0, time value 3.10",
+          "explanation": "No: the price is above the strike, so the call is in the money."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "intermediate",
+      "glossaryIds": [
+        "intrinsic-value",
+        "time-value",
+        "in-the-money"
+      ]
+    },
+    {
+      "id": "options-checkpoint-q8",
+      "prompt": "If nothing else changes, what tends to happen to an option's time value as expiry gets closer?",
+      "options": [
+        {
+          "id": "a",
+          "text": "It grows",
+          "explanation": "No: less time left means less chance of a further move."
+        },
+        {
+          "id": "b",
+          "text": "It shrinks, and is zero at expiry",
+          "explanation": "Right: that is time decay. At expiry only intrinsic value remains."
+        },
+        {
+          "id": "c",
+          "text": "It stays the same until the last day",
+          "explanation": "No: time value tends to shrink over the option's life, not all at once."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "intermediate",
+      "glossaryIds": [
+        "time-decay",
+        "time-value"
+      ]
+    },
+    {
+      "id": "options-checkpoint-q9",
+      "prompt": "Implied volatility for an option rises while the underlying price stays the same. What usually happens to the premium?",
+      "options": [
+        {
+          "id": "a",
+          "text": "It usually rises",
+          "explanation": "Right: bigger expected swings make a large move more likely, so premiums are usually higher."
+        },
+        {
+          "id": "b",
+          "text": "It falls to its intrinsic value",
+          "explanation": "No: only expiry removes all time value."
+        },
+        {
+          "id": "c",
+          "text": "Nothing: only the underlying price matters",
+          "explanation": "No: before expiry, expected volatility and time left also affect the premium."
+        }
+      ],
+      "correctOptionIds": [
+        "a"
+      ],
+      "level": "intermediate",
+      "glossaryIds": [
+        "implied-volatility",
+        "option-premium"
+      ]
+    },
+    {
+      "id": "options-checkpoint-q10",
+      "prompt": "Before studying a real option, which set of items should you read in its specification?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Last month's return and the most popular strike",
+          "explanation": "No: neither is part of the contract's specification."
+        },
+        {
+          "id": "b",
+          "text": "The premium only",
+          "explanation": "No: the premium alone does not tell you what the contract covers or how it ends."
+        },
+        {
+          "id": "c",
+          "text": "Underlying, units per contract, call or put, strike, expiry date, exercise style and settlement",
+          "explanation": "Right: these define what one contract is and how it ends. Check the exact contract each time."
+        }
+      ],
+      "correctOptionIds": [
+        "c"
+      ],
+      "level": "beginner",
+      "glossaryIds": [
+        "exercise-style",
+        "underlying",
+        "expiry"
+      ]
+    }
+  ]
+}

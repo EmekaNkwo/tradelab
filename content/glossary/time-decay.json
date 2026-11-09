@@ -1,0 +1,18 @@
+{
+  "id": "time-decay",
+  "term": "Time decay",
+  "aliases": [],
+  "definition": {
+    "simple": "The way an option's time value tends to shrink as expiry gets closer, if nothing else changes.",
+    "balanced": "It works against option buyers and for option sellers. It is why an option can lose value even when the underlying moves the right way, if the move is too small or too slow. At expiry, time value is gone."
+  },
+  "related": [
+    "time-value",
+    "expiry"
+  ],
+  "markets": [
+    "options"
+  ],
+  "level": "intermediate",
+  "sourceIds": []
+}

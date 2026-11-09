@@ -1,0 +1,23 @@
+{
+  "id": "put-option",
+  "term": "Put option",
+  "aliases": [
+    "put",
+    "puts"
+  ],
+  "definition": {
+    "simple": "A right to sell the underlying at the strike price. The buyer pays a premium for it.",
+    "balanced": "At expiry a put is worth strike − price per unit if the price is below the strike, and nothing otherwise. A put buyer can lose at most the premium paid. A put seller receives the premium and must buy at the strike if [[assignment|assigned]], so the seller's largest loss comes if the price falls to zero."
+  },
+  "related": [
+    "option",
+    "call-option",
+    "strike-price",
+    "cash-secured-put"
+  ],
+  "markets": [
+    "options"
+  ],
+  "level": "beginner",
+  "sourceIds": []
+}

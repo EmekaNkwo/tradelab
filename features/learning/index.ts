@@ -41,3 +41,16 @@ export { BACKGROUND, USER_ACTION, resyncReminders, scheduleNewContent } from './
 export { classReminderPlan, offsetSlot, reminderPlans, type ReminderContext } from './reminderPlans';
 export { classPosition, dueSignal, GREETING_REFRESH_MS, greetingFor, localHour, programPercent, useGreeting, type ClassPosition, type DueSignal, type Greeting } from './homeView';
 export { finishText, moduleUnitsDone, modulePercent, programHeroView, type CurrentProgram, type ProgramHeroView } from './learnHero';
+export {
+  describeMatch,
+  isPreferenceMatch,
+  EXPERIENCE_CHOICES,
+  GOAL_CHOICES,
+  MARKET_CHOICES,
+  updateLearningPreferences,
+  usePreferenceMatcher,
+  useUpdateLearningPreferences,
+  type LearningPreferences,
+  type PreferenceMatch,
+  type PreferenceMatcher,
+} from './preferences';

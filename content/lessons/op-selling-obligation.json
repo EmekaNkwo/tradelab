@@ -1,0 +1,152 @@
+{
+  "id": "op-selling-obligation",
+  "moduleId": "options",
+  "title": "Selling (writing) options: premium, assignment and uncovered risk",
+  "level": "intermediate",
+  "estimatedMinutes": 20,
+  "inOneLine": {
+    "simple": "An option seller collects the premium up front, but takes on a duty. The premium is the most the seller can make, and the loss can be far bigger.",
+    "balanced": "An [[option-writer]] receives the [[option-premium|premium]] and can be [[assignment|assigned]]. Seller P/L is the buyer's P/L with the sign flipped. An [[uncovered-option|uncovered]] sold call has no fixed limit on loss; a sold put can lose up to (strike − premium) × units if the price falls to zero."
+  },
+  "explain": {
+    "simple": "Every option has a buyer and a seller. The seller, also called the writer, is paid the premium at the start. If the option expires worthless, the seller keeps it all. That is the best case, and it is also the limit: the seller can never make more than the premium. If the option ends in the money, the seller must carry out the deal. A call seller must sell at the strike, even if the price has shot up. A put seller must buy at the strike, even if the price has collapsed. The seller's loss is the buyer's gain, so it can be many times the premium received.",
+    "balanced": "Selling a call while owning the units it covers is a [[covered-call]]: if assigned, you deliver units you hold, so the call's loss is offset, but you give up gains above the strike and keep nearly all the risk of the units falling (the premium cushions a fall only slightly). Selling a call without owning them is [[uncovered-option|uncovered]], or naked: the price can keep rising, so there is no fixed limit on the loss. Selling a put while setting cash aside to buy at the strike is a [[cash-secured-put]]; the cash makes the purchase possible but does not shrink the loss. With American-style options, assignment can come at any time before expiry. Brokers usually require approval and [[margin]] before you can write options, and margin can be raised. In this app, selling options is something to study in the calculator, not to do."
+  },
+  "realNumbers": {
+    "assumptions": [
+      "Example option (fictional specs): one contract covers 100 units",
+      "Sell (write) 1 call, strike 50.00, premium 2.00 USD per unit, without owning the units (uncovered)",
+      "Held to expiry; fees and margin left out"
+    ],
+    "steps": [
+      "Premium received = 2.00 × 100 = 200 USD. That is the most this position can make.",
+      "Price at expiry 49.00: the call expires worthless. The seller keeps the 200 USD.",
+      "Price at expiry 56.00: the call is worth 6.00 per unit. Seller P/L = −(6.00 − 2.00) × 100 = 400 USD loss.",
+      "Price at expiry 70.00: the call is worth 20.00 per unit. Seller P/L = −(20.00 − 2.00) × 100 = 1,800 USD loss, nine times the premium received.",
+      "There is no price where this stops: every 1.00 rise beyond that adds another 100 USD of loss.",
+      "Covered version: if the seller already owned 100 units bought at 50.00, at 70.00 the units gain (70.00 − 50.00) × 100 = 2,000 USD and the call loses 1,800 USD, a total of 200 USD gain. Everything above the strike was given up."
+    ]
+  },
+  "anotherExample": {
+    "assumptions": [
+      "Same fictional contract size: 100 units per contract",
+      "Sell (write) 1 put, strike 40.00, premium 1.50 USD per unit",
+      "Held to expiry; fees and margin left out"
+    ],
+    "steps": [
+      "Premium received = 1.50 × 100 = 150 USD.",
+      "Price at expiry 42.00: the put expires worthless. The seller keeps 150 USD.",
+      "Price at expiry 35.00: the seller is assigned and must buy 100 units at 40.00 that are worth 35.00. P/L = −(5.00 − 1.50) × 100 = 350 USD loss.",
+      "Worst case, price falls to 0: loss = (40.00 − 1.50) × 100 = 3,850 USD.",
+      "Cash-secured: setting aside 40.00 × 100 = 4,000 USD means the purchase could be paid for. It does not make the 3,850 USD worst case any smaller."
+    ]
+  },
+  "explainSimpler": "The seller is paid first and hopes nothing happens. If something does happen, the seller pays the buyer's gain, and that can be far more than was collected.",
+  "commonMistake": "Seeing a small premium that is usually kept and thinking it is easy money. Many small wins can be wiped out by one large loss, and with an uncovered call that loss has no ceiling. Another mistake is thinking a covered call has no risk: the units you own can still fall a long way.",
+  "quickCheck": [
+    {
+      "id": "op-selling-obligation-q1",
+      "prompt": "Fictional: you sell 1 uncovered call, strike 20.00, premium 1.00 USD per unit, 100 units per contract. At expiry the price is 26.00. What is your profit or loss?",
+      "options": [
+        {
+          "id": "a",
+          "text": "A 100 USD gain",
+          "explanation": "No: you would keep the 100 USD only if the call expired worthless. It ended 6.00 in the money."
+        },
+        {
+          "id": "b",
+          "text": "A 500 USD loss",
+          "explanation": "Right: the call is worth 6.00, so −(6.00 − 1.00) × 100 = −500 USD."
+        },
+        {
+          "id": "c",
+          "text": "A 600 USD loss",
+          "explanation": "No: that forgets the 100 USD premium you received."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "intermediate",
+      "glossaryIds": [
+        "option-writer",
+        "uncovered-option"
+      ]
+    },
+    {
+      "id": "op-selling-obligation-q2",
+      "prompt": "What is the most an option seller can make on one trade held to expiry?",
+      "options": [
+        {
+          "id": "a",
+          "text": "There is no fixed limit",
+          "explanation": "No: that describes the loss on an uncovered sold call, not the gain."
+        },
+        {
+          "id": "b",
+          "text": "Strike × units per contract",
+          "explanation": "No: the seller never receives the strike as profit."
+        },
+        {
+          "id": "c",
+          "text": "The premium received",
+          "explanation": "Right: the best case is the option expiring worthless and the seller keeping the premium."
+        }
+      ],
+      "correctOptionIds": [
+        "c"
+      ],
+      "level": "intermediate",
+      "glossaryIds": [
+        "option-writer",
+        "option-premium"
+      ]
+    },
+    {
+      "id": "op-selling-obligation-q3",
+      "prompt": "Fictional: you sell 1 put, strike 30.00, premium 2.00 USD per unit, 100 units per contract. What is the largest possible loss at expiry?",
+      "options": [
+        {
+          "id": "a",
+          "text": "200 USD",
+          "explanation": "No: that is the premium received, which is the most you can make."
+        },
+        {
+          "id": "b",
+          "text": "2,800 USD",
+          "explanation": "Right: if the price falls to 0, the loss is (30.00 − 2.00) × 100 = 2,800 USD."
+        },
+        {
+          "id": "c",
+          "text": "3,000 USD",
+          "explanation": "No: that forgets the 200 USD premium received."
+        }
+      ],
+      "correctOptionIds": [
+        "b"
+      ],
+      "level": "intermediate",
+      "glossaryIds": [
+        "put-option",
+        "cash-secured-put"
+      ]
+    }
+  ],
+  "doItNow": {
+    "kind": "calculator",
+    "instructions": "Open the option-at-expiry calculator and set Position to Sell (write). Enter Call, Contracts 1, Units per contract 100, Strike price 50, Premium per unit 2. Try Price of the underlying at expiry 49, 56 and 70, and check +200.00, −400.00 and −1800.00. Read the Largest possible loss line: it has no fixed limit. Then switch to Put, Strike price 40, Premium per unit 1.50, and check that the largest possible loss is 3850.00. Write one sentence on why a buyer and a seller of the same option end up with opposite results."
+  },
+  "homework": "Make a table for the fictional uncovered call in this lesson with prices at expiry of 45, 50, 52, 55, 60, 70 and 80. For each, write the seller's profit or loss. Mark where the losses pass the premium received, then pass 5 times it.",
+  "glossaryIds": [
+    "option-writer",
+    "assignment",
+    "covered-call",
+    "uncovered-option",
+    "cash-secured-put",
+    "margin",
+    "option-premium",
+    "call-option",
+    "put-option"
+  ],
+  "sourceIds": []
+}

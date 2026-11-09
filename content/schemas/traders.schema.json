@@ -21,7 +21,8 @@
           "stocks",
           "penny_stocks",
           "commodities",
-          "futures"
+          "futures",
+          "options"
         ]
       }
     },

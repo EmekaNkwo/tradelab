@@ -45,7 +45,7 @@ describe('Home', () => {
     await renderWith(<HomeScreen />);
     expect(await screen.findByText('You have not made a backup yet.')).toBeTruthy();
     await fireEvent.press(screen.getByRole('button', { name: 'Back up or restore' }));
-    expect(router.push).toHaveBeenCalledWith('/more/backup');
+    expect(router.push).toHaveBeenCalledWith('/more/backup', { withAnchor: true });
   });
 });
 

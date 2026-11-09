@@ -1,0 +1,19 @@
+{
+  "id": "cash-secured-put",
+  "term": "Cash-secured put",
+  "aliases": [],
+  "definition": {
+    "simple": "Selling a put option while setting aside enough cash to buy the underlying at the strike if assigned.",
+    "balanced": "The cash set aside is strike × units per contract × contracts. It means the purchase can be paid for; it does not reduce the loss. If the price falls far below the strike, the seller still buys at the strike."
+  },
+  "related": [
+    "put-option",
+    "option-writer",
+    "assignment"
+  ],
+  "markets": [
+    "options"
+  ],
+  "level": "intermediate",
+  "sourceIds": []
+}

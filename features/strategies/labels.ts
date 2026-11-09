@@ -13,7 +13,7 @@ import {
   type StrategyHorizon,
   type StrategyStyle,
 } from '../../domain/models/strategies';
-import { MARKET_KINDS, MARKET_LABELS } from '../../shared/types';
+import { STUDY_MARKETS, STUDY_MARKET_LABELS } from '../../shared/types';
 
 /** Display labels for the Strategy Library (spec §16.1). */
 export const CATEGORY_LABELS: Readonly<Record<StrategyCategory, string>> = {
@@ -93,7 +93,7 @@ const opts = <T extends string>(values: readonly T[], labels: Readonly<Record<T,
 /** Every filter the library offers, in display order. */
 export const FILTER_DIMENSIONS: readonly FilterDimension[] = [
   { key: 'categories', label: 'Category', options: opts(STRATEGY_CATEGORIES, CATEGORY_LABELS) },
-  { key: 'markets', label: 'Market', options: opts(MARKET_KINDS, MARKET_LABELS) },
+  { key: 'markets', label: 'Market', options: opts(STUDY_MARKETS, STUDY_MARKET_LABELS) },
   { key: 'families', label: 'Type', options: opts(STRATEGY_FAMILIES, FAMILY_LABELS) },
   { key: 'levels', label: 'Level', options: opts(['beginner', 'intermediate', 'advanced'] as const, LEVEL_NAMES) },
   { key: 'horizons', label: 'Holding period', options: opts(STRATEGY_HORIZONS, HORIZON_LABELS) },

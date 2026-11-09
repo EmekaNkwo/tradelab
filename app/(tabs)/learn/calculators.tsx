@@ -13,7 +13,9 @@ const SIDE_OPTIONS = [
 ] as const;
 
 const conventionFor = (id: CalculatorId) =>
-  id === 'futures_contract'
+  id === 'option_payoff'
+    ? 'Every options contract has its own specification, including how many units it covers and how it is exercised and settled. The example values are fictional.'
+    : id === 'futures_contract'
     ? 'Every futures contract has its own tick size, tick value and margin, and margin can change. Use the exact contract’s specification from its exchange; the example values are fictional.'
     : "Calculators use the common convention of 100,000 units per lot. Check your broker's contract specification, because sizes, margin rules, and rounding can differ.";
 
@@ -49,6 +51,8 @@ function CalculatorForm({ def }: { readonly def: CalculatorDefinition }) {
         {visibleFields(def, values).map((f) =>
           f.kind === 'side' ? (
             <SegmentedControl key={f.name} label={f.label} options={SIDE_OPTIONS} value={values[f.name] === 'sell' ? 'sell' : 'buy'} onChange={set(f.name)} />
+          ) : f.kind === 'choice' && f.choices ? (
+            <SegmentedControl key={f.name} label={f.label} options={f.choices} value={values[f.name] ?? f.defaultValue} onChange={set(f.name)} />
           ) : (
             <View key={f.name}>
               <TextField

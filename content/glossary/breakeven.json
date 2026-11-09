@@ -1,0 +1,21 @@
+{
+  "id": "breakeven",
+  "term": "Breakeven",
+  "aliases": [
+    "break-even",
+    "breakeven price"
+  ],
+  "definition": {
+    "simple": "The price where a position neither gains nor loses.",
+    "balanced": "For an option held to expiry: call breakeven = strike + premium; put breakeven = strike − premium. Fees move it further away."
+  },
+  "related": [
+    "option-premium",
+    "strike-price"
+  ],
+  "markets": [
+    "options"
+  ],
+  "level": "beginner",
+  "sourceIds": []
+}

@@ -1,0 +1,19 @@
+{
+  "id": "intrinsic-value",
+  "term": "Intrinsic value",
+  "aliases": [],
+  "definition": {
+    "simple": "What an option would be worth if it expired right now. It is never below zero.",
+    "balanced": "Call: price − strike, or 0 if that is negative. Put: strike − price, or 0 if that is negative. At expiry an option is worth only its intrinsic value."
+  },
+  "related": [
+    "time-value",
+    "option-premium",
+    "in-the-money"
+  ],
+  "markets": [
+    "options"
+  ],
+  "level": "intermediate",
+  "sourceIds": []
+}

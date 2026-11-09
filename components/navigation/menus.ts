@@ -39,7 +39,7 @@ export const MORE_TOOLS: readonly MenuItem[] = [
 ];
 
 export const MORE_APP: readonly MenuItem[] = [
-  { feature: 'settings', title: 'Settings', subtitle: 'Appearance and time zone', href: '/more/settings' },
+  { feature: 'settings', title: 'Settings', subtitle: 'What you want to learn, appearance and time zone', href: '/more/settings' },
   { feature: 'riskRules', title: 'Risk rules', subtitle: 'Your limits for risk per trade, daily loss, and open positions', href: '/more/risk-rules' },
   { feature: 'services', title: 'Data and AI services', subtitle: 'Optional online services and your keys; all off by default', href: '/more/services' },
   { feature: 'backup', title: 'Backup and restore', subtitle: 'Save all your progress to a file', href: '/more/backup' },

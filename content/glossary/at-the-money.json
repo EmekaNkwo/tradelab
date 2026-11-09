@@ -1,0 +1,21 @@
+{
+  "id": "at-the-money",
+  "term": "At the money",
+  "aliases": [
+    "ATM"
+  ],
+  "definition": {
+    "simple": "An option whose strike price is equal, or very close, to the current price of the underlying.",
+    "balanced": "It has no [[intrinsic-value]], so its premium is all [[time-value]]. At expiry an option exactly at the money is worth nothing."
+  },
+  "related": [
+    "in-the-money",
+    "out-of-the-money",
+    "time-value"
+  ],
+  "markets": [
+    "options"
+  ],
+  "level": "intermediate",
+  "sourceIds": []
+}

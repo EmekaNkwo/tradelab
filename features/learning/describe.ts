@@ -1,6 +1,7 @@
 import type { CatchUpChoice, LocalDate, ScheduleSuggestion, ScheduleWarning, TimelineStatus } from '../../domain/learning';
 
-const plural = (n: number, word: string) => `${n} ${word}${n === 1 ? '' : 's'}`;
+/** "1 class", "7 classes", "2 study days": words ending in s, x, ch or sh take "es". */
+export const plural = (n: number, word: string): string => `${n} ${word}${n === 1 ? '' : /(s|x|ch|sh)$/.test(word) ? 'es' : 's'}`;
 
 /** "Mon 2 Nov 2026". Local dates have no time zone, so format as UTC. */
 export function formatLocalDate(date: LocalDate): string {
