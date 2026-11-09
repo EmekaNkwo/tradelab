@@ -10,7 +10,6 @@ import {
   activeFilterCount,
   CATEGORY_LABELS,
   FAMILY_LABELS,
-  FILTER_DIMENSIONS,
   HORIZON_LABELS,
   NO_FILTERS,
   useSavedStrategies,
@@ -135,7 +134,7 @@ export default function StrategiesScreen() {
       {showFilters ? (
         <View testID="strategy-filters">
           <Card>
-            {FILTER_DIMENSIONS.map((d) => (
+            {library.dimensions.map((d) => (
               <View key={d.key} style={{ gap: spacing.xs }}>
                 <AppText variant="label">{d.label}</AppText>
                 <ChoiceChips label={d.label} hideLabel options={d.options} selected={library.filters[d.key] as readonly string[]} onChange={(v) => setDimension(d.key, v)} />

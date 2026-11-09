@@ -102,3 +102,9 @@ export const FILTER_DIMENSIONS: readonly FilterDimension[] = [
   { key: 'traders', label: 'Trader association', options: opts(TRADER_ASSOCIATIONS, TRADER_LABELS) },
   { key: 'exercises', label: 'Available exercises', options: opts(EXERCISE_KINDS, EXERCISE_LABELS) },
 ];
+
+/** The filters, without market choices no strategy covers (a chip that can only show "No strategies match" is a dead end). */
+export function filterDimensionsFor(strategies: readonly { readonly markets: readonly string[] }[]): readonly FilterDimension[] {
+  const used = new Set(strategies.flatMap((s) => s.markets));
+  return FILTER_DIMENSIONS.map((d) => (d.key === 'markets' ? { ...d, options: d.options.filter((o) => used.has(o.value)) } : d));
+}
